@@ -3,24 +3,53 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "node node_modules/next/dist/bin/next dev",
+    "build": "node node_modules/next/dist/bin/next build",
+    "start": "node node_modules/next/dist/bin/next start",
+    "lint": "node node_modules/next/dist/bin/next lint",
+    "ingest": "tsx scripts/ingest/index.ts",
+    "ingest:rss": "tsx scripts/ingest/fetch-podcast-rss.ts",
+    "ingest:youtube": "tsx scripts/ingest/match-youtube-videos.ts",
+    "ingest:history": "tsx scripts/ingest/fetch-late-night-history.ts",
+    "ingest:origins": "tsx scripts/ingest/enrich-origins.ts",
+    "ingest:photos": "tsx scripts/ingest/fetch-photos.ts",
+    "ingest:scores": "tsx scripts/ingest/compute-scores.ts",
+    "ingest:merge": "tsx scripts/ingest/merge.ts",
+    "enrich:photos": "tsx scripts/ingest/photo-enrichment.ts",
+    "enrich:bios": "tsx scripts/ingest/enrich-bios.ts",
+    "enrich:bios:force": "tsx scripts/ingest/enrich-bios.ts --force",
+    "enrich:bios:retry": "tsx scripts/ingest/enrich-bios.ts --retry-review --limit 355",
+    "enrich:calibrate": "tsx scripts/ingest/weekly-calibration.ts",
+    "wordcloud": "python3 scripts/generate-wordcloud.py",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.91.1",
+    "@types/d3": "^7.4.3",
+    "axios": "^1.15.2",
+    "cheerio": "^1.2.0",
+    "d3": "^7.9.0",
+    "next": "^14.2.35",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.35"
+    "rss-parser": "^3.13.0",
+    "slugify": "^1.6.9"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/cheerio": "^0.22.35",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "jest": "^30.3.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.35"
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
   }
 }
