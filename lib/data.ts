@@ -91,27 +91,37 @@ export function getTodayAnniversaries(guests: Guest[]): Guest[] {
   );
 }
 
+// Band fill colors — dark base tints derived from logo primaries
 export function getEraColor(era: Era): string {
   const map: Record<Era, string> = {
-    'late-night-nbc': '#1a2a4a',
-    'tonight-show': '#2a2010',
-    'tbs-conan': '#0f2a1a',
-    'podcast': '#1e1a3a',
-    'conan-must-go': '#2a1018',
+    'late-night-nbc': '#050B20', // dark navy from oval logo
+    'tonight-show':   '#1A1200', // dark gold
+    'tbs-conan':      '#1A0800', // dark orange
+    'podcast':        '#1A0900', // dark orange (slightly warmer)
+    'conan-must-go':  '#1A060E', // dark rose
   };
   return map[era];
 }
 
+// Dot / label colors — extracted directly from era logos
 export function getEraTextColor(era: Era): string {
   const map: Record<Era, string> = {
-    'late-night-nbc': '#5b8fd4',
-    'tonight-show': '#c49a3c',
-    'tbs-conan': '#3aafa9',
-    'podcast': '#7f77dd',
-    'conan-must-go': '#e07090',
+    'late-night-nbc': '#4872D8', // brightened from oval blue #262A89
+    'tonight-show':   '#D4B020', // subdued from gold text #FDDD3E
+    'tbs-conan':      '#F26519', // exact from TBS Conan SVG .st1
+    'podcast':        '#FC7604', // exact from podcast cover orange text
+    'conan-must-go':  '#D45085', // rose — no official logo provided
   };
   return map[era];
 }
+
+// Logo image paths for each era
+export const ERA_LOGOS: Partial<Record<Era, string>> = {
+  'late-night-nbc': '/logos/era-late-night-nbc.png',
+  'tonight-show':   '/logos/era-tonight-show.png',
+  'tbs-conan':      '/logos/era-tbs-conan.svg',
+  'podcast':        '/logos/era-podcast.jpg',
+};
 
 let _cachedData: GuestsData | null = null;
 

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import type { Guest, Era } from "@/lib/types";
 import {
   ERA_LABELS,
+  ERA_LOGOS,
   getEraColor,
   getEraTextColor,
   formatDate,
@@ -92,25 +93,39 @@ export default function FriendshipArc({ guest, compact = false }: Props) {
           );
         })}
 
-        {/* Era labels (top) */}
+        {/* Era labels (top) — logo image + name */}
         {!compact &&
           ERAS.map((era) => {
             const [start, end] = ERA_DATE_RANGES[era];
             const midX = ((yearToPercent(start) + yearToPercent(end)) / 2) * 10;
             const textColor = getEraTextColor(era);
+            const logo = ERA_LOGOS[era];
+            const logoSize = 14;
             return (
-              <text
-                key={era}
-                x={midX}
-                y={14}
-                textAnchor="middle"
-                fontSize={9}
-                fill={textColor}
-                fontWeight="600"
-                fontFamily="Inter, system-ui, sans-serif"
-              >
-                {ERA_LABELS[era]}
-              </text>
+              <g key={era}>
+                {logo && (
+                  <image
+                    href={logo}
+                    x={midX - logoSize / 2}
+                    y={2}
+                    width={logoSize}
+                    height={logoSize}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={{ borderRadius: 2 }}
+                  />
+                )}
+                <text
+                  x={midX}
+                  y={logo ? 28 : 14}
+                  textAnchor="middle"
+                  fontSize={8}
+                  fill={textColor}
+                  fontWeight="600"
+                  fontFamily="Inter, system-ui, sans-serif"
+                >
+                  {ERA_LABELS[era]}
+                </text>
+              </g>
             );
           })}
 

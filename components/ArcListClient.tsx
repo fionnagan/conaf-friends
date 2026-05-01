@@ -2,7 +2,8 @@
 
 import { useState, useMemo, useRef, useCallback } from "react";
 import type { Guest, Era } from "@/lib/types";
-import { ERA_LABELS, getEraTextColor } from "@/lib/data";
+import Image from "next/image";
+import { ERA_LABELS, ERA_LOGOS, getEraTextColor } from "@/lib/data";
 import GuestAvatar from "./GuestAvatar";
 import LazyArc from "./LazyArc";
 import GuestModal from "./GuestModal";
@@ -238,20 +239,28 @@ export default function ArcListClient({ guests }: Props) {
           {ERAS.map((era) => {
             const active = selectedEras.includes(era);
             const color = getEraTextColor(era);
+            const logo = ERA_LOGOS[era];
             return (
               <button
                 key={era}
                 onClick={() => toggleEra(era)}
-                className="px-3 py-1 rounded-full text-xs font-medium border transition-all"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all"
                 style={
                   active
-                    ? { background: color, borderColor: color, color: "#fff" }
-                    : {
-                        borderColor: "var(--border)",
-                        color: "var(--text-muted)",
-                      }
+                    ? { background: color + "22", borderColor: color, color }
+                    : { borderColor: "var(--border)", color: "var(--text-muted)" }
                 }
               >
+                {logo && (
+                  <Image
+                    src={logo}
+                    alt={ERA_LABELS[era]}
+                    width={16}
+                    height={16}
+                    className="rounded-sm object-cover flex-shrink-0"
+                    style={{ opacity: active ? 1 : 0.5 }}
+                  />
+                )}
                 {ERA_LABELS[era]}
               </button>
             );
