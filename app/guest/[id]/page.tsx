@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
-import { getGuestsData, ORIGIN_LABELS, formatDate, TIER_COLORS } from "@/lib/data";
+import { getGuestsData, ORIGIN_LABELS, formatDate } from "@/lib/data";
 import GuestAvatar from "@/components/GuestAvatar";
-import FriendshipBadge from "@/components/FriendshipBadge";
 import FriendshipArc from "@/components/FriendshipArc";
 import GuestPagePlayer from "@/components/GuestPagePlayer";
 import type { Metadata } from "next";
@@ -21,18 +20,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guest) return { title: "Guest not found" };
   return {
     title: `${guest.name} — The Friend Registry`,
-    description: `${guest.name} is a ${guest.friendshipLabel} with a friendship score of ${guest.friendshipScore}/100.`,
+    description: `${guest.name} has appeared ${guest.appearances.length} time${guest.appearances.length !== 1 ? "s" : ""} on Conan O'Brien's shows.`,
   };
 }
 
-const FACTOR_LABELS = {
-  appearances: "Total appearances",
-  coldOpenSentiment: "Cold open sentiment",
-  originDepth: "Origin depth",
-  visitType: "Visit type",
-  gapResilience: "Gap resilience",
-};
-const FACTOR_MAX = { appearances: 30, coldOpenSentiment: 25, originDepth: 20, visitType: 15, gapResilience: 10 };
 
 export default function GuestPage({ params }: Props) {
   const data = getGuestsData();
@@ -42,8 +33,6 @@ export default function GuestPage({ params }: Props) {
   const relatedGuests = (guest.relatedGuests || [])
     .map((id) => data.guests.find((g) => g.id === id))
     .filter(Boolean);
-
-  const tierColor = TIER_COLORS[guest.friendshipLabel];
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
@@ -72,11 +61,6 @@ export default function GuestPage({ params }: Props) {
             <span className="text-[var(--border)]">·</span>
             <span>{[...new Set(guest.appearances.map((a) => a.era))].length} era(s)</span>
           </div>
-          <FriendshipBadge
-            score={guest.friendshipScore}
-            label={guest.friendshipLabel}
-            size="md"
-          />
         </div>
       </div>
 
@@ -159,39 +143,6 @@ export default function GuestPage({ params }: Props) {
         )}
       </section>
 
-      {/* Score breakdown */}
-      <section className="mb-8 p-5 bg-[var(--bg2)] rounded-2xl border border-[var(--border)]">
-        <h2 className="font-serif text-xl font-semibold mb-4">
-          Friendship score breakdown
-        </h2>
-        <div className="space-y-3">
-          {(Object.entries(guest.scoreBreakdown) as [keyof typeof FACTOR_LABELS, number][]).map(
-            ([key, val]) => {
-              const max = FACTOR_MAX[key];
-              const pct = Math.round((val / max) * 100);
-              return (
-                <div key={key}>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span className="text-[var(--text-muted)]">{FACTOR_LABELS[key]}</span>
-                    <span className="font-semibold">
-                      {val} / {max}
-                    </span>
-                  </div>
-                  <div className="h-2 bg-[var(--border)] rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-full"
-                      style={{ width: `${pct}%`, background: tierColor }}
-                    />
-                  </div>
-                </div>
-              );
-            }
-          )}
-        </div>
-        <p className="text-xs text-center text-[var(--text-muted)] mt-4">
-          A fan-made score, made with love ♥
-        </p>
-      </section>
 
       {/* Friendship Arc */}
       <section className="mb-8">
@@ -215,11 +166,11 @@ export default function GuestPage({ params }: Props) {
               .map((a, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1.5 bg-[var(--bg2)] border border-[var(--border)] rounded-full text-sm"
+                  className="px-3 py-1.5 bg-[var(--bg2)] border border-[var(--border)] rounded-full text-sm text-[var(--text-muted)] capitalize"
                   title={formatDate(a.date)}
                 >
-                  <span className="italic text-[var(--purple)]">&ldquo;{a.coldOpenWord}&rdquo;</span>
-                  <span className="ml-1 text-xs text-[var(--text-muted)]">
+                  {a.coldOpenWord}
+                  <span className="ml-1.5 text-xs opacity-60">
                     {new Date(a.date).getFullYear()}
                   </span>
                 </span>
@@ -258,11 +209,8 @@ export default function GuestPage({ params }: Props) {
                   <GuestAvatar name={rg.name} photoUrl={rg.photoUrl} size={36} />
                   <div className="min-w-0">
                     <p className="text-sm font-medium truncate">{rg.name}</p>
-                    <p
-                      className="text-xs font-semibold"
-                      style={{ color: TIER_COLORS[rg.friendshipLabel] }}
-                    >
-                      {rg.friendshipScore} · {rg.friendshipLabel}
+                    <p className="text-xs text-[var(--text-muted)]">
+                      {rg.appearances.length} appearance{rg.appearances.length !== 1 ? "s" : ""}
                     </p>
                   </div>
                 </a>

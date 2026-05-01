@@ -28,7 +28,6 @@ export default function ArcPage() {
       </h1>
       <p className="text-[var(--text-muted)] mb-8">
         Every guest&apos;s relationship with Conan, plotted across 30+ years.
-        Sorted by friendship score.
       </p>
 
       <ArcListClient guests={data.guests} />

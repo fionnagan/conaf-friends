@@ -38,14 +38,6 @@ function dateToPercent(dateStr: string): number {
   return yearToPercent(year);
 }
 
-const SENTIMENT_COLORS: Record<string, string> = {
-  warm: "#3AAFA9",
-  "affectionate-absurd": "#7F77DD",
-  neutral: "#9A9590",
-  deflecting: "#D4A847",
-  anxious: "#E85D24",
-  callback: "#6B63CC",
-};
 
 interface Props {
   guest: Guest;
@@ -136,16 +128,12 @@ export default function FriendshipArc({ guest, compact = false }: Props) {
         {guest.appearances.map((app, i) => {
           const x = dateToPercent(app.date) * 10;
           const cy = height / 2 + 10;
-          const isPodcast = app.era === "podcast";
-          const dotColor =
-            isPodcast && app.coldOpenSentiment
-              ? SENTIMENT_COLORS[app.coldOpenSentiment] || "#7F77DD"
-              : "#7F77DD";
+          const dotColor = getEraTextColor(app.era);
 
           return (
             <g key={i}>
               {/* Cold open word label */}
-              {isPodcast && app.coldOpenWord && !compact && (
+              {app.era === "podcast" && app.coldOpenWord && !compact && (
                 <text
                   x={x}
                   y={cy - 18}
@@ -167,8 +155,6 @@ export default function FriendshipArc({ guest, compact = false }: Props) {
                 cy={cy}
                 r={compact ? 5 : 7}
                 fill={dotColor}
-                stroke="white"
-                strokeWidth={2}
                 style={{ cursor: "pointer" }}
                 onMouseEnter={(e) => {
                   const rect = containerRef.current?.getBoundingClientRect();
