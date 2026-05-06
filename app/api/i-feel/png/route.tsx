@@ -3,17 +3,15 @@ import { NextRequest } from "next/server";
 import { readFile } from "fs/promises";
 import path from "path";
 
-// Node runtime so we can read font files from disk
 export const runtime = "nodejs";
 
-// Satori char-width approximations for single-line scaling
-const MARKER_CHAR_W   = 0.62; // Permanent Marker
-const BARLOW_CHAR_W   = 0.42; // Barlow Condensed 800
-const MAX_TEXT_PX     = 940;  // usable width inside 1080px card
+// Approximate character widths for single-line scaling
+const MARKER_CW = 0.62;  // Permanent Marker
+const BARLOW_CW = 0.55;  // Barlow 800 (non-condensed)
+const MAX_W     = 900;   // usable px inside 1080px canvas
 
-function scaledSize(text: string, maxPx: number, charW: number): number {
-  // start at maxPx, shrink so text * charW * size <= MAX_TEXT_PX
-  const fit = MAX_TEXT_PX / (text.length * charW);
+function scaledSize(text: string, maxPx: number, cw: number): number {
+  const fit = MAX_W / (text.length * cw);
   return Math.min(maxPx, Math.floor(fit));
 }
 
@@ -23,30 +21,33 @@ export async function GET(req: NextRequest) {
   const country = (searchParams.get("country") ?? "").toUpperCase();
   const feeling = (searchParams.get("feeling") ?? "").toUpperCase();
 
-  // Load fonts from public/fonts/
   const fontDir = path.join(process.cwd(), "public", "fonts");
-  const [markerData, barlowData] = await Promise.all([
+  const imgDir  = path.join(process.cwd(), "public", "logos");
+
+  const [markerData, barlowData, podcastImgBuf] = await Promise.all([
     readFile(path.join(fontDir, "PermanentMarker.ttf")),
-    readFile(path.join(fontDir, "BarlowCondensed800.ttf")),
+    readFile(path.join(fontDir, "Barlow800.ttf")),
+    readFile(path.join(imgDir,  "era-podcast.jpg")),
   ]);
 
-  // Font sizes — scale down if text is long to keep single line
-  const nameSz    = scaledSize(name, 110, MARKER_CHAR_W);
-  const countrySz = scaledSize(`I'M FROM ${country}`, 72, MARKER_CHAR_W);
-  const feelSz    = scaledSize(feeling, 90, MARKER_CHAR_W);
+  const podcastB64 = `data:image/jpeg;base64,${podcastImgBuf.toString("base64")}`;
 
-  // Brand colours
+  // Font sizes — shrink to single line if needed
+  const nameSz    = scaledSize(name, 108, MARKER_CW);
+  const countrySz = scaledSize(country, 90, MARKER_CW);
+  const feelSz    = scaledSize(feeling, 96, MARKER_CW);
+
   const ORANGE = "#F26519";
   const BLACK  = "#111111";
   const RULE   = "#d0d0d0";
 
-  // Shared style helpers
+  // Shared style builders
   const barlow = (size: number, color = BLACK): React.CSSProperties => ({
     fontFamily: "Barlow",
     fontSize: `${size}px`,
     fontWeight: 800,
     color,
-    letterSpacing: "4px",
+    letterSpacing: "3px",
     lineHeight: 1,
     display: "flex",
   });
@@ -60,7 +61,7 @@ export async function GET(req: NextRequest) {
   });
 
   const rule: React.CSSProperties = {
-    width: "960px",
+    width: "940px",
     height: "2px",
     background: RULE,
     display: "flex",
@@ -76,47 +77,58 @@ export async function GET(req: NextRequest) {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "70px 60px 40px",
+        padding: "60px 70px 36px",
       }}>
 
-        {/* ── ZONE 1 — Name block ─────────────────────── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px" }}>
-          <span style={barlow(44)}>MY NAME IS</span>
+        {/* ── ZONE 1 — Name / country / "and i feel" ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+
+          {/* MY NAME IS  →  {name} */}
+          <span style={barlow(42)}>MY NAME IS</span>
           <span style={marker(nameSz)}>{name}</span>
-          {country && (
-            <span style={marker(countrySz)}>{`I'M FROM ${country}`}</span>
-          )}
-          <div style={{ ...rule, marginTop: "10px" }} />
-          <span style={{ ...barlow(44), marginTop: "10px" }}>AND I FEEL</span>
+
+          <div style={{ ...rule, margin: "10px 0 10px" }} />
+
+          {/* I'M FROM  →  {country} */}
+          <span style={barlow(42)}>I'M FROM</span>
+          <span style={marker(countrySz)}>{country}</span>
+
+          <div style={{ ...rule, margin: "10px 0 10px" }} />
+
+          {/* AND I FEEL */}
+          <span style={barlow(42)}>AND I FEEL</span>
         </div>
 
-        {/* ── ZONE 2 — Feeling ────────────────────────── */}
+        {/* ── ZONE 2 — Feeling ── */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flex: 1 }}>
           <span style={{ ...marker(feelSz), textAlign: "center" }}>{feeling}</span>
         </div>
 
-        {/* ── ZONE 3 — Footer block ───────────────────── */}
+        {/* ── ZONE 3 — Footer ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0px" }}>
-          <div style={{ ...rule, marginBottom: "18px" }} />
-          <span style={barlow(44)}>ABOUT BEING</span>
-          <span style={barlow(44)}>CONAN O'BRIEN'S FRIEND</span>
+          <div style={{ ...rule, marginBottom: "16px" }} />
+          <span style={barlow(38)}>ABOUT BEING</span>
+          <span style={barlow(38)}>CONAN O'BRIEN'S FRIEND</span>
 
-          {/* Podcast logo reproduction */}
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "28px", lineHeight: 1 }}>
-            <span style={{ ...barlow(74, ORANGE), letterSpacing: "2px" }}>CONAN</span>
-            <span style={{ ...barlow(74, ORANGE), letterSpacing: "2px" }}>O'BRIEN</span>
-            <span style={{ ...barlow(30), letterSpacing: "6px", marginTop: "4px" }}>NEEDS A FRIEND</span>
-          </div>
+          {/* Podcast cover image */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={podcastB64}
+            width={160}
+            height={160}
+            style={{ borderRadius: "14px", marginTop: "20px", objectFit: "cover" }}
+            alt=""
+          />
 
-          {/* Attribution footnote */}
+          {/* Attribution */}
           <span style={{
             fontFamily: "Barlow",
-            fontSize: "14px",
+            fontSize: "13px",
             fontWeight: 800,
             color: "#aaaaaa",
             letterSpacing: "2px",
             display: "flex",
-            marginTop: "18px",
+            marginTop: "14px",
           }}>
             CONAF.VERCEL.APP · A FAN PROJECT
           </span>
@@ -128,8 +140,8 @@ export async function GET(req: NextRequest) {
       width: 1080,
       height: 1080,
       fonts: [
-        { name: "Marker", data: markerData,  style: "normal", weight: 400 },
-        { name: "Barlow", data: barlowData,  style: "normal", weight: 800 },
+        { name: "Marker", data: markerData, style: "normal", weight: 400 },
+        { name: "Barlow", data: barlowData, style: "normal", weight: 800 },
       ],
     }
   );
