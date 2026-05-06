@@ -1,67 +1,136 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import { readFile } from "fs/promises";
+import path from "path";
 
-export const runtime = "edge";
+// Node runtime so we can read font files from disk
+export const runtime = "nodejs";
+
+// Satori char-width approximations for single-line scaling
+const MARKER_CHAR_W   = 0.62; // Permanent Marker
+const BARLOW_CHAR_W   = 0.42; // Barlow Condensed 800
+const MAX_TEXT_PX     = 940;  // usable width inside 1080px card
+
+function scaledSize(text: string, maxPx: number, charW: number): number {
+  // start at maxPx, shrink so text * charW * size <= MAX_TEXT_PX
+  const fit = MAX_TEXT_PX / (text.length * charW);
+  return Math.min(maxPx, Math.floor(fit));
+}
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
-  const name    = searchParams.get("name")    ?? "Someone";
-  const country = searchParams.get("country") ?? "";
-  const feeling = searchParams.get("feeling") ?? "";
+  const name    = (searchParams.get("name")    ?? "Someone").toUpperCase();
+  const country = (searchParams.get("country") ?? "").toUpperCase();
+  const feeling = (searchParams.get("feeling") ?? "").toUpperCase();
 
-  const totalLen = name.length + country.length + feeling.length;
-  const fontSize = totalLen > 50 ? 34 : totalLen > 35 ? 40 : 46;
+  // Load fonts from public/fonts/
+  const fontDir = path.join(process.cwd(), "public", "fonts");
+  const [markerData, barlowData] = await Promise.all([
+    readFile(path.join(fontDir, "PermanentMarker.ttf")),
+    readFile(path.join(fontDir, "BarlowCondensed800.ttf")),
+  ]);
 
-  // Build the sentence as a single string — simplest Satori-compatible approach
-  const sentence = `My name is ${name}${country ? `, I'm from ${country}` : ""}, and I feel ${feeling} about being Conan O'Brien's friend.`;
+  // Font sizes — scale down if text is long to keep single line
+  const nameSz    = scaledSize(name, 110, MARKER_CHAR_W);
+  const countrySz = scaledSize(`I'M FROM ${country}`, 72, MARKER_CHAR_W);
+  const feelSz    = scaledSize(feeling, 90, MARKER_CHAR_W);
+
+  // Brand colours
+  const ORANGE = "#F26519";
+  const BLACK  = "#111111";
+  const RULE   = "#d0d0d0";
+
+  // Shared style helpers
+  const barlow = (size: number, color = BLACK): React.CSSProperties => ({
+    fontFamily: "Barlow",
+    fontSize: `${size}px`,
+    fontWeight: 800,
+    color,
+    letterSpacing: "4px",
+    lineHeight: 1,
+    display: "flex",
+  });
+
+  const marker = (size: number): React.CSSProperties => ({
+    fontFamily: "Marker",
+    fontSize: `${size}px`,
+    color: ORANGE,
+    lineHeight: 1,
+    display: "flex",
+  });
+
+  const rule: React.CSSProperties = {
+    width: "960px",
+    height: "2px",
+    background: RULE,
+    display: "flex",
+  };
 
   return new ImageResponse(
     (
-      <div style={{ width: "1200px", height: "630px", display: "flex", flexDirection: "column", background: "#0a0a0a", fontFamily: "Georgia, serif" }}>
+      <div style={{
+        width: "1080px",
+        height: "1080px",
+        background: "white",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "70px 60px 40px",
+      }}>
 
-        {/* Top orange stripe */}
-        <div style={{ width: "1200px", height: "8px", background: "#F26522", display: "flex" }} />
-
-        {/* Header */}
-        <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "20px", padding: "28px 60px 20px 60px" }}>
-          {/* Logo placeholder circle */}
-          <div style={{ width: "64px", height: "64px", borderRadius: "10px", background: "#F26522", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <span style={{ color: "white", fontSize: "30px", fontWeight: "900", display: "flex" }}>C</span>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-            <span style={{ color: "#F26522", fontSize: "13px", fontWeight: "700", letterSpacing: "2px", display: "flex" }}>
-              CONAN O&apos;BRIEN NEEDS A FRIEND
-            </span>
-            <span style={{ color: "#555", fontSize: "11px", letterSpacing: "2px", display: "flex" }}>
-              THE FRIEND REGISTRY
-            </span>
-          </div>
+        {/* ── ZONE 1 — Name block ─────────────────────── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px" }}>
+          <span style={barlow(44)}>MY NAME IS</span>
+          <span style={marker(nameSz)}>{name}</span>
+          {country && (
+            <span style={marker(countrySz)}>{`I'M FROM ${country}`}</span>
+          )}
+          <div style={{ ...rule, marginTop: "10px" }} />
+          <span style={{ ...barlow(44), marginTop: "10px" }}>AND I FEEL</span>
         </div>
 
-        {/* Main sentence — single block */}
-        <div style={{ flex: "1", display: "flex", alignItems: "center", justifyContent: "center", padding: "0 80px" }}>
+        {/* ── ZONE 2 — Feeling ────────────────────────── */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flex: 1 }}>
+          <span style={{ ...marker(feelSz), textAlign: "center" }}>{feeling}</span>
+        </div>
+
+        {/* ── ZONE 3 — Footer block ───────────────────── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0px" }}>
+          <div style={{ ...rule, marginBottom: "18px" }} />
+          <span style={barlow(44)}>ABOUT BEING</span>
+          <span style={barlow(44)}>CONAN O'BRIEN'S FRIEND</span>
+
+          {/* Podcast logo reproduction */}
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "28px", lineHeight: 1 }}>
+            <span style={{ ...barlow(74, ORANGE), letterSpacing: "2px" }}>CONAN</span>
+            <span style={{ ...barlow(74, ORANGE), letterSpacing: "2px" }}>O'BRIEN</span>
+            <span style={{ ...barlow(30), letterSpacing: "6px", marginTop: "4px" }}>NEEDS A FRIEND</span>
+          </div>
+
+          {/* Attribution footnote */}
           <span style={{
-            color: "#ffffff",
-            fontSize: `${fontSize}px`,
-            lineHeight: "1.35",
-            fontWeight: "700",
-            textAlign: "center",
+            fontFamily: "Barlow",
+            fontSize: "14px",
+            fontWeight: 800,
+            color: "#aaaaaa",
+            letterSpacing: "2px",
             display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            maxWidth: "1000px",
+            marginTop: "18px",
           }}>
-            {sentence}
+            CONAF.VERCEL.APP · A FAN PROJECT
           </span>
         </div>
 
-        {/* Bottom bar */}
-        <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: "18px 60px", borderTop: "1px solid #1f1f1f" }}>
-          <span style={{ color: "#444", fontSize: "13px", display: "flex" }}>conaf.vercel.app</span>
-          <span style={{ color: "#F26522", fontSize: "13px", fontWeight: "600", display: "flex" }}>#ConanFriend</span>
-        </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    {
+      width: 1080,
+      height: 1080,
+      fonts: [
+        { name: "Marker", data: markerData,  style: "normal", weight: 400 },
+        { name: "Barlow", data: barlowData,  style: "normal", weight: 800 },
+      ],
+    }
   );
 }
