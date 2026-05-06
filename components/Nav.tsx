@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: "/", label: "Map" },
   { href: "/arc", label: "Arcs" },
   { href: "/cold-opens", label: "Cold Opens" },
+  { href: "/i-feel", label: "I Feel…" },
   { href: "/about", label: "About" },
 ];
 
