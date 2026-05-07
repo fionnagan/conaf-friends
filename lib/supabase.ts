@@ -1,8 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
 
 // Gracefully degrade when Supabase env vars are not configured.
-const url  = process.env.NEXT_PUBLIC_SUPABASE_URL  ?? "";
-const anon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
+// Accept both old anon key name and new publishable key name.
+const url  = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
+const anon = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+          ?? process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+          ?? "";
 const svc  = process.env.SUPABASE_SERVICE_ROLE_KEY ?? anon;
 
 export const supabaseAvailable = !!(url && anon);
