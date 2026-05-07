@@ -34,6 +34,79 @@ function MapSkeleton() {
   return <div className="h-[380px] rounded-2xl bg-[var(--bg2)] border border-[var(--border)] animate-pulse" />;
 }
 
+/* ── Share buttons (Web Share API + download) ───────────────────────────────── */
+function ShareButtons({ pngUrl, feeling }: { pngUrl: string; feeling: string }) {
+  const [copied, setCopied] = useState(false);
+  const [sharing, setSharing] = useState(false);
+
+  const shareText = `I feel ${feeling} about being Conan O'Brien's friend.\n\nWhat kind of friend are you?\nconaf.vercel.app`;
+  const shareUrl  = "https://conaf.vercel.app/i-feel";
+
+  async function handleShare() {
+    setSharing(true);
+    try {
+      // Try file share (mobile with file support)
+      if (typeof navigator !== "undefined" && "share" in navigator) {
+        try {
+          const res = await fetch(pngUrl);
+          const blob = await res.blob();
+          const file = new File([blob], "conan-friend-card.png", { type: "image/png" });
+          if (navigator.canShare?.({ files: [file] })) {
+            await navigator.share({ files: [file], text: shareText, url: shareUrl });
+            return;
+          }
+        } catch { /* fall through */ }
+        // Share URL only
+        try {
+          await navigator.share({ text: shareText, url: shareUrl });
+          return;
+        } catch { /* fall through */ }
+      }
+      // Desktop fallback: copy link
+      await navigator.clipboard.writeText(`${shareText}`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } finally {
+      setSharing(false);
+    }
+  }
+
+  const canNativeShare = typeof navigator !== "undefined" && "share" in navigator;
+
+  return (
+    <div className="flex flex-wrap gap-3">
+      <button
+        onClick={handleShare}
+        disabled={sharing}
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--orange)] text-white text-sm font-semibold hover:opacity-90 disabled:opacity-60 transition-opacity"
+      >
+        {sharing ? (
+          <>
+            <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+            </svg>
+            Sharing…
+          </>
+        ) : canNativeShare ? (
+          <>↗ Share Your Friendship</>
+        ) : (
+          <>{copied ? "✓ Link copied!" : "⧉ Copy link"}</>
+        )}
+      </button>
+      <a
+        href={pngUrl}
+        download="conan-friend-card.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--bg2)] border border-[var(--border)] text-[var(--text)] text-sm font-semibold hover:border-[var(--orange)] transition-colors"
+      >
+        ↓ Download PNG
+      </a>
+    </div>
+  );
+}
+
 /* ── Share card with parallax hover ─────────────────────────────────────────── */
 function ShareCard({ pngUrl }: { pngUrl: string }) {
   const ref     = useRef<HTMLDivElement>(null);
@@ -332,15 +405,7 @@ export default function IFeelPage() {
                 >
                   <h2 className="font-serif text-xl font-semibold mb-4">Your card</h2>
                   <ShareCard pngUrl={pngUrl} />
-                  <a
-                    href={pngUrl}
-                    download="conan-friend-card.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--orange)] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
-                  >
-                    ↓ Download PNG
-                  </a>
+                  <ShareButtons pngUrl={pngUrl} feeling={feeling} />
                 </motion.section>
               )}
 
