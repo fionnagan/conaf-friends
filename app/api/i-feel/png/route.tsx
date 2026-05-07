@@ -12,7 +12,6 @@ export const runtime = "nodejs";
 interface ColdOpenRecord {
   guest_id: string;
   guest_name: string;
-  episode_url: string;
   profile_url: string;
   cold_open_text: string;
   feeling_phrase_normalized: string;
@@ -30,7 +29,6 @@ const photos = guestPhotos as Record<string, string | null>;
 function normalize(phrase: string): string {
   return phrase.toLowerCase().replace(/[^a-z ]/g, "").trim();
 }
-
 function vectorize(phrase: string): number[] {
   const words = normalize(phrase).split(/\s+/).filter(Boolean);
   const tf: Record<string, number> = {};
@@ -52,13 +50,11 @@ function vectorize(phrase: string): number[] {
   const norm = Math.sqrt(vec.reduce((s, x) => s + x * x, 0)) || 1;
   return vec.map((x) => x / norm);
 }
-
 function cosineSimilarity(a: number[], b: number[]): number {
   let dot = 0;
   for (let i = 0; i < a.length; i++) dot += a[i] * b[i];
   return dot;
 }
-
 function findTopGuests(feeling: string, n = 3) {
   const queryVec = vectorize(feeling);
   const scored = records
@@ -76,43 +72,64 @@ function findTopGuests(feeling: string, n = 3) {
   return top;
 }
 
-/* ── Fetch remote image as base64 (with mime detection) ─────────────────────── */
+/* ── Fetch photo sequentially (avoids Wikimedia 429 rate-limit) ──────────────── */
 async function fetchBase64(url: string): Promise<string | null> {
-  try {
-    const ctrl = new AbortController();
-    const id = setTimeout(() => ctrl.abort(), 4000);
-    const res = await fetch(url, {
-      signal: ctrl.signal,
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; FriendRegistry/1.0)" },
-    });
-    clearTimeout(id);
-    if (!res.ok) return null;
-    const contentType = res.headers.get("content-type") ?? "";
-    const buf = Buffer.from(await res.arrayBuffer());
-    let mime = "image/jpeg";
-    if (buf[0] === 0x89 && buf[1] === 0x50) mime = "image/png";
-    else if (buf[0] === 0xff && buf[1] === 0xd8) mime = "image/jpeg";
-    else if (contentType.includes("png")) mime = "image/png";
-    else if (contentType.includes("jpeg") || contentType.includes("jpg")) mime = "image/jpeg";
-    else if (contentType.includes("webp")) mime = "image/webp";
-    else return null;
-    return `data:${mime};base64,${buf.toString("base64")}`;
-  } catch {
-    return null;
+  const UA = "FriendRegistry/1.0 (https://conaf.vercel.app)";
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const ctrl = new AbortController();
+      const id = setTimeout(() => ctrl.abort(), 6000);
+      const res = await fetch(url, {
+        signal: ctrl.signal,
+        headers: { "User-Agent": UA },
+      });
+      clearTimeout(id);
+      if (res.status === 429) {
+        // Rate limited — wait and retry once
+        await new Promise((r) => setTimeout(r, 600));
+        continue;
+      }
+      if (!res.ok) return null;
+      const buf = Buffer.from(await res.arrayBuffer());
+      let mime = "image/jpeg";
+      if (buf[0] === 0x89 && buf[1] === 0x50) mime = "image/png";
+      else if (buf[0] === 0xff && buf[1] === 0xd8) mime = "image/jpeg";
+      else return null;
+      return `data:${mime};base64,${buf.toString("base64")}`;
+    } catch {
+      if (attempt === 1) return null;
+      await new Promise((r) => setTimeout(r, 400));
+    }
   }
+  return null;
 }
 
-/* ── Scale feeling font size to single line ──────────────────────────────────── */
-const MARKER_CW = 0.60;
-const MAX_W     = 900;
+/* ── Fetch 3 guest photos sequentially to avoid rate-limiting ────────────────── */
+async function fetchGuestPhotos(guests: ReturnType<typeof findTopGuests>) {
+  const results = [];
+  for (const g of guests) {
+    const photoUrl = photos[g.guest_id];
+    const b64 = photoUrl ? await fetchBase64(photoUrl) : null;
+    results.push({ ...g, photoB64: b64 });
+    // Small stagger between requests
+    if (guests.indexOf(g) < guests.length - 1) {
+      await new Promise((r) => setTimeout(r, 150));
+    }
+  }
+  return results;
+}
 
-function scaledSize(text: string, maxPx: number): number {
-  const fit = Math.floor(MAX_W / (text.length * MARKER_CW));
-  return Math.min(maxPx, Math.max(40, fit));
+/* ── Scale marker font to fit usable width ───────────────────────────────────── */
+const MARKER_CW = 0.60;
+const USABLE_W  = 900;
+
+function scaledSize(text: string, maxPx: number, minPx = 56): number {
+  const fit = Math.floor(USABLE_W / (text.length * MARKER_CW));
+  return Math.min(maxPx, Math.max(minPx, fit));
 }
 
 /* ── Helpers ─────────────────────────────────────────────────────────────────── */
-function shortQuote(text: string, max = 20): string {
+function shortQuote(text: string, max = 12): string {
   return text.length <= max ? text : text.slice(0, max - 1) + "…";
 }
 function initials(name: string): string {
@@ -123,7 +140,7 @@ function initials(name: string): string {
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const name    = (searchParams.get("name")    ?? "Someone").toUpperCase();
-  const country = searchParams.get("country") ?? "";
+  const country = searchParams.get("country")  ?? "";
   const feeling = (searchParams.get("feeling") ?? "").toUpperCase();
   const flag    = country ? countryFlag(country) : "🌐";
 
@@ -137,94 +154,96 @@ export async function GET(req: NextRequest) {
   ]);
   const podcastB64 = `data:image/jpeg;base64,${podcastImgBuf.toString("base64")}`;
 
-  /* Find top 3 matching guests + photos */
+  /* Guest matching + sequential photo fetch */
   const topGuests = findTopGuests(feeling, 3);
-  const guestImgs = await Promise.all(
-    topGuests.map(async (g) => {
-      const photoUrl = photos[g.guest_id];
-      const b64 = photoUrl ? await fetchBase64(photoUrl) : null;
-      return { ...g, photoB64: b64 };
-    })
-  );
+  const guestImgs = await fetchGuestPhotos(topGuests);
 
-  /* Colors + typography constants */
+  /* ── Design tokens ── */
   const ORANGE = "#F26519";
   const BLACK  = "#111111";
   const RULE   = "#d0d0d0";
-  const MUTED  = "#999999";
-  const CARD   = "#F7F5F2";
+  const MUTED  = "#888888";
+  const CARD   = "#F5F3F0";
 
-  const DEFAULT_SZ = 96;
-  const nameSz     = scaledSize(name,    DEFAULT_SZ);
-  const feelSz     = scaledSize(feeling, DEFAULT_SZ);
+  // Canvas: 1080×1350 — 4:5 portrait (native IG feed, works in stories too)
+  // "MY NAME IS" label = 52px  →  guest names "just a tad smaller" = 44px
+  const LABEL_SZ  = 52;   // "MY NAME IS" / "I'M FROM…AND I FEEL"
+  const ABOUT_SZ  = 46;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
+  const GSECT_SZ  = 34;   // "GUESTS WHO FELT THE SAME WAY"
+  const GNAME_SZ  = 44;   // guest first name — just a tad smaller than LABEL_SZ
+  const GQUOTE_SZ = 27;   // guest feeling quote
+  const PHOTO_PX  = 112;  // guest circle diameter
+  const LOGO_PX   = 110;  // podcast logo
+  const ATTR_SZ   = 15;   // attribution footer
 
-  const FIELD_GAP = "4px";
+  const nameSz  = scaledSize(name,    150, 64);
+  const feelSz  = scaledSize(feeling, 150, 64);
 
-  const barlow = (size: number, color = BLACK, extra: React.CSSProperties = {}): React.CSSProperties => ({
+  /* Style helpers */
+  const barlow = (sz: number, color = BLACK, extra: React.CSSProperties = {}): React.CSSProperties => ({
     fontFamily: "Barlow",
-    fontSize: `${size}px`,
+    fontSize: `${sz}px`,
     fontWeight: 800,
     color,
-    letterSpacing: "3px",
+    letterSpacing: "2.5px",
     lineHeight: 1,
     display: "flex",
     ...extra,
   });
-
-  const marker = (size: number, color = ORANGE): React.CSSProperties => ({
+  const marker = (sz: number, color = ORANGE): React.CSSProperties => ({
     fontFamily: "Marker",
-    fontSize: `${size}px`,
+    fontSize: `${sz}px`,
     color,
-    lineHeight: 1,
+    lineHeight: 1.05,
     display: "flex",
   });
-
-  const rule: React.CSSProperties = {
-    width: "940px",
-    height: "2px",
-    background: RULE,
-    display: "flex",
-  };
+  const ruleDiv = (
+    <div style={{ width: "940px", height: "2px", background: RULE, display: "flex", marginTop: "18px" }} />
+  );
 
   return new ImageResponse(
     (
       <div style={{
-        width: "1080px",
-        height: "1080px",
+        width:  "1080px",
+        height: "1350px",
         background: "white",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "52px 70px 40px",
+        padding: "68px 70px 58px",
       }}>
 
-        {/* ── FIELD 1 — Name ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: FIELD_GAP }}>
-          <span style={barlow(42)}>MY NAME IS</span>
+        {/* ── A: Name ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "5px" }}>
+          <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
           <span style={marker(nameSz)}>{name}</span>
+          {ruleDiv}
         </div>
 
-        <div style={rule} />
-
-        {/* ── FIELD 2 — Country (emoji inline, no rule after) ── */}
-        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-          <span style={barlow(42)}>{`I'M FROM`}</span>
-          <span style={{ fontFamily: "Barlow", fontSize: "52px", display: "flex", lineHeight: 1 }}>{flag}</span>
+        {/* ── B: Country + Feeling ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "5px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+            <span style={barlow(LABEL_SZ)}>{`I'M FROM`}</span>
+            <span style={{ fontFamily: "Barlow", fontSize: `${LABEL_SZ + 12}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
+            <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
+          </div>
+          <span style={{ ...marker(feelSz), maxWidth: "940px", textAlign: "center", justifyContent: "center" }}>
+            {feeling}
+          </span>
+          {ruleDiv}
         </div>
 
-        {/* ── FIELD 3 — Feeling (no rule before, flows directly after I'M FROM) ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: FIELD_GAP }}>
-          <span style={barlow(42)}>AND I FEEL</span>
-          <span style={marker(feelSz)}>{feeling}</span>
+        {/* ── C: About ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+          <span style={barlow(ABOUT_SZ)}>ABOUT BEING</span>
+          <span style={barlow(ABOUT_SZ)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
         </div>
 
-        <div style={rule} />
-
-        {/* ── GUEST AFFINITY STRIP ── */}
+        {/* ── D: Guest affinity strip ── */}
         {guestImgs.length > 0 && (
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "940px", gap: "10px" }}>
-            <span style={barlow(13, MUTED, { letterSpacing: "2px" })}>GUESTS WHO FELT THE SAME WAY</span>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "940px", gap: "14px" }}>
+            <span style={barlow(GSECT_SZ, MUTED, { letterSpacing: "2px" })}>GUESTS WHO FELT THE SAME WAY</span>
             <div style={{ display: "flex", gap: "10px", width: "940px" }}>
               {guestImgs.map((g) => (
                 <div
@@ -233,37 +252,50 @@ export async function GET(req: NextRequest) {
                     display: "flex",
                     flex: 1,
                     alignItems: "center",
-                    gap: "10px",
+                    gap: "14px",
                     background: CARD,
-                    borderRadius: "14px",
-                    padding: "12px",
+                    borderRadius: "20px",
+                    padding: "16px",
                   }}
                 >
                   {/* Circular photo */}
                   <div style={{
                     display: "flex",
-                    width: "56px",
-                    height: "56px",
+                    width: `${PHOTO_PX}px`,
+                    height: `${PHOTO_PX}px`,
                     borderRadius: "50%",
                     overflow: "hidden",
-                    background: "#F0E8DF",
+                    background: "#EDE8E2",
                     flexShrink: 0,
                     alignItems: "center",
                     justifyContent: "center",
                   }}>
                     {g.photoB64 ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={g.photoB64} width={56} height={56} style={{ objectFit: "cover", width: "56px", height: "56px" }} alt="" />
+                      <img
+                        src={g.photoB64}
+                        width={PHOTO_PX}
+                        height={PHOTO_PX}
+                        style={{ objectFit: "cover", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px` }}
+                        alt=""
+                      />
                     ) : (
-                      <span style={marker(20)}>{initials(g.guest_name)}</span>
+                      <span style={marker(Math.round(PHOTO_PX * 0.3))}>{initials(g.guest_name)}</span>
                     )}
                   </div>
+
                   {/* Name + quote */}
-                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", flex: 1 }}>
-                    <span style={{ fontFamily: "Barlow", fontSize: "15px", fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px" }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "7px", flex: 1 }}>
+                    <span style={{
+                      fontFamily: "Barlow", fontSize: `${GNAME_SZ}px`, fontWeight: 800,
+                      color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1,
+                    }}>
                       {g.guest_name.split(" ")[0].toUpperCase()}
                     </span>
-                    <span style={{ fontFamily: "Barlow", fontSize: "12px", color: MUTED, fontStyle: "italic", display: "flex" }}>
+                    <span style={{
+                      fontFamily: "Barlow", fontSize: `${GQUOTE_SZ}px`,
+                      color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.1,
+                    }}>
                       &quot;{shortQuote(g.cold_open_text)}&quot;
                     </span>
                   </div>
@@ -273,23 +305,14 @@ export async function GET(req: NextRequest) {
           </div>
         )}
 
-        <div style={rule} />
-
-        {/* ── FOOTER — About + logo + attribution ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px" }}>
-            <span style={barlow(34)}>ABOUT BEING</span>
-            <span style={barlow(34)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
-          </div>
+        {/* ── E: Logo + attribution ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={podcastB64} width={100} height={100} style={{ borderRadius: "10px", objectFit: "cover", marginTop: "6px" }} alt="" />
+          <img src={podcastB64} width={LOGO_PX} height={LOGO_PX}
+            style={{ borderRadius: "12px", objectFit: "cover" }} alt="" />
           <span style={{
-            fontFamily: "Barlow",
-            fontSize: "13px",
-            fontWeight: 800,
-            color: "#aaaaaa",
-            letterSpacing: "2px",
-            display: "flex",
+            fontFamily: "Barlow", fontSize: `${ATTR_SZ}px`, fontWeight: 800,
+            color: "#aaaaaa", letterSpacing: "2.5px", display: "flex",
           }}>
             CONAF.VERCEL.APP · A FAN PROJECT
           </span>
@@ -298,8 +321,8 @@ export async function GET(req: NextRequest) {
       </div>
     ),
     {
-      width: 1080,
-      height: 1080,
+      width:  1080,
+      height: 1350,
       fonts: [
         { name: "Marker", data: markerData, style: "normal", weight: 400 },
         { name: "Barlow", data: barlowData, style: "normal", weight: 800 },
