@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV_LINKS = [
-  { href: "/", label: "Map" },
-  { href: "/arc", label: "Arcs" },
+  { href: "/", label: "I Feel…" },
   { href: "/cold-opens", label: "Cold Opens" },
-  { href: "/i-feel", label: "I Feel…" },
+  { href: "/arc", label: "Arcs" },
+  { href: "/map", label: "Map" },
   { href: "/about", label: "About" },
 ];
 
