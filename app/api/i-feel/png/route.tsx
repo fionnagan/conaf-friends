@@ -120,11 +120,18 @@ async function fetchGuestPhotos(guests: ReturnType<typeof findTopGuests>) {
 }
 
 /* ── Scale marker font to fit usable width ───────────────────────────────────── */
-const MARKER_CW = 0.60;
-const USABLE_W  = 900;
+const MARKER_CW  = 0.60;
+const BARLOW_CW  = 0.62;   // Barlow 800 uppercase avg char width ratio
+const USABLE_W   = 900;
+// Guest card text area: (940 - 2×10gap) / 3cards − 2×16pad − 112photo − 14gap ≈ 148px
+const GUEST_TW   = 148;
 
 function scaledSize(text: string, maxPx: number, minPx = 56): number {
   const fit = Math.floor(USABLE_W / (text.length * MARKER_CW));
+  return Math.min(maxPx, Math.max(minPx, fit));
+}
+function scaledBarlowSize(text: string, maxPx: number, minPx: number, availW = GUEST_TW): number {
+  const fit = Math.floor(availW / (text.length * BARLOW_CW));
   return Math.min(maxPx, Math.max(minPx, fit));
 }
 
@@ -169,12 +176,14 @@ export async function GET(req: NextRequest) {
   // "MY NAME IS" label = 52px  →  guest names "just a tad smaller" = 44px
   const LABEL_SZ  = 52;   // "MY NAME IS" / "I'M FROM…AND I FEEL"
   const ABOUT_SZ  = 46;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
-  const GSECT_SZ  = 34;   // "GUESTS WHO FELT THE SAME WAY"
-  const GNAME_SZ  = 44;   // guest first name — just a tad smaller than LABEL_SZ
-  const GQUOTE_SZ = 27;   // guest feeling quote
-  const PHOTO_PX  = 112;  // guest circle diameter
-  const LOGO_PX   = 110;  // podcast logo
-  const ATTR_SZ   = 15;   // attribution footer
+  const GSECT_SZ       = 34;   // "GUESTS WHO FELT THE SAME WAY"
+  const GNAME_MAX      = 44;   // guest first name max — scales down for long names
+  const GNAME_MIN      = 20;
+  const GQUOTE_MAX     = 27;   // guest quote max — scales down for long quotes
+  const GQUOTE_MIN     = 14;
+  const PHOTO_PX       = 112;  // guest circle diameter
+  const LOGO_PX        = 170;  // podcast logo (larger)
+  const ATTR_SZ        = 30;   // attribution footer — just below GSECT_SZ
 
   const nameSz  = scaledSize(name,    150, 64);
   const feelSz  = scaledSize(feeling, 150, 64);
@@ -245,7 +254,13 @@ export async function GET(req: NextRequest) {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "940px", gap: "14px" }}>
             <span style={barlow(GSECT_SZ, MUTED, { letterSpacing: "2px" })}>GUESTS WHO FELT THE SAME WAY</span>
             <div style={{ display: "flex", gap: "10px", width: "940px" }}>
-              {guestImgs.map((g) => (
+              {guestImgs.map((g) => {
+                const firstName  = g.guest_name.split(" ")[0].toUpperCase();
+                const quoteText  = shortQuote(g.cold_open_text);
+                const gnameSz    = scaledBarlowSize(firstName,  GNAME_MAX,  GNAME_MIN);
+                // quote rendered with surrounding " " — add 2 chars for sizing
+                const gquoteSz   = scaledBarlowSize(`"${quoteText}"`, GQUOTE_MAX, GQUOTE_MIN);
+                return (
                 <div
                   key={g.guest_id}
                   style={{
@@ -287,20 +302,21 @@ export async function GET(req: NextRequest) {
                   {/* Name + quote */}
                   <div style={{ display: "flex", flexDirection: "column", gap: "7px", flex: 1 }}>
                     <span style={{
-                      fontFamily: "Barlow", fontSize: `${GNAME_SZ}px`, fontWeight: 800,
+                      fontFamily: "Barlow", fontSize: `${gnameSz}px`, fontWeight: 800,
                       color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1,
                     }}>
-                      {g.guest_name.split(" ")[0].toUpperCase()}
+                      {firstName}
                     </span>
                     <span style={{
-                      fontFamily: "Barlow", fontSize: `${GQUOTE_SZ}px`,
+                      fontFamily: "Barlow", fontSize: `${gquoteSz}px`,
                       color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.1,
                     }}>
-                      &quot;{shortQuote(g.cold_open_text)}&quot;
+                      &quot;{quoteText}&quot;
                     </span>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}
