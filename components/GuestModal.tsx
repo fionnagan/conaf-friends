@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import type { Guest } from "@/lib/types";
 import GuestAvatar from "./GuestAvatar";
-import { ERA_LABELS, ORIGIN_LABELS, getEraTextColor } from "@/lib/data";
+import { ERA_LABELS, getEraTextColor } from "@/lib/data";
 
 interface Props {
   guest: Guest;

@@ -1,0 +1,170 @@
+"use client";
+
+import { useCallback, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  ZoomableGroup,
+} from "react-simple-maps";
+import { countryFlag } from "@/lib/country-flags";
+
+const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+
+interface CountryPanel {
+  name: string;
+  count: number;
+}
+
+interface Props {
+  countryCounts: Record<string, number>;
+}
+
+function colorForCount(count: number, max: number): string {
+  if (count === 0) return "rgba(255,255,255,0.04)";
+  const t = Math.min(count / max, 1);
+  const alpha = 0.15 + t * 0.65;
+  return `rgba(242,101,25,${alpha.toFixed(2)})`;
+}
+
+export default function WorldMap({ countryCounts }: Props) {
+  const [tooltip, setTooltip]   = useState<CountryPanel | null>(null);
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+  const [panel, setPanel]       = useState<CountryPanel | null>(null);
+  const containerRef            = useRef<HTMLDivElement>(null);
+
+  const maxCount = Math.max(...Object.values(countryCounts), 1);
+
+  const handleEnter = useCallback((name: string, e: React.MouseEvent) => {
+    const count = countryCounts[name] ?? 0;
+    const rect  = containerRef.current?.getBoundingClientRect();
+    if (rect) setTooltipPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    setTooltip({ name, count });
+  }, [countryCounts]);
+
+  const handleMove = useCallback((e: React.MouseEvent) => {
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (rect) setTooltipPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  }, []);
+
+  const handleLeave = useCallback(() => setTooltip(null), []);
+
+  const handleClick = useCallback((name: string) => {
+    const count = countryCounts[name] ?? 0;
+    if (count > 0) setPanel({ name, count });
+  }, [countryCounts]);
+
+  return (
+    <div className="relative" ref={containerRef}>
+      <div
+        className="rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--bg2)]"
+        style={{ height: 380 }}
+      >
+        <ComposableMap
+          projection="geoNaturalEarth1"
+          style={{ width: "100%", height: "100%" }}
+          projectionConfig={{ scale: 140, center: [0, 10] }}
+        >
+          <ZoomableGroup>
+            <Geographies geography={GEO_URL}>
+              {({ geographies }) =>
+                geographies.map((geo) => {
+                  const name  = geo.properties.name as string;
+                  const count = countryCounts[name] ?? 0;
+                  const fill  = colorForCount(count, maxCount);
+                  return (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill={fill}
+                      stroke="rgba(255,255,255,0.06)"
+                      strokeWidth={0.5}
+                      style={{
+                        default: { outline: "none", cursor: count > 0 ? "pointer" : "default" },
+                        hover:   { outline: "none", fill: count > 0 ? "rgba(242,101,25,0.85)" : "rgba(255,255,255,0.08)" },
+                        pressed: { outline: "none" },
+                      }}
+                      onMouseEnter={(e) => handleEnter(name, e as unknown as React.MouseEvent)}
+                      onMouseMove={(e) => handleMove(e as unknown as React.MouseEvent)}
+                      onMouseLeave={handleLeave}
+                      onClick={() => handleClick(name)}
+                    />
+                  );
+                })
+              }
+            </Geographies>
+          </ZoomableGroup>
+        </ComposableMap>
+
+        {/* Hover tooltip */}
+        <AnimatePresence>
+          {tooltip && (
+            <motion.div
+              key="tooltip"
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.92 }}
+              transition={{ duration: 0.12 }}
+              style={{
+                left: tooltipPos.x + 12,
+                top: Math.max(tooltipPos.y - 36, 8),
+                pointerEvents: "none",
+              }}
+              className="absolute z-10 px-3 py-1.5 rounded-lg bg-[var(--bg)] border border-[var(--border)] text-xs shadow-xl whitespace-nowrap"
+            >
+              <span className="font-semibold">{countryFlag(tooltip.name)} {tooltip.name}</span>
+              {tooltip.count > 0 && (
+                <span className="ml-2 text-[var(--orange)]">
+                  {tooltip.count} feeling{tooltip.count !== 1 ? "s" : ""}
+                </span>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Country panel */}
+      <AnimatePresence>
+        {panel && (
+          <motion.div
+            key="panel"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="mt-3 p-4 bg-[var(--bg2)] rounded-xl border border-[var(--orange)]/40"
+          >
+            <div className="flex items-center justify-between mb-1.5">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">{countryFlag(panel.name)}</span>
+                <span className="font-semibold">{panel.name}</span>
+              </div>
+              <button
+                onClick={() => setPanel(null)}
+                className="text-[var(--text-muted)] hover:text-[var(--text)] text-xl leading-none px-1"
+              >
+                ×
+              </button>
+            </div>
+            <p className="text-sm text-[var(--text-muted)]">
+              {panel.count > 0
+                ? <>{panel.count} fan{panel.count !== 1 ? "s" : ""} have shared their feeling from {panel.name}.</>
+                : <>No submissions from {panel.name} yet.</>}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Legend */}
+      <div className="mt-3 flex items-center gap-2 text-xs text-[var(--text-muted)]">
+        <span>Few</span>
+        <div
+          className="h-2 flex-1 rounded-full"
+          style={{ background: "linear-gradient(90deg, rgba(242,101,25,0.15), rgba(242,101,25,0.8))" }}
+        />
+        <span>Many</span>
+      </div>
+    </div>
+  );
+}

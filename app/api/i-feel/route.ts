@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import coldOpensData from "@/data/cold-opens.json";
 import fansData from "@/data/fans.json";
 import topWordsData from "@/data/top-words.json";
+import guestPhotos from "@/data/guest-photos.json";
 import { COUNTRIES } from "@/lib/countries";
+import { persistSubmission } from "@/lib/submissions";
 
 /* ── Types ─────────────────────────────────────────────────────────────────── */
 interface ColdOpenRecord {
@@ -31,6 +33,7 @@ const { vocab, records } = coldOpensData as {
   records: ColdOpenRecord[];
 };
 const fans = fansData as FanRecord[];
+const photos = guestPhotos as Record<string, string | null>;
 
 /* ── TF-IDF vectorise ───────────────────────────────────────────────────────── */
 function normalize(phrase: string): string {
@@ -43,7 +46,6 @@ function vectorize(phrase: string): number[] {
   for (const w of words) tf[w] = (tf[w] ?? 0) + 1;
   const total = Math.max(words.length, 1);
 
-  // IDF is already baked into stored vectors — recompute consistently
   const N = records.length;
   const df: Record<string, number> = {};
   for (const r of records) {
@@ -65,7 +67,7 @@ function vectorize(phrase: string): number[] {
 function cosineSimilarity(a: number[], b: number[]): number {
   let dot = 0;
   for (let i = 0; i < a.length; i++) dot += a[i] * b[i];
-  return dot; // both unit-normalised
+  return dot;
 }
 
 /* ── Semantic matching ──────────────────────────────────────────────────────── */
@@ -77,6 +79,7 @@ function findMatches(feeling: string) {
     .map((r) => ({
       ...r,
       score: cosineSimilarity(queryVec, r.embedding_vector),
+      photo_url: photos[r.guest_id] || null,
     }))
     .sort((a, b) => b.score - a.score || a.episode_id.localeCompare(b.episode_id));
 
@@ -89,27 +92,41 @@ function findMatches(feeling: string) {
     top.push(r);
     if (top.length === 3) break;
   }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return top.map(({ score: _s, embedding_vector: _e, ...rest }) => rest);
 }
 
 /* ── POST /api/i-feel ───────────────────────────────────────────────────────── */
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { name, country, feeling } = body as {
+  const { name, country, feeling, sessionId } = body as {
     name: string;
     country: string;
     feeling: string;
+    sessionId?: string;
   };
 
   // Validation
   const wordCount = feeling?.trim().split(/\s+/).filter(Boolean).length ?? 0;
-  if (!name?.trim()) return NextResponse.json({ error: "Name is required" }, { status: 400 });
-  if (!feeling?.trim()) return NextResponse.json({ error: "Feeling is required" }, { status: 400 });
-  if (wordCount > 4) return NextResponse.json({ error: "Feeling must be 4 words or fewer" }, { status: 400 });
-  if (!COUNTRIES.includes(country)) return NextResponse.json({ error: "Invalid country" }, { status: 400 });
+  if (!name?.trim())    return NextResponse.json({ error: "Name is required" },               { status: 400 });
+  if (!feeling?.trim()) return NextResponse.json({ error: "Feeling is required" },            { status: 400 });
+  if (wordCount > 5)    return NextResponse.json({ error: "Feeling must be 5 words or fewer" }, { status: 400 });
+  if (!COUNTRIES.includes(country)) return NextResponse.json({ error: "Invalid country" },   { status: 400 });
 
-  const matches = findMatches(feeling);
+  const feelingNorm = normalize(feeling.trim());
+  const embedding   = vectorize(feelingNorm);
+  const matches     = findMatches(feeling);
   const countryFans = fans.filter((f) => f.country_full_name === country);
+
+  // Persist submission to Supabase (non-blocking — fire and forget)
+  persistSubmission({
+    name: name.trim(),
+    country,
+    feeling_raw:        feeling.trim(),
+    feeling_normalized: feelingNorm,
+    embedding,
+    session_id: sessionId,
+  }).catch(console.error);
 
   return NextResponse.json({
     matches,

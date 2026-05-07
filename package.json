@@ -26,13 +26,17 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.1",
+    "@supabase/supabase-js": "^2.105.3",
     "@types/d3": "^7.4.3",
+    "@vercel/blob": "^2.3.3",
     "axios": "^1.15.2",
     "cheerio": "^1.2.0",
     "d3": "^7.9.0",
+    "framer-motion": "^12.38.0",
     "next": "^14.2.35",
     "react": "^18",
     "react-dom": "^18",
+    "react-simple-maps": "^3.0.0",
     "rss-parser": "^3.13.0",
     "slugify": "^1.6.9"
   },

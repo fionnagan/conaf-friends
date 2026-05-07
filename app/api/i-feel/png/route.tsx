@@ -7,11 +7,11 @@ export const runtime = "nodejs";
 
 // Approximate character widths for single-line scaling
 const MARKER_CW = 0.62;  // Permanent Marker
-const BARLOW_CW = 0.55;  // Barlow 800 (non-condensed)
 const MAX_W     = 900;   // usable px inside 1080px canvas
 
-function scaledSize(text: string, maxPx: number, cw: number): number {
-  const fit = MAX_W / (text.length * cw);
+/** Only shrinks below maxPx if text would overflow MAX_W — never expands. */
+function scaledSize(text: string, maxPx: number): number {
+  const fit = MAX_W / (text.length * MARKER_CW);
   return Math.min(maxPx, Math.floor(fit));
 }
 
@@ -20,6 +20,8 @@ export async function GET(req: NextRequest) {
   const name    = (searchParams.get("name")    ?? "Someone").toUpperCase();
   const country = (searchParams.get("country") ?? "").toUpperCase();
   const feeling = (searchParams.get("feeling") ?? "").toUpperCase();
+  // Feeling can be up to 5 words per updated spec
+
 
   const fontDir = path.join(process.cwd(), "public", "fonts");
   const imgDir  = path.join(process.cwd(), "public", "logos");
@@ -32,10 +34,12 @@ export async function GET(req: NextRequest) {
 
   const podcastB64 = `data:image/jpeg;base64,${podcastImgBuf.toString("base64")}`;
 
-  // Font sizes — shrink to single line if needed
-  const nameSz    = scaledSize(name, 108, MARKER_CW);
-  const countrySz = scaledSize(country, 90, MARKER_CW);
-  const feelSz    = scaledSize(feeling, 96, MARKER_CW);
+  // Typography rules per spec: all three share same default size (96px);
+  // name + country are fixed (never shrink); feeling shrinks ONLY if it overflows.
+  const DEFAULT_SZ  = 96;
+  const nameSz      = DEFAULT_SZ;
+  const countrySz   = DEFAULT_SZ;
+  const feelSz      = scaledSize(feeling, DEFAULT_SZ);
 
   const ORANGE = "#F26519";
   const BLACK  = "#111111";
@@ -93,7 +97,7 @@ export async function GET(req: NextRequest) {
 
         {/* ── FIELD 2 — Country ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: FIELD_GAP }}>
-          <span style={barlow(42)}>I'M FROM</span>
+          <span style={barlow(42)}>{"I'M FROM"}</span>
           <span style={marker(countrySz)}>{country}</span>
         </div>
 
@@ -110,7 +114,7 @@ export async function GET(req: NextRequest) {
         {/* ── FOOTER — About being + logo ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px", flex: 1, justifyContent: "center" }}>
           <span style={barlow(38)}>ABOUT BEING</span>
-          <span style={barlow(38)}>CONAN O'BRIEN'S FRIEND</span>
+          <span style={barlow(38)}>{"CONAN O'BRIEN'S FRIEND"}</span>
         </div>
 
         {/* Podcast cover image — larger gap from text above */}
