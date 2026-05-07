@@ -1,0 +1,604 @@
+{
+  "good": [
+    {
+      "guest_id": "bill-burr",
+      "guest_name": "Bill Burr",
+      "profile_url": "/guest/bill-burr",
+      "cold_open_text": "good"
+    },
+    {
+      "guest_id": "tina-fey",
+      "guest_name": "Tina Fey",
+      "profile_url": "/guest/tina-fey",
+      "cold_open_text": "good"
+    },
+    {
+      "guest_id": "lisa-kudrow",
+      "guest_name": "Lisa Kudrow",
+      "profile_url": "/guest/lisa-kudrow",
+      "cold_open_text": "good - no, really good -"
+    },
+    {
+      "guest_id": "matt-damon",
+      "guest_name": "Matt Damon",
+      "profile_url": "/guest/matt-damon",
+      "cold_open_text": "good"
+    },
+    {
+      "guest_id": "ray-romano",
+      "guest_name": "Ray Romano",
+      "profile_url": "/guest/ray-romano",
+      "cold_open_text": "good"
+    },
+    {
+      "guest_id": "dave-grohl-krist-novoselic-and-steve-albini",
+      "guest_name": "Dave Grohl, Krist Novoselic, and Steve Albini",
+      "profile_url": "/guest/dave-grohl-krist-novoselic-and-steve-albini",
+      "cold_open_text": "good, jazzy and anxiety"
+    },
+    {
+      "guest_id": "joel-mchale",
+      "guest_name": "Joel McHale",
+      "profile_url": "/guest/joel-mchale",
+      "cold_open_text": "a little anxious, but good"
+    },
+    {
+      "guest_id": "christina-ricci",
+      "guest_name": "Christina Ricci",
+      "profile_url": "/guest/christina-ricci",
+      "cold_open_text": "pretty good"
+    },
+    {
+      "guest_id": "jason-bateman",
+      "guest_name": "Jason Bateman",
+      "profile_url": "/guest/jason-bateman",
+      "cold_open_text": "pretty good"
+    },
+    {
+      "guest_id": "slash",
+      "guest_name": "Slash",
+      "profile_url": "/guest/slash",
+      "cold_open_text": "pretty damn good"
+    }
+  ],
+  "honored": [
+    {
+      "guest_id": "jack-mcbrayer",
+      "guest_name": "Jack McBrayer",
+      "profile_url": "/guest/jack-mcbrayer",
+      "cold_open_text": "honored"
+    },
+    {
+      "guest_id": "nikki-glaser",
+      "guest_name": "Nikki Glaser",
+      "profile_url": "/guest/nikki-glaser",
+      "cold_open_text": "ecstatic, honored, and quite tan"
+    },
+    {
+      "guest_id": "will-forte",
+      "guest_name": "Will Forte",
+      "profile_url": "/guest/will-forte",
+      "cold_open_text": "honored"
+    },
+    {
+      "guest_id": "cecily-strong",
+      "guest_name": "Cecily Strong",
+      "profile_url": "/guest/cecily-strong",
+      "cold_open_text": "honored"
+    },
+    {
+      "guest_id": "kelly-clarkson",
+      "guest_name": "Kelly Clarkson",
+      "profile_url": "/guest/kelly-clarkson",
+      "cold_open_text": "honored and super cheesy"
+    },
+    {
+      "guest_id": "sebastian-maniscalco",
+      "guest_name": "Sebastian Maniscalco",
+      "profile_url": "/guest/sebastian-maniscalco",
+      "cold_open_text": "honored"
+    },
+    {
+      "guest_id": "jordan-peele",
+      "guest_name": "Jordan Peele",
+      "profile_url": "/guest/jordan-peele",
+      "cold_open_text": "honored, absolutely honored"
+    },
+    {
+      "guest_id": "jane-lynch",
+      "guest_name": "Jane Lynch",
+      "profile_url": "/guest/jane-lynch",
+      "cold_open_text": "chosen and honored"
+    },
+    {
+      "guest_id": "zach-braff",
+      "guest_name": "Zach Braff",
+      "profile_url": "/guest/zach-braff",
+      "cold_open_text": "so honored"
+    }
+  ],
+  "great": [
+    {
+      "guest_id": "charles-barkley",
+      "guest_name": "Charles Barkley",
+      "profile_url": "/guest/charles-barkley",
+      "cold_open_text": "great"
+    },
+    {
+      "guest_id": "bill-hader",
+      "guest_name": "Bill Hader",
+      "profile_url": "/guest/bill-hader",
+      "cold_open_text": "great"
+    },
+    {
+      "guest_id": "w-kamau-bell",
+      "guest_name": "W. Kamau Bell",
+      "profile_url": "/guest/w-kamau-bell",
+      "cold_open_text": "cautiously optimistic, but still not great"
+    },
+    {
+      "guest_id": "kenan-thompson",
+      "guest_name": "Kenan Thompson",
+      "profile_url": "/guest/kenan-thompson",
+      "cold_open_text": "great"
+    },
+    {
+      "guest_id": "lin-manuel-miranda",
+      "guest_name": "Lin-Manuel Miranda",
+      "profile_url": "/guest/lin-manuel-miranda",
+      "cold_open_text": "great"
+    },
+    {
+      "guest_id": "hillary-and-chelsea-clinton",
+      "guest_name": "Hillary and Chelsea Clinton",
+      "profile_url": "/guest/hillary-and-chelsea-clinton",
+      "cold_open_text": "great (but a little apprehensive)"
+    },
+    {
+      "guest_id": "john-leguizamo",
+      "guest_name": "John Leguizamo",
+      "profile_url": "/guest/john-leguizamo",
+      "cold_open_text": "great"
+    },
+    {
+      "guest_id": "chris-martin",
+      "guest_name": "Chris Martin",
+      "profile_url": "/guest/chris-martin",
+      "cold_open_text": "really great"
+    }
+  ],
+  "excited": [
+    {
+      "guest_id": "david-spade",
+      "guest_name": "David Spade",
+      "profile_url": "/guest/david-spade",
+      "cold_open_text": "sort of excited"
+    },
+    {
+      "guest_id": "janelle-james",
+      "guest_name": "Janelle James",
+      "profile_url": "/guest/janelle-james",
+      "cold_open_text": "excited"
+    },
+    {
+      "guest_id": "chelsea-peretti",
+      "guest_name": "Chelsea Peretti",
+      "profile_url": "/guest/chelsea-peretti",
+      "cold_open_text": "excited"
+    },
+    {
+      "guest_id": "tracee-ellis-ross",
+      "guest_name": "Tracee Ellis Ross",
+      "profile_url": "/guest/tracee-ellis-ross",
+      "cold_open_text": "really strange, excited, a little squirrelly"
+    },
+    {
+      "guest_id": "nicole-byer",
+      "guest_name": "Nicole Byer",
+      "profile_url": "/guest/nicole-byer",
+      "cold_open_text": "excited"
+    },
+    {
+      "guest_id": "adam-mckay",
+      "guest_name": "Adam McKay",
+      "profile_url": "/guest/adam-mckay",
+      "cold_open_text": "old-fashioned-twelve-year-old-about-to-have-a-sleepover excited"
+    },
+    {
+      "guest_id": "maria-bamford",
+      "guest_name": "Maria Bamford",
+      "profile_url": "/guest/maria-bamford",
+      "cold_open_text": "excited"
+    },
+    {
+      "guest_id": "rivers-cuomo",
+      "guest_name": "Rivers Cuomo",
+      "profile_url": "/guest/rivers-cuomo",
+      "cold_open_text": "excited"
+    },
+    {
+      "guest_id": "seth-meyers",
+      "guest_name": "Seth Meyers",
+      "profile_url": "/guest/seth-meyers",
+      "cold_open_text": "anxious and excited"
+    },
+    {
+      "guest_id": "dan-levy",
+      "guest_name": "Dan Levy",
+      "profile_url": "/guest/dan-levy",
+      "cold_open_text": "thrilled, titillated, excited, and stimulated"
+    },
+    {
+      "guest_id": "billie-eilish-and-finneas",
+      "guest_name": "Billie Eilish and FINNEAS",
+      "profile_url": "/guest/billie-eilish-and-finneas",
+      "cold_open_text": "really excited and dubious, respectively,"
+    },
+    {
+      "guest_id": "angela-kinsey-and-jenna-fischer",
+      "guest_name": "Angela Kinsey and Jenna Fischer",
+      "profile_url": "/guest/angela-kinsey-and-jenna-fischer",
+      "cold_open_text": "zippy and super-duper excited, respectively,"
+    },
+    {
+      "guest_id": "b-j-novak",
+      "guest_name": "B.J. Novak",
+      "profile_url": "/guest/b-j-novak",
+      "cold_open_text": "excited, but cautious"
+    },
+    {
+      "guest_id": "goldie-hawn",
+      "guest_name": "Goldie Hawn",
+      "profile_url": "/guest/goldie-hawn",
+      "cold_open_text": "really excited"
+    },
+    {
+      "guest_id": "jimmy-kimmel",
+      "guest_name": "Jimmy Kimmel",
+      "profile_url": "/guest/jimmy-kimmel",
+      "cold_open_text": "sexually excited"
+    },
+    {
+      "guest_id": "rachel-dratch",
+      "guest_name": "Rachel Dratch",
+      "profile_url": "/guest/rachel-dratch",
+      "cold_open_text": "overly excited"
+    }
+  ],
+  "ecstatic": [
+    {
+      "guest_id": "nikki-glaser",
+      "guest_name": "Nikki Glaser",
+      "profile_url": "/guest/nikki-glaser",
+      "cold_open_text": "ecstatic, honored, and quite tan"
+    },
+    {
+      "guest_id": "jim-gaffigan",
+      "guest_name": "Jim Gaffigan",
+      "profile_url": "/guest/jim-gaffigan",
+      "cold_open_text": "ecstatic"
+    },
+    {
+      "guest_id": "steven-yeun",
+      "guest_name": "Steven Yeun",
+      "profile_url": "/guest/steven-yeun",
+      "cold_open_text": "ecstatic"
+    },
+    {
+      "guest_id": "elle-fanning",
+      "guest_name": "Elle Fanning",
+      "profile_url": "/guest/elle-fanning",
+      "cold_open_text": "ecstatic"
+    },
+    {
+      "guest_id": "gary-gulman",
+      "guest_name": "Gary Gulman",
+      "profile_url": "/guest/gary-gulman",
+      "cold_open_text": "ecstatic"
+    },
+    {
+      "guest_id": "norah-jones",
+      "guest_name": "Norah Jones",
+      "profile_url": "/guest/norah-jones",
+      "cold_open_text": "ecstatic"
+    },
+    {
+      "guest_id": "live-with-will-arnett-at-the-wiltern-theatre",
+      "guest_name": "Live with Will Arnett at the Wiltern Theatre",
+      "profile_url": "/guest/live-with-will-arnett-at-the-wiltern-theatre",
+      "cold_open_text": "absolutely ecstatic"
+    },
+    {
+      "guest_id": "bruce-springsteen",
+      "guest_name": "Bruce Springsteen",
+      "profile_url": "/guest/bruce-springsteen",
+      "cold_open_text": "ecstatic"
+    }
+  ],
+  "confused": [
+    {
+      "guest_id": "bob-odenkirk",
+      "guest_name": "Bob Odenkirk",
+      "profile_url": "/guest/bob-odenkirk",
+      "cold_open_text": "confused"
+    },
+    {
+      "guest_id": "matthew-rhys",
+      "guest_name": "Matthew Rhys",
+      "profile_url": "/guest/matthew-rhys",
+      "cold_open_text": "equal parts confused and terrified"
+    },
+    {
+      "guest_id": "lizzy-caplan",
+      "guest_name": "Lizzy Caplan",
+      "profile_url": "/guest/lizzy-caplan",
+      "cold_open_text": "confused"
+    },
+    {
+      "guest_id": "chris-robinson",
+      "guest_name": "Chris Robinson",
+      "profile_url": "/guest/chris-robinson",
+      "cold_open_text": "confused"
+    },
+    {
+      "guest_id": "albert-brooks-and-rob-reiner",
+      "guest_name": "Albert Brooks and Rob Reiner",
+      "profile_url": "/guest/albert-brooks-and-rob-reiner",
+      "cold_open_text": "confused"
+    },
+    {
+      "guest_id": "harrison-ford",
+      "guest_name": "Harrison Ford",
+      "profile_url": "/guest/harrison-ford",
+      "cold_open_text": "confused"
+    },
+    {
+      "guest_id": "hannah-einbinder",
+      "guest_name": "Hannah Einbinder",
+      "profile_url": "/guest/hannah-einbinder",
+      "cold_open_text": "confused"
+    },
+    {
+      "guest_id": "keith-urban",
+      "guest_name": "Keith Urban",
+      "profile_url": "/guest/keith-urban",
+      "cold_open_text": "incredibly confused"
+    },
+    {
+      "guest_id": "hannah-gadsby",
+      "guest_name": "Hannah Gadsby",
+      "profile_url": "/guest/hannah-gadsby",
+      "cold_open_text": "confused"
+    }
+  ],
+  "like": [
+    {
+      "guest_id": "jim-gaffigan",
+      "guest_name": "Jim Gaffigan",
+      "profile_url": "/guest/jim-gaffigan",
+      "cold_open_text": "like Nikki Glaser felt"
+    },
+    {
+      "guest_id": "denis-leary",
+      "guest_name": "Denis Leary",
+      "profile_url": "/guest/denis-leary",
+      "cold_open_text": "like he could give a f***"
+    },
+    {
+      "guest_id": "josh-safdie",
+      "guest_name": "Josh Safdie",
+      "profile_url": "/guest/josh-safdie",
+      "cold_open_text": "like a liar saying he feels anything"
+    },
+    {
+      "guest_id": "alan-yang",
+      "guest_name": "Alan Yang",
+      "profile_url": "/guest/alan-yang",
+      "cold_open_text": "like he\u2019s weirdly fulfilling a childhood dream-thing"
+    },
+    {
+      "guest_id": "kathryn-hahn",
+      "guest_name": "Kathryn Hahn",
+      "profile_url": "/guest/kathryn-hahn",
+      "cold_open_text": "like she\u2019d be lying"
+    },
+    {
+      "guest_id": "tracy-morgan-live-at-the-beacon-theater",
+      "guest_name": "Tracy Morgan Live at the Beacon Theater",
+      "profile_url": "/guest/tracy-morgan-live-at-the-beacon-theater",
+      "cold_open_text": "like a man"
+    },
+    {
+      "guest_id": "desus-nice",
+      "guest_name": "Desus Nice",
+      "profile_url": "/guest/desus-nice",
+      "cold_open_text": "like a diversity hire"
+    }
+  ],
+  "hopeful": [
+    {
+      "guest_id": "darcy-carden",
+      "guest_name": "D'Arcy Carden",
+      "profile_url": "/guest/darcy-carden",
+      "cold_open_text": "hopeful"
+    },
+    {
+      "guest_id": "judd-apatow",
+      "guest_name": "Judd Apatow",
+      "profile_url": "/guest/judd-apatow",
+      "cold_open_text": "hopeful"
+    },
+    {
+      "guest_id": "julia-louis-dreyfus",
+      "guest_name": "Julia Louis-Dreyfus",
+      "profile_url": "/guest/julia-louis-dreyfus",
+      "cold_open_text": "a tad hopeful (but not really)"
+    },
+    {
+      "guest_id": "michelle-obama",
+      "guest_name": "Michelle Obama",
+      "profile_url": "/guest/michelle-obama",
+      "cold_open_text": "very, very hopeful"
+    },
+    {
+      "guest_id": "ken-burns",
+      "guest_name": "Ken Burns",
+      "profile_url": "/guest/ken-burns",
+      "cold_open_text": "hopeful"
+    },
+    {
+      "guest_id": "al-pacino",
+      "guest_name": "Al Pacino",
+      "profile_url": "/guest/al-pacino",
+      "cold_open_text": "hopeful"
+    },
+    {
+      "guest_id": "nick-offerman-and-megan-mullally",
+      "guest_name": "Nick Offerman and Megan Mullally",
+      "profile_url": "/guest/nick-offerman-and-megan-mullally",
+      "cold_open_text": "ambivalent, yet hopeful"
+    }
+  ],
+  "optimistic": [
+    {
+      "guest_id": "jb-smoove",
+      "guest_name": "JB Smoove",
+      "profile_url": "/guest/jb-smoove",
+      "cold_open_text": "optimistic"
+    },
+    {
+      "guest_id": "elizabeth-banks",
+      "guest_name": "Elizabeth Banks",
+      "profile_url": "/guest/elizabeth-banks",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "w-kamau-bell",
+      "guest_name": "W. Kamau Bell",
+      "profile_url": "/guest/w-kamau-bell",
+      "cold_open_text": "cautiously optimistic, but still not great"
+    },
+    {
+      "guest_id": "michelle-obama",
+      "guest_name": "Michelle Obama",
+      "profile_url": "/guest/michelle-obama",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "paul-scheer",
+      "guest_name": "Paul Scheer",
+      "profile_url": "/guest/paul-scheer",
+      "cold_open_text": "optimistic"
+    },
+    {
+      "guest_id": "ayo-edebiri",
+      "guest_name": "Ayo Edebiri",
+      "profile_url": "/guest/ayo-edebiri",
+      "cold_open_text": "optimistic"
+    },
+    {
+      "guest_id": "ezra-koenig",
+      "guest_name": "Ezra Koenig",
+      "profile_url": "/guest/ezra-koenig",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "quinta-brunson",
+      "guest_name": "Quinta Brunson",
+      "profile_url": "/guest/quinta-brunson",
+      "cold_open_text": "optimistic"
+    },
+    {
+      "guest_id": "paul-f-tompkins",
+      "guest_name": "Paul F. Tompkins",
+      "profile_url": "/guest/paul-f-tompkins",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "julie-bowen",
+      "guest_name": "Julie Bowen",
+      "profile_url": "/guest/julie-bowen",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "daniel-radcliffe",
+      "guest_name": "Daniel Radcliffe",
+      "profile_url": "/guest/daniel-radcliffe",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "rob-lowe",
+      "guest_name": "Rob Lowe",
+      "profile_url": "/guest/rob-lowe",
+      "cold_open_text": "optimistic"
+    },
+    {
+      "guest_id": "steve-coogan",
+      "guest_name": "Steve Coogan",
+      "profile_url": "/guest/steve-coogan",
+      "cold_open_text": "quietly optimistic"
+    },
+    {
+      "guest_id": "john-oliver",
+      "guest_name": "John Oliver",
+      "profile_url": "/guest/john-oliver",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "dax-shepard",
+      "guest_name": "Dax Shepard",
+      "profile_url": "/guest/dax-shepard",
+      "cold_open_text": "very optimistic"
+    }
+  ],
+  "cautiously": [
+    {
+      "guest_id": "elizabeth-banks",
+      "guest_name": "Elizabeth Banks",
+      "profile_url": "/guest/elizabeth-banks",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "w-kamau-bell",
+      "guest_name": "W. Kamau Bell",
+      "profile_url": "/guest/w-kamau-bell",
+      "cold_open_text": "cautiously optimistic, but still not great"
+    },
+    {
+      "guest_id": "michelle-obama",
+      "guest_name": "Michelle Obama",
+      "profile_url": "/guest/michelle-obama",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "ezra-koenig",
+      "guest_name": "Ezra Koenig",
+      "profile_url": "/guest/ezra-koenig",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "paul-f-tompkins",
+      "guest_name": "Paul F. Tompkins",
+      "profile_url": "/guest/paul-f-tompkins",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "julie-bowen",
+      "guest_name": "Julie Bowen",
+      "profile_url": "/guest/julie-bowen",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "daniel-radcliffe",
+      "guest_name": "Daniel Radcliffe",
+      "profile_url": "/guest/daniel-radcliffe",
+      "cold_open_text": "cautiously optimistic"
+    },
+    {
+      "guest_id": "john-oliver",
+      "guest_name": "John Oliver",
+      "profile_url": "/guest/john-oliver",
+      "cold_open_text": "cautiously optimistic"
+    }
+  ]
+}

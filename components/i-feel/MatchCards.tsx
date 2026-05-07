@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useMotionConfig } from "@/lib/use-reduced-motion";
 
 export interface GuestMatch {
   guest_id: string;
@@ -18,20 +19,12 @@ interface Props {
   feeling: string;
 }
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.12, duration: 0.45, ease: "easeOut" as const },
-  }),
-};
-
 function initials(name: string) {
   return name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
 }
 
 export default function MatchCards({ matches, feeling }: Props) {
+  const { t, stagger } = useMotionConfig();
   if (!matches.length) return null;
   const top = matches[0];
 
@@ -41,7 +34,7 @@ export default function MatchCards({ matches, feeling }: Props) {
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={t({ duration: 0.5, ease: "easeOut" })}
       >
         <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-1">
           Your emotional match
@@ -68,10 +61,9 @@ export default function MatchCards({ matches, feeling }: Props) {
           <motion.a
             key={m.guest_id + m.episode_url}
             href={m.profile_url}
-            custom={i}
-            variants={cardVariants}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={t({ delay: stagger(i, 0.12), duration: 0.45, ease: "easeOut" })}
             whileHover={{ scale: 1.012, transition: { duration: 0.18 } }}
             className="flex items-center gap-4 p-4 bg-[var(--bg2)] rounded-2xl border border-[var(--border)] hover:border-[var(--orange)]/60 transition-colors group cursor-pointer"
           >

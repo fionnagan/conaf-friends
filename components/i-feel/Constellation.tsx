@@ -7,7 +7,7 @@ interface Node {
   id: string;
   label: string;
   count: number;
-  guests: string[];
+  guests: GuestEntry[];
   x?: number;
   y?: number;
   vx?: number;
@@ -22,8 +22,15 @@ interface Link {
   strength: number;
 }
 
+interface GuestEntry {
+  guest_id: string;
+  guest_name: string;
+  profile_url: string;
+  cold_open_text: string;
+}
+
 interface Props {
-  words: { word: string; count: number; guests?: string[] }[];
+  words: { word: string; count: number; guests?: GuestEntry[] }[];
   onNodeClick?: (word: string) => void;
 }
 
@@ -279,16 +286,40 @@ export default function Constellation({ words, onNodeClick }: Props) {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-3 p-4 bg-[var(--bg2)] rounded-xl border border-[var(--orange)]/40"
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="mt-3 p-5 bg-[var(--bg2)] rounded-2xl border border-[var(--orange)]/40 space-y-4"
           >
-            <div className="flex items-center justify-between mb-1">
-              <p className="font-semibold capitalize">{selected.label}</p>
-              <button onClick={() => setSelected(null)} className="text-[var(--text-muted)] hover:text-[var(--text)] text-lg">×</button>
+            {/* Header */}
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-semibold text-base capitalize">{selected.label}</p>
+                <p className="text-xs text-[var(--text-muted)] mt-0.5">
+                  Appears <span className="text-[var(--orange)] font-semibold">×{selected.count}</span> times across cold opens
+                </p>
+              </div>
+              <button onClick={() => setSelected(null)} className="text-[var(--text-muted)] hover:text-[var(--text)] text-xl px-1">×</button>
             </div>
-            <p className="text-sm text-[var(--text-muted)]">
-              Appears <span className="text-[var(--orange)] font-semibold">×{selected.count}</span> times across guest cold opens.
-            </p>
+
+            {/* Guest list */}
+            {selected.guests.length > 0 && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                  Guests who felt &quot;{selected.label}&quot;
+                </p>
+                <div className="space-y-1.5 max-h-52 overflow-y-auto" style={{ scrollbarWidth: "thin" }}>
+                  {selected.guests.map((g) => (
+                    <a
+                      key={g.guest_id}
+                      href={g.profile_url}
+                      className="flex items-center justify-between px-3 py-2 bg-[var(--bg)] rounded-lg border border-[var(--border)] hover:border-[var(--orange)]/60 transition-colors group text-sm"
+                    >
+                      <span className="font-medium group-hover:text-[var(--orange)] transition-colors">{g.guest_name}</span>
+                      <span className="text-xs text-[var(--text-muted)] italic ml-2 truncate max-w-[140px]">&quot;{g.cold_open_text}&quot;</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

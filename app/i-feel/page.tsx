@@ -2,12 +2,14 @@
 
 import { useState, useRef, useCallback, useEffect, useId } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useTransform, useReducedMotion } from "framer-motion";
 import Nav from "@/components/Nav";
 import CountryCombobox from "@/components/i-feel/CountryCombobox";
 import MatchCards, { type GuestMatch } from "@/components/i-feel/MatchCards";
 import LiveFeed from "@/components/i-feel/LiveFeed";
 import TrendingPanel from "@/components/i-feel/TrendingPanel";
+import { useSessionState } from "@/lib/use-session-state";
+import wordGuests from "@/data/word-guests.json";
 import dynamic from "next/dynamic";
 
 // Lazy-load heavy visualizations
@@ -34,11 +36,12 @@ function MapSkeleton() {
 
 /* ── Share card with parallax hover ─────────────────────────────────────────── */
 function ShareCard({ pngUrl }: { pngUrl: string }) {
-  const ref  = useRef<HTMLDivElement>(null);
+  const ref     = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
   const mx   = useMotionValue(0);
   const my   = useMotionValue(0);
-  const rotX = useTransform(my, [-0.5, 0.5], [3, -3]);
-  const rotY = useTransform(mx, [-0.5, 0.5], [-4, 4]);
+  const rotX = useTransform(my, [-0.5, 0.5], reduced ? [0, 0] : [3, -3]);
+  const rotY = useTransform(mx, [-0.5, 0.5], reduced ? [0, 0] : [-4, 4]);
 
   const [loaded, setLoaded] = useState(false);
 
@@ -106,18 +109,24 @@ function MatchSkeleton() {
 
 /* ── Main page ──────────────────────────────────────────────────────────────── */
 export default function IFeelPage() {
-  const [name,    setName]    = useState("");
-  const [country, setCountry] = useState("");
-  const [feeling, setFeeling] = useState("");
+  // Persisted state — survives guest profile nav + back button
+  const {
+    name, setName, country, setCountry, feeling, setFeeling,
+    results: savedResults, setResults,
+    pngUrl: savedPngUrl, setPngUrl,
+  } = useSessionState();
+
   const [error,   setError]   = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState<Results | null>(null);
-  const [pngUrl,  setPngUrl]  = useState<string | null>(null);
+  const results = savedResults as Results | null;
+  const pngUrl  = savedPngUrl;
   const [vizTab,  setVizTab]  = useState<VizTab>("map");
   const [analyticsData, setAnalyticsData] = useState<{ countryCounts: Record<string, number>; topWords: TopWord[] } | null>(null);
 
   const resultsRef = useRef<HTMLDivElement>(null);
   const sessionId  = useId();
+  const reduced    = useReducedMotion();
+  const et = (full: object) => (reduced ? { duration: 0.01 } : full); // entrance transition
 
   const wordCount   = feeling.trim().split(/\s+/).filter(Boolean).length;
   const tooMany     = wordCount > 5;
@@ -129,6 +138,14 @@ export default function IFeelPage() {
       .then((r) => r.json())
       .then((d) => setAnalyticsData({ countryCounts: d.countryCounts ?? {}, topWords: d.topWords ?? [] }))
       .catch(() => {});
+  }, []);
+
+  // Restore scroll position when returning from guest profile nav
+  useEffect(() => {
+    if (results && resultsRef.current) {
+      setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: "instant", block: "start" }), 80);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
@@ -162,7 +179,7 @@ export default function IFeelPage() {
     } finally {
       setLoading(false);
     }
-  }, [name, country, feeling, tooMany, sessionId]);
+  }, [name, country, feeling, tooMany, sessionId, setResults, setPngUrl]);
 
   return (
     <>
@@ -174,10 +191,10 @@ export default function IFeelPage() {
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={et({ duration: 0.6, ease: "easeOut" })}
         >
           <motion.div
-            whileHover={{ scale: 1.06, rotate: -1 }}
+            whileHover={reduced ? {} : { scale: 1.06, rotate: -1 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
             className="inline-block mb-5"
           >
@@ -200,7 +217,7 @@ export default function IFeelPage() {
         <motion.form
           onSubmit={handleSubmit}
           className="space-y-5"
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: reduced ? 0 : 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
@@ -445,7 +462,11 @@ export default function IFeelPage() {
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               >
                 <Constellation
-                  words={(analyticsData?.topWords ?? []).map((w) => ({ word: w.word, count: w.count }))}
+                  words={(analyticsData?.topWords ?? []).map((w) => ({
+                    word: w.word,
+                    count: w.count,
+                    guests: ((wordGuests as Record<string, { guest_id: string; guest_name: string; profile_url: string; cold_open_text: string }[]>)[w.word] ?? []),
+                  }))}
                 />
               </motion.div>
             )}
