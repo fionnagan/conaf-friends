@@ -277,59 +277,54 @@ export async function GET(req: NextRequest) {
   if (variant === 1) {
     return new ImageResponse(
       (
+        /* space-between distributes the 7 child blocks evenly across 1350px */
         <div style={{
-          width: "1080px", height: "1350px", background: BG,
-          display: "flex", flexDirection: "column",
-          padding: "50px 70px 50px",
+          width: "1080px", height: "1350px", background: "white",
+          display: "flex", flexDirection: "column", justifyContent: "space-between",
+          padding: "44px 70px 52px",
         }}>
-          {/* Big opening quote mark */}
-          <span style={{ fontFamily: "Rushink", fontSize: "200px", color: ORANGE, lineHeight: 0.75, display: "flex", marginBottom: "-10px" }}>
+          {/* ① Big opening quote mark */}
+          <span style={{ fontFamily: "Rushink", fontSize: "160px", color: ORANGE, lineHeight: 0.8, display: "flex" }}>
             &ldquo;
           </span>
 
-          {/* MY NAME IS + NAME */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+          {/* ② MY NAME IS + NAME + rule */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
             <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
             <span style={marker(nameSz)}>{name}</span>
+            <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "10px" }} />
           </div>
-          <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "10px", marginBottom: "20px" }} />
 
-          {/* AND I FEEL + FEELING */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+          {/* ③ AND I FEEL + FEELING + rule */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
             <span style={{ ...marker(feelSz), maxWidth: "940px" }}>{feeling}</span>
-          </div>
-          <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "10px", marginBottom: "24px" }} />
-
-          {/* ABOUT BEING CONAN O'BRIEN'S FRIEND */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
-            <span style={barlow(70)}>ABOUT BEING</span>
-            <span style={barlow(70)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
+            <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "10px" }} />
           </div>
 
-          {/* Country attribution */}
-          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "14px" }}>
-            <span style={{ fontFamily: "Gotham", fontSize: "28px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>
-              – FROM
-            </span>
-            <span style={{ fontSize: "34px", display: "flex", lineHeight: 1 }}>{flag}</span>
-            <span style={{ fontFamily: "Gotham", fontSize: "28px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>
-              {country.toUpperCase()}
-            </span>
+          {/* ④ ABOUT BEING CONAN O'BRIEN'S FRIEND — 62px fits full width */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+            <span style={barlow(62)}>ABOUT BEING</span>
+            <span style={barlow(62)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
           </div>
 
-          {/* Guest section */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "28px" }}>
+          {/* ⑤ Country attribution */}
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
+            <span style={{ fontSize: "32px", display: "flex", lineHeight: 1 }}>{flag}</span>
+            <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
+          </div>
+
+          {/* ⑥ Guest section */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
               {subtitle}
             </span>
             {guestCardsEl}
           </div>
 
-          {/* Footer */}
-          <div style={{ display: "flex", marginTop: "auto", paddingTop: "20px" }}>
-            {footerText}
-          </div>
+          {/* ⑦ Footer */}
+          {footerText}
         </div>
       ),
       {
