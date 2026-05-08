@@ -5,6 +5,7 @@ import path from "path";
 import coldOpensData from "@/data/cold-opens.json";
 import guestPhotos from "@/data/guest-photos.json";
 import { countryFlag } from "@/lib/country-flags";
+import React from "react";
 
 export const runtime = "nodejs";
 
@@ -72,23 +73,16 @@ function findTopGuests(feeling: string, n = 3) {
   return top;
 }
 
-/* ── Fetch photo sequentially (avoids Wikimedia 429 rate-limit) ──────────────── */
+/* ── Fetch photo with retry on 429 ───────────────────────────────────────────── */
 async function fetchBase64(url: string): Promise<string | null> {
   const UA = "FriendRegistry/1.0 (https://conaf.vercel.app)";
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
       const ctrl = new AbortController();
       const id = setTimeout(() => ctrl.abort(), 6000);
-      const res = await fetch(url, {
-        signal: ctrl.signal,
-        headers: { "User-Agent": UA },
-      });
+      const res = await fetch(url, { signal: ctrl.signal, headers: { "User-Agent": UA } });
       clearTimeout(id);
-      if (res.status === 429) {
-        // Rate limited — wait and retry once
-        await new Promise((r) => setTimeout(r, 600));
-        continue;
-      }
+      if (res.status === 429) { await new Promise((r) => setTimeout(r, 600)); continue; }
       if (!res.ok) return null;
       const buf = Buffer.from(await res.arrayBuffer());
       let mime = "image/jpeg";
@@ -104,14 +98,12 @@ async function fetchBase64(url: string): Promise<string | null> {
   return null;
 }
 
-/* ── Fetch 3 guest photos sequentially to avoid rate-limiting ────────────────── */
 async function fetchGuestPhotos(guests: ReturnType<typeof findTopGuests>) {
   const results = [];
   for (const g of guests) {
     const photoUrl = photos[g.guest_id];
     const b64 = photoUrl ? await fetchBase64(photoUrl) : null;
     results.push({ ...g, photoB64: b64 });
-    // Small stagger between requests
     if (guests.indexOf(g) < guests.length - 1) {
       await new Promise((r) => setTimeout(r, 150));
     }
@@ -119,12 +111,11 @@ async function fetchGuestPhotos(guests: ReturnType<typeof findTopGuests>) {
   return results;
 }
 
-/* ── Scale marker font to fit usable width ───────────────────────────────────── */
-const MARKER_CW  = 0.60;
-const BARLOW_CW  = 0.62;   // Barlow 800 uppercase avg char width ratio
-const USABLE_W   = 900;
-// Guest card text area: (940 - 2×10gap) / 3cards − 2×16pad − 112photo − 14gap ≈ 148px
-const GUEST_TW   = 148;
+/* ── Dynamic font sizing ─────────────────────────────────────────────────────── */
+const MARKER_CW = 0.60;
+const BARLOW_CW = 0.62;
+const USABLE_W  = 900;
+const GUEST_TW  = 148;
 
 function scaledSize(text: string, maxPx: number, minPx = 56): number {
   const fit = Math.floor(USABLE_W / (text.length * MARKER_CW));
@@ -143,205 +134,305 @@ function initials(name: string): string {
   return name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
 }
 
+/* ── Design tokens ───────────────────────────────────────────────────────────── */
+const BG      = "#ECEBE7";
+const ORANGE  = "#FF7300";
+const BLACK   = "#000000";
+const MUTED   = "#8E8E8E";
+const DIVIDER = "#D8D8D8";
+const TILE_BG = "#E0DDD8";
+
+/* ── Variant subtitles ───────────────────────────────────────────────────────── */
+const SUBTITLES: Record<number, string> = {
+  1: "I'M IN GOOD COMPANY WITH...",
+  2: "PEOPLE WHO GET ME...",
+  3: "MY CONAN FRIENDSHIP TWIN IS...",
+  4: "MY COCO ENERGY MATCHES...",
+};
+
 /* ── GET /api/i-feel/png ─────────────────────────────────────────────────────── */
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const name    = (searchParams.get("name")    ?? "Someone").toUpperCase();
-  const country = searchParams.get("country")  ?? "";
+  const country =  searchParams.get("country")  ?? "";
   const feeling = (searchParams.get("feeling") ?? "").toUpperCase();
+  const variant = Math.max(1, Math.min(4, parseInt(searchParams.get("variant") ?? "1")));
   const flag    = country ? countryFlag(country) : "🌐";
 
-  /* Load fonts + podcast image */
+  /* Load fonts + assets */
   const fontDir = path.join(process.cwd(), "public", "fonts");
-  const imgDir  = path.join(process.cwd(), "public", "logos");
-  const [markerData, barlowData, podcastImgBuf] = await Promise.all([
-    readFile(path.join(fontDir, "PermanentMarker.ttf")),
-    readFile(path.join(fontDir, "Barlow800.ttf")),
-    readFile(path.join(imgDir,  "era-podcast.jpg")),
+  const pubDir  = path.join(process.cwd(), "public");
+  const logoDir = path.join(process.cwd(), "public", "logos");
+
+  const [rushinkData, gothamData, conanBuf, podcastImgBuf] = await Promise.all([
+    readFile(path.join(fontDir, "Rushink.ttf")),
+    readFile(path.join(fontDir, "GothamBlack_ExtraBold.otf")),
+    readFile(path.join(pubDir,  "conan_outline.png")),
+    readFile(path.join(logoDir, "era-podcast.jpg")),
   ]);
+  const conanB64   = `data:image/png;base64,${conanBuf.toString("base64")}`;
   const podcastB64 = `data:image/jpeg;base64,${podcastImgBuf.toString("base64")}`;
 
-  /* Guest matching + sequential photo fetch */
+  /* Guest matching + photos */
   const topGuests = findTopGuests(feeling, 3);
   const guestImgs = await fetchGuestPhotos(topGuests);
 
-  /* ── Design tokens ── */
-  const ORANGE = "#F26519";
-  const BLACK  = "#111111";
-  const RULE   = "#d0d0d0";
-  const MUTED  = "#888888";
-  const CARD   = "#F5F3F0";
+  /* ── Layout constants ── */
+  const LABEL_SZ   = 50;   // "MY NAME IS" / "AND I FEEL"
+  const ABOUT_SZ   = 56;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
+  const GSECT_SZ   = 26;   // guest section subtitle
+  const GNAME_MAX  = 44;
+  const GNAME_MIN  = 20;
+  const GQUOTE_MAX = 24;
+  const GQUOTE_MIN = 13;
+  const PHOTO_PX   = 100;
+  const LOGO_PX    = 170;
+  const ATTR_SZ    = 22;
+  const CONAN_PX   = 160;
 
-  // Canvas: 1080×1350 — 4:5 portrait (native IG feed, works in stories too)
-  // "MY NAME IS" label = 52px  →  guest names "just a tad smaller" = 44px
-  const LABEL_SZ  = 52;   // "MY NAME IS" / "I'M FROM…AND I FEEL"
-  const ABOUT_SZ  = 46;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
-  const GSECT_SZ       = 34;   // "GUESTS WHO FELT THE SAME WAY"
-  const GNAME_MAX      = 44;   // guest first name max — scales down for long names
-  const GNAME_MIN      = 20;
-  const GQUOTE_MAX     = 27;   // guest quote max — scales down for long quotes
-  const GQUOTE_MIN     = 14;
-  const PHOTO_PX       = 112;  // guest circle diameter
-  const LOGO_PX        = 170;  // podcast logo (larger)
-  const ATTR_SZ        = 30;   // attribution footer — just below GSECT_SZ
+  const nameSz = scaledSize(name,    150, 64);
+  const feelSz = scaledSize(feeling, 150, 64);
 
-  const nameSz  = scaledSize(name,    150, 64);
-  const feelSz  = scaledSize(feeling, 150, 64);
-
-  /* Style helpers */
+  /* ── Style helpers ── */
   const barlow = (sz: number, color = BLACK, extra: React.CSSProperties = {}): React.CSSProperties => ({
-    fontFamily: "Barlow",
-    fontSize: `${sz}px`,
-    fontWeight: 800,
-    color,
-    letterSpacing: "2.5px",
-    lineHeight: 1,
-    display: "flex",
-    ...extra,
+    fontFamily: "Gotham", fontSize: `${sz}px`, fontWeight: 800,
+    color, letterSpacing: "2px", lineHeight: 1, display: "flex", ...extra,
   });
   const marker = (sz: number, color = ORANGE): React.CSSProperties => ({
-    fontFamily: "Marker",
-    fontSize: `${sz}px`,
-    color,
-    lineHeight: 1.05,
-    display: "flex",
+    fontFamily: "Rushink", fontSize: `${sz}px`, color, lineHeight: 1.05, display: "flex",
   });
-  const ruleDiv = (
-    <div style={{ width: "940px", height: "2px", background: RULE, display: "flex", marginTop: "18px" }} />
+
+  /* ── Shared elements ── */
+  const hRule = (
+    <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "14px" }} />
   );
+
+  const dotsRow = (
+    <div style={{ display: "flex", gap: "10px" }}>
+      {[0,1,2,3,4].map((i) => (
+        <div key={i} style={{ width: "10px", height: "10px", borderRadius: "50%", background: ORANGE, display: "flex" }} />
+      ))}
+    </div>
+  );
+
+  const footerText = (
+    <span style={{ fontFamily: "Gotham", fontSize: `${ATTR_SZ}px`, fontWeight: 800, color: MUTED, letterSpacing: "2.5px", display: "flex" }}>
+      CONAF.VERCEL.APP · A FAN PROJECT
+    </span>
+  );
+
+  /* ── Guest cards ── */
+  const guestCardsEl = (
+    <div style={{ display: "flex", gap: "10px", width: "940px" }}>
+      {guestImgs.map((g) => {
+        const firstName = g.guest_name.split(" ")[0].toUpperCase();
+        const quoteText = shortQuote(g.cold_open_text);
+        const gnameSz   = scaledBarlowSize(firstName,      GNAME_MAX,  GNAME_MIN);
+        const gquoteSz  = scaledBarlowSize(`"${quoteText}"`, GQUOTE_MAX, GQUOTE_MIN);
+        return (
+          <div key={g.guest_id} style={{
+            display: "flex", flex: 1, alignItems: "center", gap: "12px",
+            background: TILE_BG, borderRadius: "16px", padding: "14px",
+          }}>
+            <div style={{
+              display: "flex", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px`,
+              borderRadius: "50%", overflow: "hidden", background: "#CCC8C2",
+              flexShrink: 0, alignItems: "center", justifyContent: "center",
+            }}>
+              {g.photoB64 ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={g.photoB64} width={PHOTO_PX} height={PHOTO_PX}
+                  style={{ objectFit: "cover", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px` }} alt="" />
+              ) : (
+                <span style={{ fontFamily: "Gotham", fontSize: `${Math.round(PHOTO_PX * 0.28)}px`, fontWeight: 800, color: ORANGE, display: "flex" }}>{initials(g.guest_name)}</span>
+              )}
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1 }}>
+              <span style={{ fontFamily: "Gotham", fontSize: `${gnameSz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1 }}>
+                {firstName}
+              </span>
+              <span style={{ fontFamily: "Gotham", fontSize: `${gquoteSz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.1 }}>
+                &quot;{quoteText}&quot;
+              </span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+
+  const subtitle = SUBTITLES[variant];
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     VARIANT 1 — Left-aligned, large opening quote, country after "ABOUT BEING"
+     ═══════════════════════════════════════════════════════════════════════════ */
+  if (variant === 1) {
+    return new ImageResponse(
+      (
+        <div style={{
+          width: "1080px", height: "1350px", background: BG,
+          display: "flex", flexDirection: "column",
+          padding: "50px 70px 50px",
+        }}>
+          {/* Big opening quote mark */}
+          <span style={{ fontFamily: "Rushink", fontSize: "200px", color: ORANGE, lineHeight: 0.75, display: "flex", marginBottom: "-10px" }}>
+            &ldquo;
+          </span>
+
+          {/* MY NAME IS + NAME */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+            <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
+            <span style={marker(nameSz)}>{name}</span>
+          </div>
+          <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "10px", marginBottom: "20px" }} />
+
+          {/* AND I FEEL + FEELING */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+            <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
+            <span style={{ ...marker(feelSz), maxWidth: "940px" }}>{feeling}</span>
+          </div>
+          <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "10px", marginBottom: "24px" }} />
+
+          {/* ABOUT BEING CONAN O'BRIEN'S FRIEND */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+            <span style={barlow(ABOUT_SZ + 6)}>ABOUT BEING</span>
+            <span style={barlow(ABOUT_SZ + 6)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
+          </div>
+
+          {/* Country attribution */}
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "14px" }}>
+            <span style={{ fontFamily: "Gotham", fontSize: "28px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>
+              – FROM
+            </span>
+            <span style={{ fontSize: "34px", display: "flex", lineHeight: 1 }}>{flag}</span>
+            <span style={{ fontFamily: "Gotham", fontSize: "28px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>
+              {country.toUpperCase()}
+            </span>
+          </div>
+
+          {/* Guest section */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "28px" }}>
+            <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
+              {subtitle}
+            </span>
+            {guestCardsEl}
+          </div>
+
+          {/* Footer */}
+          <div style={{ display: "flex", marginTop: "auto", paddingTop: "20px" }}>
+            {footerText}
+          </div>
+        </div>
+      ),
+      {
+        width: 1080, height: 1350,
+        fonts: [
+          { name: "Rushink", data: rushinkData, style: "normal", weight: 400 },
+          { name: "Gotham",  data: gothamData,  style: "normal", weight: 800 },
+        ],
+        emoji: "twemoji",
+      }
+    );
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     VARIANTS 2, 3, 4 — Centered layout
+     V2: Conan outline top-right corner
+     V3: Conan + "hi!" speech bubble centered at top
+     V4: No Conan, podcast logo in footer
+     ═══════════════════════════════════════════════════════════════════════════ */
 
   return new ImageResponse(
     (
       <div style={{
-        width:  "1080px",
-        height: "1350px",
-        background: "white",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "68px 70px 58px",
+        width: "1080px", height: "1350px", background: BG,
+        display: "flex", flexDirection: "column", alignItems: "center",
+        justifyContent: "space-between", padding: "56px 70px 48px",
+        position: "relative",
       }}>
 
-        {/* ── A: Name ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "5px" }}>
+        {/* V2: Conan illustration — absolute top-right */}
+        {variant === 2 && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={conanB64} width={CONAN_PX} height={CONAN_PX}
+            style={{ position: "absolute", top: "38px", right: "56px", objectFit: "contain" }}
+            alt="" />
+        )}
+
+        {/* V3: Conan + "hi!" bubble — centered at top */}
+        {variant === 3 ? (
+          <div style={{ display: "flex", alignItems: "flex-end", gap: "10px" }}>
+            {/* hi! bubble */}
+            <div style={{
+              display: "flex", background: "white",
+              border: "3.5px solid black", borderRadius: "18px 18px 4px 18px",
+              padding: "10px 18px", marginBottom: "8px",
+            }}>
+              <span style={{ fontFamily: "Rushink", fontSize: "34px", color: BLACK, display: "flex", lineHeight: 1 }}>
+                hi!
+              </span>
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={conanB64} width={CONAN_PX} height={CONAN_PX}
+              style={{ objectFit: "contain" }} alt="" />
+          </div>
+        ) : (
+          /* V2 & V4: empty top spacer (V2 uses absolute-positioned Conan) */
+          <div style={{ display: "flex", height: "10px" }} />
+        )}
+
+        {/* ── Name section ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
           <span style={marker(nameSz)}>{name}</span>
-          {ruleDiv}
+          {hRule}
         </div>
 
-        {/* ── B: Country + Feeling ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "5px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-            <span style={barlow(LABEL_SZ)}>{`I'M FROM`}</span>
-            <span style={{ fontFamily: "Barlow", fontSize: `${LABEL_SZ + 12}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
+        {/* ── Feeling section ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <span style={barlow(LABEL_SZ)}>I&apos;M FROM</span>
+            <span style={{ fontSize: `${LABEL_SZ + 12}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
           </div>
           <span style={{ ...marker(feelSz), maxWidth: "940px", textAlign: "center", justifyContent: "center" }}>
             {feeling}
           </span>
-          {ruleDiv}
+          {hRule}
         </div>
 
-        {/* ── C: About ── */}
+        {/* ── About section ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
           <span style={barlow(ABOUT_SZ)}>ABOUT BEING</span>
           <span style={barlow(ABOUT_SZ)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
         </div>
 
-        {/* ── D: Guest affinity strip ── */}
-        {guestImgs.length > 0 && (
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "940px", gap: "14px" }}>
-            <span style={barlow(GSECT_SZ, MUTED, { letterSpacing: "2px" })}>GUESTS WHO FELT THE SAME WAY</span>
-            <div style={{ display: "flex", gap: "10px", width: "940px" }}>
-              {guestImgs.map((g) => {
-                const firstName  = g.guest_name.split(" ")[0].toUpperCase();
-                const quoteText  = shortQuote(g.cold_open_text);
-                const gnameSz    = scaledBarlowSize(firstName,  GNAME_MAX,  GNAME_MIN);
-                // quote rendered with surrounding " " — add 2 chars for sizing
-                const gquoteSz   = scaledBarlowSize(`"${quoteText}"`, GQUOTE_MAX, GQUOTE_MIN);
-                return (
-                <div
-                  key={g.guest_id}
-                  style={{
-                    display: "flex",
-                    flex: 1,
-                    alignItems: "center",
-                    gap: "14px",
-                    background: CARD,
-                    borderRadius: "20px",
-                    padding: "16px",
-                  }}
-                >
-                  {/* Circular photo */}
-                  <div style={{
-                    display: "flex",
-                    width: `${PHOTO_PX}px`,
-                    height: `${PHOTO_PX}px`,
-                    borderRadius: "50%",
-                    overflow: "hidden",
-                    background: "#EDE8E2",
-                    flexShrink: 0,
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}>
-                    {g.photoB64 ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={g.photoB64}
-                        width={PHOTO_PX}
-                        height={PHOTO_PX}
-                        style={{ objectFit: "cover", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px` }}
-                        alt=""
-                      />
-                    ) : (
-                      <span style={marker(Math.round(PHOTO_PX * 0.3))}>{initials(g.guest_name)}</span>
-                    )}
-                  </div>
-
-                  {/* Name + quote */}
-                  <div style={{ display: "flex", flexDirection: "column", gap: "7px", flex: 1 }}>
-                    <span style={{
-                      fontFamily: "Barlow", fontSize: `${gnameSz}px`, fontWeight: 800,
-                      color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1,
-                    }}>
-                      {firstName}
-                    </span>
-                    <span style={{
-                      fontFamily: "Barlow", fontSize: `${gquoteSz}px`,
-                      color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.1,
-                    }}>
-                      &quot;{quoteText}&quot;
-                    </span>
-                  </div>
-                </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* ── E: Logo + attribution ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={podcastB64} width={LOGO_PX} height={LOGO_PX}
-            style={{ borderRadius: "12px", objectFit: "cover" }} alt="" />
-          <span style={{
-            fontFamily: "Barlow", fontSize: `${ATTR_SZ}px`, fontWeight: 800,
-            color: "#aaaaaa", letterSpacing: "2.5px", display: "flex",
-          }}>
-            CONAF.VERCEL.APP · A FAN PROJECT
+        {/* ── Guest section ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
+          {dotsRow}
+          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
+            {subtitle}
           </span>
+          {guestCardsEl}
+        </div>
+
+        {/* ── Footer ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px" }}>
+          {variant === 4 && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={podcastB64} width={LOGO_PX} height={LOGO_PX}
+              style={{ borderRadius: "14px", objectFit: "cover" }} alt="" />
+          )}
+          {footerText}
         </div>
 
       </div>
     ),
     {
-      width:  1080,
-      height: 1350,
+      width: 1080, height: 1350,
       fonts: [
-        { name: "Marker", data: markerData, style: "normal", weight: 400 },
-        { name: "Barlow", data: barlowData, style: "normal", weight: 800 },
+        { name: "Rushink", data: rushinkData, style: "normal", weight: 400 },
+        { name: "Gotham",  data: gothamData,  style: "normal", weight: 800 },
       ],
       emoji: "twemoji",
     }

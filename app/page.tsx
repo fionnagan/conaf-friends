@@ -186,6 +186,7 @@ export default function IFeelPage() {
     name, setName, country, setCountry, feeling, setFeeling,
     results: savedResults, setResults,
     pngUrl: savedPngUrl, setPngUrl,
+    selectedVariant, setSelectedVariant,
   } = useSessionState();
 
   const [error,   setError]   = useState<string | null>(null);
@@ -244,6 +245,7 @@ export default function IFeelPage() {
 
       const params = new URLSearchParams({ name: name.trim(), country, feeling: feeling.trim() });
       setPngUrl(`/api/i-feel/png?${params}`);
+      setSelectedVariant(1);
 
       setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
     } catch {
@@ -394,16 +396,45 @@ export default function IFeelPage() {
               className="space-y-12"
             >
 
-              {/* 1. Share card */}
+              {/* 1. Variant picker + share card */}
               {pngUrl && (
                 <motion.section
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <h2 className="font-serif text-xl font-semibold mb-4">Your card</h2>
-                  <ShareCard pngUrl={pngUrl} />
-                  <ShareButtons pngUrl={pngUrl} feeling={feeling} />
+                  <h2 className="font-serif text-xl font-semibold mb-3">Your card</h2>
+
+                  {/* Variant thumbnail grid */}
+                  <div className="grid grid-cols-4 gap-2 mb-4">
+                    {[1, 2, 3, 4].map((v) => {
+                      const vUrl = `${pngUrl}&variant=${v}`;
+                      const active = selectedVariant === v;
+                      return (
+                        <button
+                          key={v}
+                          onClick={() => setSelectedVariant(v)}
+                          className={`relative rounded-xl overflow-hidden border-2 transition-all ${
+                            active
+                              ? "border-[var(--orange)] shadow-lg shadow-[var(--orange)]/20"
+                              : "border-[var(--border)] hover:border-[var(--orange)]/50"
+                          }`}
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={vUrl} alt={`Variant ${v}`} className="w-full block" />
+                          {active && (
+                            <div className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-[var(--orange)] flex items-center justify-center text-white text-[10px] font-bold shadow">
+                              ✓
+                            </div>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Full-size selected card */}
+                  <ShareCard pngUrl={`${pngUrl}&variant=${selectedVariant}`} />
+                  <ShareButtons pngUrl={`${pngUrl}&variant=${selectedVariant}`} feeling={feeling} />
                 </motion.section>
               )}
 
