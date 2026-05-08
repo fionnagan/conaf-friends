@@ -135,12 +135,12 @@ function initials(name: string): string {
 }
 
 /* ── Design tokens ───────────────────────────────────────────────────────────── */
-const BG      = "#ECEBE7";
+const BG      = "white";
 const ORANGE  = "#FF7300";
 const BLACK   = "#000000";
 const MUTED   = "#8E8E8E";
 const DIVIDER = "#D8D8D8";
-const TILE_BG = "#E0DDD8";
+const TILE_BG = "#F4F3F0";
 
 /* ── Variant subtitles ───────────────────────────────────────────────────────── */
 const SUBTITLES: Record<number, string> = {
@@ -174,11 +174,19 @@ export async function GET(req: NextRequest) {
   const podcastB64 = `data:image/jpeg;base64,${podcastImgBuf.toString("base64")}`;
 
   /* Guest matching + photos */
-  const topGuests = findTopGuests(feeling, 3);
+  const guestIdParam = searchParams.get("g") ?? "";
+  const guestIds = guestIdParam ? guestIdParam.split(",").filter(Boolean) : [];
+
+  const topGuests = guestIds.length > 0
+    ? guestIds
+        .map(id => records.find(r => r.guest_id === id))
+        .filter((r): r is ColdOpenRecord => r !== undefined)
+        .map(r => ({ ...r, score: 1 as number, embedding_vector: r.embedding_vector }))
+    : findTopGuests(feeling, 3);
   const guestImgs = await fetchGuestPhotos(topGuests);
 
   /* ── Layout constants ── */
-  const LABEL_SZ   = 50;   // "MY NAME IS" / "AND I FEEL"
+  const LABEL_SZ   = 44;   // "MY NAME IS" / "AND I FEEL"
   const ABOUT_SZ   = 56;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
   const GSECT_SZ   = 26;   // guest section subtitle
   const GNAME_MAX  = 44;
@@ -295,8 +303,8 @@ export async function GET(req: NextRequest) {
 
           {/* ABOUT BEING CONAN O'BRIEN'S FRIEND */}
           <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
-            <span style={barlow(ABOUT_SZ + 6)}>ABOUT BEING</span>
-            <span style={barlow(ABOUT_SZ + 6)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
+            <span style={barlow(70)}>ABOUT BEING</span>
+            <span style={barlow(70)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
           </div>
 
           {/* Country attribution */}
@@ -361,12 +369,13 @@ export async function GET(req: NextRequest) {
 
         {/* V3: Conan + "hi!" bubble — centered at top */}
         {variant === 3 ? (
-          <div style={{ display: "flex", alignItems: "flex-end", gap: "10px" }}>
-            {/* hi! bubble */}
+          <div style={{ display: "flex", position: "relative", width: "240px", height: "220px" }}>
+            {/* hi! bubble — absolute top-left */}
             <div style={{
-              display: "flex", background: "white",
+              display: "flex", position: "absolute", top: 0, left: 0,
+              background: "white",
               border: "3.5px solid black", borderRadius: "18px 18px 4px 18px",
-              padding: "10px 18px", marginBottom: "8px",
+              padding: "10px 18px",
             }}>
               <span style={{ fontFamily: "Rushink", fontSize: "34px", color: BLACK, display: "flex", lineHeight: 1 }}>
                 hi!
@@ -374,11 +383,11 @@ export async function GET(req: NextRequest) {
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={conanB64} width={CONAN_PX} height={CONAN_PX}
-              style={{ objectFit: "contain" }} alt="" />
+              style={{ position: "absolute", bottom: 0, right: 0, objectFit: "contain" }} alt="" />
           </div>
         ) : (
           /* V2 & V4: empty top spacer (V2 uses absolute-positioned Conan) */
-          <div style={{ display: "flex", height: "10px" }} />
+          <div style={{ display: "flex", height: "40px" }} />
         )}
 
         {/* ── Name section ── */}

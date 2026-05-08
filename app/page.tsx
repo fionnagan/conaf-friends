@@ -243,7 +243,10 @@ export default function IFeelPage() {
       if (!res.ok) { setError(data.error ?? "Something went wrong."); return; }
       setResults(data);
 
-      const params = new URLSearchParams({ name: name.trim(), country, feeling: feeling.trim() });
+      const guestIds = (data.matches as Array<{ guest_id: string }>)
+        .map((m) => m.guest_id)
+        .join(",");
+      const params = new URLSearchParams({ name: name.trim(), country, feeling: feeling.trim(), g: guestIds });
       setPngUrl(`/api/i-feel/png?${params}`);
       setSelectedVariant(1);
 
