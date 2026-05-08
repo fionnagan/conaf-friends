@@ -115,7 +115,8 @@ async function fetchGuestPhotos(guests: ReturnType<typeof findTopGuests>) {
 const MARKER_CW = 0.60;
 const BARLOW_CW = 0.62;
 const USABLE_W  = 900;
-const GUEST_TW  = 148;
+// Correct guest text area: (940-20)/3 cards − 2×14px padding − 100px avatar − 12px gap = 166.67px
+const GUEST_TW  = 167;
 
 function scaledSize(text: string, maxPx: number, minPx = 56): number {
   const fit = Math.floor(USABLE_W / (text.length * MARKER_CW));
@@ -129,6 +130,19 @@ function scaledBarlowSize(text: string, maxPx: number, minPx: number, availW = G
 /* ── Helpers ─────────────────────────────────────────────────────────────────── */
 function shortQuote(text: string, max = 12): string {
   return text.length <= max ? text : text.slice(0, max - 1) + "…";
+}
+/**
+ * Split a full guest name into two display lines.
+ * Breaks at the midpoint word boundary so each line fits the 167px text column.
+ * Single-word names: [name, ""].
+ * Two words: [word1, word2].
+ * Three+ words: first ⌈n/2⌉ words on line 1, remainder on line 2.
+ */
+function splitGuestName(fullName: string): [string, string] {
+  const words = fullName.trim().split(/\s+/);
+  if (words.length === 1) return [fullName, ""];
+  const mid = Math.ceil(words.length / 2);
+  return [words.slice(0, mid).join(" "), words.slice(mid).join(" ")];
 }
 function initials(name: string): string {
   return name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
@@ -188,9 +202,9 @@ export async function GET(req: NextRequest) {
   /* ── Layout constants ── */
   const LABEL_SZ   = 44;   // "MY NAME IS" / "AND I FEEL"
   const ABOUT_SZ   = 56;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
-  const GSECT_SZ   = 26;   // guest section subtitle
-  const GNAME_MAX  = 44;
-  const GNAME_MIN  = 20;
+  const GSECT_SZ   = 24;   // guest section subtitle (redline: 24px)
+  const GNAME_MAX  = 44;   // max per line — full name split across 2 lines
+  const GNAME_MIN  = 14;   // min per line — allows long names like "TRACEE ELLIS"
   const GQUOTE_MAX = 24;
   const GQUOTE_MIN = 13;
   const PHOTO_PX   = 100;
@@ -233,10 +247,12 @@ export async function GET(req: NextRequest) {
   const guestCardsEl = (
     <div style={{ display: "flex", gap: "10px", width: "940px" }}>
       {guestImgs.map((g) => {
-        const firstName = g.guest_name.split(" ")[0].toUpperCase();
-        const quoteText = shortQuote(g.cold_open_text);
-        const gnameSz   = scaledBarlowSize(firstName,      GNAME_MAX,  GNAME_MIN);
-        const gquoteSz  = scaledBarlowSize(`"${quoteText}"`, GQUOTE_MAX, GQUOTE_MIN);
+        const fullName    = g.guest_name.toUpperCase();
+        const [nameLine1, nameLine2] = splitGuestName(fullName);
+        const longestLine = nameLine1.length >= (nameLine2?.length ?? 0) ? nameLine1 : nameLine2;
+        const quoteText   = shortQuote(g.cold_open_text);
+        const gnameSz     = scaledBarlowSize(longestLine,    GNAME_MAX,  GNAME_MIN);
+        const gquoteSz    = scaledBarlowSize(`"${quoteText}"`, GQUOTE_MAX, GQUOTE_MIN);
         return (
           <div key={g.guest_id} style={{
             display: "flex", flex: 1, alignItems: "center", gap: "12px",
@@ -256,9 +272,16 @@ export async function GET(req: NextRequest) {
               )}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1 }}>
-              <span style={{ fontFamily: "Gotham", fontSize: `${gnameSz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1 }}>
-                {firstName}
-              </span>
+              <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                <span style={{ fontFamily: "Gotham", fontSize: `${gnameSz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
+                  {nameLine1}
+                </span>
+                {nameLine2 && (
+                  <span style={{ fontFamily: "Gotham", fontSize: `${gnameSz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
+                    {nameLine2}
+                  </span>
+                )}
+              </div>
               <span style={{ fontFamily: "Gotham", fontSize: `${gquoteSz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.1 }}>
                 &quot;{quoteText}&quot;
               </span>
