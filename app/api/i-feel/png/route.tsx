@@ -118,7 +118,7 @@ const USABLE_W  = 900;
 // Correct guest text area: (940-20)/3 cards − 2×14px padding − 100px avatar − 12px gap = 166.67px
 const GUEST_TW  = 167;
 
-function scaledSize(text: string, maxPx: number, minPx = 56): number {
+function scaledSize(text: string, maxPx: number, minPx = 94): number {
   const fit = Math.floor(USABLE_W / (text.length * MARKER_CW));
   return Math.min(maxPx, Math.max(minPx, fit));
 }
@@ -200,16 +200,16 @@ export async function GET(req: NextRequest) {
   const guestImgs = await fetchGuestPhotos(topGuests);
 
   /* ── Layout constants ── */
-  const LABEL_SZ   = 44;   // "MY NAME IS" / "AND I FEEL"
-  const ABOUT_SZ   = 56;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
-  const GSECT_SZ   = 24;   // guest section subtitle (redline: 24px)
+  const LABEL_SZ   = 48;   // "MY NAME IS" / "AND I FEEL" — ref 47.4px
+  const ABOUT_SZ   = 62;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
+  const GSECT_SZ   = 25;   // guest section subtitle — exactly 25px per spec
   const GNAME_MAX  = 44;   // max per line — full name split across 2 lines
   const GNAME_MIN  = 14;   // min per line — allows long names like "TRACEE ELLIS"
   const GQUOTE_MAX = 24;
   const GQUOTE_MIN = 13;
   const PHOTO_PX   = 100;
   const LOGO_PX    = 170;
-  const ATTR_SZ    = 22;
+  const ATTR_SZ    = 15;   // footer — exactly 15px per spec
   const CONAN_PX   = 160;
 
   const nameSz = scaledSize(name,    150, 64);
@@ -226,7 +226,7 @@ export async function GET(req: NextRequest) {
 
   /* ── Shared elements ── */
   const hRule = (
-    <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "14px" }} />
+    <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex" }} />
   );
 
   const dotsRow = (
@@ -312,17 +312,17 @@ export async function GET(req: NextRequest) {
           </span>
 
           {/* ② MY NAME IS + NAME + rule */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
-            <span style={marker(nameSz)}>{name}</span>
-            <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "10px" }} />
+            <span style={{ ...marker(nameSz), marginBottom: "-6px" }}>{name}</span>
+            <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex" }} />
           </div>
 
           {/* ③ AND I FEEL + FEELING + rule */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
-            <span style={{ ...marker(feelSz), maxWidth: "940px" }}>{feeling}</span>
-            <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex", marginTop: "10px" }} />
+            <span style={{ ...marker(feelSz), maxWidth: "940px", marginBottom: "-6px" }}>{feeling}</span>
+            <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex" }} />
           </div>
 
           {/* ④ ABOUT BEING CONAN O'BRIEN'S FRIEND — 62px fits full width */}
@@ -409,20 +409,22 @@ export async function GET(req: NextRequest) {
         )}
 
         {/* ── Name section ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
-          <span style={marker(nameSz)}>{name}</span>
+          {/* marginBottom pulls the rule up to the text baseline — brush sits on line */}
+          <span style={{ ...marker(nameSz), marginBottom: "-6px" }}>{name}</span>
           {hRule}
         </div>
 
         {/* ── Feeling section ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <span style={barlow(LABEL_SZ)}>I&apos;M FROM</span>
             <span style={{ fontSize: `${LABEL_SZ + 12}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
           </div>
-          <span style={{ ...marker(feelSz), maxWidth: "940px", textAlign: "center", justifyContent: "center" }}>
+          {/* marginBottom pulls the rule up to the text baseline — brush sits on line */}
+          <span style={{ ...marker(feelSz), maxWidth: "940px", textAlign: "center", justifyContent: "center", marginBottom: "-6px" }}>
             {feeling}
           </span>
           {hRule}
@@ -437,7 +439,7 @@ export async function GET(req: NextRequest) {
         {/* ── Guest section ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
           {dotsRow}
-          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
+          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: MUTED, letterSpacing: "2px", display: "flex" }}>
             {subtitle}
           </span>
           {guestCardsEl}
