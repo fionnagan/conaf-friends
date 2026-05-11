@@ -337,7 +337,7 @@ export async function GET(req: NextRequest) {
     const V1_W          = 880;   // content width: 1080 − 2×100 margin
     const V1_LABEL      = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
     const V1_GSECT      = 30;    // subtitle font size
-    const V1_BRUSH_MAX  = 170;   // cap: 783px fixed + (170*1.05-6)*2 variable = 1128px < 1150px budget
+    const V1_BRUSH_MAX  = 140;   // cap: 853px fixed + (140*1.05-6)*2 variable = 1135px < 1150px budget
     const V1_BRUSH_MIN  = 99;    // minimum brush text (+5px per spec)
     const V1_GNAME_MAX  = 24;    // celebrity name max — 24px per spec
     const V1_CARD_W     = (V1_W - 20) / 3;                              // ≈ 286.67px per card
@@ -435,8 +435,8 @@ export async function GET(req: NextRequest) {
             <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex", position: "relative", zIndex: 1 }} />
           </div>
 
-          {/* #14 — 50px from name rule to "AND I FEEL" label */}
-          <div style={{ height: "50px", display: "flex" }} />
+          {/* #14 — 40px from name rule to "AND I FEEL" label */}
+          <div style={{ height: "40px", display: "flex" }} />
 
           {/* ③ AND I FEEL + FEELING + rule */}
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -449,8 +449,8 @@ export async function GET(req: NextRequest) {
             <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex", position: "relative", zIndex: 1 }} />
           </div>
 
-          {/* #15 — 60px from feeling rule to "ABOUT BEING" */}
-          <div style={{ height: "60px", display: "flex" }} />
+          {/* #15 — 50px from feeling rule to "ABOUT BEING" */}
+          <div style={{ height: "50px", display: "flex" }} />
 
           {/* ④ ABOUT BEING / CONAN O'BRIEN'S FRIEND — same weight as labels */}
           <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
@@ -466,8 +466,8 @@ export async function GET(req: NextRequest) {
             <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
           </div>
 
-          {/* Fixed spacer ~55px — approx 50% of previous flex value; budget always safe */}
-          <div style={{ height: "55px", display: "flex" }} />
+          {/* Fixed spacer 45px — country to guest section */}
+          <div style={{ height: "45px", display: "flex" }} />
 
           {/* ⑥ Guest section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
