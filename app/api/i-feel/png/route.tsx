@@ -112,7 +112,7 @@ async function fetchGuestPhotos(guests: ReturnType<typeof findTopGuests>) {
 }
 
 /* ── Dynamic font sizing ─────────────────────────────────────────────────────── */
-const MARKER_CW = 0.45;
+const MARKER_CW = 0.50;
 const BARLOW_CW = 0.62;
 const USABLE_W  = 900;
 // Correct guest text area: (940-20)/3 cards − 2×14px padding − 100px avatar − 12px gap = 166.67px
@@ -130,6 +130,12 @@ function scaledBarlowSize(text: string, maxPx: number, minPx: number, availW = G
 /* ── Helpers ─────────────────────────────────────────────────────────────────── */
 function shortQuote(text: string, max = 12): string {
   return text.length <= max ? text : text.slice(0, max - 1) + "…";
+}
+/** Show up to maxWords words; truncate longer phrases with ellipsis. */
+function trimToWords(text: string, maxWords = 5): string {
+  const words = text.trim().split(/\s+/).filter(Boolean);
+  if (words.length <= maxWords) return text.trim();
+  return words.slice(0, maxWords).join(" ") + "…";
 }
 /**
  * Split a full guest name into two display lines.
@@ -240,7 +246,7 @@ export async function GET(req: NextRequest) {
   const GNAME_MAX  = 44;   // max per line — full name split across 2 lines
   const GNAME_MIN  = 14;   // min per line — allows long names like "TRACEE ELLIS"
   const GQUOTE_MAX = 24;
-  const GQUOTE_MIN = 13;
+  const GQUOTE_MIN = 15;
   const PHOTO_PX   = 100;
   const LOGO_PX    = 170;
   const ATTR_SZ    = 15;   // footer — exactly 15px per spec
@@ -285,13 +291,13 @@ export async function GET(req: NextRequest) {
         const fullName    = cleanGuestName(g.guest_name).toUpperCase();
         const [nameLine1, nameLine2] = splitGuestName(fullName);
         const longestLine = nameLine1.length >= (nameLine2?.length ?? 0) ? nameLine1 : nameLine2;
-        const feelPhrase  = g.feeling_phrase_normalized;
+        const feelPhrase  = trimToWords(g.feeling_phrase_normalized, 5);
         const gnameSz     = scaledBarlowSize(longestLine,    GNAME_MAX,  GNAME_MIN);
         const gquoteSz    = scaledBarlowSize(feelPhrase,     GQUOTE_MAX, GQUOTE_MIN);
         return (
           <div key={g.guest_id} style={{
             display: "flex", flex: 1, alignItems: "flex-start", gap: "12px",
-            background: TILE_BG, borderRadius: "16px", padding: "14px",
+            background: TILE_BG, borderRadius: "16px", padding: "16px",
           }}>
             <div style={{
               display: "flex", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px`,
@@ -366,13 +372,13 @@ export async function GET(req: NextRequest) {
           const fullName  = cleanGuestName(g.guest_name).toUpperCase();
           const [nl1, nl2] = splitGuestName(fullName);
           const longest   = nl1.length >= (nl2?.length ?? 0) ? nl1 : nl2;
-          const feelPhrase = g.feeling_phrase_normalized;
+          const feelPhrase = trimToWords(g.feeling_phrase_normalized, 5);
           const gnsz      = scaledBarlowSize(longest,       V1_GNAME_MAX, GNAME_MIN, V1_NAME_TW);
           const gqsz      = scaledBarlowSize(feelPhrase,    GQUOTE_MAX, GQUOTE_MIN, V1_GUEST_TW);
           return (
             <div key={g.guest_id} style={{
               display: "flex", flex: 1, alignItems: "flex-start", gap: "12px",
-              background: TILE_BG, borderRadius: "16px", padding: "14px",
+              background: TILE_BG, borderRadius: "16px", padding: "16px",
             }}>
               <div style={{
                 display: "flex", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px`,
@@ -427,12 +433,10 @@ export async function GET(req: NextRequest) {
               &ldquo;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
-            {/* zIndex 2 — brush text paints on top of the rule (written-over-line effect) */}
-            <span style={{ fontFamily: "Rushink", fontSize: `${v1NameSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px", position: "relative", zIndex: 2 }}>
+            {/* borderBottom = rule; span's own border always paints behind its text — no z-index needed */}
+            <span style={{ fontFamily: "Rushink", fontSize: `${v1NameSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", borderBottom: `1px solid ${DIVIDER}` }}>
               {name}
             </span>
-            {/* zIndex 1 — rule sits behind the brush text */}
-            <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex", position: "relative", zIndex: 1 }} />
           </div>
 
           {/* #14 — 40px from name rule to "AND I FEEL" label */}
@@ -441,12 +445,10 @@ export async function GET(req: NextRequest) {
           {/* ③ AND I FEEL + FEELING + rule */}
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={lbl(V1_LABEL)}>AND I FEEL</span>
-            {/* zIndex 2 — brush text paints on top of the rule (written-over-line effect) */}
-            <span style={{ fontFamily: "Rushink", fontSize: `${v1FeelSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", whiteSpace: "nowrap", marginBottom: "-6px", position: "relative", zIndex: 2 }}>
+            {/* borderBottom = rule; span's own border always paints behind its text — no z-index needed */}
+            <span style={{ fontFamily: "Rushink", fontSize: `${v1FeelSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}` }}>
               {feeling}
             </span>
-            {/* zIndex 1 — rule sits behind the brush text */}
-            <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex", position: "relative", zIndex: 1 }} />
           </div>
 
           {/* #15 — 50px from feeling rule to "ABOUT BEING" */}
