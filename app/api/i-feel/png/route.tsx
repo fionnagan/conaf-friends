@@ -295,56 +295,134 @@ export async function GET(req: NextRequest) {
   const subtitle = SUBTITLES[variant];
 
   /* ═══════════════════════════════════════════════════════════════════════════
-     VARIANT 1 — Left-aligned, large opening quote, country after "ABOUT BEING"
+     VARIANT 1 — Left-aligned, quote mark integrated above name, explicit gaps
      ═══════════════════════════════════════════════════════════════════════════ */
   if (variant === 1) {
+    /* V1-specific layout constants */
+    const V1_W        = 880;   // content width: 1080 − 2×100 margin
+    const V1_LABEL    = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
+    const V1_GSECT    = 27;    // subtitle +2px over shared 25px per spec
+    const V1_CARD_W   = (V1_W - 20) / 3;                              // ≈ 286.67px per card
+    const V1_GUEST_TW = Math.floor(V1_CARD_W - 28 - PHOTO_PX - 12);  // ≈ 147px text area
+
+    /* V1 label style helper */
+    const lbl = (sz: number, color = BLACK): React.CSSProperties => ({
+      fontFamily: "Gotham", fontSize: `${sz}px`, fontWeight: 800,
+      color, letterSpacing: "2px", lineHeight: 1, display: "flex",
+    });
+
+    /* V1 guest cards recalculated for 880px container */
+    const v1GuestCards = (
+      <div style={{ display: "flex", gap: "10px", width: `${V1_W}px` }}>
+        {guestImgs.map((g) => {
+          const fullName  = g.guest_name.toUpperCase();
+          const [nl1, nl2] = splitGuestName(fullName);
+          const longest   = nl1.length >= (nl2?.length ?? 0) ? nl1 : nl2;
+          const qt        = shortQuote(g.cold_open_text);
+          const gnsz      = scaledBarlowSize(longest,       GNAME_MAX,  GNAME_MIN,  V1_GUEST_TW);
+          const gqsz      = scaledBarlowSize(`"${qt}"`,     GQUOTE_MAX, GQUOTE_MIN, V1_GUEST_TW);
+          return (
+            <div key={g.guest_id} style={{
+              display: "flex", flex: 1, alignItems: "center", gap: "12px",
+              background: TILE_BG, borderRadius: "16px", padding: "14px",
+            }}>
+              <div style={{
+                display: "flex", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px`,
+                borderRadius: "50%", overflow: "hidden", background: "#CCC8C2",
+                flexShrink: 0, alignItems: "center", justifyContent: "center",
+              }}>
+                {g.photoB64 ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={g.photoB64} width={PHOTO_PX} height={PHOTO_PX}
+                    style={{ objectFit: "cover", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px` }} alt="" />
+                ) : (
+                  <span style={{ fontFamily: "Gotham", fontSize: `${Math.round(PHOTO_PX * 0.28)}px`, fontWeight: 800, color: ORANGE, display: "flex" }}>
+                    {initials(g.guest_name)}
+                  </span>
+                )}
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1, overflow: "hidden" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                  <span style={{ fontFamily: "Gotham", fontSize: `${gnsz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
+                    {nl1}
+                  </span>
+                  {nl2 && (
+                    <span style={{ fontFamily: "Gotham", fontSize: `${gnsz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
+                      {nl2}
+                    </span>
+                  )}
+                </div>
+                <span style={{ fontFamily: "Gotham", fontSize: `${gqsz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.1 }}>
+                  &quot;{qt}&quot;
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+
     return new ImageResponse(
       (
-        /* space-between distributes the 7 child blocks evenly across 1350px */
         <div style={{
           width: "1080px", height: "1350px", background: "white",
-          display: "flex", flexDirection: "column", justifyContent: "space-between",
-          padding: "44px 70px 52px",
+          display: "flex", flexDirection: "column",
+          padding: "100px",
         }}>
-          {/* ① Big opening quote mark */}
-          <span style={{ fontFamily: "Rushink", fontSize: "160px", color: ORANGE, lineHeight: 0.8, display: "flex" }}>
-            &ldquo;
-          </span>
 
-          {/* ② MY NAME IS + NAME + rule */}
+          {/* ①+② Quote mark integrated directly above "MY NAME IS" */}
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
-            <span style={{ ...marker(nameSz), marginBottom: "-6px" }}>{name}</span>
-            <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex" }} />
+            <span style={{ fontFamily: "Rushink", fontSize: "130px", color: ORANGE, lineHeight: 0.82, display: "flex" }}>
+              &ldquo;
+            </span>
+            <span style={lbl(V1_LABEL)}>MY NAME IS</span>
+            <span style={{ fontFamily: "Rushink", fontSize: `${nameSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px" }}>
+              {name}
+            </span>
+            <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex" }} />
           </div>
+
+          {/* Gap between name block and feeling block */}
+          <div style={{ height: "24px", display: "flex" }} />
 
           {/* ③ AND I FEEL + FEELING + rule */}
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
-            <span style={{ ...marker(feelSz), maxWidth: "940px", marginBottom: "-6px" }}>{feeling}</span>
-            <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex" }} />
+            <span style={lbl(V1_LABEL)}>AND I FEEL</span>
+            <span style={{ fontFamily: "Rushink", fontSize: `${feelSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", maxWidth: `${V1_W}px`, marginBottom: "-6px" }}>
+              {feeling}
+            </span>
+            <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex" }} />
           </div>
 
-          {/* ④ ABOUT BEING CONAN O'BRIEN'S FRIEND — 62px fits full width */}
+          {/* Gap between feeling and about */}
+          <div style={{ height: "24px", display: "flex" }} />
+
+          {/* ④ ABOUT BEING / CONAN O'BRIEN'S FRIEND — same weight as labels */}
           <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-            <span style={barlow(62)}>ABOUT BEING</span>
-            <span style={barlow(62)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
+            <span style={lbl(V1_LABEL)}>ABOUT BEING</span>
+            <span style={lbl(V1_LABEL)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
           </div>
 
-          {/* ⑤ Country attribution */}
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          {/* ⑤ Country — right-aligned to match end of "FRIEND" */}
+          <div style={{ display: "flex", width: `${V1_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "14px" }}>
             <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
             <span style={{ fontSize: "32px", display: "flex", lineHeight: 1 }}>{flag}</span>
             <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
           </div>
 
+          {/* Flex spacer — creates intentional large gap before celebrity section */}
+          <div style={{ flex: 1, display: "flex" }} />
+
           {/* ⑥ Guest section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
+            <span style={{ fontFamily: "Gotham", fontSize: `${V1_GSECT}px`, fontWeight: 800, color: MUTED, letterSpacing: "2px", display: "flex" }}>
               {subtitle}
             </span>
-            {guestCardsEl}
+            {v1GuestCards}
           </div>
+
+          {/* Gap before footer */}
+          <div style={{ height: "20px", display: "flex" }} />
 
           {/* ⑦ Footer */}
           {footerText}
