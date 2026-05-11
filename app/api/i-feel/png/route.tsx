@@ -285,12 +285,12 @@ export async function GET(req: NextRequest) {
         const fullName    = cleanGuestName(g.guest_name).toUpperCase();
         const [nameLine1, nameLine2] = splitGuestName(fullName);
         const longestLine = nameLine1.length >= (nameLine2?.length ?? 0) ? nameLine1 : nameLine2;
-        const quoteText   = shortQuote(g.cold_open_text);
+        const feelPhrase  = g.feeling_phrase_normalized;
         const gnameSz     = scaledBarlowSize(longestLine,    GNAME_MAX,  GNAME_MIN);
-        const gquoteSz    = scaledBarlowSize(`"${quoteText}"`, GQUOTE_MAX, GQUOTE_MIN);
+        const gquoteSz    = scaledBarlowSize(feelPhrase,     GQUOTE_MAX, GQUOTE_MIN);
         return (
           <div key={g.guest_id} style={{
-            display: "flex", flex: 1, alignItems: "center", gap: "12px",
+            display: "flex", flex: 1, alignItems: "flex-start", gap: "12px",
             background: TILE_BG, borderRadius: "16px", padding: "14px",
           }}>
             <div style={{
@@ -317,8 +317,8 @@ export async function GET(req: NextRequest) {
                   </span>
                 )}
               </div>
-              <span style={{ fontFamily: "Gotham", fontSize: `${gquoteSz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.1 }}>
-                &quot;{quoteText}&quot;
+              <span style={{ fontFamily: "Gotham", fontSize: `${gquoteSz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.3 }}>
+                &quot;{feelPhrase}&quot;
               </span>
             </div>
           </div>
@@ -366,12 +366,12 @@ export async function GET(req: NextRequest) {
           const fullName  = cleanGuestName(g.guest_name).toUpperCase();
           const [nl1, nl2] = splitGuestName(fullName);
           const longest   = nl1.length >= (nl2?.length ?? 0) ? nl1 : nl2;
-          const qt        = shortQuote(g.cold_open_text);
+          const feelPhrase = g.feeling_phrase_normalized;
           const gnsz      = scaledBarlowSize(longest,       V1_GNAME_MAX, GNAME_MIN, V1_NAME_TW);
-          const gqsz      = scaledBarlowSize(`"${qt}"`,     GQUOTE_MAX, GQUOTE_MIN, V1_GUEST_TW);
+          const gqsz      = scaledBarlowSize(feelPhrase,    GQUOTE_MAX, GQUOTE_MIN, V1_GUEST_TW);
           return (
             <div key={g.guest_id} style={{
-              display: "flex", flex: 1, alignItems: "center", gap: "12px",
+              display: "flex", flex: 1, alignItems: "flex-start", gap: "12px",
               background: TILE_BG, borderRadius: "16px", padding: "14px",
             }}>
               <div style={{
@@ -389,7 +389,7 @@ export async function GET(req: NextRequest) {
                   </span>
                 )}
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1, overflow: "hidden", maxWidth: `${V1_GUEST_TW}px` }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1, maxWidth: `${V1_GUEST_TW}px` }}>
                 <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
                   <span style={{ fontFamily: "Gotham", fontSize: `${gnsz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
                     {nl1}
@@ -400,8 +400,8 @@ export async function GET(req: NextRequest) {
                     </span>
                   )}
                 </div>
-                <span style={{ fontFamily: "Gotham", fontSize: `${gqsz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.1 }}>
-                  &quot;{qt}&quot;
+                <span style={{ fontFamily: "Gotham", fontSize: `${gqsz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.3 }}>
+                  &quot;{feelPhrase}&quot;
                 </span>
               </div>
             </div>
