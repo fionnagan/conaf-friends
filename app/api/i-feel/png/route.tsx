@@ -373,19 +373,33 @@ export async function GET(req: NextRequest) {
       </div>
     );
 
+    /* ── Permanent Marker font — fetched at runtime for V1 quote mark ── */
+    let pmData: Buffer | null = null;
+    try {
+      // Old IE user-agent causes Google Fonts to return TTF (not WOFF2) — required by Satori
+      const css = await fetch(
+        "https://fonts.googleapis.com/css2?family=Permanent+Marker",
+        { headers: { "User-Agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)" } }
+      ).then(r => r.text());
+      const match = css.match(/url\(([^)'"]+)/);
+      if (match?.[1]) {
+        pmData = Buffer.from(await (await fetch(match[1])).arrayBuffer());
+      }
+    } catch { /* falls back to Rushink if network unavailable */ }
+    const quoteFont = pmData ? "PermanentMarker" : "Rushink";
+
     return new ImageResponse(
       (
         <div style={{
           width: "1080px", height: "1350px", background: "white",
           display: "flex", flexDirection: "column",
-          padding: "100px",
+          padding: "100px",  /* hard 100px margin enforced on all four sides */
         }}>
 
-          {/* ①+② Single opening quote mark at 250px — same Rushink brush as name/feeling */}
+          {/* ①+② Quote mark — Permanent Marker (falls back to Rushink) */}
           <div style={{ display: "flex", flexDirection: "column" }}>
-            {/* Double opening quote — Rushink brush font at 250px; same font family as name/feeling */}
-            {/* negative marginBottom pulls MY NAME IS up into the quote glyph — perceived gap ~5px */}
-            <span style={{ fontFamily: "Rushink", fontSize: "250px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "-20px" }}>
+            {/* -40px marginBottom: MY NAME IS is pulled well up into quote glyph space */}
+            <span style={{ fontFamily: quoteFont, fontSize: "250px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "-40px" }}>
               &ldquo;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
@@ -449,8 +463,9 @@ export async function GET(req: NextRequest) {
       {
         width: 1080, height: 1350,
         fonts: [
-          { name: "Rushink", data: rushinkData, style: "normal", weight: 400 },
-          { name: "Gotham",  data: gothamData,  style: "normal", weight: 800 },
+          { name: "Rushink",        data: rushinkData, style: "normal", weight: 400 },
+          { name: "Gotham",         data: gothamData,  style: "normal", weight: 800 },
+          ...(pmData ? [{ name: "PermanentMarker", data: pmData, style: "normal" as const, weight: 400 as const }] : []),
         ],
         emoji: "twemoji",
       }
