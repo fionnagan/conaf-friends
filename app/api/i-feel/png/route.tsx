@@ -299,13 +299,22 @@ export async function GET(req: NextRequest) {
      ═══════════════════════════════════════════════════════════════════════════ */
   if (variant === 1) {
     /* V1-specific layout constants */
-    const V1_W        = 880;   // content width: 1080 − 2×100 margin
-    const V1_LABEL    = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
-    const V1_GSECT    = 27;    // subtitle +2px over shared 25px per spec
-    const V1_CARD_W   = (V1_W - 20) / 3;                              // ≈ 286.67px per card
-    const V1_GUEST_TW = Math.floor(V1_CARD_W - 28 - PHOTO_PX - 12);  // ≈ 147px raw text area
+    const V1_W          = 880;   // content width: 1080 − 2×100 margin
+    const V1_LABEL      = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
+    const V1_GSECT      = 27;    // subtitle +2px over shared 25px per spec
+    const V1_BRUSH_MAX  = 120;   // cap brush text so layout stays within 1150px content height
+    const V1_BRUSH_MIN  = 94;    // minimum brush text (≥ 94.4px ref)
+    const V1_GNAME_MAX  = 22;    // celebrity name max — per spec rule 33
+    const V1_CARD_W     = (V1_W - 20) / 3;                              // ≈ 286.67px per card
+    const V1_GUEST_TW   = Math.floor(V1_CARD_W - 28 - PHOTO_PX - 12);  // ≈ 147px raw text area
     // Subtract letter-spacing overhead (1px × max chars) so names never overflow tile
-    const V1_NAME_TW  = V1_GUEST_TW - 12;                             // ≈ 135px for name scaling
+    const V1_NAME_TW    = V1_GUEST_TW - 12;                             // ≈ 135px for name scaling
+
+    // Both name and feeling must share the same brush size — compute from the longer string
+    const v1LongerBrush = name.length >= feeling.length ? name : feeling;
+    const v1BrushSz     = Math.min(V1_BRUSH_MAX, Math.max(V1_BRUSH_MIN,
+      Math.floor(V1_W / (v1LongerBrush.length * MARKER_CW))
+    ));
 
     /* V1 label style helper */
     const lbl = (sz: number, color = BLACK): React.CSSProperties => ({
@@ -321,7 +330,7 @@ export async function GET(req: NextRequest) {
           const [nl1, nl2] = splitGuestName(fullName);
           const longest   = nl1.length >= (nl2?.length ?? 0) ? nl1 : nl2;
           const qt        = shortQuote(g.cold_open_text);
-          const gnsz      = scaledBarlowSize(longest,       GNAME_MAX,  GNAME_MIN,  V1_NAME_TW);
+          const gnsz      = scaledBarlowSize(longest,       V1_GNAME_MAX, GNAME_MIN, V1_NAME_TW);
           const gqsz      = scaledBarlowSize(`"${qt}"`,     GQUOTE_MAX, GQUOTE_MIN, V1_GUEST_TW);
           return (
             <div key={g.guest_id} style={{
@@ -372,15 +381,15 @@ export async function GET(req: NextRequest) {
           padding: "100px",
         }}>
 
-          {/* ①+② Quote mark sits lower with breathing room; integrated above "MY NAME IS" */}
+          {/* ①+② Single opening quote mark at 250px — same Rushink brush as name/feeling */}
           <div style={{ display: "flex", flexDirection: "column" }}>
-            {/* Use ASCII " — more reliably present in Rushink glyph set than &ldquo; */}
-            <span style={{ fontFamily: "Rushink", fontSize: "130px", color: ORANGE, lineHeight: 0.82, display: "flex", marginBottom: "12px" }}>
-              &quot;&quot;
+            {/* Single apostrophe/quote — ASCII ' reliably present in Rushink; 250px dramatic scale */}
+            <span style={{ fontFamily: "Rushink", fontSize: "250px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "35px" }}>
+              &apos;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
-            {/* marginBottom -6px: brush text baseline sits on the rule (overlap effect) */}
-            <span style={{ fontFamily: "Rushink", fontSize: `${nameSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px" }}>
+            {/* v1BrushSz shared — name and feeling always identical size */}
+            <span style={{ fontFamily: "Rushink", fontSize: `${v1BrushSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px" }}>
               {name}
             </span>
             <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex" }} />
@@ -392,7 +401,8 @@ export async function GET(req: NextRequest) {
           {/* ③ AND I FEEL + FEELING + rule */}
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={lbl(V1_LABEL)}>AND I FEEL</span>
-            <span style={{ fontFamily: "Rushink", fontSize: `${feelSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", maxWidth: `${V1_W}px`, marginBottom: "-6px" }}>
+            {/* v1BrushSz shared — identical to name brush size above */}
+            <span style={{ fontFamily: "Rushink", fontSize: `${v1BrushSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", maxWidth: `${V1_W}px`, marginBottom: "-6px" }}>
               {feeling}
             </span>
             <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex" }} />
@@ -415,8 +425,8 @@ export async function GET(req: NextRequest) {
             <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
           </div>
 
-          {/* #17 — ≥100px from country to celebrity section; flex absorbs overflow from dynamic text */}
-          <div style={{ flex: 1, minHeight: "100px", display: "flex" }} />
+          {/* Flex spacer — absorbs remaining height; ensures footer stays within 100px bottom margin */}
+          <div style={{ flex: 1, display: "flex" }} />
 
           {/* ⑥ Guest section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -429,8 +439,10 @@ export async function GET(req: NextRequest) {
           {/* Gap before footer */}
           <div style={{ height: "20px", display: "flex" }} />
 
-          {/* ⑦ Footer */}
-          {footerText}
+          {/* ⑦ Footer — 16px per spec */}
+          <span style={{ fontFamily: "Gotham", fontSize: "16px", fontWeight: 800, color: MUTED, letterSpacing: "2.5px", display: "flex" }}>
+            CONAF.VERCEL.APP · A FAN PROJECT
+          </span>
         </div>
       ),
       {
