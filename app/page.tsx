@@ -202,7 +202,7 @@ export default function IFeelPage() {
   const et = (full: object) => (reduced ? { duration: 0.01 } : full); // entrance transition
 
   const wordCount   = feeling.trim().split(/\s+/).filter(Boolean).length;
-  const tooMany     = wordCount > 5;
+  const tooMany     = wordCount > 3;
   const canSubmit   = !loading && !tooMany && name.trim() && country && feeling.trim();
 
   // Prefetch analytics for map/constellation
@@ -227,7 +227,7 @@ export default function IFeelPage() {
     if (!name.trim())    { setError("Name is required."); return; }
     if (!country)        { setError("Please select your country."); return; }
     if (!feeling.trim()) { setError("Please describe how you feel."); return; }
-    if (tooMany)         { setError("Keep it to 5 words or fewer."); return; }
+    if (tooMany)         { setError("Keep it to 3 words or fewer."); return; }
 
     setLoading(true);
     setResults(null);
@@ -285,7 +285,7 @@ export default function IFeelPage() {
           <h1 className="font-serif text-4xl sm:text-5xl font-semibold mb-3">I Feel…</h1>
           <p className="text-[var(--text-muted)] text-base leading-relaxed max-w-md mx-auto">
             How do you feel about being Conan O&apos;Brien&apos;s friend?
-            Describe it in five words or fewer — we&apos;ll find the guests who felt exactly the same way.
+            Describe it in three words or fewer — we&apos;ll find the guests who felt exactly the same way.
           </p>
         </motion.div>
 
@@ -327,7 +327,7 @@ export default function IFeelPage() {
             <label className="block text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-1.5">
               How do you feel?{" "}
               <span className="normal-case font-normal">
-                (up to 5 words)
+                (up to 3 words)
               </span>
             </label>
             <motion.input

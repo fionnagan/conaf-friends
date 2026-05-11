@@ -247,7 +247,8 @@ export async function GET(req: NextRequest) {
   const CONAN_PX   = 160;
 
   const nameSz = scaledSize(name,    150, 64);
-  const feelSz = scaledSize(feeling, 150, 64);
+  // Feeling has no minimum — always scales to fit one line regardless of length
+  const feelSz = Math.min(150, Math.floor(USABLE_W / (Math.max(feeling.length, 1) * MARKER_CW)));
 
   /* ── Style helpers ── */
   const barlow = (sz: number, color = BLACK, extra: React.CSSProperties = {}): React.CSSProperties => ({
@@ -344,11 +345,13 @@ export async function GET(req: NextRequest) {
     // Subtract letter-spacing overhead (1px × max chars) so names never overflow tile
     const V1_NAME_TW    = V1_GUEST_TW - 12;                             // ≈ 135px for name scaling
 
-    // Both name and feeling must share the same brush size — compute from the longer string
-    const v1LongerBrush = name.length >= feeling.length ? name : feeling;
-    const v1BrushSz     = Math.min(V1_BRUSH_MAX, Math.max(V1_BRUSH_MIN,
-      Math.floor(V1_W / (v1LongerBrush.length * MARKER_CW))
+    // Name: has a minimum; Feeling: no minimum — scales to fit one line
+    const v1NameSz = Math.min(V1_BRUSH_MAX, Math.max(V1_BRUSH_MIN,
+      Math.floor(V1_W / (Math.max(name.length, 1) * MARKER_CW))
     ));
+    const v1FeelSz = Math.min(V1_BRUSH_MAX,
+      Math.floor(V1_W / (Math.max(feeling.length, 1) * MARKER_CW))
+    );
 
     /* V1 label style helper */
     const lbl = (sz: number, color = BLACK): React.CSSProperties => ({
@@ -425,7 +428,7 @@ export async function GET(req: NextRequest) {
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
             {/* zIndex 2 — brush text paints on top of the rule (written-over-line effect) */}
-            <span style={{ fontFamily: "Rushink", fontSize: `${v1BrushSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px", position: "relative", zIndex: 2 }}>
+            <span style={{ fontFamily: "Rushink", fontSize: `${v1NameSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px", position: "relative", zIndex: 2 }}>
               {name}
             </span>
             {/* zIndex 1 — rule sits behind the brush text */}
@@ -439,7 +442,7 @@ export async function GET(req: NextRequest) {
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={lbl(V1_LABEL)}>AND I FEEL</span>
             {/* zIndex 2 — brush text paints on top of the rule (written-over-line effect) */}
-            <span style={{ fontFamily: "Rushink", fontSize: `${v1BrushSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", maxWidth: `${V1_W}px`, marginBottom: "-6px", position: "relative", zIndex: 2 }}>
+            <span style={{ fontFamily: "Rushink", fontSize: `${v1FeelSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", whiteSpace: "nowrap", marginBottom: "-6px", position: "relative", zIndex: 2 }}>
               {feeling}
             </span>
             {/* zIndex 1 — rule sits behind the brush text */}
@@ -558,7 +561,7 @@ export async function GET(req: NextRequest) {
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
           </div>
           {/* marginBottom pulls the rule up to the text baseline — brush sits on line */}
-          <span style={{ ...marker(feelSz), maxWidth: "940px", textAlign: "center", justifyContent: "center", marginBottom: "-6px" }}>
+          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", textAlign: "center", justifyContent: "center", marginBottom: "-6px" }}>
             {feeling}
           </span>
           {hRule}
