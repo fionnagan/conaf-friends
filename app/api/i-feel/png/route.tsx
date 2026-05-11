@@ -391,11 +391,12 @@ export async function GET(req: NextRequest) {
               &ldquo;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
-            {/* v1BrushSz shared — name and feeling always identical size */}
-            <span style={{ fontFamily: "Rushink", fontSize: `${v1BrushSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px" }}>
+            {/* zIndex 2 — brush text paints on top of the rule (written-over-line effect) */}
+            <span style={{ fontFamily: "Rushink", fontSize: `${v1BrushSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px", position: "relative", zIndex: 2 }}>
               {name}
             </span>
-            <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex" }} />
+            {/* zIndex 1 — rule sits behind the brush text */}
+            <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex", position: "relative", zIndex: 1 }} />
           </div>
 
           {/* #14 — 50px from name rule to "AND I FEEL" label */}
@@ -404,11 +405,12 @@ export async function GET(req: NextRequest) {
           {/* ③ AND I FEEL + FEELING + rule */}
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={lbl(V1_LABEL)}>AND I FEEL</span>
-            {/* v1BrushSz shared — identical to name brush size above */}
-            <span style={{ fontFamily: "Rushink", fontSize: `${v1BrushSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", maxWidth: `${V1_W}px`, marginBottom: "-6px" }}>
+            {/* zIndex 2 — brush text paints on top of the rule (written-over-line effect) */}
+            <span style={{ fontFamily: "Rushink", fontSize: `${v1BrushSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", maxWidth: `${V1_W}px`, marginBottom: "-6px", position: "relative", zIndex: 2 }}>
               {feeling}
             </span>
-            <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex" }} />
+            {/* zIndex 1 — rule sits behind the brush text */}
+            <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex", position: "relative", zIndex: 1 }} />
           </div>
 
           {/* #15 — 60px from feeling rule to "ABOUT BEING" */}
