@@ -302,7 +302,7 @@ export async function GET(req: NextRequest) {
     /* V1-specific layout constants */
     const V1_W          = 880;   // content width: 1080 − 2×100 margin
     const V1_LABEL      = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
-    const V1_GSECT      = 27;    // subtitle +2px over shared 25px per spec
+    const V1_GSECT      = 30;    // subtitle font size
     const V1_BRUSH_MAX  = 125;   // cap brush text so layout stays within 1150px content height (+5px per spec)
     const V1_BRUSH_MIN  = 99;    // minimum brush text (+5px per spec)
     const V1_GNAME_MAX  = 24;    // celebrity name max — 24px per spec
@@ -423,9 +423,9 @@ export async function GET(req: NextRequest) {
           {/* #16 — 30px from "FRIEND" to country row */}
           {/* Country right-aligned to match end of "FRIEND" */}
           <div style={{ display: "flex", width: `${V1_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "30px" }}>
-            <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
-            <span style={{ fontSize: "32px", display: "flex", lineHeight: 1 }}>{flag}</span>
-            <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
+            <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
+            <span style={{ fontSize: "36px", display: "flex", lineHeight: 1 }}>{flag}</span>
+            <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
           </div>
 
           {/* Fixed spacer ~55px — approx 50% of previous flex value; budget always safe */}
