@@ -384,7 +384,7 @@ export async function GET(req: NextRequest) {
           {/* ①+② Single opening quote mark at 250px — same Rushink brush as name/feeling */}
           <div style={{ display: "flex", flexDirection: "column" }}>
             {/* Double opening quote — Rushink brush font at 250px; same font family as name/feeling */}
-            <span style={{ fontFamily: "Rushink", fontSize: "250px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "35px" }}>
+            <span style={{ fontFamily: "Rushink", fontSize: "250px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "5px" }}>
               &ldquo;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
@@ -430,7 +430,7 @@ export async function GET(req: NextRequest) {
 
           {/* ⑥ Guest section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <span style={{ fontFamily: "Gotham", fontSize: `${V1_GSECT}px`, fontWeight: 800, color: MUTED, letterSpacing: "2px", display: "flex" }}>
+            <span style={{ fontFamily: "Gotham", fontSize: `${V1_GSECT}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
               {subtitle}
             </span>
             {v1GuestCards}
