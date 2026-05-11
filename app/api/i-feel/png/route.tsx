@@ -345,10 +345,10 @@ export async function GET(req: NextRequest) {
     // Subtract letter-spacing overhead (1px × max chars) so names never overflow tile
     const V1_NAME_TW    = V1_GUEST_TW - 12;                             // ≈ 135px for name scaling
 
-    // Name: has a minimum; Feeling: no minimum — scales to fit one line
-    const v1NameSz = Math.min(V1_BRUSH_MAX, Math.max(V1_BRUSH_MIN,
+    // Name + Feeling: no minimum — scales down as needed to fit one line, capped at V1_BRUSH_MAX
+    const v1NameSz = Math.min(V1_BRUSH_MAX,
       Math.floor(V1_W / (Math.max(name.length, 1) * MARKER_CW))
-    ));
+    );
     const v1FeelSz = Math.min(V1_BRUSH_MAX,
       Math.floor(V1_W / (Math.max(feeling.length, 1) * MARKER_CW))
     );
