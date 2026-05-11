@@ -303,7 +303,9 @@ export async function GET(req: NextRequest) {
     const V1_LABEL    = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
     const V1_GSECT    = 27;    // subtitle +2px over shared 25px per spec
     const V1_CARD_W   = (V1_W - 20) / 3;                              // ≈ 286.67px per card
-    const V1_GUEST_TW = Math.floor(V1_CARD_W - 28 - PHOTO_PX - 12);  // ≈ 147px text area
+    const V1_GUEST_TW = Math.floor(V1_CARD_W - 28 - PHOTO_PX - 12);  // ≈ 147px raw text area
+    // Subtract letter-spacing overhead (1px × max chars) so names never overflow tile
+    const V1_NAME_TW  = V1_GUEST_TW - 12;                             // ≈ 135px for name scaling
 
     /* V1 label style helper */
     const lbl = (sz: number, color = BLACK): React.CSSProperties => ({
@@ -319,7 +321,7 @@ export async function GET(req: NextRequest) {
           const [nl1, nl2] = splitGuestName(fullName);
           const longest   = nl1.length >= (nl2?.length ?? 0) ? nl1 : nl2;
           const qt        = shortQuote(g.cold_open_text);
-          const gnsz      = scaledBarlowSize(longest,       GNAME_MAX,  GNAME_MIN,  V1_GUEST_TW);
+          const gnsz      = scaledBarlowSize(longest,       GNAME_MAX,  GNAME_MIN,  V1_NAME_TW);
           const gqsz      = scaledBarlowSize(`"${qt}"`,     GQUOTE_MAX, GQUOTE_MIN, V1_GUEST_TW);
           return (
             <div key={g.guest_id} style={{
@@ -341,7 +343,7 @@ export async function GET(req: NextRequest) {
                   </span>
                 )}
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1, overflow: "hidden" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1, overflow: "hidden", maxWidth: `${V1_GUEST_TW}px` }}>
                 <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
                   <span style={{ fontFamily: "Gotham", fontSize: `${gnsz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
                     {nl1}
@@ -370,20 +372,22 @@ export async function GET(req: NextRequest) {
           padding: "100px",
         }}>
 
-          {/* ①+② Quote mark integrated directly above "MY NAME IS" */}
+          {/* ①+② Quote mark sits lower with breathing room; integrated above "MY NAME IS" */}
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={{ fontFamily: "Rushink", fontSize: "130px", color: ORANGE, lineHeight: 0.82, display: "flex" }}>
-              &ldquo;
+            {/* Use ASCII " — more reliably present in Rushink glyph set than &ldquo; */}
+            <span style={{ fontFamily: "Rushink", fontSize: "130px", color: ORANGE, lineHeight: 0.82, display: "flex", marginBottom: "12px" }}>
+              &quot;&quot;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
+            {/* marginBottom -6px: brush text baseline sits on the rule (overlap effect) */}
             <span style={{ fontFamily: "Rushink", fontSize: `${nameSz}px`, color: ORANGE, lineHeight: 1.05, display: "flex", marginBottom: "-6px" }}>
               {name}
             </span>
             <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex" }} />
           </div>
 
-          {/* Gap between name block and feeling block */}
-          <div style={{ height: "24px", display: "flex" }} />
+          {/* #14 — 50px from name rule to "AND I FEEL" label */}
+          <div style={{ height: "50px", display: "flex" }} />
 
           {/* ③ AND I FEEL + FEELING + rule */}
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -394,8 +398,8 @@ export async function GET(req: NextRequest) {
             <div style={{ width: `${V1_W}px`, height: "1px", background: DIVIDER, display: "flex" }} />
           </div>
 
-          {/* Gap between feeling and about */}
-          <div style={{ height: "24px", display: "flex" }} />
+          {/* #15 — 60px from feeling rule to "ABOUT BEING" */}
+          <div style={{ height: "60px", display: "flex" }} />
 
           {/* ④ ABOUT BEING / CONAN O'BRIEN'S FRIEND — same weight as labels */}
           <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
@@ -403,15 +407,16 @@ export async function GET(req: NextRequest) {
             <span style={lbl(V1_LABEL)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
           </div>
 
-          {/* ⑤ Country — right-aligned to match end of "FRIEND" */}
-          <div style={{ display: "flex", width: `${V1_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "14px" }}>
+          {/* #16 — 50px from "FRIEND" to country row */}
+          {/* Country right-aligned to match end of "FRIEND" */}
+          <div style={{ display: "flex", width: `${V1_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "50px" }}>
             <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
             <span style={{ fontSize: "32px", display: "flex", lineHeight: 1 }}>{flag}</span>
             <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
           </div>
 
-          {/* Flex spacer — creates intentional large gap before celebrity section */}
-          <div style={{ flex: 1, display: "flex" }} />
+          {/* #17 — ≥100px from country to celebrity section; flex absorbs overflow from dynamic text */}
+          <div style={{ flex: 1, minHeight: "100px", display: "flex" }} />
 
           {/* ⑥ Guest section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
