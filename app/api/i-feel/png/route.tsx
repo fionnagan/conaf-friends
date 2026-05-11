@@ -118,19 +118,12 @@ const USABLE_W  = 880;  // 1080px canvas − 2×100px margin
 // Guest text area: (880-20)/3 cards − 2×16px padding − 100px avatar − 12px gap = 146px
 const GUEST_TW  = 146;
 
-function scaledSize(text: string, maxPx: number, minPx = 94): number {
-  const fit = Math.floor(USABLE_W / (text.length * MARKER_CW));
-  return Math.min(maxPx, Math.max(minPx, fit));
-}
 function scaledBarlowSize(text: string, maxPx: number, minPx: number, availW = GUEST_TW): number {
   const fit = Math.floor(availW / (text.length * BARLOW_CW));
   return Math.min(maxPx, Math.max(minPx, fit));
 }
 
 /* ── Helpers ─────────────────────────────────────────────────────────────────── */
-function shortQuote(text: string, max = 12): string {
-  return text.length <= max ? text : text.slice(0, max - 1) + "…";
-}
 /** Show up to maxWords words; truncate longer phrases with ellipsis. */
 function trimToWords(text: string, maxWords = 5): string {
   const words = text.trim().split(/\s+/).filter(Boolean);
@@ -266,10 +259,6 @@ export async function GET(req: NextRequest) {
   });
 
   /* ── Shared elements ── */
-  const hRule = (
-    <div style={{ width: "940px", height: "1px", background: DIVIDER, display: "flex" }} />
-  );
-
   const dotsRow = (
     <div style={{ display: "flex", gap: "10px" }}>
       {[0,1,2,3,4].map((i) => (
@@ -344,7 +333,6 @@ export async function GET(req: NextRequest) {
     const V1_LABEL      = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
     const V1_GSECT      = 30;    // subtitle font size
     const V1_BRUSH_MAX  = 140;   // cap: 853px fixed + (140*1.05-6)*2 variable = 1135px < 1150px budget
-    const V1_BRUSH_MIN  = 99;    // minimum brush text (+5px per spec)
     const V1_GNAME_MAX  = 24;    // celebrity name max — 24px per spec
     const V1_CARD_W     = (V1_W - 20) / 3;                              // ≈ 286.67px per card
     const V1_GUEST_TW   = Math.floor(V1_CARD_W - 28 - PHOTO_PX - 12);  // ≈ 147px raw text area
