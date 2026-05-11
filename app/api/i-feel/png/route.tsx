@@ -114,9 +114,9 @@ async function fetchGuestPhotos(guests: ReturnType<typeof findTopGuests>) {
 /* ── Dynamic font sizing ─────────────────────────────────────────────────────── */
 const MARKER_CW = 0.50;
 const BARLOW_CW = 0.62;
-const USABLE_W  = 900;
-// Correct guest text area: (940-20)/3 cards − 2×14px padding − 100px avatar − 12px gap = 166.67px
-const GUEST_TW  = 167;
+const USABLE_W  = 880;  // 1080px canvas − 2×100px margin
+// Guest text area: (880-20)/3 cards − 2×16px padding − 100px avatar − 12px gap = 146px
+const GUEST_TW  = 146;
 
 function scaledSize(text: string, maxPx: number, minPx = 94): number {
   const fit = Math.floor(USABLE_W / (text.length * MARKER_CW));
@@ -242,18 +242,18 @@ export async function GET(req: NextRequest) {
   /* ── Layout constants ── */
   const LABEL_SZ   = 48;   // "MY NAME IS" / "AND I FEEL" — ref 47.4px
   const ABOUT_SZ   = 62;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
-  const GSECT_SZ   = 25;   // guest section subtitle — exactly 25px per spec
+  const GSECT_SZ   = 30;   // guest section subtitle — 30px per design system spec
   const GNAME_MAX  = 44;   // max per line — full name split across 2 lines
   const GNAME_MIN  = 14;   // min per line — allows long names like "TRACEE ELLIS"
   const GQUOTE_MAX = 24;
   const GQUOTE_MIN = 15;
   const PHOTO_PX   = 100;
   const LOGO_PX    = 170;
-  const ATTR_SZ    = 15;   // footer — exactly 15px per spec
+  const ATTR_SZ    = 20;   // footer — 20px locked per design system spec
   const CONAN_PX   = 160;
 
-  const nameSz = scaledSize(name,    150, 64);
-  // Feeling has no minimum — always scales to fit one line regardless of length
+  // No minimum on either — scales down as needed, capped at 150px
+  const nameSz = Math.min(150, Math.floor(USABLE_W / (Math.max(name.length, 1) * MARKER_CW)));
   const feelSz = Math.min(150, Math.floor(USABLE_W / (Math.max(feeling.length, 1) * MARKER_CW)));
 
   /* ── Style helpers ── */
@@ -286,7 +286,7 @@ export async function GET(req: NextRequest) {
 
   /* ── Guest cards ── */
   const guestCardsEl = (
-    <div style={{ display: "flex", gap: "10px", width: "940px" }}>
+    <div style={{ display: "flex", gap: "10px", width: `${USABLE_W}px` }}>
       {guestImgs.map((g) => {
         const fullName    = cleanGuestName(g.guest_name).toUpperCase();
         const [nameLine1, nameLine2] = splitGuestName(fullName);
@@ -512,7 +512,7 @@ export async function GET(req: NextRequest) {
       <div style={{
         width: "1080px", height: "1350px", background: BG,
         display: "flex", flexDirection: "column", alignItems: "center",
-        justifyContent: "space-between", padding: "56px 70px 48px",
+        justifyContent: "space-between", padding: "100px",
         position: "relative",
       }}>
 
@@ -550,9 +550,7 @@ export async function GET(req: NextRequest) {
         {/* ── Name section ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
-          {/* marginBottom pulls the rule up to the text baseline — brush sits on line */}
-          <span style={{ ...marker(nameSz), marginBottom: "-6px" }}>{name}</span>
-          {hRule}
+          <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}` }}>{name}</span>
         </div>
 
         {/* ── Feeling section ── */}
@@ -562,11 +560,9 @@ export async function GET(req: NextRequest) {
             <span style={{ fontSize: `${LABEL_SZ + 12}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
           </div>
-          {/* marginBottom pulls the rule up to the text baseline — brush sits on line */}
-          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", textAlign: "center", justifyContent: "center", marginBottom: "-6px" }}>
+          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", textAlign: "center", justifyContent: "center", borderBottom: `1px solid ${DIVIDER}` }}>
             {feeling}
           </span>
-          {hRule}
         </div>
 
         {/* ── About section ── */}
@@ -578,7 +574,7 @@ export async function GET(req: NextRequest) {
         {/* ── Guest section ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
           {dotsRow}
-          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: MUTED, letterSpacing: "2px", display: "flex" }}>
+          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
             {subtitle}
           </span>
           {guestCardsEl}
