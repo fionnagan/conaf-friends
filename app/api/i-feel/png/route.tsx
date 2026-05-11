@@ -178,9 +178,10 @@ export async function GET(req: NextRequest) {
   const pubDir  = path.join(process.cwd(), "public");
   const logoDir = path.join(process.cwd(), "public", "logos");
 
-  const [rushinkData, gothamData, conanBuf, podcastImgBuf] = await Promise.all([
+  const [rushinkData, gothamData, permanentMarkerData, conanBuf, podcastImgBuf] = await Promise.all([
     readFile(path.join(fontDir, "Rushink.ttf")),
     readFile(path.join(fontDir, "GothamBlack_ExtraBold.otf")),
+    readFile(path.join(fontDir, "PermanentMarker.ttf")),
     readFile(path.join(pubDir,  "conan_outline.png")),
     readFile(path.join(logoDir, "era-podcast.jpg")),
   ]);
@@ -373,20 +374,7 @@ export async function GET(req: NextRequest) {
       </div>
     );
 
-    /* ── Permanent Marker font — fetched at runtime for V1 quote mark ── */
-    let pmData: Buffer | null = null;
-    try {
-      // Old IE user-agent causes Google Fonts to return TTF (not WOFF2) — required by Satori
-      const css = await fetch(
-        "https://fonts.googleapis.com/css2?family=Permanent+Marker",
-        { headers: { "User-Agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)" } }
-      ).then(r => r.text());
-      const match = css.match(/url\(([^)'"]+)/);
-      if (match?.[1]) {
-        pmData = Buffer.from(await (await fetch(match[1])).arrayBuffer());
-      }
-    } catch { /* falls back to Rushink if network unavailable */ }
-    const quoteFont = pmData ? "PermanentMarker" : "Rushink";
+    const quoteFont = "PermanentMarker"; // local TTF — public/fonts/PermanentMarker.ttf
 
     return new ImageResponse(
       (
@@ -463,9 +451,9 @@ export async function GET(req: NextRequest) {
       {
         width: 1080, height: 1350,
         fonts: [
-          { name: "Rushink",        data: rushinkData, style: "normal", weight: 400 },
-          { name: "Gotham",         data: gothamData,  style: "normal", weight: 800 },
-          ...(pmData ? [{ name: "PermanentMarker", data: pmData, style: "normal" as const, weight: 400 as const }] : []),
+          { name: "Rushink",        data: rushinkData,         style: "normal", weight: 400 },
+          { name: "Gotham",         data: gothamData,          style: "normal", weight: 800 },
+          { name: "PermanentMarker",data: permanentMarkerData, style: "normal", weight: 400 },
         ],
         emoji: "twemoji",
       }
