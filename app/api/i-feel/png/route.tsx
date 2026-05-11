@@ -384,7 +384,8 @@ export async function GET(req: NextRequest) {
           {/* ①+② Single opening quote mark at 250px — same Rushink brush as name/feeling */}
           <div style={{ display: "flex", flexDirection: "column" }}>
             {/* Double opening quote — Rushink brush font at 250px; same font family as name/feeling */}
-            <span style={{ fontFamily: "Rushink", fontSize: "250px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "5px" }}>
+            {/* negative marginBottom pulls MY NAME IS up into the quote glyph — perceived gap ~5px */}
+            <span style={{ fontFamily: "Rushink", fontSize: "250px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "-20px" }}>
               &ldquo;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
@@ -425,8 +426,8 @@ export async function GET(req: NextRequest) {
             <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
           </div>
 
-          {/* Flex spacer — absorbs remaining height; ensures footer stays within 100px bottom margin */}
-          <div style={{ flex: 1, display: "flex" }} />
+          {/* Fixed spacer ~55px — approx 50% of previous flex value; budget always safe */}
+          <div style={{ height: "55px", display: "flex" }} />
 
           {/* ⑥ Guest section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
