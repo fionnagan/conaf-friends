@@ -302,9 +302,9 @@ export async function GET(req: NextRequest) {
     const V1_W          = 880;   // content width: 1080 − 2×100 margin
     const V1_LABEL      = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
     const V1_GSECT      = 27;    // subtitle +2px over shared 25px per spec
-    const V1_BRUSH_MAX  = 120;   // cap brush text so layout stays within 1150px content height
-    const V1_BRUSH_MIN  = 94;    // minimum brush text (≥ 94.4px ref)
-    const V1_GNAME_MAX  = 22;    // celebrity name max — per spec rule 33
+    const V1_BRUSH_MAX  = 125;   // cap brush text so layout stays within 1150px content height (+5px per spec)
+    const V1_BRUSH_MIN  = 99;    // minimum brush text (+5px per spec)
+    const V1_GNAME_MAX  = 24;    // celebrity name max — 24px per spec
     const V1_CARD_W     = (V1_W - 20) / 3;                              // ≈ 286.67px per card
     const V1_GUEST_TW   = Math.floor(V1_CARD_W - 28 - PHOTO_PX - 12);  // ≈ 147px raw text area
     // Subtract letter-spacing overhead (1px × max chars) so names never overflow tile
@@ -383,9 +383,9 @@ export async function GET(req: NextRequest) {
 
           {/* ①+② Single opening quote mark at 250px — same Rushink brush as name/feeling */}
           <div style={{ display: "flex", flexDirection: "column" }}>
-            {/* Single apostrophe/quote — ASCII ' reliably present in Rushink; 250px dramatic scale */}
+            {/* Double opening quote — Rushink brush font at 250px; same font family as name/feeling */}
             <span style={{ fontFamily: "Rushink", fontSize: "250px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "35px" }}>
-              &apos;
+              &ldquo;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
             {/* v1BrushSz shared — name and feeling always identical size */}
@@ -417,9 +417,9 @@ export async function GET(req: NextRequest) {
             <span style={lbl(V1_LABEL)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
           </div>
 
-          {/* #16 — 50px from "FRIEND" to country row */}
+          {/* #16 — 30px from "FRIEND" to country row */}
           {/* Country right-aligned to match end of "FRIEND" */}
-          <div style={{ display: "flex", width: `${V1_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "50px" }}>
+          <div style={{ display: "flex", width: `${V1_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "30px" }}>
             <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
             <span style={{ fontSize: "32px", display: "flex", lineHeight: 1 }}>{flag}</span>
             <span style={{ fontFamily: "Gotham", fontSize: "26px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
@@ -439,8 +439,8 @@ export async function GET(req: NextRequest) {
           {/* Gap before footer */}
           <div style={{ height: "20px", display: "flex" }} />
 
-          {/* ⑦ Footer — 16px per spec */}
-          <span style={{ fontFamily: "Gotham", fontSize: "16px", fontWeight: 800, color: MUTED, letterSpacing: "2.5px", display: "flex" }}>
+          {/* ⑦ Footer — 20px per spec */}
+          <span style={{ fontFamily: "Gotham", fontSize: "20px", fontWeight: 800, color: MUTED, letterSpacing: "2.5px", display: "flex" }}>
             CONAF.VERCEL.APP · A FAN PROJECT
           </span>
         </div>
