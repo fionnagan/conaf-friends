@@ -423,7 +423,7 @@ export async function GET(req: NextRequest) {
           {/* ①+② Quote mark — Permanent Marker (falls back to Rushink) */}
           <div style={{ display: "flex", flexDirection: "column" }}>
             {/* -40px marginBottom: MY NAME IS is pulled well up into quote glyph space */}
-            <span style={{ fontFamily: quoteFont, fontSize: "300px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "-55px" }}>
+            <span style={{ fontFamily: quoteFont, fontSize: "350px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "-55px", marginLeft: "-20px" }}>
               &ldquo;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
