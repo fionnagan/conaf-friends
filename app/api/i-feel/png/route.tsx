@@ -144,6 +144,39 @@ function splitGuestName(fullName: string): [string, string] {
   const mid = Math.ceil(words.length / 2);
   return [words.slice(0, mid).join(" "), words.slice(mid).join(" ")];
 }
+/**
+ * Strip venue/event noise from guest_name and return just the person's name.
+ * Handles patterns found in the data:
+ *   "JB Smoove Live from the SiriusXM Garage"  → "JB Smoove"
+ *   "Live with Will Arnett at the Wiltern"      → "Will Arnett"
+ *   "Tom Holland and Dominic Sandbrook of The Rest Is History Podcast" → "Tom Holland"
+ *   "Dave Grohl, Krist Novoselic, and Steve Albini" → "Dave Grohl"
+ */
+function cleanGuestName(raw: string): string {
+  let name = raw.trim();
+
+  // "Live with X at/from Y" → extract X
+  const liveWith = name.match(/^live\s+with\s+(.+?)(?:\s+(?:at|from|in)\s+|\s*$)/i);
+  if (liveWith) return liveWith[1].trim();
+
+  // Strip " Live from/at/in/at..." and everything after
+  name = name.replace(/\s+live\s+(from|at|in|at)\s+.*/i, "");
+
+  // Strip " of The [Podcast / Show]..."
+  name = name.replace(/\s+of\s+the?\s+.*/i, "");
+
+  // Multiple guests separated by comma → keep first person only
+  const first = name.split(/,\s+/)[0];
+  // Only split on " and " when the part before it is a full name (≥2 words),
+  // i.e. "Tom Holland and Dominic Sandbrook" → "Tom Holland"
+  // but NOT "Kurt and Wyatt Russell" (lone first name before "and" = same family)
+  const andParts = first.split(/\s+and\s+/);
+  name = (andParts.length > 1 && andParts[0].trim().split(/\s+/).length >= 2)
+    ? andParts[0].trim()
+    : first.trim();
+
+  return name;
+}
 function initials(name: string): string {
   return name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
 }
@@ -248,7 +281,7 @@ export async function GET(req: NextRequest) {
   const guestCardsEl = (
     <div style={{ display: "flex", gap: "10px", width: "940px" }}>
       {guestImgs.map((g) => {
-        const fullName    = g.guest_name.toUpperCase();
+        const fullName    = cleanGuestName(g.guest_name).toUpperCase();
         const [nameLine1, nameLine2] = splitGuestName(fullName);
         const longestLine = nameLine1.length >= (nameLine2?.length ?? 0) ? nameLine1 : nameLine2;
         const quoteText   = shortQuote(g.cold_open_text);
@@ -269,7 +302,7 @@ export async function GET(req: NextRequest) {
                 <img src={g.photoB64} width={PHOTO_PX} height={PHOTO_PX}
                   style={{ objectFit: "cover", width: `${PHOTO_PX}px`, height: `${PHOTO_PX}px` }} alt="" />
               ) : (
-                <span style={{ fontFamily: "Gotham", fontSize: `${Math.round(PHOTO_PX * 0.28)}px`, fontWeight: 800, color: ORANGE, display: "flex" }}>{initials(g.guest_name)}</span>
+                <span style={{ fontFamily: "Gotham", fontSize: `${Math.round(PHOTO_PX * 0.28)}px`, fontWeight: 800, color: ORANGE, display: "flex" }}>{initials(cleanGuestName(g.guest_name))}</span>
               )}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1 }}>
