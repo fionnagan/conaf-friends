@@ -112,7 +112,7 @@ async function fetchGuestPhotos(guests: ReturnType<typeof findTopGuests>) {
 }
 
 /* ── Dynamic font sizing ─────────────────────────────────────────────────────── */
-const MARKER_CW = 0.52;
+const MARKER_CW = 0.45;
 const BARLOW_CW = 0.62;
 const USABLE_W  = 900;
 // Correct guest text area: (940-20)/3 cards − 2×14px padding − 100px avatar − 12px gap = 166.67px
@@ -337,7 +337,7 @@ export async function GET(req: NextRequest) {
     const V1_W          = 880;   // content width: 1080 − 2×100 margin
     const V1_LABEL      = 62;    // all three labels match: MY NAME IS / AND I FEEL / ABOUT BEING
     const V1_GSECT      = 30;    // subtitle font size
-    const V1_BRUSH_MAX  = 132;   // cap brush text so layout stays within 1150px content height
+    const V1_BRUSH_MAX  = 170;   // cap: 783px fixed + (170*1.05-6)*2 variable = 1128px < 1150px budget
     const V1_BRUSH_MIN  = 99;    // minimum brush text (+5px per spec)
     const V1_GNAME_MAX  = 24;    // celebrity name max — 24px per spec
     const V1_CARD_W     = (V1_W - 20) / 3;                              // ≈ 286.67px per card
@@ -423,7 +423,7 @@ export async function GET(req: NextRequest) {
           {/* ①+② Quote mark — Permanent Marker (falls back to Rushink) */}
           <div style={{ display: "flex", flexDirection: "column" }}>
             {/* -40px marginBottom: MY NAME IS is pulled well up into quote glyph space */}
-            <span style={{ fontFamily: quoteFont, fontSize: "350px", color: ORANGE, lineHeight: 0.70, display: "flex", marginBottom: "-55px", marginLeft: "-40px" }}>
+            <span style={{ fontFamily: quoteFont, fontSize: "350px", color: ORANGE, lineHeight: 0.70, display: "flex", marginTop: "-100px", marginBottom: "-55px", marginLeft: "-60px" }}>
               &ldquo;
             </span>
             <span style={lbl(V1_LABEL)}>MY NAME IS</span>
