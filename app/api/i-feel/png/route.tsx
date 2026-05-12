@@ -600,7 +600,8 @@ export async function GET(req: NextRequest) {
           {variant === 2 ? (
             <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
               <span style={barlow(LABEL_SZ)}>I&apos;M FROM</span>
-              <span style={{ fontSize: `${LABEL_SZ + 6}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
+              {/* flag at same size as labels so the row height = 62px, matching MY NAME IS */}
+              <span style={{ fontSize: `${LABEL_SZ}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
               <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
             </div>
           ) : (
