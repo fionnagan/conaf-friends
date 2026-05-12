@@ -34,29 +34,50 @@ function channelMatches(channelTitle: string): boolean {
   return ACCEPTED_CHANNELS.some((ac) => c.includes(ac));
 }
 
+// Date proximity bonus: rewards YT videos uploaded close to the podcast air date.
+// Critical for guests with multiple appearances — prevents matching a 2019 video
+// to a 2026 episode.
+function dateProximityScore(videoPublishedAt: string, episodePubDate: string): number {
+  if (!videoPublishedAt || !episodePubDate) return 0;
+  const epDate   = new Date(episodePubDate).getTime();
+  const vidDate  = new Date(videoPublishedAt).getTime();
+  if (isNaN(epDate) || isNaN(vidDate)) return 0;
+  const diffDays = Math.abs(epDate - vidDate) / (1000 * 60 * 60 * 24);
+  if (diffDays <= 14)  return  0.30; // within 2 weeks  — strong match
+  if (diffDays <= 45)  return  0.20; // within 6 weeks  — likely same appearance
+  if (diffDays <= 120) return  0.10; // within 4 months — possible
+  if (diffDays <= 365) return  0.00; // within a year   — neutral
+  return -0.15;                       // older than 1 year — likely wrong appearance
+}
+
 function scoreCandidate(
   videoTitle: string,
   channelTitle: string,
   durationSecs: number,
   guestName: string,
-  episodeTitle: string
+  episodeTitle: string,
+  videoPublishedAt: string,
+  episodePubDate: string
 ): number {
   let score = 0;
 
-  // +0.4 official channel
-  if (channelMatches(channelTitle)) score += 0.4;
+  // +0.35 official channel
+  if (channelMatches(channelTitle)) score += 0.35;
 
-  // +0.3 guest name present in title
+  // +0.25 guest name present in title
   const titleLower = videoTitle.toLowerCase();
   const nameParts = guestName.toLowerCase().split(/\s+/);
-  if (nameParts.every((p) => titleLower.includes(p))) score += 0.3;
+  if (nameParts.every((p) => titleLower.includes(p))) score += 0.25;
 
-  // +0.2 episode title fuzzy match
+  // +0.15 episode title fuzzy match
   const sim = titleSimilarity(episodeTitle, videoTitle);
-  score += sim * 0.2;
+  score += sim * 0.15;
 
-  // +0.1 full episode (> 10 minutes)
-  if (durationSecs > 600) score += 0.1;
+  // +0.05 full episode (> 10 minutes)
+  if (durationSecs > 600) score += 0.05;
+
+  // ±0.30 date proximity — most important for repeat guests
+  score += dateProximityScore(videoPublishedAt, episodePubDate);
 
   return Math.round(score * 1000) / 1000;
 }
@@ -163,7 +184,9 @@ export async function matchYouTubeVideos(
             item.snippet.channelTitle,
             durations[vid] ?? 0,
             episode.guestName!,
-            episode.title
+            episode.title,
+            item.snippet.publishedAt ?? '',
+            episode.pubDate ?? ''
           );
           if (confidence > bestConfidence) {
             bestConfidence = confidence;
