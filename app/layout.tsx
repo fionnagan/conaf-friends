@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import StickyPlayer from "@/components/StickyPlayer";
 import { PlayerProvider } from "@/lib/PlayerContext";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "The Friend Registry | A Conan O'Brien Friendship Archive",
@@ -47,6 +48,7 @@ export default function RootLayout({
             </p>
           </footer>
         </PlayerProvider>
+        <Analytics />
       </body>
     </html>
   );
