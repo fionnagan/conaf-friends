@@ -569,14 +569,14 @@ export async function GET(req: NextRequest) {
         {variant === 3 ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={conanHiB64} width={240} height={240}
-            style={{ objectFit: "contain" }} alt="" />
+            style={{ objectFit: "contain", marginTop: "-50px" }} alt="" />
         ) : (
           /* V2 & V4: empty top spacer (V2 uses absolute-positioned Conan) */
           <div style={{ display: "flex", height: "40px" }} />
         )}
 
         {/* ── Identity block: MY NAME IS → CONAN O'BRIEN'S FRIEND + country row ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", ...(variant === 2 && { marginTop: "-90px" }) }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", ...(variant === 2 ? { marginTop: "-90px" } : variant === 3 ? { marginTop: "-50px" } : {}) }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
           {/* borderBottom rule — 880px width on all V2/3/4 so underline spans margin-to-margin */}
           <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}`, width: `${USABLE_W}px`, ...(variant !== 2 && { justifyContent: "center" }) }}>{name}</span>
