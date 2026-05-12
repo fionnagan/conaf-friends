@@ -130,10 +130,6 @@ export default function GuestPanel({ guestId, onClose }: Props) {
               <div className="p-3 bg-[var(--bg2)] rounded-xl border border-[var(--border)]">
                 <p className="text-xs text-[var(--text-muted)] mb-1">How Conan knows them</p>
                 <p className="text-sm font-semibold">{guest.origin.label}</p>
-                <p className="text-xs text-[var(--text-muted)] mt-0.5">
-                  Confidence:{" "}
-                  <span className="capitalize">{guest.origin.confidence}</span>
-                </p>
               </div>
             </div>
 

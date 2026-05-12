@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getGuestsData } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "About — The Friend Registry",
+  title: "About | The Friend Registry",
   description: "About this fan-made archive of Conan O'Brien's friendships.",
 };
 
@@ -21,7 +21,7 @@ export default function AboutPage() {
         <h2>What is The Friend Registry?</h2>
         <p>
           This is an unofficial, fan-made website that maps the relationships
-          between Conan O&apos;Brien and every guest who has appeared on his shows —
+          between Conan O&apos;Brien and every guest who has appeared on his shows,
           from <em>Late Night with Conan O&apos;Brien</em> (1993–2009) through{" "}
           <em>The Tonight Show</em>, <em>Conan</em> on TBS, the podcast{" "}
           <em>Conan O&apos;Brien Needs a Friend</em>, and <em>Conan Must Go</em>.
@@ -32,13 +32,13 @@ export default function AboutPage() {
           Every guest receives a Friendship Score between 35 and 100, calculated
           from five factors: number of appearances, cold open sentiment, origin
           depth, visit type, and gap resilience. The score is entirely fan-made
-          and affectionate — it is designed to celebrate every guest, not rank
+          and affectionate, it is designed to celebrate every guest, not rank
           them critically. The lowest tier is still &ldquo;Honored Guest&rdquo; because
           every Conan guest deserves that dignity.
         </p>
         <p>
           A tooltip on every score reads: &ldquo;A fan-made score, made with love ♥&rdquo;
-          — because that&apos;s exactly what it is.
+         , because that&apos;s exactly what it is.
         </p>
 
         <h2>Data sources</h2>
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <li>
             <strong>Late night history:</strong> Wikipedia episode lists and
             IMDb guest credits for each of Conan&apos;s shows. This data is
-            incomplete, especially for early years (1993–2000) — gaps are marked
+            incomplete, especially for early years (1993–2000), gaps are marked
             as unknown rather than fabricated.
           </li>
           <li>
@@ -61,7 +61,7 @@ export default function AboutPage() {
           </li>
           <li>
             <strong>YouTube videos:</strong> Team Coco&apos;s official YouTube
-            channel via YouTube Data API v3. Only official embeds are used —
+            channel via YouTube Data API v3. Only official embeds are used,
             no downloading or ad-stripping.
           </li>
           <li>
@@ -81,7 +81,7 @@ export default function AboutPage() {
 
         <h2>Respecting Team Coco</h2>
         <p>
-          All audio and video playback uses official Team Coco sources — the
+          All audio and video playback uses official Team Coco sources, the
           Simplecast-hosted audio stream and YouTube IFrame embeds. This
           preserves ads, view counts, and revenue for Team Coco. This site
           does not download, mirror, or re-host any content.

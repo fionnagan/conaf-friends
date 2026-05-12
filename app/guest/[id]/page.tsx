@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guest = data.guests.find((g) => g.id === params.id);
   if (!guest) return { title: "Guest not found" };
   return {
-    title: `${guest.name} — The Friend Registry`,
+    title: `${guest.name} | The Friend Registry`,
     description: `${guest.name} has appeared ${guest.appearances.length} time${guest.appearances.length !== 1 ? "s" : ""} on Conan O'Brien's shows.`,
   };
 }
@@ -41,7 +41,7 @@ export default function GuestPage({ params }: Props) {
         href="/"
         className="inline-flex items-center gap-1 text-sm text-[var(--text-muted)] hover:text-[var(--text)] mb-6"
       >
-        ← Back to Map
+        ← Back
       </a>
 
       {/* Hero */}
@@ -136,8 +136,7 @@ export default function GuestPage({ params }: Props) {
           <>
             <p className="font-semibold text-[var(--text)]">{guest.origin.label}</p>
             <p className="text-sm text-[var(--text-muted)] mt-1">
-              Origin type: {ORIGIN_LABELS[guest.origin.type]} ·{" "}
-              Confidence: <span className="capitalize">{guest.origin.confidence}</span>
+              {ORIGIN_LABELS[guest.origin.type]}
             </p>
           </>
         )}
@@ -149,7 +148,7 @@ export default function GuestPage({ params }: Props) {
         <h2 className="font-serif text-xl font-semibold mb-4">
           Friendship Arc (1993–present)
         </h2>
-        <div className="bg-[var(--bg2)] rounded-2xl border border-[var(--border)] p-5 overflow-x-auto">
+        <div className="bg-[var(--bg2)] rounded-2xl border border-[var(--border)] p-5 overflow-hidden">
           <FriendshipArc guest={guest} />
         </div>
       </section>

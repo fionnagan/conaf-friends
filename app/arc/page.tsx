@@ -3,7 +3,7 @@ import ArcListClient from "@/components/ArcListClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Friendship Arcs — The Friend Registry",
+  title: "Friendship Arcs | The Friend Registry",
   description: "Every guest's friendship arc with Conan O'Brien, from 1993 to today.",
 };
 

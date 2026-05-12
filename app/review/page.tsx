@@ -5,7 +5,7 @@ import PhotoReviewQueue from '@/components/PhotoReviewQueue';
 import type { ReviewQueueItem } from '@/lib/face-types';
 
 export const metadata: Metadata = {
-  title: 'Photo Review — The Friend Registry',
+  title: 'Photo Review | The Friend Registry',
   description: 'Human review queue for guest photo enrichment',
 };
 

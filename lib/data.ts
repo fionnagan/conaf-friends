@@ -121,6 +121,7 @@ export const ERA_LOGOS: Partial<Record<Era, string>> = {
   'tonight-show':   '/logos/era-tonight-show.png',
   'tbs-conan':      '/logos/era-tbs-conan.svg',
   'podcast':        '/logos/era-podcast.jpg',
+  'conan-must-go':  '/conanmustgologo.webp',
 };
 
 let _cachedData: GuestsData | null = null;

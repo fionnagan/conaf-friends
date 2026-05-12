@@ -3,7 +3,7 @@ import ColdOpensClient from "@/components/ColdOpensClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cold Open Archive — The Friend Registry",
+  title: "Cold Open Archive | The Friend Registry",
   description:
     'Every "I feel ___ about being Conan O\'Brien\'s friend" moment, catalogued.',
 };

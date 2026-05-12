@@ -27,7 +27,7 @@ export default function MapPage() {
           </code>
           <p className="text-xs text-[var(--text-muted)] mt-4">
             Takes ~5–10 minutes. Requires a YouTube API key in{" "}
-            <code className="font-mono">.env.local</code> (optional — works without it).
+            <code className="font-mono">.env.local</code> (optional, works without it).
           </p>
         </div>
       ) : (

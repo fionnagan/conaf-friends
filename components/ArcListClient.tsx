@@ -402,7 +402,7 @@ export default function ArcListClient({ guests }: Props) {
 
       {filtered.length === 0 && (
         <p className="text-center text-[var(--text-muted)] py-16">
-          No guests match — try adjusting your filters.
+          No guests match. Try adjusting your filters.
         </p>
       )}
 

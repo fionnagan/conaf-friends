@@ -5,9 +5,13 @@ import StickyPlayer from "@/components/StickyPlayer";
 import { PlayerProvider } from "@/lib/PlayerContext";
 
 export const metadata: Metadata = {
-  title: "The Friend Registry — A Conan O'Brien Friendship Archive",
+  title: "The Friend Registry | A Conan O'Brien Friendship Archive",
   description:
     "A fan-made archive mapping Conan O'Brien's friendships across every era of his career. Unofficial fan project.",
+  icons: {
+    icon: "/conan_hi.png",
+    apple: "/conan_hi.png",
+  },
   openGraph: {
     title: "The Friend Registry",
     description: "A fan-made archive of Conan O'Brien's friendships",

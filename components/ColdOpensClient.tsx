@@ -220,7 +220,7 @@ export default function ColdOpensClient({ coldOpens }: Props) {
 
       {filtered.length === 0 && (
         <p className="text-center text-[var(--text-muted)] py-16">
-          No cold opens found — try a different filter.
+          No cold opens found. Try a different filter.
         </p>
       )}
     </div>

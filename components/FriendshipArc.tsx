@@ -16,6 +16,7 @@ const ERAS: Era[] = [
   "tonight-show",
   "tbs-conan",
   "podcast",
+  "conan-must-go",
 ];
 
 const ERA_DATE_RANGES: Record<Era, [number, number]> = {
@@ -26,8 +27,9 @@ const ERA_DATE_RANGES: Record<Era, [number, number]> = {
   "conan-must-go": [2023, 2026],
 };
 
+// TOTAL_END = 2027 gives 2026 a right-margin so it renders inside the viewBox
 const TOTAL_START = 1993;
-const TOTAL_END = 2025;
+const TOTAL_END = 2027;
 const TOTAL_SPAN = TOTAL_END - TOTAL_START;
 
 function yearToPercent(year: number): number {

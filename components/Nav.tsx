@@ -8,8 +8,6 @@ const NAV_LINKS = [
   { href: "/", label: "I Feel…" },
   { href: "/cold-opens", label: "Cold Opens" },
   { href: "/arc", label: "Arcs" },
-  { href: "/map", label: "Map" },
-  { href: "/about", label: "About" },
 ];
 
 export default function Nav() {
@@ -21,12 +19,8 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 leading-none group">
-          <span
-            className="w-7 h-7 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
-            style={{ background: 'var(--orange)' }}
-          >
-            C
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/conan_hi.png" alt="Conan" className="w-8 h-8 rounded-full flex-shrink-0 object-contain" />
           <span className="font-serif text-lg font-semibold tracking-tight" style={{ color: '#e8eaf0' }}>
             The Friend Registry
           </span>

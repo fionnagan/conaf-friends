@@ -156,7 +156,7 @@ function WordBadge({ count, max }: { count: number; max: number }) {
       transition={{ duration: 0.2 }}
       className={`text-xs font-mono tabular-nums ${over ? "text-red-400" : "text-[var(--text-muted)]"}`}
     >
-      {count}/{max} words{over ? " — too many" : ""}
+      {count}/{max} words{over ? " (too many)" : ""}
     </motion.span>
   );
 }

@@ -244,7 +244,7 @@ export default function WorldMap({ countryCounts }: Props) {
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-[var(--bg)] rounded-full border border-[var(--border)] hover:border-[var(--orange)]/60 transition-colors text-xs font-medium hover:text-[var(--orange)]"
                   >
                     {g.guest_name}
-                    <span className="text-[var(--text-muted)] italic normal-case font-normal">— &quot;{g.cold_open_text}&quot;</span>
+                    <span className="text-[var(--text-muted)] italic normal-case font-normal"> &middot; &quot;{g.cold_open_text}&quot;</span>
                   </a>
                 ))}
               </div>
