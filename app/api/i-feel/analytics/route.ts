@@ -125,18 +125,14 @@ async function getConstellationWords(): Promise<{ word: string; count: number; f
 
   if (!data?.length) return [];
 
+  // Each feeling submission is one atomic entry — never split into individual words.
   const wordFans: Record<string, { count: number; fans: Set<string> }> = {};
   for (const { feeling_normalized, name } of data) {
-    const words = (feeling_normalized ?? "")
-      .toLowerCase()
-      .replace(/[^a-z ]/g, "")
-      .split(/\s+/)
-      .filter((w: string) => w && !STOP.has(w));
-    for (const word of words) {
-      if (!wordFans[word]) wordFans[word] = { count: 0, fans: new Set() };
-      wordFans[word].count++;
-      if (name) wordFans[word].fans.add(name);
-    }
+    const phrase = (feeling_normalized ?? "").trim();
+    if (!phrase) continue;
+    if (!wordFans[phrase]) wordFans[phrase] = { count: 0, fans: new Set() };
+    wordFans[phrase].count++;
+    if (name) wordFans[phrase].fans.add(name);
   }
 
   return Object.entries(wordFans)

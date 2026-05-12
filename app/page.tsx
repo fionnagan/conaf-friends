@@ -537,49 +537,6 @@ export default function IFeelPage() {
           </AnimatePresence>
         </section>
 
-        {/* ── Fans from country — shown after map when results exist ── */}
-        <AnimatePresence>
-          {results && (
-            <motion.section
-              key="fans"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <h2 className="font-serif text-xl font-semibold mb-1">
-                Fans from {country}
-              </h2>
-              {results.fans.length === 0 ? (
-                <p className="text-sm text-[var(--text-muted)] mt-2">
-                  No fans from {country} in our map yet. Be the first!
-                </p>
-              ) : (
-                <>
-                  <p className="text-sm text-[var(--text-muted)] mb-4">
-                    {results.fans.length} fan{results.fans.length !== 1 ? "s" : ""} from your country have appeared on the show.
-                  </p>
-                  <div className="space-y-2">
-                    {results.fans.map((f) => (
-                      <a
-                        key={f.fan_id}
-                        href={f.episode_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-between p-3 bg-[var(--bg2)] rounded-xl border border-[var(--border)] hover:border-[var(--orange)] transition-colors group"
-                      >
-                        <span className="text-sm font-medium group-hover:text-[var(--orange)] transition-colors">
-                          {f.fan_name}
-                        </span>
-                        <span className="text-xs text-[var(--text-muted)]">Listen ↗</span>
-                      </a>
-                    ))}
-                  </div>
-                </>
-              )}
-            </motion.section>
-          )}
-        </AnimatePresence>
 
       </main>
     </>

@@ -12,8 +12,38 @@ import { countryFlag } from "@/lib/country-flags";
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
+/**
+ * world-atlas GeoJSON uses different country name strings than our COUNTRIES list.
+ * Map GeoJSON names → our canonical names so countryCounts lookups match.
+ */
+const GEO_TO_CANONICAL: Record<string, string> = {
+  "United States of America": "United States",
+  "Russian Federation":        "Russia",
+  "Republic of Korea":         "South Korea",
+  "Dem. Rep. Korea":           "North Korea",
+  "Dem. Rep. Congo":           "Congo",
+  "Czech Republic":            "Czech Republic", // same, but just in case
+  "Macedonia":                 "North Macedonia",
+  "Ivory Coast":               "Ivory Coast",
+  "Côte d'Ivoire":             "Ivory Coast",
+  "Lao PDR":                   "Laos",
+  "Viet Nam":                  "Vietnam",
+  "Myanmar":                   "Myanmar",
+  "Palestinian Territory":     "Palestine",
+  "Bosnia and Herz.":          "Bosnia and Herzegovina",
+  "Central African Rep.":      "Central African Republic",
+  "Eq. Guinea":                "Equatorial Guinea",
+  "W. Sahara":                 "Western Sahara",
+  "S. Sudan":                  "South Sudan",
+  "Dominican Rep.":            "Dominican Republic",
+  "Trinidad and Tobago":       "Trinidad and Tobago",
+  "United Republic of Tanzania": "Tanzania",
+  "Swaziland":                 "Eswatini",
+  "Fr. S. Antarctic Lands":    "Antarctica",
+};
+
 interface CountrySubmission {
-  topWords: { word: string; count: number }[];
+  topFeelings: { feeling: string; count: number }[];
   fans: { name: string; feeling: string }[];
 }
 
@@ -70,7 +100,7 @@ export default function WorldMap({ countryCounts }: Props) {
       );
     } catch {
       setPanel((prev) =>
-        prev?.name === name ? { ...prev, data: { topWords: [], fans: [] }, loading: false } : prev
+        prev?.name === name ? { ...prev, data: { topFeelings: [], fans: [] }, loading: false } : prev
       );
     }
   }, [countryCounts]);
@@ -90,9 +120,10 @@ export default function WorldMap({ countryCounts }: Props) {
             <Geographies geography={GEO_URL}>
               {({ geographies }) =>
                 geographies.map((geo) => {
-                  const name  = geo.properties.name as string;
-                  const count = countryCounts[name] ?? 0;
-                  const fill  = colorForCount(count, maxCount);
+                  const geoName   = geo.properties.name as string;
+                  const canonical = GEO_TO_CANONICAL[geoName] ?? geoName;
+                  const count     = countryCounts[canonical] ?? 0;
+                  const fill      = colorForCount(count, maxCount);
                   const clickable = count > 0;
                   return (
                     <Geography
@@ -106,10 +137,10 @@ export default function WorldMap({ countryCounts }: Props) {
                         hover:   { outline: "none", fill: clickable ? "rgba(242,101,25,0.85)" : "rgba(255,255,255,0.08)" },
                         pressed: { outline: "none" },
                       }}
-                      onMouseEnter={(e) => handleEnter(name, e as unknown as React.MouseEvent)}
+                      onMouseEnter={(e) => handleEnter(canonical, e as unknown as React.MouseEvent)}
                       onMouseMove={(e)  => handleMove(e  as unknown as React.MouseEvent)}
                       onMouseLeave={handleLeave}
-                      onClick={() => clickable && handleClick(name)}
+                      onClick={() => clickable && handleClick(canonical)}
                     />
                   );
                 })
@@ -186,29 +217,7 @@ export default function WorldMap({ countryCounts }: Props) {
 
             {!panel.loading && panel.data && (
               <>
-                {/* Top feeling words from fan submissions */}
-                {panel.data.topWords.length > 0 && (
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
-                      How fans here feel
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {panel.data.topWords.map(({ word, count }) => (
-                        <span
-                          key={word}
-                          className="px-2.5 py-1 bg-[var(--bg)] rounded-full border border-[var(--border)] text-xs font-medium"
-                        >
-                          {word}
-                          {count > 1 && (
-                            <span className="ml-1 text-[var(--orange)] font-semibold">×{count}</span>
-                          )}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Fan submitter names */}
+                {/* Fan submitter names + their full feeling phrase */}
                 {panel.data.fans.length > 0 && (
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
@@ -220,7 +229,7 @@ export default function WorldMap({ countryCounts }: Props) {
                           key={i}
                           className="flex items-center justify-between px-3 py-2 bg-[var(--bg)] rounded-lg border border-[var(--border)] text-sm"
                         >
-                          <span className="font-medium">{f.name}</span>
+                          <span className="font-medium flex-shrink-0">{f.name}</span>
                           <span className="text-xs text-[var(--text-muted)] italic truncate max-w-[160px] ml-2">
                             {f.feeling}
                           </span>
@@ -230,7 +239,29 @@ export default function WorldMap({ countryCounts }: Props) {
                   </div>
                 )}
 
-                {panel.data.topWords.length === 0 && panel.data.fans.length === 0 && (
+                {/* Most-submitted full feeling phrases */}
+                {panel.data.topFeelings.length > 0 && (
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                      Most common feelings here
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {panel.data.topFeelings.map(({ feeling, count }) => (
+                        <span
+                          key={feeling}
+                          className="px-2.5 py-1 bg-[var(--bg)] rounded-full border border-[var(--border)] text-xs font-medium"
+                        >
+                          {feeling}
+                          {count > 1 && (
+                            <span className="ml-1 text-[var(--orange)] font-semibold">×{count}</span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {panel.data.topFeelings.length === 0 && panel.data.fans.length === 0 && (
                   <p className="text-sm text-[var(--text-muted)]">No submissions yet from this country.</p>
                 )}
               </>
