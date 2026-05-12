@@ -237,12 +237,10 @@ export default function WorldMap({ countryCounts }: Props) {
                       ).map((f, i) => (
                         <div
                           key={i}
-                          className="px-3 py-2.5 bg-[var(--bg)] rounded-lg border border-[var(--border)]"
+                          className="flex items-baseline justify-between gap-3 px-3 py-2 bg-[var(--bg)] rounded-lg border border-[var(--border)] text-sm"
                         >
-                          <p className="text-sm font-medium leading-snug">{f.name}</p>
-                          <p className="text-xs text-[var(--text-muted)] italic mt-0.5 leading-snug break-words">
-                            {f.feeling}
-                          </p>
+                          <span className="font-medium whitespace-nowrap flex-shrink-0">{f.name}</span>
+                          <span className="text-xs text-[var(--text-muted)] italic min-w-0 text-right break-words">{f.feeling}</span>
                         </div>
                       ))}
                     </div>

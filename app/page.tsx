@@ -188,6 +188,34 @@ function MatchSkeleton() {
   );
 }
 
+/* ── Rotating placeholder copy ──────────────────────────────────────────────── */
+const FEELING_EXAMPLES = [
+  "delightfully confused",
+  "honored and nervous",
+  "genuinely baffled",
+  "cautiously optimistic",
+  "overwhelmingly ginger",
+  "weirdly emotional",
+  "aggressively grateful",
+  "professionally bewildered",
+  "softly chaotic",
+  "inexplicably proud",
+  "surprisingly touched",
+  "deeply unqualified",
+];
+
+const NAME_EXAMPLES = [
+  "Jordan", "Sam", "Alex", "Taylor", "Morgan", "Casey", "Drew",
+  "Jamie", "Quinn", "Reese", "Avery", "Blake", "Charlie", "Dallas",
+  "Emerson", "Finley", "Hayden", "Jesse", "Kendall", "Lane",
+  "Micah", "Noel", "Parker", "Rowan", "Sage", "Sawyer", "Wren",
+  "Conan", "Andy", "Sona",
+];
+
+function pick<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
 /* ── Main page ──────────────────────────────────────────────────────────────── */
 export default function IFeelPage() {
   // Persisted state — survives guest profile nav + back button
@@ -197,6 +225,10 @@ export default function IFeelPage() {
     pngUrl: savedPngUrl, setPngUrl,
     selectedVariant, setSelectedVariant,
   } = useSessionState();
+
+  // Picked once on first client render — different for every visitor
+  const [namePlaceholder]    = useState(() => `e.g. ${pick(NAME_EXAMPLES)}`);
+  const [feelingPlaceholder] = useState(() => `e.g. ${pick(FEELING_EXAMPLES)}`);
 
   const [error,   setError]   = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -326,7 +358,7 @@ export default function IFeelPage() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="e.g. Jordan"
+              placeholder={namePlaceholder}
               maxLength={60}
               whileFocus={{ scale: 1.008 }}
               transition={{ duration: 0.15 }}
@@ -354,7 +386,7 @@ export default function IFeelPage() {
               type="text"
               value={feeling}
               onChange={(e) => setFeeling(e.target.value)}
-              placeholder="e.g. delightfully confused"
+              placeholder={feelingPlaceholder}
               maxLength={80}
               whileFocus={{ scale: 1.008 }}
               transition={{ duration: 0.15 }}
