@@ -1,0 +1,23 @@
+{
+  "Martin Short Live From SiriusXM NY": {
+    "normalizeAs": "Martin Short"
+  },
+  "Tom Holland and Dominic Sandbrook of The Rest Is History Podcast": {
+    "split": [
+      { "name": "Tom Holland", "coldOpenWord": "surprisingly aroused", "coldOpenSentiment": "neutral" },
+      { "name": "Dominic Sandbrook", "coldOpenWord": "chuffed", "coldOpenSentiment": "neutral" }
+    ]
+  },
+  "Christina Applegate and Jamie-Lynn Sigler": {
+    "split": [
+      { "name": "Christina Applegate" },
+      { "name": "Jamie-Lynn Sigler" }
+    ]
+  },
+  "Steve Martin and Martin Short": {
+    "split": [
+      { "name": "Steve Martin" },
+      { "name": "Martin Short" }
+    ]
+  }
+}

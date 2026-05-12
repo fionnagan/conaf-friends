@@ -1,6 +1,21 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { slugify, normalizeGuestName } from './utils';
+
+// ── Guest splits / normalizations (committed config) ──────────────────────────
+interface GuestSplitEntry {
+  normalizeAs?: string;
+  split?: Array<{ name: string; coldOpenWord?: string; coldOpenSentiment?: string }>;
+}
+
+function loadGuestSplits(): Record<string, GuestSplitEntry> {
+  try {
+    const p = path.join(__dirname, 'guest-splits.json');
+    return JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch {
+    return {};
+  }
+}
 import { computeScore } from './compute-scores';
 import type {
   Guest,
@@ -107,41 +122,85 @@ export function merge(
     allGuestNames.add(normalizeGuestName(ln.guestName));
   }
 
+  const guestSplits = loadGuestSplits();
+
   // Process podcast episodes
   for (const ep of podcastEpisodes) {
     if (!ep.guestName || ep.isFanSegment || ep.isStaffEpisode) continue;
 
-    const name = normalizeGuestName(ep.guestName);
-    const guest = getGuest(name);
-
+    const splitConfig = guestSplits[ep.guestName];
     const cacheKey = `${ep.guestName}::${ep.pubDate}`;
-    const ytMatch = youtubeCache[cacheKey];
-
-    const appearance: Appearance = {
-      era: 'podcast',
-      date: ep.pubDate
-        ? new Date(ep.pubDate).toISOString().substring(0, 10)
-        : '2018-01-01',
+    const epDate = ep.pubDate
+      ? new Date(ep.pubDate).toISOString().substring(0, 10)
+      : '2018-01-01';
+    const baseAppearance = {
+      era: 'podcast' as const,
+      date: epDate,
       episodeTitle: ep.title,
       episodeUrl: ep.link,
       audioUrl: ep.enclosure?.url,
-      youtubeVideoId: ytMatch?.videoId ?? null,
       promoVisit: isPromoVisit(ep.description),
-      coldOpenWord: ep.coldOpenWord,
-      coldOpenSentiment: ep.coldOpenSentiment,
       artworkUrl: ep.itunes?.image,
     };
 
-    guest.appearances.push(appearance);
+    if (splitConfig?.normalizeAs) {
+      // Normalize episode to a canonical guest name (e.g. "Martin Short Live From SiriusXM NY" → "Martin Short")
+      const name = normalizeGuestName(splitConfig.normalizeAs);
+      const guest = getGuest(name);
+      const ytKey = `${splitConfig.normalizeAs}::${ep.pubDate}`;
+      const ytMatch = youtubeCache[ytKey] || youtubeCache[cacheKey];
+      const appearance: Appearance = {
+        ...baseAppearance,
+        youtubeVideoId: ytMatch?.videoId ?? null,
+        coldOpenWord: ep.coldOpenWord,
+        coldOpenSentiment: ep.coldOpenSentiment,
+      };
+      guest.appearances.push(appearance);
+    } else if (splitConfig?.split) {
+      // Multi-guest episode: create independent appearance for each guest
+      for (const splitGuest of splitConfig.split) {
+        const name = normalizeGuestName(splitGuest.name);
+        const guest = getGuest(name);
+        const ytKey = `${splitGuest.name}::${ep.pubDate}`;
+        const ytMatch = youtubeCache[ytKey] || youtubeCache[cacheKey];
+        const appearance: Appearance = {
+          ...baseAppearance,
+          youtubeVideoId: ytMatch?.videoId ?? null,
+          coldOpenWord: splitGuest.coldOpenWord ?? ep.coldOpenWord,
+          coldOpenSentiment: (splitGuest.coldOpenSentiment as Appearance['coldOpenSentiment']) ?? ep.coldOpenSentiment,
+        };
+        guest.appearances.push(appearance);
 
-    // Detect mentions of other guests in this episode
-    const mentioned = detectMentionedGuests(ep.description, allGuestNames).filter(
-      (n) => n !== name
-    );
-    if (mentioned.length > 0) {
-      guest.mentionedGuests = [
-        ...new Set([...(guest.mentionedGuests || []), ...mentioned]),
-      ];
+        const mentioned = detectMentionedGuests(ep.description, allGuestNames).filter(
+          (n) => n !== name
+        );
+        if (mentioned.length > 0) {
+          guest.mentionedGuests = [
+            ...new Set([...(guest.mentionedGuests || []), ...mentioned]),
+          ];
+        }
+      }
+    } else {
+      // Normal single-guest episode
+      const name = normalizeGuestName(ep.guestName);
+      const guest = getGuest(name);
+      const ytMatch = youtubeCache[cacheKey];
+      const appearance: Appearance = {
+        ...baseAppearance,
+        youtubeVideoId: ytMatch?.videoId ?? null,
+        coldOpenWord: ep.coldOpenWord,
+        coldOpenSentiment: ep.coldOpenSentiment,
+      };
+      guest.appearances.push(appearance);
+
+      const mentioned = detectMentionedGuests(ep.description, allGuestNames).filter(
+        (n) => n !== name
+      );
+      if (mentioned.length > 0) {
+        guest.mentionedGuests = [
+          ...new Set([...(guest.mentionedGuests || []), ...mentioned]),
+        ];
+      }
     }
   }
 

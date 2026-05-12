@@ -1,4 +1,6 @@
 import axios from 'axios';
+import * as fs from 'fs';
+import * as path from 'path';
 import { readCache, writeCache, sleep } from './utils';
 import type { RawPodcastEpisode, YouTubeCache } from '../../lib/types';
 
@@ -8,6 +10,24 @@ const CACHE_FILE = 'youtube-matches.json';
 const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 const MAX_SEARCHES_PER_RUN = 95;
 const MIN_CONFIDENCE = 0.8;
+
+// Clip/short title markers — reject these before scoring
+const CLIP_MARKERS = ['clip', 'highlight', '#shorts', 'shorts', 'snippet', 'moment'];
+
+function isClip(videoTitle: string): boolean {
+  const t = videoTitle.toLowerCase();
+  return CLIP_MARKERS.some((m) => t.includes(m));
+}
+
+// Load committed manual overrides (persists across CI runs)
+function loadManualOverrides(): Record<string, string> {
+  try {
+    const p = path.join(__dirname, 'youtube-manual-overrides.json');
+    return JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch {
+    return {};
+  }
+}
 
 // ISO 8601 duration (PT1H23M45S) → seconds
 function parseDuration(iso: string): number {
@@ -59,6 +79,9 @@ function scoreCandidate(
   videoPublishedAt: string,
   episodePubDate: string
 ): number {
+  // Immediately reject clips/shorts
+  if (isClip(videoTitle)) return -1;
+
   let score = 0;
 
   // +0.35 official channel
@@ -69,12 +92,17 @@ function scoreCandidate(
   const nameParts = guestName.toLowerCase().split(/\s+/);
   if (nameParts.every((p) => titleLower.includes(p))) score += 0.25;
 
-  // +0.15 episode title fuzzy match
-  const sim = titleSimilarity(episodeTitle, videoTitle);
-  score += sim * 0.15;
+  // +0.30 (Full Episode) tag — strongest single signal for full uploads
+  if (titleLower.includes('(full episode)') || titleLower.includes('full episode')) score += 0.30;
 
-  // +0.05 full episode (> 10 minutes)
-  if (durationSecs > 600) score += 0.05;
+  // +0.10 episode title fuzzy match (reduced to make room for full-episode signal)
+  const sim = titleSimilarity(episodeTitle, videoTitle);
+  score += sim * 0.10;
+
+  // +0.05 full episode by duration (> 20 minutes)
+  if (durationSecs > 1200) score += 0.05;
+  // −0.05 very short video (< 5 minutes) — likely a clip even without marker
+  else if (durationSecs > 0 && durationSecs < 300) score -= 0.05;
 
   // ±0.30 date proximity — most important for repeat guests
   score += dateProximityScore(videoPublishedAt, episodePubDate);
@@ -117,6 +145,20 @@ export async function matchYouTubeVideos(
   let newMatches = 0;
   const now = Date.now();
 
+  // Seed cache with manually verified overrides (committed file)
+  const manualOverrides = loadManualOverrides();
+  for (const [key, videoId] of Object.entries(manualOverrides)) {
+    const entry: any = {
+      videoId,
+      fetchedAt: new Date().toISOString(),
+      score: 1.0,
+      confidence: 1.0,
+      channelTitle: 'team coco',
+      manualOverride: true,
+    };
+    cache[key] = entry;
+  }
+
   const guestEpisodes = episodes.filter(
     (e) => e.guestName && !e.isFanSegment && !e.isStaffEpisode
   );
@@ -143,7 +185,8 @@ export async function matchYouTubeVideos(
       break;
     }
 
-    const query = `${PODCAST_NAME} ${episode.guestName} ${episode.title}`;
+    const episodeYear = episode.pubDate ? new Date(episode.pubDate).getFullYear() : '';
+    const query = `${PODCAST_NAME} ${episode.guestName} Full Episode ${episodeYear}`.trim();
 
     try {
       const res = await axios.get(
