@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description:
     "A fan-made archive mapping Conan O'Brien's friendships across every era of his career. Unofficial fan project.",
   icons: {
-    icon: "/conan_hi.png",
-    apple: "/conan_hi.png",
+    icon: "/conan_hi_white.png",
+    apple: "/conan_hi_white.png",
   },
   openGraph: {
     title: "The Friend Registry",

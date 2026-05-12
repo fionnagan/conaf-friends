@@ -408,7 +408,7 @@ export default function IFeelPage() {
 
                   {/* Variant thumbnail grid */}
                   <div className="grid grid-cols-4 gap-2 mb-4">
-                    {[4, 3, 2, 1].map((v) => {
+                    {[1, 2, 3, 4].map((v) => {
                       const vUrl = `${pngUrl}&variant=${v}`;
                       const active = selectedVariant === v;
                       return (
