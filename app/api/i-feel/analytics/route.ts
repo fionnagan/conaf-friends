@@ -164,8 +164,10 @@ export async function GET() {
   ]);
 
   const totalSubmissions = Object.values(countryStats).reduce((s, c) => s + c, 0);
+  const countryCount     = Object.values(countryStats).filter((c) => c > 0).length;
   const topCountryEntry  = Object.entries(countryStats).sort((a, b) => b[1] - a[1])[0];
   const topCountry       = topCountryEntry ? { country: topCountryEntry[0], count: topCountryEntry[1] } : null;
+  const topFeeling       = constellationWords[0] ?? null;
 
   return NextResponse.json({
     topWords: topWordsData,
@@ -174,7 +176,9 @@ export async function GET() {
     mostMatchedGuest,
     countryRankings,
     totalSubmissions,
+    countryCount,
     topCountry,
+    topFeeling,
     countryCounts: countryStats,
     constellationWords,
   });

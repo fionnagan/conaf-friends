@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect, useId } from "react";
+import confetti from "canvas-confetti";
 import Image from "next/image";
 import { motion, AnimatePresence, useMotionValue, useTransform, useReducedMotion } from "framer-motion";
 import CountryCombobox from "@/components/i-feel/CountryCombobox";
@@ -240,8 +241,12 @@ export default function IFeelPage() {
     topWords: TopWord[];
     constellationWords: { word: string; count: number; fans: { name: string; country: string }[] }[];
     totalSubmissions: number;
+    countryCount: number;
     topCountry: { country: string; count: number } | null;
+    topFeeling: { word: string; count: number } | null;
   } | null>(null);
+  const [showChyron, setShowChyron] = useState(false);
+  const chyronTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const resultsRef = useRef<HTMLDivElement>(null);
   const sessionId  = useId();
@@ -261,7 +266,9 @@ export default function IFeelPage() {
           topWords: d.topWords ?? [],
           constellationWords: d.constellationWords ?? [],
           totalSubmissions: d.totalSubmissions ?? 0,
+          countryCount: d.countryCount ?? 0,
           topCountry: d.topCountry ?? null,
+          topFeeling: d.topFeeling ?? null,
         }))
       .catch(() => {});
   }, []);
@@ -302,6 +309,20 @@ export default function IFeelPage() {
       const params = new URLSearchParams({ name: name.trim(), country, feeling: feeling.trim(), g: guestIds });
       setPngUrl(`/api/i-feel/png?${params}`);
       setSelectedVariant(1);
+
+      // 🎉 Celebration: chyron + confetti
+      setShowChyron(true);
+      if (chyronTimerRef.current) clearTimeout(chyronTimerRef.current);
+      chyronTimerRef.current = setTimeout(() => setShowChyron(false), 4000);
+
+      // Burst of orange + white confetti from top-center
+      const fire = (particleRatio: number, opts: confetti.Options) =>
+        confetti({ origin: { y: 0.4 }, colors: ["#F26519", "#ffffff", "#ffa559", "#ffcba4"], ...opts, particleCount: Math.floor(200 * particleRatio) });
+      fire(0.25, { spread: 26, startVelocity: 55 });
+      fire(0.2,  { spread: 60 });
+      fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+      fire(0.1,  { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+      fire(0.1,  { spread: 120, startVelocity: 45 });
 
       setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
     } catch {
@@ -528,22 +549,51 @@ export default function IFeelPage() {
 
           {/* Stats bar */}
           {analyticsData && analyticsData.totalSubmissions > 0 && (
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-5 text-sm">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-5 text-sm">
+              {/* Total feelings */}
               <div className="flex items-baseline gap-1.5">
                 <span className="text-2xl font-serif font-semibold text-[var(--orange)]">
                   {analyticsData.totalSubmissions.toLocaleString()}
                 </span>
                 <span className="text-[var(--text-muted)]">feelings shared</span>
               </div>
+
+              <span className="text-[var(--border)] hidden sm:inline">·</span>
+
+              {/* Country count */}
+              {analyticsData.countryCount > 0 && (
+                <div className="flex items-baseline gap-1.5">
+                  <span className="text-2xl font-serif font-semibold text-[var(--orange)]">
+                    {analyticsData.countryCount}
+                  </span>
+                  <span className="text-[var(--text-muted)]">countries</span>
+                </div>
+              )}
+
+              <span className="text-[var(--border)] hidden sm:inline">·</span>
+
+              {/* Top country */}
               {analyticsData.topCountry && (
                 <div className="flex items-center gap-1.5 text-[var(--text-muted)]">
                   <span className="text-base leading-none">{countryFlag(analyticsData.topCountry.country)}</span>
                   <span>
                     <span className="font-medium text-[var(--text)]">{analyticsData.topCountry.country}</span>
                     {" "}leads with{" "}
-                    <span className="font-medium text-[var(--text)]">{analyticsData.topCountry.count}</span>
+                    <span className="font-medium text-[var(--orange)]">{analyticsData.topCountry.count}</span>
                   </span>
                 </div>
+              )}
+
+              {/* Most popular feeling */}
+              {analyticsData.topFeeling && (
+                <>
+                  <span className="text-[var(--border)] hidden sm:inline">·</span>
+                  <div className="flex items-center gap-1.5 text-[var(--text-muted)]">
+                    <span>most shared:</span>
+                    <span className="font-medium text-[var(--text)] italic">&ldquo;{analyticsData.topFeeling.word}&rdquo;</span>
+                    <span className="text-[var(--orange)] font-semibold">×{analyticsData.topFeeling.count}</span>
+                  </div>
+                </>
               )}
             </div>
           )}
@@ -596,8 +646,103 @@ export default function IFeelPage() {
           </AnimatePresence>
         </section>
 
+        {/* ── CONAF Map plug ── */}
+        <section>
+          <a
+            href="https://conafmap.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+            aria-label="Visit CONAF Map — Map of all fan callers"
+          >
+            <div
+              className="relative overflow-hidden rounded-2xl border border-white/10 transition-all duration-300 group-hover:border-[var(--orange)]/40 group-hover:shadow-xl group-hover:shadow-[var(--orange)]/10"
+              style={{
+                background: "linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(242,101,25,0.06) 100%)",
+                backdropFilter: "blur(24px)",
+                WebkitBackdropFilter: "blur(24px)",
+              }}
+            >
+              {/* Subtle glass sheen */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(242,101,25,0.04) 100%)",
+                }}
+              />
+
+              <div className="relative flex items-center gap-4 p-5">
+                {/* Favicon / icon */}
+                <div
+                  className="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden border border-white/10 flex items-center justify-center"
+                  style={{ background: "rgba(255,255,255,0.06)" }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://conafmap.vercel.app/favicon.ico"
+                    alt="CONAF Map icon"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                </div>
+
+                {/* Text */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <p className="font-semibold text-base text-[var(--text)]">CONAF Map</p>
+                    <span className="text-[10px] uppercase tracking-widest font-semibold px-1.5 py-0.5 rounded bg-[var(--orange)]/15 text-[var(--orange)] border border-[var(--orange)]/20">
+                      Fan Project
+                    </span>
+                  </div>
+                  <p className="text-sm text-[var(--text-muted)] leading-snug">
+                    Every fan caller, mapped. Explore all the fans who&apos;ve connected with Conan from around the world.
+                  </p>
+                </div>
+
+                {/* Arrow */}
+                <div className="flex-shrink-0 text-[var(--text-muted)] group-hover:text-[var(--orange)] group-hover:translate-x-1 transition-all duration-200">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
 
       </main>
+
+      {/* ── Chyron celebration ── */}
+      <AnimatePresence>
+        {showChyron && (
+          <motion.div
+            key="chyron"
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "100%", opacity: 0 }}
+            transition={{ type: "spring", stiffness: 320, damping: 32 }}
+            className="fixed bottom-0 left-0 right-0 z-50 pointer-events-none"
+          >
+            <div className="bg-[#F26519] text-white px-6 py-4 flex items-center gap-4 shadow-2xl">
+              {/* Left accent bar */}
+              <div className="w-1.5 h-10 bg-white/40 rounded-full flex-shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70 leading-none mb-1">
+                  Breaking News · The Friend Registry
+                </p>
+                <p className="text-base sm:text-lg font-bold uppercase tracking-wide leading-tight truncate">
+                  {name.trim() || "YOU"}{country ? ` from ${country}` : ""} IS NOW A CERTIFIED FRIEND
+                </p>
+              </div>
+              <span className="text-3xl flex-shrink-0">🧡</span>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

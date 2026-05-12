@@ -27,11 +27,13 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.1",
     "@supabase/supabase-js": "^2.105.3",
+    "@types/canvas-confetti": "^1.9.0",
     "@types/d3": "^7.4.3",
     "@vercel/analytics": "^2.0.1",
     "@vercel/blob": "^2.3.3",
     "ai": "^6.0.180",
     "axios": "^1.15.2",
+    "canvas-confetti": "^1.9.4",
     "cheerio": "^1.2.0",
     "d3": "^7.9.0",
     "framer-motion": "^12.38.0",
