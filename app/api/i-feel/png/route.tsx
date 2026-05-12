@@ -587,7 +587,7 @@ export async function GET(req: NextRequest) {
         )}
 
         {/* ── Identity block: MY NAME IS → CONAN O'BRIEN'S FRIEND + country row ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", ...(variant === 2 && { marginTop: "-40px" }) }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", ...(variant === 2 && { marginTop: "-90px" }) }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
           {/* borderBottom rule — full 880px width for V2 so underline spans margin-to-margin */}
           <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}`, ...(variant === 2 && { width: `${USABLE_W}px` }) }}>{name}</span>
@@ -595,20 +595,15 @@ export async function GET(req: NextRequest) {
           {/* 40px gap: name rule → label row → AND I FEEL */}
           <div style={{ height: "40px", display: "flex" }} />
 
-          {/* V2: "I'M FROM [COUNTRY] [FLAG] AND I FEEL" — one line, same label style, dynamically sized
+          {/* V2: "I'M FROM [FLAG] AND I FEEL" — flag only (no country name), all at LABEL_SZ = 62px
               V3/V4: plain "AND I FEEL" label */}
-          {variant === 2 ? (() => {
-            const txt = `IM FROM ${country} AND I FEEL`;
-            const sz  = Math.min(LABEL_SZ, Math.floor(USABLE_W / (Math.max(txt.length + 2, 1) * BARLOW_CW)));
-            return (
-              <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-                <span style={barlow(sz)}>I&apos;M FROM</span>
-                <span style={barlow(sz)}>{country.toUpperCase()}</span>
-                <span style={{ fontSize: `${sz + 6}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
-                <span style={barlow(sz)}>AND I FEEL</span>
-              </div>
-            );
-          })() : (
+          {variant === 2 ? (
+            <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+              <span style={barlow(LABEL_SZ)}>I&apos;M FROM</span>
+              <span style={{ fontSize: `${LABEL_SZ + 6}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
+              <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
+            </div>
+          ) : (
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
           )}
           {/* borderBottom rule — full 880px width for V2 */}
