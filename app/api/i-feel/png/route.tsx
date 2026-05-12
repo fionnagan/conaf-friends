@@ -279,9 +279,10 @@ export async function GET(req: NextRequest) {
         const fullName    = cleanGuestName(g.guest_name).toUpperCase();
         const [nameLine1, nameLine2] = splitGuestName(fullName);
         const longestLine = nameLine1.length >= (nameLine2?.length ?? 0) ? nameLine1 : nameLine2;
-        const feelPhrase  = trimToWords(g.feeling_phrase_normalized, 5);
+        const feelPhrase  = trimToWords(g.feeling_phrase_normalized, 8);
         const gnameSz     = scaledBarlowSize(longestLine,    GNAME_MAX,  GNAME_MIN, GUEST_TW - 12);
-        const gquoteSz    = scaledBarlowSize(feelPhrase,     GQUOTE_MAX, GQUOTE_MIN);
+        // Size for wrapping text: fit across 2 lines (GUEST_TW × 2), cap 18px, min 12px
+        const gquoteSz    = scaledBarlowSize(feelPhrase, 18, 12, GUEST_TW * 2);
         return (
           <div key={g.guest_id} style={{
             display: "flex", flex: 1, alignItems: "flex-start", gap: "12px",
@@ -300,7 +301,7 @@ export async function GET(req: NextRequest) {
                 <span style={{ fontFamily: "Gotham", fontSize: `${Math.round(PHOTO_PX * 0.28)}px`, fontWeight: 800, color: ORANGE, display: "flex" }}>{initials(cleanGuestName(g.guest_name))}</span>
               )}
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px", maxWidth: `${GUEST_TW}px` }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
                 <span style={{ fontFamily: "Gotham", fontSize: `${gnameSz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
                   {nameLine1}
@@ -311,7 +312,8 @@ export async function GET(req: NextRequest) {
                   </span>
                 )}
               </div>
-              <span style={{ fontFamily: "Gotham", fontSize: `${gquoteSz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.3 }}>
+              {/* No display:flex on feeling span — allows text to wrap within maxWidth column */}
+              <span style={{ fontFamily: "Gotham", fontSize: `${gquoteSz}px`, color: MUTED, fontStyle: "italic", lineHeight: 1.3 }}>
                 &quot;{feelPhrase}&quot;
               </span>
             </div>
@@ -359,9 +361,10 @@ export async function GET(req: NextRequest) {
           const fullName  = cleanGuestName(g.guest_name).toUpperCase();
           const [nl1, nl2] = splitGuestName(fullName);
           const longest   = nl1.length >= (nl2?.length ?? 0) ? nl1 : nl2;
-          const feelPhrase = trimToWords(g.feeling_phrase_normalized, 5);
-          const gnsz      = scaledBarlowSize(longest,       V1_GNAME_MAX, GNAME_MIN, V1_NAME_TW);
-          const gqsz      = scaledBarlowSize(feelPhrase,    GQUOTE_MAX, GQUOTE_MIN, V1_GUEST_TW);
+          const feelPhrase = trimToWords(g.feeling_phrase_normalized, 8);
+          const gnsz      = scaledBarlowSize(longest,    V1_GNAME_MAX, GNAME_MIN, V1_NAME_TW);
+          // Size for wrapping text: fit across 2 lines (V1_GUEST_TW × 2), cap 18px, min 12px
+          const gqsz      = scaledBarlowSize(feelPhrase, 18, 12, V1_GUEST_TW * 2);
           return (
             <div key={g.guest_id} style={{
               display: "flex", flex: 1, alignItems: "flex-start", gap: "12px",
@@ -393,7 +396,8 @@ export async function GET(req: NextRequest) {
                     </span>
                   )}
                 </div>
-                <span style={{ fontFamily: "Gotham", fontSize: `${gqsz}px`, color: MUTED, fontStyle: "italic", display: "flex", lineHeight: 1.3 }}>
+                {/* No display:flex — allows text to wrap within maxWidth column */}
+                <span style={{ fontFamily: "Gotham", fontSize: `${gqsz}px`, color: MUTED, fontStyle: "italic", lineHeight: 1.3 }}>
                   &quot;{feelPhrase}&quot;
                 </span>
               </div>
@@ -537,24 +541,30 @@ export async function GET(req: NextRequest) {
         {/* ── Identity block: MY NAME IS → CONAN O'BRIEN'S FRIEND + country row ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center" }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
-          {/* borderBottom rule — span's own border always paints behind its text */}
-          <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}` }}>{name}</span>
+          {/* borderBottom rule — full 880px width for V2 so underline spans margin-to-margin */}
+          <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}`, ...(variant === 2 && { width: `${USABLE_W}px` }) }}>{name}</span>
 
-          {/* 40px gap: name rule → [I'M FROM row for V2] → AND I FEEL */}
+          {/* 40px gap: name rule → label row → AND I FEEL */}
           <div style={{ height: "40px", display: "flex" }} />
 
-          {/* V2 only: I'M FROM [country] [flag] inline above AND I FEEL */}
-          {variant === 2 && (
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
-              <span style={barlow(30, MUTED, { letterSpacing: "1.5px" })}>I&apos;M FROM</span>
-              <span style={barlow(30, MUTED, { letterSpacing: "1.5px" })}>{country.toUpperCase()}</span>
-              <span style={{ fontSize: "36px", display: "flex", lineHeight: 1 }}>{flag}</span>
-            </div>
+          {/* V2: "I'M FROM [COUNTRY] [FLAG] AND I FEEL" — one line, same label style, dynamically sized
+              V3/V4: plain "AND I FEEL" label */}
+          {variant === 2 ? (() => {
+            const txt = `IM FROM ${country} AND I FEEL`;
+            const sz  = Math.min(LABEL_SZ, Math.floor(USABLE_W / (Math.max(txt.length + 2, 1) * BARLOW_CW)));
+            return (
+              <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+                <span style={barlow(sz)}>I&apos;M FROM</span>
+                <span style={barlow(sz)}>{country.toUpperCase()}</span>
+                <span style={{ fontSize: `${sz + 6}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
+                <span style={barlow(sz)}>AND I FEEL</span>
+              </div>
+            );
+          })() : (
+            <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
           )}
-
-          <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
-          {/* borderBottom rule */}
-          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", ...(variant !== 2 && { textAlign: "center", justifyContent: "center" }), borderBottom: `1px solid ${DIVIDER}` }}>
+          {/* borderBottom rule — full 880px width for V2 */}
+          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", ...(variant !== 2 && { textAlign: "center", justifyContent: "center" }), borderBottom: `1px solid ${DIVIDER}`, ...(variant === 2 && { width: `${USABLE_W}px` }) }}>
             {feeling}
           </span>
 
@@ -579,7 +589,8 @@ export async function GET(req: NextRequest) {
         {/* ── Guest section — V2: left-aligned, pulled 20px closer to identity block ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", gap: "10px", marginTop: variant === 2 ? "-20px" : "0px" }}>
           {dotsRow}
-          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
+          {/* V2: extra 12px gap after dots + MUTED subtitle; V3/V4: ORANGE subtitle */}
+          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: variant === 2 ? MUTED : ORANGE, letterSpacing: "2px", display: "flex", ...(variant === 2 && { marginTop: "12px" }) }}>
             {subtitle}
           </span>
           {guestCardsEl}
