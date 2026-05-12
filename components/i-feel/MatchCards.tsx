@@ -98,7 +98,7 @@ export default function MatchCards({ matches, feeling }: Props) {
                 {m.guest_name}
               </p>
               <p className="text-xs text-[var(--text-muted)] mt-0.5 leading-relaxed">
-                Conan said they felt{" "}
+                They felt{" "}
                 <span className="text-[var(--text)] italic font-medium">
                   &quot;{m.cold_open_text}&quot;
                 </span>

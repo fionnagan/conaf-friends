@@ -12,7 +12,8 @@ const { records } = coldOpensData as {
   records: { guest_id: string; guest_name: string; profile_url: string; cold_open_text: string }[];
 };
 
-const STOP = new Set(["a","an","the","and","or","but","so","yet","for","nor","as","at","by","if","in","of","on","to","up","via","its","it","is","be","am","are","was","were","has","had","have","do","did","not","no","my","i","me"]);
+// Filler/stop words stripped before counting — multi-word phrases kept as a unit
+const STOP = new Set(["a","an","the","and","or","but","so","yet","for","nor","as","at","by","if","in","of","on","to","up","via","its","it","is","be","am","are","was","were","has","had","have","do","did","not","no","my","i","me","like","feel","feeling","felt","really","very","just","quite","pretty","kinda","kind","sorta","super","totally","honestly","actually","literally","bit","little","lot","lots","about","being","getting","having"]);
 
 async function getFastestRising(): Promise<{ feeling: string; count: number; prevCount: number }[]> {
   const client = getServerClient();
@@ -30,9 +31,8 @@ async function getFastestRising(): Promise<{ feeling: string; count: number; pre
   const count = (rows: { feeling_normalized: string }[] | null) => {
     const c: Record<string, number> = {};
     for (const r of rows ?? []) {
-      for (const w of r.feeling_normalized.split(/\s+/)) {
-        if (w && !STOP.has(w)) c[w] = (c[w] ?? 0) + 1;
-      }
+      const filtered = r.feeling_normalized.trim().split(/\s+/).filter((w: string) => w && !STOP.has(w)).join(" ");
+      if (filtered) c[filtered] = (c[filtered] ?? 0) + 1;
     }
     return c;
   };
@@ -98,11 +98,8 @@ async function getCountryRankings(): Promise<{ country: string; count: number; t
   for (const { country, feeling_normalized } of data) {
     if (!byCountry[country]) byCountry[country] = { count: 0, words: {} };
     byCountry[country].count++;
-    for (const w of feeling_normalized.split(/\s+/)) {
-      if (w && !STOP.has(w)) {
-        byCountry[country].words[w] = (byCountry[country].words[w] ?? 0) + 1;
-      }
-    }
+    const filtered = feeling_normalized.trim().split(/\s+/).filter((w: string) => w && !STOP.has(w)).join(" ");
+    if (filtered) byCountry[country].words[filtered] = (byCountry[country].words[filtered] ?? 0) + 1;
   }
 
   return Object.entries(byCountry)

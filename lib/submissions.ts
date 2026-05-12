@@ -95,12 +95,13 @@ export async function getTrendingFeelings(topN = 10): Promise<{ feeling: string;
 
   if (error || !data) return [];
 
-  const STOP = new Set(["a","an","the","and","or","but","so","yet","for","nor","as","at","by","if","in","of","on","to","up","via","its","it","is","be","am","are","was","were","has","had","have","do","did","not","no","my","i","me"]);
+  // Filler/stop words stripped before counting — multi-word phrases kept as a unit
+  const STOP = new Set(["a","an","the","and","or","but","so","yet","for","nor","as","at","by","if","in","of","on","to","up","via","its","it","is","be","am","are","was","were","has","had","have","do","did","not","no","my","i","me","like","feel","feeling","felt","really","very","just","quite","pretty","kinda","kind","sorta","super","totally","honestly","actually","literally","bit","little","lot","lots","about","being","getting","having"]);
   const counts: Record<string, number> = {};
   for (const { feeling_normalized } of data) {
-    for (const word of feeling_normalized.split(/\s+/)) {
-      if (word && !STOP.has(word)) counts[word] = (counts[word] ?? 0) + 1;
-    }
+    // Keep multi-word entries as a unit (e.g. "cautiously optimistic" stays together)
+    const filtered = feeling_normalized.trim().split(/\s+/).filter((w: string) => w && !STOP.has(w)).join(" ");
+    if (filtered) counts[filtered] = (counts[filtered] ?? 0) + 1;
   }
 
   return Object.entries(counts)
