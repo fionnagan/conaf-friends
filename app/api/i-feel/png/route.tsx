@@ -56,12 +56,61 @@ function cosineSimilarity(a: number[], b: number[]): number {
   for (let i = 0; i < a.length; i++) dot += a[i] * b[i];
   return dot;
 }
+
+/**
+ * Character trigram similarity between two strings.
+ * Returns 0–1: 1 = identical trigram sets.
+ * Used as a fallback when TF-IDF produces zero scores (query word not in vocab).
+ */
+function trigramSim(a: string, b: string): number {
+  if (a.length < 3 || b.length < 3) return a === b ? 1 : 0;
+  const setA = new Set<string>();
+  for (let i = 0; i <= a.length - 3; i++) setA.add(a.slice(i, i + 3));
+  const setB = new Set<string>();
+  for (let i = 0; i <= b.length - 3; i++) setB.add(b.slice(i, i + 3));
+  let inter = 0;
+  setA.forEach(t => { if (setB.has(t)) inter++; });
+  return inter / Math.max(setA.size, setB.size);
+}
+
+/**
+ * String-level relevance score between the user's feeling and a phrase.
+ * Checks: exact substring → word overlap → trigram similarity (in that priority).
+ */
+function strRelevance(userWords: string[], phrase: string): number {
+  const pNorm = normalize(phrase);
+  const pWords = pNorm.split(/\s+/).filter(Boolean);
+  let best = 0;
+  for (const uw of userWords) {
+    if (!uw) continue;
+    // Exact substring in full phrase
+    if (pNorm.includes(uw)) { best = Math.max(best, 1.0); continue; }
+    // Trigram sim against each phrase word
+    for (const pw of pWords) {
+      best = Math.max(best, trigramSim(uw, pw) * 0.8);
+    }
+  }
+  return best;
+}
+
 function findTopGuests(feeling: string, n = 3) {
-  const queryVec = vectorize(feeling);
+  const userWords = normalize(feeling).split(/\s+/).filter(Boolean);
+  const queryVec  = vectorize(feeling);
+  // Detect vocab miss: if all weights are 0 the word is not in the dataset vocab
+  const queryIsZero = queryVec.every(v => v === 0);
+
   const scored = records
     .filter((r) => r.embedding_vector.length > 0)
-    .map((r) => ({ ...r, score: cosineSimilarity(queryVec, r.embedding_vector) }))
+    .map((r) => {
+      const cosScore = cosineSimilarity(queryVec, r.embedding_vector);
+      const strScore = strRelevance(userWords, r.feeling_phrase_normalized);
+      // When query hits vocab: TF-IDF leads, string similarity breaks ties.
+      // When query misses vocab entirely: fall back to string similarity alone.
+      const score = queryIsZero ? strScore : cosScore + strScore * 0.35;
+      return { ...r, score };
+    })
     .sort((a, b) => b.score - a.score);
+
   const seen = new Set<string>();
   const top: typeof scored = [];
   for (const r of scored) {
@@ -301,7 +350,7 @@ export async function GET(req: NextRequest) {
                 <span style={{ fontFamily: "Gotham", fontSize: `${Math.round(PHOTO_PX * 0.28)}px`, fontWeight: 800, color: ORANGE, display: "flex" }}>{initials(cleanGuestName(g.guest_name))}</span>
               )}
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "6px", maxWidth: `${GUEST_TW}px` }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px", maxWidth: `${GUEST_TW}px`, overflow: "hidden" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
                 <span style={{ fontFamily: "Gotham", fontSize: `${gnameSz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
                   {nameLine1}
@@ -312,8 +361,8 @@ export async function GET(req: NextRequest) {
                   </span>
                 )}
               </div>
-              {/* No display:flex on feeling span — allows text to wrap within maxWidth column */}
-              <span style={{ fontFamily: "Gotham", fontSize: `${gquoteSz}px`, color: MUTED, fontStyle: "italic", lineHeight: 1.3 }}>
+              {/* wordBreak breaks long run-on strings; overflow hidden is the hard stop */}
+              <span style={{ fontFamily: "Gotham", fontSize: `${gquoteSz}px`, color: MUTED, fontStyle: "italic", lineHeight: 1.3, wordBreak: "break-word" }}>
                 &quot;{feelPhrase}&quot;
               </span>
             </div>
@@ -385,7 +434,7 @@ export async function GET(req: NextRequest) {
                   </span>
                 )}
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1, maxWidth: `${V1_GUEST_TW}px` }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px", flex: 1, maxWidth: `${V1_GUEST_TW}px`, overflow: "hidden" }}>
                 <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
                   <span style={{ fontFamily: "Gotham", fontSize: `${gnsz}px`, fontWeight: 800, color: BLACK, display: "flex", letterSpacing: "1px", lineHeight: 1.2 }}>
                     {nl1}
@@ -396,8 +445,8 @@ export async function GET(req: NextRequest) {
                     </span>
                   )}
                 </div>
-                {/* No display:flex — allows text to wrap within maxWidth column */}
-                <span style={{ fontFamily: "Gotham", fontSize: `${gqsz}px`, color: MUTED, fontStyle: "italic", lineHeight: 1.3 }}>
+                {/* wordBreak + overflow hidden contain long run-on phrases */}
+                <span style={{ fontFamily: "Gotham", fontSize: `${gqsz}px`, color: MUTED, fontStyle: "italic", lineHeight: 1.3, wordBreak: "break-word" }}>
                   &quot;{feelPhrase}&quot;
                 </span>
               </div>
@@ -589,8 +638,8 @@ export async function GET(req: NextRequest) {
         {/* ── Guest section — V2: left-aligned, pulled 20px closer to identity block ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", gap: "10px", marginTop: variant === 2 ? "-20px" : "0px" }}>
           {dotsRow}
-          {/* V2: extra 12px gap after dots + MUTED subtitle; V3/V4: ORANGE subtitle */}
-          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: variant === 2 ? MUTED : ORANGE, letterSpacing: "2px", display: "flex", ...(variant === 2 && { marginTop: "12px" }) }}>
+          {/* V2: extra 20px gap after dots + MUTED subtitle; V3/V4: ORANGE subtitle */}
+          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: variant === 2 ? MUTED : ORANGE, letterSpacing: "2px", display: "flex", ...(variant === 2 && { marginTop: "20px" }) }}>
             {subtitle}
           </span>
           {guestCardsEl}
