@@ -259,15 +259,17 @@ export async function GET(req: NextRequest) {
   const pubDir  = path.join(process.cwd(), "public");
   const logoDir = path.join(process.cwd(), "public", "logos");
 
-  const [rushinkData, gothamData, permanentMarkerData, conanBuf, podcastImgBuf] = await Promise.all([
+  const [rushinkData, gothamData, permanentMarkerData, conanBuf, podcastImgBuf, conanHiBuf] = await Promise.all([
     readFile(path.join(fontDir, "Rushink.ttf")),
     readFile(path.join(fontDir, "GothamBlack_ExtraBold.otf")),
     readFile(path.join(fontDir, "PermanentMarker.ttf")),
     readFile(path.join(pubDir,  "conan_outline.png")),
     readFile(path.join(logoDir, "era-podcast.jpg")),
+    readFile(path.join(pubDir,  "conan_hi.png")),
   ]);
   const conanB64   = `data:image/png;base64,${conanBuf.toString("base64")}`;
   const podcastB64 = `data:image/jpeg;base64,${podcastImgBuf.toString("base64")}`;
+  const conanHiB64 = `data:image/png;base64,${conanHiBuf.toString("base64")}`;
 
   /* Guest matching + photos */
   const guestIdParam = searchParams.get("g") ?? "";
@@ -563,24 +565,11 @@ export async function GET(req: NextRequest) {
             alt="" />
         )}
 
-        {/* V3: Conan + "hi!" bubble — centered at top */}
+        {/* V3: combined hi! + Conan illustration as single image */}
         {variant === 3 ? (
-          <div style={{ display: "flex", position: "relative", width: "240px", height: "220px" }}>
-            {/* hi! bubble — absolute top-left */}
-            <div style={{
-              display: "flex", position: "absolute", top: 0, left: 0,
-              background: "white",
-              border: "3.5px solid black", borderRadius: "18px 18px 4px 18px",
-              padding: "10px 18px",
-            }}>
-              <span style={{ fontFamily: "Rushink", fontSize: "34px", color: BLACK, display: "flex", lineHeight: 1 }}>
-                hi!
-              </span>
-            </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={conanB64} width={CONAN_PX} height={CONAN_PX}
-              style={{ position: "absolute", bottom: 0, right: 0, objectFit: "contain" }} alt="" />
-          </div>
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={conanHiB64} width={240} height={240}
+            style={{ objectFit: "contain" }} alt="" />
         ) : (
           /* V2 & V4: empty top spacer (V2 uses absolute-positioned Conan) */
           <div style={{ display: "flex", height: "40px" }} />
@@ -589,8 +578,8 @@ export async function GET(req: NextRequest) {
         {/* ── Identity block: MY NAME IS → CONAN O'BRIEN'S FRIEND + country row ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", ...(variant === 2 && { marginTop: "-90px" }) }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
-          {/* borderBottom rule — full 880px width for V2 so underline spans margin-to-margin */}
-          <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}`, ...(variant === 2 && { width: `${USABLE_W}px` }) }}>{name}</span>
+          {/* borderBottom rule — 880px width on all V2/3/4 so underline spans margin-to-margin */}
+          <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}`, width: `${USABLE_W}px`, ...(variant !== 2 && { justifyContent: "center" }) }}>{name}</span>
 
           {/* 40px gap: name rule → label row → AND I FEEL */}
           <div style={{ height: "40px", display: "flex" }} />
@@ -607,8 +596,8 @@ export async function GET(req: NextRequest) {
           ) : (
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
           )}
-          {/* borderBottom rule — full 880px width for V2 */}
-          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", ...(variant !== 2 && { textAlign: "center", justifyContent: "center" }), borderBottom: `1px solid ${DIVIDER}`, ...(variant === 2 && { width: `${USABLE_W}px` }) }}>
+          {/* borderBottom rule — 880px width on all V2/3/4 so underline spans margin-to-margin */}
+          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", ...(variant !== 2 && { textAlign: "center", justifyContent: "center" }), borderBottom: `1px solid ${DIVIDER}`, width: `${USABLE_W}px` }}>
             {feeling}
           </span>
 
@@ -620,8 +609,8 @@ export async function GET(req: NextRequest) {
             <span style={barlow(LABEL_SZ)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
           </div>
 
-          {/* Country row — V3/V4 only; V2 shows country above AND I FEEL instead */}
-          {variant !== 2 && (
+          {/* Country row — V4 only; V2 shows flag above AND I FEEL, V3 removed entirely */}
+          {variant === 4 && (
             <div style={{ display: "flex", width: `${USABLE_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "30px" }}>
               <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
               <span style={{ fontSize: "36px", display: "flex", lineHeight: 1 }}>{flag}</span>
@@ -633,15 +622,15 @@ export async function GET(req: NextRequest) {
         {/* ── Guest section — V2: left-aligned, pulled 20px closer to identity block ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", gap: "10px", marginTop: variant === 2 ? "-20px" : "0px" }}>
           {dotsRow}
-          {/* V2: extra 20px gap after dots + MUTED subtitle; V3/V4: ORANGE subtitle */}
-          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: variant === 2 ? MUTED : ORANGE, letterSpacing: "2px", display: "flex", ...(variant === 2 && { marginTop: "20px" }) }}>
+          {/* V2+V3: 20px extra gap after dots, MUTED subtitle; V4: ORANGE subtitle */}
+          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: (variant === 2 || variant === 3) ? MUTED : ORANGE, letterSpacing: "2px", display: "flex", ...((variant === 2 || variant === 3) && { marginTop: "20px" }) }}>
             {subtitle}
           </span>
           {guestCardsEl}
         </div>
 
-        {/* ── Footer ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px" }}>
+        {/* ── Footer — V3 gets extra top margin to push it away from guest cards ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px", ...(variant === 3 && { marginTop: "30px" }) }}>
           {variant === 4 && (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={podcastB64} width={LOGO_PX} height={LOGO_PX}
