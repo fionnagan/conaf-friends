@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getGuestsData } from "@/lib/data";
 import ColdOpensClient from "@/components/ColdOpensClient";
 import type { Metadata } from "next";
@@ -56,7 +57,9 @@ export default function ColdOpensPage() {
           </p>
         </div>
       ) : (
-        <ColdOpensClient coldOpens={coldOpens} />
+        <Suspense>
+          <ColdOpensClient coldOpens={coldOpens} />
+        </Suspense>
       )}
     </div>
   );

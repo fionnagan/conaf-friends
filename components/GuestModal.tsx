@@ -8,11 +8,13 @@ import { ERA_LABELS, getEraTextColor } from "@/lib/data";
 interface Props {
   guest: Guest;
   onClose: () => void;
+  /** Originating page URL (path + params). Passed through to the full-profile link. */
+  from?: string;
 }
 
 const ERA_ORDER = ["late-night-nbc", "tonight-show", "tbs-conan", "podcast", "conan-must-go"] as const;
 
-export default function GuestModal({ guest, onClose }: Props) {
+export default function GuestModal({ guest, onClose, from }: Props) {
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -149,7 +151,12 @@ export default function GuestModal({ guest, onClose }: Props) {
         {/* Footer */}
         <div className="px-6 pb-5 pt-1">
           <a
-            href={`/guest/${guest.id}`}
+            href={`/guest/${guest.id}${from ? `?from=${encodeURIComponent(from)}` : ""}`}
+            onClick={() => {
+              try {
+                if (from) sessionStorage.setItem(`navScroll:${from}`, String(window.scrollY));
+              } catch { /* ignore */ }
+            }}
             className="block w-full text-center py-2.5 rounded-xl border border-[var(--border)] text-sm text-[var(--text-muted)] hover:text-[var(--text)] hover:border-[var(--orange)] transition-colors"
           >
             Full profile ↗

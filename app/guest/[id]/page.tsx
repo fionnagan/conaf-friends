@@ -3,10 +3,19 @@ import { getGuestsData, ORIGIN_LABELS, formatDate } from "@/lib/data";
 import GuestAvatar from "@/components/GuestAvatar";
 import FriendshipArc from "@/components/FriendshipArc";
 import GuestPagePlayer from "@/components/GuestPagePlayer";
+import GuestBackButton from "@/components/GuestBackButton";
 import type { Metadata } from "next";
 
 interface Props {
   params: { id: string };
+  searchParams?: { from?: string };
+}
+
+/** Only allow safe relative return URLs (prevents open-redirect). */
+function safeReturnUrl(raw: string | undefined): string | null {
+  if (!raw) return null;
+  if (raw.startsWith("/") && !raw.startsWith("//")) return raw;
+  return null;
 }
 
 export async function generateStaticParams() {
@@ -25,10 +34,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 
-export default function GuestPage({ params }: Props) {
+export default function GuestPage({ params, searchParams }: Props) {
   const data = getGuestsData();
   const guest = data.guests.find((g) => g.id === params.id);
   if (!guest) notFound();
+
+  const from = safeReturnUrl(searchParams?.from);
 
   const relatedGuests = (guest.relatedGuests || [])
     .map((id) => data.guests.find((g) => g.id === id))
@@ -36,13 +47,8 @@ export default function GuestPage({ params }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      {/* Back */}
-      <a
-        href="/"
-        className="inline-flex items-center gap-1 text-sm text-[var(--text-muted)] hover:text-[var(--text)] mb-6"
-      >
-        ← Back
-      </a>
+      {/* Back — returns to originating page (or homepage if no context) */}
+      <GuestBackButton from={from} />
 
       {/* Hero */}
       <div className="flex flex-col sm:flex-row gap-6 items-start mb-8">

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo, useRef, useCallback } from "react";
+import { useState, useMemo, useRef, useCallback, useEffect } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import type { Guest, Era } from "@/lib/types";
 import Image from "next/image";
 import { ERA_LABELS, ERA_LOGOS, getEraTextColor } from "@/lib/data";
@@ -43,15 +44,69 @@ interface Props {
 }
 
 export default function ArcListClient({ guests }: Props) {
-  const [nameQuery, setNameQuery] = useState("");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // ── URL-synced filter state ────────────────────────────────────────────────
+  const nameQuery = searchParams.get("name") ?? "";
+  const selectedEras = useMemo<Era[]>(() => {
+    const raw = searchParams.get("eras");
+    return raw ? (raw.split(",").filter(Boolean) as Era[]) : [];
+  }, [searchParams]);
+  const minAppearances = useMemo<0 | 2 | 4 | 8>(() => {
+    const n = parseInt(searchParams.get("min") ?? "0", 10);
+    return ([0, 2, 4, 8].includes(n) ? n : 0) as 0 | 2 | 4 | 8;
+  }, [searchParams]);
+  const selectedOccupations = useMemo<string[]>(() => {
+    const raw = searchParams.get("occs");
+    return raw ? raw.split(",").filter(Boolean) : [];
+  }, [searchParams]);
+
+  // AI state stays local (ephemeral — too expensive to restore via API on return)
   const [aiChips, setAiChips] = useState<AiChip[]>([]);
   const [aiFilters, setAiFilters] = useState<ParsedFilters>({});
   const [aiLoading, setAiLoading] = useState(false);
-  const [selectedEras, setSelectedEras] = useState<Era[]>([]);
-  const [minAppearances, setMinAppearances] = useState<0 | 2 | 4 | 8>(0);
-  const [selectedOccupations, setSelectedOccupations] = useState<string[]>([]);
   const [modalGuest, setModalGuest] = useState<Guest | null>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+
+  /** Replace a URL param without scroll */
+  function updateParam(key: string, value: string | null) {
+    const params = new URLSearchParams(searchParams.toString());
+    if (value) params.set(key, value);
+    else params.delete(key);
+    const qs = params.toString();
+    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+  }
+
+  /** Build the current page URL (path + all params) */
+  function currentPageUrl(): string {
+    const qs = searchParams.toString();
+    return qs ? `${pathname}?${qs}` : pathname;
+  }
+
+  /** Save scroll position before leaving the page */
+  function saveScroll() {
+    try {
+      sessionStorage.setItem(`navScroll:${currentPageUrl()}`, String(window.scrollY));
+    } catch { /* ignore */ }
+  }
+
+  // ── Restore scroll when returning from a guest profile ────────────────────
+  useEffect(() => {
+    const url = currentPageUrl();
+    try {
+      const saved = sessionStorage.getItem(`navScroll:${url}`);
+      if (saved) {
+        sessionStorage.removeItem(`navScroll:${url}`);
+        const y = parseInt(saved, 10);
+        if (!isNaN(y)) {
+          requestAnimationFrame(() => window.scrollTo({ top: y, behavior: "instant" }));
+        }
+      }
+    } catch { /* ignore */ }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // mount only
 
   // Top occupations by frequency (guests with bios)
   const topOccupations = useMemo(() => {
@@ -91,15 +146,17 @@ export default function ArcListClient({ guests }: Props) {
   }, []);
 
   function handleSearchChange(value: string) {
-    setNameQuery(value);
     clearTimeout(debounceRef.current);
-    // Only fire AI for queries that look like sentences (contain space or digits)
-    if (value.length >= 3 && (value.includes(" ") || /\d/.test(value))) {
-      debounceRef.current = setTimeout(() => runAiSearch(value), 600);
-    } else if (value.length === 0) {
-      setAiChips([]);
-      setAiFilters({});
-    }
+    debounceRef.current = setTimeout(() => {
+      updateParam("name", value || null);
+      // Only fire AI for queries that look like sentences (contain space or digits)
+      if (value.length >= 3 && (value.includes(" ") || /\d/.test(value))) {
+        runAiSearch(value);
+      } else if (value.length === 0) {
+        setAiChips([]);
+        setAiFilters({});
+      }
+    }, 300);
   }
 
   function removeAiChip(key: string) {
@@ -116,22 +173,21 @@ export default function ArcListClient({ guests }: Props) {
   }
 
   function toggleEra(era: Era) {
-    setSelectedEras((prev) =>
-      prev.includes(era) ? prev.filter((e) => e !== era) : [...prev, era]
-    );
+    const next = selectedEras.includes(era)
+      ? selectedEras.filter((e) => e !== era)
+      : [...selectedEras, era];
+    updateParam("eras", next.length > 0 ? next.join(",") : null);
   }
 
   function toggleOccupation(occ: string) {
-    setSelectedOccupations((prev) =>
-      prev.includes(occ) ? prev.filter((o) => o !== occ) : [...prev, occ]
-    );
+    const next = selectedOccupations.includes(occ)
+      ? selectedOccupations.filter((o) => o !== occ)
+      : [...selectedOccupations, occ];
+    updateParam("occs", next.length > 0 ? next.join(",") : null);
   }
 
   function clearAll() {
-    setNameQuery("");
-    setSelectedEras([]);
-    setMinAppearances(0);
-    setSelectedOccupations([]);
+    router.replace(pathname, { scroll: false });
     setAiChips([]);
     setAiFilters({});
   }
@@ -199,7 +255,7 @@ export default function ArcListClient({ guests }: Props) {
           <input
             type="search"
             placeholder="Search by name, or describe a guest…"
-            value={nameQuery}
+            defaultValue={nameQuery}
             onChange={(e) => handleSearchChange(e.target.value)}
             className="w-full px-4 py-2.5 bg-[var(--bg2)] border border-[var(--border)] rounded-xl text-sm focus:outline-none focus:border-[var(--orange)] placeholder:text-[var(--text-muted)]"
           />
@@ -274,7 +330,7 @@ export default function ArcListClient({ guests }: Props) {
             {MIN_APP_OPTIONS.map((n) => (
               <button
                 key={n}
-                onClick={() => setMinAppearances(n as 0 | 2 | 4 | 8)}
+                onClick={() => updateParam("min", n > 0 ? String(n) : null)}
                 className="px-2 py-0.5 rounded border text-xs transition-colors"
                 style={
                   minAppearances === n
@@ -350,7 +406,7 @@ export default function ArcListClient({ guests }: Props) {
               {/* Header */}
               <div className="flex items-center gap-4 px-5 py-4">
                 <button
-                  onClick={() => setModalGuest(g)}
+                  onClick={() => { saveScroll(); setModalGuest(g); }}
                   className="flex-shrink-0 rounded-full focus:outline-none focus:ring-2 focus:ring-[var(--orange)] focus:ring-offset-2 focus:ring-offset-[var(--bg2)]"
                   aria-label={`Open ${g.name} profile`}
                 >
@@ -358,7 +414,7 @@ export default function ArcListClient({ guests }: Props) {
                 </button>
                 <div className="flex-1 min-w-0">
                   <button
-                    onClick={() => setModalGuest(g)}
+                    onClick={() => { saveScroll(); setModalGuest(g); }}
                     className="font-semibold text-left hover:text-[var(--orange)] transition-colors"
                   >
                     {g.name}
@@ -406,9 +462,13 @@ export default function ArcListClient({ guests }: Props) {
         </p>
       )}
 
-      {/* Guest modal */}
+      {/* Guest modal — passes originating URL so "Full profile" can encode it */}
       {modalGuest && (
-        <GuestModal guest={modalGuest} onClose={() => setModalGuest(null)} />
+        <GuestModal
+          guest={modalGuest}
+          onClose={() => setModalGuest(null)}
+          from={currentPageUrl()}
+        />
       )}
     </div>
   );

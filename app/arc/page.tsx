@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getGuestsData } from "@/lib/data";
 import ArcListClient from "@/components/ArcListClient";
 import type { Metadata } from "next";
@@ -30,7 +31,9 @@ export default function ArcPage() {
         Every guest&apos;s relationship with Conan, plotted across 30+ years.
       </p>
 
-      <ArcListClient guests={data.guests} />
+      <Suspense>
+        <ArcListClient guests={data.guests} />
+      </Suspense>
     </div>
   );
 }
