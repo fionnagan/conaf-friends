@@ -576,7 +576,7 @@ export async function GET(req: NextRequest) {
         )}
 
         {/* ── Identity block: MY NAME IS → CONAN O'BRIEN'S FRIEND + country row ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", ...(variant === 2 ? { marginTop: "-90px" } : variant === 3 ? { marginTop: "-50px" } : {}) }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", ...(variant === 2 ? { marginTop: "-90px" } : variant === 3 ? { marginTop: "-50px" } : variant === 4 ? { marginTop: "-70px" } : {}) }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
           {/* borderBottom rule — 880px width on all V2/3/4 so underline spans margin-to-margin */}
           <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}`, width: `${USABLE_W}px`, ...(variant !== 2 && { justifyContent: "center" }) }}>{name}</span>
@@ -610,15 +610,15 @@ export async function GET(req: NextRequest) {
         {/* ── Guest section — V2: left-aligned, pulled 20px closer to identity block ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", gap: "10px", marginTop: variant === 2 ? "-20px" : "0px" }}>
           {dotsRow}
-          {/* V2+V3: 20px extra gap after dots, MUTED subtitle; V4: ORANGE subtitle */}
-          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: (variant === 2 || variant === 3) ? MUTED : ORANGE, letterSpacing: "2px", display: "flex", ...((variant === 2 || variant === 3) && { marginTop: "20px" }) }}>
+          {/* V2/V3/V4: 20px extra gap after dots, MUTED subtitle; V1: ORANGE subtitle */}
+          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: variant !== 1 ? MUTED : ORANGE, letterSpacing: "2px", display: "flex", ...(variant !== 1 && { marginTop: "20px" }) }}>
             {subtitle}
           </span>
           {guestCardsEl}
         </div>
 
         {/* ── Footer — V3 gets extra top margin to push it away from guest cards ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px", ...(variant === 3 && { marginTop: "30px" }) }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px", ...(variant === 3 ? { marginTop: "30px" } : variant === 4 ? { marginTop: "10px" } : {}) }}>
           {variant === 4 && (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={podcastB64} width={LOGO_PX} height={LOGO_PX}
