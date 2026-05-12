@@ -2,12 +2,18 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { countryFlag } from "@/lib/country-flags";
+
+interface FanEntry {
+  name: string;
+  country: string;
+}
 
 interface Node {
   id: string;
   label: string;
   count: number;
-  fans: string[];
+  fans: FanEntry[];
   x?: number;
   y?: number;
   vx?: number;
@@ -23,7 +29,7 @@ interface Link {
 }
 
 interface Props {
-  words: { word: string; count: number; fans?: string[] }[];
+  words: { word: string; count: number; fans?: FanEntry[] }[];
   onNodeClick?: (word: string) => void;
 }
 
@@ -48,7 +54,7 @@ export default function Constellation({ words, onNodeClick }: Props) {
       id: w.word,
       label: w.word,
       count: w.count,
-      fans: w.fans ?? [],
+      fans: (w.fans ?? []) as FanEntry[],
       // Scatter initial positions in a circle
       x: W / 2 + (W * 0.35) * Math.cos((2 * Math.PI * i) / words.length),
       y: H / 2 + (H * 0.35) * Math.sin((2 * Math.PI * i) / words.length),
@@ -293,21 +299,29 @@ export default function Constellation({ words, onNodeClick }: Props) {
               <button onClick={() => setSelected(null)} className="text-[var(--text-muted)] hover:text-[var(--text)] text-xl px-1">×</button>
             </div>
 
-            {/* Fan names who submitted this word */}
+            {/* Fan pills: flag + name, capped at 8 visible */}
             {selected.fans.length > 0 && (
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
                   Fans who felt &quot;{selected.label}&quot;
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {selected.fans.map((name, i) => (
+                  {selected.fans.slice(0, 8).map((fan, i) => (
                     <span
                       key={i}
-                      className="px-2.5 py-1 bg-[var(--bg)] rounded-full border border-[var(--border)] text-xs font-medium"
+                      className="inline-flex items-center gap-1 px-2.5 py-1 bg-[var(--bg)] rounded-full border border-[var(--border)] text-xs font-medium"
                     >
-                      {name}
+                      {fan.country && (
+                        <span className="leading-none">{countryFlag(fan.country)}</span>
+                      )}
+                      {fan.name}
                     </span>
                   ))}
+                  {selected.fans.length > 8 && (
+                    <span className="inline-flex items-center px-2.5 py-1 bg-[var(--bg)] rounded-full border border-[var(--border)] text-xs text-[var(--text-muted)]">
+                      +{selected.fans.length - 8} more
+                    </span>
+                  )}
                 </div>
               </div>
             )}

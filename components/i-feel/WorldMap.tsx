@@ -65,10 +65,15 @@ function colorForCount(count: number, max: number): string {
   return `rgba(242,101,25,${alpha.toFixed(2)})`;
 }
 
+const FANS_PAGE    = 5;  // rows shown before "show more"
+const FEELINGS_PAGE = 5;  // feeling pills shown before "show more"
+
 export default function WorldMap({ countryCounts }: Props) {
   const [tooltip, setTooltip]       = useState<{ name: string; count: number } | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const [panel, setPanel]           = useState<CountryPanel | null>(null);
+  const [showAllFans,     setShowAllFans]     = useState(false);
+  const [showAllFeelings, setShowAllFeelings] = useState(false);
   const containerRef                = useRef<HTMLDivElement>(null);
 
   const maxCount = useMemo(() => Math.max(...Object.values(countryCounts), 1), [countryCounts]);
@@ -89,7 +94,9 @@ export default function WorldMap({ countryCounts }: Props) {
 
   const handleClick = useCallback(async (name: string) => {
     const submissionCount = countryCounts[name] ?? 0;
-    // Open panel immediately with loading state
+    // Reset pagination and open panel with loading state
+    setShowAllFans(false);
+    setShowAllFeelings(false);
     setPanel({ name, submissionCount, data: null, loading: true });
 
     try {
@@ -217,36 +224,52 @@ export default function WorldMap({ countryCounts }: Props) {
 
             {!panel.loading && panel.data && (
               <>
-                {/* Fan submitter names + their full feeling phrase */}
+                {/* Fan submitter names — stacked layout, full text, paginated */}
                 {panel.data.fans.length > 0 && (
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
                       Fans from {panel.name}
                     </p>
                     <div className="space-y-1.5">
-                      {panel.data.fans.map((f, i) => (
+                      {(showAllFans
+                        ? panel.data.fans
+                        : panel.data.fans.slice(0, FANS_PAGE)
+                      ).map((f, i) => (
                         <div
                           key={i}
-                          className="flex items-center justify-between px-3 py-2 bg-[var(--bg)] rounded-lg border border-[var(--border)] text-sm"
+                          className="px-3 py-2.5 bg-[var(--bg)] rounded-lg border border-[var(--border)]"
                         >
-                          <span className="font-medium flex-shrink-0">{f.name}</span>
-                          <span className="text-xs text-[var(--text-muted)] italic truncate max-w-[160px] ml-2">
+                          <p className="text-sm font-medium leading-snug">{f.name}</p>
+                          <p className="text-xs text-[var(--text-muted)] italic mt-0.5 leading-snug break-words">
                             {f.feeling}
-                          </span>
+                          </p>
                         </div>
                       ))}
                     </div>
+                    {panel.data.fans.length > FANS_PAGE && (
+                      <button
+                        onClick={() => setShowAllFans((v) => !v)}
+                        className="mt-2 text-xs text-[var(--orange)] hover:underline"
+                      >
+                        {showAllFans
+                          ? "Show less ↑"
+                          : `Show ${panel.data.fans.length - FANS_PAGE} more ↓`}
+                      </button>
+                    )}
                   </div>
                 )}
 
-                {/* Most-submitted full feeling phrases */}
+                {/* Most-submitted full feeling phrases — pill chips, paginated */}
                 {panel.data.topFeelings.length > 0 && (
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
                       Most common feelings here
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {panel.data.topFeelings.map(({ feeling, count }) => (
+                      {(showAllFeelings
+                        ? panel.data.topFeelings
+                        : panel.data.topFeelings.slice(0, FEELINGS_PAGE)
+                      ).map(({ feeling, count }) => (
                         <span
                           key={feeling}
                           className="px-2.5 py-1 bg-[var(--bg)] rounded-full border border-[var(--border)] text-xs font-medium"
@@ -258,6 +281,16 @@ export default function WorldMap({ countryCounts }: Props) {
                         </span>
                       ))}
                     </div>
+                    {panel.data.topFeelings.length > FEELINGS_PAGE && (
+                      <button
+                        onClick={() => setShowAllFeelings((v) => !v)}
+                        className="mt-2 text-xs text-[var(--orange)] hover:underline"
+                      >
+                        {showAllFeelings
+                          ? "Show less ↑"
+                          : `+${panel.data.topFeelings.length - FEELINGS_PAGE} more feelings`}
+                      </button>
+                    )}
                   </div>
                 )}
 

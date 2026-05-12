@@ -112,33 +112,45 @@ async function getCountryRankings(): Promise<{ country: string; count: number; t
     }));
 }
 
-async function getConstellationWords(): Promise<{ word: string; count: number; fans: string[] }[]> {
+async function getConstellationWords(): Promise<{ word: string; count: number; fans: { name: string; country: string }[] }[]> {
   const client = getServerClient();
   if (!client) return [];
 
   const weekAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(); // last 30 days
   const { data } = await client
     .from("submissions")
-    .select("feeling_normalized,name")
+    .select("feeling_normalized,name,country")
     .gte("created_at", weekAgo)
     .eq("is_public", true);
 
   if (!data?.length) return [];
 
   // Each feeling submission is one atomic entry — never split into individual words.
-  const wordFans: Record<string, { count: number; fans: Set<string> }> = {};
-  for (const { feeling_normalized, name } of data) {
+  // Track fans as { name, country } objects; dedupe by name+country key.
+  const phraseData: Record<string, {
+    count: number;
+    fans: Map<string, { name: string; country: string }>;
+  }> = {};
+
+  for (const { feeling_normalized, name, country } of data) {
     const phrase = (feeling_normalized ?? "").trim();
     if (!phrase) continue;
-    if (!wordFans[phrase]) wordFans[phrase] = { count: 0, fans: new Set() };
-    wordFans[phrase].count++;
-    if (name) wordFans[phrase].fans.add(name);
+    if (!phraseData[phrase]) phraseData[phrase] = { count: 0, fans: new Map() };
+    phraseData[phrase].count++;
+    if (name) {
+      const key = `${name}::${country ?? ""}`;
+      phraseData[phrase].fans.set(key, { name, country: country ?? "" });
+    }
   }
 
-  return Object.entries(wordFans)
+  return Object.entries(phraseData)
     .sort((a, b) => b[1].count - a[1].count)
     .slice(0, 24)
-    .map(([word, { count, fans }]) => ({ word, count, fans: [...fans].slice(0, 10) }));
+    .map(([word, { count, fans }]) => ({
+      word,
+      count,
+      fans: [...fans.values()].slice(0, 15).map((f) => ({ name: f.name, country: f.country })),
+    }));
 }
 
 export async function GET() {

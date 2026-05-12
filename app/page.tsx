@@ -7,6 +7,7 @@ import CountryCombobox from "@/components/i-feel/CountryCombobox";
 import MatchCards, { type GuestMatch } from "@/components/i-feel/MatchCards";
 import LiveFeed from "@/components/i-feel/LiveFeed";
 import { useSessionState } from "@/lib/use-session-state";
+import { countryFlag } from "@/lib/country-flags";
 import dynamic from "next/dynamic";
 
 // Lazy-load heavy visualizations
@@ -205,7 +206,9 @@ export default function IFeelPage() {
   const [analyticsData, setAnalyticsData] = useState<{
     countryCounts: Record<string, number>;
     topWords: TopWord[];
-    constellationWords: { word: string; count: number; fans: string[] }[];
+    constellationWords: { word: string; count: number; fans: { name: string; country: string }[] }[];
+    totalSubmissions: number;
+    topCountry: { country: string; count: number } | null;
   } | null>(null);
 
   const resultsRef = useRef<HTMLDivElement>(null);
@@ -225,6 +228,8 @@ export default function IFeelPage() {
           countryCounts: d.countryCounts ?? {},
           topWords: d.topWords ?? [],
           constellationWords: d.constellationWords ?? [],
+          totalSubmissions: d.totalSubmissions ?? 0,
+          topCountry: d.topCountry ?? null,
         }))
       .catch(() => {});
   }, []);
@@ -485,9 +490,31 @@ export default function IFeelPage() {
             <span className="text-[var(--orange)] text-lg">◎</span>
             <h2 className="font-serif text-xl font-semibold">Explore</h2>
           </div>
-          <p className="text-sm text-[var(--text-muted)] mb-5">
+          <p className="text-sm text-[var(--text-muted)] mb-4">
             See how the global feeling of being Conan&apos;s friend maps across the world and clusters into emotional constellations.
           </p>
+
+          {/* Stats bar */}
+          {analyticsData && analyticsData.totalSubmissions > 0 && (
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-5 text-sm">
+              <div className="flex items-baseline gap-1.5">
+                <span className="text-2xl font-serif font-semibold text-[var(--orange)]">
+                  {analyticsData.totalSubmissions.toLocaleString()}
+                </span>
+                <span className="text-[var(--text-muted)]">feelings shared</span>
+              </div>
+              {analyticsData.topCountry && (
+                <div className="flex items-center gap-1.5 text-[var(--text-muted)]">
+                  <span className="text-base leading-none">{countryFlag(analyticsData.topCountry.country)}</span>
+                  <span>
+                    <span className="font-medium text-[var(--text)]">{analyticsData.topCountry.country}</span>
+                    {" "}leads with{" "}
+                    <span className="font-medium text-[var(--text)]">{analyticsData.topCountry.count}</span>
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Tab switcher */}
           <div className="flex gap-1 p-1 bg-[var(--bg2)] rounded-xl border border-[var(--border)] mb-5 w-fit">
@@ -529,7 +556,7 @@ export default function IFeelPage() {
                   words={(analyticsData?.constellationWords ?? []).map((w) => ({
                     word: w.word,
                     count: w.count,
-                    fans: w.fans ?? [],
+                    fans: (w.fans ?? []) as { name: string; country: string }[],
                   }))}
                 />
               </motion.div>
