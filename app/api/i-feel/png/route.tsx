@@ -539,7 +539,7 @@ export async function GET(req: NextRequest) {
         )}
 
         {/* ── Identity block: MY NAME IS → CONAN O'BRIEN'S FRIEND + country row ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", ...(variant === 2 && { marginTop: "-40px" }) }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
           {/* borderBottom rule — full 880px width for V2 so underline spans margin-to-margin */}
           <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}`, ...(variant === 2 && { width: `${USABLE_W}px` }) }}>{name}</span>
