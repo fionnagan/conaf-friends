@@ -7,7 +7,6 @@ import CountryCombobox from "@/components/i-feel/CountryCombobox";
 import MatchCards, { type GuestMatch } from "@/components/i-feel/MatchCards";
 import LiveFeed from "@/components/i-feel/LiveFeed";
 import { useSessionState } from "@/lib/use-session-state";
-import wordGuests from "@/data/word-guests.json";
 import dynamic from "next/dynamic";
 
 // Lazy-load heavy visualizations
@@ -32,8 +31,18 @@ function MapSkeleton() {
   return <div className="h-[380px] rounded-2xl bg-[var(--bg2)] border border-[var(--border)] animate-pulse" />;
 }
 
+/* ── PNG filename sanitiser ─────────────────────────────────────────────────── */
+function buildFilename(name: string, feeling: string): string {
+  const sanitize = (s: string) =>
+    s.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
+  const n = sanitize(name);
+  const f = sanitize(feeling);
+  if (!n) return "CONAF-card.png";
+  return `CONAF-${n}${f ? "-" + f : ""}.png`;
+}
+
 /* ── Share buttons (Web Share API + download) ───────────────────────────────── */
-function ShareButtons({ pngUrl, feeling }: { pngUrl: string; feeling: string }) {
+function ShareButtons({ pngUrl, feeling, name }: { pngUrl: string; feeling: string; name: string }) {
   const [copied, setCopied] = useState(false);
   const [sharing, setSharing] = useState(false);
 
@@ -48,7 +57,7 @@ function ShareButtons({ pngUrl, feeling }: { pngUrl: string; feeling: string }) 
         try {
           const res = await fetch(pngUrl);
           const blob = await res.blob();
-          const file = new File([blob], "conan-friend-card.png", { type: "image/png" });
+          const file = new File([blob], buildFilename(name, feeling), { type: "image/png" });
           if (navigator.canShare?.({ files: [file] })) {
             await navigator.share({ files: [file], text: shareText, url: shareUrl });
             return;
@@ -94,7 +103,7 @@ function ShareButtons({ pngUrl, feeling }: { pngUrl: string; feeling: string }) 
       </button>
       <a
         href={pngUrl}
-        download="conan-friend-card.png"
+        download={buildFilename(name, feeling)}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--bg2)] border border-[var(--border)] text-[var(--text)] text-sm font-semibold hover:border-[var(--orange)] transition-colors"
@@ -193,7 +202,11 @@ export default function IFeelPage() {
   const results = savedResults as Results | null;
   const pngUrl  = savedPngUrl;
   const [vizTab,  setVizTab]  = useState<VizTab>("map");
-  const [analyticsData, setAnalyticsData] = useState<{ countryCounts: Record<string, number>; topWords: TopWord[] } | null>(null);
+  const [analyticsData, setAnalyticsData] = useState<{
+    countryCounts: Record<string, number>;
+    topWords: TopWord[];
+    constellationWords: { word: string; count: number; fans: string[] }[];
+  } | null>(null);
 
   const resultsRef = useRef<HTMLDivElement>(null);
   const sessionId  = useId();
@@ -208,7 +221,11 @@ export default function IFeelPage() {
   useEffect(() => {
     fetch("/api/i-feel/analytics")
       .then((r) => r.json())
-      .then((d) => setAnalyticsData({ countryCounts: d.countryCounts ?? {}, topWords: d.topWords ?? [] }))
+      .then((d) => setAnalyticsData({
+          countryCounts: d.countryCounts ?? {},
+          topWords: d.topWords ?? [],
+          constellationWords: d.constellationWords ?? [],
+        }))
       .catch(() => {});
   }, []);
 
@@ -332,7 +349,7 @@ export default function IFeelPage() {
               type="text"
               value={feeling}
               onChange={(e) => setFeeling(e.target.value)}
-              placeholder="e.g. genuinely honored and confused"
+              placeholder="e.g. delightfully confused"
               maxLength={80}
               whileFocus={{ scale: 1.008 }}
               transition={{ duration: 0.15 }}
@@ -435,7 +452,7 @@ export default function IFeelPage() {
 
                   {/* Full-size selected card */}
                   <ShareCard pngUrl={`${pngUrl}&variant=${selectedVariant}`} />
-                  <ShareButtons pngUrl={`${pngUrl}&variant=${selectedVariant}`} feeling={feeling} />
+                  <ShareButtons pngUrl={`${pngUrl}&variant=${selectedVariant}`} feeling={feeling} name={name} />
                 </motion.section>
               )}
 
@@ -509,10 +526,10 @@ export default function IFeelPage() {
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               >
                 <Constellation
-                  words={(analyticsData?.topWords ?? []).map((w) => ({
+                  words={(analyticsData?.constellationWords ?? []).map((w) => ({
                     word: w.word,
                     count: w.count,
-                    guests: ((wordGuests as Record<string, { guest_id: string; guest_name: string; profile_url: string; cold_open_text: string }[]>)[w.word] ?? []),
+                    fans: w.fans ?? [],
                   }))}
                 />
               </motion.div>

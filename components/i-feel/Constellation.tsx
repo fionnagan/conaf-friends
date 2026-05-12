@@ -7,7 +7,7 @@ interface Node {
   id: string;
   label: string;
   count: number;
-  guests: GuestEntry[];
+  fans: string[];
   x?: number;
   y?: number;
   vx?: number;
@@ -22,15 +22,8 @@ interface Link {
   strength: number;
 }
 
-interface GuestEntry {
-  guest_id: string;
-  guest_name: string;
-  profile_url: string;
-  cold_open_text: string;
-}
-
 interface Props {
-  words: { word: string; count: number; guests?: GuestEntry[] }[];
+  words: { word: string; count: number; fans?: string[] }[];
   onNodeClick?: (word: string) => void;
 }
 
@@ -55,7 +48,7 @@ export default function Constellation({ words, onNodeClick }: Props) {
       id: w.word,
       label: w.word,
       count: w.count,
-      guests: w.guests ?? [],
+      fans: w.fans ?? [],
       // Scatter initial positions in a circle
       x: W / 2 + (W * 0.35) * Math.cos((2 * Math.PI * i) / words.length),
       y: H / 2 + (H * 0.35) * Math.sin((2 * Math.PI * i) / words.length),
@@ -294,28 +287,26 @@ export default function Constellation({ words, onNodeClick }: Props) {
               <div>
                 <p className="font-semibold text-base capitalize">{selected.label}</p>
                 <p className="text-xs text-[var(--text-muted)] mt-0.5">
-                  Appears <span className="text-[var(--orange)] font-semibold">×{selected.count}</span> times across cold opens
+                  Submitted <span className="text-[var(--orange)] font-semibold">×{selected.count}</span> times by fans
                 </p>
               </div>
               <button onClick={() => setSelected(null)} className="text-[var(--text-muted)] hover:text-[var(--text)] text-xl px-1">×</button>
             </div>
 
-            {/* Guest list */}
-            {selected.guests.length > 0 && (
+            {/* Fan names who submitted this word */}
+            {selected.fans.length > 0 && (
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
-                  Guests who felt &quot;{selected.label}&quot;
+                  Fans who felt &quot;{selected.label}&quot;
                 </p>
-                <div className="space-y-1.5 max-h-52 overflow-y-auto" style={{ scrollbarWidth: "thin" }}>
-                  {selected.guests.map((g) => (
-                    <a
-                      key={g.guest_id}
-                      href={g.profile_url}
-                      className="flex items-center justify-between px-3 py-2 bg-[var(--bg)] rounded-lg border border-[var(--border)] hover:border-[var(--orange)]/60 transition-colors group text-sm"
+                <div className="flex flex-wrap gap-2">
+                  {selected.fans.map((name, i) => (
+                    <span
+                      key={i}
+                      className="px-2.5 py-1 bg-[var(--bg)] rounded-full border border-[var(--border)] text-xs font-medium"
                     >
-                      <span className="font-medium group-hover:text-[var(--orange)] transition-colors">{g.guest_name}</span>
-                      <span className="text-xs text-[var(--text-muted)] italic ml-2 truncate max-w-[140px]">&quot;{g.cold_open_text}&quot;</span>
-                    </a>
+                      {name}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -325,7 +316,7 @@ export default function Constellation({ words, onNodeClick }: Props) {
       </AnimatePresence>
 
       <p className="mt-2 text-xs text-[var(--text-muted)] text-center">
-        Drag nodes · Click to inspect · Sizes reflect frequency
+        Drag nodes · Click to inspect · Sizes reflect submission frequency
       </p>
     </div>
   );

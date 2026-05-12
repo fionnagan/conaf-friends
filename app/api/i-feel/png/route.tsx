@@ -20,106 +20,51 @@ interface ColdOpenRecord {
 }
 
 /* ── Data ───────────────────────────────────────────────────────────────────── */
-const { vocab, records } = coldOpensData as {
+const { records } = coldOpensData as {
   vocab: string[];
   records: ColdOpenRecord[];
 };
 const photos = guestPhotos as Record<string, string | null>;
 
-/* ── TF-IDF matching ─────────────────────────────────────────────────────────── */
+/* ── Exact word token matching ──────────────────────────────────────────────── */
 function normalize(phrase: string): string {
   return phrase.toLowerCase().replace(/[^a-z ]/g, "").trim();
 }
-function vectorize(phrase: string): number[] {
-  const words = normalize(phrase).split(/\s+/).filter(Boolean);
-  const tf: Record<string, number> = {};
-  for (const w of words) tf[w] = (tf[w] ?? 0) + 1;
-  const total = Math.max(words.length, 1);
-  const N = records.length;
-  const df: Record<string, number> = {};
-  for (const r of records) {
-    const seen = new Set(r.feeling_phrase_normalized.split(/\s+/));
-    for (const w of seen) df[w] = (df[w] ?? 0) + 1;
-  }
-  const vec = new Array(vocab.length).fill(0);
-  for (const [w, count] of Object.entries(tf)) {
-    const idx = vocab.indexOf(w);
-    if (idx === -1) continue;
-    const idf = Math.log((N + 1) / ((df[w] ?? 0) + 1));
-    vec[idx] = (count / total) * idf;
-  }
-  const norm = Math.sqrt(vec.reduce((s, x) => s + x * x, 0)) || 1;
-  return vec.map((x) => x / norm);
-}
-function cosineSimilarity(a: number[], b: number[]): number {
-  let dot = 0;
-  for (let i = 0; i < a.length; i++) dot += a[i] * b[i];
-  return dot;
-}
-
-/**
- * Character trigram similarity between two strings.
- * Returns 0–1: 1 = identical trigram sets.
- * Used as a fallback when TF-IDF produces zero scores (query word not in vocab).
- */
-function trigramSim(a: string, b: string): number {
-  if (a.length < 3 || b.length < 3) return a === b ? 1 : 0;
-  const setA = new Set<string>();
-  for (let i = 0; i <= a.length - 3; i++) setA.add(a.slice(i, i + 3));
-  const setB = new Set<string>();
-  for (let i = 0; i <= b.length - 3; i++) setB.add(b.slice(i, i + 3));
-  let inter = 0;
-  setA.forEach(t => { if (setB.has(t)) inter++; });
-  return inter / Math.max(setA.size, setB.size);
-}
-
-/**
- * String-level relevance score between the user's feeling and a phrase.
- * Checks: exact substring → word overlap → trigram similarity (in that priority).
- */
-function strRelevance(userWords: string[], phrase: string): number {
-  const pNorm = normalize(phrase);
-  const pWords = pNorm.split(/\s+/).filter(Boolean);
-  let best = 0;
-  for (const uw of userWords) {
-    if (!uw) continue;
-    // Exact substring in full phrase
-    if (pNorm.includes(uw)) { best = Math.max(best, 1.0); continue; }
-    // Trigram sim against each phrase word
-    for (const pw of pWords) {
-      best = Math.max(best, trigramSim(uw, pw) * 0.8);
-    }
-  }
-  return best;
-}
 
 function findTopGuests(feeling: string, n = 3) {
-  const userWords = normalize(feeling).split(/\s+/).filter(Boolean);
-  const queryVec  = vectorize(feeling);
-  // Detect vocab miss: if all weights are 0 the word is not in the dataset vocab
-  const queryIsZero = queryVec.every(v => v === 0);
+  if (!feeling.trim()) return [];
 
-  const scored = records
-    .filter((r) => r.embedding_vector.length > 0)
-    .map((r) => {
-      const cosScore = cosineSimilarity(queryVec, r.embedding_vector);
-      const strScore = strRelevance(userWords, r.feeling_phrase_normalized);
-      // When query hits vocab: TF-IDF leads, string similarity breaks ties.
-      // When query misses vocab entirely: fall back to string similarity alone.
-      const score = queryIsZero ? strScore : cosScore + strScore * 0.35;
-      return { ...r, score };
-    })
-    .sort((a, b) => b.score - a.score);
+  const normalized = normalize(feeling);
+  // Deduplicated token set
+  const tokens = [...new Set(normalized.split(/\s+/).filter(Boolean))];
+  if (tokens.length === 0) return [];
 
-  const seen = new Set<string>();
-  const top: typeof scored = [];
-  for (const r of scored) {
-    if (seen.has(r.guest_id)) continue;
-    seen.add(r.guest_id);
-    top.push(r);
-    if (top.length === n) break;
+  // Per-guest: track unique matched words + episode frequency
+  const guestMap = new Map<
+    string,
+    { record: ColdOpenRecord; matchedWords: Set<string>; freq: number }
+  >();
+
+  for (const r of records) {
+    const phraseWords = new Set(
+      normalize(r.feeling_phrase_normalized).split(/\s+/).filter(Boolean)
+    );
+    const hits = tokens.filter((t) => phraseWords.has(t));
+    if (hits.length === 0) continue;
+
+    const existing = guestMap.get(r.guest_id);
+    if (existing) {
+      existing.freq++;
+      for (const w of hits) existing.matchedWords.add(w);
+    } else {
+      guestMap.set(r.guest_id, { record: r, matchedWords: new Set(hits), freq: 1 });
+    }
   }
-  return top;
+
+  return [...guestMap.values()]
+    .sort((a, b) => b.matchedWords.size - a.matchedWords.size || b.freq - a.freq)
+    .slice(0, n)
+    .map(({ record }) => ({ ...record, score: 1 as number }));
 }
 
 /* ── Fetch photo with retry on 429 ───────────────────────────────────────────── */
@@ -237,12 +182,12 @@ const MUTED   = "#8E8E8E";
 const DIVIDER = "#D8D8D8";
 const TILE_BG = "#F4F3F0";
 
-/* ── Variant subtitles ───────────────────────────────────────────────────────── */
+/* ── Variant subtitles (keyed by internal/remapped variant number) ───────────── */
 const SUBTITLES: Record<number, string> = {
-  1: "I'M IN GOOD COMPANY WITH...",
-  2: "PEOPLE WHO GET ME...",
-  3: "MY CONAN FRIENDSHIP TWIN IS...",
-  4: "MY COCO ENERGY MATCHES...",
+  1: "I'M IN GOOD COMPANY WITH...",   // internal 1 = user variant 4 (left-aligned)
+  2: "PEOPLE WHO GET ME...",           // internal 2 = user variant 3 (Conan top-right)
+  3: "MY CONAN FRIENDSHIP TWIN IS...", // internal 3 = user variant 2 (hi bubble)
+  4: "MY COCO ENERGY MATCHES...",      // internal 4 = user variant 1 (podcast logo footer)
 };
 
 /* ── GET /api/i-feel/png ─────────────────────────────────────────────────────── */
@@ -251,7 +196,10 @@ export async function GET(req: NextRequest) {
   const name    = (searchParams.get("name")    ?? "Someone").toUpperCase();
   const country =  searchParams.get("country")  ?? "";
   const feeling = (searchParams.get("feeling") ?? "").toUpperCase();
-  const variant = Math.max(1, Math.min(4, parseInt(searchParams.get("variant") ?? "1")));
+  const variantRaw = Math.max(1, Math.min(4, parseInt(searchParams.get("variant") ?? "1")));
+  // Design order remapped: new 1 = old 4, new 2 = old 3, new 3 = old 2, new 4 = old 1
+  const VARIANT_REMAP: Record<number, number> = { 1: 4, 2: 3, 3: 2, 4: 1 };
+  const variant = VARIANT_REMAP[variantRaw] ?? 4;
   const flag    = country ? countryFlag(country) : "🌐";
 
   /* Load fonts + assets */

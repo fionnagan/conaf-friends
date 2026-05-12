@@ -112,13 +112,47 @@ async function getCountryRankings(): Promise<{ country: string; count: number; t
     }));
 }
 
+async function getConstellationWords(): Promise<{ word: string; count: number; fans: string[] }[]> {
+  const client = getServerClient();
+  if (!client) return [];
+
+  const weekAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(); // last 30 days
+  const { data } = await client
+    .from("submissions")
+    .select("feeling_normalized,name")
+    .gte("created_at", weekAgo)
+    .eq("is_public", true);
+
+  if (!data?.length) return [];
+
+  const wordFans: Record<string, { count: number; fans: Set<string> }> = {};
+  for (const { feeling_normalized, name } of data) {
+    const words = (feeling_normalized ?? "")
+      .toLowerCase()
+      .replace(/[^a-z ]/g, "")
+      .split(/\s+/)
+      .filter((w: string) => w && !STOP.has(w));
+    for (const word of words) {
+      if (!wordFans[word]) wordFans[word] = { count: 0, fans: new Set() };
+      wordFans[word].count++;
+      if (name) wordFans[word].fans.add(name);
+    }
+  }
+
+  return Object.entries(wordFans)
+    .sort((a, b) => b[1].count - a[1].count)
+    .slice(0, 24)
+    .map(([word, { count, fans }]) => ({ word, count, fans: [...fans].slice(0, 10) }));
+}
+
 export async function GET() {
-  const [countryStats, trending, fastestRising, mostMatchedGuest, countryRankings] = await Promise.all([
+  const [countryStats, trending, fastestRising, mostMatchedGuest, countryRankings, constellationWords] = await Promise.all([
     getCountryStats(),
     getTrendingFeelings(10),
     getFastestRising(),
     getMostMatchedGuest(),
     getCountryRankings(),
+    getConstellationWords(),
   ]);
 
   const totalSubmissions = Object.values(countryStats).reduce((s, c) => s + c, 0);
@@ -134,5 +168,6 @@ export async function GET() {
     totalSubmissions,
     topCountry,
     countryCounts: countryStats,
+    constellationWords,
   });
 }

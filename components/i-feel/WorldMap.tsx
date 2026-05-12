@@ -9,52 +9,19 @@ import {
   ZoomableGroup,
 } from "react-simple-maps";
 import { countryFlag } from "@/lib/country-flags";
-import fansData from "@/data/fans.json";
-import coldOpensData from "@/data/cold-opens.json";
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-interface FanRecord {
-  fan_id: string;
-  fan_name: string;
-  country_full_name: string;
-  episode_url: string;
+interface CountrySubmission {
+  topWords: { word: string; count: number }[];
+  fans: { name: string; feeling: string }[];
 }
-
-interface ColdOpenRecord {
-  guest_id: string;
-  guest_name: string;
-  profile_url: string;
-  cold_open_text: string;
-  feeling_phrase_normalized: string;
-  embedding_vector: number[];
-}
-
-const fans       = fansData as FanRecord[];
-const coldOpens  = (coldOpensData as { vocab: string[]; records: ColdOpenRecord[] }).records;
-
-// Pre-build country → fans map
-const fansByCountry: Record<string, FanRecord[]> = {};
-for (const f of fans) {
-  (fansByCountry[f.country_full_name] ??= []).push(f);
-}
-
-// Top 3 guests by cold-open text uniqueness (sorted by guest name for determinism)
-function topGuests(n = 3) {
-  const seen = new Set<string>();
-  return coldOpens
-    .filter((r) => r.embedding_vector.some((v) => v !== 0))
-    .sort((a, b) => a.guest_name.localeCompare(b.guest_name))
-    .filter((r) => { if (seen.has(r.guest_id)) return false; seen.add(r.guest_id); return true; })
-    .slice(0, n);
-}
-const SAMPLE_GUESTS = topGuests(3);
 
 interface CountryPanel {
   name: string;
   submissionCount: number;
-  fans: FanRecord[];
-  guests: typeof SAMPLE_GUESTS;
+  data: CountrySubmission | null;
+  loading: boolean;
 }
 
 interface Props {
@@ -90,13 +57,22 @@ export default function WorldMap({ countryCounts }: Props) {
 
   const handleLeave = useCallback(() => setTooltip(null), []);
 
-  const handleClick = useCallback((name: string) => {
-    setPanel({
-      name,
-      submissionCount: countryCounts[name] ?? 0,
-      fans: (fansByCountry[name] ?? []).slice(0, 5),
-      guests: SAMPLE_GUESTS,
-    });
+  const handleClick = useCallback(async (name: string) => {
+    const submissionCount = countryCounts[name] ?? 0;
+    // Open panel immediately with loading state
+    setPanel({ name, submissionCount, data: null, loading: true });
+
+    try {
+      const res = await fetch(`/api/i-feel/country?name=${encodeURIComponent(name)}`);
+      const json: CountrySubmission = await res.json();
+      setPanel((prev) =>
+        prev?.name === name ? { ...prev, data: json, loading: false } : prev
+      );
+    } catch {
+      setPanel((prev) =>
+        prev?.name === name ? { ...prev, data: { topWords: [], fans: [] }, loading: false } : prev
+      );
+    }
   }, [countryCounts]);
 
   return (
@@ -116,9 +92,8 @@ export default function WorldMap({ countryCounts }: Props) {
                 geographies.map((geo) => {
                   const name  = geo.properties.name as string;
                   const count = countryCounts[name] ?? 0;
-                  const hasFans = (fansByCountry[name]?.length ?? 0) > 0;
                   const fill  = colorForCount(count, maxCount);
-                  const clickable = count > 0 || hasFans;
+                  const clickable = count > 0;
                   return (
                     <Geography
                       key={geo.rsmKey}
@@ -134,7 +109,7 @@ export default function WorldMap({ countryCounts }: Props) {
                       onMouseEnter={(e) => handleEnter(name, e as unknown as React.MouseEvent)}
                       onMouseMove={(e)  => handleMove(e  as unknown as React.MouseEvent)}
                       onMouseLeave={handleLeave}
-                      onClick={() => handleClick(name)}
+                      onClick={() => clickable && handleClick(name)}
                     />
                   );
                 })
@@ -165,11 +140,6 @@ export default function WorldMap({ countryCounts }: Props) {
                   {tooltip.count} feeling{tooltip.count !== 1 ? "s" : ""}
                 </span>
               )}
-              {(fansByCountry[tooltip.name]?.length ?? 0) > 0 && tooltip.count === 0 && (
-                <span className="ml-2 text-[var(--text-muted)]">
-                  {fansByCountry[tooltip.name].length} fan{fansByCountry[tooltip.name].length !== 1 ? "s" : ""}
-                </span>
-              )}
             </motion.div>
           )}
         </AnimatePresence>
@@ -196,7 +166,6 @@ export default function WorldMap({ countryCounts }: Props) {
                     {panel.submissionCount > 0
                       ? `${panel.submissionCount} feeling${panel.submissionCount !== 1 ? "s" : ""} shared`
                       : "No submissions yet"}
-                    {panel.fans.length > 0 && ` · ${panel.fans.length}${fansByCountry[panel.name]?.length > 5 ? "+" : ""} fan${panel.fans.length !== 1 ? "s" : ""} on the show`}
                   </p>
                 </div>
               </div>
@@ -208,47 +177,64 @@ export default function WorldMap({ countryCounts }: Props) {
               </button>
             </div>
 
-            {/* Fan episodes */}
-            {panel.fans.length > 0 && (
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
-                  Fans from {panel.name} on the show
-                </p>
-                <div className="space-y-1.5">
-                  {panel.fans.map((f) => (
-                    <a
-                      key={f.fan_id}
-                      href={f.episode_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-between px-3 py-2 bg-[var(--bg)] rounded-lg border border-[var(--border)] hover:border-[var(--orange)]/60 transition-colors group text-sm"
-                    >
-                      <span className="font-medium group-hover:text-[var(--orange)] transition-colors">{f.fan_name}</span>
-                      <span className="text-xs text-[var(--text-muted)]">Listen ↗</span>
-                    </a>
-                  ))}
-                </div>
+            {panel.loading && (
+              <div className="space-y-2">
+                <div className="h-3 bg-[var(--bg)] rounded animate-pulse w-32" />
+                <div className="h-3 bg-[var(--bg)] rounded animate-pulse w-48" />
               </div>
             )}
 
-            {/* Sample guest matches */}
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
-                Top guest matches
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {panel.guests.map((g) => (
-                  <a
-                    key={g.guest_id}
-                    href={g.profile_url}
-                    className="flex items-center gap-1.5 px-3 py-1.5 bg-[var(--bg)] rounded-full border border-[var(--border)] hover:border-[var(--orange)]/60 transition-colors text-xs font-medium hover:text-[var(--orange)]"
-                  >
-                    {g.guest_name}
-                    <span className="text-[var(--text-muted)] italic normal-case font-normal"> &middot; &quot;{g.cold_open_text}&quot;</span>
-                  </a>
-                ))}
-              </div>
-            </div>
+            {!panel.loading && panel.data && (
+              <>
+                {/* Top feeling words from fan submissions */}
+                {panel.data.topWords.length > 0 && (
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                      How fans here feel
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {panel.data.topWords.map(({ word, count }) => (
+                        <span
+                          key={word}
+                          className="px-2.5 py-1 bg-[var(--bg)] rounded-full border border-[var(--border)] text-xs font-medium"
+                        >
+                          {word}
+                          {count > 1 && (
+                            <span className="ml-1 text-[var(--orange)] font-semibold">×{count}</span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Fan submitter names */}
+                {panel.data.fans.length > 0 && (
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                      Fans from {panel.name}
+                    </p>
+                    <div className="space-y-1.5">
+                      {panel.data.fans.map((f, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center justify-between px-3 py-2 bg-[var(--bg)] rounded-lg border border-[var(--border)] text-sm"
+                        >
+                          <span className="font-medium">{f.name}</span>
+                          <span className="text-xs text-[var(--text-muted)] italic truncate max-w-[160px] ml-2">
+                            {f.feeling}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {panel.data.topWords.length === 0 && panel.data.fans.length === 0 && (
+                  <p className="text-sm text-[var(--text-muted)]">No submissions yet from this country.</p>
+                )}
+              </>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
@@ -261,7 +247,7 @@ export default function WorldMap({ countryCounts }: Props) {
           style={{ background: "linear-gradient(90deg, rgba(242,101,25,0.15), rgba(242,101,25,0.8))" }}
         />
         <span>Many</span>
-        <span className="ml-2 opacity-60">· Click any country to explore</span>
+        <span className="ml-2 opacity-60">· Click any highlighted country to explore</span>
       </div>
     </div>
   );

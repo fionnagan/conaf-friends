@@ -65,6 +65,17 @@ export async function getPublicFeed(limit = 30, before?: string): Promise<Submis
   return (data ?? []) as SubmissionRow[];
 }
 
+/* ── Country name normalisation ─────────────────────────────────────────────── */
+const US_VARIANTS = new Set(["usa", "us", "u.s.", "u.s.a.", "united states of america"]);
+
+export function normalizeCountry(raw: string): string {
+  if (!raw) return raw;
+  const lower = raw.toLowerCase().trim();
+  if (US_VARIANTS.has(lower)) return "United States";
+  // Normalise common alternate spellings / casing by returning trimmed original
+  return raw.trim();
+}
+
 export async function getCountryStats(): Promise<Record<string, number>> {
   const client = getServerClient();
   if (!client) return {};
@@ -78,7 +89,9 @@ export async function getCountryStats(): Promise<Record<string, number>> {
 
   const counts: Record<string, number> = {};
   for (const { country } of data) {
-    counts[country] = (counts[country] ?? 0) + 1;
+    const canonical = normalizeCountry(country);
+    if (!canonical) continue;
+    counts[canonical] = (counts[canonical] ?? 0) + 1;
   }
   return counts;
 }
