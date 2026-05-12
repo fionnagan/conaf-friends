@@ -129,6 +129,9 @@ export async function matchYouTubeVideos(
     const cacheKey = `${episode.guestName}::${episode.pubDate}`;
     const existing = cache[cacheKey];
 
+    // Skip if manually overridden (human-verified correct video)
+    if (existing && (existing as any).manualOverride) continue;
+
     // Skip if cached within TTL
     if (existing) {
       const age = now - new Date(existing.fetchedAt).getTime();
