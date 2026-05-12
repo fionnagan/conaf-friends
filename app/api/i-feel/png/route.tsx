@@ -507,7 +507,7 @@ export async function GET(req: NextRequest) {
         {variant === 2 && (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={conanB64} width={CONAN_PX} height={CONAN_PX}
-            style={{ position: "absolute", top: "38px", right: "56px", objectFit: "contain" }}
+            style={{ position: "absolute", top: "58px", right: "56px", objectFit: "contain" }}
             alt="" />
         )}
 
@@ -535,38 +535,49 @@ export async function GET(req: NextRequest) {
         )}
 
         {/* ── Identity block: MY NAME IS → CONAN O'BRIEN'S FRIEND + country row ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center" }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
           {/* borderBottom rule — span's own border always paints behind its text */}
           <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}` }}>{name}</span>
 
-          {/* 40px gap: name rule → AND I FEEL */}
+          {/* 40px gap: name rule → [I'M FROM row for V2] → AND I FEEL */}
           <div style={{ height: "40px", display: "flex" }} />
+
+          {/* V2 only: I'M FROM [country] [flag] inline above AND I FEEL */}
+          {variant === 2 && (
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+              <span style={barlow(30, MUTED, { letterSpacing: "1.5px" })}>I&apos;M FROM</span>
+              <span style={barlow(30, MUTED, { letterSpacing: "1.5px" })}>{country.toUpperCase()}</span>
+              <span style={{ fontSize: "36px", display: "flex", lineHeight: 1 }}>{flag}</span>
+            </div>
+          )}
 
           <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
           {/* borderBottom rule */}
-          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", textAlign: "center", justifyContent: "center", borderBottom: `1px solid ${DIVIDER}` }}>
+          <span style={{ ...marker(feelSz), whiteSpace: "nowrap", ...(variant !== 2 && { textAlign: "center", justifyContent: "center" }), borderBottom: `1px solid ${DIVIDER}` }}>
             {feeling}
           </span>
 
           {/* 50px gap: feeling rule → ABOUT BEING */}
           <div style={{ height: "50px", display: "flex" }} />
 
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", gap: "4px" }}>
             <span style={barlow(LABEL_SZ)}>ABOUT BEING</span>
             <span style={barlow(LABEL_SZ)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
           </div>
 
-          {/* Country row — right-aligned within 880px content width, 30px below CONAN line */}
-          <div style={{ display: "flex", width: `${USABLE_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "30px" }}>
-            <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
-            <span style={{ fontSize: "36px", display: "flex", lineHeight: 1 }}>{flag}</span>
-            <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
-          </div>
+          {/* Country row — V3/V4 only; V2 shows country above AND I FEEL instead */}
+          {variant !== 2 && (
+            <div style={{ display: "flex", width: `${USABLE_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "30px" }}>
+              <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
+              <span style={{ fontSize: "36px", display: "flex", lineHeight: 1 }}>{flag}</span>
+              <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
+            </div>
+          )}
         </div>
 
-        {/* ── Guest section ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
+        {/* ── Guest section — V2: left-aligned, pulled 20px closer to identity block ── */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", gap: "10px", marginTop: variant === 2 ? "-20px" : "0px" }}>
           {dotsRow}
           <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
             {subtitle}
