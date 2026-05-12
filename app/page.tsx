@@ -6,7 +6,6 @@ import { motion, AnimatePresence, useMotionValue, useTransform, useReducedMotion
 import CountryCombobox from "@/components/i-feel/CountryCombobox";
 import MatchCards, { type GuestMatch } from "@/components/i-feel/MatchCards";
 import LiveFeed from "@/components/i-feel/LiveFeed";
-import TrendingPanel from "@/components/i-feel/TrendingPanel";
 import { useSessionState } from "@/lib/use-session-state";
 import wordGuests from "@/data/word-guests.json";
 import dynamic from "next/dynamic";
@@ -284,8 +283,7 @@ export default function IFeelPage() {
 
           <h1 className="font-serif text-4xl sm:text-5xl font-semibold mb-3">I Feel…</h1>
           <p className="text-[var(--text-muted)] text-base leading-relaxed max-w-md mx-auto">
-            How do you feel about being Conan O&apos;Brien&apos;s friend?
-            Describe it in three words or fewer — we&apos;ll find the guests who felt exactly the same way.
+            How do you feel about being Conan O&apos;Brien&apos;s friend? Describe it in 3 words or fewer, and we&apos;ll match you with the guests who share your CoCo energy.
           </p>
         </motion.div>
 
@@ -345,7 +343,7 @@ export default function IFeelPage() {
               }`}
             />
             <div className="mt-1.5 flex justify-end">
-              <WordBadge count={wordCount} max={5} />
+              <WordBadge count={wordCount} max={3} />
             </div>
           </div>
 
@@ -410,7 +408,7 @@ export default function IFeelPage() {
 
                   {/* Variant thumbnail grid */}
                   <div className="grid grid-cols-4 gap-2 mb-4">
-                    {[1, 2, 3, 4].map((v) => {
+                    {[4, 3, 2, 1].map((v) => {
                       const vUrl = `${pngUrl}&variant=${v}`;
                       const active = selectedVariant === v;
                       return (
@@ -460,15 +458,6 @@ export default function IFeelPage() {
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* ── Trending + Analytics ── */}
-        <section>
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-[var(--orange)] text-lg">✦</span>
-            <h2 className="font-serif text-xl font-semibold">The feeling landscape</h2>
-          </div>
-          <TrendingPanel />
-        </section>
 
         {/* ── Live Feed ── */}
         <LiveFeed />

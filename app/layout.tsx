@@ -29,17 +29,18 @@ export default function RootLayout({
           <StickyPlayer />
           <footer className="border-t border-[var(--border)] py-6 px-6 text-center text-sm text-[var(--text-muted)]">
             <p>
-              Unofficial fan project — not affiliated with Team Coco or Conan O&apos;Brien.{" "}
+              Built by a fan with 🧡 &middot;{" "}
+              Data from the{" "}
               <a
-                href="https://www.teamcoco.com"
+                href="https://feeds.simplecast.com/dHoohVNH"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-[var(--orange)]"
               >
-                Support the real show &rarr;
+                Conan O&apos;Brien Needs a Friend RSS feed
               </a>
+              {" "}&middot; Not affiliated with Team Coco or Earwolf.
             </p>
-            <p className="mt-1">Made with love by a fan. Data from public sources.</p>
           </footer>
         </PlayerProvider>
       </body>
