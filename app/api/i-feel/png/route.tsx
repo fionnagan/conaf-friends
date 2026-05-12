@@ -233,10 +233,9 @@ export async function GET(req: NextRequest) {
   const guestImgs = await fetchGuestPhotos(topGuests);
 
   /* ── Layout constants ── */
-  const LABEL_SZ   = 48;   // "MY NAME IS" / "AND I FEEL" — ref 47.4px
-  const ABOUT_SZ   = 62;   // "ABOUT BEING CONAN O'BRIEN'S FRIEND"
+  const LABEL_SZ   = 62;   // "MY NAME IS" / "AND I FEEL" / "ABOUT BEING" / "CONAN O'BRIEN'S FRIEND"
   const GSECT_SZ   = 30;   // guest section subtitle — 30px per design system spec
-  const GNAME_MAX  = 44;   // max per line — full name split across 2 lines
+  const GNAME_MAX  = 24;   // max per line — 24px per design system spec
   const GNAME_MIN  = 14;   // min per line — allows long names like "TRACEE ELLIS"
   const GQUOTE_MAX = 24;
   const GQUOTE_MIN = 15;
@@ -245,9 +244,9 @@ export async function GET(req: NextRequest) {
   const ATTR_SZ    = 20;   // footer — 20px locked per design system spec
   const CONAN_PX   = 160;
 
-  // No minimum on either — scales down as needed, capped at 150px
-  const nameSz = Math.min(150, Math.floor(USABLE_W / (Math.max(name.length, 1) * MARKER_CW)));
-  const feelSz = Math.min(150, Math.floor(USABLE_W / (Math.max(feeling.length, 1) * MARKER_CW)));
+  // No minimum on either — scales down as needed, capped at 140px per design system spec
+  const nameSz = Math.min(140, Math.floor(USABLE_W / (Math.max(name.length, 1) * MARKER_CW)));
+  const feelSz = Math.min(140, Math.floor(USABLE_W / (Math.max(feeling.length, 1) * MARKER_CW)));
 
   /* ── Style helpers ── */
   const barlow = (sz: number, color = BLACK, extra: React.CSSProperties = {}): React.CSSProperties => ({
@@ -281,7 +280,7 @@ export async function GET(req: NextRequest) {
         const [nameLine1, nameLine2] = splitGuestName(fullName);
         const longestLine = nameLine1.length >= (nameLine2?.length ?? 0) ? nameLine1 : nameLine2;
         const feelPhrase  = trimToWords(g.feeling_phrase_normalized, 5);
-        const gnameSz     = scaledBarlowSize(longestLine,    GNAME_MAX,  GNAME_MIN);
+        const gnameSz     = scaledBarlowSize(longestLine,    GNAME_MAX,  GNAME_MIN, GUEST_TW - 12);
         const gquoteSz    = scaledBarlowSize(feelPhrase,     GQUOTE_MAX, GQUOTE_MIN);
         return (
           <div key={g.guest_id} style={{
@@ -535,28 +534,35 @@ export async function GET(req: NextRequest) {
           <div style={{ display: "flex", height: "40px" }} />
         )}
 
-        {/* ── Name section ── */}
+        {/* ── Identity block: MY NAME IS → CONAN O'BRIEN'S FRIEND + country row ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <span style={barlow(LABEL_SZ)}>MY NAME IS</span>
+          {/* borderBottom rule — span's own border always paints behind its text */}
           <span style={{ ...marker(nameSz), whiteSpace: "nowrap", borderBottom: `1px solid ${DIVIDER}` }}>{name}</span>
-        </div>
 
-        {/* ── Feeling section ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <span style={barlow(LABEL_SZ)}>I&apos;M FROM</span>
-            <span style={{ fontSize: `${LABEL_SZ + 12}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
-            <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
-          </div>
+          {/* 40px gap: name rule → AND I FEEL */}
+          <div style={{ height: "40px", display: "flex" }} />
+
+          <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
+          {/* borderBottom rule */}
           <span style={{ ...marker(feelSz), whiteSpace: "nowrap", textAlign: "center", justifyContent: "center", borderBottom: `1px solid ${DIVIDER}` }}>
             {feeling}
           </span>
-        </div>
 
-        {/* ── About section ── */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
-          <span style={barlow(ABOUT_SZ)}>ABOUT BEING</span>
-          <span style={barlow(ABOUT_SZ)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
+          {/* 50px gap: feeling rule → ABOUT BEING */}
+          <div style={{ height: "50px", display: "flex" }} />
+
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+            <span style={barlow(LABEL_SZ)}>ABOUT BEING</span>
+            <span style={barlow(LABEL_SZ)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
+          </div>
+
+          {/* Country row — right-aligned within 880px content width, 30px below CONAN line */}
+          <div style={{ display: "flex", width: `${USABLE_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "30px" }}>
+            <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
+            <span style={{ fontSize: "36px", display: "flex", lineHeight: 1 }}>{flag}</span>
+            <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
+          </div>
         </div>
 
         {/* ── Guest section ── */}
