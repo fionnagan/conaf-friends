@@ -286,8 +286,7 @@ export async function GET(req: NextRequest) {
   const GSECT_SZ   = 30;   // guest section subtitle — 30px per design system spec
   const GNAME_MAX  = 24;   // max per line — 24px per design system spec
   const GNAME_MIN  = 14;   // min per line — allows long names like "TRACEE ELLIS"
-  const GQUOTE_MAX = 24;
-  const GQUOTE_MIN = 15;
+  // feeling phrase: max 18px / min 12px — sized for 2-line wrap (hardcoded in gquoteSz formula)
   const PHOTO_PX   = 100;
   const LOGO_PX    = 170;
   const ATTR_SZ    = 20;   // footer — 20px locked per design system spec
