@@ -584,18 +584,13 @@ export async function GET(req: NextRequest) {
           {/* 40px gap: name rule → label row → AND I FEEL */}
           <div style={{ height: "40px", display: "flex" }} />
 
-          {/* V2: "I'M FROM [FLAG] AND I FEEL" — flag only (no country name), all at LABEL_SZ = 62px
-              V3/V4: plain "AND I FEEL" label */}
-          {variant === 2 ? (
-            <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-              <span style={barlow(LABEL_SZ)}>I&apos;M FROM</span>
-              {/* flag at same size as labels so the row height = 62px, matching MY NAME IS */}
-              <span style={{ fontSize: `${LABEL_SZ}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
-              <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
-            </div>
-          ) : (
+          {/* V2/V3/V4: "I'M FROM [FLAG] AND I FEEL" — flag only (no country name), all at LABEL_SZ = 62px */}
+          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+            <span style={barlow(LABEL_SZ)}>I&apos;M FROM</span>
+            {/* flag at same size as labels so the row height = 62px, matching MY NAME IS */}
+            <span style={{ fontSize: `${LABEL_SZ}px`, display: "flex", lineHeight: 1 }}>{flag}</span>
             <span style={barlow(LABEL_SZ)}>AND I FEEL</span>
-          )}
+          </div>
           {/* borderBottom rule — 880px width on all V2/3/4 so underline spans margin-to-margin */}
           <span style={{ ...marker(feelSz), whiteSpace: "nowrap", ...(variant !== 2 && { textAlign: "center", justifyContent: "center" }), borderBottom: `1px solid ${DIVIDER}`, width: `${USABLE_W}px` }}>
             {feeling}
@@ -609,14 +604,7 @@ export async function GET(req: NextRequest) {
             <span style={barlow(LABEL_SZ)}>CONAN O&apos;BRIEN&apos;S FRIEND</span>
           </div>
 
-          {/* Country row — V4 only; V2 shows flag above AND I FEEL, V3 removed entirely */}
-          {variant === 4 && (
-            <div style={{ display: "flex", width: `${USABLE_W}px`, justifyContent: "flex-end", alignItems: "center", gap: "10px", marginTop: "30px" }}>
-              <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>– FROM</span>
-              <span style={{ fontSize: "36px", display: "flex", lineHeight: 1 }}>{flag}</span>
-              <span style={{ fontFamily: "Gotham", fontSize: "30px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", display: "flex" }}>{country.toUpperCase()}</span>
-            </div>
-          )}
+          {/* Country row removed — flag now lives in the "I'M FROM [FLAG] AND I FEEL" label row for all variants */}
         </div>
 
         {/* ── Guest section — V2: left-aligned, pulled 20px closer to identity block ── */}
