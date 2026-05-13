@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-13T14:04:53.239Z",
-  "totalGuests": 356,
-  "totalAppearances": 570,
+  "generatedAt": "2026-05-13T14:46:55.129Z",
+  "totalGuests": 357,
+  "totalAppearances": 572,
   "guests": [
     {
       "id": "seth-rogen",
@@ -3124,6 +3124,91 @@
         "originDepth": 8,
         "visitType": 15,
         "gapResilience": 8
+      },
+      "relatedGuests": [
+        "seth-rogen",
+        "andy-richter",
+        "bill-burr",
+        "tina-fey",
+        "sarah-silverman"
+      ]
+    },
+    {
+      "id": "zach-galifianakis",
+      "name": "Zach Galifianakis",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Zach_Galifianakis_2012_%28cropped%29.jpg",
+      "bio": {
+        "entity": {
+          "name": "Zach Galifianakis",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Zach_Galifianakis",
+          "confidence": 1
+        },
+        "profession": [
+          "comedian",
+          "actor",
+          "writer"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2019."
+        },
+        "description": "Zachary Knight Galifianakis is an American comedian, actor and writer. First appeared on Conan O'Brien Needs a Friend in 2019.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Zach_Galifianakis"
+        ],
+        "enrichedAt": "2026-04-30T21:18:41.293Z"
+      },
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2019-10-28",
+          "episodeTitle": "Zach Galifianakis",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/zach-galifianakis",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/146b02b9-8b18-4780-ba2a-27baee0ef4dd/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=146b02b9-8b18-4780-ba2a-27baee0ef4dd&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/146b02b9-8b18-4780-ba2a-27baee0ef4dd/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null,
+          "coldOpenWord": "cautious",
+          "coldOpenSentiment": "neutral"
+        },
+        {
+          "era": "podcast",
+          "date": "2022-01-10",
+          "episodeTitle": "Zach Galifianakis Returns",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/zach-galifianakis-returns",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/3aa2b1b4-f62e-4440-b4d3-9cfb20dec81b/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=3aa2b1b4-f62e-4440-b4d3-9cfb20dec81b&feed=dHoohVNH",
+          "promoVisit": false,
+          "youtubeVideoId": null
+        },
+        {
+          "era": "podcast",
+          "date": "2026-05-04",
+          "episodeTitle": "Zach Galifianakis Returns Again",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/zach-galifianakis-returns-again",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/deb9e22c-9759-4738-ad58-48fc5fe4333d/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=deb9e22c-9759-4738-ad58-48fc5fe4333d&feed=dHoohVNH",
+          "promoVisit": true,
+          "youtubeVideoId": null,
+          "coldOpenWord": "Zach Galifianakis",
+          "coldOpenSentiment": "affectionate-absurd"
+        }
+      ],
+      "friendshipScore": 66,
+      "friendshipLabel": "Comedy Soulmate",
+      "scoreBreakdown": {
+        "appearances": 18,
+        "coldOpenSentiment": 19,
+        "originDepth": 8,
+        "visitType": 12,
+        "gapResilience": 9
       },
       "relatedGuests": [
         "seth-rogen",
@@ -7212,80 +7297,6 @@
       ]
     },
     {
-      "id": "zach-galifianakis",
-      "name": "Zach Galifianakis",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Zach_Galifianakis_2012_%28cropped%29.jpg",
-      "bio": {
-        "entity": {
-          "name": "Zach Galifianakis",
-          "wikipedia_url": "https://en.wikipedia.org/wiki/Zach_Galifianakis",
-          "confidence": 1
-        },
-        "profession": [
-          "comedian",
-          "actor",
-          "writer"
-        ],
-        "known_for": [],
-        "recent_work": [],
-        "conan_connection": {
-          "type": "inferred",
-          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2019."
-        },
-        "description": "Zachary Knight Galifianakis is an American comedian, actor and writer. First appeared on Conan O'Brien Needs a Friend in 2019.",
-        "confidence": 1,
-        "needs_review": false,
-        "sources": [
-          "https://en.wikipedia.org/wiki/Zach_Galifianakis"
-        ],
-        "enrichedAt": "2026-04-30T21:18:41.293Z"
-      },
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2019-10-28",
-          "episodeTitle": "Zach Galifianakis",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/zach-galifianakis",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/146b02b9-8b18-4780-ba2a-27baee0ef4dd/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=146b02b9-8b18-4780-ba2a-27baee0ef4dd&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/146b02b9-8b18-4780-ba2a-27baee0ef4dd/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null,
-          "coldOpenWord": "cautious",
-          "coldOpenSentiment": "neutral"
-        },
-        {
-          "era": "podcast",
-          "date": "2022-01-10",
-          "episodeTitle": "Zach Galifianakis Returns",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/zach-galifianakis-returns",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/3aa2b1b4-f62e-4440-b4d3-9cfb20dec81b/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=3aa2b1b4-f62e-4440-b4d3-9cfb20dec81b&feed=dHoohVNH",
-          "promoVisit": false,
-          "youtubeVideoId": null
-        }
-      ],
-      "friendshipScore": 58,
-      "friendshipLabel": "Beloved Acquaintance",
-      "scoreBreakdown": {
-        "appearances": 12,
-        "coldOpenSentiment": 15,
-        "originDepth": 8,
-        "visitType": 15,
-        "gapResilience": 8
-      },
-      "relatedGuests": [
-        "seth-rogen",
-        "andy-richter",
-        "bill-burr",
-        "tina-fey",
-        "sarah-silverman"
-      ]
-    },
-    {
       "id": "dan-levy",
       "name": "Dan Levy",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Dan_Levy_at_the_2025_Toronto_International_Film_Festival_02_%28cropped_2%29.jpg/500px-Dan_Levy_at_the_2025_Toronto_International_Film_Festival_02_%28cropped_2%29.jpg",
@@ -8126,6 +8137,9 @@
         "visitType": 15,
         "gapResilience": 5
       },
+      "mentionedGuests": [
+        "Billie Eilish"
+      ],
       "relatedGuests": [
         "seth-rogen",
         "andy-richter",
@@ -9850,6 +9864,46 @@
         "coldOpenSentiment": 25,
         "originDepth": 8,
         "visitType": 8,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "seth-rogen",
+        "andy-richter",
+        "bill-burr",
+        "tina-fey",
+        "sarah-silverman"
+      ]
+    },
+    {
+      "id": "billie-eilish",
+      "name": "Billie Eilish",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2026-05-11",
+          "episodeTitle": "Billie Eilish Returns",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/billie-eilish-returns",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/bf49f782-a780-4ca7-9a37-700dd20506c5/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=bf49f782-a780-4ca7-9a37-700dd20506c5&feed=dHoohVNH",
+          "promoVisit": false,
+          "youtubeVideoId": "1dW0-WdZkLY",
+          "coldOpenWord": "really good",
+          "coldOpenSentiment": "neutral"
+        }
+      ],
+      "friendshipScore": 49,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 8,
+        "visitType": 15,
         "gapResilience": 5
       },
       "relatedGuests": [
