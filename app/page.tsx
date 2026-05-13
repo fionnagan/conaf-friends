@@ -313,7 +313,7 @@ export default function IFeelPage() {
       // 🎉 Celebration: chyron + confetti
       setShowChyron(true);
       if (chyronTimerRef.current) clearTimeout(chyronTimerRef.current);
-      chyronTimerRef.current = setTimeout(() => setShowChyron(false), 4000);
+      chyronTimerRef.current = setTimeout(() => setShowChyron(false), 5000);
 
       // Burst of orange + white confetti from top-center
       const fire = (particleRatio: number, opts: confetti.Options) =>
@@ -570,31 +570,6 @@ export default function IFeelPage() {
                 </div>
               )}
 
-              <span className="text-[var(--border)] hidden sm:inline">·</span>
-
-              {/* Top country */}
-              {analyticsData.topCountry && (
-                <div className="flex items-center gap-1.5 text-[var(--text-muted)]">
-                  <span className="text-base leading-none">{countryFlag(analyticsData.topCountry.country)}</span>
-                  <span>
-                    <span className="font-medium text-[var(--text)]">{analyticsData.topCountry.country}</span>
-                    {" "}leads with{" "}
-                    <span className="font-medium text-[var(--orange)]">{analyticsData.topCountry.count}</span>
-                  </span>
-                </div>
-              )}
-
-              {/* Most popular feeling */}
-              {analyticsData.topFeeling && (
-                <>
-                  <span className="text-[var(--border)] hidden sm:inline">·</span>
-                  <div className="flex items-center gap-1.5 text-[var(--text-muted)]">
-                    <span>most shared:</span>
-                    <span className="font-medium text-[var(--text)] italic">&ldquo;{analyticsData.topFeeling.word}&rdquo;</span>
-                    <span className="text-[var(--orange)] font-semibold">×{analyticsData.topFeeling.count}</span>
-                  </div>
-                </>
-              )}
             </div>
           )}
 
@@ -672,32 +647,24 @@ export default function IFeelPage() {
               />
 
               <div className="relative flex items-center gap-4 p-5">
-                {/* Favicon / icon */}
+                {/* Conan outline icon */}
                 <div
-                  className="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden border border-white/10 flex items-center justify-center"
-                  style={{ background: "rgba(255,255,255,0.06)" }}
+                  className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center border border-white/10"
+                  style={{ background: "rgba(242,101,25,0.12)" }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="https://conafmap.vercel.app/favicon.ico"
-                    alt="CONAF Map icon"
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 object-contain"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
+                  <Image
+                    src="/conan_outline.png"
+                    alt="Conan O'Brien"
+                    width={44}
+                    height={44}
+                    className="w-11 h-11 object-contain drop-shadow-[0_0_6px_rgba(242,101,25,0.5)]"
+                    style={{ filter: "brightness(0) saturate(100%) invert(1)" }}
                   />
                 </div>
 
                 {/* Text */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-0.5">
-                    <p className="font-semibold text-base text-[var(--text)]">CONAF Map</p>
-                    <span className="text-[10px] uppercase tracking-widest font-semibold px-1.5 py-0.5 rounded bg-[var(--orange)]/15 text-[var(--orange)] border border-[var(--orange)]/20">
-                      Fan Project
-                    </span>
-                  </div>
+                  <p className="font-semibold text-base text-[var(--text)] mb-0.5">CONAF Map</p>
                   <p className="text-sm text-[var(--text-muted)] leading-snug">
                     Every fan caller, mapped. Explore all the fans who&apos;ve connected with Conan from around the world.
                   </p>
