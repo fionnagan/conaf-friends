@@ -536,7 +536,7 @@ export default function IFeelPage() {
                       <div className="h-5 bg-[var(--bg2)] rounded w-48 mb-4 animate-pulse" />
                       <MatchSkeleton />
                     </motion.div>
-                  ) : results?.matches.length ? (
+                  ) : results ? (
                     <motion.div key="matches" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
                       <MatchCards matches={results.matches} feeling={feeling} />
                     </motion.div>
