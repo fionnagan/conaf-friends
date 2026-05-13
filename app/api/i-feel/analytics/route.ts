@@ -4,8 +4,8 @@ import coldOpensData from "@/data/cold-opens.json";
 import { getCountryStats, getTrendingFeelings } from "@/lib/submissions";
 import { getServerClient } from "@/lib/supabase";
 
-// Cache analytics for 5 minutes
-export const revalidate = 300;
+// No server-side cache — always fetch fresh from Supabase
+export const revalidate = 0;
 
 const { records } = coldOpensData as {
   vocab: string[];

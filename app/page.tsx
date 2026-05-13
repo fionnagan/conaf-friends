@@ -270,9 +270,9 @@ export default function IFeelPage() {
   const tooMany     = wordCount > 3;
   const canSubmit   = !loading && !tooMany && name.trim() && country && feeling.trim();
 
-  // Prefetch analytics for map/constellation
-  useEffect(() => {
-    fetch("/api/i-feel/analytics")
+  // Fetch analytics — called on mount and after each successful submission
+  const refreshAnalytics = useCallback(() => {
+    fetch("/api/i-feel/analytics", { cache: "no-store" })
       .then((r) => r.json())
       .then((d) => setAnalyticsData({
           countryCounts: d.countryCounts ?? {},
@@ -285,6 +285,8 @@ export default function IFeelPage() {
         }))
       .catch(() => {});
   }, []);
+
+  useEffect(() => { refreshAnalytics(); }, [refreshAnalytics]);
 
   // Restore scroll position when returning from guest profile nav
   useEffect(() => {
@@ -323,6 +325,9 @@ export default function IFeelPage() {
       setPngUrl(`/api/i-feel/png?${params}`);
       setSelectedVariant(1);
 
+      // Refresh stats so the new submission is reflected immediately
+      refreshAnalytics();
+
       // 🎉 Celebration: chyron + confetti
       setChyronSuffix(pick(CHYRON_SUFFIXES));
       setShowChyron(true);
@@ -344,7 +349,7 @@ export default function IFeelPage() {
     } finally {
       setLoading(false);
     }
-  }, [name, country, feeling, tooMany, sessionId, setResults, setPngUrl]);
+  }, [name, country, feeling, tooMany, sessionId, setResults, setPngUrl, refreshAnalytics]);
 
   return (
     <>
