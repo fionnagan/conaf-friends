@@ -129,7 +129,9 @@ export function merge(
     if (!ep.guestName || ep.isFanSegment || ep.isStaffEpisode) continue;
 
     const splitConfig = guestSplits[ep.guestName];
-    const cacheKey = `${ep.guestName}::${ep.pubDate}`;
+    // Always normalise to ISO-date key so it aligns with youtube-matches.json
+    const epISODate = ep.pubDate ? new Date(ep.pubDate).toISOString().substring(0, 10) : epDate;
+    const cacheKey = `${ep.guestName}::${epISODate}`;
     const epDate = ep.pubDate
       ? new Date(ep.pubDate).toISOString().substring(0, 10)
       : '2018-01-01';
@@ -147,7 +149,7 @@ export function merge(
       // Normalize episode to a canonical guest name (e.g. "Martin Short Live From SiriusXM NY" → "Martin Short")
       const name = normalizeGuestName(splitConfig.normalizeAs);
       const guest = getGuest(name);
-      const ytKey = `${splitConfig.normalizeAs}::${ep.pubDate}`;
+      const ytKey = `${splitConfig.normalizeAs}::${epISODate}`;
       const ytMatch = youtubeCache[ytKey] || youtubeCache[cacheKey];
       const appearance: Appearance = {
         ...baseAppearance,
@@ -161,7 +163,7 @@ export function merge(
       for (const splitGuest of splitConfig.split) {
         const name = normalizeGuestName(splitGuest.name);
         const guest = getGuest(name);
-        const ytKey = `${splitGuest.name}::${ep.pubDate}`;
+        const ytKey = `${splitGuest.name}::${epISODate}`;
         const ytMatch = youtubeCache[ytKey] || youtubeCache[cacheKey];
         const appearance: Appearance = {
           ...baseAppearance,

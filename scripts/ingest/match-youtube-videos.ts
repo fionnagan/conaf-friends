@@ -19,6 +19,27 @@ function isClip(videoTitle: string): boolean {
   return CLIP_MARKERS.some((m) => t.includes(m));
 }
 
+// Normalize any date string (RFC 2822 or ISO) to YYYY-MM-DD
+function toISODate(dateStr: string): string {
+  if (!dateStr) return '';
+  try {
+    return new Date(dateStr).toISOString().substring(0, 10);
+  } catch {
+    return '';
+  }
+}
+
+// Normalise a raw cache key so both RFC-2822 and ISO pubDates map to the same string.
+// e.g. "Denis Leary::Mon, 23 Feb 2026 05:05:00 +0000"  →  "Denis Leary::2026-02-23"
+//      "Denis Leary::2026-02-23"                        →  "Denis Leary::2026-02-23"
+function normaliseCacheKey(key: string): string {
+  const sep = key.lastIndexOf('::');
+  if (sep === -1) return key;
+  const guest = key.substring(0, sep);
+  const date  = key.substring(sep + 2);
+  return `${guest}::${toISODate(date) || date}`;
+}
+
 // Load committed manual overrides (persists across CI runs)
 function loadManualOverrides(): Record<string, string> {
   try {
@@ -140,14 +161,22 @@ export async function matchYouTubeVideos(
     return {};
   }
 
-  const cache = readCache<YouTubeCache>(CACHE_FILE) || {};
+  const rawCache = readCache<YouTubeCache>(CACHE_FILE) || {};
+  // Migrate any legacy RFC-2822 keys → ISO-date keys in one pass
+  const cache: YouTubeCache = {};
+  for (const [k, v] of Object.entries(rawCache)) {
+    cache[normaliseCacheKey(k)] = v;
+  }
+
   let searchCount = 0;
   let newMatches = 0;
   const now = Date.now();
 
-  // Seed cache with manually verified overrides (committed file)
+  // Seed cache with manually verified overrides (committed file).
+  // Keys in the overrides file already use ISO dates — normalise just in case.
   const manualOverrides = loadManualOverrides();
   for (const [key, videoId] of Object.entries(manualOverrides)) {
+    const normKey = normaliseCacheKey(key);
     const entry: any = {
       videoId,
       fetchedAt: new Date().toISOString(),
@@ -156,7 +185,7 @@ export async function matchYouTubeVideos(
       channelTitle: 'team coco',
       manualOverride: true,
     };
-    cache[key] = entry;
+    cache[normKey] = entry;
   }
 
   const guestEpisodes = episodes.filter(
@@ -168,7 +197,7 @@ export async function matchYouTubeVideos(
   for (const episode of guestEpisodes) {
     if (!episode.guestName) continue;
 
-    const cacheKey = `${episode.guestName}::${episode.pubDate}`;
+    const cacheKey = `${episode.guestName}::${toISODate(episode.pubDate ?? '')}`;
     const existing = cache[cacheKey];
 
     // Skip if manually overridden (human-verified correct video)
