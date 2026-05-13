@@ -35,8 +35,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ingest cache (large, not needed for build)
+# ingest cache (large files — not needed for build)
 scripts/cache/
+# …except the YouTube match index — this IS committed and updated by CI
+!scripts/cache/youtube-matches.json
 
 # claude memory
 .claude/
