@@ -8,7 +8,6 @@ import CountryCombobox from "@/components/i-feel/CountryCombobox";
 import MatchCards, { type GuestMatch } from "@/components/i-feel/MatchCards";
 import LiveFeed from "@/components/i-feel/LiveFeed";
 import { useSessionState } from "@/lib/use-session-state";
-import { countryFlag } from "@/lib/country-flags";
 import dynamic from "next/dynamic";
 
 // Lazy-load heavy visualizations
@@ -217,6 +216,19 @@ function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+const CHYRON_SUFFIXES = [
+  "IS NOW A CERTIFIED FRIEND",
+  "HAS BEEN OFFICIALLY BEFRIENDED",
+  "IS CONAN'S NEW BEST FRIEND",
+  "IS NOW IN THE FRIEND ZONE (GOOD ONE)",
+  "HAS BEEN CLEARED FOR FRIENDSHIP",
+  "IS EMOTIONALLY PREPARED TO BE CONAN'S FRIEND",
+  "IS NOW PART OF THE INNER CIRCLE",
+  "HAS BEEN APPROVED BY SONA",
+  "IS CONAN'S FRIEND NOW WHETHER HE LIKES IT OR NOT",
+  "HAS ACHIEVED PEAK CONAN ENERGY",
+];
+
 /* ── Main page ──────────────────────────────────────────────────────────────── */
 export default function IFeelPage() {
   // Persisted state — survives guest profile nav + back button
@@ -246,6 +258,7 @@ export default function IFeelPage() {
     topFeeling: { word: string; count: number } | null;
   } | null>(null);
   const [showChyron, setShowChyron] = useState(false);
+  const [chyronSuffix, setChyronSuffix] = useState("");
   const chyronTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const resultsRef = useRef<HTMLDivElement>(null);
@@ -311,6 +324,7 @@ export default function IFeelPage() {
       setSelectedVariant(1);
 
       // 🎉 Celebration: chyron + confetti
+      setChyronSuffix(pick(CHYRON_SUFFIXES));
       setShowChyron(true);
       if (chyronTimerRef.current) clearTimeout(chyronTimerRef.current);
       chyronTimerRef.current = setTimeout(() => setShowChyron(false), 5000);
@@ -702,7 +716,7 @@ export default function IFeelPage() {
                   Breaking News · The Friend Registry
                 </p>
                 <p className="text-base sm:text-lg font-bold uppercase tracking-wide leading-tight truncate">
-                  {name.trim() || "YOU"}{country ? ` from ${country}` : ""} IS NOW A CERTIFIED FRIEND
+                  {name.trim() || "YOU"}{country ? ` from ${country}` : ""} {chyronSuffix}
                 </p>
               </div>
               <span className="text-3xl flex-shrink-0">🧡</span>

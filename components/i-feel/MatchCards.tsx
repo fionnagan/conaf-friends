@@ -25,7 +25,29 @@ function initials(name: string) {
 
 export default function MatchCards({ matches, feeling }: Props) {
   const { t, stagger } = useMotionConfig();
-  if (!matches.length) return null;
+
+  if (!matches.length) {
+    return (
+      <motion.section
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={t({ duration: 0.5, ease: "easeOut" })}
+        className="space-y-3"
+      >
+        <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)]">
+          Guest match
+        </p>
+        <div className="p-5 rounded-2xl bg-[var(--bg2)] border border-[var(--border)] text-center space-y-2">
+          <p className="text-3xl">🤷</p>
+          <p className="font-semibold text-base">No match found</p>
+          <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+            &ldquo;{feeling}&rdquo; is so specific, not even Conan&apos;s guests have been there.
+            You may be his most unique friend yet.
+          </p>
+        </div>
+      </motion.section>
+    );
+  }
   const top = matches[0];
 
   return (
