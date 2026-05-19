@@ -28,7 +28,10 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: npx tsx scripts/ingest/index.ts
+        run: |
+          # Always fetch fresh RSS — delete stale cache so new episodes aren't missed
+          rm -f scripts/cache/podcast-episodes.json
+          npx tsx scripts/ingest/index.ts
 
       - name: Commit updated data files
         run: |

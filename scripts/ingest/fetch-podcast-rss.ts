@@ -4,6 +4,7 @@ import type { RawPodcastEpisode, ColdOpenSentiment } from '../../lib/types';
 
 const RSS_URL = 'https://feeds.simplecast.com/dHoohVNH';
 const CACHE_FILE = 'podcast-episodes.json';
+const CACHE_TTL_MS = 6 * 24 * 60 * 60 * 1000; // 6 days — always re-fetch on weekly CI run
 
 const FAN_PATTERNS = [
   /conan\s+o.?brien\s+needs\s+a\s+fan/i,
@@ -149,10 +150,17 @@ function extractGuestName(title: string, plainText: string): string | undefined 
 }
 
 export async function fetchPodcastRSS(): Promise<RawPodcastEpisode[]> {
+  // Check cache age via file mtime — re-fetch if older than TTL
+  const cachePath = require('path').join(require('path').dirname(require.main?.filename ?? __filename), '..', 'cache', CACHE_FILE);
   const cached = readCache<RawPodcastEpisode[]>(CACHE_FILE);
   if (cached && cached.length > 0) {
-    console.log(`[RSS] Using cached ${cached.length} episodes`);
-    return cached;
+    const stat = require('fs').statSync(cachePath, { throwIfNoEntry: false });
+    const ageMs = stat ? Date.now() - stat.mtimeMs : Infinity;
+    if (ageMs < CACHE_TTL_MS) {
+      console.log(`[RSS] Using cached ${cached.length} episodes (age ${Math.round(ageMs / 3600000)}h)`);
+      return cached;
+    }
+    console.log(`[RSS] Cache expired (age ${Math.round(ageMs / 3600000)}h), re-fetching...`);
   }
 
   console.log('[RSS] Fetching Simplecast RSS feed...');
