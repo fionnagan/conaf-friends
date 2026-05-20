@@ -42,6 +42,163 @@ function buildFilename(name: string, feeling: string): string {
   return `CONAF-${n}${f ? "-" + f : ""}.png`;
 }
 
+/* ── Card picker: thumbnail grid (desktop) + swipe carousel (mobile) ─────────── */
+function CardPicker({
+  pngUrl,
+  selectedVariant,
+  setSelectedVariant,
+  feeling,
+  name,
+}: {
+  pngUrl: string;
+  selectedVariant: number;
+  setSelectedVariant: (v: number) => void;
+  feeling: string;
+  name: string;
+}) {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
+
+  // Sync carousel scroll position → selectedVariant
+  function handleCarouselScroll() {
+    const el = carouselRef.current;
+    if (!el) return;
+    const idx = Math.round(el.scrollLeft / el.offsetWidth);
+    setSelectedVariant(idx + 1);
+  }
+
+  // Sync selectedVariant → carousel scroll position (when changed via dots)
+  function scrollToVariant(v: number) {
+    const el = carouselRef.current;
+    if (!el) return;
+    el.scrollTo({ left: (v - 1) * el.offsetWidth, behavior: "smooth" });
+    setSelectedVariant(v);
+  }
+
+  return (
+    <>
+      {/* ── Desktop: animated thumbnail grid ── */}
+      <div className="hidden sm:block">
+        <h2 className="font-serif text-xl font-semibold mb-0.5">Pick your style</h2>
+        <p className="text-sm text-[var(--text-muted)] mb-3">
+          4 designs · tap one to switch before sharing
+        </p>
+
+        <div className="grid grid-cols-4 gap-2 mb-4">
+          {[1, 2, 3, 4].map((v, i) => {
+            const vUrl = `${pngUrl}&variant=${v}`;
+            const active = selectedVariant === v;
+            return (
+              <motion.button
+                key={v}
+                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={reduced
+                  ? { duration: 0 }
+                  : { delay: i * 0.08, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                onClick={() => setSelectedVariant(v)}
+                className={`relative rounded-xl overflow-hidden border-2 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--orange)] ${
+                  active
+                    ? "border-[var(--orange)] shadow-lg shadow-[var(--orange)]/20"
+                    : "border-[var(--border)] hover:border-[var(--orange)]/50"
+                }`}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={vUrl} alt={`Design ${v}`} className="w-full block" />
+                {active ? (
+                  <div className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-[var(--orange)] flex items-center justify-center text-white text-[10px] font-bold shadow">
+                    ✓
+                  </div>
+                ) : (
+                  <div className="absolute bottom-1 right-1.5 text-[9px] font-semibold text-white/60 bg-black/40 px-1 py-0.5 rounded">
+                    {v}
+                  </div>
+                )}
+              </motion.button>
+            );
+          })}
+        </div>
+
+        <ShareCard pngUrl={`${pngUrl}&variant=${selectedVariant}`} />
+        <ShareButtons pngUrl={`${pngUrl}&variant=${selectedVariant}`} feeling={feeling} name={name} />
+      </div>
+
+      {/* ── Mobile: swipe carousel ── */}
+      <div className="sm:hidden">
+        <div className="flex items-baseline justify-between mb-2">
+          <h2 className="font-serif text-xl font-semibold">Pick your style</h2>
+          <span className="text-xs text-[var(--text-muted)]">swipe for more</span>
+        </div>
+
+        {/* Scroll-snap carousel */}
+        <div
+          ref={carouselRef}
+          onScroll={handleCarouselScroll}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-1 -mx-4 px-4 scrollbar-hide"
+        >
+          {[1, 2, 3, 4].map((v) => {
+            const vUrl = `${pngUrl}&variant=${v}`;
+            const active = selectedVariant === v;
+            return (
+              <div
+                key={v}
+                className="flex-none w-full snap-center"
+              >
+                <div
+                  className={`rounded-2xl overflow-hidden border-2 transition-all ${
+                    active
+                      ? "border-[var(--orange)] shadow-lg shadow-[var(--orange)]/20"
+                      : "border-[var(--border)]"
+                  }`}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={vUrl} alt={`Design ${v}`} className="w-full block" />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Dot indicators + counter */}
+        <div className="flex items-center justify-center gap-3 mt-3 mb-4">
+          <button
+            onClick={() => scrollToVariant(Math.max(1, selectedVariant - 1))}
+            disabled={selectedVariant === 1}
+            className="text-[var(--text-muted)] disabled:opacity-30 px-1"
+            aria-label="Previous design"
+          >
+            ←
+          </button>
+          <div className="flex gap-1.5">
+            {[1, 2, 3, 4].map((v) => (
+              <button
+                key={v}
+                onClick={() => scrollToVariant(v)}
+                aria-label={`Design ${v}`}
+                className={`rounded-full transition-all ${
+                  selectedVariant === v
+                    ? "w-5 h-2 bg-[var(--orange)]"
+                    : "w-2 h-2 bg-[var(--border)]"
+                }`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={() => scrollToVariant(Math.min(4, selectedVariant + 1))}
+            disabled={selectedVariant === 4}
+            className="text-[var(--text-muted)] disabled:opacity-30 px-1"
+            aria-label="Next design"
+          >
+            →
+          </button>
+        </div>
+
+        <ShareButtons pngUrl={`${pngUrl}&variant=${selectedVariant}`} feeling={feeling} name={name} />
+      </div>
+    </>
+  );
+}
+
 /* ── Share buttons (Web Share API + download) ───────────────────────────────── */
 function ShareButtons({ pngUrl, feeling, name }: { pngUrl: string; feeling: string; name: string }) {
   const [copied, setCopied] = useState(false);
@@ -491,49 +648,7 @@ export default function IFeelPage() {
               className="space-y-12"
             >
 
-              {/* 1. Variant picker + share card */}
-              {pngUrl && (
-                <motion.section
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  <h2 className="font-serif text-xl font-semibold mb-3">Your card</h2>
-
-                  {/* Variant thumbnail grid */}
-                  <div className="grid grid-cols-4 gap-2 mb-4">
-                    {[1, 2, 3, 4].map((v) => {
-                      const vUrl = `${pngUrl}&variant=${v}`;
-                      const active = selectedVariant === v;
-                      return (
-                        <button
-                          key={v}
-                          onClick={() => setSelectedVariant(v)}
-                          className={`relative rounded-xl overflow-hidden border-2 transition-all ${
-                            active
-                              ? "border-[var(--orange)] shadow-lg shadow-[var(--orange)]/20"
-                              : "border-[var(--border)] hover:border-[var(--orange)]/50"
-                          }`}
-                        >
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src={vUrl} alt={`Variant ${v}`} className="w-full block" />
-                          {active && (
-                            <div className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-[var(--orange)] flex items-center justify-center text-white text-[10px] font-bold shadow">
-                              ✓
-                            </div>
-                          )}
-                        </button>
-                      );
-                    })}
-                  </div>
-
-                  {/* Full-size selected card */}
-                  <ShareCard pngUrl={`${pngUrl}&variant=${selectedVariant}`} />
-                  <ShareButtons pngUrl={`${pngUrl}&variant=${selectedVariant}`} feeling={feeling} name={name} />
-                </motion.section>
-              )}
-
-              {/* 2. Match cards */}
+              {/* 1. Match cards */}
               <section>
                 <AnimatePresence mode="wait">
                   {loading ? (
@@ -548,6 +663,23 @@ export default function IFeelPage() {
                   ) : null}
                 </AnimatePresence>
               </section>
+
+              {/* 2. Variant picker + share card */}
+              {pngUrl && (
+                <motion.section
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <CardPicker
+                    pngUrl={pngUrl}
+                    selectedVariant={selectedVariant}
+                    setSelectedVariant={setSelectedVariant}
+                    feeling={feeling}
+                    name={name}
+                  />
+                </motion.section>
+              )}
 
             </motion.div>
           )}
