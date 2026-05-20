@@ -49,12 +49,14 @@ function CardPicker({
   setSelectedVariant,
   feeling,
   name,
+  hasMatch,
 }: {
   pngUrl: string;
   selectedVariant: number;
   setSelectedVariant: (v: number) => void;
   feeling: string;
   name: string;
+  hasMatch: boolean;
 }) {
   const carouselRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
@@ -79,7 +81,19 @@ function CardPicker({
     <>
       {/* ── Desktop: animated thumbnail grid ── */}
       <div className="hidden sm:block">
-        <h2 className="font-serif text-xl font-semibold mb-0.5">Pick your style</h2>
+        {!hasMatch && (
+          <div className="mb-4 p-4 rounded-2xl bg-[var(--bg2)] border border-[var(--border)] text-center space-y-1.5">
+            <p className="text-2xl">🤷</p>
+            <p className="font-semibold text-base">No guest match found</p>
+            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+              &ldquo;{feeling}&rdquo; is so specific, not even Conan&apos;s guests have been there.
+              You may be his most unique friend yet.
+            </p>
+          </div>
+        )}
+        <h2 className="font-serif text-xl font-semibold mb-0.5">
+          {hasMatch ? "Pick your style" : "Still shareable"}
+        </h2>
         <p className="text-sm text-[var(--text-muted)] mb-3">
           4 designs · tap one to switch before sharing
         </p>
@@ -125,8 +139,20 @@ function CardPicker({
 
       {/* ── Mobile: swipe carousel ── */}
       <div className="sm:hidden">
+        {!hasMatch && (
+          <div className="mb-4 p-4 rounded-2xl bg-[var(--bg2)] border border-[var(--border)] text-center space-y-1.5">
+            <p className="text-2xl">🤷</p>
+            <p className="font-semibold text-base">No guest match found</p>
+            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+              &ldquo;{feeling}&rdquo; is so specific, not even Conan&apos;s guests have been there.
+              You may be his most unique friend yet.
+            </p>
+          </div>
+        )}
         <div className="flex items-baseline justify-between mb-2">
-          <h2 className="font-serif text-xl font-semibold">Pick your style</h2>
+          <h2 className="font-serif text-xl font-semibold">
+            {hasMatch ? "Pick your style" : "Still shareable"}
+          </h2>
           <span className="text-xs text-[var(--text-muted)]">swipe for more</span>
         </div>
 
@@ -648,23 +674,25 @@ export default function IFeelPage() {
               className="space-y-12"
             >
 
-              {/* 1. Match cards */}
-              <section>
-                <AnimatePresence mode="wait">
-                  {loading ? (
-                    <motion.div key="skeleton" exit={{ opacity: 0 }}>
-                      <div className="h-5 bg-[var(--bg2)] rounded w-48 mb-4 animate-pulse" />
-                      <MatchSkeleton />
-                    </motion.div>
-                  ) : results ? (
-                    <motion.div key="matches" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
-                      <MatchCards matches={results.matches} feeling={feeling} />
-                    </motion.div>
-                  ) : null}
-                </AnimatePresence>
-              </section>
+              {/* 1. Match cards — only when there are matches */}
+              {(loading || (results && results.matches.length > 0)) && (
+                <section>
+                  <AnimatePresence mode="wait">
+                    {loading ? (
+                      <motion.div key="skeleton" exit={{ opacity: 0 }}>
+                        <div className="h-5 bg-[var(--bg2)] rounded w-48 mb-4 animate-pulse" />
+                        <MatchSkeleton />
+                      </motion.div>
+                    ) : results ? (
+                      <motion.div key="matches" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
+                        <MatchCards matches={results.matches} feeling={feeling} />
+                      </motion.div>
+                    ) : null}
+                  </AnimatePresence>
+                </section>
+              )}
 
-              {/* 2. Variant picker + share card */}
+              {/* 2. Variant picker + share card (no-match banner lives inside CardPicker) */}
               {pngUrl && (
                 <motion.section
                   initial={{ opacity: 0, y: 20 }}
@@ -677,6 +705,7 @@ export default function IFeelPage() {
                     setSelectedVariant={setSelectedVariant}
                     feeling={feeling}
                     name={name}
+                    hasMatch={!!(results && results.matches.length > 0)}
                   />
                 </motion.section>
               )}

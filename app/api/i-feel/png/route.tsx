@@ -322,6 +322,24 @@ export async function GET(req: NextRequest) {
   );
 
   const subtitle = SUBTITLES[variant];
+  const noMatch  = guestImgs.length === 0;
+
+  /* ── No-match guest section (replaces guestCardsEl when there are no matches) ── */
+  const noMatchEl = (
+    <div style={{
+      display: "flex", flexDirection: "column", alignItems: "center",
+      gap: "16px", width: `${USABLE_W}px`,
+      background: TILE_BG, borderRadius: "16px", padding: "32px 40px",
+    }}>
+      <span style={{ fontFamily: "Gotham", fontSize: "36px", fontWeight: 800, color: ORANGE, letterSpacing: "3px", display: "flex" }}>
+        FIRST OF YOUR KIND
+      </span>
+      <span style={{ fontFamily: "Gotham", fontSize: "22px", fontWeight: 800, color: MUTED, letterSpacing: "1.5px", textAlign: "center", lineHeight: 1.5, display: "flex" }}>
+        NO CONAN GUEST HAS EVER FELT QUITE THIS WAY.
+        YOU MAY BE HIS MOST UNIQUE FRIEND YET.
+      </span>
+    </div>
+  );
 
   /* ═══════════════════════════════════════════════════════════════════════════
      VARIANT 1 — Left-aligned, quote mark integrated above name, explicit gaps
@@ -462,10 +480,12 @@ export async function GET(req: NextRequest) {
 
           {/* ⑥ Guest section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <span style={{ fontFamily: "Gotham", fontSize: `${V1_GSECT}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
-              {subtitle}
-            </span>
-            {v1GuestCards}
+            {!noMatch && (
+              <span style={{ fontFamily: "Gotham", fontSize: `${V1_GSECT}px`, fontWeight: 800, color: ORANGE, letterSpacing: "2px", display: "flex" }}>
+                {subtitle}
+              </span>
+            )}
+            {noMatch ? noMatchEl : v1GuestCards}
           </div>
 
           {/* Gap before footer */}
@@ -558,11 +578,12 @@ export async function GET(req: NextRequest) {
         {/* ── Guest section — V2: left-aligned, pulled 20px closer to identity block ── */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: variant === 2 ? "flex-start" : "center", gap: "10px", marginTop: variant === 2 ? "-20px" : "0px" }}>
           {dotsRow}
-          {/* V2/V3/V4: 20px extra gap after dots, MUTED subtitle; V1: ORANGE subtitle */}
-          <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: variant !== 1 ? MUTED : ORANGE, letterSpacing: "2px", display: "flex", ...(variant !== 1 && { marginTop: "20px" }) }}>
-            {subtitle}
-          </span>
-          {guestCardsEl}
+          {!noMatch && (
+            <span style={{ fontFamily: "Gotham", fontSize: `${GSECT_SZ}px`, fontWeight: 800, color: MUTED, letterSpacing: "2px", display: "flex", marginTop: "20px" }}>
+              {subtitle}
+            </span>
+          )}
+          {noMatch ? noMatchEl : guestCardsEl}
         </div>
 
         {/* ── Footer — V3 gets extra top margin to push it away from guest cards ── */}
