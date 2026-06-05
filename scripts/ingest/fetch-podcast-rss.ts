@@ -1,6 +1,22 @@
 import Parser from 'rss-parser';
+import * as fs from 'fs';
+import * as path from 'path';
 import { writeCache, readCache, slugify } from './utils';
 import type { RawPodcastEpisode, ColdOpenSentiment } from '../../lib/types';
+
+// ── Manual cold open overrides (for non-English or non-standard answers) ──────
+function loadManualColdOpens(): Record<string, string> {
+  try {
+    const p = path.join(__dirname, 'manual-cold-opens.json');
+    const raw = JSON.parse(fs.readFileSync(p, 'utf8'));
+    // Strip the _comment key
+    const { _comment: _, ...entries } = raw;
+    return entries as Record<string, string>;
+  } catch {
+    return {};
+  }
+}
+const MANUAL_COLD_OPENS = loadManualColdOpens();
 
 const RSS_URL = 'https://feeds.simplecast.com/dHoohVNH';
 const CACHE_FILE = 'podcast-episodes.json';
@@ -89,6 +105,7 @@ function classifySentiment(word: string): ColdOpenSentiment {
   if (ANXIOUS_WORDS.has(w)) return 'anxious';
   if (/outraged|still outraged|callback/.test(w)) return 'affectionate-absurd';
   if (/zach galifianakis/i.test(w)) return 'affectionate-absurd';
+  if (/tá áthas/i.test(w)) return 'warm'; // Irish: "is happy/joyful"
   if (w.split(' ').length >= 4) return 'affectionate-absurd';
   return 'neutral';
 }
@@ -195,8 +212,21 @@ export async function fetchPodcastRSS(): Promise<RawPodcastEpisode[]> {
     const isRepeatGuest = /returns|once more|is back|again/i.test(title);
 
     // Parse cold open from plain text only (never raw HTML)
-    const coldMatch = plainText.match(COLD_OPEN_REGEX);
-    const coldOpenWord = coldMatch?.[2]?.trim();
+    const coldMatch   = plainText.match(COLD_OPEN_REGEX);
+    let   coldOpenWord = coldMatch?.[2]?.trim();
+
+    // Apply manual overrides (non-English answers, non-standard phrasing)
+    if (!isFanSegment && !isStaffEpisode) {
+      const isoDate = item.pubDate ? new Date(item.pubDate).toISOString().substring(0, 10) : '';
+      const guestForKey = extractGuestName(item.title?.trim() ?? '', plainText);
+      if (guestForKey && isoDate) {
+        const overrideKey = `${guestForKey}::${isoDate}`;
+        if (MANUAL_COLD_OPENS[overrideKey]) {
+          coldOpenWord = MANUAL_COLD_OPENS[overrideKey];
+        }
+      }
+    }
+
     const coldOpenSentiment = coldOpenWord ? classifySentiment(coldOpenWord) : undefined;
 
     const guestName =

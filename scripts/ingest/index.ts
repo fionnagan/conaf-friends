@@ -25,6 +25,7 @@ import { fetchLateNightHistory } from './fetch-late-night-history';
 import { enrichOrigins, upgradeToLateNightRegular } from './enrich-origins';
 import { fetchPhotos } from './fetch-photos';
 import { merge, writeOutput } from './merge';
+import { buildColdOpens } from './build-cold-opens';
 import { normalizeGuestName } from './utils';
 import type { OriginCache } from '../../lib/types';
 
@@ -92,6 +93,10 @@ async function main() {
   );
 
   writeOutput(data);
+
+  // Step 7: Rebuild cold-opens.json for i-feel matching
+  console.log('\nStep 7/7: Rebuilding cold-opens.json...');
+  buildColdOpens(data);
 
   console.log('\n=== Ingest Complete ===');
   console.log(`Total guests: ${data.totalGuests}`);
