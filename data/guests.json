@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-08T17:32:10.491Z",
-  "totalGuests": 382,
-  "totalAppearances": 598,
+  "generatedAt": "2026-06-15T18:34:58.615Z",
+  "totalGuests": 383,
+  "totalAppearances": 599,
   "guests": [
     {
       "id": "andy-richter",
@@ -1011,7 +1011,7 @@
     {
       "id": "jim-carrey",
       "name": "Jim Carrey",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Jim_Carrey_2020_%28cropped2%29.jpg/500px-Jim_Carrey_2020_%28cropped2%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "late-night-regular",
@@ -1187,7 +1187,7 @@
     {
       "id": "timothy-olyphant",
       "name": "Timothy Olyphant",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Timothy_Olyphant_in_2025_by_Gage_Skidmore.jpg/500px-Timothy_Olyphant_in_2025_by_Gage_Skidmore.jpg",
       "bio": null,
       "origin": {
         "type": "late-night-regular",
@@ -1315,7 +1315,7 @@
     {
       "id": "tom-hanks",
       "name": "Tom Hanks",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/TomHanksPrincEdw031223_%2811_of_41%29_%28cropped%29.jpg/500px-TomHanksPrincEdw031223_%2811_of_41%29_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "late-night-regular",
@@ -1397,7 +1397,7 @@
     {
       "id": "jack-black",
       "name": "Jack Black",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Jack_Black_KCA_2025.png/500px-Jack_Black_KCA_2025.png",
       "bio": null,
       "origin": {
         "type": "late-night-regular",
@@ -1647,57 +1647,11 @@
         "gapResilience": 8
       },
       "relatedGuests": [
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
         "mike-birbiglia",
-        "w-kamau-bell"
-      ]
-    },
-    {
-      "id": "kristen-schaal",
-      "name": "Kristen Schaal",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Kristen_Schaal_by_Gage_Skidmore_3.jpg/500px-Kristen_Schaal_by_Gage_Skidmore_3.jpg",
-      "bio": null,
-      "origin": {
-        "type": "comedy-peer",
-        "label": "Comedy peer and fellow stand-up",
-        "confidence": "medium"
-      },
-      "appearances": [
-        {
-          "era": "tbs-conan",
-          "date": "1993-01-01",
-          "promoVisit": false
-        },
-        {
-          "era": "podcast",
-          "date": "2021-09-06",
-          "episodeTitle": "Kristen Schaal",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/kristen-schaal",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/02bb55d3-6242-4139-b1f5-03d8cebac7f8/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=02bb55d3-6242-4139-b1f5-03d8cebac7f8&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/02bb55d3-6242-4139-b1f5-03d8cebac7f8/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null,
-          "coldOpenWord": "relieved",
-          "coldOpenSentiment": "warm"
-        }
-      ],
-      "friendshipScore": 82,
-      "friendshipLabel": "Genuine Friend",
-      "scoreBreakdown": {
-        "appearances": 16,
-        "coldOpenSentiment": 25,
-        "originDepth": 16,
-        "visitType": 15,
-        "gapResilience": 10
-      },
-      "relatedGuests": [
-        "patton-oswalt",
-        "john-mulaney",
-        "zach-galifianakis",
-        "mike-birbiglia",
-        "w-kamau-bell"
+        "ike-barinholtz",
+        "tig-notaro"
       ]
     },
     {
@@ -1768,10 +1722,10 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "zach-galifianakis",
         "mike-birbiglia",
-        "w-kamau-bell"
+        "ike-barinholtz",
+        "tig-notaro"
       ]
     },
     {
@@ -1902,16 +1856,16 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "mike-birbiglia",
-        "w-kamau-bell"
+        "ike-barinholtz",
+        "tig-notaro"
       ]
     },
     {
       "id": "jack-mcbrayer",
       "name": "Jack McBrayer",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Jackmcbrayer.jpg/500px-Jackmcbrayer.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -1946,17 +1900,63 @@
         "gapResilience": 10
       },
       "relatedGuests": [
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
         "kumail-nanjiani",
-        "will-arnett",
-        "bill-hader"
+        "will-arnett"
+      ]
+    },
+    {
+      "id": "kristen-schaal",
+      "name": "Kristen Schaal",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "tbs-conan",
+          "date": "1993-01-01",
+          "promoVisit": false
+        },
+        {
+          "era": "podcast",
+          "date": "2021-09-06",
+          "episodeTitle": "Kristen Schaal",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/kristen-schaal",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/02bb55d3-6242-4139-b1f5-03d8cebac7f8/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=02bb55d3-6242-4139-b1f5-03d8cebac7f8&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/02bb55d3-6242-4139-b1f5-03d8cebac7f8/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null,
+          "coldOpenWord": "relieved",
+          "coldOpenSentiment": "warm"
+        }
+      ],
+      "friendshipScore": 74,
+      "friendshipLabel": "Trusted Confidant",
+      "scoreBreakdown": {
+        "appearances": 16,
+        "coldOpenSentiment": 25,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 10
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani",
+        "will-arnett"
       ]
     },
     {
       "id": "charles-barkley",
       "name": "Charles Barkley",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Charles_Barkley_in_2026.jpg/500px-Charles_Barkley_in_2026.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -1993,10 +1993,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "lisa-kudrow",
         "kumail-nanjiani",
-        "will-arnett",
-        "bill-hader"
+        "will-arnett"
       ]
     },
     {
@@ -2057,10 +2057,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "kumail-nanjiani",
-        "will-arnett",
-        "bill-hader"
+        "will-arnett"
       ]
     },
     {
@@ -2128,10 +2128,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "will-arnett",
-        "bill-hader"
+        "will-arnett"
       ]
     },
     {
@@ -2185,10 +2185,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "bill-hader"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -2248,10 +2248,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -2312,10 +2312,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -2433,16 +2433,16 @@
       ],
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "w-kamau-bell"
+        "ike-barinholtz",
+        "tig-notaro"
       ]
     },
     {
       "id": "dana-carvey",
       "name": "Dana Carvey",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Dana_Carvey%2C_USO.JPG",
       "bio": null,
       "origin": {
         "type": "snl-simpsons",
@@ -2492,58 +2492,6 @@
         "louis-c-k",
         "kevin-nealon",
         "david-spade"
-      ]
-    },
-    {
-      "id": "w-kamau-bell",
-      "name": "W. Kamau Bell",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "comedy-peer",
-        "label": "Comedy peer and fellow stand-up",
-        "confidence": "medium"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2020-08-03",
-          "episodeTitle": "W. Kamau Bell",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/w-kamau-bell",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/88567b40-1bd7-46c8-ac49-40b29b829c96/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=88567b40-1bd7-46c8-ac49-40b29b829c96&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/88567b40-1bd7-46c8-ac49-40b29b829c96/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null,
-          "coldOpenWord": "cautiously optimistic, but still not great",
-          "coldOpenSentiment": "affectionate-absurd"
-        },
-        {
-          "era": "podcast",
-          "date": "2024-04-08",
-          "episodeTitle": "W. Kamau Bell Returns",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/w-kamau-bell-returns",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/a9ce6425-b5e3-4aae-a609-ac4aa3d6d537/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=a9ce6425-b5e3-4aae-a609-ac4aa3d6d537&feed=dHoohVNH",
-          "promoVisit": false,
-          "youtubeVideoId": null,
-          "coldOpenWord": "insistent",
-          "coldOpenSentiment": "neutral"
-        }
-      ],
-      "friendshipScore": 70,
-      "friendshipLabel": "Trusted Confidant",
-      "scoreBreakdown": {
-        "appearances": 12,
-        "coldOpenSentiment": 18,
-        "originDepth": 16,
-        "visitType": 15,
-        "gapResilience": 9
-      },
-      "relatedGuests": [
-        "patton-oswalt",
-        "kristen-schaal",
-        "john-mulaney",
-        "zach-galifianakis",
-        "mike-birbiglia"
       ]
     },
     {
@@ -2634,16 +2582,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "greg-daniels",
       "name": "Greg Daniels",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Greg_Daniels_2022.png/500px-Greg_Daniels_2022.png",
       "bio": null,
       "origin": {
         "type": "harvard-lampoon",
@@ -2682,7 +2630,7 @@
     {
       "id": "nikki-glaser",
       "name": "Nikki Glaser",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Nikki_Glaser_on_Neal_Brennan_Uploaded_James_Tamim_%28cropped%29.png/500px-Nikki_Glaser_on_Neal_Brennan_Uploaded_James_Tamim_%28cropped%29.png",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -2736,10 +2684,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -2776,16 +2724,16 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "tig-notaro"
       ]
     },
     {
       "id": "bob-odenkirk",
       "name": "Bob Odenkirk",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Bob_Odenkirk_at_53rd_Saturn_Awards_2026-02.jpg/500px-Bob_Odenkirk_at_53rd_Saturn_Awards_2026-02.jpg",
       "bio": null,
       "origin": {
         "type": "snl-simpsons",
@@ -2835,46 +2783,6 @@
       ]
     },
     {
-      "id": "chelsea-peretti",
-      "name": "Chelsea Peretti",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "comedy-peer",
-        "label": "Comedy peer and fellow stand-up",
-        "confidence": "medium"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2024-03-04",
-          "episodeTitle": "Chelsea Peretti",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/chelsea-peretti",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/aae460da-d95b-4a16-a5e4-2afaf599e149/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=aae460da-d95b-4a16-a5e4-2afaf599e149&feed=dHoohVNH",
-          "promoVisit": false,
-          "youtubeVideoId": "6UE78KwEPDw",
-          "coldOpenWord": "excited",
-          "coldOpenSentiment": "warm"
-        }
-      ],
-      "friendshipScore": 67,
-      "friendshipLabel": "Comedy Soulmate",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 25,
-        "originDepth": 16,
-        "visitType": 15,
-        "gapResilience": 5
-      },
-      "relatedGuests": [
-        "patton-oswalt",
-        "kristen-schaal",
-        "john-mulaney",
-        "zach-galifianakis",
-        "mike-birbiglia"
-      ]
-    },
-    {
       "id": "tig-notaro",
       "name": "Tig Notaro",
       "photoUrl": null,
@@ -2920,10 +2828,10 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -2973,10 +2881,10 @@
       ],
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -3039,10 +2947,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -3103,10 +3011,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -3150,7 +3058,7 @@
           "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/jim-gaffigan-returns-again",
           "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/92fd00bd-86f4-466c-b7b4-083192d6821b/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=92fd00bd-86f4-466c-b7b4-083192d6821b&feed=dHoohVNH",
           "promoVisit": false,
-          "youtubeVideoId": "_sDucl8MNJg",
+          "youtubeVideoId": "3PQa41mJ-H0",
           "coldOpenWord": "privileged",
           "coldOpenSentiment": "neutral"
         }
@@ -3169,10 +3077,50 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "atsuko-okatsuka",
+      "name": "Atsuko Okatsuka",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "comedy-peer",
+        "label": "Comedy peer and fellow stand-up",
+        "confidence": "medium"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2026-06-15",
+          "episodeTitle": "Atsuko Okatsuka",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/atsuko-okatsuka",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/a8755c75-c9a6-48f4-a634-6b9ba3494aa9/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=a8755c75-c9a6-48f4-a634-6b9ba3494aa9&feed=dHoohVNH",
+          "promoVisit": false,
+          "youtubeVideoId": "dCyVg4CNUZU",
+          "coldOpenWord": "honored and a little suspicious",
+          "coldOpenSentiment": "affectionate-absurd"
+        }
+      ],
+      "friendshipScore": 64,
+      "friendshipLabel": "Comedy Soulmate",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 22,
+        "originDepth": 16,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "patton-oswalt",
+        "john-mulaney",
+        "zach-galifianakis",
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -3224,16 +3172,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "claire-danes",
       "name": "Claire Danes",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Claire_Danes_in_2015.jpg/500px-Claire_Danes_in_2015.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -3275,16 +3223,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "judd-apatow",
       "name": "Judd Apatow",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/2024-03-08_SXSW-2024_comedy-directors_3.jpg/500px-2024-03-08_SXSW-2024_comedy-directors_3.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -3330,16 +3278,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "andy-samberg",
       "name": "Andy Samberg",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Andy_Samberg_by_Gage_Skidmore.jpg/500px-Andy_Samberg_by_Gage_Skidmore.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -3376,10 +3324,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -3437,10 +3385,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -3491,10 +3439,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -3543,16 +3491,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
-      "id": "joel-mchale",
-      "name": "Joel McHale",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Joel_McHale_Photo_Op_GalaxyCon_Raleigh_2023.jpg/500px-Joel_McHale_Photo_Op_GalaxyCon_Raleigh_2023.jpg",
+      "id": "kathryn-hahn",
+      "name": "Kathryn Hahn",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Kathryn_Hahn_Agatha_All_Along_Premiere_01.png",
       "bio": null,
       "origin": {
         "type": "comedy-peer",
@@ -3562,14 +3510,14 @@
       "appearances": [
         {
           "era": "podcast",
-          "date": "2021-08-30",
-          "episodeTitle": "Joel McHale",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/joel-mchale",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/80323a19-3b58-47be-9cd4-248cfd454c5a/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=80323a19-3b58-47be-9cd4-248cfd454c5a&feed=dHoohVNH",
+          "date": "2021-06-14",
+          "episodeTitle": "Kathryn Hahn",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/kathryn-hahn",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/ef50f24d-bed6-42ad-a414-52b64f8cfd86/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=ef50f24d-bed6-42ad-a414-52b64f8cfd86&feed=dHoohVNH",
           "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/80323a19-3b58-47be-9cd4-248cfd454c5a/3000x3000/image.jpg?aid=rss_feed",
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/ef50f24d-bed6-42ad-a414-52b64f8cfd86/3000x3000/image.jpg?aid=rss_feed",
           "youtubeVideoId": null,
-          "coldOpenWord": "a little anxious, but good",
+          "coldOpenWord": "like she’d be lying",
           "coldOpenSentiment": "affectionate-absurd"
         }
       ],
@@ -3584,10 +3532,61 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
+      ]
+    },
+    {
+      "id": "jb-smoove",
+      "name": "JB Smoove",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "comedy-peer",
+        "label": "Comedy peer and fellow stand-up",
+        "confidence": "medium"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2021-01-04",
+          "episodeTitle": "JB Smoove",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/jb-smoove",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/b789e6f9-162c-40b3-875e-6c76e48e813d/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=b789e6f9-162c-40b3-875e-6c76e48e813d&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/b789e6f9-162c-40b3-875e-6c76e48e813d/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null
+        },
+        {
+          "era": "podcast",
+          "date": "2021-04-26",
+          "episodeTitle": "JB Smoove Returns",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/jb-smoove-returns",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/b42fc004-48be-4e29-8954-de4fc965ca11/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=b42fc004-48be-4e29-8954-de4fc965ca11&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/b42fc004-48be-4e29-8954-de4fc965ca11/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null,
+          "coldOpenWord": "optimistic",
+          "coldOpenSentiment": "neutral"
+        }
+      ],
+      "friendshipScore": 64,
+      "friendshipLabel": "Comedy Soulmate",
+      "scoreBreakdown": {
+        "appearances": 12,
+        "coldOpenSentiment": 15,
+        "originDepth": 16,
+        "visitType": 15,
+        "gapResilience": 6
+      },
+      "relatedGuests": [
+        "patton-oswalt",
+        "john-mulaney",
+        "zach-galifianakis",
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -3628,16 +3627,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "nicole-byer",
       "name": "Nicole Byer",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/27th_Critics_Choice_Awards_-_Nicole_Byer_%28cropped%29.png/500px-27th_Critics_Choice_Awards_-_Nicole_Byer_%28cropped%29.png",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -3680,10 +3679,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -3731,10 +3730,60 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "wanda-sykes",
+      "name": "Wanda Sykes",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "comedy-peer",
+        "label": "Comedy peer and fellow stand-up",
+        "confidence": "medium"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2018-12-24",
+          "episodeTitle": "Wanda Sykes",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/wanda-sykes",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/e36ddb97-4c1d-4ff4-b811-16b9de6522a4/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=e36ddb97-4c1d-4ff4-b811-16b9de6522a4&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/e36ddb97-4c1d-4ff4-b811-16b9de6522a4/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null
+        },
+        {
+          "era": "podcast",
+          "date": "2026-03-09",
+          "episodeTitle": "Wanda Sykes Returns",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/wanda-sykes-returns",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/825c81be-e29f-4f8c-9c6d-a0d29547760e/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=825c81be-e29f-4f8c-9c6d-a0d29547760e&feed=dHoohVNH",
+          "promoVisit": true,
+          "youtubeVideoId": "GF-Z1SWsRgQ",
+          "coldOpenWord": "indifferent",
+          "coldOpenSentiment": "deflecting"
+        }
+      ],
+      "friendshipScore": 62,
+      "friendshipLabel": "Comedy Soulmate",
+      "scoreBreakdown": {
+        "appearances": 12,
+        "coldOpenSentiment": 12,
+        "originDepth": 16,
+        "visitType": 12,
+        "gapResilience": 10
+      },
+      "relatedGuests": [
+        "patton-oswalt",
+        "john-mulaney",
+        "zach-galifianakis",
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -3782,10 +3831,62 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "w-kamau-bell",
+      "name": "W. Kamau Bell",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2020-08-03",
+          "episodeTitle": "W. Kamau Bell",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/w-kamau-bell",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/88567b40-1bd7-46c8-ac49-40b29b829c96/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=88567b40-1bd7-46c8-ac49-40b29b829c96&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/88567b40-1bd7-46c8-ac49-40b29b829c96/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null,
+          "coldOpenWord": "cautiously optimistic, but still not great",
+          "coldOpenSentiment": "affectionate-absurd"
+        },
+        {
+          "era": "podcast",
+          "date": "2024-04-08",
+          "episodeTitle": "W. Kamau Bell Returns",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/w-kamau-bell-returns",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/a9ce6425-b5e3-4aae-a609-ac4aa3d6d537/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=a9ce6425-b5e3-4aae-a609-ac4aa3d6d537&feed=dHoohVNH",
+          "promoVisit": false,
+          "youtubeVideoId": null,
+          "coldOpenWord": "insistent",
+          "coldOpenSentiment": "neutral"
+        }
+      ],
+      "friendshipScore": 62,
+      "friendshipLabel": "Comedy Soulmate",
+      "scoreBreakdown": {
+        "appearances": 12,
+        "coldOpenSentiment": 18,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 9
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
       ]
     },
     {
@@ -3834,16 +3935,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "david-sedaris",
       "name": "David Sedaris",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/David_Sedaris-4724.jpg/500px-David_Sedaris-4724.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -3886,10 +3987,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -3937,49 +4038,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "larry-david",
-      "name": "Larry David",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "snl-simpsons",
-        "label": "SNL writers room era, 1988–1991",
-        "confidence": "medium"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2024-02-12",
-          "episodeTitle": "Larry David",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/larry-david",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/b9d0a005-a4b4-4918-af4a-56dc8050afe0/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=b9d0a005-a4b4-4918-af4a-56dc8050afe0&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/5b7d8c77-15ba-4eff-a999-2e725db21db5/ff168136-2fb1-48bd-9d41-ff453e6378fe/3000x3000/conaf-episodetile-herotile-1x1.jpg?aid=rss_feed",
-          "youtubeVideoId": "fEMzCHX2ONA"
-        }
-      ],
-      "friendshipScore": 61,
-      "friendshipLabel": "Comedy Soulmate",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 15,
-        "originDepth": 20,
-        "visitType": 15,
-        "gapResilience": 5
-      },
-      "relatedGuests": [
-        "adam-sandler",
-        "norm-macdonald",
-        "louis-c-k",
-        "kevin-nealon",
-        "david-spade"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4125,16 +4187,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "steven-yeun",
       "name": "Steven Yeun",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Steven_Yeun_at_the_2025_Sundance_Film_Festival_%28cropped%29.jpg/500px-Steven_Yeun_at_the_2025_Sundance_Film_Festival_%28cropped%29.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -4170,16 +4232,57 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "adam-mckay",
+      "name": "Adam McKay",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "snl-simpsons",
+        "label": "SNL writers room era, 1988–1991",
+        "confidence": "medium"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2021-04-05",
+          "episodeTitle": "Adam McKay",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/adam-mckay",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/3a949ba6-c246-434a-82f9-be83fa56d622/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=3a949ba6-c246-434a-82f9-be83fa56d622&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/3a949ba6-c246-434a-82f9-be83fa56d622/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null,
+          "coldOpenWord": "old-fashioned-twelve-year-old-about-to-have-a-sleepover excited",
+          "coldOpenSentiment": "neutral"
+        }
+      ],
+      "friendshipScore": 61,
+      "friendshipLabel": "Comedy Soulmate",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 20,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "adam-sandler",
+        "norm-macdonald",
+        "louis-c-k",
+        "kevin-nealon",
+        "david-spade"
       ]
     },
     {
       "id": "mike-myers",
       "name": "Mike Myers",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Mike_Myers_2017_%2837220071326%29_%28cropped%29.jpg/500px-Mike_Myers_2017_%2837220071326%29_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "snl-simpsons",
@@ -4215,6 +4318,46 @@
         "louis-c-k",
         "kevin-nealon",
         "david-spade"
+      ]
+    },
+    {
+      "id": "arsenio-hall",
+      "name": "Arsenio Hall",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "comedy-peer",
+        "label": "Comedy peer and fellow stand-up",
+        "confidence": "medium"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2026-03-30",
+          "episodeTitle": "Arsenio Hall",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/arsenio-hall",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/e16bace7-017b-4d09-a60b-dc4eb0cf26cf/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=e16bace7-017b-4d09-a60b-dc4eb0cf26cf&feed=dHoohVNH",
+          "promoVisit": true,
+          "youtubeVideoId": "LS1pfretkM8",
+          "coldOpenWord": "relieved",
+          "coldOpenSentiment": "warm"
+        }
+      ],
+      "friendshipScore": 60,
+      "friendshipLabel": "Comedy Soulmate",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 25,
+        "originDepth": 16,
+        "visitType": 8,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "patton-oswalt",
+        "john-mulaney",
+        "zach-galifianakis",
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -4263,16 +4406,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "maria-bamford",
       "name": "Maria Bamford",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mariba.JPG/500px-Mariba.JPG",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "comedy-peer",
@@ -4303,10 +4446,10 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -4343,10 +4486,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4383,10 +4526,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4423,16 +4566,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "rose-byrne",
       "name": "Rose Byrne",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Rose_Byrne_at_Berlinale_2025-1_%28cropped%29.jpg/500px-Rose_Byrne_at_Berlinale_2025-1_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -4463,10 +4606,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4503,10 +4646,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4543,10 +4686,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4593,16 +4736,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "al-pacino",
       "name": "Al Pacino",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Al_Pacino_2016_%2830401544240%29.jpg/500px-Al_Pacino_2016_%2830401544240%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -4633,16 +4776,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "don-cheadle",
       "name": "Don Cheadle",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/DonCheadle-byPhilipRomano2.jpg/500px-DonCheadle-byPhilipRomano2.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -4673,10 +4816,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4713,10 +4856,50 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "chelsea-peretti",
+      "name": "Chelsea Peretti",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2024-03-04",
+          "episodeTitle": "Chelsea Peretti",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/chelsea-peretti",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/aae460da-d95b-4a16-a5e4-2afaf599e149/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=aae460da-d95b-4a16-a5e4-2afaf599e149&feed=dHoohVNH",
+          "promoVisit": false,
+          "youtubeVideoId": "6UE78KwEPDw",
+          "coldOpenWord": "excited",
+          "coldOpenSentiment": "warm"
+        }
+      ],
+      "friendshipScore": 59,
+      "friendshipLabel": "Beloved Acquaintance",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 25,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4763,10 +4946,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4813,16 +4996,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "rivers-cuomo",
       "name": "Rivers Cuomo",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Rivers_Cuomo_Weezer_Tons_of_Rock_2025-23_%28cropped%29.jpg/500px-Rivers_Cuomo_Weezer_Tons_of_Rock_2025-23_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -4853,16 +5036,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "billy-eichner",
       "name": "Billy Eichner",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/BillyEichner-byPhilipRomano.jpg/500px-BillyEichner-byPhilipRomano.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -4905,10 +5088,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4945,10 +5128,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -4985,16 +5168,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "cecily-strong",
       "name": "Cecily Strong",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/CecilyStrong-byPhilipRomano.jpg/500px-CecilyStrong-byPhilipRomano.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -5026,10 +5209,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5067,16 +5250,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "paul-reubens",
       "name": "Paul Reubens",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Paul_Reubens_by_Gage_Skidmore.jpg/500px-Paul_Reubens_by_Gage_Skidmore.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -5108,10 +5291,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5149,10 +5332,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5190,10 +5373,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5241,10 +5424,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5293,15 +5476,15 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
-      "id": "carol-burnett",
-      "name": "Carol Burnett",
+      "id": "jordan-peele",
+      "name": "Jordan Peele",
       "photoUrl": null,
       "bio": null,
       "origin": {
@@ -5312,52 +5495,13 @@
       "appearances": [
         {
           "era": "podcast",
-          "date": "2024-04-01",
-          "episodeTitle": "Carol Burnett",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/carol-burnett",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/2ec639f5-b848-418e-a766-d20658536e3d/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=2ec639f5-b848-418e-a766-d20658536e3d&feed=dHoohVNH",
+          "date": "2024-01-01",
+          "episodeTitle": "Jordan Peele",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/jordan-peele",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/d1bb7426-761a-454f-93bc-9b0ee011c4b4/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=d1bb7426-761a-454f-93bc-9b0ee011c4b4&feed=dHoohVNH",
           "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/6b2861f6-d7ec-4f88-bc67-43748d98bfbd/8b22970a-2b2a-4d11-818b-1cb22e027e58/3000x3000/250224-top-conan-episodes-3000x3000-carol-burnett-20-1.jpg?aid=rss_feed",
-          "youtubeVideoId": "G2gKTfSQTvg"
-        }
-      ],
-      "friendshipScore": 57,
-      "friendshipLabel": "Beloved Acquaintance",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 15,
-        "originDepth": 16,
-        "visitType": 15,
-        "gapResilience": 5
-      },
-      "relatedGuests": [
-        "patton-oswalt",
-        "kristen-schaal",
-        "john-mulaney",
-        "zach-galifianakis",
-        "mike-birbiglia"
-      ]
-    },
-    {
-      "id": "zach-woods",
-      "name": "Zach Woods",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "comedy-peer",
-        "label": "Comedy peer and fellow stand-up",
-        "confidence": "medium"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2024-03-11",
-          "episodeTitle": "Zach Woods",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/zach-woods",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/4bec5591-257a-4c48-8bf0-baa9727bc3b6/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=4bec5591-257a-4c48-8bf0-baa9727bc3b6&feed=dHoohVNH",
-          "promoVisit": false,
-          "youtubeVideoId": "oM8zpesPP4g",
-          "coldOpenWord": "“pick me”",
+          "youtubeVideoId": "g_4DkifyiXw",
+          "coldOpenWord": "honored, absolutely honored",
           "coldOpenSentiment": "neutral"
         }
       ],
@@ -5370,12 +5514,15 @@
         "visitType": 15,
         "gapResilience": 5
       },
+      "mentionedGuests": [
+        "Werner Herzog"
+      ],
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -5412,16 +5559,16 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
-      "id": "melissa-mccarthy",
-      "name": "Melissa McCarthy",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Melissa_McCarthy_in_2018_%28cropped%29.jpg/500px-Melissa_McCarthy_in_2018_%28cropped%29.jpg",
+      "id": "abbi-jacobson",
+      "name": "Abbi Jacobson",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "comedy-peer",
@@ -5431,13 +5578,15 @@
       "appearances": [
         {
           "era": "podcast",
-          "date": "2021-09-20",
-          "episodeTitle": "Melissa McCarthy",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/melissa-mccarthy",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/ef0fad7d-1dad-4a09-a94e-29ceb774a86d/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=ef0fad7d-1dad-4a09-a94e-29ceb774a86d&feed=dHoohVNH",
+          "date": "2021-04-19",
+          "episodeTitle": "Abbi Jacobson",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/abbi-jacobson",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/8c25f0ba-8f67-4c53-97f1-191692481a08/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=8c25f0ba-8f67-4c53-97f1-191692481a08&feed=dHoohVNH",
           "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/ef0fad7d-1dad-4a09-a94e-29ceb774a86d/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/8c25f0ba-8f67-4c53-97f1-191692481a08/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null,
+          "coldOpenWord": "scrumptious",
+          "coldOpenSentiment": "neutral"
         }
       ],
       "friendshipScore": 57,
@@ -5449,17 +5598,21 @@
         "visitType": 15,
         "gapResilience": 5
       },
+      "mentionedGuests": [
+        "Tom Hanks",
+        "Conan O'Brien"
+      ],
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
-      "id": "simon-helberg",
-      "name": "Simon Helberg",
+      "id": "kingsman-the-golden-circle",
+      "name": "Kingsman: The Golden Circle",
       "photoUrl": null,
       "bio": null,
       "origin": {
@@ -5485,15 +5638,15 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
-      "id": "comic-con",
-      "name": "Comic-Con",
+      "id": "aquaman",
+      "name": "Aquaman",
       "photoUrl": null,
       "bio": null,
       "origin": {
@@ -5519,10 +5672,10 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -5559,10 +5712,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5599,10 +5752,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5639,10 +5792,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5679,10 +5832,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5722,10 +5875,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5770,16 +5923,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "eric-idle",
       "name": "Eric Idle",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Eric_Idle_2012.jpg/500px-Eric_Idle_2012.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -5822,16 +5975,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "jeff-bridges",
       "name": "Jeff Bridges",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Jeff_Bridges_by_Gage_Skidmore_4.jpg/500px-Jeff_Bridges_by_Gage_Skidmore_4.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -5862,10 +6015,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5902,10 +6055,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -5945,16 +6098,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "arnold-schwarzenegger",
       "name": "Arnold Schwarzenegger",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Arnold_Schwarzenegger_2025_%28cropped%29.jpg/500px-Arnold_Schwarzenegger_2025_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -5985,10 +6138,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6025,10 +6178,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6065,10 +6218,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6108,10 +6261,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6148,10 +6301,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6191,10 +6344,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6231,16 +6384,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "alan-yang",
       "name": "Alan Yang",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Alan_Yang_at_TIFF_2025_03.jpg/500px-Alan_Yang_at_TIFF_2025_03.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -6272,15 +6425,15 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
-      "id": "kathryn-hahn",
-      "name": "Kathryn Hahn",
+      "id": "joel-mchale",
+      "name": "Joel McHale",
       "photoUrl": null,
       "bio": null,
       "origin": {
@@ -6291,14 +6444,14 @@
       "appearances": [
         {
           "era": "podcast",
-          "date": "2021-06-14",
-          "episodeTitle": "Kathryn Hahn",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/kathryn-hahn",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/ef50f24d-bed6-42ad-a414-52b64f8cfd86/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=ef50f24d-bed6-42ad-a414-52b64f8cfd86&feed=dHoohVNH",
+          "date": "2021-08-30",
+          "episodeTitle": "Joel McHale",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/joel-mchale",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/80323a19-3b58-47be-9cd4-248cfd454c5a/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=80323a19-3b58-47be-9cd4-248cfd454c5a&feed=dHoohVNH",
           "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/ef50f24d-bed6-42ad-a414-52b64f8cfd86/3000x3000/image.jpg?aid=rss_feed",
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/80323a19-3b58-47be-9cd4-248cfd454c5a/3000x3000/image.jpg?aid=rss_feed",
           "youtubeVideoId": null,
-          "coldOpenWord": "like she’d be lying",
+          "coldOpenWord": "a little anxious, but good",
           "coldOpenSentiment": "affectionate-absurd"
         }
       ],
@@ -6313,61 +6466,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "jb-smoove",
-      "name": "JB Smoove",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2021-01-04",
-          "episodeTitle": "JB Smoove",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/jb-smoove",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/b789e6f9-162c-40b3-875e-6c76e48e813d/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=b789e6f9-162c-40b3-875e-6c76e48e813d&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/b789e6f9-162c-40b3-875e-6c76e48e813d/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null
-        },
-        {
-          "era": "podcast",
-          "date": "2021-04-26",
-          "episodeTitle": "JB Smoove Returns",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/jb-smoove-returns",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/b42fc004-48be-4e29-8954-de4fc965ca11/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=b42fc004-48be-4e29-8954-de4fc965ca11&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/b42fc004-48be-4e29-8954-de4fc965ca11/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null,
-          "coldOpenWord": "optimistic",
-          "coldOpenSentiment": "neutral"
-        }
-      ],
-      "friendshipScore": 56,
-      "friendshipLabel": "Beloved Acquaintance",
-      "scoreBreakdown": {
-        "appearances": 12,
-        "coldOpenSentiment": 15,
-        "originDepth": 8,
-        "visitType": 15,
-        "gapResilience": 6
-      },
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6405,10 +6507,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6446,10 +6548,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6490,10 +6592,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6535,10 +6637,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6586,16 +6688,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "jake-tapper",
       "name": "Jake Tapper",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/JakeTapper-byPhilipRomano.jpg/500px-JakeTapper-byPhilipRomano.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -6638,10 +6740,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6688,10 +6790,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6741,16 +6843,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "mila-kunis",
       "name": "Mila Kunis",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Mila_Kunis_TIFF_2025_%28cropped%29.jpg/500px-Mila_Kunis_TIFF_2025_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -6793,60 +6895,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "wanda-sykes",
-      "name": "Wanda Sykes",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2018-12-24",
-          "episodeTitle": "Wanda Sykes",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/wanda-sykes",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/e36ddb97-4c1d-4ff4-b811-16b9de6522a4/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=e36ddb97-4c1d-4ff4-b811-16b9de6522a4&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/e36ddb97-4c1d-4ff4-b811-16b9de6522a4/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null
-        },
-        {
-          "era": "podcast",
-          "date": "2026-03-09",
-          "episodeTitle": "Wanda Sykes Returns",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/wanda-sykes-returns",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/825c81be-e29f-4f8c-9c6d-a0d29547760e/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=825c81be-e29f-4f8c-9c6d-a0d29547760e&feed=dHoohVNH",
-          "promoVisit": true,
-          "youtubeVideoId": "GF-Z1SWsRgQ",
-          "coldOpenWord": "indifferent",
-          "coldOpenSentiment": "deflecting"
-        }
-      ],
-      "friendshipScore": 54,
-      "friendshipLabel": "Beloved Acquaintance",
-      "scoreBreakdown": {
-        "appearances": 12,
-        "coldOpenSentiment": 12,
-        "originDepth": 8,
-        "visitType": 12,
-        "gapResilience": 10
-      },
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -6894,16 +6946,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "b-j-novak",
       "name": "B.J. Novak",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BJNovak-byPhilipRomano.jpg/500px-BJNovak-byPhilipRomano.jpg",
       "bio": null,
       "origin": {
         "type": "harvard-lampoon",
@@ -6940,46 +6992,6 @@
       ]
     },
     {
-      "id": "arsenio-hall",
-      "name": "Arsenio Hall",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2026-03-30",
-          "episodeTitle": "Arsenio Hall",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/arsenio-hall",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/e16bace7-017b-4d09-a60b-dc4eb0cf26cf/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=e16bace7-017b-4d09-a60b-dc4eb0cf26cf&feed=dHoohVNH",
-          "promoVisit": true,
-          "youtubeVideoId": "LS1pfretkM8",
-          "coldOpenWord": "relieved",
-          "coldOpenSentiment": "warm"
-        }
-      ],
-      "friendshipScore": 52,
-      "friendshipLabel": "Beloved Acquaintance",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 25,
-        "originDepth": 8,
-        "visitType": 8,
-        "gapResilience": 5
-      },
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
       "id": "sebastian-maniscalco",
       "name": "Sebastian Maniscalco",
       "photoUrl": null,
@@ -7013,10 +7025,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7053,10 +7065,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7093,10 +7105,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7134,16 +7146,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
-      "id": "daniel-sloss",
-      "name": "Daniel Sloss",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Daniel_Sloss_at_the_2025_Edinburgh_Festival_Fringe-08_%28cropped%29.jpg/500px-Daniel_Sloss_at_the_2025_Edinburgh_Festival_Fringe-08_%28cropped%29.jpg",
+      "id": "reggie-watts",
+      "name": "Reggie Watts",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "comedy-peer",
@@ -7153,13 +7165,13 @@
       "appearances": [
         {
           "era": "podcast",
-          "date": "2021-10-25",
-          "episodeTitle": "Daniel Sloss",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/daniel-sloss",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/756e0ce7-87f6-46e7-b792-f1ad6d014048/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=756e0ce7-87f6-46e7-b792-f1ad6d014048&feed=dHoohVNH",
+          "date": "2023-11-06",
+          "episodeTitle": "Reggie Watts",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/reggie-watts",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/1d0c8cbd-8f3a-4514-88e3-d1c9e498cd09/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=1d0c8cbd-8f3a-4514-88e3-d1c9e498cd09&feed=dHoohVNH",
           "promoVisit": true,
           "youtubeVideoId": null,
-          "coldOpenWord": "privileged",
+          "coldOpenWord": "quixotic",
           "coldOpenSentiment": "neutral"
         }
       ],
@@ -7174,10 +7186,10 @@
       },
       "relatedGuests": [
         "patton-oswalt",
-        "kristen-schaal",
         "john-mulaney",
         "zach-galifianakis",
-        "mike-birbiglia"
+        "mike-birbiglia",
+        "ike-barinholtz"
       ]
     },
     {
@@ -7214,10 +7226,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7254,10 +7266,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7294,10 +7306,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7334,10 +7346,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7374,10 +7386,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7414,10 +7426,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7454,10 +7466,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7495,16 +7507,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "charlie-sheen",
       "name": "Charlie Sheen",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Charlie_Sheen_March_2009.JPG/500px-Charlie_Sheen_March_2009.JPG",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -7535,10 +7547,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7573,16 +7585,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "nate-bargatze",
       "name": "Nate Bargatze",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nate_Bargatze.jpg/500px-Nate_Bargatze.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -7613,10 +7625,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7656,10 +7668,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7696,10 +7708,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7736,10 +7748,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7776,10 +7788,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7814,10 +7826,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7857,10 +7869,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7897,10 +7909,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7937,10 +7949,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -7977,10 +7989,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8017,10 +8029,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8057,10 +8069,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8097,10 +8109,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8137,10 +8149,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8177,16 +8189,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "josh-brolin",
       "name": "Josh Brolin",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Josh_Brolin_TIFF_2025_%28cropped%29.jpg/500px-Josh_Brolin_TIFF_2025_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -8220,16 +8232,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "ezra-koenig",
       "name": "Ezra Koenig",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Ezra_Koenig_Close_up.png",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -8260,16 +8272,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "quinta-brunson",
       "name": "Quinta Brunson",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Quinta_Brunson_Peabody_Awards%2C_Jun_2023.jpg/500px-Quinta_Brunson_Peabody_Awards%2C_Jun_2023.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -8301,16 +8313,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "alex-edelman",
       "name": "Alex Edelman",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alex_Edelman_%28Jan_2024%29_01_%28cropped%29.jpg/500px-Alex_Edelman_%28Jan_2024%29_01_%28cropped%29.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -8325,7 +8337,7 @@
           "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/alex-edelman",
           "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/fecc7099-38b6-47c5-a878-75254f6cd477/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=fecc7099-38b6-47c5-a878-75254f6cd477&feed=dHoohVNH",
           "promoVisit": false,
-          "youtubeVideoId": "fEMzCHX2ONA",
+          "youtubeVideoId": null,
           "coldOpenWord": "apprehensive",
           "coldOpenSentiment": "neutral"
         }
@@ -8341,16 +8353,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "walton-goggins",
       "name": "Walton Goggins",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Walton_Goggins.jpg/500px-Walton_Goggins.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -8381,16 +8393,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "beastie-boys",
       "name": "Beastie Boys",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Beastie_Boys_2009_%286184423405%29.jpg/500px-Beastie_Boys_2009_%286184423405%29.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -8421,10 +8433,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8464,10 +8476,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8488,7 +8500,7 @@
           "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/susie-essman",
           "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/28406b81-080f-422c-beca-b11edf88c069/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=28406b81-080f-422c-beca-b11edf88c069&feed=dHoohVNH",
           "promoVisit": false,
-          "youtubeVideoId": null,
+          "youtubeVideoId": "dI4p-hpSNq4",
           "coldOpenWord": "tickled pink",
           "coldOpenSentiment": "neutral"
         }
@@ -8504,10 +8516,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8547,10 +8559,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8587,10 +8599,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8625,10 +8637,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8665,10 +8677,49 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "carol-burnett",
+      "name": "Carol Burnett",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2024-04-01",
+          "episodeTitle": "Carol Burnett",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/carol-burnett",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/2ec639f5-b848-418e-a766-d20658536e3d/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=2ec639f5-b848-418e-a766-d20658536e3d&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/6b2861f6-d7ec-4f88-bc67-43748d98bfbd/8b22970a-2b2a-4d11-818b-1cb22e027e58/3000x3000/250224-top-conan-episodes-3000x3000-carol-burnett-20-1.jpg?aid=rss_feed",
+          "youtubeVideoId": "G2gKTfSQTvg"
+        }
+      ],
+      "friendshipScore": 49,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8708,10 +8759,89 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "zach-woods",
+      "name": "Zach Woods",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2024-03-11",
+          "episodeTitle": "Zach Woods",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/zach-woods",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/4bec5591-257a-4c48-8bf0-baa9727bc3b6/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=4bec5591-257a-4c48-8bf0-baa9727bc3b6&feed=dHoohVNH",
+          "promoVisit": false,
+          "youtubeVideoId": "oM8zpesPP4g",
+          "coldOpenWord": "“pick me”",
+          "coldOpenSentiment": "neutral"
+        }
+      ],
+      "friendshipScore": 49,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "larry-david",
+      "name": "Larry David",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2024-02-12",
+          "episodeTitle": "Larry David",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/larry-david",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/b9d0a005-a4b4-4918-af4a-56dc8050afe0/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=b9d0a005-a4b4-4918-af4a-56dc8050afe0&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/5b7d8c77-15ba-4eff-a999-2e725db21db5/ff168136-2fb1-48bd-9d41-ff453e6378fe/3000x3000/conaf-episodetile-herotile-1x1.jpg?aid=rss_feed",
+          "youtubeVideoId": "fEMzCHX2ONA"
+        }
+      ],
+      "friendshipScore": 49,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8748,10 +8878,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8788,10 +8918,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8828,53 +8958,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "jordan-peele",
-      "name": "Jordan Peele",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2024-01-01",
-          "episodeTitle": "Jordan Peele",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/jordan-peele",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/d1bb7426-761a-454f-93bc-9b0ee011c4b4/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=d1bb7426-761a-454f-93bc-9b0ee011c4b4&feed=dHoohVNH",
-          "promoVisit": false,
-          "youtubeVideoId": "g_4DkifyiXw",
-          "coldOpenWord": "honored, absolutely honored",
-          "coldOpenSentiment": "neutral"
-        }
-      ],
-      "friendshipScore": 49,
-      "friendshipLabel": "Cherished Visitor",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 15,
-        "originDepth": 8,
-        "visitType": 15,
-        "gapResilience": 5
-      },
-      "mentionedGuests": [
-        "Werner Herzog"
-      ],
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8909,16 +8996,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "liam-neeson",
       "name": "Liam Neeson",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Liam_Neeson_Deauville_2012_2.jpg/500px-Liam_Neeson_Deauville_2012_2.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -8947,10 +9034,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -8991,10 +9078,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9032,16 +9119,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "roy-wood-jr",
       "name": "Roy Wood Jr.",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Roy_Wood_Jr._at_EssenceFest_2025_-_01_-_cropped.jpg/500px-Roy_Wood_Jr._at_EssenceFest_2025_-_01_-_cropped.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -9070,16 +9157,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "david-byrne",
       "name": "David Byrne",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/David_Byrne_San_Diego.jpg/500px-David_Byrne_San_Diego.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -9110,10 +9197,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9148,10 +9235,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9188,10 +9275,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9228,10 +9315,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9268,10 +9355,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9308,10 +9395,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9349,10 +9436,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9389,10 +9476,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9432,10 +9519,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9472,10 +9559,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9511,10 +9598,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9551,10 +9638,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9591,10 +9678,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9631,10 +9718,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9674,10 +9761,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9717,10 +9804,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9760,16 +9847,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "colin-hanks",
       "name": "Colin Hanks",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Colin_Hanks_in_2015.jpg/500px-Colin_Hanks_in_2015.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -9801,10 +9888,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9839,16 +9926,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "jon-bernthal",
       "name": "Jon Bernthal",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/JonBernthal-byPhilipRomano.jpg/500px-JonBernthal-byPhilipRomano.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -9879,10 +9966,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9917,16 +10004,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "jeff-ross",
       "name": "Jeff Ross",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Jeff_Ross%2C_Joint_Base_Andrews%2C_May_2016_%28cropped%29.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -9957,10 +10044,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -9997,10 +10084,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10039,10 +10126,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10079,10 +10166,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10117,10 +10204,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10157,10 +10244,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10197,10 +10284,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10237,10 +10324,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10277,10 +10364,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10317,10 +10404,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10358,10 +10445,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10396,10 +10483,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10436,10 +10523,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10476,10 +10563,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10514,10 +10601,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10552,10 +10639,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10592,10 +10679,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10630,10 +10717,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10675,10 +10762,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10715,10 +10802,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10753,16 +10840,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "simon-rich",
       "name": "Simon Rich",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/SimonRich-byPhilipRomano.jpg/500px-SimonRich-byPhilipRomano.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -10793,10 +10880,49 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "melissa-mccarthy",
+      "name": "Melissa McCarthy",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2021-09-20",
+          "episodeTitle": "Melissa McCarthy",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/melissa-mccarthy",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/ef0fad7d-1dad-4a09-a94e-29ceb774a86d/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=ef0fad7d-1dad-4a09-a94e-29ceb774a86d&feed=dHoohVNH",
+          "promoVisit": false,
+          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/ef0fad7d-1dad-4a09-a94e-29ceb774a86d/3000x3000/image.jpg?aid=rss_feed",
+          "youtubeVideoId": null
+        }
+      ],
+      "friendshipScore": 49,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10832,10 +10958,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -10873,16 +10999,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "daniel-radcliffe",
       "name": "Daniel Radcliffe",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/DanielRadcliffe-byPhilipRomano.jpg/500px-DanielRadcliffe-byPhilipRomano.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -10914,16 +11040,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "desus-nice",
       "name": "Desus Nice",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Desus_Nice%2C_June_2018.png",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -10955,16 +11081,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "president-barack-obama",
       "name": "President Barack Obama",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/500px-President_Barack_Obama.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -10996,96 +11122,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "abbi-jacobson",
-      "name": "Abbi Jacobson",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2021-04-19",
-          "episodeTitle": "Abbi Jacobson",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/abbi-jacobson",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/8c25f0ba-8f67-4c53-97f1-191692481a08/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=8c25f0ba-8f67-4c53-97f1-191692481a08&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/8c25f0ba-8f67-4c53-97f1-191692481a08/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null,
-          "coldOpenWord": "scrumptious",
-          "coldOpenSentiment": "neutral"
-        }
-      ],
-      "friendshipScore": 49,
-      "friendshipLabel": "Cherished Visitor",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 15,
-        "originDepth": 8,
-        "visitType": 15,
-        "gapResilience": 5
-      },
-      "mentionedGuests": [
-        "Tom Hanks",
-        "Conan O'Brien"
-      ],
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "adam-mckay",
-      "name": "Adam McKay",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2021-04-05",
-          "episodeTitle": "Adam McKay",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/adam-mckay",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/3a949ba6-c246-434a-82f9-be83fa56d622/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=3a949ba6-c246-434a-82f9-be83fa56d622&feed=dHoohVNH",
-          "promoVisit": false,
-          "artworkUrl": "https://image.simplecastcdn.com/images/c945bd/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/3a949ba6-c246-434a-82f9-be83fa56d622/3000x3000/image.jpg?aid=rss_feed",
-          "youtubeVideoId": null,
-          "coldOpenWord": "old-fashioned-twelve-year-old-about-to-have-a-sleepover excited",
-          "coldOpenSentiment": "neutral"
-        }
-      ],
-      "friendshipScore": 49,
-      "friendshipLabel": "Cherished Visitor",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 15,
-        "originDepth": 8,
-        "visitType": 15,
-        "gapResilience": 5
-      },
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11123,10 +11163,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11167,10 +11207,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11211,10 +11251,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11252,10 +11292,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11293,10 +11333,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11334,10 +11374,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11373,10 +11413,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11412,10 +11452,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11454,10 +11494,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11495,10 +11535,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11534,10 +11574,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11575,10 +11615,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11614,10 +11654,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11653,10 +11693,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11692,16 +11732,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "maya-rudolph",
       "name": "Maya Rudolph",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/MayaRudolph-byPhilipRomano.jpg/500px-MayaRudolph-byPhilipRomano.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -11733,16 +11773,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "amy-schumer",
       "name": "Amy Schumer",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Women%27s_March_-_Washington_DC_2017_%2831739104414%29_%283x4_cropped%29.jpg/500px-Women%27s_March_-_Washington_DC_2017_%2831739104414%29_%283x4_cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -11774,16 +11814,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "rob-lowe",
       "name": "Rob Lowe",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Rob_Lowe_2012_Shankbone_2.JPG/500px-Rob_Lowe_2012_Shankbone_2.JPG",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -11815,16 +11855,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "j-j-abrams",
       "name": "J. J. Abrams",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/J._J._Abrams.jpg/500px-J._J._Abrams.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -11856,16 +11896,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "ted-danson",
       "name": "Ted Danson",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/%27The_Good_Place%27_cast_and_crew_visit_San_Diego_Comic_Con_for_a_panel_%2843100198314%29_%28cropped_2%29.jpg/500px-%27The_Good_Place%27_cast_and_crew_visit_San_Diego_Comic_Con_for_a_panel_%2843100198314%29_%28cropped_2%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -11897,16 +11937,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "ricky-gervais",
       "name": "Ricky Gervais",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/GervaisPall230921_%285_of_17%29_%2851528328440%29_%28cropped%29.jpg/500px-GervaisPall230921_%285_of_17%29_%2851528328440%29_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -11938,10 +11978,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -11979,10 +12019,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12021,16 +12061,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "ali-wong",
       "name": "Ali Wong",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ali_Wong_2012.jpg/500px-Ali_Wong_2012.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12062,10 +12102,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12101,16 +12141,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "ellen-degeneres",
       "name": "Ellen DeGeneres",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ellen_DeGeneres-2009-enh5.jpg/500px-Ellen_DeGeneres-2009-enh5.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12140,10 +12180,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12181,10 +12221,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12222,10 +12262,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12263,10 +12303,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12302,10 +12342,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12341,10 +12381,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12385,10 +12425,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12426,10 +12466,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12467,10 +12507,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12501,10 +12541,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12535,10 +12575,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12569,10 +12609,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12603,16 +12643,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "new-york-city",
       "name": "New York City",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/500px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12637,16 +12677,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "jimmy-fallon",
       "name": "Jimmy Fallon",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Jimmy_Fallon%2C_Montclair_Film_Festival%2C_2013.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12671,16 +12711,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "hugh-jackman",
       "name": "Hugh Jackman",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Hugh_Jackman_by_Gage_Skidmore_3.jpg/500px-Hugh_Jackman_by_Gage_Skidmore_3.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12705,16 +12745,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "matthew-broderick",
       "name": "Matthew Broderick",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Matthew_Broderick_2022.jpg/500px-Matthew_Broderick_2022.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12739,10 +12779,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12773,16 +12813,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "chicago-theatre",
       "name": "Chicago Theatre",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Chicago_Theatre_blend.jpg/500px-Chicago_Theatre_blend.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12807,16 +12847,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "chicago-illinois",
       "name": "Chicago, Illinois",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Chicago_River_ferry_b.jpg/500px-Chicago_River_ferry_b.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12841,10 +12881,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12875,16 +12915,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "johnny-galecki",
       "name": "Johnny Galecki",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Johnny_Galecki_by_Gage_Skidmore.jpg/500px-Johnny_Galecki_by_Gage_Skidmore.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12909,10 +12949,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -12943,16 +12983,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "the-tabernacle",
       "name": "The Tabernacle",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Stiftshuette_Modell_Timnapark.jpg/500px-Stiftshuette_Modell_Timnapark.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -12977,16 +13017,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "atlanta-georgia",
       "name": "Atlanta, Georgia",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/A2ATL20250614-0721_%28cropped%29.jpg/500px-A2ATL20250614-0721_%28cropped%29.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -13011,10 +13051,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13045,16 +13085,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "georgia-dome",
       "name": "Georgia Dome",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/1996_Georgia_Dome.JPEG/500px-1996_Georgia_Dome.JPEG",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -13079,10 +13119,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13113,10 +13153,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13147,16 +13187,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "dallas-texas",
       "name": "Dallas, Texas",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/View_of_Dallas_from_Reunion_Tower_August_2015_05.jpg/500px-View_of_Dallas_from_Reunion_Tower_August_2015_05.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -13181,16 +13221,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "dirk-nowitzki",
       "name": "Dirk Nowitzki",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Dirk_Nowitzki_2_%28cropped%29.jpg/500px-Dirk_Nowitzki_2_%28cropped%29.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -13215,10 +13255,44 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "simon-helberg",
+      "name": "Simon Helberg",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/CES_2026_-_Simon_Helberg_02_%28cropped%29.jpg/500px-CES_2026_-_Simon_Helberg_02_%28cropped%29.jpg",
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "tbs-conan",
+          "date": "1993-01-01",
+          "promoVisit": false
+        }
+      ],
+      "friendshipScore": 49,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13249,10 +13323,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13283,10 +13357,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13317,10 +13391,44 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "comic-con",
+      "name": "Comic-Con",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "tbs-conan",
+          "date": "1993-01-01",
+          "promoVisit": false
+        }
+      ],
+      "friendshipScore": 49,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 8,
+        "visitType": 15,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13351,10 +13459,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13385,10 +13493,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13419,10 +13527,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13453,10 +13561,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13487,10 +13595,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13521,10 +13629,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13555,10 +13663,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13589,10 +13697,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13623,44 +13731,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "kingsman-the-golden-circle",
-      "name": "Kingsman: The Golden Circle",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "tbs-conan",
-          "date": "1993-01-01",
-          "promoVisit": false
-        }
-      ],
-      "friendshipScore": 49,
-      "friendshipLabel": "Cherished Visitor",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 15,
-        "originDepth": 8,
-        "visitType": 15,
-        "gapResilience": 5
-      },
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13691,10 +13765,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13725,10 +13799,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13759,10 +13833,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13793,10 +13867,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13827,10 +13901,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13861,44 +13935,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "aquaman",
-      "name": "Aquaman",
-      "photoUrl": null,
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "tbs-conan",
-          "date": "1993-01-01",
-          "promoVisit": false
-        }
-      ],
-      "friendshipScore": 49,
-      "friendshipLabel": "Cherished Visitor",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 15,
-        "originDepth": 8,
-        "visitType": 15,
-        "gapResilience": 5
-      },
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13929,10 +13969,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13963,10 +14003,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -13997,10 +14037,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14031,10 +14071,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14065,10 +14105,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14099,10 +14139,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14133,10 +14173,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14167,16 +14207,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "mark-hamill",
       "name": "Mark Hamill",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Mark_Hamill_by_Gage_Skidmore_4.jpg/500px-Mark_Hamill_by_Gage_Skidmore_4.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14201,16 +14241,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "thomas-middleditch",
       "name": "Thomas Middleditch",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Thomas_Middleditch_by_Gage_Skidmore.jpg/500px-Thomas_Middleditch_by_Gage_Skidmore.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14235,16 +14275,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "jeffrey-dean-morgan",
       "name": "Jeffrey Dean Morgan",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Jeffrey_Dean_Morgan_by_Gage_Skidmore_3.jpg/500px-Jeffrey_Dean_Morgan_by_Gage_Skidmore_3.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14269,16 +14309,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "norman-reedus",
       "name": "Norman Reedus",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Norman_Reedus_at_53rd_Saturn_Awards_2026-02.jpg/500px-Norman_Reedus_at_53rd_Saturn_Awards_2026-02.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14303,16 +14343,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "ben-schwartz",
       "name": "Ben Schwartz",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ben_Schwartz_Photo_Op_GalaxyCon_Columbus_2025.jpg/500px-Ben_Schwartz_Photo_Op_GalaxyCon_Columbus_2025.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14337,16 +14377,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "isaac-hempstead-wright",
       "name": "Isaac Hempstead Wright",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Isaac_Hempstead_Wright_%282019%29_%28cropped%29.jpg/500px-Isaac_Hempstead_Wright_%282019%29_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14371,10 +14411,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14405,10 +14445,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14439,10 +14479,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14479,10 +14519,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14519,10 +14559,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14559,16 +14599,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "billy-crystal",
       "name": "Billy Crystal",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Billy_Crystal_by_Gage_Skidmore.jpg/500px-Billy_Crystal_by_Gage_Skidmore.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14599,10 +14639,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14639,10 +14679,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14679,16 +14719,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "harrison-ford",
       "name": "Harrison Ford",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Harrison_Ford_-_Televerse_2025-03.jpg/500px-Harrison_Ford_-_Televerse_2025-03.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14719,10 +14759,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14759,10 +14799,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14800,10 +14840,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14845,16 +14885,16 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "russell-brand",
       "name": "Russell Brand",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Russell_Brand_in_2025_%28cropped%29.jpg/500px-Russell_Brand_in_2025_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14886,16 +14926,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "keegan-michael-key",
       "name": "Keegan-Michael Key",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Keegan-Michael_Key_by_Gage_Skidmore_2.jpg/500px-Keegan-Michael_Key_by_Gage_Skidmore_2.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -14927,10 +14967,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -14968,10 +15008,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15008,16 +15048,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "mary-bronstein",
       "name": "Mary Bronstein",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Mary_Bronstein_at_Berlinale_2025.jpg/500px-Mary_Bronstein_at_Berlinale_2025.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -15049,10 +15089,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15089,10 +15129,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15127,10 +15167,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15151,7 +15191,7 @@
           "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/kaitlin-olson",
           "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/cf646ac5-08a8-4576-9075-fb52a80ef5b0/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=cf646ac5-08a8-4576-9075-fb52a80ef5b0&feed=dHoohVNH",
           "promoVisit": true,
-          "youtubeVideoId": "09j1gQiM1Ew",
+          "youtubeVideoId": "CG2TYcaSCwg",
           "coldOpenWord": "apprehensive",
           "coldOpenSentiment": "neutral"
         }
@@ -15167,10 +15207,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15205,10 +15245,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15248,10 +15288,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15288,10 +15328,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15328,10 +15368,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15366,56 +15406,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
-      ]
-    },
-    {
-      "id": "reggie-watts",
-      "name": "Reggie Watts",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Reggie_Watts_%2836059512662%29_%28cropped%29.jpg/500px-Reggie_Watts_%2836059512662%29_%28cropped%29.jpg",
-      "bio": null,
-      "origin": {
-        "type": "cold-booking",
-        "label": "Booked as a guest",
-        "confidence": "inferred"
-      },
-      "appearances": [
-        {
-          "era": "podcast",
-          "date": "2023-11-06",
-          "episodeTitle": "Reggie Watts",
-          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/reggie-watts",
-          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/1d0c8cbd-8f3a-4514-88e3-d1c9e498cd09/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=1d0c8cbd-8f3a-4514-88e3-d1c9e498cd09&feed=dHoohVNH",
-          "promoVisit": true,
-          "youtubeVideoId": null,
-          "coldOpenWord": "quixotic",
-          "coldOpenSentiment": "neutral"
-        }
-      ],
-      "friendshipScore": 42,
-      "friendshipLabel": "Cherished Visitor",
-      "scoreBreakdown": {
-        "appearances": 6,
-        "coldOpenSentiment": 15,
-        "originDepth": 8,
-        "visitType": 8,
-        "gapResilience": 5
-      },
-      "relatedGuests": [
-        "jack-mcbrayer",
-        "charles-barkley",
-        "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "sir-patrick-stewart",
       "name": "Sir Patrick Stewart",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Patrick_Stewart_by_Gage_Skidmore_2.jpg/500px-Patrick_Stewart_by_Gage_Skidmore_2.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -15444,10 +15444,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15487,10 +15487,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15527,10 +15527,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15567,10 +15567,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15607,10 +15607,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15648,10 +15648,10 @@
       ],
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15688,16 +15688,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "aubrey-plaza",
       "name": "Aubrey Plaza",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Aubrey_Plaza_at_the_2024_Cannes_Film_Festival_%28head_shot%29.jpg/500px-Aubrey_Plaza_at_the_2024_Cannes_Film_Festival_%28head_shot%29.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -15728,16 +15728,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "jack-white",
       "name": "Jack White",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Werchter070718_p2_%285_of_37%29_%2853977414178%29_%28cropped%29.jpg/500px-Werchter070718_p2_%285_of_37%29_%2853977414178%29_%28cropped%29.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -15768,10 +15768,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15806,10 +15806,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15846,10 +15846,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15884,10 +15884,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15924,10 +15924,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -15962,10 +15962,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16002,16 +16002,56 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
+      ]
+    },
+    {
+      "id": "daniel-sloss",
+      "name": "Daniel Sloss",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2021-10-25",
+          "episodeTitle": "Daniel Sloss",
+          "episodeUrl": "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend/episodes/daniel-sloss",
+          "audioUrl": "https://pdrl.fm/f3efd0/dts.podtrac.com/redirect.mp3/arttrk.com/p/ST44R/claritaspod.com/measure/stitcher.simplecastaudio.com/c945bd13-c7f3-4f22-95b5-4bf98e12b21f/episodes/756e0ce7-87f6-46e7-b792-f1ad6d014048/audio/128/default.mp3?aid=rss_feed&awCollectionId=c945bd13-c7f3-4f22-95b5-4bf98e12b21f&awEpisodeId=756e0ce7-87f6-46e7-b792-f1ad6d014048&feed=dHoohVNH",
+          "promoVisit": true,
+          "youtubeVideoId": null,
+          "coldOpenWord": "privileged",
+          "coldOpenSentiment": "neutral"
+        }
+      ],
+      "friendshipScore": 42,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 6,
+        "coldOpenSentiment": 15,
+        "originDepth": 8,
+        "visitType": 8,
+        "gapResilience": 5
+      },
+      "relatedGuests": [
+        "jack-mcbrayer",
+        "kristen-schaal",
+        "charles-barkley",
+        "lisa-kudrow",
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "jake-gyllenhaal",
       "name": "Jake Gyllenhaal",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Jake_Gyllenhaal_2019_by_Glenn_Francis.jpg/500px-Jake_Gyllenhaal_2019_by_Glenn_Francis.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -16042,16 +16082,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "anderson-cooper",
       "name": "Anderson Cooper",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Anderson_Cooper_%2844675408934%29_%28cropped%29.jpg/500px-Anderson_Cooper_%2844675408934%29_%28cropped%29.jpg",
+      "photoUrl": null,
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -16080,16 +16120,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "sean-penn",
       "name": "Sean Penn",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Superpower_%282023%29-60769.jpg/500px-Superpower_%282023%29-60769.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -16119,16 +16159,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "john-krasinski",
       "name": "John Krasinski",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/John_Krasinski_2022.jpg/500px-John_Krasinski_2022.jpg",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -16160,10 +16200,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16199,10 +16239,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16238,10 +16278,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16279,10 +16319,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16318,10 +16358,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16359,10 +16399,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16400,16 +16440,16 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
       "id": "whitney-cummings",
       "name": "Whitney Cummings",
-      "photoUrl": null,
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Whitney_Cummings_2019.png",
       "bio": null,
       "origin": {
         "type": "cold-booking",
@@ -16441,10 +16481,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16480,10 +16520,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16519,10 +16559,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16558,10 +16598,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     },
     {
@@ -16599,10 +16639,10 @@
       },
       "relatedGuests": [
         "jack-mcbrayer",
+        "kristen-schaal",
         "charles-barkley",
         "lisa-kudrow",
-        "kumail-nanjiani",
-        "will-arnett"
+        "kumail-nanjiani"
       ]
     }
   ]
