@@ -26,7 +26,7 @@ const podcastEpisodes  = readJson<RawPodcastEpisode[]>('podcast-episodes.json', 
 const lateNightHistory = readJson<RawLateNightAppearance[]>('late-night-history.json', []);
 const youtubeCache     = readJson<YouTubeCache>('youtube-matches.json', {});
 const photoCache       = readJson<PhotoCache>('photos.json', {});
-const originCache      = readJson<OriginCache>('origin-cache.json', {});
+const originCache      = readJson<OriginCache>('origins.json', {});
 const bioCache         = readJson<Record<string, GuestBio>>('bios.json', {});
 
 const guestEps  = podcastEpisodes.filter(e => e.guestName && !e.isFanSegment && !e.isStaffEpisode);

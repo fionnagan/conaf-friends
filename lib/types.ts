@@ -123,7 +123,7 @@ export interface RawLateNightAppearance {
   era: Era;
   date: string;
   episodeTitle?: string;
-  source: 'wikipedia' | 'imdb' | 'unknown';
+  source: 'tvmaze' | 'wikipedia' | 'imdb' | 'tmdb' | 'known' | 'unknown';
   confidence: 'high' | 'medium' | 'inferred';
 }
 

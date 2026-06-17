@@ -63,6 +63,41 @@ const JOB_TITLE_PREFIX =
 const COLD_OPEN_REGEX =
   /([A-Z][^.!?]+?)\s+feels?\s+(.+?)\s+about\s+being\s+Conan\s+O.?Brien.?s\s+friend/i;
 
+// The cold open ("[Name] feels ___ about being Conan O'Brien's friend") appears in
+// many grammatical variants across the feed. These fallbacks run only when the strict
+// regex above fails, in priority order. Group 1 = the feeling. All are anchored on a
+// "Conan" reference so they can't run away, and [^.!?] keeps the feeling within one clause.
+const COLD_OPEN_FALLBACKS: RegExp[] = [
+  // Generalised connective: "about being [on] Conan", "to be Conan", "in being Conan",
+  // "being Conan", "for Conan". Covers "Conan's friend" / "best friend" / ellipsis too.
+  //   "feels thrilled to be Conan O'Brien's friend"            → thrilled
+  //   "feels so much love for Conan O'Brien"                   → so much love
+  //   "feels proud, happy, honored to be Conan O'Brien's..."   → proud, happy, honored
+  //   "feels…hmmm…about being Conan O'Brien's friend"          → hmmm
+  /feel(?:s|ings)?[\s.…]*([^.!?]+?)[\s.…]+(?:about\s+being|to\s+be|in\s+being|being|for)\s+(?:on\s+)?Conan\b/i,
+  // Restated/sentence form: "feels honored. Honored! To be Conan O'Brien's friend."
+  // Take the first clause, but require the "Conan('s) … friend" anchor close by so a
+  // stray "feels …" sentence near an unrelated "Conan" mention can't be mistaken for a
+  // cold open (e.g. "...feels strongly about Marvel. Later, Conan tells a story.").
+  /feel(?:s|ings)?\s+([^.!?…]+?)[.!?][\s\S]{0,40}?Conan\b[\s\S]{0,20}?friend/i,
+];
+
+// Clean a captured feeling: strip ellipsis, stray punctuation, "(?)" artifacts, quotes.
+function cleanFeeling(raw: string): string | undefined {
+  const cleaned = raw
+    .replace(/\(\s*\?+\s*\)/g, '')      // "excited (?)" → "excited"
+    .replace(/[…]+/g, ' ')               // ellipsis char
+    .replace(/^[\s.…"'"",;]+|[\s.…"'"",;]+$/g, '') // trim edge punctuation/quotes/commas
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+  // Reject empties and obvious over-captures (a real feeling is short)
+  if (!cleaned || cleaned.length > 60) return undefined;
+  // If the capture ran into the "Conan O'Brien" anchor, we grabbed too much — drop it
+  // so the episode stays unset rather than wrong (manual-cold-opens.json can supply it).
+  if (/\bconan\b|\bo.?brien\b/i.test(cleaned)) return undefined;
+  return cleaned;
+}
+
 const WARM_WORDS = new Set([
   'blessed', 'honored', 'grateful', 'delighted', 'fine', 'good', 'hopeful',
   'relieved', 'electric', 'just fine', 'still really good', 'genuinely',
@@ -131,6 +166,11 @@ function buildTeamCocoUrl(title: string): string {
 const SUFFIX_WORDS = /\b(?:Returns?|Again|Is Back|Once More|Part|Vol|Episode)\b/i;
 
 function extractGuestName(title: string, plainText: string): string | undefined {
+  // 0. "...featuring <Name>" titles ("A Very Special Self-Quarantine Episode featuring
+  //    Andy Daly") — the guest is the name after "featuring", not the episode title.
+  const featuring = title.match(/featuring\s+([A-Z][A-Za-z .'-]+?)\s*$/i);
+  if (featuring?.[1]) return featuring[1].trim();
+
   // 1. Title with suffix FIRST: "Timothy Olyphant Returns Again", "Lisa Kudrow (Full Episode)"
   //    Check this before simpleName to avoid swallowing suffix words into the name
   const withSuffix = title.match(
@@ -213,7 +253,17 @@ export async function fetchPodcastRSS(): Promise<RawPodcastEpisode[]> {
 
     // Parse cold open from plain text only (never raw HTML)
     const coldMatch   = plainText.match(COLD_OPEN_REGEX);
-    let   coldOpenWord = coldMatch?.[2]?.trim();
+    let   coldOpenWord = coldMatch?.[2] ? cleanFeeling(coldMatch[2]) : undefined;
+
+    // Fallbacks for the many valid phrasings the strict regex rejects. Only when the
+    // strict match failed; first fallback to produce a clean feeling wins.
+    if (!coldOpenWord) {
+      for (const re of COLD_OPEN_FALLBACKS) {
+        const fb = plainText.match(re);
+        const f = fb?.[1] ? cleanFeeling(fb[1]) : undefined;
+        if (f) { coldOpenWord = f; break; }
+      }
+    }
 
     // Apply manual overrides (non-English answers, non-standard phrasing)
     if (!isFanSegment && !isStaffEpisode) {
