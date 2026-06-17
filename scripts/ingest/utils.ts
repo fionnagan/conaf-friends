@@ -42,7 +42,11 @@ export function normalizeGuestName(name: string): string {
   return name
     .trim()
     .replace(/\s+/g, ' ')
-    .replace(/^(dr|mr|mrs|ms|prof)\.\s+/i, '');
+    .replace(/^(dr|mr|mrs|ms|prof)\.\s+/i, '')
+    // Canonicalise initials so "Louis C.K." / "Louis C K" / "Louis CK" all merge:
+    // strip periods between/after single capitals, then collapse spaced single capitals.
+    .replace(/\b([A-Z])\.(?=[A-Z. ]|$)/g, '$1')
+    .replace(/\b([A-Z]) ([A-Z])\b/g, '$1$2');
 }
 
 export const USER_AGENT =

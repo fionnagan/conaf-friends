@@ -21,7 +21,7 @@ loadEnv();
 
 import { fetchPodcastRSS } from './fetch-podcast-rss';
 import { matchYouTubeVideos } from './match-youtube-videos';
-import { fetchLateNightHistory } from './fetch-late-night-history';
+import { fetchTalkShowGuests } from './fetch-talkshow-guests';
 import { enrichOrigins, upgradeToLateNightRegular } from './enrich-origins';
 import { fetchPhotos } from './fetch-photos';
 import { merge, writeOutput } from './merge';
@@ -46,10 +46,10 @@ async function main() {
   const ytMatched = Object.values(youtubeCache).filter((v) => v.videoId).length;
   console.log(`  → ${ytMatched} episodes with YouTube matches\n`);
 
-  // Step 3: Fetch late night history
-  console.log('Step 3/6: Fetching late night guest history...');
-  const lateNightHistory = await fetchLateNightHistory();
-  console.log(`  → ${lateNightHistory.length} late night appearances\n`);
+  // Step 3: Fetch verified talk-show guest history (Late Night, Tonight Show, TBS Conan)
+  console.log('Step 3/6: Fetching verified talk-show guest history...');
+  const lateNightHistory = await fetchTalkShowGuests();
+  console.log(`  → ${lateNightHistory.length} talk-show appearances\n`);
 
   // Step 4: Enrich origins
   console.log('Step 4/6: Enriching guest origins...');
