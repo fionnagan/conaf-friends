@@ -129,25 +129,6 @@ export default function GuestPage({ params, searchParams }: Props) {
         </section>
       )}
 
-      {/* How Conan knows them */}
-      <section className="mb-8 p-5 bg-[var(--bg2)] rounded-2xl border border-[var(--border)]">
-        <h2 className="font-serif text-xl font-semibold mb-2">
-          How Conan knows them
-        </h2>
-        {guest.bio?.conan_connection ? (
-          <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-            {guest.bio.conan_connection.evidence}
-          </p>
-        ) : (
-          <>
-            <p className="font-semibold text-[var(--text)]">{guest.origin.label}</p>
-            <p className="text-sm text-[var(--text-muted)] mt-1">
-              {ORIGIN_LABELS[guest.origin.type]}
-            </p>
-          </>
-        )}
-      </section>
-
 
       {/* Friendship Arc */}
       <section className="mb-8">

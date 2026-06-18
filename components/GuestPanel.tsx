@@ -125,14 +125,6 @@ export default function GuestPanel({ guestId, onClose }: Props) {
               </div>
             </div>
 
-            {/* Origin badge */}
-            <div className="px-6 mb-6">
-              <div className="p-3 bg-[var(--bg2)] rounded-xl border border-[var(--border)]">
-                <p className="text-xs text-[var(--text-muted)] mb-1">How Conan knows them</p>
-                <p className="text-sm font-semibold">{guest.origin.label}</p>
-              </div>
-            </div>
-
             {/* Score breakdown */}
             <div className="px-6 mb-6">
               <h3 className="font-serif text-lg font-semibold mb-3">
