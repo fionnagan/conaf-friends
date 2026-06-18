@@ -20,6 +20,7 @@
     "enrich:bios:force": "tsx scripts/ingest/enrich-bios.ts --force",
     "enrich:bios:retry": "tsx scripts/ingest/enrich-bios.ts --retry-review --limit 355",
     "enrich:calibrate": "tsx scripts/ingest/weekly-calibration.ts",
+    "emit:context": "tsx scripts/emit_context.ts",
     "wordcloud": "python3 scripts/generate-wordcloud.py",
     "test": "jest",
     "test:watch": "jest --watch"

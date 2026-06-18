@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { getGuestsData } from "@/lib/data";
 import ArcListClient from "@/components/ArcListClient";
+import AskTheRegistry from "@/components/AskTheRegistry";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,6 +31,8 @@ export default function ArcPage() {
       <p className="text-[var(--text-muted)] mb-8">
         Every guest&apos;s relationship with Conan, plotted across 30+ years.
       </p>
+
+      <AskTheRegistry />
 
       <Suspense>
         <ArcListClient guests={data.guests} />

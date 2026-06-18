@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "api/ask.py": {
+      "memory": 256,
+      "maxDuration": 15,
+      "includeFiles": "api/guests_context.json"
+    }
+  }
+}
