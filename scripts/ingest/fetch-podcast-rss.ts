@@ -166,6 +166,9 @@ function buildTeamCocoUrl(title: string): string {
 const SUFFIX_WORDS = /\b(?:Returns?|Again|Is Back|Once More|Part|Vol|Episode)\b/i;
 
 function extractGuestName(title: string, plainText: string): string | undefined {
+  // Strip quote marks so quoted nicknames parse ('"Weird Al" Yankovic' → 'Weird Al Yankovic').
+  title = title.replace(/[“”"]/g, '').replace(/\s{2,}/g, ' ').trim();
+
   // 0. "...featuring <Name>" titles ("A Very Special Self-Quarantine Episode featuring
   //    Andy Daly") — the guest is the name after "featuring", not the episode title.
   const featuring = title.match(/featuring\s+([A-Z][A-Za-z .'-]+?)\s*$/i);
@@ -198,6 +201,12 @@ function extractGuestName(title: string, plainText: string): string | undefined 
   ) {
     return simpleName[1].trim();
   }
+
+  // 2b. Fan-format/segment titles with a real celebrity ("Limp Paddle With Special
+  //     Guest D'Arcy Carden") — checked after a clear headliner but before the greedy
+  //     multi-guest catch-all so the bit title isn't mistaken for the guest.
+  const specialGuest = title.match(/with\s+special\s+guest[s]?\s+([A-Z][A-Za-z .'-]+?)\s*$/i);
+  if (specialGuest?.[1]) return specialGuest[1].trim();
 
   // 3. Multi-guest title (keep as-is, limit length)
   const multiGuest = title.match(/^([A-Z][A-Za-z ,.'-]{3,60})(?:\s+And\s+|\s*$)/);
@@ -252,12 +261,18 @@ export async function fetchPodcastRSS(): Promise<RawPodcastEpisode[]> {
 
     const durationSecs = parseDurationSeconds((item as any).itunesDuration || '');
     const isShortEpisode = durationSecs > 0 && durationSecs < GUEST_EPISODE_MIN_SECONDS;
-    const isFanSegment =
+    let isFanSegment =
       FAN_PATTERNS.some((p) => p.test(title) || p.test(plainText)) ||
       isShortEpisode;
     const isStaffEpisode = STAFF_PATTERNS.some((p) => p.test(title));
     const isSpecial = SPECIAL_PATTERNS.some((p) => p.test(title));
     const isRepeatGuest = /returns|once more|is back|again/i.test(title);
+
+    // A fan-format/segment episode that nonetheless features a named celebrity
+    // ("...With Special Guest D'Arcy Carden") is a real guest appearance — treat it as one.
+    if (isFanSegment && /with\s+special\s+guest[s]?\s+[A-Z]/i.test(title)) {
+      isFanSegment = false;
+    }
 
     // Parse cold open from plain text only (never raw HTML)
     const coldMatch   = plainText.match(COLD_OPEN_REGEX);
