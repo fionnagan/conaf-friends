@@ -5,6 +5,7 @@ import type { Guest, Era } from "@/lib/types";
 import {
   ERA_LABELS,
   ERA_LOGOS,
+  ERA_YEARS,
   getEraColor,
   getEraTextColor,
   formatDate,
@@ -19,28 +20,53 @@ const ERAS: Era[] = [
   "conan-must-go",
 ];
 
-const ERA_DATE_RANGES: Record<Era, [number, number]> = {
-  "late-night-nbc": [1993, 2009],
-  "tonight-show": [2009, 2010],
-  "tbs-conan": [2010, 2021],
-  podcast: [2018, 2026],
-  "conan-must-go": [2023, 2026],
+// Eras overlap in real time (the podcast has run alongside TBS and Must Go), so a single
+// linear time axis makes a dot's era ambiguous. Instead we give each era its own
+// non-overlapping segment and place each appearance within its OWN era's segment by date —
+// so a TBS dot is always under the TBS section, a podcast dot under Needs a Friend, etc.
+const ERA_BOUNDS: Record<Era, [number, number]> = {
+  "late-night-nbc": [1993.7, 2009.15],
+  "tonight-show": [2009.4, 2010.06],
+  "tbs-conan": [2010.85, 2021.48],
+  podcast: [2018.75, 2026.5],
+  "conan-must-go": [2024.3, 2026.5],
+};
+// Segment width weights (≈ era length in years, floored so short eras stay visible).
+const ERA_WEIGHT: Record<Era, number> = {
+  "late-night-nbc": 16,
+  "tonight-show": 3,
+  "tbs-conan": 11,
+  podcast: 8,
+  "conan-must-go": 3,
 };
 
-// TOTAL_END = 2027 gives 2026 a right-margin so it renders inside the viewBox
-const TOTAL_START = 1993;
-const TOTAL_END = 2027;
-const TOTAL_SPAN = TOTAL_END - TOTAL_START;
+const GAP = 1; // % gap between segments
+const totalWeight = ERAS.reduce((s, e) => s + ERA_WEIGHT[e], 0);
+const totalGap = GAP * (ERAS.length - 1);
 
-function yearToPercent(year: number): number {
-  return ((year - TOTAL_START) / TOTAL_SPAN) * 100;
+// Precompute each era's segment [startPct, widthPct].
+const SEGMENTS: Record<Era, { start: number; width: number }> = (() => {
+  const out = {} as Record<Era, { start: number; width: number }>;
+  let cursor = 0;
+  for (const era of ERAS) {
+    const width = (ERA_WEIGHT[era] / totalWeight) * (100 - totalGap);
+    out[era] = { start: cursor, width };
+    cursor += width + GAP;
+  }
+  return out;
+})();
+
+const yearOf = (d: string) =>
+  new Date(d).getFullYear() + new Date(d).getMonth() / 12;
+
+// Map an appearance to a horizontal % within its own era's segment (inset from the edges).
+function appearanceToPercent(era: Era, date: string): number {
+  const seg = SEGMENTS[era];
+  const [lo, hi] = ERA_BOUNDS[era];
+  const frac = hi > lo ? Math.min(1, Math.max(0, (yearOf(date) - lo) / (hi - lo))) : 0.5;
+  const inset = seg.width * 0.1;
+  return seg.start + inset + frac * (seg.width - inset * 2);
 }
-
-function dateToPercent(dateStr: string): number {
-  const year = new Date(dateStr).getFullYear() + new Date(dateStr).getMonth() / 12;
-  return yearToPercent(year);
-}
-
 
 interface Props {
   guest: Guest;
@@ -50,198 +76,124 @@ interface Props {
 interface TooltipState {
   visible: boolean;
   x: number;
-  y: number;
   content: string;
 }
 
 export default function FriendshipArc({ guest, compact = false }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [tooltip, setTooltip] = useState<TooltipState>({
-    visible: false,
-    x: 0,
-    y: 0,
-    content: "",
-  });
+  const [tooltip, setTooltip] = useState<TooltipState>({ visible: false, x: 0, content: "" });
   const { play } = usePlayer();
 
-  const height = compact ? 80 : 120;
+  const height = compact ? 80 : 116;
+  const baselineTop = compact ? 52 : 72; // px from top to the timeline baseline
+  const dotSize = compact ? 9 : 11;
 
   return (
-    <div ref={containerRef} className="relative select-none">
-      {/* Timeline SVG */}
-      <svg
-        width="100%"
-        height={height}
-        viewBox={`0 0 1000 ${height}`}
-        preserveAspectRatio="none"
-        className="overflow-visible"
-      >
-        {/* Era background bands */}
-        {ERAS.map((era) => {
-          const [start, end] = ERA_DATE_RANGES[era];
-          const x = yearToPercent(start) * 10;
-          const w = (yearToPercent(end) - yearToPercent(start)) * 10;
-          const color = getEraColor(era);
+    <div
+      ref={containerRef}
+      className="relative select-none w-full"
+      style={{ height }}
+    >
+      {/* Era segment bands */}
+      {ERAS.map((era) => {
+        const seg = SEGMENTS[era];
+        return (
+          <div
+            key={`band-${era}`}
+            className="absolute top-0 bottom-0 rounded-sm"
+            style={{
+              left: `${seg.start}%`,
+              width: `${seg.width}%`,
+              backgroundColor: getEraColor(era),
+              opacity: 0.5,
+            }}
+          />
+        );
+      })}
+
+      {/* Era labels (logo + name + years) */}
+      {!compact &&
+        ERAS.map((era) => {
+          const seg = SEGMENTS[era];
+          const logo = ERA_LOGOS[era];
           return (
-            <rect
-              key={era}
-              x={x}
-              y={0}
-              width={w}
-              height={height}
-              fill={color}
-              opacity={0.35}
+            <div
+              key={`label-${era}`}
+              className="absolute flex flex-col items-center gap-0.5 text-center leading-none"
+              style={{ left: `${seg.start + seg.width / 2}%`, top: 4, transform: "translateX(-50%)", width: `${seg.width}%` }}
+            >
+              {logo && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={logo} alt="" width={14} height={14} style={{ borderRadius: 2, objectFit: "contain" }} />
+              )}
+              <span style={{ fontSize: 8, fontWeight: 600, color: getEraTextColor(era) }}>
+                {ERA_LABELS[era]}
+              </span>
+              <span style={{ fontSize: 7, color: "#9A9590" }}>{ERA_YEARS[era]}</span>
+            </div>
+          );
+        })}
+
+      {/* Timeline baseline */}
+      <div className="absolute" style={{ top: baselineTop, left: 0, right: 0, height: 2, backgroundColor: "#E8E4DC", opacity: 0.25 }} />
+
+      {/* Appearance dots */}
+      {guest.appearances.map((app, i) => {
+        const x = appearanceToPercent(app.era, app.date);
+        const color = getEraTextColor(app.era);
+        const playable = app.audioUrl || app.youtubeVideoId || app.episodeUrl;
+        return (
+          <div key={i}>
+            {app.era === "podcast" && app.coldOpenWord && !compact && (
+              <div
+                className="absolute italic whitespace-nowrap"
+                style={{
+                  left: `${x}%`,
+                  top: baselineTop - 20,
+                  transform: "translateX(-50%)",
+                  fontSize: 8,
+                  fontFamily: "Fraunces, Georgia, serif",
+                  color,
+                }}
+              >
+                {app.coldOpenWord.length > 12 ? app.coldOpenWord.slice(0, 12) + "…" : app.coldOpenWord}
+              </div>
+            )}
+            <button
+              type="button"
+              aria-label={`${formatDate(app.date)} · ${ERA_LABELS[app.era]}`}
+              className="absolute rounded-full"
+              style={{
+                left: `${x}%`,
+                top: baselineTop,
+                width: dotSize,
+                height: dotSize,
+                transform: "translate(-50%, -50%)",
+                backgroundColor: color,
+                cursor: playable ? "pointer" : "default",
+                border: "none",
+                padding: 0,
+              }}
+              onMouseEnter={() =>
+                setTooltip({
+                  visible: true,
+                  x,
+                  content: `${formatDate(app.date)} · ${ERA_LABELS[app.era]}${app.episodeTitle ? ` · "${app.episodeTitle}"` : ""}${app.coldOpenWord ? ` · "${app.coldOpenWord}"` : ""}`,
+                })
+              }
+              onMouseLeave={() => setTooltip((t) => ({ ...t, visible: false }))}
+              onClick={() => {
+                if (app.audioUrl || app.youtubeVideoId) play(app, guest.name);
+                else if (app.episodeUrl) window.open(app.episodeUrl, "_blank");
+              }}
             />
-          );
-        })}
-
-        {/* Era labels (top) — logo image + name */}
-        {!compact &&
-          ERAS.map((era) => {
-            const [start, end] = ERA_DATE_RANGES[era];
-            const midX = ((yearToPercent(start) + yearToPercent(end)) / 2) * 10;
-            const textColor = getEraTextColor(era);
-            const logo = ERA_LOGOS[era];
-            const logoSize = 14;
-            return (
-              <g key={era}>
-                {logo && (
-                  <image
-                    href={logo}
-                    x={midX - logoSize / 2}
-                    y={2}
-                    width={logoSize}
-                    height={logoSize}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={{ borderRadius: 2 }}
-                  />
-                )}
-                <text
-                  x={midX}
-                  y={logo ? 28 : 14}
-                  textAnchor="middle"
-                  fontSize={8}
-                  fill={textColor}
-                  fontWeight="600"
-                  fontFamily="Inter, system-ui, sans-serif"
-                >
-                  {ERA_LABELS[era]}
-                </text>
-              </g>
-            );
-          })}
-
-        {/* Timeline baseline */}
-        <line
-          x1={0}
-          y1={height / 2 + 10}
-          x2={1000}
-          y2={height / 2 + 10}
-          stroke="#E8E4DC"
-          strokeWidth={2}
-        />
-
-        {/* Appearance dots */}
-        {guest.appearances.map((app, i) => {
-          const x = dateToPercent(app.date) * 10;
-          const cy = height / 2 + 10;
-          const dotColor = getEraTextColor(app.era);
-
-          return (
-            <g key={i}>
-              {/* Cold open word label */}
-              {app.era === "podcast" && app.coldOpenWord && !compact && (
-                <text
-                  x={x}
-                  y={cy - 18}
-                  textAnchor="middle"
-                  fontSize={8}
-                  fill={dotColor}
-                  fontStyle="italic"
-                  fontFamily="Fraunces, Georgia, serif"
-                >
-                  {app.coldOpenWord.length > 12
-                    ? app.coldOpenWord.slice(0, 12) + "…"
-                    : app.coldOpenWord}
-                </text>
-              )}
-
-              {/* Dot */}
-              <circle
-                cx={x}
-                cy={cy}
-                r={compact ? 5 : 7}
-                fill={dotColor}
-                style={{ cursor: "pointer" }}
-                onMouseEnter={(e) => {
-                  const rect = containerRef.current?.getBoundingClientRect();
-                  const svgRect = (e.target as SVGElement)
-                    .closest("svg")
-                    ?.getBoundingClientRect();
-                  if (!svgRect || !rect) return;
-                  const relX =
-                    ((e.clientX - svgRect.left) / svgRect.width) * 100;
-                  setTooltip({
-                    visible: true,
-                    x: relX,
-                    y: 0,
-                    content: `${formatDate(app.date)} · ${ERA_LABELS[app.era]}${app.episodeTitle ? ` · "${app.episodeTitle}"` : ""}${app.coldOpenWord ? ` · "${app.coldOpenWord}"` : ""}`,
-                  });
-                }}
-                onMouseLeave={() =>
-                  setTooltip((t) => ({ ...t, visible: false }))
-                }
-                onClick={() => {
-                  if (app.audioUrl || app.youtubeVideoId) {
-                    play(app, guest.name);
-                  } else if (app.episodeUrl) {
-                    window.open(app.episodeUrl, "_blank");
-                  }
-                }}
-              />
-            </g>
-          );
-        })}
-
-        {/* Year markers */}
-        {[1993, 2000, 2009, 2010, 2018, 2026].map((yr) => {
-          const x = yearToPercent(yr) * 10;
-          return (
-            <g key={yr}>
-              <line
-                x1={x}
-                y1={height / 2 + 7}
-                x2={x}
-                y2={height / 2 + 13}
-                stroke="#C8C4BC"
-                strokeWidth={1}
-              />
-              {!compact && (
-                <text
-                  x={x}
-                  y={height - 4}
-                  textAnchor="middle"
-                  fontSize={8}
-                  fill="#9A9590"
-                  fontFamily="Inter, system-ui, sans-serif"
-                >
-                  {yr}
-                </text>
-              )}
-            </g>
-          );
-        })}
-      </svg>
+          </div>
+        );
+      })}
 
       {/* Tooltip */}
       {tooltip.visible && (
-        <div
-          className="tooltip"
-          style={{
-            left: `${Math.min(tooltip.x, 70)}%`,
-            top: "-32px",
-          }}
-        >
+        <div className="tooltip" style={{ left: `${Math.min(tooltip.x, 70)}%`, top: baselineTop - 44 }}>
           {tooltip.content}
         </div>
       )}
