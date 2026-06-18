@@ -86,7 +86,7 @@ export default function FriendshipArc({ guest, compact = false }: Props) {
 
   const height = compact ? 80 : 116;
   const baselineTop = compact ? 52 : 72; // px from top to the timeline baseline
-  const dotSize = compact ? 9 : 11;
+  const dotSize = compact ? 5 : 6;
 
   return (
     <div

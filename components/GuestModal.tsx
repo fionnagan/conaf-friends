@@ -97,18 +97,6 @@ export default function GuestModal({ guest, onClose, from }: Props) {
             </div>
           )}
 
-          {/* How Conan knows them */}
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-2">
-              How Conan knows them
-            </p>
-            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-              {guest.bio?.conan_connection?.evidence ||
-                (guest.origin.type !== "cold-booking"
-                  ? guest.origin.label
-                  : "Appeared as a guest on the show.")}
-            </p>
-          </div>
 
           {/* Cold open words */}
           {coldWords.length > 0 && (
