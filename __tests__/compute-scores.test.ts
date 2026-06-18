@@ -5,7 +5,6 @@ function makeAppearance(overrides: Partial<Appearance>): Appearance {
   return {
     era: 'podcast',
     date: '2022-01-01',
-    promoVisit: false,
     ...overrides,
   };
 }
@@ -27,7 +26,7 @@ describe('computeScore', () => {
   describe('floor and cap', () => {
     it('never goes below 35', () => {
       const guest = makeGuest([
-        makeAppearance({ era: 'podcast', coldOpenSentiment: 'deflecting', promoVisit: true }),
+        makeAppearance({ era: 'podcast', coldOpenSentiment: 'deflecting' }),
       ]);
       const { friendshipScore } = computeScore(guest);
       expect(friendshipScore).toBeGreaterThanOrEqual(35);
@@ -36,11 +35,11 @@ describe('computeScore', () => {
     it('never exceeds 100', () => {
       const guest = makeGuest(
         [
-          makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm', promoVisit: false }),
-          makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm', promoVisit: false, date: '2023-01-01' }),
-          makeAppearance({ era: 'tbs-conan', coldOpenSentiment: 'warm', promoVisit: false, date: '2019-01-01' }),
-          makeAppearance({ era: 'late-night-nbc', promoVisit: false, date: '2005-01-01' }),
-          makeAppearance({ era: 'late-night-nbc', promoVisit: false, date: '2006-01-01' }),
+          makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm' }),
+          makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm', date: '2023-01-01' }),
+          makeAppearance({ era: 'tbs-conan', coldOpenSentiment: 'warm', date: '2019-01-01' }),
+          makeAppearance({ era: 'late-night-nbc', date: '2005-01-01' }),
+          makeAppearance({ era: 'late-night-nbc', date: '2006-01-01' }),
         ],
         'snl-simpsons'
       );
@@ -52,7 +51,7 @@ describe('computeScore', () => {
   describe('friendship labels', () => {
     it('assigns "Honored Guest" for low-scoring single appearance', () => {
       const guest = makeGuest([
-        makeAppearance({ era: 'podcast', coldOpenSentiment: 'deflecting', promoVisit: true }),
+        makeAppearance({ era: 'podcast', coldOpenSentiment: 'deflecting' }),
       ], 'cold-booking');
       const { friendshipLabel } = computeScore(guest);
       expect(['Honored Guest', 'Cherished Visitor']).toContain(friendshipLabel);
@@ -60,10 +59,10 @@ describe('computeScore', () => {
 
     it('assigns "Inner Circle" for top guests', () => {
       const guest = makeGuest([
-        makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm', promoVisit: false }),
-        makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm', promoVisit: false, date: '2020-01-01' }),
-        makeAppearance({ era: 'tbs-conan', promoVisit: false, date: '2015-01-01' }),
-        makeAppearance({ era: 'late-night-nbc', promoVisit: false, date: '2000-01-01' }),
+        makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm' }),
+        makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm', date: '2020-01-01' }),
+        makeAppearance({ era: 'tbs-conan', date: '2015-01-01' }),
+        makeAppearance({ era: 'late-night-nbc', date: '2000-01-01' }),
       ], 'snl-simpsons');
       const { friendshipScore, friendshipLabel } = computeScore(guest);
       expect(friendshipScore).toBeGreaterThanOrEqual(80);
@@ -72,20 +71,20 @@ describe('computeScore', () => {
   });
 
   describe('appearance scoring', () => {
-    it('gives 6 pts for 1 appearance', () => {
+    it('gives 7 pts for 1 appearance', () => {
       const base = makeGuest([makeAppearance({})], 'cold-booking');
-      // Origin (cold-booking=8) + appearances (1=6) + visitType + sentiment + gap
+      // Origin (cold-booking=9) + appearances (1=7) + sentiment + gap
       const { scoreBreakdown } = computeScore(base);
-      expect(scoreBreakdown.appearances).toBe(6);
+      expect(scoreBreakdown.appearances).toBe(7);
     });
 
-    it('gives 12 pts for 2 appearances', () => {
+    it('gives 14 pts for 2 appearances', () => {
       const guest = makeGuest([
         makeAppearance({ date: '2021-01-01' }),
         makeAppearance({ date: '2022-01-01' }),
       ]);
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.appearances).toBe(12);
+      expect(scoreBreakdown.appearances).toBe(14);
     });
 
     it('gives cross-era bonus', () => {
@@ -94,11 +93,11 @@ describe('computeScore', () => {
         makeAppearance({ era: 'tbs-conan', date: '2018-01-01' }),
       ]);
       const { scoreBreakdown } = computeScore(guest);
-      // 2 appearances = 12 + 1 cross-era bonus of 4 = 16
-      expect(scoreBreakdown.appearances).toBe(16);
+      // 2 appearances = 14 + 1 cross-era bonus of 5 = 19
+      expect(scoreBreakdown.appearances).toBe(19);
     });
 
-    it('caps cross-era bonus so appearances ≤ 30', () => {
+    it('caps cross-era bonus so appearances ≤ 35', () => {
       const guest = makeGuest([
         makeAppearance({ era: 'podcast', date: '2020-01-01' }),
         makeAppearance({ era: 'tbs-conan', date: '2018-01-01' }),
@@ -107,25 +106,25 @@ describe('computeScore', () => {
         makeAppearance({ era: 'conan-must-go', date: '2023-06-01' }),
       ]);
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.appearances).toBeLessThanOrEqual(30);
+      expect(scoreBreakdown.appearances).toBeLessThanOrEqual(35);
     });
   });
 
   describe('cold open sentiment', () => {
-    it('gives 25 for warm sentiment', () => {
+    it('gives 30 for warm sentiment', () => {
       const guest = makeGuest([
         makeAppearance({ coldOpenSentiment: 'warm' }),
       ]);
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.coldOpenSentiment).toBe(25);
+      expect(scoreBreakdown.coldOpenSentiment).toBe(30);
     });
 
-    it('gives 12 for deflecting', () => {
+    it('gives 14 for deflecting', () => {
       const guest = makeGuest([
         makeAppearance({ coldOpenSentiment: 'deflecting' }),
       ]);
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.coldOpenSentiment).toBe(12);
+      expect(scoreBreakdown.coldOpenSentiment).toBe(14);
     });
 
     it('weights most recent 60%, earlier 40% for repeat guests', () => {
@@ -134,70 +133,56 @@ describe('computeScore', () => {
         makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm', date: '2022-01-01' }), // most recent
       ]);
       const { scoreBreakdown } = computeScore(guest);
-      // warm(25) * 0.6 + deflecting(12) * 0.4 = 15 + 4.8 = 19.8 ≈ 20
-      expect(scoreBreakdown.coldOpenSentiment).toBe(20);
+      // warm(30) * 0.6 + deflecting(14) * 0.4 = 18 + 5.6 = 23.6 ≈ 24
+      expect(scoreBreakdown.coldOpenSentiment).toBe(24);
     });
   });
 
   describe('origin depth', () => {
-    it('gives 20 for snl-simpsons', () => {
+    it('gives 23 for snl-simpsons', () => {
       const guest = makeGuest([makeAppearance({})], 'snl-simpsons');
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.originDepth).toBe(20);
+      expect(scoreBreakdown.originDepth).toBe(23);
     });
 
-    it('gives 8 for cold-booking', () => {
+    it('gives 9 for cold-booking', () => {
       const guest = makeGuest([makeAppearance({})], 'cold-booking');
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.originDepth).toBe(8);
-    });
-  });
-
-  describe('visit type', () => {
-    it('gives 15 for non-promo visit', () => {
-      const guest = makeGuest([makeAppearance({ promoVisit: false })]);
-      const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.visitType).toBe(15);
-    });
-
-    it('gives 8 for pure promo visit', () => {
-      const guest = makeGuest([makeAppearance({ promoVisit: true })]);
-      const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.visitType).toBe(8);
+      expect(scoreBreakdown.originDepth).toBe(9);
     });
   });
 
   describe('gap resilience', () => {
-    it('gives 5 for single appearance', () => {
+    it('gives 6 for single appearance', () => {
       const guest = makeGuest([makeAppearance({})]);
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.gapResilience).toBe(5);
+      expect(scoreBreakdown.gapResilience).toBe(6);
     });
 
-    it('gives 10 for 5+ year gap', () => {
+    it('gives 12 for 5+ year gap', () => {
       const guest = makeGuest([
         makeAppearance({ date: '2010-01-01' }),
         makeAppearance({ date: '2016-01-01' }),
       ]);
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.gapResilience).toBe(10);
+      expect(scoreBreakdown.gapResilience).toBe(12);
     });
 
-    it('gives 6 for gap < 1 year', () => {
+    it('gives 7 for gap < 1 year', () => {
       const guest = makeGuest([
         makeAppearance({ date: '2022-01-01' }),
         makeAppearance({ date: '2022-08-01' }),
       ]);
       const { scoreBreakdown } = computeScore(guest);
-      expect(scoreBreakdown.gapResilience).toBe(6);
+      expect(scoreBreakdown.gapResilience).toBe(7);
     });
   });
 
   describe('score breakdown sum', () => {
     it('score equals sum of breakdown factors (before floor/cap)', () => {
       const guest = makeGuest([
-        makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm', promoVisit: false }),
-        makeAppearance({ era: 'podcast', coldOpenSentiment: 'neutral', promoVisit: false, date: '2023-01-01' }),
+        makeAppearance({ era: 'podcast', coldOpenSentiment: 'warm' }),
+        makeAppearance({ era: 'podcast', coldOpenSentiment: 'neutral', date: '2023-01-01' }),
       ], 'comedy-peer');
       const { friendshipScore, scoreBreakdown } = computeScore(guest);
       const sum = Object.values(scoreBreakdown).reduce((a, b) => a + b, 0);

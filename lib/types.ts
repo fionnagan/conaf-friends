@@ -28,7 +28,6 @@ export interface Appearance {
   episodeUrl?: string;
   audioUrl?: string;
   youtubeVideoId?: string | null;
-  promoVisit: boolean;
   coldOpenWord?: string;
   coldOpenSentiment?: ColdOpenSentiment;
   artworkUrl?: string;
@@ -38,7 +37,6 @@ export interface ScoreBreakdown {
   appearances: number;
   coldOpenSentiment: number;
   originDepth: number;
-  visitType: number;
   gapResilience: number;
 }
 

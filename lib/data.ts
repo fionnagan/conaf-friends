@@ -3,7 +3,7 @@ import type { Guest, GuestsData, FriendshipLabel, Era } from './types';
 export const ERA_LABELS: Record<Era, string> = {
   'late-night-nbc': 'Late Night NBC',
   'tonight-show': 'Tonight Show',
-  'tbs-conan': 'Conan (TBS)',
+  'tbs-conan': 'Conan',
   'podcast': 'Needs a Friend',
   'conan-must-go': 'Conan Must Go',
 };

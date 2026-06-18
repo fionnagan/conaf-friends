@@ -28,9 +28,6 @@ export default function GuestPagePlayer({ appearance, guestName }: Props) {
           </p>
           <p className="text-xs text-[var(--text-muted)] mt-0.5">
             {formatDate(appearance.date)}
-            {appearance.promoVisit && (
-              <span className="ml-2 text-[var(--amber)]">· promo visit</span>
-            )}
             {appearance.coldOpenWord && (
               <span className="ml-2 italic text-[var(--purple)]">
                 · &ldquo;{appearance.coldOpenWord}&rdquo;

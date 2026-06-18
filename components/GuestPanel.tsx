@@ -20,15 +20,13 @@ const SCORE_FACTOR_LABELS = {
   appearances: "Total appearances",
   coldOpenSentiment: "Cold open sentiment",
   originDepth: "Origin depth",
-  visitType: "Visit type",
   gapResilience: "Gap resilience",
 };
 const SCORE_FACTOR_MAX = {
-  appearances: 30,
-  coldOpenSentiment: 25,
-  originDepth: 20,
-  visitType: 15,
-  gapResilience: 10,
+  appearances: 35,
+  coldOpenSentiment: 30,
+  originDepth: 23,
+  gapResilience: 12,
 };
 
 export default function GuestPanel({ guestId, onClose }: Props) {
@@ -193,11 +191,6 @@ export default function GuestPanel({ guestId, onClose }: Props) {
                         </p>
                         <p className="text-xs text-[var(--text-muted)]">
                           {formatDate(app.date)}
-                          {app.promoVisit && (
-                            <span className="ml-2 text-[var(--amber)]">
-                              · promo visit
-                            </span>
-                          )}
                           {app.coldOpenWord && (
                             <span className="ml-2 italic text-[var(--purple)]">
                               · &ldquo;{app.coldOpenWord}&rdquo;
