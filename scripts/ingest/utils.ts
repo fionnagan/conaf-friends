@@ -38,15 +38,34 @@ export function slugify(name: string): string {
     .replace(/^-|-$/g, '');
 }
 
+// Same person, spelled differently across sources (nicknames / spelling variants).
+// Maps a variant (lower-cased) to the canonical display name so appearances merge.
+const NAME_ALIASES: Record<string, string> = {
+  'steven schirripa': 'Steve Schirripa', 'steven r schirripa': 'Steve Schirripa',
+  'thomas hayden church': 'Thomas Haden Church',
+  'jeffrey ross': 'Jeff Ross',
+  'ed burns': 'Edward Burns',
+  'josh jackson': 'Joshua Jackson',
+  'christopher meloni': 'Chris Meloni',
+  'nick turturro': 'Nicholas Turturro',
+  'darryl hammond': 'Darrell Hammond',
+  'kristen davis': 'Kristin Davis',
+  'charles s dutton': 'Charles Dutton',
+  'rob siegel': 'Robert Siegel',
+};
+
 export function normalizeGuestName(name: string): string {
-  return name
+  const n = name
     .trim()
     .replace(/\s+/g, ' ')
-    .replace(/^(dr|mr|mrs|ms|prof)\.\s+/i, '')
+    // Strip an honorific only when a full "First Last" follows ("Dr. Jane Goodall" →
+    // "Jane Goodall"), NOT for single-word stage names ("Dr. Phil", "Dr. Dre", "Dr. John").
+    .replace(/^(dr|mr|mrs|ms|prof)\.\s+(?=[A-Z][a-z'’-]+\s+[A-Z])/i, '')
     // Canonicalise initials so "Louis C.K." / "Louis C K" / "Louis CK" all merge:
     // strip periods between/after single capitals, then collapse spaced single capitals.
     .replace(/\b([A-Z])\.(?=[A-Z. ]|$)/g, '$1')
     .replace(/\b([A-Z]) ([A-Z])\b/g, '$1$2');
+  return NAME_ALIASES[n.toLowerCase()] ?? n;
 }
 
 export const USER_AGENT =
