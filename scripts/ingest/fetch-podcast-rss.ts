@@ -171,6 +171,14 @@ function extractGuestName(title: string, plainText: string): string | undefined 
   const featuring = title.match(/featuring\s+([A-Z][A-Za-z .'-]+?)\s*$/i);
   if (featuring?.[1]) return featuring[1].trim();
 
+  // 0b. Live-show titles → the person, not the venue. Prevents duplicate entries like
+  //     "Bill Burr" + "Bill Burr Live From The Fonda Theater" + "Bill Burr Live from...".
+  //     "Live with Bill Hader at the Wiltern" and "Bill Burr Live From The Fonda Theater".
+  const liveWith = title.match(/^Live\s+with\s+(.+?)\s+(?:at|from|live)\b/i);
+  if (liveWith?.[1]) return liveWith[1].trim();
+  const nameLive = title.match(/^(.+?)\s+Live\s+(?:at|from)\b/i);
+  if (nameLive?.[1]) return nameLive[1].trim();
+
   // 1. Title with suffix FIRST: "Timothy Olyphant Returns Again", "Lisa Kudrow (Full Episode)"
   //    Check this before simpleName to avoid swallowing suffix words into the name
   const withSuffix = title.match(
