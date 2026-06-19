@@ -57,7 +57,8 @@ def _get_client_info(headers):
 
 def _log(question, answer='', usage=None, status='Success', error_reason='',
           ip='', location='', device='', browser=''):
-    token = os.environ.get('NOTION_TOKEN') or os.environ.get('NotionCONAFmap', '')
+    token = (os.environ.get('NOTION_TOKEN') or os.environ.get('NotionCONAFmap')
+             or os.environ.get('NotionConnectionCONAFMAPASK', ''))
     if not token:
         return
     input_tok  = getattr(usage, 'input_tokens', 0) if usage else 0
@@ -258,7 +259,7 @@ class handler(BaseHTTPRequestHandler):
         question = question[:MAX_QUESTION_LEN]
 
         api_key = (os.environ.get('ANTHROPIC_API_KEY') or os.environ.get('CLAUDE')
-                   or os.environ.get('Anthropic_API', ''))
+                   or os.environ.get('Anthropic_API') or os.environ.get('AnthropicAPI', ''))
         if not api_key:
             _log(question, status='Error', error_reason=_ERROR_REASONS[500],
                  ip=ip, location=location, device=device, browser=browser)
