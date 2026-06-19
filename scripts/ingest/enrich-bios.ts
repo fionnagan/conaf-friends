@@ -124,7 +124,31 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
     } catch (e: any) {
       // 404 = no article for this name variant, try next
       if (e?.response?.status === 404) continue;
-      // 429 or network error
+      // 429 = rate limited — back off and retry this same name variant
+      if (e?.response?.status === 429) {
+        const retryAfter = parseInt(e.response.headers['retry-after'] || '60', 10);
+        const wait = Math.max(retryAfter, 60) * 1000;
+        console.warn(`\n  [Wikipedia] 429 rate limit — waiting ${wait / 1000}s before retry…`);
+        await sleep(wait);
+        // retry same name by re-running the outer loop iteration (via goto-like break)
+        throw Object.assign(new Error('RATE_LIMIT_RETRY'), { isRateLimit: true, name });
+      }
+      // other network error — skip this variant, try next
+      continue;
+    }
+  }
+  return null;
+}
+
+async function resolveEntityWithRetry(guestName: string, maxAttempts = 3): Promise<WikiEntity | null> {
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    try {
+      return await resolveEntity(guestName);
+    } catch (e: any) {
+      if (e?.isRateLimit && attempt < maxAttempts - 1) {
+        // already slept inside resolveEntity — just retry
+        continue;
+      }
       return null;
     }
   }
@@ -225,29 +249,34 @@ function buildDescription(intro: string, guestName: string, conanEvidence: strin
 
 interface ConanConnection { type: 'direct' | 'industry' | 'inferred'; evidence: string }
 
+const SHOW_NAMES: Record<string, string> = {
+  'late-night-nbc': "Late Night with Conan O'Brien",
+  'tonight-show': "The Tonight Show with Conan O'Brien",
+  'tbs-conan': 'Conan',
+  'podcast': "Conan O'Brien Needs a Friend",
+  'conan-must-go': "Conan O'Brien Must Go",
+};
+
 function buildConanConnection(guest: Guest): ConanConnection {
   const ot = guest.origin.type;
   const ol = guest.origin.label;
 
+  // Always anchor on the real earliest appearance (correct show + year), never a
+  // hardcoded show. For known SNL/Lampoon/peer connections, lead with that context.
+  const first = [...guest.appearances].sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  )[0];
+  const year = first ? new Date(first.date).getFullYear() : null;
+  const firstLine =
+    first && year ? `First appeared on ${SHOW_NAMES[first.era] ?? "Conan's show"} in ${year}.` : '';
+
   if (ot === 'snl-simpsons' || ot === 'harvard-lampoon') {
-    return { type: 'direct', evidence: ol };
-  }
-  if (ot === 'late-night-regular') {
-    const firstApp = guest.appearances[0];
-    const year = firstApp ? new Date(firstApp.date).getFullYear() : null;
-    return {
-      type: 'direct',
-      evidence: year ? `Longtime guest going back to ${year}; ${ol}` : ol,
-    };
+    return { type: 'direct', evidence: `${ol.replace(/\.$/, '')}. ${firstLine}`.trim() };
   }
   if (ot === 'comedy-peer' || ot === 'second-degree') {
-    return { type: 'industry', evidence: ol };
+    return { type: 'industry', evidence: `${ol.replace(/\.$/, '')}. ${firstLine}`.trim() };
   }
-  const firstYear = new Date(guest.appearances[0]?.date || '').getFullYear();
-  return {
-    type: 'inferred',
-    evidence: `First appeared on Conan O'Brien Needs a Friend in ${firstYear || 'the podcast era'}.`,
-  };
+  return { type: 'inferred', evidence: firstLine || "Appeared on Conan's shows." };
 }
 
 // ── Claude pipeline ───────────────────────────────────────────────────────────
@@ -441,7 +470,7 @@ async function main() {
 
     try {
       // Entity resolution
-      const entity = await resolveEntity(guest.name);
+      const entity = await resolveEntityWithRetry(guest.name);
       await sleep(500);
 
       if (!entity || entity.confidence < MIN_ENTITY_CONFIDENCE) {
@@ -500,7 +529,7 @@ async function main() {
       failed++;
     }
 
-    await sleep(3500);
+    await sleep(5000);
   }
 
   fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));

@@ -31,26 +31,13 @@ import type {
   ColdOpenSentiment,
 } from '../../lib/types';
 
-const PROMO_KEYWORDS = [
-  'promoting',
-  'new movie',
-  'new film',
-  'new show',
-  'new book',
-  'new album',
-  'new series',
-  'starring in',
-  'out now',
-  'in theaters',
-  'on netflix',
-  'on hbo',
-  'premieres',
-];
-
-function isPromoVisit(description: string): boolean {
-  const d = description.toLowerCase();
-  return PROMO_KEYWORDS.some((k) => d.includes(k));
-}
+const SHOW_NAMES: Record<string, string> = {
+  'late-night-nbc': "Late Night with Conan O'Brien",
+  'tonight-show': "The Tonight Show with Conan O'Brien",
+  'tbs-conan': 'Conan',
+  'podcast': "Conan O'Brien Needs a Friend",
+  'conan-must-go': "Conan O'Brien Must Go",
+};
 
 function detectMentionedGuests(
   description: string,
@@ -103,7 +90,6 @@ export function merge(
           appearances: 0,
           coldOpenSentiment: 0,
           originDepth: 0,
-          visitType: 0,
           gapResilience: 0,
         },
       });
@@ -141,7 +127,6 @@ export function merge(
       episodeTitle: ep.title,
       episodeUrl: ep.link,
       audioUrl: ep.enclosure?.url,
-      promoVisit: isPromoVisit(ep.description),
       artworkUrl: ep.itunes?.image,
     };
 
@@ -215,7 +200,6 @@ export function merge(
       era: ln.era,
       date: ln.date,
       episodeTitle: ln.episodeTitle,
-      promoVisit: false, // unknown
     };
 
     // Don't double-add if we already have this era+date
@@ -235,6 +219,30 @@ export function merge(
     guest.appearances.sort(
       (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
     );
+
+    // Derive "How Conan knows them" from the REAL earliest appearance — overriding any
+    // hallucinated bio text (e.g. cached Claude bios saying "...Needs a Friend in 1992"
+    // for a guest whose first appearance was Late Night in 1993). Also strip that same
+    // fabricated sentence if it was appended to the description prose.
+    const first = guest.appearances[0];
+    if (guest.bio && first) {
+      const year = new Date(first.date).getFullYear();
+      const show = SHOW_NAMES[first.era] ?? "Conan's show";
+      const firstLine = `First appeared on ${show} in ${year}.`;
+      const ot = guest.origin.type;
+      const lead =
+        (ot === 'snl-simpsons' || ot === 'harvard-lampoon' || ot === 'comedy-peer') &&
+        guest.origin.label
+          ? `${guest.origin.label.replace(/\.$/, '')}. `
+          : '';
+      guest.bio.conan_connection = {
+        type: guest.bio.conan_connection?.type ?? 'inferred',
+        evidence: `${lead}${firstLine}`,
+      };
+      guest.bio.description = guest.bio.description
+        .replace(/\s*First appeared on[^.]*\b\d{4}\b\.?\s*$/i, '')
+        .trim();
+    }
 
     const { friendshipScore, friendshipLabel, scoreBreakdown } = computeScore(guest);
     guest.friendshipScore = friendshipScore;
