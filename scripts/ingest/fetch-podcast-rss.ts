@@ -174,6 +174,15 @@ function extractGuestName(title: string, plainText: string): string | undefined 
   const featuring = title.match(/featuring\s+([A-Z][A-Za-z .'-]+?)\s*$/i);
   if (featuring?.[1]) return featuring[1].trim();
 
+  // 0a. Fan-format/segment titles with a real celebrity ("Limp Paddle With Special
+  //     Guest D'Arcy Carden", "Putting The Fun Back In Funeral with Special Guest
+  //     Paul Scheer", "Please Don't Destroy (with Special Guest Paul Rudd) Live at...")
+  //     — checked FIRST so the named celebrity wins over both the bit/group title
+  //     and any trailing live-venue suffix. Allows an optional ")" and/or " Live …"
+  //     tail after the name.
+  const specialGuest = title.match(/with\s+special\s+guest[s]?\s+([A-Z][A-Za-z .'-]+?)\)?(?:\s+Live\b.*)?$/i);
+  if (specialGuest?.[1]) return specialGuest[1].trim();
+
   // 0b. Live-show titles → the person, not the venue. Prevents duplicate entries like
   //     "Bill Burr" + "Bill Burr Live From The Fonda Theater" + "Bill Burr Live from...".
   //     "Live with Bill Hader at the Wiltern" and "Bill Burr Live From The Fonda Theater".
@@ -197,19 +206,17 @@ function extractGuestName(title: string, plainText: string): string | undefined 
   if (
     simpleName?.[1] &&
     !simpleName[1].match(/^(The|A|An|Conan|Episode|Part|Vol|And)\b/i) &&
-    !SUFFIX_WORDS.test(simpleName[1])
+    !SUFFIX_WORDS.test(simpleName[1]) &&
+    !/\bAnd\b/.test(simpleName[1])
   ) {
     return simpleName[1].trim();
   }
 
-  // 2b. Fan-format/segment titles with a real celebrity ("Limp Paddle With Special
-  //     Guest D'Arcy Carden") — checked after a clear headliner but before the greedy
-  //     multi-guest catch-all so the bit title isn't mistaken for the guest.
-  const specialGuest = title.match(/with\s+special\s+guest[s]?\s+([A-Z][A-Za-z .'-]+?)\s*$/i);
-  if (specialGuest?.[1]) return specialGuest[1].trim();
-
-  // 3. Multi-guest title (keep as-is, limit length)
-  const multiGuest = title.match(/^([A-Z][A-Za-z ,.'-]{3,60})(?:\s+And\s+|\s*$)/);
+  // 3. Multi-guest title (keep as-is, limit length). Non-greedy capture so titles
+  //    like "Brian Setzer And The Songs That Inspired Him" stop at "Brian Setzer"
+  //    rather than swallowing the whole descriptive title (uppercase "And" only —
+  //    lowercase "and" as in "Eugene Levy and Catherine O'Hara" is a real co-guest name).
+  const multiGuest = title.match(/^([A-Z][A-Za-z ,.'-]{3,60}?)(?:\s+And\s+|\s*$)/);
   if (multiGuest?.[1] && !multiGuest[1].match(/^(The|Conan|Episode)/i)) {
     return multiGuest[1].trim();
   }
