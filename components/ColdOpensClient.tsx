@@ -268,7 +268,6 @@ export default function ColdOpensClient({ coldOpens }: Props) {
                           episodeUrl: co.episodeUrl,
                           audioUrl: co.audioUrl,
                           youtubeVideoId: co.youtubeVideoId ?? null,
-                          promoVisit: false,
                           coldOpenWord: co.word,
                           artworkUrl: co.artworkUrl,
                         },

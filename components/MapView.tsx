@@ -36,7 +36,7 @@ const ERA_OPTIONS: { value: Era | "all"; label: string }[] = [
   { value: "all", label: "All eras" },
   { value: "late-night-nbc", label: "Late Night NBC" },
   { value: "tonight-show", label: "Tonight Show" },
-  { value: "tbs-conan", label: "Conan (TBS)" },
+  { value: "tbs-conan", label: "Conan" },
   { value: "podcast", label: "Podcast" },
   { value: "conan-must-go", label: "Conan Must Go" },
 ];
