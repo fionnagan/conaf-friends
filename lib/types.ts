@@ -24,6 +24,8 @@ export type ColdOpenSentiment =
 export interface Appearance {
   era: Era;
   date: string;
+  /** Billing order within the same episode (0 = first guest out that night). */
+  order?: number;
   episodeTitle?: string;
   episodeUrl?: string;
   audioUrl?: string;
