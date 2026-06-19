@@ -5,9 +5,9 @@ import { useState, useRef } from "react";
 const CHIPS = [
   "Which guest has appeared the most times?",
   "Who was Conan's first Late Night guest?",
-  "Which guests appeared on all five shows?",
-  "Which actors have appeared the most?",
-  "How many guests appeared across all five eras?",
+  "Has Bill Burr been on the podcast?",
+  "How many guests appeared in 2003?",
+  "Which musicians have been on the show?",
 ];
 
 function mdToHtml(text: string): string {

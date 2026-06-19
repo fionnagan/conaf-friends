@@ -191,14 +191,23 @@ export function merge(
     }
   }
 
-  // Process late night history
+  // Process late night history. The source array is in billing order within each
+  // episode (e.g. the premiere 1993-09-13 lists John Goodman, then Drew Barrymore,
+  // then Tony Randall — the real on-air order), so we assign a per-episode `order`
+  // index as we go. This is what lets "who was Conan's first guest?" be answered.
+  const episodeSeq = new Map<string, number>();
   for (const ln of lateNightHistory) {
     const name = normalizeGuestName(ln.guestName);
     const guest = getGuest(name);
 
+    const epKey = `${ln.era}|${ln.date}`;
+    const order = episodeSeq.get(epKey) ?? 0;
+    episodeSeq.set(epKey, order + 1);
+
     const appearance: Appearance = {
       era: ln.era,
       date: ln.date,
+      order,
       episodeTitle: ln.episodeTitle,
     };
 
