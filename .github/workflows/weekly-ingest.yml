@@ -36,15 +36,67 @@ jobs:
           rm -f scripts/cache/podcast-episodes.json
           npx tsx scripts/ingest/index.ts
 
+      # Enrich bios for any newly-added guests (incremental — only touches
+      # un-cached guests, capped at 50/run). Best-effort: a Wikipedia/Anthropic
+      # hiccup must never block the data + context refresh below.
+      - name: Enrich bios for new guests
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npm run enrich:bios
+
+      # Fold any freshly-enriched bios (written to scripts/cache/bios.json) back
+      # into data/guests.json. No network — pure re-merge from caches.
+      - name: Re-merge caches into guests.json
+        run: npx tsx scripts/ingest/run-merge.ts
+
+      # Regenerate the Ask the Registry agent's context file from the updated
+      # guests.json. Without this the agent would keep answering from a frozen
+      # snapshot while the rest of the site shows new guests.
+      - name: Regenerate agent context (Ask the Registry)
+        run: npm run emit:context
+
       - name: Regenerate word cloud
         run: python3 scripts/generate-wordcloud.py
+
+      # Guard: never auto-deploy corrupted or truncated data. Fails the job (so
+      # nothing is committed or deployed) if guests.json won't parse, the guest
+      # count collapsed (e.g. an empty RSS fetch), or emit_context produced a
+      # short context file.
+      - name: Validate data before commit
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, sys
+          try:
+              new = json.load(open('data/guests.json'))
+          except Exception as e:
+              print(f'FAIL: data/guests.json is not valid JSON: {e}'); sys.exit(1)
+          n = new.get('totalGuests', 0)
+          if n <= 0:
+              print('FAIL: totalGuests is 0'); sys.exit(1)
+          try:
+              old = json.loads(subprocess.check_output(['git', 'show', 'HEAD:data/guests.json']))
+              old_n = old.get('totalGuests', 0)
+          except Exception:
+              old_n = 0
+          if old_n and n < old_n * 0.9:
+              print(f'FAIL: totalGuests dropped sharply {old_n} -> {n} (>10%); refusing to ship'); sys.exit(1)
+          try:
+              ctx = json.load(open('api/guests_context.json'))
+          except Exception as e:
+              print(f'FAIL: api/guests_context.json invalid: {e}'); sys.exit(1)
+          if len(ctx) < n * 0.9:
+              print(f'FAIL: context has {len(ctx)} entries vs {n} guests; emit_context likely broken'); sys.exit(1)
+          print(f'OK: guests {old_n} -> {n}, context {len(ctx)} entries')
+          PY
 
       - name: Commit updated data files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/guests.json data/cold-opens.json data/top-words.json data/word-guests.json data/guest-photos.json data/fans.json
+          git add api/guests_context.json
           git add public/conan-wordcloud.png
-          git add -f scripts/cache/youtube-matches.json
+          git add -f scripts/cache/youtube-matches.json scripts/cache/bios.json
           git diff --staged --quiet || git commit -m "chore: weekly episode ingest $(date -u '+%Y-%m-%d')"
           git push
