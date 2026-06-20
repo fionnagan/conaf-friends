@@ -23,6 +23,18 @@ const context = (guests as any).guests.map((g: any) => {
     }
   }
 
+  // Cold opens: the word/phrase the guest gave about being Conan's friend at the top
+  // of a podcast episode (the show's signature bit). Carry them so the agent can answer
+  // "what did X say in their cold open?" — chronological, only appearances that have one.
+  const coldOpens = appearances
+    .filter((a: any) => a.coldOpenWord)
+    .map((a: any) => ({
+      date: a.date ?? '',
+      word: a.coldOpenWord as string,
+      sentiment: a.coldOpenSentiment ?? '',
+    }))
+    .sort((x: any, y: any) => (x.date || '').localeCompare(y.date || ''));
+
   return {
     id: g.id,
     name: g.name,
@@ -33,6 +45,7 @@ const context = (guests as any).guests.map((g: any) => {
     lastAppearance: dates[dates.length - 1] ?? '',
     appearanceYears: [...new Set(dates.map((d: string) => d.slice(0, 4)))].sort() as string[],
     firstByEra,
+    coldOpens,
   };
 });
 
