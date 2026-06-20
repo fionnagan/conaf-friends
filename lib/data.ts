@@ -68,10 +68,15 @@ export function getAvatarColor(name: string): string {
 
 export function formatDate(dateStr: string): string {
   try {
+    // Appearance dates are plain calendar dates (YYYY-MM-DD). `new Date("2008-03-21")`
+    // parses as UTC midnight, so formatting in the viewer's local zone (e.g. the
+    // Americas) would roll back to the previous day. Format in UTC so the stored
+    // calendar date is what's shown, everywhere.
     return new Date(dateStr).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
+      timeZone: 'UTC',
     });
   } catch {
     return dateStr;
@@ -85,8 +90,10 @@ export function getTodayAnniversaries(guests: Guest[]): Guest[] {
 
   return guests.filter((g) =>
     g.appearances.some((a) => {
+      // Read the stored calendar date in UTC (it's parsed as UTC midnight), so
+      // "on this day" matches the real broadcast date rather than a tz-shifted one.
       const d = new Date(a.date);
-      return d.getMonth() + 1 === mm && d.getDate() === dd;
+      return d.getUTCMonth() + 1 === mm && d.getUTCDate() === dd;
     })
   );
 }
