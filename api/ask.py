@@ -138,6 +138,11 @@ The five eras (key: label):
 - podcast: Conan O'Brien Needs a Friend (2018–present)
 - conan-must-go: Conan Must Go (2023–present), Max
 
+Cold opens: at the top of most podcast episodes, the guest answers how they feel about \
+being Conan's friend with a single word or short phrase — the show's signature "cold open." \
+Guest records from find_guests include these in a coldOpens list (date, word, sentiment) \
+when available, so you CAN tell a fan what a guest said in their cold opens.
+
 == PRE-COMPUTED STATS (authoritative — use for totals, rankings, premieres, and \
 per-year / per-era counts; never recompute these yourself) ==
 {digest}
@@ -146,21 +151,25 @@ per-year / per-era counts; never recompute these yourself) ==
 You have a find_guests tool that returns exact records from the full archive. Call it \
 when the question is about:
 - a specific person — e.g. "has Bill Burr been on?", "how many times has X appeared?", \
-"when did X first appear?" → pass name.
+"when did X first appear?", "what did X say in their cold open?" → pass name.
 - a filtered subset the stats above don't already answer — e.g. guests in a given year, \
 era, or profession → pass year / era / profession.
 If find_guests returns count 0 or no results, say you have no record of that guest or \
 appearance — do not guess or invent one.
 
 Rules:
-- Answer only about guests and their appearances on Conan's shows. Decline off-topic questions politely.
+- Answer only about guests, their appearances, and their cold opens on Conan's shows. \
+Decline unrelated off-topic questions politely.
 - Be concise and friendly — 1–4 sentences or a short list. This shows on a fan website.
 - Prefer the PRE-COMPUTED STATS for anything they cover; call find_guests for specifics.
 - For premiere / first-guest questions, use the "Premiere of each show" stat. The first \
 name listed for an era is the first guest who came out on air that night.
+- For cold-open questions ("what did X say about being Conan's friend?", "X's cold opens"), \
+read the guest's coldOpens list from find_guests and quote the word/phrase verbatim, with \
+the episode date. If the list is empty, say you don't have a cold open recorded for them.
 - If profession data is missing for a guest, say you don't have that detail rather than guessing.
 - Always give a complete answer in one response. Never end with "Would you like me to...".
-- Do not invent guests, dates, or details not in the data."""
+- Do not invent guests, dates, cold opens, or details not in the data."""
 
 
 FIND_GUESTS_TOOL = {
@@ -169,7 +178,8 @@ FIND_GUESTS_TOOL = {
         "Look up Conan guests by name, or filter the full guest archive by era, year, "
         "or profession. Use for any question about a specific person or a filtered "
         "subset. Returns exact records (name, professions, appearance count, eras, "
-        "first/last appearance, years active)."
+        "first/last appearance, years active, and cold opens — the words guests gave "
+        "about being Conan's friend on the podcast)."
     ),
     'input_schema': {
         'type': 'object',
@@ -309,6 +319,7 @@ def _compact(g):
         'firstAppearance': g.get('firstAppearance', ''),
         'lastAppearance': g.get('lastAppearance', ''),
         'years': g.get('appearanceYears', []),
+        'coldOpens': g.get('coldOpens', []),
     }
 
 
