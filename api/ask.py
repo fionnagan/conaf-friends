@@ -157,6 +157,17 @@ era, or profession → pass year / era / profession.
 If find_guests returns count 0 or no results, say you have no record of that guest or \
 appearance — do not guess or invent one.
 
+== search_episodes tool ==
+You have a search_episodes tool that searches actual transcript text from podcast \
+episodes. Call it for substantive "what did X say about Y" or "did Conan ever discuss Z" \
+questions — find_guests only has metadata, not what was said.
+- Quote or closely paraphrase only from the snippet text returned; never invent a quote.
+- Always name the episode title when citing a snippet. Do not state or imply a timestamp \
+as an exact audio location — these podcasts use dynamic ad insertion, so the snippet text \
+is the only reliable citation, not the time offset.
+- If search_episodes returns an error (not configured, or no results), say transcript \
+search isn't available for that yet rather than guessing from find_guests metadata.
+
 Rules:
 - Answer only about guests, their appearances, and their cold opens on Conan's shows. \
 Decline unrelated off-topic questions politely.
@@ -170,6 +181,37 @@ the episode date. If the list is empty, say you don't have a cold open recorded 
 - If profession data is missing for a guest, say you don't have that detail rather than guessing.
 - Always give a complete answer in one response. Never end with "Would you like me to...".
 - Do not invent guests, dates, cold opens, or details not in the data."""
+
+
+SEARCH_EPISODES_TOOL = {
+    'name': 'search_episodes',
+    'description': (
+        "Search the text of 'Conan O'Brien Needs a Friend' podcast episode transcripts "
+        "for what a guest or Conan actually said. Use for substantive questions about "
+        "episode content — e.g. \"what did X say about Y?\", \"did Conan ever talk about "
+        "Z?\" — not for guest metadata (use find_guests for that). Returns short snippets "
+        "with episode title and a source link; snippets are the citation, not the timestamp "
+        "(podcasts use dynamic ad insertion, so timestamps don't reliably map to audio)."
+    ),
+    'input_schema': {
+        'type': 'object',
+        'properties': {
+            'query': {
+                'type': 'string',
+                'description': 'Natural-language search query describing what was said or discussed.',
+            },
+            'guest_name': {
+                'type': 'string',
+                'description': 'Optional — restrict results to episodes featuring this guest.',
+            },
+            'limit': {
+                'type': 'integer',
+                'description': 'Max snippets to return (default 5, max 10).',
+            },
+        },
+        'required': ['query'],
+    },
+}
 
 
 FIND_GUESTS_TOOL = {
@@ -367,6 +409,71 @@ def _find_guests(args, guests, index):
     return {'count': total, 'returned': len(results), 'truncated': total > len(results), 'results': results}
 
 
+_VOYAGE_MODEL = 'voyage-3'
+
+
+def _search_episodes(args):
+    """Execute the search_episodes tool: embed the query with Voyage, query Upstash
+    Vector (hybrid dense search), return citation-ready snippets. Returns a
+    {'error': ...} dict if the vector store isn't configured (Phase 1 not deployed
+    yet) or the upstream calls fail — the model is instructed to say so, not invent
+    results."""
+    args = args or {}
+    query = (args.get('query') or '').strip()
+    if not query:
+        return {'error': 'empty query'}
+    try:
+        limit = min(max(int(args.get('limit', 5)), 1), 10)
+    except (TypeError, ValueError):
+        limit = 5
+    guest_name = (args.get('guest_name') or '').strip()
+
+    voyage_key   = os.environ.get('VOYAGE_API_KEY', '')
+    upstash_url  = os.environ.get('UPSTASH_VECTOR_REST_URL', '')
+    upstash_tok  = os.environ.get('UPSTASH_VECTOR_REST_TOKEN', '')
+    if not (voyage_key and upstash_url and upstash_tok):
+        return {'error': 'episode search is not configured yet'}
+
+    import requests
+    try:
+        emb_resp = requests.post(
+            'https://api.voyageai.com/v1/embeddings',
+            headers={'Authorization': f'Bearer {voyage_key}'},
+            json={'input': [query], 'model': _VOYAGE_MODEL, 'input_type': 'query'},
+            timeout=10,
+        )
+        emb_resp.raise_for_status()
+        vector = emb_resp.json()['data'][0]['embedding']
+
+        query_body = {'vector': vector, 'topK': limit, 'includeMetadata': True}
+        if guest_name:
+            norm = guest_name.replace("'", "''")
+            query_body['filter'] = f"guest_name = '{norm}'"
+        qr = requests.post(
+            f'{upstash_url}/query',
+            headers={'Authorization': f'Bearer {upstash_tok}', 'Content-Type': 'application/json'},
+            json=query_body, timeout=10,
+        )
+        qr.raise_for_status()
+        matches = qr.json().get('result', [])
+    except Exception as exc:
+        return {'error': f'search failed: {type(exc).__name__}'}
+
+    results = []
+    for m in matches:
+        md = m.get('metadata', {})
+        results.append({
+            'episode_title': md.get('episode_title'),
+            'guest_name': md.get('guest_name'),
+            'pub_date': md.get('pub_date'),
+            'snippet': md.get('text'),
+            'source_url': md.get('source_url'),
+            'diarized': md.get('diarized', False),
+            'score': m.get('score'),
+        })
+    return {'returned': len(results), 'results': results}
+
+
 # Lazily-built singletons, reused across warm invocations.
 _STATE = {}
 
@@ -435,7 +542,7 @@ class handler(BaseHTTPRequestHandler):
             for _ in range(4):  # 1 answer turn + up to a few tool round-trips
                 msg = client.messages.create(
                     model=MODEL, max_tokens=MAX_TOKENS, system=system,
-                    tools=[FIND_GUESTS_TOOL], messages=messages,
+                    tools=[FIND_GUESTS_TOOL, SEARCH_EPISODES_TOOL], messages=messages,
                 )
                 u = msg.usage
                 fresh_in     += getattr(u, 'input_tokens', 0) or 0
@@ -448,8 +555,12 @@ class handler(BaseHTTPRequestHandler):
                     results = []
                     for block in msg.content:
                         if block.type == 'tool_use':
-                            out = _find_guests(block.input, st['guests'], st['index']) \
-                                if block.name == 'find_guests' else {'error': 'unknown tool'}
+                            if block.name == 'find_guests':
+                                out = _find_guests(block.input, st['guests'], st['index'])
+                            elif block.name == 'search_episodes':
+                                out = _search_episodes(block.input)
+                            else:
+                                out = {'error': 'unknown tool'}
                             results.append({'type': 'tool_result', 'tool_use_id': block.id,
                                             'content': json.dumps(out)})
                     messages.append({'role': 'user', 'content': results})
