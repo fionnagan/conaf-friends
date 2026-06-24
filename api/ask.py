@@ -165,6 +165,14 @@ questions — find_guests only has metadata, not what was said.
 - Always name the episode title when citing a snippet. Do not state or imply a timestamp \
 as an exact audio location — these podcasts use dynamic ad insertion, so the snippet text \
 is the only reliable citation, not the time offset.
+- For "what did [guest] say about X" or "did the guest mention X" questions, pass \
+require_attributable=true. These transcripts have no speaker labels, so a snippet's \
+attributable field tells you whether it's safe to say a quote came from the guest \
+specifically: attributable=true means the chunk is from the interview portion, which is \
+reliably just Conan and the guest talking — no one else could have said it. \
+attributable=false means it's from the intro/outro banter (Conan, Sona, Matt, and other \
+staff all talking), or the boundary couldn't be detected — do not attribute a line to the \
+guest by name from those chunks; describe it as something said on the episode instead.
 - If search_episodes returns an error (not configured, or no results), say transcript \
 search isn't available for that yet rather than guessing from find_guests metadata.
 
@@ -203,6 +211,18 @@ SEARCH_EPISODES_TOOL = {
             'guest_name': {
                 'type': 'string',
                 'description': 'Optional — restrict results to episodes featuring this guest.',
+            },
+            'require_attributable': {
+                'type': 'boolean',
+                'description': (
+                    'Set true when the question asks what a SPECIFIC PERSON said (e.g. '
+                    '"what did X say about Y", "did the guest mention Z"). Restricts results '
+                    'to interview-zone chunks, where the transcript is reliably 2-party '
+                    '(Conan <-> guest only), so the snippet can be safely attributed. Leave '
+                    'false/omitted for general "did this come up on the show" questions where '
+                    'the answer could be Conan, staff banter, or the guest — those don\'t need '
+                    'attribution and excluding banter chunks would just lose recall.'
+                ),
             },
             'limit': {
                 'type': 'integer',
@@ -427,6 +447,7 @@ def _search_episodes(args):
     except (TypeError, ValueError):
         limit = 5
     guest_name = (args.get('guest_name') or '').strip()
+    require_attributable = bool(args.get('require_attributable'))
 
     voyage_key   = os.environ.get('VOYAGE_API_KEY', '')
     upstash_url  = os.environ.get('UPSTASH_VECTOR_REST_URL', '')
@@ -446,9 +467,14 @@ def _search_episodes(args):
         vector = emb_resp.json()['data'][0]['embedding']
 
         query_body = {'vector': vector, 'topK': limit, 'includeMetadata': True}
+        filters = []
         if guest_name:
             norm = guest_name.replace("'", "''")
-            query_body['filter'] = f"guest_name = '{norm}'"
+            filters.append(f"guest_name = '{norm}'")
+        if require_attributable:
+            filters.append('attributable = true')
+        if filters:
+            query_body['filter'] = ' AND '.join(filters)
         qr = requests.post(
             f'{upstash_url}/query',
             headers={'Authorization': f'Bearer {upstash_tok}', 'Content-Type': 'application/json'},
@@ -469,6 +495,8 @@ def _search_episodes(args):
             'snippet': md.get('text'),
             'source_url': md.get('source_url'),
             'diarized': md.get('diarized', False),
+            'segment_type': md.get('segment_type', 'unknown'),
+            'attributable': md.get('attributable', False),
             'score': m.get('score'),
         })
     return {'returned': len(results), 'results': results}
