@@ -433,10 +433,10 @@ _VOYAGE_MODEL = 'voyage-3'
 
 
 def _search_episodes(args):
-    """Execute the search_episodes tool: embed the query with Voyage, query Upstash
-    Vector (hybrid dense search), return citation-ready snippets. Returns a
-    {'error': ...} dict if the vector store isn't configured (Phase 1 not deployed
-    yet) or the upstream calls fail — the model is instructed to say so, not invent
+    """Execute the search_episodes tool: embed the query with Voyage, query
+    Pinecone, return citation-ready snippets. Returns a {'error': ...} dict
+    if the vector store isn't configured (Phase 1 not deployed yet) or the
+    upstream calls fail — the model is instructed to say so, not invent
     results."""
     args = args or {}
     query = (args.get('query') or '').strip()
@@ -449,10 +449,10 @@ def _search_episodes(args):
     guest_name = (args.get('guest_name') or '').strip()
     require_attributable = bool(args.get('require_attributable'))
 
-    voyage_key   = os.environ.get('VOYAGE_API_KEY', '')
-    upstash_url  = os.environ.get('UPSTASH_VECTOR_REST_URL', '')
-    upstash_tok  = os.environ.get('UPSTASH_VECTOR_REST_TOKEN', '')
-    if not (voyage_key and upstash_url and upstash_tok):
+    voyage_key  = os.environ.get('VOYAGE_API_KEY', '')
+    pc_key      = os.environ.get('PINECONE_API_KEY', '')
+    pc_host     = os.environ.get('PINECONE_INDEX_HOST', '')
+    if not (voyage_key and pc_key and pc_host):
         return {'error': 'episode search is not configured yet'}
 
     import requests
@@ -467,21 +467,20 @@ def _search_episodes(args):
         vector = emb_resp.json()['data'][0]['embedding']
 
         query_body = {'vector': vector, 'topK': limit, 'includeMetadata': True}
-        filters = []
+        pc_filter = {}
         if guest_name:
-            norm = guest_name.replace("'", "''")
-            filters.append(f"guest_name = '{norm}'")
+            pc_filter['guest_name'] = {'$eq': guest_name}
         if require_attributable:
-            filters.append('attributable = true')
-        if filters:
-            query_body['filter'] = ' AND '.join(filters)
+            pc_filter['attributable'] = {'$eq': True}
+        if pc_filter:
+            query_body['filter'] = pc_filter
         qr = requests.post(
-            f'{upstash_url}/query',
-            headers={'Authorization': f'Bearer {upstash_tok}', 'Content-Type': 'application/json'},
+            f'https://{pc_host}/query',
+            headers={'Api-Key': pc_key, 'Content-Type': 'application/json'},
             json=query_body, timeout=10,
         )
         qr.raise_for_status()
-        matches = qr.json().get('result', [])
+        matches = qr.json().get('matches', [])
     except Exception as exc:
         return {'error': f'search failed: {type(exc).__name__}'}
 

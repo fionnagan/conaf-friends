@@ -2,9 +2,14 @@
 """
 embed-and-upsert.py
 Embeds scripts/ingest/chunks.jsonl with Voyage voyage-3 and upserts into
-Upstash Vector.
+Pinecone (serverless index, free tier — no daily write quota, unlike
+Upstash Vector's free tier which caps at 10k writes/day and is what this
+migrated away from).
 
-Requires env vars: VOYAGE_API_KEY, UPSTASH_VECTOR_REST_URL, UPSTASH_VECTOR_REST_TOKEN
+Requires env vars: VOYAGE_API_KEY, PINECONE_API_KEY, PINECONE_INDEX_HOST
+(PINECONE_INDEX_HOST is the per-index host from `describe_index`, e.g.
+"conan-episodes-xxxxx.svc.us-east-1-aws.pinecone.io" — NOT the control-plane
+api.pinecone.io host.)
 
 Usage:
   python3 scripts/ingest/embed-and-upsert.py
@@ -21,12 +26,13 @@ ROOT = Path(__file__).parent.parent.parent
 CHUNKS_PATH = ROOT / 'scripts/ingest/chunks.jsonl'
 PROGRESS_PATH = ROOT / 'scripts/ingest/.embed_progress'
 
-VOYAGE_API_KEY = os.environ.get('VOYAGE_API_KEY')
-UPSTASH_URL = os.environ.get('UPSTASH_VECTOR_REST_URL')
-UPSTASH_TOKEN = os.environ.get('UPSTASH_VECTOR_REST_TOKEN')
+VOYAGE_API_KEY     = os.environ.get('VOYAGE_API_KEY')
+PINECONE_API_KEY   = os.environ.get('PINECONE_API_KEY')
+PINECONE_INDEX_HOST = os.environ.get('PINECONE_INDEX_HOST')
 
 VOYAGE_MODEL = 'voyage-3'
-BATCH_SIZE = 32
+BATCH_SIZE = 50  # Pinecone recommends batches <= 100 vectors / 2MB per upsert call
+
 
 def embed_batch(texts):
     r = requests.post(
@@ -38,21 +44,41 @@ def embed_batch(texts):
     r.raise_for_status()
     return [d['embedding'] for d in r.json()['data']]
 
+
+def to_pinecone_metadata(c):
+    """Pinecone rejects null metadata values — omit any field that's None
+    instead of sending it as null (Upstash tolerated null; Pinecone doesn't)."""
+    md = {
+        'episode_slug': c['episode_slug'],
+        'episode_title': c['episode_title'],
+        'guest_name': c.get('guest_name'),
+        'pub_date': c.get('pub_date'),
+        'ts_start': c['ts_start'],
+        'source_url': c['source_url'],
+        'diarized': c['diarized'],
+        'segment_type': c.get('segment_type', 'unknown'),
+        'attributable': c.get('attributable', False),
+        'text': c['text'],
+    }
+    return {k: v for k, v in md.items() if v is not None}
+
+
 def upsert_batch(vectors):
     r = requests.post(
-        f'{UPSTASH_URL}/upsert',
-        headers={'Authorization': f'Bearer {UPSTASH_TOKEN}', 'Content-Type': 'application/json'},
-        json=vectors,
+        f'https://{PINECONE_INDEX_HOST}/vectors/upsert',
+        headers={'Api-Key': PINECONE_API_KEY, 'Content-Type': 'application/json'},
+        json={'vectors': vectors},
         timeout=60,
     )
     r.raise_for_status()
     return r.json()
 
+
 def main():
     missing = [n for n, v in [
         ('VOYAGE_API_KEY', VOYAGE_API_KEY),
-        ('UPSTASH_VECTOR_REST_URL', UPSTASH_URL),
-        ('UPSTASH_VECTOR_REST_TOKEN', UPSTASH_TOKEN),
+        ('PINECONE_API_KEY', PINECONE_API_KEY),
+        ('PINECONE_INDEX_HOST', PINECONE_INDEX_HOST),
     ] if not v]
     if missing:
         print(f'Missing env vars: {", ".join(missing)}. Set them and re-run.')
@@ -69,35 +95,18 @@ def main():
         texts = [c['text'] for c in batch]
         embeddings = embed_batch(texts)
         vectors = [
-            {
-                'id': c['chunk_id'],
-                'vector': emb,
-                'metadata': {
-                    'episode_slug': c['episode_slug'],
-                    'episode_title': c['episode_title'],
-                    'guest_name': c['guest_name'],
-                    'pub_date': c['pub_date'],
-                    'ts_start': c['ts_start'],
-                    'source_url': c['source_url'],
-                    'diarized': c['diarized'],
-                    'segment_type': c.get('segment_type', 'unknown'),
-                    'attributable': c.get('attributable', False),
-                    'text': c['text'],
-                },
-            }
+            {'id': c['chunk_id'], 'values': emb, 'metadata': to_pinecone_metadata(c)}
             for c, emb in zip(batch, embeddings)
         ]
         try:
             upsert_batch(vectors)
         except requests.exceptions.HTTPError as exc:
             PROGRESS_PATH.write_text(str(i))
-            if exc.response is not None and exc.response.status_code == 403 and 'daily write limit' in exc.response.text.lower():
-                print(f'\nHit Upstash daily write limit at {i}/{len(chunks)}. '
-                      f'Checkpoint saved — re-run this script after the quota resets (resets daily).')
-                sys.exit(0)
+            print(f'\nUpsert failed at {i}/{len(chunks)}: {exc}. '
+                  f'Checkpoint saved — fix the issue and re-run to resume.')
             raise
         print(f'  upserted {min(i + BATCH_SIZE, len(chunks))}/{len(chunks)}')
-        time.sleep(0.2)
+        time.sleep(0.1)
 
     PROGRESS_PATH.unlink(missing_ok=True)
     print('Done.')
