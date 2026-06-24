@@ -161,6 +161,10 @@ appearance — do not guess or invent one.
 You have a search_episodes tool that searches actual transcript text from podcast \
 episodes. Call it for substantive "what did X say about Y" or "did Conan ever discuss Z" \
 questions — find_guests only has metadata, not what was said.
+- If the question names a specific guest, always pass guest_name — this pre-filters the \
+search to that guest's episode(s) before ranking by similarity, instead of ranking across \
+all 665 episodes and risking a wrong match (e.g. a guest who has multiple episodes — \
+original plus "Returns" — or a guest whose name comes up inside someone else's episode).
 - Quote or closely paraphrase only from the snippet text returned; never invent a quote.
 - Always name the episode title when citing a snippet. Do not state or imply a timestamp \
 as an exact audio location — these podcasts use dynamic ad insertion, so the snippet text \
@@ -210,7 +214,12 @@ SEARCH_EPISODES_TOOL = {
             },
             'guest_name': {
                 'type': 'string',
-                'description': 'Optional — restrict results to episodes featuring this guest.',
+                'description': (
+                    'Strongly recommended whenever the question names a specific person — '
+                    'restricts the search to that guest\'s episode(s) before ranking, so a '
+                    'guest with multiple episodes (an original + "Returns") or a guest whose '
+                    'name comes up inside someone else\'s episode doesn\'t get mismatched.'
+                ),
             },
             'require_attributable': {
                 'type': 'boolean',
@@ -466,21 +475,34 @@ def _search_episodes(args):
         emb_resp.raise_for_status()
         vector = emb_resp.json()['data'][0]['embedding']
 
-        query_body = {'vector': vector, 'topK': limit, 'includeMetadata': True}
+        def run_query(filt):
+            body = {'vector': vector, 'topK': limit, 'includeMetadata': True}
+            if filt:
+                body['filter'] = filt
+            r = requests.post(
+                f'https://{pc_host}/query',
+                headers={'Api-Key': pc_key, 'Content-Type': 'application/json'},
+                json=body, timeout=10,
+            )
+            r.raise_for_status()
+            return r.json().get('matches', [])
+
         pc_filter = {}
-        if guest_name:
-            pc_filter['guest_name'] = {'$eq': guest_name}
         if require_attributable:
             pc_filter['attributable'] = {'$eq': True}
-        if pc_filter:
-            query_body['filter'] = pc_filter
-        qr = requests.post(
-            f'https://{pc_host}/query',
-            headers={'Api-Key': pc_key, 'Content-Type': 'application/json'},
-            json=query_body, timeout=10,
-        )
-        qr.raise_for_status()
-        matches = qr.json().get('matches', [])
+
+        guest_filter_relaxed = False
+        if guest_name:
+            matches = run_query({**pc_filter, 'guest_name': {'$eq': guest_name}})
+            if not matches:
+                # Pinecone's $eq is a literal string match — a spelling/punctuation
+                # mismatch against stored metadata (e.g. "JJ Abrams" vs "J. J.
+                # Abrams") silently returns zero rather than erroring. Retrying
+                # without the guest filter beats returning nothing.
+                matches = run_query(pc_filter)
+                guest_filter_relaxed = bool(matches)
+        else:
+            matches = run_query(pc_filter)
     except Exception as exc:
         return {'error': f'search failed: {type(exc).__name__}'}
 
@@ -498,7 +520,14 @@ def _search_episodes(args):
             'attributable': md.get('attributable', False),
             'score': m.get('score'),
         })
-    return {'returned': len(results), 'results': results}
+    out = {'returned': len(results), 'results': results}
+    if guest_filter_relaxed:
+        out['note'] = (
+            f'No episode matched guest_name={guest_name!r} exactly, so this searched '
+            f'all episodes instead — check each result\'s episode_title/guest_name '
+            f'before attributing anything to {guest_name!r}.'
+        )
+    return out
 
 
 # Lazily-built singletons, reused across warm invocations.
