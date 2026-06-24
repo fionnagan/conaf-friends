@@ -493,12 +493,16 @@ def _search_episodes(args):
 
         guest_filter_relaxed = False
         if guest_name:
-            matches = run_query({**pc_filter, 'guest_name': {'$eq': guest_name}})
+            # Multi-guest episodes ("Nick Offerman and Megan Mullally") store a
+            # guest_names array, not just the combined guest_name string — $in
+            # matches if the queried name is anywhere in that array, so a
+            # search for "Megan Mullally" alone still hits her episode.
+            matches = run_query({**pc_filter, 'guest_names': {'$in': [guest_name]}})
             if not matches:
-                # Pinecone's $eq is a literal string match — a spelling/punctuation
-                # mismatch against stored metadata (e.g. "JJ Abrams" vs "J. J.
-                # Abrams") silently returns zero rather than erroring. Retrying
-                # without the guest filter beats returning nothing.
+                # Pinecone's $in is still a literal string match — a spelling/
+                # punctuation mismatch against stored metadata (e.g. "JJ Abrams"
+                # vs "J. J. Abrams") silently returns zero rather than erroring.
+                # Retrying without the guest filter beats returning nothing.
                 matches = run_query(pc_filter)
                 guest_filter_relaxed = bool(matches)
         else:

@@ -73,6 +73,34 @@ def segment_type_for(idx, intro_end, outro_start):
         return 'interview'
     return 'unknown'
 
+def split_guest_names(guest_name):
+    """Some episodes have multiple guests packed into one string (e.g. live
+    shows, duo interviews) — "Nick Offerman and Megan Mullally", "Dave
+    Grohl, Krist Novoselic, and Steve Albini". Filtering search_episodes on
+    a single name against the raw combined string would never match, so
+    this splits it into a list for an array/$in-style filter. Deliberately
+    conservative: only splits on explicit separators, doesn't try to guess
+    names out of a duo's billed act name (e.g. "Desus & Mero" stays as one
+    string — splitting on "&" would produce "Desus" and "Mero", not their
+    actual names "Desus Nice" and "The Kid Mero" — that's a separate
+    upstream guestName data gap, not fixable by splitting text)."""
+    if not guest_name:
+        return []
+    parts = [p.strip() for p in re.split(r',\s*and\s+|,\s+|\s+and\s+', guest_name) if p.strip()]
+
+    # Shared-surname pattern: "Kurt and Wyatt Russell" -> ["Kurt", "Wyatt Russell"]
+    # really means "Kurt Russell and Wyatt Russell". A bare-first-name part
+    # followed by a multi-word part inherits that part's last token as surname.
+    for i in range(len(parts) - 1):
+        if ' ' not in parts[i] and ' ' in parts[i + 1]:
+            parts[i] = f"{parts[i]} {parts[i + 1].rsplit(' ', 1)[-1]}"
+
+    # Strip trailing descriptions ("... of The Rest Is History Podcast") —
+    # keep just the name before "of"/"from".
+    parts = [re.split(r'\s+(?:of|from)\s+', p, maxsplit=1)[0].strip() for p in parts]
+    return parts
+
+
 def parse_date(pub_date: str) -> str:
     m = re.search(r'(\d{1,2}) (\w{3}) (\d{4})', pub_date or '')
     if not m:
@@ -114,6 +142,7 @@ def chunk_episode(ep: dict):
             'episode_slug': ep['slug'],
             'episode_title': ep['title'],
             'guest_name': ep.get('guestName'),
+            'guest_names': split_guest_names(ep.get('guestName')),
             'pub_date': parse_date(ep.get('pubDate')),
             'ts_start': ts_start,
             'source_url': ep['url'],

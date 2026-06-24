@@ -52,6 +52,7 @@ def to_pinecone_metadata(c):
         'episode_slug': c['episode_slug'],
         'episode_title': c['episode_title'],
         'guest_name': c.get('guest_name'),
+        'guest_names': c.get('guest_names') or [],
         'pub_date': c.get('pub_date'),
         'ts_start': c['ts_start'],
         'source_url': c['source_url'],
