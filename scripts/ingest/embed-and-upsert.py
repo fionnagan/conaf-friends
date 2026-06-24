@@ -19,6 +19,7 @@ import requests
 
 ROOT = Path(__file__).parent.parent.parent
 CHUNKS_PATH = ROOT / 'scripts/ingest/chunks.jsonl'
+PROGRESS_PATH = ROOT / 'scripts/ingest/.embed_progress'
 
 VOYAGE_API_KEY = os.environ.get('VOYAGE_API_KEY')
 UPSTASH_URL = os.environ.get('UPSTASH_VECTOR_REST_URL')
@@ -58,9 +59,12 @@ def main():
         sys.exit(1)
 
     chunks = [json.loads(l) for l in open(CHUNKS_PATH)]
+    start_at = int(PROGRESS_PATH.read_text().strip()) if PROGRESS_PATH.exists() else 0
+    if start_at:
+        print(f'Resuming from checkpoint: skipping {start_at} already-upserted chunks')
     print(f'{len(chunks)} chunks to embed + upsert')
 
-    for i in range(0, len(chunks), BATCH_SIZE):
+    for i in range(start_at, len(chunks), BATCH_SIZE):
         batch = chunks[i:i + BATCH_SIZE]
         texts = [c['text'] for c in batch]
         embeddings = embed_batch(texts)
@@ -76,15 +80,26 @@ def main():
                     'ts_start': c['ts_start'],
                     'source_url': c['source_url'],
                     'diarized': c['diarized'],
+                    'segment_type': c.get('segment_type', 'unknown'),
+                    'attributable': c.get('attributable', False),
                     'text': c['text'],
                 },
             }
             for c, emb in zip(batch, embeddings)
         ]
-        upsert_batch(vectors)
+        try:
+            upsert_batch(vectors)
+        except requests.exceptions.HTTPError as exc:
+            PROGRESS_PATH.write_text(str(i))
+            if exc.response is not None and exc.response.status_code == 403 and 'daily write limit' in exc.response.text.lower():
+                print(f'\nHit Upstash daily write limit at {i}/{len(chunks)}. '
+                      f'Checkpoint saved — re-run this script after the quota resets (resets daily).')
+                sys.exit(0)
+            raise
         print(f'  upserted {min(i + BATCH_SIZE, len(chunks))}/{len(chunks)}')
         time.sleep(0.2)
 
+    PROGRESS_PATH.unlink(missing_ok=True)
     print('Done.')
 
 if __name__ == '__main__':

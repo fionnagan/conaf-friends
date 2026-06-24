@@ -37,6 +37,7 @@ next-env.d.ts
 
 # ingest cache (large files — not needed for build)
 scripts/cache/
+scripts/ingest/.embed_progress
 # …except the YouTube match index — this IS committed and updated by CI
 !scripts/cache/youtube-matches.json
 
