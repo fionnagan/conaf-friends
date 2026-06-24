@@ -157,7 +157,7 @@ export default function GuestPage({ params, searchParams }: Props) {
                 >
                   {a.coldOpenWord}
                   <span className="ml-1.5 text-xs opacity-60">
-                    {new Date(a.date).getFullYear()}
+                    {new Date(a.date).getUTCFullYear()}
                   </span>
                 </span>
               ))}

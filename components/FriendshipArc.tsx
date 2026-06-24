@@ -56,8 +56,10 @@ const SEGMENTS: Record<Era, { start: number; width: number }> = (() => {
   return out;
 })();
 
+// Read in UTC: dates are calendar dates parsed as UTC midnight, so local getters
+// would shift a Jan-1 appearance into the previous year on the arc.
 const yearOf = (d: string) =>
-  new Date(d).getFullYear() + new Date(d).getMonth() / 12;
+  new Date(d).getUTCFullYear() + new Date(d).getUTCMonth() / 12;
 
 // Map an appearance to a horizontal % within its own era's segment (inset from the edges).
 function appearanceToPercent(era: Era, date: string): number {
