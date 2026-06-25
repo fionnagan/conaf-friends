@@ -1,32 +1,331 @@
 [
-  {"id": 1, "question": "How many seasons has It's Always Sunny in Philadelphia shot, according to Charlie Day?", "expected_episode": "Charlie Day", "must_cite": true, "gold_keywords": ["16th season"]},
-  {"id": 2, "question": "What show did It's Always Sunny in Philadelphia pass for the longest-running live-action sitcom, per Charlie Day?", "expected_episode": "Charlie Day", "must_cite": true, "gold_keywords": ["Ozzie and Harriet"]},
-  {"id": 3, "question": "What did Charlie Day say about Conan's show being the talk show he felt he did 'correctly'?", "expected_episode": "Charlie Day", "must_cite": true, "gold_keywords": ["first one that I felt like I did correctly"]},
-  {"id": 4, "question": "What nickname did a Portuguese carpenter give Charlie Day, combining Conan with Kevin Costner?", "expected_episode": "Charlie Day", "must_cite": true, "gold_keywords": ["Cosna"]},
-  {"id": 5, "question": "What sculpture or item from Argentina did Conan discuss on the 'Conan Must Go: Cami' episode?", "expected_episode": "Conan Must Go: Cami (Argentina)", "must_cite": true, "gold_keywords": ["Argentine sculptress", "jewelry"]},
-  {"id": 6, "question": "What delivery service mix-up came up in Dave Grohl's episode involving his cousin Tracy?", "expected_episode": "Dave Grohl", "must_cite": true, "gold_keywords": ["FedEx", "Tracy"]},
-  {"id": 7, "question": "What medication did Dave Grohl say he might have taken — a Tylenol or a Tylenol PM?", "expected_episode": "Dave Grohl", "must_cite": true, "gold_keywords": ["Tylenol PM"]},
-  {"id": 8, "question": "What sketch from 1993 did Conan and Bill Hader discuss involving fake mouths, during the Wiltern Theater live show?", "expected_episode": "Live With Bill Hader At The Wiltern Theater", "must_cite": true, "gold_keywords": ["clutch cargo"]},
-  {"id": 9, "question": "What did Howie Mandel say medication had stopped, related to his life?", "expected_episode": "Howie Mandel", "must_cite": true, "gold_keywords": ["medicated", "stopped my life"]},
-  {"id": 10, "question": "What classic movie impression involving 'Mr. Gower' came up in Jim Gaffigan's episode?", "expected_episode": "Jim Gaffigan", "must_cite": true, "gold_keywords": ["Mr. Gower", "George Bailey"]},
-  {"id": 11, "question": "What actor's voice does everyone do an impression of from 'It's a Wonderful Life,' per the Jim Gaffigan episode?", "expected_episode": "Jim Gaffigan", "must_cite": true, "gold_keywords": ["Jimmy Stewart"]},
-  {"id": 12, "question": "What item does Jim Gaffigan wish he had even though he doesn't smoke?", "expected_episode": "Jim Gaffigan", "must_cite": true, "gold_keywords": ["cigarette case"]},
-  {"id": 13, "question": "What did Jim Parsons say about wanting to be able to do at a mall, even after fame?", "expected_episode": "Jim Parsons", "must_cite": true, "gold_keywords": ["go to a mall"]},
-  {"id": 14, "question": "What furniture does Wanda Sykes describe Conan sitting in during a description of his interview style?", "expected_episode": "Kristen Bell", "must_cite": true, "gold_keywords": ["lazy boy"]},
-  {"id": 15, "question": "What dark joke did Wanda Sykes make about white people and insurance policies?", "expected_episode": "Wanda Sykes", "must_cite": true, "gold_keywords": ["insurance policies", "white murder"]},
-  {"id": 16, "question": "What TV show about crime did Wanda Sykes mention watching after the news?", "expected_episode": "Wanda Sykes", "must_cite": true, "gold_keywords": ["Forensic files"]},
-  {"id": 17, "question": "What building in Burbank did Anderson Cooper discuss with Conan, related to Disney?", "expected_episode": "Peeping Cooper", "must_cite": true, "gold_keywords": ["Team Disney building"]},
-  {"id": 18, "question": "What architectural movement did Anderson Cooper bring up as a response to modernism?", "expected_episode": "Peeping Cooper", "must_cite": true, "gold_keywords": ["postmodernism"]},
-  {"id": 19, "question": "What gift did Pete Holmes's mom bring for his baby Lila?", "expected_episode": "Pete Holmes", "must_cite": true, "gold_keywords": ["book for Lila"]},
-  {"id": 20, "question": "On which late-night show did Pete Holmes say he previously told a story about his mom?", "expected_episode": "Pete Holmes", "must_cite": true, "gold_keywords": ["Kimmel"]},
-  {"id": 21, "question": "What kind of doll is central to the 'Scurvy Rag Doll' episode's running bit?", "expected_episode": "Scurvy Rag Doll", "must_cite": true, "gold_keywords": ["doll"]},
-  {"id": 22, "question": "What driving-related habit did Werner Herzog say he avoids — phone calls or GPS while driving?", "expected_episode": "Werner Herzog Returns", "must_cite": true, "gold_keywords": ["Google", "maps and routing"]},
-  {"id": 23, "question": "What car brand did Werner Herzog mention switching to, per the discussion with Conan?", "expected_episode": "Werner Herzog Returns", "must_cite": true, "gold_keywords": ["Ford Explorer"]},
-  {"id": 24, "question": "What did Zach Galifianakis say about comedy and 'punching down'?", "expected_episode": "Zach Galifianakis Returns Again", "must_cite": true, "gold_keywords": ["punching down"]},
-  {"id": 25, "question": "What did Jesse Eisenberg say his movie's two cousins were doing together, related to their grandmother?", "expected_episode": "Jesse Eisenberg Returns", "must_cite": true, "gold_keywords": ["grandmother", "survived the war"]},
-  {"id": 26, "question": "What kind of email did someone send Conan in the 'It's A Small World In Here' episode?", "expected_episode": "It’s A Small World In Here", "must_cite": true, "gold_keywords": ["hostile, accusatory email"]},
-  {"id": 27, "question": "What stand-up bit involving timing did Dana Carvey describe in one of his Deep Dive episodes?", "expected_episode": "Deep Dive with Dana Carvey 5", "must_cite": true, "gold_keywords": ["good set", "car"]},
-  {"id": 28, "question": "Whose son saw Dana Carvey's 97th comedy special, according to the Deep Dive episode?", "expected_episode": "Deep Dive with Dana Carvey 4", "must_cite": true, "gold_keywords": ["former assistant", "Julie May"]},
-  {"id": 29, "question": "What does the 'Oops, All Ads!' episode title refer to, content-wise?", "expected_episode": "Oops, All Ads!", "must_cite": true, "gold_keywords": ["take a break", "ads"]},
-  {"id": 30, "question": "What did Charlie Sheen say about his daytime TV habits?", "expected_episode": null, "must_cite": false, "gold_keywords": [], "note": "NEGATIVE CONTROL — Charlie Sheen is one of the 18 known transcript gaps (no episode in the sample/corpus). Correct behavior: say no record/transcript found, not invent an answer."}
+  {
+    "id": 1,
+    "question": "How many seasons has It's Always Sunny in Philadelphia shot, according to Charlie Day?",
+    "expected_episode": "Charlie Day",
+    "must_cite": true,
+    "gold_keywords": [
+      "16th season"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What show did It's Always Sunny in Philadelphia pass for the longest-running live-action sitcom, per Charlie Day?",
+    "expected_episode": "Charlie Day",
+    "must_cite": true,
+    "gold_keywords": [
+      "Ozzie and Harriet"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What did Charlie Day say about Conan's show being the talk show he felt he did 'correctly'?",
+    "expected_episode": "Charlie Day",
+    "must_cite": true,
+    "gold_keywords": [
+      "first one that I felt like I did correctly"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What nickname did a Portuguese carpenter give Charlie Day, combining Conan with Kevin Costner?",
+    "expected_episode": "Charlie Day",
+    "must_cite": true,
+    "gold_keywords": [
+      "Cosna"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What sculpture or item from Argentina did Conan discuss on the 'Conan Must Go: Cami' episode?",
+    "expected_episode": "Conan Must Go: Cami (Argentina)",
+    "must_cite": true,
+    "gold_keywords": [
+      "Argentine sculptress",
+      "jewelry"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What delivery service mix-up came up in Dave Grohl's episode involving his cousin Tracy?",
+    "expected_episode": "Dave Grohl",
+    "must_cite": true,
+    "gold_keywords": [
+      "FedEx",
+      "Tracy"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "What medication did Dave Grohl say he might have taken \u2014 a Tylenol or a Tylenol PM?",
+    "expected_episode": "Dave Grohl",
+    "must_cite": true,
+    "gold_keywords": [
+      "Tylenol PM"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What sketch from 1993 did Conan and Bill Hader discuss involving fake mouths, during the Wiltern Theater live show?",
+    "expected_episode": "Live With Bill Hader At The Wiltern Theater",
+    "must_cite": true,
+    "gold_keywords": [
+      "clutch cargo"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What did Howie Mandel say medication had stopped, related to his life?",
+    "expected_episode": "Howie Mandel",
+    "must_cite": true,
+    "gold_keywords": [
+      "medicated",
+      "stopped my life"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What classic movie impression involving 'Mr. Gower' came up in Jim Gaffigan's episode?",
+    "expected_episode": "Jim Gaffigan",
+    "must_cite": true,
+    "gold_keywords": [
+      "Mr. Gower",
+      "George Bailey"
+    ]
+  },
+  {
+    "id": 11,
+    "question": "What actor's voice does everyone do an impression of from 'It's a Wonderful Life,' per the Jim Gaffigan episode?",
+    "expected_episode": "Jim Gaffigan",
+    "must_cite": true,
+    "gold_keywords": [
+      "Jimmy Stewart"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "What item does Jim Gaffigan wish he had even though he doesn't smoke?",
+    "expected_episode": "Jim Gaffigan",
+    "must_cite": true,
+    "gold_keywords": [
+      "cigarette case"
+    ]
+  },
+  {
+    "id": 13,
+    "question": "What did Jim Parsons say about wanting to be able to do at a mall, even after fame?",
+    "expected_episode": "Jim Parsons",
+    "must_cite": true,
+    "gold_keywords": [
+      "go to a mall"
+    ]
+  },
+  {
+    "id": 14,
+    "question": "What furniture does Wanda Sykes describe Conan sitting in during a description of his interview style?",
+    "expected_episode": "Kristen Bell",
+    "must_cite": true,
+    "gold_keywords": [
+      "lazy boy"
+    ]
+  },
+  {
+    "id": 15,
+    "question": "What dark joke did Wanda Sykes make about white people and insurance policies?",
+    "expected_episode": "Wanda Sykes",
+    "must_cite": true,
+    "gold_keywords": [
+      "insurance policies",
+      "white murder"
+    ]
+  },
+  {
+    "id": 16,
+    "question": "What TV show about crime did Wanda Sykes mention watching after the news?",
+    "expected_episode": "Wanda Sykes",
+    "must_cite": true,
+    "gold_keywords": [
+      "Forensic files"
+    ]
+  },
+  {
+    "id": 17,
+    "question": "What building in Burbank did Anderson Cooper discuss with Conan, related to Disney?",
+    "expected_episode": "Peeping Cooper",
+    "must_cite": true,
+    "gold_keywords": [
+      "Team Disney building"
+    ]
+  },
+  {
+    "id": 18,
+    "question": "What architectural movement did Anderson Cooper bring up as a response to modernism?",
+    "expected_episode": "Peeping Cooper",
+    "must_cite": true,
+    "gold_keywords": [
+      "postmodernism"
+    ]
+  },
+  {
+    "id": 19,
+    "question": "What gift did Pete Holmes's mom bring for his baby Lila?",
+    "expected_episode": "Pete Holmes",
+    "must_cite": true,
+    "gold_keywords": [
+      "book for Lila"
+    ]
+  },
+  {
+    "id": 20,
+    "question": "On which late-night show did Pete Holmes say he previously told a story about his mom?",
+    "expected_episode": "Pete Holmes",
+    "must_cite": true,
+    "gold_keywords": [
+      "Kimmel"
+    ]
+  },
+  {
+    "id": 21,
+    "question": "What kind of doll is central to the 'Scurvy Rag Doll' episode's running bit?",
+    "expected_episode": "Scurvy Rag Doll",
+    "must_cite": true,
+    "gold_keywords": [
+      "doll"
+    ]
+  },
+  {
+    "id": 22,
+    "question": "What driving-related habit did Werner Herzog say he avoids \u2014 phone calls or GPS while driving?",
+    "expected_episode": "Werner Herzog Returns",
+    "must_cite": true,
+    "gold_keywords": [
+      "Google",
+      "maps and routing"
+    ]
+  },
+  {
+    "id": 23,
+    "question": "What car brand did Werner Herzog mention switching to, per the discussion with Conan?",
+    "expected_episode": "Werner Herzog Returns",
+    "must_cite": true,
+    "gold_keywords": [
+      "Ford Explorer"
+    ]
+  },
+  {
+    "id": 24,
+    "question": "What did Zach Galifianakis say about comedy and 'punching down'?",
+    "expected_episode": "Zach Galifianakis Returns Again",
+    "must_cite": true,
+    "gold_keywords": [
+      "punching down"
+    ]
+  },
+  {
+    "id": 25,
+    "question": "What did Jesse Eisenberg say his movie's two cousins were doing together, related to their grandmother?",
+    "expected_episode": "Jesse Eisenberg Returns",
+    "must_cite": true,
+    "gold_keywords": [
+      "grandmother",
+      "survived the war"
+    ]
+  },
+  {
+    "id": 26,
+    "question": "What kind of email did someone send Conan in the 'It's A Small World In Here' episode?",
+    "expected_episode": "It\u2019s A Small World In Here",
+    "must_cite": true,
+    "gold_keywords": [
+      "hostile, accusatory email"
+    ]
+  },
+  {
+    "id": 27,
+    "question": "What stand-up bit involving timing did Dana Carvey describe in one of his Deep Dive episodes?",
+    "expected_episode": "Deep Dive with Dana Carvey 5",
+    "must_cite": true,
+    "gold_keywords": [
+      "good set",
+      "car"
+    ]
+  },
+  {
+    "id": 28,
+    "question": "Whose son saw Dana Carvey's 97th comedy special, according to the Deep Dive episode?",
+    "expected_episode": "Deep Dive with Dana Carvey 4",
+    "must_cite": true,
+    "gold_keywords": [
+      "former assistant",
+      "Julie May"
+    ]
+  },
+  {
+    "id": 29,
+    "question": "What does the 'Oops, All Ads!' episode title refer to, content-wise?",
+    "expected_episode": "Oops, All Ads!",
+    "must_cite": true,
+    "gold_keywords": [
+      "take a break",
+      "ads"
+    ]
+  },
+  {
+    "id": 30,
+    "question": "What did Charlie Sheen say about his daytime TV habits?",
+    "expected_episode": null,
+    "must_cite": false,
+    "gold_keywords": [],
+    "note": "NEGATIVE CONTROL \u2014 Charlie Sheen is one of the 18 known transcript gaps (no episode in the sample/corpus). Correct behavior: say no record/transcript found, not invent an answer."
+  },
+  {
+    "id": 31,
+    "question": "Has the podcast ever done a 'State of the Podcast' or 'State of the Union' style check-in segment?",
+    "expected_episode": "Conan Delivers The State Of The Podcast",
+    "must_cite": true,
+    "gold_keywords": [
+      "State of the Podcast",
+      "State of the Union"
+    ]
+  },
+  {
+    "id": 32,
+    "question": "What did the 2023 State of the Podcast segment focus on?",
+    "expected_episode": "Conan's 2023 State Of The Podcast",
+    "must_cite": true,
+    "gold_keywords": [
+      "live",
+      "theater",
+      "touring"
+    ]
+  },
+  {
+    "id": 33,
+    "question": "Who does the show bring in to explain business/advertiser metrics during State of the Podcast segments?",
+    "expected_episode": "Conan Learns About \"Brand Safety Analysis\"",
+    "must_cite": true,
+    "gold_keywords": [
+      "Adam Sachs"
+    ]
+  },
+  {
+    "id": 34,
+    "question": "Did Conan resist turning the podcast into a video podcast at some point?",
+    "expected_episode": "Conan Didn't Want To Have A Video Podcast",
+    "must_cite": true,
+    "gold_keywords": [
+      "video podcast",
+      "resist"
+    ]
+  },
+  {
+    "id": 35,
+    "question": "How has Conan's stance on video/YouTube changed between the 2024 and 2025/2026 State of the Podcast segments?",
+    "expected_episode": "Conan Learns About His YouTube Audience",
+    "must_cite": true,
+    "gold_keywords": [
+      "YouTube",
+      "late night show"
+    ]
+  }
 ]

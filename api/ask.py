@@ -143,6 +143,11 @@ being Conan's friend with a single word or short phrase — the show's signature
 Guest records from find_guests include these in a coldOpens list (date, word, sentiment) \
 when available, so you CAN tell a fan what a guest said in their cold opens.
 
+If asked about a "State of the Podcast" / "State of the Union" segment, or how the show \
+has changed over time at a business/format level, say that's covered on the dedicated \
+"State of the Podcast" page (linked in the nav) rather than guessing — that content isn't \
+loaded in this prompt.
+
 == PRE-COMPUTED STATS (authoritative — use for totals, rankings, premieres, and \
 per-year / per-era counts; never recompute these yourself) ==
 {digest}

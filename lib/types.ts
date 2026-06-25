@@ -152,3 +152,22 @@ export interface OriginCache {
     fetchedAt: string;
   };
 }
+
+export interface SOTUMetric {
+  metric: string;
+  value: string;
+  note: string;
+}
+
+export interface SOTURecord {
+  id: string;
+  title: string;
+  source_url: string;
+  air_date: string;
+  host_episode: string | null;
+  segment_type: 'standalone-clip' | 'full-podcast-episode';
+  transcript_source: string;
+  topics: string[];
+  summary: string;
+  metrics: SOTUMetric[];
+}

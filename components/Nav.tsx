@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: "/", label: "I Feel…" },
   { href: "/cold-opens", label: "Cold Opens" },
   { href: "/arc", label: "Arcs" },
+  { href: "/sotu", label: "State of the Podcast" },
 ];
 
 export default function Nav() {
