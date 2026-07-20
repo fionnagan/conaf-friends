@@ -39,86 +39,10 @@
     ]
   },
   {
-    "id": "ike-barinholtz",
-    "name": "Ike Barinholtz",
-    "professions": [],
-    "totalAppearances": 5,
-    "eras": [
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2013-09-11",
-    "lastAppearance": "2026-04-27",
-    "appearanceYears": [
-      "2013",
-      "2014",
-      "2015",
-      "2018",
-      "2026"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2013-09-11",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2026-04-27",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2026-04-27",
-        "word": "bullish",
-        "sentiment": "warm"
-      }
-    ]
-  },
-  {
-    "id": "chelsea-peretti",
-    "name": "Chelsea Peretti",
-    "professions": [
-      "comedian",
-      "actress",
-      "writer"
-    ],
-    "totalAppearances": 4,
-    "eras": [
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2014-09-25",
-    "lastAppearance": "2024-03-04",
-    "appearanceYears": [
-      "2014",
-      "2015",
-      "2018",
-      "2024"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2014-09-25",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2024-03-04",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2024-03-04",
-        "word": "excited",
-        "sentiment": "warm"
-      }
-    ]
-  },
-  {
     "id": "maria-bamford",
     "name": "Maria Bamford",
     "professions": [
-      "actress",
-      "stand-up comedian"
+      "actress"
     ],
     "totalAppearances": 3,
     "eras": [
@@ -156,100 +80,60 @@
     ]
   },
   {
-    "id": "kristen-schaal",
-    "name": "Kristen Schaal",
+    "id": "molly-shannon",
+    "name": "Molly Shannon",
     "professions": [
       "actress",
-      "comedian",
-      "writer"
+      "comedian"
     ],
-    "totalAppearances": 8,
-    "eras": [
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2010-12-21",
-    "lastAppearance": "2021-09-06",
-    "appearanceYears": [
-      "2010",
-      "2012",
-      "2015",
-      "2017",
-      "2018",
-      "2020",
-      "2021"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2010-12-21",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2021-09-06",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2021-09-06",
-        "word": "relieved",
-        "sentiment": "warm"
-      }
-    ]
-  },
-  {
-    "id": "joel-mchale",
-    "name": "Joel McHale",
-    "professions": [
-      "actor",
-      "comedian",
-      "television presenter"
-    ],
-    "totalAppearances": 18,
+    "totalAppearances": 17,
     "eras": [
       "late-night-nbc",
-      "tonight-show",
       "tbs-conan",
       "podcast"
     ],
-    "firstAppearance": "2008-07-15",
-    "lastAppearance": "2021-08-30",
+    "firstAppearance": "1996-02-28",
+    "lastAppearance": "2026-07-20",
     "appearanceYears": [
-      "2008",
-      "2009",
-      "2010",
-      "2011",
-      "2012",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2003",
+      "2007",
+      "2013",
       "2014",
-      "2015",
       "2016",
       "2018",
-      "2020",
-      "2021"
+      "2022",
+      "2026"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "2008-07-15",
-        "order": 1
-      },
-      "tonight-show": {
-        "date": "2009-06-04",
+        "date": "1996-02-28",
         "order": 1
       },
       "tbs-conan": {
-        "date": "2010-12-01",
-        "order": 0
+        "date": "2013-04-08",
+        "order": 1
       },
       "podcast": {
-        "date": "2021-08-30",
+        "date": "2022-04-25",
         "order": 999
       }
     },
     "coldOpens": [
       {
-        "date": "2021-08-30",
-        "word": "a little anxious, but good",
-        "sentiment": "affectionate-absurd"
+        "date": "2022-04-25",
+        "word": "proud",
+        "sentiment": "warm"
+      },
+      {
+        "date": "2026-07-20",
+        "word": "proud and cool",
+        "sentiment": "neutral"
       }
     ]
   },
@@ -257,7 +141,7 @@
     "id": "patton-oswalt",
     "name": "Patton Oswalt",
     "professions": [
-      "stand-up comedian",
+      "comedian",
       "actor"
     ],
     "totalAppearances": 42,
@@ -408,6 +292,7 @@
     "id": "david-spade",
     "name": "David Spade",
     "professions": [
+      "stand-up comedian",
       "actor",
       "podcaster"
     ],
@@ -460,56 +345,164 @@
     ]
   },
   {
-    "id": "larry-david",
-    "name": "Larry David",
+    "id": "eric-idle",
+    "name": "Eric Idle",
     "professions": [
-      "comedian",
-      "writer",
       "actor",
-      "television producer"
+      "comedian",
+      "songwriter",
+      "musician",
+      "screenwriter",
+      "playwright"
     ],
     "totalAppearances": 6,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "1996-10-11",
+    "lastAppearance": "2024-11-11",
+    "appearanceYears": [
+      "1996",
+      "1999",
+      "2000",
+      "2016",
+      "2019",
+      "2024"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1996-10-11",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2016-11-10",
+        "order": 1
+      },
+      "podcast": {
+        "date": "2019-11-25",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2019-11-25",
+        "word": "moderately aroused",
+        "sentiment": "neutral"
+      },
+      {
+        "date": "2024-11-11",
+        "word": "horny",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "tom-hanks",
+    "name": "Tom Hanks",
+    "professions": [
+      "actor",
+      "filmmaker"
+    ],
+    "totalAppearances": 13,
     "eras": [
       "late-night-nbc",
       "tonight-show",
       "tbs-conan",
       "podcast"
     ],
-    "firstAppearance": "1999-10-05",
-    "lastAppearance": "2024-02-12",
+    "firstAppearance": "1998-12-10",
+    "lastAppearance": "2024-11-04",
     "appearanceYears": [
-      "1999",
+      "1998",
       "2000",
+      "2002",
+      "2004",
+      "2006",
       "2009",
-      "2012",
+      "2010",
+      "2011",
+      "2013",
+      "2019",
       "2020",
       "2024"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1999-10-05",
-        "order": 1
+        "date": "1998-12-10",
+        "order": 0
       },
       "tonight-show": {
-        "date": "2009-06-16",
+        "date": "2009-06-02",
         "order": 0
       },
       "tbs-conan": {
-        "date": "2012-04-11",
+        "date": "2010-11-09",
         "order": 0
       },
       "podcast": {
-        "date": "2024-02-12",
+        "date": "2020-07-07",
         "order": 999
       }
     },
     "coldOpens": [
       {
-        "date": "2024-02-12",
-        "word": "so-so",
+        "date": "2020-07-07",
+        "word": "grand",
+        "sentiment": "neutral"
+      },
+      {
+        "date": "2024-11-04",
+        "word": "blank",
         "sentiment": "neutral"
       }
     ]
+  },
+  {
+    "id": "kelsey-grammer",
+    "name": "Kelsey Grammer",
+    "professions": [
+      "actor",
+      "comedian",
+      "producer"
+    ],
+    "totalAppearances": 12,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan"
+    ],
+    "firstAppearance": "1993-11-29",
+    "lastAppearance": "2018-05-23",
+    "appearanceYears": [
+      "1993",
+      "1996",
+      "1998",
+      "2000",
+      "2001",
+      "2003",
+      "2004",
+      "2007",
+      "2009",
+      "2012",
+      "2018"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1993-11-29",
+        "order": 0
+      },
+      "tonight-show": {
+        "date": "2009-11-09",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2012-09-10",
+        "order": 0
+      }
+    },
+    "coldOpens": []
   },
   {
     "id": "norm-macdonald",
@@ -553,73 +546,6 @@
       }
     },
     "coldOpens": []
-  },
-  {
-    "id": "zach-galifianakis",
-    "name": "Zach Galifianakis",
-    "professions": [
-      "comedian",
-      "actor",
-      "writer"
-    ],
-    "totalAppearances": 14,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2000-08-08",
-    "lastAppearance": "2026-05-04",
-    "appearanceYears": [
-      "2000",
-      "2001",
-      "2002",
-      "2005",
-      "2009",
-      "2011",
-      "2013",
-      "2016",
-      "2018",
-      "2019",
-      "2022",
-      "2026"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2000-08-08",
-        "order": 0
-      },
-      "tonight-show": {
-        "date": "2009-07-23",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2011-05-16",
-        "order": 0
-      },
-      "podcast": {
-        "date": "2019-10-28",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2019-10-28",
-        "word": "cautious",
-        "sentiment": "neutral"
-      },
-      {
-        "date": "2022-01-10",
-        "word": "sincere",
-        "sentiment": "neutral"
-      },
-      {
-        "date": "2026-05-04",
-        "word": "Zach Galifianakis",
-        "sentiment": "affectionate-absurd"
-      }
-    ]
   },
   {
     "id": "adam-sandler",
@@ -806,9 +732,7 @@
     "id": "matt-damon",
     "name": "Matt Damon",
     "professions": [
-      "actor",
-      "film producer",
-      "screenwriter"
+      "actor"
     ],
     "totalAppearances": 5,
     "eras": [
@@ -956,9 +880,7 @@
   {
     "id": "don-cheadle",
     "name": "Don Cheadle",
-    "professions": [
-      "actor"
-    ],
+    "professions": [],
     "totalAppearances": 10,
     "eras": [
       "late-night-nbc",
@@ -1102,53 +1024,46 @@
     ]
   },
   {
-    "id": "molly-shannon",
-    "name": "Molly Shannon",
+    "id": "david-sedaris",
+    "name": "David Sedaris",
     "professions": [
-      "actress",
-      "comedian"
+      "humorist",
+      "comedian",
+      "author",
+      "radio contributor"
     ],
-    "totalAppearances": 16,
+    "totalAppearances": 4,
     "eras": [
       "late-night-nbc",
-      "tbs-conan",
       "podcast"
     ],
-    "firstAppearance": "1996-02-28",
-    "lastAppearance": "2022-04-25",
+    "firstAppearance": "1994-07-13",
+    "lastAppearance": "2022-06-20",
     "appearanceYears": [
-      "1996",
+      "1994",
       "1997",
-      "1998",
-      "1999",
-      "2000",
-      "2001",
-      "2003",
-      "2007",
-      "2013",
-      "2014",
-      "2016",
-      "2018",
+      "2019",
       "2022"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1996-02-28",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2013-04-08",
+        "date": "1994-07-13",
         "order": 1
       },
       "podcast": {
-        "date": "2022-04-25",
+        "date": "2019-02-04",
         "order": 999
       }
     },
     "coldOpens": [
       {
-        "date": "2022-04-25",
-        "word": "proud",
+        "date": "2019-02-04",
+        "word": "apprehensive",
+        "sentiment": "neutral"
+      },
+      {
+        "date": "2022-06-20",
+        "word": "fantastic",
         "sentiment": "warm"
       }
     ]
@@ -1354,7 +1269,6 @@
     "id": "john-leguizamo",
     "name": "John Leguizamo",
     "professions": [
-      "stand-up comedian",
       "actor",
       "film producer"
     ],
@@ -1503,8 +1417,7 @@
     "professions": [
       "actress",
       "comedian",
-      "writer",
-      "producer"
+      "writer"
     ],
     "totalAppearances": 14,
     "eras": [
@@ -1597,6 +1510,70 @@
     ]
   },
   {
+    "id": "will-ferrell",
+    "name": "Will Ferrell",
+    "professions": [
+      "actor",
+      "comedian",
+      "writer"
+    ],
+    "totalAppearances": 28,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "1997-06-26",
+    "lastAppearance": "2020-07-06",
+    "appearanceYears": [
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2015",
+      "2017",
+      "2018",
+      "2020"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1997-06-26",
+        "order": 1
+      },
+      "tonight-show": {
+        "date": "2009-06-01",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2011-05-02",
+        "order": 0
+      },
+      "podcast": {
+        "date": "2018-11-19",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2018-11-19",
+        "word": "awkward",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
     "id": "louis-ck",
     "name": "Louis CK",
     "professions": [
@@ -1651,7 +1628,8 @@
     "professions": [
       "actress",
       "comedian",
-      "screenwriter"
+      "screenwriter",
+      "producer"
     ],
     "totalAppearances": 8,
     "eras": [
@@ -1782,37 +1760,66 @@
     ]
   },
   {
-    "id": "alec-baldwin",
-    "name": "Alec Baldwin",
+    "id": "betty-white",
+    "name": "Betty White",
     "professions": [
-      "actor",
-      "film producer"
+      "actress",
+      "comedian"
     ],
-    "totalAppearances": 10,
+    "totalAppearances": 4,
     "eras": [
       "late-night-nbc",
       "tbs-conan"
     ],
-    "firstAppearance": "1993-12-22",
-    "lastAppearance": "2020-09-17",
+    "firstAppearance": "1995-09-05",
+    "lastAppearance": "2015-05-18",
     "appearanceYears": [
-      "1993",
-      "1997",
-      "1998",
+      "1995",
+      "2012",
+      "2014",
+      "2015"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1995-09-05",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2012-02-28",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "christopher-walken",
+    "name": "Christopher Walken",
+    "professions": [
+      "actor"
+    ],
+    "totalAppearances": 9,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "2000-01-04",
+    "lastAppearance": "2020-12-16",
+    "appearanceYears": [
+      "2000",
+      "2001",
       "2003",
       "2004",
       "2006",
-      "2011",
-      "2017",
+      "2007",
       "2020"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1993-12-22",
+        "date": "2000-01-04",
         "order": 0
       },
       "tbs-conan": {
-        "date": "2011-12-05",
+        "date": "2020-12-16",
         "order": 0
       }
     },
@@ -2096,12 +2103,204 @@
     ]
   },
   {
+    "id": "jim-gaffigan",
+    "name": "Jim Gaffigan",
+    "professions": [
+      "stand-up comedian",
+      "actor",
+      "writer",
+      "producer"
+    ],
+    "totalAppearances": 33,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2001-01-10",
+    "lastAppearance": "2024-11-25",
+    "appearanceYears": [
+      "2001",
+      "2002",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2012",
+      "2013",
+      "2015",
+      "2016",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2024"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2001-01-10",
+        "order": 1
+      },
+      "tonight-show": {
+        "date": "2009-06-11",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2012-04-12",
+        "order": 1
+      },
+      "podcast": {
+        "date": "2020-02-24",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2020-02-24",
+        "word": "like Nikki Glaser felt",
+        "sentiment": "affectionate-absurd"
+      },
+      {
+        "date": "2021-12-20",
+        "word": "ecstatic",
+        "sentiment": "neutral"
+      },
+      {
+        "date": "2024-11-25",
+        "word": "privileged",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "bj-novak",
+    "name": "BJ Novak",
+    "professions": [],
+    "totalAppearances": 6,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2004-03-11",
+    "lastAppearance": "2022-08-01",
+    "appearanceYears": [
+      "2004",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2022"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2004-03-11",
+        "order": 2
+      },
+      "tonight-show": {
+        "date": "2009-08-12",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2010-11-15",
+        "order": 0
+      },
+      "podcast": {
+        "date": "2022-08-01",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2022-08-01",
+        "word": "excited, but cautious",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "chris-odonnell",
+    "name": "Chris O'Donnell",
+    "professions": [
+      "actor"
+    ],
+    "totalAppearances": 7,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan"
+    ],
+    "firstAppearance": "1993-09-14",
+    "lastAppearance": "2017-04-19",
+    "appearanceYears": [
+      "1993",
+      "1995",
+      "1999",
+      "2009",
+      "2011",
+      "2014",
+      "2017"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1993-09-14",
+        "order": 1
+      },
+      "tonight-show": {
+        "date": "2009-10-28",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2011-04-11",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "ike-barinholtz",
+    "name": "Ike Barinholtz",
+    "professions": [],
+    "totalAppearances": 5,
+    "eras": [
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2013-09-11",
+    "lastAppearance": "2026-04-27",
+    "appearanceYears": [
+      "2013",
+      "2014",
+      "2015",
+      "2018",
+      "2026"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2013-09-11",
+        "order": 1
+      },
+      "podcast": {
+        "date": "2026-04-27",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2026-04-27",
+        "word": "bullish",
+        "sentiment": "warm"
+      }
+    ]
+  },
+  {
     "id": "lisa-kudrow",
     "name": "Lisa Kudrow",
-    "professions": [
-      "actress",
-      "writer"
-    ],
+    "professions": [],
     "totalAppearances": 27,
     "eras": [
       "late-night-nbc",
@@ -2425,6 +2624,45 @@
     ]
   },
   {
+    "id": "chelsea-peretti",
+    "name": "Chelsea Peretti",
+    "professions": [
+      "comedian",
+      "actress",
+      "writer"
+    ],
+    "totalAppearances": 4,
+    "eras": [
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2014-09-25",
+    "lastAppearance": "2024-03-04",
+    "appearanceYears": [
+      "2014",
+      "2015",
+      "2018",
+      "2024"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2014-09-25",
+        "order": 1
+      },
+      "podcast": {
+        "date": "2024-03-04",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2024-03-04",
+        "word": "excited",
+        "sentiment": "warm"
+      }
+    ]
+  },
+  {
     "id": "liam-neeson",
     "name": "Liam Neeson",
     "professions": [
@@ -2471,8 +2709,7 @@
     "id": "neil-young",
     "name": "Neil Young",
     "professions": [
-      "singer",
-      "songwriter"
+      "singer-songwriter"
     ],
     "totalAppearances": 7,
     "eras": [
@@ -2509,8 +2746,7 @@
     "id": "luke-wilson",
     "name": "Luke Wilson",
     "professions": [
-      "actor",
-      "director"
+      "actor"
     ],
     "totalAppearances": 12,
     "eras": [
@@ -2639,51 +2875,6 @@
         "sentiment": "affectionate-absurd"
       }
     ]
-  },
-  {
-    "id": "megan-mullally",
-    "name": "Megan Mullally",
-    "professions": [
-      "actress",
-      "comedian",
-      "singer"
-    ],
-    "totalAppearances": 15,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan"
-    ],
-    "firstAppearance": "1999-04-16",
-    "lastAppearance": "2019-10-24",
-    "appearanceYears": [
-      "1999",
-      "2002",
-      "2004",
-      "2006",
-      "2007",
-      "2008",
-      "2009",
-      "2012",
-      "2013",
-      "2016",
-      "2019"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1999-04-16",
-        "order": 1
-      },
-      "tonight-show": {
-        "date": "2009-12-15",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2012-03-01",
-        "order": 1
-      }
-    },
-    "coldOpens": []
   },
   {
     "id": "claire-danes",
@@ -2910,44 +3101,61 @@
     ]
   },
   {
-    "id": "mary-lynn-rajskub",
-    "name": "Mary Lynn Rajskub",
+    "id": "dax-shepard",
+    "name": "Dax Shepard",
     "professions": [
-      "actress",
-      "comedian"
+      "actor",
+      "comedian",
+      "filmmaker"
     ],
-    "totalAppearances": 8,
+    "totalAppearances": 17,
     "eras": [
       "late-night-nbc",
       "tonight-show",
-      "tbs-conan"
+      "tbs-conan",
+      "podcast"
     ],
-    "firstAppearance": "2006-02-28",
-    "lastAppearance": "2014-08-05",
+    "firstAppearance": "2004-08-11",
+    "lastAppearance": "2019-11-20",
     "appearanceYears": [
+      "2004",
       "2006",
-      "2007",
-      "2009",
+      "2008",
       "2010",
+      "2011",
       "2012",
       "2013",
-      "2014"
+      "2014",
+      "2016",
+      "2017",
+      "2018",
+      "2019"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "2006-02-28",
-        "order": 1
+        "date": "2004-08-11",
+        "order": 0
       },
       "tonight-show": {
-        "date": "2009-08-07",
+        "date": "2010-01-11",
         "order": 1
       },
       "tbs-conan": {
-        "date": "2010-12-20",
+        "date": "2011-01-17",
         "order": 1
+      },
+      "podcast": {
+        "date": "2018-12-10",
+        "order": 999
       }
     },
-    "coldOpens": []
+    "coldOpens": [
+      {
+        "date": "2018-12-10",
+        "word": "very optimistic",
+        "sentiment": "neutral"
+      }
+    ]
   },
   {
     "id": "will-arnett",
@@ -3088,6 +3296,104 @@
       {
         "date": "2025-01-13",
         "word": "utterly drenched and purged",
+        "sentiment": "affectionate-absurd"
+      }
+    ]
+  },
+  {
+    "id": "kristen-schaal",
+    "name": "Kristen Schaal",
+    "professions": [
+      "actress",
+      "comedian",
+      "writer"
+    ],
+    "totalAppearances": 8,
+    "eras": [
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2010-12-21",
+    "lastAppearance": "2021-09-06",
+    "appearanceYears": [
+      "2010",
+      "2012",
+      "2015",
+      "2017",
+      "2018",
+      "2020",
+      "2021"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2010-12-21",
+        "order": 1
+      },
+      "podcast": {
+        "date": "2021-09-06",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2021-09-06",
+        "word": "relieved",
+        "sentiment": "warm"
+      }
+    ]
+  },
+  {
+    "id": "joel-mchale",
+    "name": "Joel McHale",
+    "professions": [
+      "actor",
+      "comedian",
+      "television presenter"
+    ],
+    "totalAppearances": 18,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2008-07-15",
+    "lastAppearance": "2021-08-30",
+    "appearanceYears": [
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2014",
+      "2015",
+      "2016",
+      "2018",
+      "2020",
+      "2021"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2008-07-15",
+        "order": 1
+      },
+      "tonight-show": {
+        "date": "2009-06-04",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2010-12-01",
+        "order": 0
+      },
+      "podcast": {
+        "date": "2021-08-30",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2021-08-30",
+        "word": "a little anxious, but good",
         "sentiment": "affectionate-absurd"
       }
     ]
@@ -3301,185 +3607,174 @@
     ]
   },
   {
-    "id": "carol-burnett",
-    "name": "Carol Burnett",
+    "id": "stephen-merchant",
+    "name": "Stephen Merchant",
     "professions": [
       "comedian",
-      "actress",
-      "singer"
+      "writer",
+      "director",
+      "actor"
     ],
     "totalAppearances": 4,
     "eras": [
       "tbs-conan",
       "podcast"
     ],
-    "firstAppearance": "2012-02-09",
-    "lastAppearance": "2024-04-01",
-    "appearanceYears": [
-      "2012",
-      "2016",
-      "2018",
-      "2024"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2012-02-09",
-        "order": 0
-      },
-      "podcast": {
-        "date": "2024-04-01",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2024-04-01",
-        "word": "so much love",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
-    "id": "melissa-mccarthy",
-    "name": "Melissa McCarthy",
-    "professions": [
-      "actress",
-      "comedian",
-      "producer"
-    ],
-    "totalAppearances": 4,
-    "eras": [
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2011-05-24",
-    "lastAppearance": "2021-09-20",
+    "firstAppearance": "2011-02-24",
+    "lastAppearance": "2022-04-18",
     "appearanceYears": [
       "2011",
+      "2012",
       "2013",
-      "2016",
-      "2021"
+      "2022"
     ],
     "firstByEra": {
       "tbs-conan": {
-        "date": "2011-05-24",
+        "date": "2011-02-24",
         "order": 1
       },
       "podcast": {
-        "date": "2021-09-20",
+        "date": "2022-04-18",
         "order": 999
       }
     },
     "coldOpens": [
       {
-        "date": "2021-09-20",
-        "word": "just delightful",
+        "date": "2022-04-18",
+        "word": "overqualified",
         "sentiment": "neutral"
       }
     ]
   },
   {
-    "id": "bob-saget",
-    "name": "Bob Saget",
+    "id": "harry-shearer",
+    "name": "Harry Shearer",
+    "professions": [
+      "actor",
+      "comedian",
+      "musician",
+      "radio host",
+      "writer",
+      "producer"
+    ],
+    "totalAppearances": 10,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1994-06-20",
+    "lastAppearance": "2007-07-31",
+    "appearanceYears": [
+      "1994",
+      "1995",
+      "1996",
+      "2002",
+      "2006",
+      "2007"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1994-06-20",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "louie-anderson",
+    "name": "Louie Anderson",
     "professions": [
       "stand-up comedian",
       "actor",
-      "director",
-      "television host"
+      "author",
+      "game show host"
     ],
-    "totalAppearances": 12,
+    "totalAppearances": 8,
     "eras": [
       "late-night-nbc",
       "tbs-conan"
     ],
-    "firstAppearance": "1995-05-04",
-    "lastAppearance": "2014-05-22",
+    "firstAppearance": "1995-09-07",
+    "lastAppearance": "2021-03-16",
     "appearanceYears": [
       "1995",
-      "1996",
-      "2005",
-      "2006",
-      "2007",
-      "2008",
-      "2010",
-      "2013",
-      "2014"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-05-04",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2010-11-24",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "kevin-james",
-    "name": "Kevin James",
-    "professions": [
-      "actor",
-      "comedian"
-    ],
-    "totalAppearances": 6,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan"
-    ],
-    "firstAppearance": "1999-04-29",
-    "lastAppearance": "2021-02-25",
-    "appearanceYears": [
+      "1997",
       "1999",
-      "2000",
-      "2003",
-      "2005",
-      "2007",
+      "2017",
+      "2018",
+      "2019",
       "2021"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1999-04-29",
+        "date": "1995-09-07",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2017-02-13",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "jon-cryer",
+    "name": "Jon Cryer",
+    "professions": [
+      "actor"
+    ],
+    "totalAppearances": 8,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "1995-09-08",
+    "lastAppearance": "2015-02-18",
+    "appearanceYears": [
+      "1995",
+      "1996",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1995-09-08",
         "order": 1
       },
       "tbs-conan": {
-        "date": "2021-02-25",
+        "date": "2011-01-26",
         "order": 0
       }
     },
     "coldOpens": []
   },
   {
-    "id": "nick-swardson",
-    "name": "Nick Swardson",
+    "id": "edie-falco",
+    "name": "Edie Falco",
     "professions": [],
-    "totalAppearances": 9,
+    "totalAppearances": 4,
     "eras": [
       "late-night-nbc",
       "tbs-conan"
     ],
-    "firstAppearance": "2001-06-20",
-    "lastAppearance": "2018-03-27",
+    "firstAppearance": "2001-03-02",
+    "lastAppearance": "2013-05-07",
     "appearanceYears": [
       "2001",
+      "2004",
       "2006",
-      "2011",
-      "2013",
-      "2015",
-      "2016",
-      "2017",
-      "2018"
+      "2013"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "2001-06-20",
-        "order": 2
+        "date": "2001-03-02",
+        "order": 0
       },
       "tbs-conan": {
-        "date": "2011-02-07",
-        "order": 1
+        "date": "2013-05-07",
+        "order": 0
       }
     },
     "coldOpens": []
@@ -3519,6 +3814,73 @@
       {
         "date": "2026-05-25",
         "word": "so excited and amazed",
+        "sentiment": "affectionate-absurd"
+      }
+    ]
+  },
+  {
+    "id": "zach-galifianakis",
+    "name": "Zach Galifianakis",
+    "professions": [
+      "comedian",
+      "actor",
+      "writer"
+    ],
+    "totalAppearances": 14,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2000-08-08",
+    "lastAppearance": "2026-05-04",
+    "appearanceYears": [
+      "2000",
+      "2001",
+      "2002",
+      "2005",
+      "2009",
+      "2011",
+      "2013",
+      "2016",
+      "2018",
+      "2019",
+      "2022",
+      "2026"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2000-08-08",
+        "order": 0
+      },
+      "tonight-show": {
+        "date": "2009-07-23",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2011-05-16",
+        "order": 0
+      },
+      "podcast": {
+        "date": "2019-10-28",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2019-10-28",
+        "word": "cautious",
+        "sentiment": "neutral"
+      },
+      {
+        "date": "2022-01-10",
+        "word": "sincere",
+        "sentiment": "neutral"
+      },
+      {
+        "date": "2026-05-04",
+        "word": "Zach Galifianakis",
         "sentiment": "affectionate-absurd"
       }
     ]
@@ -3620,75 +3982,6 @@
     ]
   },
   {
-    "id": "zach-woods",
-    "name": "Zach Woods",
-    "professions": [
-      "actor",
-      "comedian"
-    ],
-    "totalAppearances": 5,
-    "eras": [
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2015-04-28",
-    "lastAppearance": "2024-03-11",
-    "appearanceYears": [
-      "2015",
-      "2017",
-      "2018",
-      "2019",
-      "2024"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2015-04-28",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2024-03-11",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2024-03-11",
-        "word": "“pick me”",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
-    "id": "rob-corddry",
-    "name": "Rob Corddry",
-    "professions": [],
-    "totalAppearances": 5,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan"
-    ],
-    "firstAppearance": "2007-03-01",
-    "lastAppearance": "2015-04-01",
-    "appearanceYears": [
-      "2007",
-      "2008",
-      "2011",
-      "2012",
-      "2015"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2007-03-01",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2011-06-22",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "elizabeth-banks",
     "name": "Elizabeth Banks",
     "professions": [
@@ -3736,7 +4029,7 @@
     "name": "Ken Burns",
     "professions": [
       "filmmaker",
-      "documentarian"
+      "documentary director"
     ],
     "totalAppearances": 3,
     "eras": [
@@ -3823,6 +4116,7 @@
     "id": "sebastian-maniscalco",
     "name": "Sebastian Maniscalco",
     "professions": [
+      "stand-up comedian",
       "actor"
     ],
     "totalAppearances": 3,
@@ -4028,51 +4322,6 @@
     ]
   },
   {
-    "id": "david-sedaris",
-    "name": "David Sedaris",
-    "professions": [
-      "humorist",
-      "comedian",
-      "author",
-      "radio contributor"
-    ],
-    "totalAppearances": 4,
-    "eras": [
-      "late-night-nbc",
-      "podcast"
-    ],
-    "firstAppearance": "1994-07-13",
-    "lastAppearance": "2022-06-20",
-    "appearanceYears": [
-      "1994",
-      "1997",
-      "2019",
-      "2022"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1994-07-13",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2019-02-04",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2019-02-04",
-        "word": "apprehensive",
-        "sentiment": "neutral"
-      },
-      {
-        "date": "2022-06-20",
-        "word": "fantastic",
-        "sentiment": "warm"
-      }
-    ]
-  },
-  {
     "id": "tig-notaro",
     "name": "Tig Notaro",
     "professions": [],
@@ -4199,6 +4448,30 @@
     ]
   },
   {
+    "id": "john-goodman",
+    "name": "John Goodman",
+    "professions": [],
+    "totalAppearances": 4,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1993-09-13",
+    "lastAppearance": "1998-02-06",
+    "appearanceYears": [
+      "1993",
+      "1994",
+      "1996",
+      "1998"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1993-09-13",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "julia-sweeney",
     "name": "Julia Sweeney",
     "professions": [
@@ -4222,6 +4495,68 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1993-11-05",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "chris-rock",
+    "name": "Chris Rock",
+    "professions": [],
+    "totalAppearances": 14,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1994-06-16",
+    "lastAppearance": "2007-03-13",
+    "appearanceYears": [
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2007"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1994-06-16",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "dane-cook",
+    "name": "Dane Cook",
+    "professions": [],
+    "totalAppearances": 5,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show"
+    ],
+    "firstAppearance": "2005-12-02",
+    "lastAppearance": "2009-06-10",
+    "appearanceYears": [
+      "2005",
+      "2006",
+      "2007",
+      "2009"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2005-12-02",
+        "order": 0
+      },
+      "tonight-show": {
+        "date": "2009-06-10",
         "order": 0
       }
     },
@@ -4438,6 +4773,40 @@
         "date": "2024-12-09",
         "word": "ecstatic",
         "sentiment": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "billy-crystal",
+    "name": "Billy Crystal",
+    "professions": [],
+    "totalAppearances": 3,
+    "eras": [
+      "late-night-nbc",
+      "podcast"
+    ],
+    "firstAppearance": "1997-05-09",
+    "lastAppearance": "2024-10-28",
+    "appearanceYears": [
+      "1997",
+      "2001",
+      "2024"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1997-05-09",
+        "order": 0
+      },
+      "podcast": {
+        "date": "2024-10-28",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2024-10-28",
+        "word": "not sure",
+        "sentiment": "deflecting"
       }
     ]
   },
@@ -4839,79 +5208,6 @@
     ]
   },
   {
-    "id": "jim-gaffigan",
-    "name": "Jim Gaffigan",
-    "professions": [
-      "stand-up comedian",
-      "actor",
-      "writer",
-      "producer"
-    ],
-    "totalAppearances": 33,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2001-01-10",
-    "lastAppearance": "2024-11-25",
-    "appearanceYears": [
-      "2001",
-      "2002",
-      "2004",
-      "2005",
-      "2006",
-      "2007",
-      "2008",
-      "2009",
-      "2012",
-      "2013",
-      "2015",
-      "2016",
-      "2018",
-      "2019",
-      "2020",
-      "2021",
-      "2024"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2001-01-10",
-        "order": 1
-      },
-      "tonight-show": {
-        "date": "2009-06-11",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2012-04-12",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2020-02-24",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2020-02-24",
-        "word": "like Nikki Glaser felt",
-        "sentiment": "affectionate-absurd"
-      },
-      {
-        "date": "2021-12-20",
-        "word": "ecstatic",
-        "sentiment": "neutral"
-      },
-      {
-        "date": "2024-11-25",
-        "word": "privileged",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
     "id": "josh-brolin",
     "name": "Josh Brolin",
     "professions": [],
@@ -4947,121 +5243,6 @@
       {
         "date": "2024-11-18",
         "word": "so Don Cheadle",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
-    "id": "eric-idle",
-    "name": "Eric Idle",
-    "professions": [
-      "actor",
-      "comedian",
-      "songwriter",
-      "musician",
-      "screenwriter",
-      "playwright"
-    ],
-    "totalAppearances": 6,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "1996-10-11",
-    "lastAppearance": "2024-11-11",
-    "appearanceYears": [
-      "1996",
-      "1999",
-      "2000",
-      "2016",
-      "2019",
-      "2024"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1996-10-11",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2016-11-10",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2019-11-25",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2019-11-25",
-        "word": "moderately aroused",
-        "sentiment": "neutral"
-      },
-      {
-        "date": "2024-11-11",
-        "word": "horny",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
-    "id": "tom-hanks",
-    "name": "Tom Hanks",
-    "professions": [
-      "actor",
-      "filmmaker"
-    ],
-    "totalAppearances": 13,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "1998-12-10",
-    "lastAppearance": "2024-11-04",
-    "appearanceYears": [
-      "1998",
-      "2000",
-      "2002",
-      "2004",
-      "2006",
-      "2009",
-      "2010",
-      "2011",
-      "2013",
-      "2019",
-      "2020",
-      "2024"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1998-12-10",
-        "order": 0
-      },
-      "tonight-show": {
-        "date": "2009-06-02",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2010-11-09",
-        "order": 0
-      },
-      "podcast": {
-        "date": "2020-07-07",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2020-07-07",
-        "word": "grand",
-        "sentiment": "neutral"
-      },
-      {
-        "date": "2024-11-04",
-        "word": "blank",
         "sentiment": "neutral"
       }
     ]
@@ -5194,6 +5375,58 @@
       {
         "date": "2024-03-18",
         "word": "mildly amused",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "larry-david",
+    "name": "Larry David",
+    "professions": [
+      "comedian",
+      "writer",
+      "actor",
+      "television producer"
+    ],
+    "totalAppearances": 6,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "1999-10-05",
+    "lastAppearance": "2024-02-12",
+    "appearanceYears": [
+      "1999",
+      "2000",
+      "2009",
+      "2012",
+      "2020",
+      "2024"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1999-10-05",
+        "order": 1
+      },
+      "tonight-show": {
+        "date": "2009-06-16",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2012-04-11",
+        "order": 0
+      },
+      "podcast": {
+        "date": "2024-02-12",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2024-02-12",
+        "word": "so-so",
         "sentiment": "neutral"
       }
     ]
@@ -5533,53 +5766,6 @@
       {
         "date": "2022-08-08",
         "word": "tan",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
-    "id": "bj-novak",
-    "name": "BJ Novak",
-    "professions": [],
-    "totalAppearances": 6,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2004-03-11",
-    "lastAppearance": "2022-08-01",
-    "appearanceYears": [
-      "2004",
-      "2007",
-      "2008",
-      "2009",
-      "2010",
-      "2022"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2004-03-11",
-        "order": 2
-      },
-      "tonight-show": {
-        "date": "2009-08-12",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2010-11-15",
-        "order": 0
-      },
-      "podcast": {
-        "date": "2022-08-01",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2022-08-01",
-        "word": "excited, but cautious",
         "sentiment": "neutral"
       }
     ]
@@ -6535,114 +6721,6 @@
     ]
   },
   {
-    "id": "chris-odonnell",
-    "name": "Chris O'Donnell",
-    "professions": [
-      "actor"
-    ],
-    "totalAppearances": 7,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan"
-    ],
-    "firstAppearance": "1993-09-14",
-    "lastAppearance": "2017-04-19",
-    "appearanceYears": [
-      "1993",
-      "1995",
-      "1999",
-      "2009",
-      "2011",
-      "2014",
-      "2017"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1993-09-14",
-        "order": 1
-      },
-      "tonight-show": {
-        "date": "2009-10-28",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2011-04-11",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "kelsey-grammer",
-    "name": "Kelsey Grammer",
-    "professions": [
-      "actor",
-      "comedian",
-      "producer"
-    ],
-    "totalAppearances": 12,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan"
-    ],
-    "firstAppearance": "1993-11-29",
-    "lastAppearance": "2018-05-23",
-    "appearanceYears": [
-      "1993",
-      "1996",
-      "1998",
-      "2000",
-      "2001",
-      "2003",
-      "2004",
-      "2007",
-      "2009",
-      "2012",
-      "2018"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1993-11-29",
-        "order": 0
-      },
-      "tonight-show": {
-        "date": "2009-11-09",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2012-09-10",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "robert-klein",
-    "name": "Robert Klein",
-    "professions": [],
-    "totalAppearances": 5,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1993-12-23",
-    "lastAppearance": "1996-04-23",
-    "appearanceYears": [
-      "1993",
-      "1994",
-      "1995",
-      "1996"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1993-12-23",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "michael-moore",
     "name": "Michael Moore",
     "professions": [
@@ -6808,33 +6886,6 @@
       },
       "tbs-conan": {
         "date": "2011-02-28",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "jonathan-katz",
-    "name": "Jonathan Katz",
-    "professions": [],
-    "totalAppearances": 7,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1994-12-21",
-    "lastAppearance": "2007-02-07",
-    "appearanceYears": [
-      "1994",
-      "1996",
-      "1997",
-      "1998",
-      "1999",
-      "2000",
-      "2007"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1994-12-21",
         "order": 1
       }
     },
@@ -7304,29 +7355,29 @@
     "coldOpens": []
   },
   {
-    "id": "matt-walsh",
-    "name": "Matt Walsh",
+    "id": "roseanne-barr",
+    "name": "Roseanne Barr",
     "professions": [],
     "totalAppearances": 3,
     "eras": [
       "late-night-nbc",
       "tbs-conan"
     ],
-    "firstAppearance": "2002-05-22",
-    "lastAppearance": "2014-07-17",
+    "firstAppearance": "2003-02-05",
+    "lastAppearance": "2016-06-16",
     "appearanceYears": [
-      "2002",
-      "2012",
-      "2014"
+      "2003",
+      "2011",
+      "2016"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "2002-05-22",
-        "order": 1
+        "date": "2003-02-05",
+        "order": 0
       },
       "tbs-conan": {
-        "date": "2012-05-07",
-        "order": 1
+        "date": "2011-09-13",
+        "order": 0
       }
     },
     "coldOpens": []
@@ -8762,25 +8813,28 @@
     "coldOpens": []
   },
   {
-    "id": "kevin-smith",
-    "name": "Kevin Smith",
+    "id": "rosie-odonnell",
+    "name": "Rosie O'Donnell",
     "professions": [],
-    "totalAppearances": 4,
+    "totalAppearances": 8,
     "eras": [
       "late-night-nbc"
     ],
-    "firstAppearance": "1997-06-17",
-    "lastAppearance": "2006-07-20",
+    "firstAppearance": "1996-06-18",
+    "lastAppearance": "2005-10-11",
     "appearanceYears": [
-      "1997",
+      "1996",
+      "1998",
       "1999",
+      "2000",
       "2001",
-      "2006"
+      "2002",
+      "2005"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1997-06-17",
-        "order": 2
+        "date": "1996-06-18",
+        "order": 0
       }
     },
     "coldOpens": []
@@ -8986,6 +9040,51 @@
       "tbs-conan": {
         "date": "2011-04-21",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "megan-mullally",
+    "name": "Megan Mullally",
+    "professions": [
+      "actress",
+      "comedian",
+      "singer"
+    ],
+    "totalAppearances": 15,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan"
+    ],
+    "firstAppearance": "1999-04-16",
+    "lastAppearance": "2019-10-24",
+    "appearanceYears": [
+      "1999",
+      "2002",
+      "2004",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2012",
+      "2013",
+      "2016",
+      "2019"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1999-04-16",
+        "order": 1
+      },
+      "tonight-show": {
+        "date": "2009-12-15",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2012-03-01",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -9486,6 +9585,57 @@
     "coldOpens": []
   },
   {
+    "id": "gabriel-iglesias",
+    "name": "Gabriel Iglesias",
+    "professions": [],
+    "totalAppearances": 3,
+    "eras": [
+      "tonight-show",
+      "tbs-conan"
+    ],
+    "firstAppearance": "2009-12-02",
+    "lastAppearance": "2014-07-22",
+    "appearanceYears": [
+      "2009",
+      "2011",
+      "2014"
+    ],
+    "firstByEra": {
+      "tonight-show": {
+        "date": "2009-12-02",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2011-01-18",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "jenny-slate",
+    "name": "Jenny Slate",
+    "professions": [],
+    "totalAppearances": 4,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2012-02-02",
+    "lastAppearance": "2019-11-13",
+    "appearanceYears": [
+      "2012",
+      "2014",
+      "2019"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2012-02-02",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "wanda-sykes",
     "name": "Wanda Sykes",
     "professions": [],
@@ -9742,125 +9892,31 @@
     ]
   },
   {
-    "id": "dax-shepard",
-    "name": "Dax Shepard",
-    "professions": [
-      "actor",
-      "comedian",
-      "filmmaker"
-    ],
-    "totalAppearances": 17,
+    "id": "tony-randall",
+    "name": "Tony Randall",
+    "professions": [],
+    "totalAppearances": 11,
     "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan",
-      "podcast"
+      "late-night-nbc"
     ],
-    "firstAppearance": "2004-08-11",
-    "lastAppearance": "2019-11-20",
+    "firstAppearance": "1993-09-13",
+    "lastAppearance": "2001-03-23",
     "appearanceYears": [
-      "2004",
-      "2006",
-      "2008",
-      "2010",
-      "2011",
-      "2012",
-      "2013",
-      "2014",
-      "2016",
-      "2017",
-      "2018",
-      "2019"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2004-08-11",
-        "order": 0
-      },
-      "tonight-show": {
-        "date": "2010-01-11",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2011-01-17",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2018-12-10",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2018-12-10",
-        "word": "very optimistic",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
-    "id": "will-ferrell",
-    "name": "Will Ferrell",
-    "professions": [
-      "actor",
-      "comedian",
-      "writer"
-    ],
-    "totalAppearances": 28,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show",
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "1997-06-26",
-    "lastAppearance": "2020-07-06",
-    "appearanceYears": [
+      "1993",
+      "1994",
+      "1995",
+      "1996",
       "1997",
-      "1998",
       "1999",
-      "2000",
-      "2001",
-      "2002",
-      "2003",
-      "2004",
-      "2005",
-      "2006",
-      "2008",
-      "2009",
-      "2010",
-      "2011",
-      "2012",
-      "2015",
-      "2017",
-      "2018",
-      "2020"
+      "2001"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1997-06-26",
-        "order": 1
-      },
-      "tonight-show": {
-        "date": "2009-06-01",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2011-05-02",
-        "order": 0
-      },
-      "podcast": {
-        "date": "2018-11-19",
-        "order": 999
+        "date": "1993-09-13",
+        "order": 2
       }
     },
-    "coldOpens": [
-      {
-        "date": "2018-11-19",
-        "word": "awkward",
-        "sentiment": "neutral"
-      }
-    ]
+    "coldOpens": []
   },
   {
     "id": "chris-farley",
@@ -9880,6 +9936,29 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1993-10-18",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "jay-thomas",
+    "name": "Jay Thomas",
+    "professions": [],
+    "totalAppearances": 4,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1993-11-26",
+    "lastAppearance": "1996-09-12",
+    "appearanceYears": [
+      "1993",
+      "1994",
+      "1996"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1993-11-26",
         "order": 0
       }
     },
@@ -9933,6 +10012,33 @@
     "coldOpens": []
   },
   {
+    "id": "jim-breuer",
+    "name": "Jim Breuer",
+    "professions": [],
+    "totalAppearances": 10,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1996-01-05",
+    "lastAppearance": "2002-09-24",
+    "appearanceYears": [
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1996-01-05",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "matthew-broderick",
     "name": "Matthew Broderick",
     "professions": [
@@ -9972,6 +10078,32 @@
       "tbs-conan": {
         "date": "2011-11-02",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "jake-johannsen",
+    "name": "Jake Johannsen",
+    "professions": [],
+    "totalAppearances": 6,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1997-02-14",
+    "lastAppearance": "2003-07-08",
+    "appearanceYears": [
+      "1997",
+      "1998",
+      "2000",
+      "2001",
+      "2002",
+      "2003"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1997-02-14",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -10020,29 +10152,6 @@
       "tbs-conan": {
         "date": "2011-06-28",
         "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "andy-dick",
-    "name": "Andy Dick",
-    "professions": [],
-    "totalAppearances": 4,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2000-06-08",
-    "lastAppearance": "2004-03-02",
-    "appearanceYears": [
-      "2000",
-      "2001",
-      "2004"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2000-06-08",
-        "order": 1
       }
     },
     "coldOpens": []
@@ -10215,30 +10324,6 @@
     "coldOpens": []
   },
   {
-    "id": "aries-spears",
-    "name": "Aries Spears",
-    "professions": [],
-    "totalAppearances": 5,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2004-08-06",
-    "lastAppearance": "2008-04-10",
-    "appearanceYears": [
-      "2004",
-      "2006",
-      "2007",
-      "2008"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2004-08-06",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "rainn-wilson",
     "name": "Rainn Wilson",
     "professions": [
@@ -10274,6 +10359,46 @@
       "tbs-conan": {
         "date": "2010-12-07",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "mary-lynn-rajskub",
+    "name": "Mary Lynn Rajskub",
+    "professions": [
+      "actress",
+      "comedian"
+    ],
+    "totalAppearances": 8,
+    "eras": [
+      "late-night-nbc",
+      "tonight-show",
+      "tbs-conan"
+    ],
+    "firstAppearance": "2006-02-28",
+    "lastAppearance": "2014-08-05",
+    "appearanceYears": [
+      "2006",
+      "2007",
+      "2009",
+      "2010",
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2006-02-28",
+        "order": 1
+      },
+      "tonight-show": {
+        "date": "2009-08-07",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2010-12-20",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -10618,6 +10743,31 @@
       },
       "tbs-conan": {
         "date": "2011-03-08",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "adam-pally",
+    "name": "Adam Pally",
+    "professions": [],
+    "totalAppearances": 6,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2012-02-13",
+    "lastAppearance": "2018-05-01",
+    "appearanceYears": [
+      "2012",
+      "2014",
+      "2015",
+      "2017",
+      "2018"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2012-02-13",
         "order": 1
       }
     },
@@ -11133,6 +11283,45 @@
     ]
   },
   {
+    "id": "carol-burnett",
+    "name": "Carol Burnett",
+    "professions": [
+      "comedian",
+      "actress",
+      "singer"
+    ],
+    "totalAppearances": 4,
+    "eras": [
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2012-02-09",
+    "lastAppearance": "2024-04-01",
+    "appearanceYears": [
+      "2012",
+      "2016",
+      "2018",
+      "2024"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2012-02-09",
+        "order": 0
+      },
+      "podcast": {
+        "date": "2024-04-01",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2024-04-01",
+        "word": "so much love",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
     "id": "kaley-cuoco",
     "name": "Kaley Cuoco",
     "professions": [],
@@ -11494,41 +11683,6 @@
     ]
   },
   {
-    "id": "stephen-merchant",
-    "name": "Stephen Merchant",
-    "professions": [],
-    "totalAppearances": 4,
-    "eras": [
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2011-02-24",
-    "lastAppearance": "2022-04-18",
-    "appearanceYears": [
-      "2011",
-      "2012",
-      "2013",
-      "2022"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2011-02-24",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2022-04-18",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2022-04-18",
-        "word": "overqualified",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
     "id": "julie-bowen",
     "name": "Julie Bowen",
     "professions": [],
@@ -11601,6 +11755,45 @@
       {
         "date": "2021-11-08",
         "word": "overly excited",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "melissa-mccarthy",
+    "name": "Melissa McCarthy",
+    "professions": [
+      "actress",
+      "comedian",
+      "producer"
+    ],
+    "totalAppearances": 4,
+    "eras": [
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2011-05-24",
+    "lastAppearance": "2021-09-20",
+    "appearanceYears": [
+      "2011",
+      "2013",
+      "2016",
+      "2021"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2011-05-24",
+        "order": 1
+      },
+      "podcast": {
+        "date": "2021-09-20",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2021-09-20",
+        "word": "just delightful",
         "sentiment": "neutral"
       }
     ]
@@ -11879,6 +12072,43 @@
       "tbs-conan": {
         "date": "2017-05-08",
         "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "alec-baldwin",
+    "name": "Alec Baldwin",
+    "professions": [
+      "actor",
+      "film producer"
+    ],
+    "totalAppearances": 10,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "1993-12-22",
+    "lastAppearance": "2020-09-17",
+    "appearanceYears": [
+      "1993",
+      "1997",
+      "1998",
+      "2003",
+      "2004",
+      "2006",
+      "2011",
+      "2017",
+      "2020"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1993-12-22",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2011-12-05",
+        "order": 0
       }
     },
     "coldOpens": []
@@ -12262,6 +12492,45 @@
     "coldOpens": []
   },
   {
+    "id": "bob-saget",
+    "name": "Bob Saget",
+    "professions": [
+      "stand-up comedian",
+      "actor",
+      "director",
+      "television host"
+    ],
+    "totalAppearances": 12,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "1995-05-04",
+    "lastAppearance": "2014-05-22",
+    "appearanceYears": [
+      "1995",
+      "1996",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2010",
+      "2013",
+      "2014"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1995-05-04",
+        "order": 0
+      },
+      "tbs-conan": {
+        "date": "2010-11-24",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "matthew-perry",
     "name": "Matthew Perry",
     "professions": [
@@ -12363,72 +12632,6 @@
     "coldOpens": []
   },
   {
-    "id": "betty-white",
-    "name": "Betty White",
-    "professions": [],
-    "totalAppearances": 4,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan"
-    ],
-    "firstAppearance": "1995-09-05",
-    "lastAppearance": "2015-05-18",
-    "appearanceYears": [
-      "1995",
-      "2012",
-      "2014",
-      "2015"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-09-05",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2012-02-28",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "louie-anderson",
-    "name": "Louie Anderson",
-    "professions": [
-      "stand-up comedian",
-      "actor",
-      "author",
-      "game show host"
-    ],
-    "totalAppearances": 8,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan"
-    ],
-    "firstAppearance": "1995-09-07",
-    "lastAppearance": "2021-03-16",
-    "appearanceYears": [
-      "1995",
-      "1997",
-      "1999",
-      "2017",
-      "2018",
-      "2019",
-      "2021"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-09-07",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2017-02-13",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "famke-janssen",
     "name": "Famke Janssen",
     "professions": [
@@ -12458,40 +12661,6 @@
       "tbs-conan": {
         "date": "2014-07-16",
         "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "jon-cryer",
-    "name": "Jon Cryer",
-    "professions": [
-      "actor"
-    ],
-    "totalAppearances": 8,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan"
-    ],
-    "firstAppearance": "1995-09-08",
-    "lastAppearance": "2015-02-18",
-    "appearanceYears": [
-      "1995",
-      "1996",
-      "2011",
-      "2012",
-      "2013",
-      "2014",
-      "2015"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-09-08",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2011-01-26",
-        "order": 0
       }
     },
     "coldOpens": []
@@ -13419,6 +13588,40 @@
     "coldOpens": []
   },
   {
+    "id": "kevin-james",
+    "name": "Kevin James",
+    "professions": [
+      "actor",
+      "comedian"
+    ],
+    "totalAppearances": 6,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "1999-04-29",
+    "lastAppearance": "2021-02-25",
+    "appearanceYears": [
+      "1999",
+      "2000",
+      "2003",
+      "2005",
+      "2007",
+      "2021"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1999-04-29",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2021-02-25",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "hilary-swank",
     "name": "Hilary Swank",
     "professions": [],
@@ -13444,38 +13647,6 @@
       },
       "tbs-conan": {
         "date": "2014-11-18",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "christopher-walken",
-    "name": "Christopher Walken",
-    "professions": [],
-    "totalAppearances": 9,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan"
-    ],
-    "firstAppearance": "2000-01-04",
-    "lastAppearance": "2020-12-16",
-    "appearanceYears": [
-      "2000",
-      "2001",
-      "2003",
-      "2004",
-      "2006",
-      "2007",
-      "2020"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2000-01-04",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2020-12-16",
         "order": 0
       }
     },
@@ -13824,35 +13995,6 @@
     "coldOpens": []
   },
   {
-    "id": "edie-falco",
-    "name": "Edie Falco",
-    "professions": [],
-    "totalAppearances": 4,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan"
-    ],
-    "firstAppearance": "2001-03-02",
-    "lastAppearance": "2013-05-07",
-    "appearanceYears": [
-      "2001",
-      "2004",
-      "2006",
-      "2013"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2001-03-02",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2013-05-07",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "allison-janney",
     "name": "Allison Janney",
     "professions": [],
@@ -13881,6 +14023,39 @@
       "tbs-conan": {
         "date": "2014-09-02",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "nick-swardson",
+    "name": "Nick Swardson",
+    "professions": [],
+    "totalAppearances": 9,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "2001-06-20",
+    "lastAppearance": "2018-03-27",
+    "appearanceYears": [
+      "2001",
+      "2006",
+      "2011",
+      "2013",
+      "2015",
+      "2016",
+      "2017",
+      "2018"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2001-06-20",
+        "order": 2
+      },
+      "tbs-conan": {
+        "date": "2011-02-07",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -14858,6 +15033,45 @@
     ]
   },
   {
+    "id": "zach-woods",
+    "name": "Zach Woods",
+    "professions": [
+      "actor",
+      "comedian"
+    ],
+    "totalAppearances": 5,
+    "eras": [
+      "tbs-conan",
+      "podcast"
+    ],
+    "firstAppearance": "2015-04-28",
+    "lastAppearance": "2024-03-11",
+    "appearanceYears": [
+      "2015",
+      "2017",
+      "2018",
+      "2019",
+      "2024"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2015-04-28",
+        "order": 1
+      },
+      "podcast": {
+        "date": "2024-03-11",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2024-03-11",
+        "word": "“pick me”",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
     "id": "kurt-russell",
     "name": "Kurt Russell",
     "professions": [],
@@ -15121,37 +15335,6 @@
     "coldOpens": []
   },
   {
-    "id": "rich-hall",
-    "name": "Rich Hall",
-    "professions": [],
-    "totalAppearances": 24,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1994-03-24",
-    "lastAppearance": "2004-12-29",
-    "appearanceYears": [
-      "1994",
-      "1995",
-      "1996",
-      "1997",
-      "1998",
-      "1999",
-      "2000",
-      "2001",
-      "2002",
-      "2003",
-      "2004"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1994-03-24",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "ice-cube",
     "name": "Ice Cube",
     "professions": [],
@@ -15317,6 +15500,29 @@
       },
       "tonight-show": {
         "date": "2009-07-07",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "whoopi-goldberg",
+    "name": "Whoopi Goldberg",
+    "professions": [],
+    "totalAppearances": 3,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1996-12-19",
+    "lastAppearance": "2004-12-22",
+    "appearanceYears": [
+      "1996",
+      "2003",
+      "2004"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1996-12-19",
         "order": 0
       }
     },
@@ -16222,6 +16428,36 @@
     "coldOpens": []
   },
   {
+    "id": "rob-corddry",
+    "name": "Rob Corddry",
+    "professions": [],
+    "totalAppearances": 5,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "2007-03-01",
+    "lastAppearance": "2015-04-01",
+    "appearanceYears": [
+      "2007",
+      "2008",
+      "2011",
+      "2012",
+      "2015"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2007-03-01",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2011-06-22",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "gerard-butler",
     "name": "Gerard Butler",
     "professions": [],
@@ -17078,35 +17314,6 @@
     "coldOpens": []
   },
   {
-    "id": "dane-cook",
-    "name": "Dane Cook",
-    "professions": [],
-    "totalAppearances": 5,
-    "eras": [
-      "late-night-nbc",
-      "tonight-show"
-    ],
-    "firstAppearance": "2005-12-02",
-    "lastAppearance": "2009-06-10",
-    "appearanceYears": [
-      "2005",
-      "2006",
-      "2007",
-      "2009"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2005-12-02",
-        "order": 0
-      },
-      "tonight-show": {
-        "date": "2009-06-10",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "rachel-mcadams",
     "name": "Rachel McAdams",
     "professions": [],
@@ -17569,61 +17776,57 @@
     ]
   },
   {
-    "id": "kristen-wiig",
-    "name": "Kristen Wiig",
+    "id": "vanessa-bayer",
+    "name": "Vanessa Bayer",
     "professions": [],
     "totalAppearances": 2,
     "eras": [
-      "late-night-nbc",
+      "tbs-conan",
       "podcast"
     ],
-    "firstAppearance": "2006-11-28",
-    "lastAppearance": "2024-03-25",
+    "firstAppearance": "2014-02-10",
+    "lastAppearance": "2022-06-13",
     "appearanceYears": [
-      "2006",
-      "2024"
+      "2014",
+      "2022"
     ],
     "firstByEra": {
-      "late-night-nbc": {
-        "date": "2006-11-28",
+      "tbs-conan": {
+        "date": "2014-02-10",
         "order": 1
       },
       "podcast": {
-        "date": "2024-03-25",
+        "date": "2022-06-13",
         "order": 999
       }
     },
     "coldOpens": [
       {
-        "date": "2024-03-25",
-        "word": "warm",
+        "date": "2022-06-13",
+        "word": "honestly thrilled",
         "sentiment": "neutral"
       }
     ]
   },
   {
-    "id": "nick-dipaolo",
-    "name": "Nick DiPaolo",
+    "id": "dom-irrera",
+    "name": "Dom Irrera",
     "professions": [],
-    "totalAppearances": 2,
+    "totalAppearances": 3,
     "eras": [
-      "late-night-nbc",
-      "tbs-conan"
+      "late-night-nbc"
     ],
-    "firstAppearance": "2005-05-18",
-    "lastAppearance": "2012-02-27",
+    "firstAppearance": "1995-08-28",
+    "lastAppearance": "1997-08-20",
     "appearanceYears": [
-      "2005",
-      "2012"
+      "1995",
+      "1996",
+      "1997"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "2005-05-18",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2012-02-27",
-        "order": 1
+        "date": "1995-08-28",
+        "order": 0
       }
     },
     "coldOpens": []
@@ -17689,28 +17892,6 @@
       "tbs-conan": {
         "date": "2010-12-20",
         "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "damon-wayans-jr",
-    "name": "Damon Wayans Jr.",
-    "professions": [],
-    "totalAppearances": 3,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2011-04-18",
-    "lastAppearance": "2014-08-12",
-    "appearanceYears": [
-      "2011",
-      "2014"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2011-04-18",
-        "order": 1
       }
     },
     "coldOpens": []
@@ -18663,32 +18844,6 @@
     "coldOpens": []
   },
   {
-    "id": "harry-shearer",
-    "name": "Harry Shearer",
-    "professions": [],
-    "totalAppearances": 10,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1994-06-20",
-    "lastAppearance": "2007-07-31",
-    "appearanceYears": [
-      "1994",
-      "1995",
-      "1996",
-      "2002",
-      "2006",
-      "2007"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1994-06-20",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "mark-leyner",
     "name": "Mark Leyner",
     "professions": [],
@@ -18812,6 +18967,33 @@
       },
       "tbs-conan": {
         "date": "2013-12-11",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "jonathan-katz",
+    "name": "Jonathan Katz",
+    "professions": [],
+    "totalAppearances": 7,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1994-12-21",
+    "lastAppearance": "2007-02-07",
+    "appearanceYears": [
+      "1994",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2007"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1994-12-21",
         "order": 1
       }
     },
@@ -19046,28 +19228,6 @@
       "late-night-nbc": {
         "date": "1995-08-10",
         "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "chevy-chase",
-    "name": "Chevy Chase",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1995-10-05",
-    "lastAppearance": "1998-05-22",
-    "appearanceYears": [
-      "1995",
-      "1998"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-10-05",
-        "order": 0
       }
     },
     "coldOpens": []
@@ -19771,6 +19931,34 @@
     "coldOpens": []
   },
   {
+    "id": "matt-walsh",
+    "name": "Matt Walsh",
+    "professions": [],
+    "totalAppearances": 3,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "2002-05-22",
+    "lastAppearance": "2014-07-17",
+    "appearanceYears": [
+      "2002",
+      "2012",
+      "2014"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2002-05-22",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2012-05-07",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "rita-wilson",
     "name": "Rita Wilson",
     "professions": [],
@@ -19821,34 +20009,6 @@
       },
       "tbs-conan": {
         "date": "2011-09-20",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "roseanne-barr",
-    "name": "Roseanne Barr",
-    "professions": [],
-    "totalAppearances": 3,
-    "eras": [
-      "late-night-nbc",
-      "tbs-conan"
-    ],
-    "firstAppearance": "2003-02-05",
-    "lastAppearance": "2016-06-16",
-    "appearanceYears": [
-      "2003",
-      "2011",
-      "2016"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2003-02-05",
-        "order": 0
-      },
-      "tbs-conan": {
-        "date": "2011-09-13",
         "order": 0
       }
     },
@@ -21047,33 +21207,6 @@
     "coldOpens": []
   },
   {
-    "id": "rosie-odonnell",
-    "name": "Rosie O'Donnell",
-    "professions": [],
-    "totalAppearances": 8,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1996-06-18",
-    "lastAppearance": "2005-10-11",
-    "appearanceYears": [
-      "1996",
-      "1998",
-      "1999",
-      "2000",
-      "2001",
-      "2002",
-      "2005"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1996-06-18",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "james-woods",
     "name": "James Woods",
     "professions": [],
@@ -21224,6 +21357,30 @@
       "late-night-nbc": {
         "date": "1997-05-02",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "kevin-smith",
+    "name": "Kevin Smith",
+    "professions": [],
+    "totalAppearances": 4,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1997-06-17",
+    "lastAppearance": "2006-07-20",
+    "appearanceYears": [
+      "1997",
+      "1999",
+      "2001",
+      "2006"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1997-06-17",
+        "order": 2
       }
     },
     "coldOpens": []
@@ -21910,34 +22067,6 @@
     "coldOpens": []
   },
   {
-    "id": "gabriel-iglesias",
-    "name": "Gabriel Iglesias",
-    "professions": [],
-    "totalAppearances": 3,
-    "eras": [
-      "tonight-show",
-      "tbs-conan"
-    ],
-    "firstAppearance": "2009-12-02",
-    "lastAppearance": "2014-07-22",
-    "appearanceYears": [
-      "2009",
-      "2011",
-      "2014"
-    ],
-    "firstByEra": {
-      "tonight-show": {
-        "date": "2009-12-02",
-        "order": 1
-      },
-      "tbs-conan": {
-        "date": "2011-01-18",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "emily-blunt",
     "name": "Emily Blunt",
     "professions": [],
@@ -22060,29 +22189,6 @@
     "firstByEra": {
       "tbs-conan": {
         "date": "2012-01-30",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "jenny-slate",
-    "name": "Jenny Slate",
-    "professions": [],
-    "totalAppearances": 4,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2012-02-02",
-    "lastAppearance": "2019-11-13",
-    "appearanceYears": [
-      "2012",
-      "2014",
-      "2019"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2012-02-02",
         "order": 1
       }
     },
@@ -22241,57 +22347,6 @@
     ]
   },
   {
-    "id": "john-goodman",
-    "name": "John Goodman",
-    "professions": [],
-    "totalAppearances": 4,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1993-09-13",
-    "lastAppearance": "1998-02-06",
-    "appearanceYears": [
-      "1993",
-      "1994",
-      "1996",
-      "1998"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1993-09-13",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "tony-randall",
-    "name": "Tony Randall",
-    "professions": [],
-    "totalAppearances": 11,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1993-09-13",
-    "lastAppearance": "2001-03-23",
-    "appearanceYears": [
-      "1993",
-      "1994",
-      "1995",
-      "1996",
-      "1997",
-      "1999",
-      "2001"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1993-09-13",
-        "order": 2
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "mary-tyler-moore",
     "name": "Mary Tyler Moore",
     "professions": [],
@@ -22421,29 +22476,6 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1993-11-16",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "jay-thomas",
-    "name": "Jay Thomas",
-    "professions": [],
-    "totalAppearances": 4,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1993-11-26",
-    "lastAppearance": "1996-09-12",
-    "appearanceYears": [
-      "1993",
-      "1994",
-      "1996"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1993-11-26",
         "order": 0
       }
     },
@@ -22912,39 +22944,6 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1994-05-16",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "chris-rock",
-    "name": "Chris Rock",
-    "professions": [],
-    "totalAppearances": 14,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1994-06-16",
-    "lastAppearance": "2007-03-13",
-    "appearanceYears": [
-      "1994",
-      "1995",
-      "1996",
-      "1997",
-      "1998",
-      "1999",
-      "2000",
-      "2001",
-      "2002",
-      "2003",
-      "2004",
-      "2005",
-      "2007"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1994-06-16",
         "order": 1
       }
     },
@@ -23679,33 +23678,6 @@
     "coldOpens": []
   },
   {
-    "id": "jim-breuer",
-    "name": "Jim Breuer",
-    "professions": [],
-    "totalAppearances": 10,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1996-01-05",
-    "lastAppearance": "2002-09-24",
-    "appearanceYears": [
-      "1996",
-      "1997",
-      "1998",
-      "1999",
-      "2000",
-      "2001",
-      "2002"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1996-01-05",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "illeana-douglas",
     "name": "Illeana Douglas",
     "professions": [],
@@ -24013,32 +23985,6 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1997-01-10",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "jake-johannsen",
-    "name": "Jake Johannsen",
-    "professions": [],
-    "totalAppearances": 6,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1997-02-14",
-    "lastAppearance": "2003-07-08",
-    "appearanceYears": [
-      "1997",
-      "1998",
-      "2000",
-      "2001",
-      "2002",
-      "2003"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1997-02-14",
         "order": 1
       }
     },
@@ -24565,6 +24511,29 @@
     "coldOpens": []
   },
   {
+    "id": "andy-dick",
+    "name": "Andy Dick",
+    "professions": [],
+    "totalAppearances": 4,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "2000-06-08",
+    "lastAppearance": "2004-03-02",
+    "appearanceYears": [
+      "2000",
+      "2001",
+      "2004"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2000-06-08",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "patricia-heaton",
     "name": "Patricia Heaton",
     "professions": [],
@@ -24945,6 +24914,30 @@
       "late-night-nbc": {
         "date": "2004-04-30",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "aries-spears",
+    "name": "Aries Spears",
+    "professions": [],
+    "totalAppearances": 5,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "2004-08-06",
+    "lastAppearance": "2008-04-10",
+    "appearanceYears": [
+      "2004",
+      "2006",
+      "2007",
+      "2008"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2004-08-06",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -25470,31 +25463,6 @@
     "coldOpens": []
   },
   {
-    "id": "adam-pally",
-    "name": "Adam Pally",
-    "professions": [],
-    "totalAppearances": 6,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2012-02-13",
-    "lastAppearance": "2018-05-01",
-    "appearanceYears": [
-      "2012",
-      "2014",
-      "2015",
-      "2017",
-      "2018"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2012-02-13",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "melissa-rauch",
     "name": "Melissa Rauch",
     "professions": [],
@@ -26003,127 +25971,65 @@
     ]
   },
   {
-    "id": "billy-crystal",
-    "name": "Billy Crystal",
-    "professions": [],
-    "totalAppearances": 3,
-    "eras": [
-      "late-night-nbc",
-      "podcast"
-    ],
-    "firstAppearance": "1997-05-09",
-    "lastAppearance": "2024-10-28",
-    "appearanceYears": [
-      "1997",
-      "2001",
-      "2024"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1997-05-09",
-        "order": 0
-      },
-      "podcast": {
-        "date": "2024-10-28",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2024-10-28",
-        "word": "not sure",
-        "sentiment": "deflecting"
-      }
-    ]
-  },
-  {
-    "id": "cecily-strong",
-    "name": "Cecily Strong",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "podcast"
-    ],
-    "firstAppearance": "2021-08-09",
-    "lastAppearance": "2021-08-09",
-    "appearanceYears": [
-      "2021"
-    ],
-    "firstByEra": {
-      "podcast": {
-        "date": "2021-08-09",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2021-08-09",
-        "word": "honored",
-        "sentiment": "warm"
-      }
-    ]
-  },
-  {
-    "id": "mark-hamill",
-    "name": "Mark Hamill",
+    "id": "upright-citizens-brigade",
+    "name": "Upright Citizens Brigade",
     "professions": [],
     "totalAppearances": 2,
     "eras": [
       "late-night-nbc"
     ],
-    "firstAppearance": "1994-01-03",
-    "lastAppearance": "1997-03-18",
+    "firstAppearance": "2000-01-13",
+    "lastAppearance": "2000-05-03",
     "appearanceYears": [
-      "1994",
-      "1997"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1994-01-03",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "michael-richards",
-    "name": "Michael Richards",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1997-06-04",
-    "lastAppearance": "2000-10-31",
-    "appearanceYears": [
-      "1997",
       "2000"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1997-06-04",
-        "order": 0
+        "date": "2000-01-13",
+        "order": 1
       }
     },
     "coldOpens": []
   },
   {
-    "id": "wendy-williams",
-    "name": "Wendy Williams",
+    "id": "josh-gad",
+    "name": "Josh Gad",
     "professions": [],
     "totalAppearances": 2,
     "eras": [
       "tbs-conan"
     ],
-    "firstAppearance": "2012-08-27",
-    "lastAppearance": "2016-03-10",
+    "firstAppearance": "2013-08-14",
+    "lastAppearance": "2020-01-20",
     "appearanceYears": [
-      "2012",
-      "2016"
+      "2013",
+      "2020"
     ],
     "firstByEra": {
       "tbs-conan": {
-        "date": "2012-08-27",
+        "date": "2013-08-14",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "roberto-benigni",
+    "name": "Roberto Benigni",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1998-12-16",
+    "lastAppearance": "2002-12-26",
+    "appearanceYears": [
+      "1998",
+      "2002"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1998-12-16",
         "order": 1
       }
     },
@@ -26379,6 +26285,30 @@
     "coldOpens": []
   },
   {
+    "id": "robert-klein",
+    "name": "Robert Klein",
+    "professions": [],
+    "totalAppearances": 5,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1993-12-23",
+    "lastAppearance": "1996-04-23",
+    "appearanceYears": [
+      "1993",
+      "1994",
+      "1995",
+      "1996"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1993-12-23",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "brooke-shields",
     "name": "Brooke Shields",
     "professions": [],
@@ -26464,6 +26394,37 @@
       "late-night-nbc": {
         "date": "1994-03-21",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "rich-hall",
+    "name": "Rich Hall",
+    "professions": [],
+    "totalAppearances": 24,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1994-03-24",
+    "lastAppearance": "2004-12-29",
+    "appearanceYears": [
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1994-03-24",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -26949,29 +26910,6 @@
     "coldOpens": []
   },
   {
-    "id": "whoopi-goldberg",
-    "name": "Whoopi Goldberg",
-    "professions": [],
-    "totalAppearances": 3,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1996-12-19",
-    "lastAppearance": "2004-12-22",
-    "appearanceYears": [
-      "1996",
-      "2003",
-      "2004"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1996-12-19",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "brian-regan",
     "name": "Brian Regan",
     "professions": [],
@@ -27225,6 +27163,28 @@
     "coldOpens": []
   },
   {
+    "id": "beth-behrs",
+    "name": "Beth Behrs",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2012-02-27",
+    "lastAppearance": "2014-01-07",
+    "appearanceYears": [
+      "2012",
+      "2014"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2012-02-27",
+        "order": 2
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "alice-eve",
     "name": "Alice Eve",
     "professions": [],
@@ -27335,6 +27295,28 @@
     "firstByEra": {
       "tbs-conan": {
         "date": "2014-10-01",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "dylan-moran",
+    "name": "Dylan Moran",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2016-09-29",
+    "lastAppearance": "2018-03-19",
+    "appearanceYears": [
+      "2016",
+      "2018"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2016-09-29",
         "order": 1
       }
     },
@@ -28454,6 +28436,39 @@
     "coldOpens": []
   },
   {
+    "id": "kristen-wiig",
+    "name": "Kristen Wiig",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc",
+      "podcast"
+    ],
+    "firstAppearance": "2006-11-28",
+    "lastAppearance": "2024-03-25",
+    "appearanceYears": [
+      "2006",
+      "2024"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2006-11-28",
+        "order": 1
+      },
+      "podcast": {
+        "date": "2024-03-25",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2024-03-25",
+        "word": "warm",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  {
     "id": "reggie-watts",
     "name": "Reggie Watts",
     "professions": [],
@@ -28614,39 +28629,6 @@
       {
         "date": "2022-06-27",
         "word": "magnanimous",
-        "sentiment": "neutral"
-      }
-    ]
-  },
-  {
-    "id": "vanessa-bayer",
-    "name": "Vanessa Bayer",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "tbs-conan",
-      "podcast"
-    ],
-    "firstAppearance": "2014-02-10",
-    "lastAppearance": "2022-06-13",
-    "appearanceYears": [
-      "2014",
-      "2022"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2014-02-10",
-        "order": 1
-      },
-      "podcast": {
-        "date": "2022-06-13",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2022-06-13",
-        "word": "honestly thrilled",
         "sentiment": "neutral"
       }
     ]
@@ -29325,29 +29307,6 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1995-08-04",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "dom-irrera",
-    "name": "Dom Irrera",
-    "professions": [],
-    "totalAppearances": 3,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1995-08-28",
-    "lastAppearance": "1997-08-20",
-    "appearanceYears": [
-      "1995",
-      "1996",
-      "1997"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-08-28",
         "order": 0
       }
     },
@@ -30730,6 +30689,33 @@
     "coldOpens": []
   },
   {
+    "id": "nick-dipaolo",
+    "name": "Nick DiPaolo",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc",
+      "tbs-conan"
+    ],
+    "firstAppearance": "2005-05-18",
+    "lastAppearance": "2012-02-27",
+    "appearanceYears": [
+      "2005",
+      "2012"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2005-05-18",
+        "order": 1
+      },
+      "tbs-conan": {
+        "date": "2012-02-27",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "sacha-baron-cohen",
     "name": "Sacha Baron Cohen",
     "professions": [],
@@ -31299,6 +31285,28 @@
     "firstByEra": {
       "tbs-conan": {
         "date": "2011-03-23",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "damon-wayans-jr",
+    "name": "Damon Wayans Jr.",
+    "professions": [],
+    "totalAppearances": 3,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2011-04-18",
+    "lastAppearance": "2014-08-12",
+    "appearanceYears": [
+      "2011",
+      "2014"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2011-04-18",
         "order": 1
       }
     },
@@ -31993,44 +32001,65 @@
     ]
   },
   {
-    "id": "jeff-foxworthy",
-    "name": "Jeff Foxworthy",
+    "id": "kevin-meaney",
+    "name": "Kevin Meaney",
     "professions": [],
     "totalAppearances": 2,
     "eras": [
       "late-night-nbc"
     ],
-    "firstAppearance": "1995-10-09",
-    "lastAppearance": "1996-05-16",
+    "firstAppearance": "1995-03-09",
+    "lastAppearance": "1996-01-17",
     "appearanceYears": [
       "1995",
       "1996"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1995-10-09",
+        "date": "1995-03-09",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "joan-rivers",
+    "name": "Joan Rivers",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1995-03-20",
+    "lastAppearance": "1995-07-11",
+    "appearanceYears": [
+      "1995"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1995-03-20",
         "order": 0
       }
     },
     "coldOpens": []
   },
   {
-    "id": "bill-braudis",
-    "name": "Bill Braudis",
+    "id": "mark-curry",
+    "name": "Mark Curry",
     "professions": [],
     "totalAppearances": 2,
     "eras": [
       "late-night-nbc"
     ],
-    "firstAppearance": "2000-06-15",
-    "lastAppearance": "2000-12-15",
+    "firstAppearance": "1995-03-20",
+    "lastAppearance": "1995-11-20",
     "appearanceYears": [
-      "2000"
+      "1995"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "2000-06-15",
-        "order": 2
+        "date": "1995-03-20",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -32273,6 +32302,28 @@
       },
       "tbs-conan": {
         "date": "2012-11-26",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "senator-al-franken",
+    "name": "Senator Al Franken",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2016-08-22",
+    "lastAppearance": "2017-08-14",
+    "appearanceYears": [
+      "2016",
+      "2017"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2016-08-22",
         "order": 0
       }
     },
@@ -33540,22 +33591,22 @@
     ]
   },
   {
-    "id": "eddie-murphy",
-    "name": "Eddie Murphy",
+    "id": "elle-macpherson",
+    "name": "Elle Macpherson",
     "professions": [],
     "totalAppearances": 1,
     "eras": [
-      "tonight-show"
+      "late-night-nbc"
     ],
-    "firstAppearance": "2009-06-09",
-    "lastAppearance": "2009-06-09",
+    "firstAppearance": "2006-09-20",
+    "lastAppearance": "2006-09-20",
     "appearanceYears": [
-      "2009"
+      "2006"
     ],
     "firstByEra": {
-      "tonight-show": {
-        "date": "2009-06-09",
-        "order": 0
+      "late-night-nbc": {
+        "date": "2006-09-20",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -34617,28 +34668,6 @@
     "coldOpens": []
   },
   {
-    "id": "josh-gad",
-    "name": "Josh Gad",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2013-08-14",
-    "lastAppearance": "2020-01-20",
-    "appearanceYears": [
-      "2013",
-      "2020"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2013-08-14",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "ron-burgundy",
     "name": "Ron Burgundy",
     "professions": [],
@@ -34981,6 +35010,33 @@
     ]
   },
   {
+    "id": "cecily-strong",
+    "name": "Cecily Strong",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "podcast"
+    ],
+    "firstAppearance": "2021-08-09",
+    "lastAppearance": "2021-08-09",
+    "appearanceYears": [
+      "2021"
+    ],
+    "firstByEra": {
+      "podcast": {
+        "date": "2021-08-09",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2021-08-09",
+        "word": "honored",
+        "sentiment": "warm"
+      }
+    ]
+  },
+  {
     "id": "michael-che",
     "name": "Michael Che",
     "professions": [],
@@ -35090,6 +35146,28 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1993-12-17",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "mark-hamill",
+    "name": "Mark Hamill",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1994-01-03",
+    "lastAppearance": "1997-03-18",
+    "appearanceYears": [
+      "1994",
+      "1997"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1994-01-03",
         "order": 0
       }
     },
@@ -35756,6 +35834,28 @@
     "coldOpens": []
   },
   {
+    "id": "michael-richards",
+    "name": "Michael Richards",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1997-06-04",
+    "lastAppearance": "2000-10-31",
+    "appearanceYears": [
+      "1997",
+      "2000"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1997-06-04",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "joan-cusack",
     "name": "Joan Cusack",
     "professions": [],
@@ -35861,28 +35961,6 @@
       "late-night-nbc": {
         "date": "1998-12-08",
         "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "roberto-benigni",
-    "name": "Roberto Benigni",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1998-12-16",
-    "lastAppearance": "2002-12-26",
-    "appearanceYears": [
-      "1998",
-      "2002"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1998-12-16",
-        "order": 1
       }
     },
     "coldOpens": []
@@ -36322,6 +36400,28 @@
     "firstByEra": {
       "tbs-conan": {
         "date": "2011-11-07",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "wendy-williams",
+    "name": "Wendy Williams",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2012-08-27",
+    "lastAppearance": "2016-03-10",
+    "appearanceYears": [
+      "2012",
+      "2016"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2012-08-27",
         "order": 1
       }
     },
@@ -37763,6 +37863,28 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1995-09-29",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "chevy-chase",
+    "name": "Chevy Chase",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1995-10-05",
+    "lastAppearance": "1998-05-22",
+    "appearanceYears": [
+      "1995",
+      "1998"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1995-10-05",
         "order": 0
       }
     },
@@ -39969,28 +40091,6 @@
     "coldOpens": []
   },
   {
-    "id": "beth-behrs",
-    "name": "Beth Behrs",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2012-02-27",
-    "lastAppearance": "2014-01-07",
-    "appearanceYears": [
-      "2012",
-      "2014"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2012-02-27",
-        "order": 2
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "maria-menounos",
     "name": "Maria Menounos",
     "professions": [],
@@ -40585,28 +40685,6 @@
     "coldOpens": []
   },
   {
-    "id": "dylan-moran",
-    "name": "Dylan Moran",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2016-09-29",
-    "lastAppearance": "2018-03-19",
-    "appearanceYears": [
-      "2016",
-      "2018"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2016-09-29",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "evan-peters",
     "name": "Evan Peters",
     "professions": [],
@@ -40695,337 +40773,358 @@
     "coldOpens": []
   },
   {
-    "id": "alan-rachins",
-    "name": "Alan Rachins",
+    "id": "dustin-diamond",
+    "name": "Dustin Diamond",
     "professions": [],
     "totalAppearances": 1,
     "eras": [
       "late-night-nbc"
     ],
-    "firstAppearance": "1994-03-23",
-    "lastAppearance": "1994-03-23",
+    "firstAppearance": "1993-11-24",
+    "lastAppearance": "1993-11-24",
     "appearanceYears": [
-      "1994"
+      "1993"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1994-03-23",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "harvey-korman",
-    "name": "Harvey Korman",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1994-04-05",
-    "lastAppearance": "1994-04-05",
-    "appearanceYears": [
-      "1994"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1994-04-05",
+        "date": "1993-11-24",
         "order": 1
       }
     },
     "coldOpens": []
   },
   {
-    "id": "tommy-bond",
-    "name": "Tommy Bond",
+    "id": "lily-tomlin",
+    "name": "Lily Tomlin",
     "professions": [],
     "totalAppearances": 1,
     "eras": [
       "late-night-nbc"
     ],
-    "firstAppearance": "1994-08-03",
-    "lastAppearance": "1994-08-03",
+    "firstAppearance": "1994-11-04",
+    "lastAppearance": "1994-11-04",
     "appearanceYears": [
       "1994"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1994-08-03",
-        "order": 2
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "blake-clark",
-    "name": "Blake Clark",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1995-10-03",
-    "lastAppearance": "1995-10-03",
-    "appearanceYears": [
-      "1995"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-10-03",
+        "date": "1994-11-04",
         "order": 0
       }
     },
     "coldOpens": []
   },
   {
-    "id": "cindy-adams",
-    "name": "Cindy Adams",
+    "id": "matt-frewer",
+    "name": "Matt Frewer",
     "professions": [],
     "totalAppearances": 1,
     "eras": [
       "late-night-nbc"
     ],
-    "firstAppearance": "1995-10-03",
-    "lastAppearance": "1995-10-03",
+    "firstAppearance": "1996-01-05",
+    "lastAppearance": "1996-01-05",
     "appearanceYears": [
-      "1995"
+      "1996"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1995-10-03",
+        "date": "1996-01-05",
         "order": 1
       }
     },
     "coldOpens": []
   },
   {
-    "id": "ken-ober",
-    "name": "Ken Ober",
+    "id": "harold-ramis",
+    "name": "Harold Ramis",
     "professions": [],
     "totalAppearances": 1,
     "eras": [
       "late-night-nbc"
     ],
-    "firstAppearance": "1997-06-05",
-    "lastAppearance": "1997-06-05",
+    "firstAppearance": "1996-06-28",
+    "lastAppearance": "1996-06-28",
+    "appearanceYears": [
+      "1996"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1996-06-28",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "geoffrey-rush",
+    "name": "Geoffrey Rush",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1997-02-12",
+    "lastAppearance": "1997-02-12",
     "appearanceYears": [
       "1997"
     ],
     "firstByEra": {
       "late-night-nbc": {
-        "date": "1997-06-05",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "cheech-marin",
-    "name": "Cheech Marin",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1998-04-08",
-    "lastAppearance": "1998-04-08",
-    "appearanceYears": [
-      "1998"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1998-04-08",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "cheri-oteri",
-    "name": "Cheri Oteri",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2000-06-20",
-    "lastAppearance": "2000-06-20",
-    "appearanceYears": [
-      "2000"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2000-06-20",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "evan-handler",
-    "name": "Evan Handler",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2003-07-22",
-    "lastAppearance": "2003-07-22",
-    "appearanceYears": [
-      "2003"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2003-07-22",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "gene-wilder",
-    "name": "Gene Wilder",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2005-04-29",
-    "lastAppearance": "2005-04-29",
-    "appearanceYears": [
-      "2005"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2005-04-29",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "fred-goss",
-    "name": "Fred Goss",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2006-03-03",
-    "lastAppearance": "2006-03-03",
-    "appearanceYears": [
-      "2006"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2006-03-03",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "dan-dunn",
-    "name": "Dan Dunn",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2011-05-04",
-    "lastAppearance": "2011-05-04",
-    "appearanceYears": [
-      "2011"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2011-05-04",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "rob-delaney",
-    "name": "Rob Delaney",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2012-09-05",
-    "lastAppearance": "2012-09-05",
-    "appearanceYears": [
-      "2012"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2012-09-05",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "anders-holm",
-    "name": "Anders Holm",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2015-07-15",
-    "lastAppearance": "2015-07-15",
-    "appearanceYears": [
-      "2015"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2015-07-15",
+        "date": "1997-02-12",
         "order": 0
       }
     },
     "coldOpens": []
   },
   {
-    "id": "jessica-st-clair",
-    "name": "Jessica St. Clair",
+    "id": "frank-gorshin",
+    "name": "Frank Gorshin",
     "professions": [],
     "totalAppearances": 1,
     "eras": [
-      "tbs-conan"
+      "late-night-nbc"
     ],
-    "firstAppearance": "2015-08-10",
-    "lastAppearance": "2015-08-10",
+    "firstAppearance": "1997-11-25",
+    "lastAppearance": "1997-11-25",
     "appearanceYears": [
-      "2015"
+      "1997"
     ],
     "firstByEra": {
-      "tbs-conan": {
-        "date": "2015-08-10",
+      "late-night-nbc": {
+        "date": "1997-11-25",
         "order": 1
       }
     },
     "coldOpens": []
   },
   {
-    "id": "sherri-shepherd",
-    "name": "Sherri Shepherd",
+    "id": "mary-birdsong",
+    "name": "Mary Birdsong",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "2006-08-30",
+    "lastAppearance": "2006-08-30",
+    "appearanceYears": [
+      "2006"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2006-08-30",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "bret-mckenzie",
+    "name": "Bret McKenzie",
     "professions": [],
     "totalAppearances": 1,
     "eras": [
       "tbs-conan"
     ],
-    "firstAppearance": "2017-04-18",
-    "lastAppearance": "2017-04-18",
+    "firstAppearance": "2012-02-06",
+    "lastAppearance": "2012-02-06",
     "appearanceYears": [
-      "2017"
+      "2012"
     ],
     "firstByEra": {
       "tbs-conan": {
-        "date": "2017-04-18",
+        "date": "2012-02-06",
         "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "jon-glaser",
+    "name": "Jon Glaser",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2012-02-09",
+    "lastAppearance": "2012-02-09",
+    "appearanceYears": [
+      "2012"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2012-02-09",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "kirk-fox",
+    "name": "Kirk Fox",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2013-09-16",
+    "lastAppearance": "2013-09-16",
+    "appearanceYears": [
+      "2013"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2013-09-16",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "cristela-alonzo",
+    "name": "Cristela Alonzo",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2015-03-02",
+    "lastAppearance": "2015-03-02",
+    "appearanceYears": [
+      "2015"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2015-03-02",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "h-jon-benjamin",
+    "name": "H Jon Benjamin",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2015-03-03",
+    "lastAppearance": "2015-03-03",
+    "appearanceYears": [
+      "2015"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2015-03-03",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "phoebe-robinson",
+    "name": "Phoebe Robinson",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2016-09-28",
+    "lastAppearance": "2016-09-28",
+    "appearanceYears": [
+      "2016"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2016-09-28",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "nore-davis",
+    "name": "Nore Davis",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2019-04-29",
+    "lastAppearance": "2019-04-29",
+    "appearanceYears": [
+      "2019"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2019-04-29",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "sona-movsesian",
+    "name": "Sona Movsesian",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2019-07-11",
+    "lastAppearance": "2019-07-11",
+    "appearanceYears": [
+      "2019"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2019-07-11",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "cara-delevingne",
+    "name": "Cara Delevingne",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2019-07-20",
+    "lastAppearance": "2019-07-20",
+    "appearanceYears": [
+      "2019"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2019-07-20",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "ilana-glazer",
+    "name": "Ilana Glazer",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2020-01-16",
+    "lastAppearance": "2020-01-16",
+    "appearanceYears": [
+      "2020"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2020-01-16",
+        "order": 0
       }
     },
     "coldOpens": []
@@ -42092,70 +42191,6 @@
     "coldOpens": []
   },
   {
-    "id": "kevin-meaney",
-    "name": "Kevin Meaney",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1995-03-09",
-    "lastAppearance": "1996-01-17",
-    "appearanceYears": [
-      "1995",
-      "1996"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-03-09",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "joan-rivers",
-    "name": "Joan Rivers",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1995-03-20",
-    "lastAppearance": "1995-07-11",
-    "appearanceYears": [
-      "1995"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-03-20",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "mark-curry",
-    "name": "Mark Curry",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1995-03-20",
-    "lastAppearance": "1995-11-20",
-    "appearanceYears": [
-      "1995"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1995-03-20",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "eric-stoltz",
     "name": "Eric Stoltz",
     "professions": [],
@@ -42302,6 +42337,28 @@
       "late-night-nbc": {
         "date": "1995-09-29",
         "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "jeff-foxworthy",
+    "name": "Jeff Foxworthy",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1995-10-09",
+    "lastAppearance": "1996-05-16",
+    "appearanceYears": [
+      "1995",
+      "1996"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1995-10-09",
+        "order": 0
       }
     },
     "coldOpens": []
@@ -42717,27 +42774,6 @@
     "coldOpens": []
   },
   {
-    "id": "upright-citizens-brigade",
-    "name": "Upright Citizens Brigade",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2000-01-13",
-    "lastAppearance": "2000-05-03",
-    "appearanceYears": [
-      "2000"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2000-01-13",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "denis-hamill",
     "name": "Denis Hamill",
     "professions": [],
@@ -42775,6 +42811,27 @@
       "late-night-nbc": {
         "date": "2000-04-28",
         "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "bill-braudis",
+    "name": "Bill Braudis",
+    "professions": [],
+    "totalAppearances": 2,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "2000-06-15",
+    "lastAppearance": "2000-12-15",
+    "appearanceYears": [
+      "2000"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2000-06-15",
+        "order": 2
       }
     },
     "coldOpens": []
@@ -43428,28 +43485,6 @@
     "coldOpens": []
   },
   {
-    "id": "senator-al-franken",
-    "name": "Senator Al Franken",
-    "professions": [],
-    "totalAppearances": 2,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2016-08-22",
-    "lastAppearance": "2017-08-14",
-    "appearanceYears": [
-      "2016",
-      "2017"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2016-08-22",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "jeffrey-toobin",
     "name": "Jeffrey Toobin",
     "professions": [],
@@ -43513,33 +43548,6 @@
       }
     },
     "coldOpens": []
-  },
-  {
-    "id": "hannah-einbinder",
-    "name": "Hannah Einbinder",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "podcast"
-    ],
-    "firstAppearance": "2021-08-23",
-    "lastAppearance": "2021-08-23",
-    "appearanceYears": [
-      "2021"
-    ],
-    "firstByEra": {
-      "podcast": {
-        "date": "2021-08-23",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2021-08-23",
-        "word": "confused",
-        "sentiment": "deflecting"
-      }
-    ]
   },
   {
     "id": "mick-jagger",
@@ -45786,27 +45794,6 @@
     "coldOpens": []
   },
   {
-    "id": "dustin-diamond",
-    "name": "Dustin Diamond",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1993-11-24",
-    "lastAppearance": "1993-11-24",
-    "appearanceYears": [
-      "1993"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1993-11-24",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "alan-dershowitz",
     "name": "Alan Dershowitz",
     "professions": [],
@@ -47172,6 +47159,27 @@
     "coldOpens": []
   },
   {
+    "id": "alan-rachins",
+    "name": "Alan Rachins",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1994-03-23",
+    "lastAppearance": "1994-03-23",
+    "appearanceYears": [
+      "1994"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1994-03-23",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "richard-marcinko",
     "name": "Richard Marcinko",
     "professions": [],
@@ -47272,6 +47280,27 @@
       "late-night-nbc": {
         "date": "1994-04-05",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "harvey-korman",
+    "name": "Harvey Korman",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1994-04-05",
+    "lastAppearance": "1994-04-05",
+    "appearanceYears": [
+      "1994"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1994-04-05",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -48411,6 +48440,27 @@
     "coldOpens": []
   },
   {
+    "id": "tommy-bond",
+    "name": "Tommy Bond",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1994-08-03",
+    "lastAppearance": "1994-08-03",
+    "appearanceYears": [
+      "1994"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1994-08-03",
+        "order": 2
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "denny-dillon",
     "name": "Denny Dillon",
     "professions": [],
@@ -49098,27 +49148,6 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "1994-10-31",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "lily-tomlin",
-    "name": "Lily Tomlin",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1994-11-04",
-    "lastAppearance": "1994-11-04",
-    "appearanceYears": [
-      "1994"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1994-11-04",
         "order": 0
       }
     },
@@ -51960,6 +51989,48 @@
     "coldOpens": []
   },
   {
+    "id": "blake-clark",
+    "name": "Blake Clark",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1995-10-03",
+    "lastAppearance": "1995-10-03",
+    "appearanceYears": [
+      "1995"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1995-10-03",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "cindy-adams",
+    "name": "Cindy Adams",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1995-10-03",
+    "lastAppearance": "1995-10-03",
+    "appearanceYears": [
+      "1995"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1995-10-03",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "linda-mccartney",
     "name": "Linda McCartney",
     "professions": [],
@@ -52879,27 +52950,6 @@
       "late-night-nbc": {
         "date": "1996-01-04",
         "order": 2
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "matt-frewer",
-    "name": "Matt Frewer",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1996-01-05",
-    "lastAppearance": "1996-01-05",
-    "appearanceYears": [
-      "1996"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1996-01-05",
-        "order": 1
       }
     },
     "coldOpens": []
@@ -54291,27 +54341,6 @@
     "coldOpens": []
   },
   {
-    "id": "harold-ramis",
-    "name": "Harold Ramis",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1996-06-28",
-    "lastAppearance": "1996-06-28",
-    "appearanceYears": [
-      "1996"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1996-06-28",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "marv-albert",
     "name": "Marv Albert",
     "professions": [],
@@ -55530,27 +55559,6 @@
     "coldOpens": []
   },
   {
-    "id": "geoffrey-rush",
-    "name": "Geoffrey Rush",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1997-02-12",
-    "lastAppearance": "1997-02-12",
-    "appearanceYears": [
-      "1997"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1997-02-12",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "wilt-chamberlain",
     "name": "Wilt Chamberlain",
     "professions": [],
@@ -56071,6 +56079,27 @@
       "late-night-nbc": {
         "date": "1997-05-16",
         "order": 2
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "ken-ober",
+    "name": "Ken Ober",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1997-06-05",
+    "lastAppearance": "1997-06-05",
+    "appearanceYears": [
+      "1997"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1997-06-05",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -56748,27 +56777,6 @@
     "coldOpens": []
   },
   {
-    "id": "frank-gorshin",
-    "name": "Frank Gorshin",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "1997-11-25",
-    "lastAppearance": "1997-11-25",
-    "appearanceYears": [
-      "1997"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "1997-11-25",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "imani-coppola",
     "name": "Imani Coppola",
     "professions": [],
@@ -57163,6 +57171,27 @@
       "late-night-nbc": {
         "date": "1998-03-31",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "cheech-marin",
+    "name": "Cheech Marin",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "1998-04-08",
+    "lastAppearance": "1998-04-08",
+    "appearanceYears": [
+      "1998"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "1998-04-08",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -59472,6 +59501,27 @@
     "firstByEra": {
       "late-night-nbc": {
         "date": "2000-06-09",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "cheri-oteri",
+    "name": "Cheri Oteri",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "2000-06-20",
+    "lastAppearance": "2000-06-20",
+    "appearanceYears": [
+      "2000"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2000-06-20",
         "order": 1
       }
     },
@@ -63111,6 +63161,27 @@
     "coldOpens": []
   },
   {
+    "id": "evan-handler",
+    "name": "Evan Handler",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "2003-07-22",
+    "lastAppearance": "2003-07-22",
+    "appearanceYears": [
+      "2003"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2003-07-22",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "olivier-martinez",
     "name": "Olivier Martinez",
     "professions": [],
@@ -66450,6 +66521,27 @@
     "coldOpens": []
   },
   {
+    "id": "gene-wilder",
+    "name": "Gene Wilder",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "2005-04-29",
+    "lastAppearance": "2005-04-29",
+    "appearanceYears": [
+      "2005"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2005-04-29",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "ani-difranco",
     "name": "Ani Difranco",
     "professions": [],
@@ -68256,6 +68348,27 @@
     "coldOpens": []
   },
   {
+    "id": "fred-goss",
+    "name": "Fred Goss",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "late-night-nbc"
+    ],
+    "firstAppearance": "2006-03-03",
+    "lastAppearance": "2006-03-03",
+    "appearanceYears": [
+      "2006"
+    ],
+    "firstByEra": {
+      "late-night-nbc": {
+        "date": "2006-03-03",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "the-derek-trucks-band",
     "name": "The Derek Trucks Band",
     "professions": [],
@@ -69264,27 +69377,6 @@
     "coldOpens": []
   },
   {
-    "id": "mary-birdsong",
-    "name": "Mary Birdsong",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2006-08-30",
-    "lastAppearance": "2006-08-30",
-    "appearanceYears": [
-      "2006"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2006-08-30",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "neko-case",
     "name": "Neko Case",
     "professions": [],
@@ -69322,27 +69414,6 @@
       "late-night-nbc": {
         "date": "2006-09-18",
         "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "elle-macpherson",
-    "name": "Elle Macpherson",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "late-night-nbc"
-    ],
-    "firstAppearance": "2006-09-20",
-    "lastAppearance": "2006-09-20",
-    "appearanceYears": [
-      "2006"
-    ],
-    "firstByEra": {
-      "late-night-nbc": {
-        "date": "2006-09-20",
-        "order": 1
       }
     },
     "coldOpens": []
@@ -71469,6 +71540,27 @@
     "coldOpens": []
   },
   {
+    "id": "eddie-murphy",
+    "name": "Eddie Murphy",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tonight-show"
+    ],
+    "firstAppearance": "2009-06-09",
+    "lastAppearance": "2009-06-09",
+    "appearanceYears": [
+      "2009"
+    ],
+    "firstByEra": {
+      "tonight-show": {
+        "date": "2009-06-09",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "joe-torre",
     "name": "Joe Torre",
     "professions": [],
@@ -72687,6 +72779,27 @@
     "coldOpens": []
   },
   {
+    "id": "dan-dunn",
+    "name": "Dan Dunn",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2011-05-04",
+    "lastAppearance": "2011-05-04",
+    "appearanceYears": [
+      "2011"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2011-05-04",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
     "id": "miranda-kerr",
     "name": "Miranda Kerr",
     "professions": [],
@@ -73227,48 +73340,6 @@
     "firstByEra": {
       "tbs-conan": {
         "date": "2012-01-31",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "bret-mckenzie",
-    "name": "Bret McKenzie",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2012-02-06",
-    "lastAppearance": "2012-02-06",
-    "appearanceYears": [
-      "2012"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2012-02-06",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "jon-glaser",
-    "name": "Jon Glaser",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2012-02-09",
-    "lastAppearance": "2012-02-09",
-    "appearanceYears": [
-      "2012"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2012-02-09",
         "order": 1
       }
     },
@@ -73816,6 +73887,27 @@
       "tbs-conan": {
         "date": "2012-08-09",
         "order": 2
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "rob-delaney",
+    "name": "Rob Delaney",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2012-09-05",
+    "lastAppearance": "2012-09-05",
+    "appearanceYears": [
+      "2012"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2012-09-05",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -74655,27 +74747,6 @@
     "firstByEra": {
       "tbs-conan": {
         "date": "2013-09-04",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "kirk-fox",
-    "name": "Kirk Fox",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2013-09-16",
-    "lastAppearance": "2013-09-16",
-    "appearanceYears": [
-      "2013"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2013-09-16",
         "order": 1
       }
     },
@@ -76047,48 +76118,6 @@
     "coldOpens": []
   },
   {
-    "id": "cristela-alonzo",
-    "name": "Cristela Alonzo",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2015-03-02",
-    "lastAppearance": "2015-03-02",
-    "appearanceYears": [
-      "2015"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2015-03-02",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "h-jon-benjamin",
-    "name": "H Jon Benjamin",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2015-03-03",
-    "lastAppearance": "2015-03-03",
-    "appearanceYears": [
-      "2015"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2015-03-03",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "maia-mitchell",
     "name": "Maia Mitchell",
     "professions": [],
@@ -76398,6 +76427,48 @@
     "firstByEra": {
       "tbs-conan": {
         "date": "2015-06-09",
+        "order": 1
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "anders-holm",
+    "name": "Anders Holm",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2015-07-15",
+    "lastAppearance": "2015-07-15",
+    "appearanceYears": [
+      "2015"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2015-07-15",
+        "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "jessica-st-clair",
+    "name": "Jessica St. Clair",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2015-08-10",
+    "lastAppearance": "2015-08-10",
+    "appearanceYears": [
+      "2015"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2015-08-10",
         "order": 1
       }
     },
@@ -77916,27 +77987,6 @@
     "coldOpens": []
   },
   {
-    "id": "phoebe-robinson",
-    "name": "Phoebe Robinson",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2016-09-28",
-    "lastAppearance": "2016-09-28",
-    "appearanceYears": [
-      "2016"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2016-09-28",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "mike-colter",
     "name": "Mike Colter",
     "professions": [],
@@ -78415,6 +78465,27 @@
       "tbs-conan": {
         "date": "2017-04-12",
         "order": 0
+      }
+    },
+    "coldOpens": []
+  },
+  {
+    "id": "sherri-shepherd",
+    "name": "Sherri Shepherd",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "tbs-conan"
+    ],
+    "firstAppearance": "2017-04-18",
+    "lastAppearance": "2017-04-18",
+    "appearanceYears": [
+      "2017"
+    ],
+    "firstByEra": {
+      "tbs-conan": {
+        "date": "2017-04-18",
+        "order": 1
       }
     },
     "coldOpens": []
@@ -79848,48 +79919,6 @@
     "coldOpens": []
   },
   {
-    "id": "nore-davis",
-    "name": "Nore Davis",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2019-04-29",
-    "lastAppearance": "2019-04-29",
-    "appearanceYears": [
-      "2019"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2019-04-29",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "sona-movsesian",
-    "name": "Sona Movsesian",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2019-07-11",
-    "lastAppearance": "2019-07-11",
-    "appearanceYears": [
-      "2019"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2019-07-11",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
     "id": "it-chapter-two",
     "name": "It Chapter Two",
     "professions": [],
@@ -79947,48 +79976,6 @@
     "firstByEra": {
       "tbs-conan": {
         "date": "2019-07-19",
-        "order": 0
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "cara-delevingne",
-    "name": "Cara Delevingne",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2019-07-20",
-    "lastAppearance": "2019-07-20",
-    "appearanceYears": [
-      "2019"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2019-07-20",
-        "order": 1
-      }
-    },
-    "coldOpens": []
-  },
-  {
-    "id": "ilana-glazer",
-    "name": "Ilana Glazer",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "tbs-conan"
-    ],
-    "firstAppearance": "2020-01-16",
-    "lastAppearance": "2020-01-16",
-    "appearanceYears": [
-      "2020"
-    ],
-    "firstByEra": {
-      "tbs-conan": {
-        "date": "2020-01-16",
         "order": 0
       }
     },
@@ -80427,6 +80414,33 @@
     "coldOpens": [
       {
         "date": "2023-12-18",
+        "word": "confused",
+        "sentiment": "deflecting"
+      }
+    ]
+  },
+  {
+    "id": "hannah-einbinder",
+    "name": "Hannah Einbinder",
+    "professions": [],
+    "totalAppearances": 1,
+    "eras": [
+      "podcast"
+    ],
+    "firstAppearance": "2021-08-23",
+    "lastAppearance": "2021-08-23",
+    "appearanceYears": [
+      "2021"
+    ],
+    "firstByEra": {
+      "podcast": {
+        "date": "2021-08-23",
+        "order": 999
+      }
+    },
+    "coldOpens": [
+      {
+        "date": "2021-08-23",
         "word": "confused",
         "sentiment": "deflecting"
       }
