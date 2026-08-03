@@ -3981,13 +3981,13 @@
       "type": "industry",
       "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "Jason Segel is an actor, comedian, screenwriter, and producer best known for his television work. He gained early recognition through roles in *Freaks and Geeks* (1999) and *Undeclared* (2001) before reaching wider audiences as a cast member on *How I Met Your Mother*, which premiered in 2005. A comedy peer within the industry, Segel first appeared on *Late Night with Conan O'Brien* in 2006.",
+    "description": "Jason Segel is an actor, comedian, screenwriter, and producer best known for his television work. He gained early recognition through roles on *Freaks and Geeks* (1999) and *Undeclared* (2001) before achieving wider prominence as Marshall Eriksen on the long-running CBS series *How I Met Your Mother*, which premiered in 2005. In addition to his acting career, Segel has worked as a screenwriter and producer. A comedy peer in the same industry circles, he first appeared on *Late Night with Conan O'Brien* in 2006.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jason_Segel"
     ],
-    "enrichedAt": "2026-06-29T18:33:53.573Z"
+    "enrichedAt": "2026-08-03T17:59:40.432Z"
   },
   "Kristin Chenoweth": {
     "entity": {
@@ -4026,13 +4026,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "Kristin Chenoweth is an actress and singer recognized for her work in theater, television, and film. She originated a role in the Broadway production of *Wicked* in 2003 and appeared in the 1999 Broadway revival of *You're a Good Man, Charlie Brown*. Her television credits include *The West Wing* and *Pushing Daisies*. She may have first appeared on *Late Night with Conan O'Brien* in 2006, though this has not been confirmed.",
+    "description": "Kristin Chenoweth is an actress and singer recognized for her work in theater, television, and film. She originated a role in the Broadway production of *Wicked* in 2003 and appeared in *You're a Good Man, Charlie Brown* in 1999. Her television credits include *Pushing Daisies* and *The West Wing*. She may have first appeared on *Late Night with Conan O'Brien* in 2006, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Kristin_Chenoweth"
     ],
-    "enrichedAt": "2026-06-29T18:35:05.073Z"
+    "enrichedAt": "2026-08-03T17:59:51.369Z"
   },
   "Colin Quinn": {
     "entity": {
@@ -4072,13 +4072,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Colin Quinn is a stand-up comedian, actor, and writer best known for his work on *Saturday Night Live*, which he joined in 1995, and for hosting *Tough Crowd with Colin Quinn*, the Comedy Central talk show he launched in 2002. Earlier in his career he appeared on the game show parody *Remote Control*, and he has acted in film, including the 2015 comedy *Trainwreck*. Quinn may have a history with *Late Night with Conan O'Brien* dating to at least 1994, though the full extent of that association has not been confirmed.",
+    "description": "Colin Quinn is a stand-up comedian, actor, and writer best known for his work on *Saturday Night Live*, which he joined in 1995, and as the host of *Tough Crowd with Colin Quinn*, the Comedy Central talk show he led beginning in 2002. He also appeared on the game show *Remote Control* and had a role in the 2015 film *Trainwreck*. Quinn may be familiar to Conan O'Brien's audience as well, having possibly appeared on *Late Night with Conan O'Brien* as early as 1994, though the extent of that association remains unconfirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Colin_Quinn"
     ],
-    "enrichedAt": "2026-06-29T18:35:17.930Z"
+    "enrichedAt": "2026-08-03T18:00:03.000Z"
   },
   "Maya Rudolph": {
     "entity": {
@@ -4092,12 +4092,7 @@
     ],
     "known_for": [
       {
-        "title": "Saturday Night Live",
-        "type": "tv",
-        "year": "2000"
-      },
-      {
-        "title": "50 First Dates",
+        "title": "First Dates",
         "type": "film",
         "year": "2004"
       },
@@ -4108,7 +4103,7 @@
       },
       {
         "title": "Idiocracy",
-        "type": "film",
+        "type": "tv",
         "year": "2006"
       }
     ],
@@ -4117,13 +4112,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "Maya Rudolph is an actress and comedian best known for her work on Saturday Night Live, which she joined in 2000. Her film credits include 50 First Dates (2004), A Prairie Home Companion (2006), and Idiocracy (2006). She may have first appeared on Late Night with Conan O'Brien around 2002, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Maya Khabira Rudolph is an American actress and comedian. In 2000, she became a cast member on the NBC sketch comedy show Saturday Night Live (SNL). During her tenure on the show, she appeared in supporting roles in the films 50 First Dates (2004), A Prairie Home Companion (2006), and Idiocracy (2006). First appeared on Late Night with Conan O'Brien in 2002.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Maya_Rudolph"
     ],
-    "enrichedAt": "2026-06-29T18:35:28.348Z"
+    "enrichedAt": "2026-08-03T18:00:13.821Z"
   },
   "Jim Carrey": {
     "entity": {
@@ -4135,19 +4130,40 @@
       "actor",
       "comedian"
     ],
-    "known_for": [],
+    "known_for": [
+      {
+        "title": "The Mask",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "Ace Ventura: Pet Detective",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "The Truman Show",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "type": "film",
+        "year": "2004"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1999."
     },
-    "description": "James Eugene Carrey is a Canadian and American actor and comedian. Known primarily for his energetic slapstick performances, he is regarded as one of the most prominent comedic actors of his generation. He has received two Golden Globe Awards, in addition to nominations for BAFTA Awards and Screen Actors Guild Awards. First appeared on Late Night with Conan O'Brien in 1999.",
+    "description": "Jim Carrey is an actor and comedian known for a range of film work spanning comedy and drama. He came to wide attention with two 1994 releases, *The Mask* and *Ace Ventura: Pet Detective*, and later demonstrated broader dramatic range in *The Truman Show* (1998) and *Eternal Sunshine of the Spotless Mind* (2004). No recent projects have been confirmed. He may have first appeared on *Late Night with Conan O'Brien* in 1999, though that connection has not been fully verified.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jim_Carrey"
     ],
-    "enrichedAt": "2026-06-29T18:35:41.811Z"
+    "enrichedAt": "2026-08-03T18:00:26.624Z"
   },
   "Steve Coogan": {
     "entity": {
@@ -4188,13 +4204,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "Steve Coogan is a British actor, comedian, screenwriter, and producer best known for creating and portraying the hapless media personality Alan Partridge, a character he has developed across multiple projects including the television series *I'm Alan Partridge* (1997) and the feature film *Alan Partridge: Alpha Papa* (2013). He also appeared in the influential BBC satirical news program *The Day Today* (1994). Coogan works across performance, writing, and production. He may be familiar to American late-night audiences through what appears to have been an appearance on *Late Night with Conan O'Brien* around 2002.",
+    "description": "Steve Coogan is a British actor, comedian, screenwriter, and producer best known for creating and portraying the hapless media personality Alan Partridge, a character he has sustained across multiple formats including the television series *I'm Alan Partridge* (1997) and the feature film *Alan Partridge: Alpha Papa* (2013). He first gained wider attention through the BBC satire *The Day Today* in 1994. Coogan has also established a parallel career as a screenwriter and producer. He may have made his first appearance on *Late Night with Conan O'Brien* in 2002, though details of that connection have not been fully confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Steve_Coogan"
     ],
-    "enrichedAt": "2026-06-29T18:35:53.684Z"
+    "enrichedAt": "2026-08-03T18:00:39.004Z"
   },
   "Chris O'Donnell": {
     "entity": {
@@ -4232,13 +4248,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Chris O'Donnell is an American actor who appeared in several notable films in the early 1990s, including Men Don't Leave (1990), Fried Green Tomatoes (1991), Scent of a Woman (1992), and School Ties (1992). No recent projects have been confirmed. He may have first appeared on Late Night with Conan O'Brien in 1993, though this connection has not been fully verified.",
+    "description": "Chris O'Donnell is an actor who came to prominence in the early 1990s with a string of notable film roles. He appeared in Men Don't Leave (1990), Fried Green Tomatoes (1991), and earned wider recognition with School Ties and Scent of a Woman, both released in 1992. No recent projects have been confirmed. O'Donnell may be familiar to Conan O'Brien's audience from what appears to have been an appearance on Late Night with Conan O'Brien in 1993, likely timed to his rising profile during that period.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Chris_O'Donnell"
     ],
-    "enrichedAt": "2026-06-29T18:36:04.337Z"
+    "enrichedAt": "2026-08-03T18:00:50.205Z"
   },
   "Kelsey Grammer": {
     "entity": {
@@ -4247,9 +4263,7 @@
       "confidence": 1
     },
     "profession": [
-      "actor",
-      "comedian",
-      "producer"
+      "actor"
     ],
     "known_for": [
       {
@@ -4268,13 +4282,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Kelsey Grammer is an American actor, comedian, and producer best known for his television work. He gained widespread recognition playing psychiatrist Frasier Crane on the long-running NBC sitcom *Cheers*, beginning in 1984, and later headlined the spinoff series *Frasier*, which launched in 1993. He may have first appeared on *Late Night with Conan O'Brien* around 1993, possibly coinciding with the debut of *Frasier*, though the precise details of that connection have not been confirmed.",
+    "description": "Kelsey Grammer is an actor best known for his television work. He first gained widespread recognition playing Dr. Frasier Crane on the long-running sitcom *Cheers*, beginning in 1984. He went on to headline the spinoff series *Frasier*, which premiered in 1993. That same year, he may have made his first appearance on *Late Night with Conan O'Brien*, though this connection has not been fully confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Kelsey_Grammer"
     ],
-    "enrichedAt": "2026-06-29T18:36:15.674Z"
+    "enrichedAt": "2026-08-03T18:01:00.898Z"
   },
   "Michael Moore": {
     "entity": {
@@ -4299,7 +4313,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Michael_Moore"
     ],
-    "enrichedAt": "2026-06-29T18:36:25.600Z"
+    "enrichedAt": "2026-08-03T18:01:10.409Z"
   },
   "Jenny McCarthy": {
     "entity": {
@@ -4322,12 +4336,17 @@
       {
         "title": "The View",
         "type": "tv",
-        "year": ""
+        "year": "2013"
       },
       {
         "title": "Singled Out",
         "type": "tv",
-        "year": ""
+        "year": "1995"
+      },
+      {
+        "title": "The Masked Singer",
+        "type": "tv",
+        "year": "2019"
       }
     ],
     "recent_work": [],
@@ -4335,13 +4354,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Jenny McCarthy is an actress, model, television personality, and anti-vaccine activist. She first gained widespread attention following her appearance in Playboy in 1993, and went on to co-host the MTV dating show Singled Out. She later served as a co-host on the daytime talk program The View. McCarthy has also been a prominent and controversial public voice opposing vaccination. She may have first appeared on Late Night with Conan O'Brien as early as 1994, though this has not been confirmed. No recent professional projects have been confirmed at this time.",
+    "description": "Jenny McCarthy is an actress, model, television personality, and anti-vaccine activist who first gained widespread attention as a Playboy model in 1993. She co-hosted the MTV dating show Singled Out beginning in 1995 and has since built a broad media presence across television. Her notable credits include a co-host role on The View in 2013 and an appearance on The Masked Singer in 2019. She may have made an early television appearance on Late Night with Conan O'Brien around 1994, though this connection has not been confirmed. No recent professional projects have been announced.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jenny_McCarthy"
     ],
-    "enrichedAt": "2026-06-29T18:36:38.104Z"
+    "enrichedAt": "2026-08-03T18:01:22.839Z"
   },
   "Cameron Diaz": {
     "entity": {
@@ -4352,19 +4371,40 @@
     "profession": [
       "actress"
     ],
-    "known_for": [],
+    "known_for": [
+      {
+        "title": "The Mask",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "There's Something About Mary",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Charlie's Angels",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Bad Teacher",
+        "type": "film",
+        "year": "2011"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Cameron Michelle Diaz is an American actress. Prolific in both comedy and drama, her films have grossed over $3 billion in the U.S. box-office. Her output of romantic comedies in the late 1990s and early 2000s established her as a prominent sex symbol and one of Hollywood's most bankable stars, and in 2013, Diaz was named the highest-paid actress over 40. She has received various accolades, including nominations for a British Academy Film Award and four Golden Globe Awards. First appeared on Late Night with Conan O'Brien in 1994.",
+    "description": "Cameron Diaz is an actress who rose to prominence with her breakout role in *The Mask* (1994). She went on to star in several commercially successful films, including *There's Something About Mary* (1998), *Charlie's Angels* (2000), and *Bad Teacher* (2011). She may have made her first late-night television appearance on *Late Night with Conan O'Brien* in 1994, possibly coinciding with the release of *The Mask*. No recent film or television projects have been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Cameron_Diaz"
     ],
-    "enrichedAt": "2026-06-29T18:36:46.115Z"
+    "enrichedAt": "2026-08-03T18:01:33.752Z"
   },
   "Harland Williams": {
     "entity": {
@@ -4405,13 +4445,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Harland Williams is a comedian, actor, author, and animator best known for his roles in the films *RocketMan* (1997), *Half Baked* (1998), and *There's Something About Mary* (1998), as well as his voice work on the Disney Junior animated series *Puppy Dog Pals*, which premiered in 2017. He has worked across film, television, and entertainment in various capacities throughout his career. Williams may have first appeared on *Late Night with Conan O'Brien* as early as 1994, suggesting a long-running association with the program, though the details of that connection have not been fully confirmed.",
+    "description": "Harland Williams is a comedian, actor, author, and animator best known for his roles in the films *There's Something About Mary* (1998), *RocketMan* (1997), and *Half Baked* (1998). He has also contributed to television animation, with credits including the Disney Junior series *Puppy Dog Pals*, which debuted in 2017. Williams may have first appeared on *Late Night with Conan O'Brien* as early as 1994, suggesting a long-running association with the program. No recent projects have been confirmed at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Harland_Williams"
     ],
-    "enrichedAt": "2026-06-29T18:36:58.692Z"
+    "enrichedAt": "2026-08-03T18:01:44.997Z"
   },
   "Jennifer Aniston": {
     "entity": {
@@ -4426,22 +4466,22 @@
       {
         "title": "Friends",
         "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "The Morning Show",
-        "type": "tv",
-        "year": ""
+        "year": "1994"
       },
       {
         "title": "Marley & Me",
         "type": "film",
-        "year": ""
+        "year": "2008"
+      },
+      {
+        "title": "The Morning Show",
+        "type": "tv",
+        "year": "2019"
       },
       {
         "title": "We're the Millers",
         "type": "film",
-        "year": ""
+        "year": "2013"
       }
     ],
     "recent_work": [],
@@ -4449,13 +4489,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Jennifer Aniston is an actress best known for her television and film work spanning several decades. She gained widespread recognition through her role on the long-running television series *Friends* and has since appeared in films including *Marley & Me* and *We're the Millers*, as well as the television series *The Morning Show*. She may have first appeared on *Late Night with Conan O'Brien* as early as 1995, though this has not been confirmed. No recent projects have been confirmed at this time.",
+    "description": "Jennifer Aniston is an American actress best known for her role on the long-running television series *Friends*, which began in 1994. Her film credits include *Marley & Me* (2008) and *We're the Millers* (2013). She has also worked in television drama, appearing in *The Morning Show*, which debuted in 2019. No recent projects have been confirmed. She may have first appeared on *Late Night with Conan O'Brien* in 1995, though this connection has not been independently verified.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jennifer_Aniston"
     ],
-    "enrichedAt": "2026-06-29T18:37:10.933Z"
+    "enrichedAt": "2026-08-03T18:01:56.837Z"
   },
   "Carl Reiner": {
     "entity": {
@@ -4487,9 +4527,9 @@
         "year": "2001"
       },
       {
-        "title": "The Jerk",
+        "title": "Where's Poppa?",
         "type": "film",
-        "year": "1979"
+        "year": "1970"
       }
     ],
     "recent_work": [],
@@ -4497,13 +4537,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Carl Reiner was an actor, author, comedian, director, and screenwriter whose career spanned several decades. He is perhaps best known for creating and appearing in *The Dick Van Dyke Show*, which debuted in 1961, and for co-creating the comedy recording *The 2000 Year Old Man* in 1960. His film credits include *The Jerk* (1979) and *Ocean's Eleven* (2001). He may have first appeared on *Late Night with Conan O'Brien* as early as 1995.",
+    "description": "Carl Reiner was an actor, author, comedian, director, and screenwriter whose career spanned several decades across television, film, and other media. He is associated with the television series *The Dick Van Dyke Show* (1961), the comedy recording *The 2000 Year Old Man* (1960), and films including *Where's Poppa?* (1970) and *Ocean's Eleven* (2001). He may have first appeared on *Late Night with Conan O'Brien* as early as 1995. No recent projects have been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Carl_Reiner"
     ],
-    "enrichedAt": "2026-06-29T18:37:22.587Z"
+    "enrichedAt": "2026-08-03T18:02:08.545Z"
   },
   "Thomas Haden Church": {
     "entity": {
@@ -4542,13 +4582,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Thomas Haden Church is an American actor and director known for his work across film and television. He gained early recognition playing Lowell Mather on the television series *Wings* before earning an Academy Award nomination for his role in Alexander Payne's *Sideways* (2004). He went on to appear in the blockbuster *Spider-Man 3* (2007) and more recently starred in the television adaptation *Twisted Metal* (2023). Church may have first appeared on *Late Night with Conan O'Brien* as early as 1995, though details of that appearance have not been confirmed.",
+    "description": "Thomas Haden Church is an American actor and director known for his work across film and television. He gained early recognition playing Lowell Mather on the sitcom *Wings* and later earned an Academy Award nomination for his performance in *Sideways* (2004). He appeared as Sandman in *Spider-Man 3* (2007) and more recently starred in the television series *Twisted Metal* (2023). He may have first appeared on *Late Night with Conan O'Brien* as early as 1995.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Thomas_Haden_Church"
     ],
-    "enrichedAt": "2026-06-29T18:37:34.537Z"
+    "enrichedAt": "2026-08-03T18:02:19.770Z"
   },
   "Rebecca Romijn": {
     "entity": {
@@ -4562,9 +4602,9 @@
     ],
     "known_for": [
       {
-        "title": "X-Men",
+        "title": "X-Men film series (Mystique)",
         "type": "film",
-        "year": "2000"
+        "year": ""
       },
       {
         "title": "Star Trek: Strange New Worlds",
@@ -4582,13 +4622,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Rebecca Romijn is an actress and model recognized for her role in the 2000 film *X-Men* and her television appearances in *Star Trek: Discovery* (2019) and *Star Trek: Strange New Worlds* (2022). She may have first appeared on *Late Night with Conan O'Brien* as early as 1996, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Rebecca Romijn is an American actress and model best known for her role as the shape-shifting Mystique in the X-Men film series. She has also established a presence in the Star Trek universe, appearing in Star Trek: Discovery in 2019 and Star Trek: Strange New Worlds beginning in 2022. Prior to her acting career gaining traction, Romijn built a profile as a model. She may have first appeared on Late Night with Conan O'Brien as early as 1996, though this has not been definitively confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Rebecca_Romijn"
     ],
-    "enrichedAt": "2026-06-29T18:37:45.222Z"
+    "enrichedAt": "2026-08-03T18:02:31.003Z"
   },
   "Jackie Chan": {
     "entity": {
@@ -4609,7 +4649,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Jackie_Chan"
     ],
-    "enrichedAt": "2026-06-29T18:37:54.039Z"
+    "enrichedAt": "2026-08-03T18:02:39.338Z"
   },
   "Kyra Sedgwick": {
     "entity": {
@@ -4637,8 +4677,8 @@
         "year": "1989"
       },
       {
-        "title": "Miss Rose White",
-        "type": "tv",
+        "title": "Singles",
+        "type": "film",
         "year": "1992"
       }
     ],
@@ -4647,13 +4687,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Kyra Sedgwick is an American actress best known for her lead role in the television series *The Closer*, which began in 2005. Her other credits include the 1989 film *Born on the Fourth of July*, the 1992 television movie *Miss Rose White*, and a recurring role in *Brooklyn Nine-Nine*. She may have first appeared on *Late Night with Conan O'Brien* as early as 1996, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Kyra Sedgwick is an American actress best known for her long-running role in the television series *The Closer*, which began in 2005. Her film credits include *Born on the Fourth of July* (1989) and *Singles* (1992), and she has also appeared in the television series *Brooklyn Nine-Nine*. She may have first appeared on *Late Night with Conan O'Brien* as early as 1996, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Kyra_Sedgwick"
     ],
-    "enrichedAt": "2026-06-29T18:38:04.794Z"
+    "enrichedAt": "2026-08-03T18:02:50.547Z"
   },
   "Kathy Griffin": {
     "entity": {
@@ -4682,13 +4722,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Kathy Griffin is a comedian and actress best known for her Bravo reality series *Kathy Griffin: My Life on the D-List*, which premiered in 2005 and earned her a Primetime Emmy Award in 2007. She has built a career in both stand-up comedy and television. No recent projects have been confirmed at this time. Griffin may also be familiar to late-night audiences, having reportedly first appeared on *Late Night with Conan O'Brien* as far back as 1996.",
+    "description": "Kathy Griffin is a comedian and actress best known for her Bravo reality series *Kathy Griffin: My Life on the D-List*, which debuted in 2005 and earned her a Primetime Emmy Award in 2007. She has worked extensively in stand-up comedy and television throughout her career. Griffin may have first appeared on *Late Night with Conan O'Brien* as early as 1996, though that connection has not been fully confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Kathy_Griffin"
     ],
-    "enrichedAt": "2026-06-29T18:38:16.321Z"
+    "enrichedAt": "2026-08-03T18:03:01.841Z"
   },
   "Hank Azaria": {
     "entity": {
@@ -4712,7 +4752,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Hank_Azaria"
     ],
-    "enrichedAt": "2026-06-29T18:38:26.690Z"
+    "enrichedAt": "2026-08-03T18:03:11.249Z"
   },
   "Drew Pinsky": {
     "entity": {
@@ -4742,7 +4782,7 @@
         "year": ""
       },
       {
-        "title": "Ask Dr. Drew",
+        "title": "The Adam and Drew Show",
         "type": "podcast",
         "year": ""
       }
@@ -4752,13 +4792,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "Drew Pinsky is a media personality, internist, and addiction medicine specialist best known for his long-running role on *Loveline*, which began in 1984. He has also been associated with the television programs *Celebrity Rehab with Dr. Drew* and *Dr. Drew On Call*, as well as the podcast *Ask Dr. Drew*. He may have first appeared on *Late Night with Conan O'Brien* as early as 1998, though this has not been confirmed. No recent projects have been confirmed at this time.",
+    "description": "Drew Pinsky is a media personality, internist, and addiction medicine specialist best known for his long-running role on *Loveline*, which began in 1984. He has hosted several television programs, including *Celebrity Rehab with Dr. Drew* and *Dr. Drew On Call*, and co-hosts *The Adam and Drew Show* podcast. He may have first appeared on *Late Night with Conan O'Brien* as early as 1998, though this has not been confirmed. No recent projects have been announced.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Drew_Pinsky"
     ],
-    "enrichedAt": "2026-06-29T18:38:38.723Z"
+    "enrichedAt": "2026-08-03T18:03:21.897Z"
   },
   "Dennis Quaid": {
     "entity": {
@@ -4771,24 +4811,24 @@
     ],
     "known_for": [
       {
-        "title": "The Day After Tomorrow",
+        "title": "Breaking Away",
         "type": "film",
-        "year": "2004"
+        "year": "1979"
       },
       {
-        "title": "The Parent Trap",
-        "type": "film",
-        "year": "1998"
+        "title": "Jaws 3-D",
+        "type": "tv",
+        "year": "1983"
       },
       {
         "title": "Innerspace",
-        "type": "film",
+        "type": "tv",
         "year": "1987"
       },
       {
-        "title": "Frequency",
-        "type": "film",
-        "year": "2000"
+        "title": "Great Balls of Fire!",
+        "type": "tv",
+        "year": "1989"
       }
     ],
     "recent_work": [],
@@ -4796,13 +4836,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
     },
-    "description": "Dennis Quaid is an American actor whose career spans several decades and multiple genres. He is perhaps best known for his roles in *Innerspace* (1987), *The Parent Trap* (1998), *Frequency* (2000), and *The Day After Tomorrow* (2004). He may have first appeared on *Late Night with Conan O'Brien* around 2001, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Dennis William Quaid is an American actor. He is known for his starring roles in many successful films, including Breaking Away (1979), Jaws 3-D (1983), Innerspace (1987), Great Balls of Fire! (1989), Dragonheart (1996), The Parent Trap (1998), Frequency (2000), The Rookie (2002), The Alamo (2004), The Day After Tomorrow (2004), In Good Company (2004), Flight of the Phoenix (2004), Yours, Mine & Ours (2005), and Vantage Point (2008). In 2003, Quaid received a Golden Globe Award nomination for Far from Heaven (2002). First appeared on Late Night with Conan O'Brien in 2001.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Dennis_Quaid"
     ],
-    "enrichedAt": "2026-06-29T18:38:50.165Z"
+    "enrichedAt": "2026-08-03T18:03:33.238Z"
   },
   "Sienna Miller": {
     "entity": {
@@ -4841,13 +4881,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
-    "description": "Sienna Miller is a British-American actress and model who rose to prominence in the mid-2000s with roles in *Layer Cake* (2004), *Alfie* (2004), and *Factory Girl* (2006), the latter earning her significant critical attention for her portrayal of Edie Sedgwick. She reached broader mainstream audiences with her role in the blockbuster *G.I. Joe: The Rise of Cobra* (2009). She may have first connected with Conan O'Brien's audience through an appearance on *Late Night with Conan O'Brien* as early as 2003, around the time her career was gaining momentum.",
+    "description": "Sienna Miller is a British-American actress and model who first gained widespread attention with roles in the 2004 films *Layer Cake* and *Alfie*. She continued to build her film career with *Factory Girl* in 2006 and the action blockbuster *G.I. Joe: The Rise of Cobra* in 2009. She may have first appeared on *Late Night with Conan O'Brien* as early as 2003, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Sienna_Miller"
     ],
-    "enrichedAt": "2026-06-29T18:39:02.253Z"
+    "enrichedAt": "2026-08-03T18:03:45.352Z"
   },
   "Eric Bana": {
     "entity": {
@@ -4857,7 +4897,8 @@
     },
     "profession": [
       "actor",
-      "producer"
+      "producer",
+      "comedian"
     ],
     "known_for": [
       {
@@ -4881,13 +4922,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
-    "description": "Eric Bana is an Australian actor and producer who first gained recognition through the television sketch comedy series *Full Frontal* and a supporting role in the 1997 Australian film *The Castle*. He rose to broader prominence with his lead performance in *Chopper* (2000), a crime drama based on the life of Australian criminal Mark \"Chopper\" Read. Bana has worked across both film and television throughout his career. He may be best known to American late-night audiences through appearances on *Late Night with Conan O'Brien*, where he is believed to have first appeared in 2003, though that connection has not been fully confirmed.",
+    "description": "Eric Bana is an Australian actor, producer, and comedian. He first gained widespread recognition through his work on the television series *Full Frontal* and went on to appear in the 1997 film *The Castle*. His performance in the 2000 film *Chopper* brought him significant critical attention. He may have first appeared on *Late Night with Conan O'Brien* in 2003, though this has not been confirmed. No recent projects have been confirmed at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Eric_Bana"
     ],
-    "enrichedAt": "2026-06-29T18:39:14.776Z"
+    "enrichedAt": "2026-08-03T18:03:56.476Z"
   },
   "Joe Buck": {
     "entity": {
@@ -4897,7 +4938,8 @@
     },
     "profession": [
       "sportscaster",
-      "play-by-play announcer"
+      "play-by-play announcer",
+      "television host"
     ],
     "known_for": [
       {
@@ -4906,19 +4948,29 @@
         "year": ""
       },
       {
-        "title": "Fox NFL Sunday",
+        "title": "Fox NFL Coverage",
         "type": "tv",
-        "year": ""
+        "year": "1994"
       },
       {
-        "title": "MLB on Fox",
+        "title": "Fox MLB Coverage",
+        "type": "tv",
+        "year": "1994"
+      },
+      {
+        "title": "Sports Jeopardy!",
         "type": "tv",
         "year": ""
       }
     ],
     "recent_work": [
       {
-        "title": "Monday Night Football on ESPN/ABC",
+        "title": "Monday Night Football",
+        "type": "tv",
+        "year": "2024"
+      },
+      {
+        "title": "Sports Jeopardy!",
         "type": "tv",
         "year": "2024"
       }
@@ -4927,13 +4979,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
-    "description": "Joe Buck is a sportscaster and play-by-play announcer best known for his work on Fox NFL Sunday, MLB on Fox, and Monday Night Football. He has been a prominent voice in both professional football and baseball broadcasting, and most recently called Monday Night Football for ESPN/ABC in 2024. Buck may be familiar to late-night audiences as well — he appears to have first visited Late Night with Conan O'Brien in 2003, though the full extent of his appearances on the program is unclear.",
+    "description": "Joe Buck is a sportscaster, play-by-play announcer, and television host. He has been a fixture in sports broadcasting since 1994, when he began covering NFL and MLB games for Fox. His work on Fox NFL Coverage and Fox MLB Coverage established him as one of the most recognizable voices in American sports television. Buck has also hosted Sports Jeopardy! and currently calls games for Monday Night Football, with both roles continuing into 2024. He may be best known to late-night audiences through an appearance on Late Night with Conan O'Brien, where he reportedly first appeared in 2003.",
     "confidence": 0.7,
-    "needs_review": false,
+    "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Joe_Buck"
     ],
-    "enrichedAt": "2026-06-29T18:39:27.053Z"
+    "enrichedAt": "2026-08-03T18:04:08.607Z"
   },
   "Paul Bettany": {
     "entity": {
@@ -4966,13 +5018,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "Paul Bettany is a British actor best known for his work in the Marvel Cinematic Universe, where he provided the voice of J.A.R.V.I.S. and later portrayed the character Vision across multiple films. He continued in the role in the Disney+ television series *WandaVision* (2021). No recent projects have been confirmed at this time. Bettany may have first appeared on *Late Night with Conan O'Brien* as early as 2004, though this has not been independently verified.",
+    "description": "Paul Bettany is a British actor best known for his work in the Marvel Cinematic Universe, where he provided the voice of J.A.R.V.I.S. and later portrayed the android Vision on screen. He reprised the role of Vision in the Disney+ series *WandaVision* (2021). No recent projects have been confirmed. Bettany may have first appeared on *Late Night with Conan O'Brien* in 2004, though this has not been independently verified.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Paul_Bettany"
     ],
-    "enrichedAt": "2026-06-29T18:39:38.721Z"
+    "enrichedAt": "2026-08-03T18:04:19.879Z"
   },
   "Jesse Eisenberg": {
     "entity": {
@@ -5002,9 +5054,9 @@
         "year": "2016"
       },
       {
-        "title": "The Art of Self-Defense",
+        "title": "The Double",
         "type": "film",
-        "year": "2019"
+        "year": "2013"
       }
     ],
     "recent_work": [],
@@ -5012,13 +5064,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "Jesse Eisenberg is an American actor, playwright, and filmmaker. He is perhaps best known for his portrayal of Mark Zuckerberg in David Fincher's *The Social Network* (2010), alongside notable roles in *Zombieland* (2009), *Batman v Superman: Dawn of Justice* (2016), and *The Art of Self-Defense* (2019). His work spans both film and stage, reflecting a range of creative interests beyond acting. Eisenberg may have first appeared on *Late Night with Conan O'Brien* as early as 2005, though the details of that connection have not been fully confirmed.",
+    "description": "Jesse Eisenberg is an American actor, playwright, and filmmaker. He is perhaps best known for his portrayal of Mark Zuckerberg in David Fincher's *The Social Network* (2010), a role that brought him significant critical attention. His other notable film credits include *Zombieland* (2009), *The Double* (2013), and *Batman v Superman: Dawn of Justice* (2016), in which he played Lex Luthor. Beyond acting, Eisenberg has pursued work as a playwright and filmmaker. He may have first appeared on *Late Night with Conan O'Brien* as early as 2005, though the details of that connection remain unconfirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jesse_Eisenberg"
     ],
-    "enrichedAt": "2026-06-29T18:39:50.480Z"
+    "enrichedAt": "2026-08-03T18:04:31.455Z"
   },
   "Jack Black": {
     "entity": {
@@ -5030,6 +5082,7 @@
       "actor",
       "comedian",
       "singer",
+      "songwriter",
       "musician"
     ],
     "known_for": [
@@ -5059,13 +5112,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "Jack Black is an actor, comedian, singer, and musician best known for his roles in *School of Rock* (2003), *High Fidelity* (2000), and *Kung Fu Panda* (2008). He is also a co-founder of the rock comedy duo Tenacious D, formed in 1994. Black may have first appeared on *Late Night with Conan O'Brien* around 2000, though this has not been confirmed.",
+    "description": "Jack Black is an actor, comedian, singer, songwriter, and musician who co-founded the rock comedy duo Tenacious D in 1994. He is known for his roles in *High Fidelity* (2000), *School of Rock* (2003), and as the voice of Po in the *Kung Fu Panda* franchise (2008). He may have first appeared on *Late Night with Conan O'Brien* around 2000, roughly coinciding with the release of *High Fidelity*. No recent projects have been confirmed at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jack_Black"
     ],
-    "enrichedAt": "2026-06-29T18:40:01.723Z"
+    "enrichedAt": "2026-08-03T18:04:42.996Z"
   },
   "John C Reilly": {
     "entity": {
@@ -5103,13 +5156,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "John C. Reilly is an American actor known for his work across a range of genres. He appeared in the Academy Award-winning musical *Chicago* (2002), the comedy *Step Brothers* (2008), the musical parody *Walk Hard: The Dewey Cox Story* (2007), and provided voice work in the animated film *Wreck-It Ralph* (2012). He may have first appeared on *Late Night with Conan O'Brien* around 2000, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "John C. Reilly is an actor known for his work across a range of film genres. He appeared in the Academy Award-winning musical *Chicago* (2002), the comedy *Step Brothers* (2008), the musical parody *Walk Hard: The Dewey Cox Story* (2007), and provided voice work in the animated film *Wreck-It Ralph* (2012). He may have first appeared on *Late Night with Conan O'Brien* as early as 2000. No recent projects have been confirmed at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/John_C._Reilly"
     ],
-    "enrichedAt": "2026-06-29T18:40:13.992Z"
+    "enrichedAt": "2026-08-03T18:04:54.131Z"
   },
   "Tracy Morgan": {
     "entity": {
@@ -5143,13 +5196,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "Tracy Morgan is a stand-up comedian and actor best known for his work on television. He was a cast member on *Saturday Night Live* beginning in 1996 and went on to star in the comedy series *30 Rock*, which premiered in 2006. He has also appeared in *The Last O.G.* Morgan may have first appeared on *Late Night with Conan O'Brien* around 2000, though this has not been confirmed.",
+    "description": "Tracy Morgan is a stand-up comedian and actor best known for his work on the NBC sketch comedy series *Saturday Night Live*, which he joined in 1996, and the NBC sitcom *30 Rock*, which premiered in 2006. He also stars in *The Last O.G.* Morgan may have first appeared on *Late Night with Conan O'Brien* as early as 2000, though that connection has not been fully confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Tracy_Morgan"
     ],
-    "enrichedAt": "2026-06-29T18:40:25.478Z"
+    "enrichedAt": "2026-08-03T18:05:04.550Z"
   },
   "Jake Gyllenhaal": {
     "entity": {
@@ -5158,22 +5211,42 @@
       "confidence": 1
     },
     "profession": [
-      "actor whose career on screen",
-      "stage has spanned more than three decades"
+      "actor"
     ],
-    "known_for": [],
+    "known_for": [
+      {
+        "title": "Brokeback Mountain",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Zodiac",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Nightcrawler",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Spider-Man: Far From Home",
+        "type": "film",
+        "year": "2019"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "Jacob Benjamin Gyllenhaal is an American actor whose career on screen and stage has spanned more than three decades. Born into the Gyllenhaal family, he is the son of film director Stephen Gyllenhaal and screenwriter Naomi Foner, and the younger brother of actress Maggie Gyllenhaal. First appeared on Late Night with Conan O'Brien in 2005.",
+    "description": "Jake Gyllenhaal is an American actor known for his work across a range of dramatic and genre films. His notable credits include *Brokeback Mountain* (2005), *Zodiac* (2007), *Nightcrawler* (2014), and *Spider-Man: Far From Home* (2019). He may have first appeared on *Late Night with Conan O'Brien* around 2005, possibly in connection with the release of *Brokeback Mountain*, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jake_Gyllenhaal"
     ],
-    "enrichedAt": "2026-06-29T18:40:33.872Z"
+    "enrichedAt": "2026-08-03T18:05:15.350Z"
   },
   "Kristen Schaal": {
     "entity": {
@@ -5219,13 +5292,13 @@
       "type": "inferred",
       "evidence": "First appeared on Conan in 2010."
     },
-    "description": "Kristen Schaal is an actress, comedian, and writer best known for her roles in the animated series *Bob's Burgers* and *Gravity Falls*, as well as the television comedies *Flight of the Conchords* and *The Last Man on Earth*. She is set to appear in the *Toy Story* franchise in 2026. Schaal may have first connected with late-night audiences through an appearance on *Conan* around 2010, though the details of that relationship remain unclear.",
+    "description": "Kristen Schaal is an actress, comedian, and writer best known for her roles in the animated series *Bob's Burgers* and *Gravity Falls*, as well as the live-action television series *Flight of the Conchords* and *The Last Man on Earth*. She is set to appear in the *Toy Story* franchise in 2026. Schaal may have first connected with late-night audiences through an appearance on *Conan* in 2010, though the full extent of that relationship is unclear.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Kristen_Schaal"
     ],
-    "enrichedAt": "2026-06-29T18:40:45.542Z"
+    "enrichedAt": "2026-08-03T18:05:26.453Z"
   },
   "Joel McHale": {
     "entity": {
@@ -5265,13 +5338,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2008."
     },
-    "description": "Joel McHale is an actor, comedian, and television presenter best known for hosting the long-running E! series *The Soup* beginning in 2004 and starring in the NBC ensemble comedy *Community*, which premiered in 2009. His film credits include *Ted* (2012) and *The Happytime Murders* (2018). He may have first appeared on *Late Night with Conan O'Brien* in 2008, though this has not been confirmed. No recent projects have been announced.",
+    "description": "Joel McHale is an actor, comedian, and television presenter best known for hosting E!'s pop culture commentary series *The Soup*, which he led beginning in 2004, and for playing Jeff Winger on the NBC sitcom *Community*, which premiered in 2009. He has also appeared in feature films, including the comedy *Ted* (2012) and *The Happytime Murders* (2018). He may have first appeared on *Late Night with Conan O'Brien* in 2008, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Joel_McHale"
     ],
-    "enrichedAt": "2026-06-29T18:40:57.819Z"
+    "enrichedAt": "2026-08-03T18:05:37.591Z"
   },
   "John Krasinski": {
     "entity": {
@@ -5305,13 +5378,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "John Krasinski is an actor and filmmaker best known for his role in the television series *The Office*, which began in 2005. He later moved into directing with *A Quiet Place* (2018), a film he also starred in, followed by *A Quiet Place Part II* in 2020. He may have first appeared on *Late Night with Conan O'Brien* around 2005, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "John Krasinski is an actor and filmmaker best known for his role in the NBC television series *The Office*, which premiered in 2005. He has since expanded into directing and producing, with his credits including the films *A Quiet Place* (2018) and *A Quiet Place Part II* (2020). Krasinski may have first appeared on *Late Night with Conan O'Brien* around 2005, possibly coinciding with the debut of *The Office*, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/John_Krasinski"
     ],
-    "enrichedAt": "2026-06-29T18:41:08.580Z"
+    "enrichedAt": "2026-08-03T18:05:48.441Z"
   },
   "Rob Lowe": {
     "entity": {
@@ -5351,13 +5424,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Rob Lowe is an American actor, filmmaker, and entertainment host whose career spans several decades. He gained recognition in the early 1980s through ensemble films including *The Outsiders* (1983) and *St. Elmo's Fire* (1985), later appearing in *About Last Night...* (1986) and *Wayne's World* (1992). He may have first appeared on *Late Night with Conan O'Brien* as early as 1994, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Rob Lowe is an actor, filmmaker, and entertainment host whose career spans several decades. He became widely recognized through his roles in the early films *The Outsiders* (1983), *St. Elmo's Fire* (1985), and *About Last Night...* (1986), and later appeared in the comedy *Wayne's World* (1992). He may have first appeared on *Late Night with Conan O'Brien* as early as 1994, though this has not been confirmed. No recent projects have been confirmed at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Rob_Lowe"
     ],
-    "enrichedAt": "2026-06-29T18:41:20.118Z"
+    "enrichedAt": "2026-08-03T18:05:59.573Z"
   },
   "Ted Danson": {
     "entity": {
@@ -5375,14 +5448,14 @@
         "year": "1982"
       },
       {
-        "title": "The Good Place",
-        "type": "tv",
-        "year": "2016"
-      },
-      {
         "title": "Damages",
         "type": "tv",
         "year": "2007"
+      },
+      {
+        "title": "The Good Place",
+        "type": "tv",
+        "year": "2016"
       }
     ],
     "recent_work": [
@@ -5396,13 +5469,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
     },
-    "description": "Ted Danson is an American actor best known for his role as Sam Malone on the long-running NBC sitcom *Cheers*, which debuted in 1982. He has since appeared in the legal drama *Damages* (2007) and the philosophical comedy *The Good Place* (2016). In 2025, Danson received the Carol Burnett Award. He may have first appeared on *Late Night with Conan O'Brien* as early as 2001, though that connection has not been independently confirmed.",
+    "description": "Ted Danson is an American actor best known for his television work across four decades. He rose to prominence playing Sam Malone on the long-running sitcom *Cheers* (1982) and later earned recognition for his dramatic role in *Damages* (2007). His comedic range was further demonstrated in *The Good Place* (2016). In 2025, Danson received the Carol Burnett Award. He may have first appeared on *Late Night with Conan O'Brien* as early as 2001, though the details of that connection remain unconfirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ted_Danson"
     ],
-    "enrichedAt": "2026-06-29T18:41:31.993Z"
+    "enrichedAt": "2026-08-03T18:06:10.594Z"
   },
   "Ricky Gervais": {
     "entity": {
@@ -5414,9 +5487,8 @@
       "comedian",
       "actor",
       "writer",
-      "television producer",
-      "filmmaker",
-      "musician"
+      "producer",
+      "director"
     ],
     "known_for": [
       {
@@ -5445,13 +5517,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "Ricky Gervais is a British comedian, actor, writer, television producer, filmmaker, and musician. He is best known for creating and starring in the BBC television series *The Office* (2001), which launched his international career, as well as *Extras* (2005), *Derek* (2012), and *After Life* (2019). He may have first appeared on *Late Night with Conan O'Brien* in 2005, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Ricky Gervais is a British comedian, actor, writer, producer, and director best known for creating and starring in the television series *The Office* (2001) and *Extras* (2005). He has also written, directed, and starred in *Derek* (2012) and *After Life* (2019). He may have first appeared on *Late Night with Conan O'Brien* in 2005, though this has not been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ricky_Gervais"
     ],
-    "enrichedAt": "2026-06-29T18:41:42.552Z"
+    "enrichedAt": "2026-08-03T18:06:21.483Z"
   },
   "Howard Stern": {
     "entity": {
@@ -5476,13 +5548,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
     },
-    "description": "Howard Stern is a broadcaster, comedian, and media personality best known for *The Howard Stern Show*, which dates back to 1986. He has built a long career in radio and entertainment, establishing himself as one of the most recognized figures in American broadcasting. Stern may be familiar to *Late Night with Conan O'Brien* audiences from what appears to have been an appearance on the show in 1997, though details of that connection remain unconfirmed. No recent professional projects have been confirmed at this time.",
+    "description": "Howard Stern is a broadcaster, comedian, and media personality best known for *The Howard Stern Show*, which dates back to 1986. He has built a long career in radio and entertainment, establishing himself as one of the most recognized figures in American broadcasting. He may be familiar to *Late Night with Conan O'Brien* audiences, having reportedly made his first appearance on that program in 1997.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Howard_Stern"
     ],
-    "enrichedAt": "2026-06-29T18:41:53.616Z"
+    "enrichedAt": "2026-08-03T18:06:31.951Z"
   },
   "Gwyneth Paltrow": {
     "entity": {
@@ -5511,9 +5583,9 @@
         "year": "1995"
       },
       {
-        "title": "The Royal Tenenbaums",
+        "title": "The Talented Mr. Ripley",
         "type": "film",
-        "year": "2001"
+        "year": "1999"
       }
     ],
     "recent_work": [],
@@ -5521,13 +5593,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Gwyneth Paltrow is an American actress and businesswoman. She is known for her roles in several prominent films, including *Se7en* (1995), *Shakespeare in Love* (1998), for which she won an Academy Award, *The Royal Tenenbaums* (2001), and *Iron Man* (2008). No recent acting projects have been confirmed. She may have first appeared on *Late Night with Conan O'Brien* as early as 1993, though this has not been verified. In addition to her acting career, she has pursued business ventures in parallel with her work in film.",
+    "description": "Gwyneth Paltrow is an American actress and businesswoman. She rose to prominence through film roles in Se7en (1995), Shakespeare in Love (1998), for which she won an Academy Award, The Talented Mr. Ripley (1999), and Iron Man (2008). She may have first appeared on Late Night with Conan O'Brien as early as 1993. No recent film or television projects have been confirmed.\n\n---\n\nWait — the provided facts don't mention an Academy Award. Let me correct that.\n\n---\n\nGwyneth Paltrow is an American actress and businesswoman. She is known for her film work, including roles in Se7en (1995), Shakespeare in Love (1998), The Talented Mr. Ripley (1999), and Iron Man (2008). She may have first appeared on Late Night with Conan O'Brien as early as 1993. No recent projects have been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Gwyneth_Paltrow"
     ],
-    "enrichedAt": "2026-06-29T18:42:05.212Z"
+    "enrichedAt": "2026-08-03T18:06:44.111Z"
   },
   "Jeff Garlin": {
     "entity": {
@@ -5550,7 +5622,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Jeff_Garlin"
     ],
-    "enrichedAt": "2026-06-29T18:42:15.800Z"
+    "enrichedAt": "2026-08-03T18:06:54.067Z"
   },
   "Larry King": {
     "entity": {
@@ -5591,13 +5663,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Larry King is an American television host, radio host, author, and spokesman best known for his long-running CNN program *Larry King Live*, which debuted in 1985. He launched his national profile earlier with *The Larry King Show* in 1978. Following his CNN tenure, he continued broadcasting with *Larry King Now* and *Politicking with Larry King*, both launched in 2012 and 2013 respectively. No recent professional projects have been confirmed. King may be familiar to *Conan* audiences through what appears to have been an appearance on *Late Night with Conan O'Brien* as early as 1994.",
+    "description": "Larry King is a television host, radio host, author, and spokesman best known for his long-running interview program *Larry King Live*, which aired beginning in 1985. His broadcasting career extends back further to *The Larry King Show*, which launched in 1978. He has also hosted *Larry King Now* and *Politicking with Larry King*, both beginning in 2013 and 2012 respectively. He may be familiar to Conan O'Brien's audience from what appears to have been a first appearance on *Late Night with Conan O'Brien* in 1994.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Larry_King"
     ],
-    "enrichedAt": "2026-06-29T18:42:28.534Z"
+    "enrichedAt": "2026-08-03T18:07:05.843Z"
   },
   "Bill Maher": {
     "entity": {
@@ -5628,18 +5700,29 @@
         "year": "1993"
       }
     ],
-    "recent_work": [],
+    "recent_work": [
+      {
+        "title": "Real Time with Bill Maher",
+        "type": "tv",
+        "year": "2026"
+      },
+      {
+        "title": "Club Random",
+        "type": "podcast",
+        "year": "2026"
+      }
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Bill Maher is a television host, comedian, actor, and political commentator. He first gained widespread attention as the creator and host of *Politically Incorrect*, which debuted in 1993, and has since hosted *Real Time with Bill Maher* on HBO since 2003. He launched the podcast *Club Random* in 2022. Maher may be familiar to *Conan* audiences from what appears to have been an appearance on *Late Night with Conan O'Brien* in 1995.",
+    "description": "Bill Maher is a television host, comedian, actor, and political commentator best known for his long-running HBO series *Real Time with Bill Maher*, which premiered in 2003 and continues to air as of 2026. He first gained national attention hosting *Politically Incorrect* beginning in 1993. In 2022, he launched the podcast *Club Random*, which remains active in 2026. Maher may be familiar to Conan O'Brien's audience, having possibly appeared on *Late Night with Conan O'Brien* as early as 1995.",
     "confidence": 1,
-    "needs_review": false,
+    "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Bill_Maher"
     ],
-    "enrichedAt": "2026-06-29T18:42:41.937Z"
+    "enrichedAt": "2026-08-03T18:07:18.984Z"
   },
   "Queen Latifah": {
     "entity": {
@@ -5653,7 +5736,7 @@
     ],
     "known_for": [
       {
-        "title": "Grammy Award Winner",
+        "title": "Grammy Award",
         "type": "other",
         "year": ""
       },
@@ -5673,13 +5756,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Queen Latifah is a rapper and actress recognized for a career spanning multiple decades and disciplines. She is a Grammy Award winner and received a star on the Hollywood Walk of Fame in 2006. In 2026, she is set to be inducted into the Rock and Roll Hall of Fame. She may have first appeared on *Late Night with Conan O'Brien* as early as 1995. No recent projects have been confirmed at this time.",
+    "description": "Queen Latifah is a rapper and actress recognized for a career spanning multiple decades. She has received a Grammy Award and was honored with a star on the Hollywood Walk of Fame in 2006. In 2026, she is set to be inducted into the Rock and Roll Hall of Fame. No recent projects have been confirmed at this time. She may have first appeared on *Late Night with Conan O'Brien* in 1995, though this connection has not been fully verified.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Queen_Latifah"
     ],
-    "enrichedAt": "2026-06-29T18:42:54.766Z"
+    "enrichedAt": "2026-08-03T18:07:30.196Z"
   },
   "Martin Scorsese": {
     "entity": {
@@ -5706,7 +5789,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Martin_Scorsese"
     ],
-    "enrichedAt": "2026-06-29T18:43:05.387Z"
+    "enrichedAt": "2026-08-03T18:07:40.136Z"
   },
   "Heather Locklear": {
     "entity": {
@@ -5715,15 +5798,18 @@
       "confidence": 1
     },
     "profession": [
-      "actress known for her role as am",
-      "a woodward on melrose place ",
-      "for which she received four consecutive golden globe nominations for best actress  television series drama"
+      "actress"
     ],
     "known_for": [
       {
-        "title": "Amanda Woodward on Melrose Place",
+        "title": "Melrose Place",
         "type": "tv",
         "year": "1993"
+      },
+      {
+        "title": "Dynasty",
+        "type": "tv",
+        "year": "1981"
       }
     ],
     "recent_work": [],
@@ -5731,13 +5817,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Heather Deen Locklear is an American actress known for her role as Amanda Woodward on Melrose Place (1993–1999), for which she received four consecutive Golden Globe nominations for Best Actress – Television Series Drama. She is also known for her role as Sammy Jo Carrington on Dynasty from 1981 to 1989, her first major television role, which began a longtime collaboration with producer Aaron Spelling. First appeared on Late Night with Conan O'Brien in 1996.",
+    "description": "Heather Locklear is an actress best known for her television work, including her role on *Dynasty*, which began in 1981, and her prominent part in *Melrose Place*, where she appeared starting in 1993. She may have first appeared on *Late Night with Conan O'Brien* in 1996, though this connection has not been fully confirmed. No recent professional projects have been confirmed at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Heather_Locklear"
     ],
-    "enrichedAt": "2026-06-29T18:43:25.571Z"
+    "enrichedAt": "2026-08-03T18:07:51.112Z"
   },
   "Charlize Theron": {
     "entity": {
@@ -5755,13 +5841,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
     },
-    "description": "Charlize Theron is a South African and American actress and producer. One of the world's highest-paid actresses, she is the recipient of an Academy Award and a Golden Globe Award. In 2016, Time named her one of the 100 most influential people in the world. First appeared on Late Night with Conan O'Brien in 1997.",
+    "description": "Charlize Theron is a South African and American actress and producer. One of the world's highest-paid actresses, her accolades include an Academy Award and a Golden Globe Award, in addition to nominations for two Emmy Awards and three British Academy Film Awards. First appeared on Late Night with Conan O'Brien in 1997.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Charlize_Theron"
     ],
-    "enrichedAt": "2026-06-29T18:43:37.370Z"
+    "enrichedAt": "2026-08-03T18:08:02.125Z"
   },
   "Ethan Hawke": {
     "entity": {
@@ -5791,9 +5877,9 @@
         "year": "2014"
       },
       {
-        "title": "The Before Trilogy",
+        "title": "The Black Phone",
         "type": "film",
-        "year": ""
+        "year": "2022"
       }
     ],
     "recent_work": [],
@@ -5801,13 +5887,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
     },
-    "description": "Ethan Hawke is an American actor, author, and filmmaker. He is best known for his roles in *Before Sunrise* (1995), *Training Day* (2001), and *Boyhood* (2014), and for his work across the Before Trilogy. Hawke has received recognition throughout his career for his range across both independent and mainstream film. He may have first appeared on *Late Night with Conan O'Brien* as early as 1997, though this has not been confirmed.",
+    "description": "Ethan Hawke is an American actor, author, and filmmaker whose career spans several decades. He is widely recognized for his roles in *Before Sunrise* (1995), *Training Day* (2001), *Boyhood* (2014), and *The Black Phone* (2022). Working across film and literary projects, Hawke has established himself as a multifaceted figure in American entertainment. He may have first appeared on *Late Night with Conan O'Brien* as early as 1997, though that connection has not been fully confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ethan_Hawke"
     ],
-    "enrichedAt": "2026-06-29T18:43:48.659Z"
+    "enrichedAt": "2026-08-03T18:08:13.252Z"
   },
   "Seth Green": {
     "entity": {
@@ -5828,12 +5914,12 @@
       {
         "title": "Radio Days",
         "type": "film",
-        "year": ""
+        "year": "1987"
       },
       {
         "title": "Can't Buy Me Love",
         "type": "film",
-        "year": ""
+        "year": "1987"
       },
       {
         "title": "Big Business",
@@ -5846,13 +5932,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "Seth Green is an actor and producer whose screen credits include *The Hotel New Hampshire* (1984), *Radio Days*, *Can't Buy Me Love*, and *Big Business* (1988). He may be familiar to late-night audiences from what appears to have been an appearance on *Late Night with Conan O'Brien* as early as 1998, though details of that association have not been fully confirmed. No recent projects have been announced at this time.",
+    "description": "Seth Green is an actor and producer whose early screen work included roles in The Hotel New Hampshire (1984), Radio Days (1987), Can't Buy Me Love (1987), and Big Business (1988). No recent projects have been confirmed at this time. He may be best known to late-night audiences through what appears to have been a first appearance on Late Night with Conan O'Brien in 1998, though the full scope of that association has not been independently verified.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Seth_Green"
     ],
-    "enrichedAt": "2026-06-29T18:43:59.892Z"
+    "enrichedAt": "2026-08-03T18:08:23.652Z"
   },
   "Reese Witherspoon": {
     "entity": {
@@ -5876,7 +5962,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Reese_Witherspoon"
     ],
-    "enrichedAt": "2026-06-29T18:44:08.954Z"
+    "enrichedAt": "2026-08-03T18:08:31.752Z"
   },
   "Megan Mullally": {
     "entity": {
@@ -10424,5 +10510,52 @@
     "needs_review": true,
     "sources": [],
     "enrichedAt": "2026-07-27T17:59:39.374Z"
+  },
+  "Ice Cube": {
+    "entity": {
+      "name": "Ice Cube",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ice_Cube",
+      "confidence": 1
+    },
+    "profession": [
+      "rapper",
+      "songwriter",
+      "actor",
+      "film producer"
+    ],
+    "known_for": [
+      {
+        "title": "Straight Outta Compton (N.W.A)",
+        "type": "other",
+        "year": "1989"
+      },
+      {
+        "title": "AmeriKKKa's Most Wanted",
+        "type": "other",
+        "year": "1990"
+      },
+      {
+        "title": "Death Certificate",
+        "type": "other",
+        "year": "1991"
+      },
+      {
+        "title": "The Predator",
+        "type": "other",
+        "year": "1992"
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+    },
+    "description": "Ice Cube is a rapper, songwriter, actor, and film producer. He rose to prominence as a member of N.W.A, appearing on the group's landmark 1989 album *Straight Outta Compton*, before launching a solo career with *AmeriKKKa's Most Wanted* (1990), *Death Certificate* (1991), and *The Predator* (1992). He has also worked extensively in film as both an actor and producer. He may have first appeared on *Late Night with Conan O'Brien* in 1995, though this has not been confirmed.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ice_Cube"
+    ],
+    "enrichedAt": "2026-08-03T17:59:29.449Z"
   }
 }
