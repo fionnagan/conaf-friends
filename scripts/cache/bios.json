@@ -8,27 +8,51 @@
     "profession": [
       "actor",
       "comedian",
-      "writer"
+      "writer",
+      "director",
+      "producer",
+      "puppeteer"
     ],
     "known_for": [
       {
-        "title": "TV Funhouse",
+        "title": "Triumph the Insult Comic Dog",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Saturday Night Live TV Funhouse",
         "type": "tv",
         "year": ""
+      },
+      {
+        "title": "Hotel Transylvania",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "You Don't Mess with the Zohan",
+        "type": "film",
+        "year": "2008"
       }
     ],
-    "recent_work": [],
+    "recent_work": [
+      {
+        "title": "Leo",
+        "type": "film",
+        "year": "2023"
+      }
+    ],
     "conan_connection": {
       "type": "direct",
       "evidence": "Harvard Lampoon alumni. First appeared on Late Night with Conan O'Brien in 2001."
     },
-    "description": "Robert Smigel is an American actor, comedian, writer, director, producer, and puppeteer, known for his Saturday Night Live \"TV Funhouse\" cartoon shorts and as the puppeteer and voice behind Triumph the Insult Comic Dog. He also co-wrote the first two Hotel Transylvania films, You Don't Mess with the Zohan, and Leo, all starring Adam Sandler. Harvard Lampoon alumni. First appeared on Late Night with Conan O'Brien in 2001.",
+    "description": "Robert Smigel is an actor, comedian, writer, director, producer, and puppeteer. He is best known as the creator and voice of Triumph the Insult Comic Dog and for his animated segment Saturday Night Live TV Funhouse. His film credits include You Don't Mess with the Zohan (2008) and Hotel Transylvania (2012), with more recent work on Leo (2023). A Harvard Lampoon alumnus, Smigel first appeared on Late Night with Conan O'Brien in 2001.",
     "confidence": 1,
-    "needs_review": false,
+    "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Robert_Smigel"
     ],
-    "enrichedAt": "2026-07-20T17:25:51.693Z"
+    "enrichedAt": "2026-08-24T16:13:23.191Z"
   },
   "Matt Damon": {
     "entity": {
@@ -37,7 +61,9 @@
       "confidence": 1
     },
     "profession": [
-      "actor"
+      "actor",
+      "film producer",
+      "screenwriter"
     ],
     "known_for": [],
     "recent_work": [],
@@ -45,13 +71,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1999."
     },
-    "description": "Matthew Paige Damon is an American actor. He was ranked among Forbes's most bankable stars in 2007, and in 2010 was one of the highest-grossing actors of all time. He has received various awards and nominations, including an Academy Award, two Golden Globe Awards, and a Screen Actors Guild Award, in addition to nominations for three British Academy Film Awards and seven Primetime Emmy Awards. First appeared on Late Night with Conan O'Brien in 1999.",
+    "description": "Matthew Paige Damon is an American actor, film producer, and screenwriter. He was ranked among Forbes's most bankable stars in 2007, and in 2010 was one of the highest-grossing actors of all time. He has received various awards and nominations, including an Academy Award, an Actor Award, and two Golden Globe Awards, in addition to nominations for three British Academy Film Awards and seven Primetime Emmy Awards. First appeared on Late Night with Conan O'Brien in 1999.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Matt_Damon"
     ],
-    "enrichedAt": "2026-07-20T17:25:59.583Z"
+    "enrichedAt": "2026-08-24T16:13:31.280Z"
   },
   "Don Cheadle": {
     "entity": {
@@ -59,20 +85,43 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Don_Cheadle",
       "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "Iron Man / War Machine (Marvel Cinematic Universe)",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "House of Lies",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "Hotel Rwanda",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Crash",
+        "type": "film",
+        "year": "2004"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "Donald Frank Cheadle Jr. is an American actor. Known for his roles in film and television, he has received multiple accolades including two Golden Globe Awards, two Grammy Awards, and a Tony Award as well as nominations for an Academy Award, two BAFTA Awards, and 11 Primetime Emmy Awards. He is one of a few actors to have received nominations for the EGOT. First appeared on Late Night with Conan O'Brien in 2005.",
+    "description": "Don Cheadle is an American actor best known for his roles in Hotel Rwanda (2004) and Crash (2004), as well as his portrayal of War Machine in the Marvel Cinematic Universe, beginning with Iron Man 2 (2010). He also starred in the Showtime series House of Lies (2012). He may have first appeared on Late Night with Conan O'Brien around 2005.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Don_Cheadle"
     ],
-    "enrichedAt": "2026-07-20T17:26:07.688Z"
+    "enrichedAt": "2026-08-24T16:13:44.783Z"
   },
   "Colin Hanks": {
     "entity": {
@@ -102,7 +151,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Colin_Hanks"
     ],
-    "enrichedAt": "2026-07-20T17:26:17.201Z"
+    "enrichedAt": "2026-08-24T16:13:54.437Z"
   },
   "Jack McBrayer": {
     "entity": {
@@ -141,13 +190,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "Jack McBrayer is an actor and comedian best known for his role in the television series *30 Rock*, which began in 2006. He has also contributed voice work to several projects, including the animated film *Wreck-It Ralph* (2012) and the television series *Wander Over Yonder* (2013) and *Big Mouth*. He may have first appeared on *Late Night with Conan O'Brien* in 2006, though that connection has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Jack McBrayer is an actor and comedian best known for his role on the television series *30 Rock*, which began in 2006. He has also contributed voice work to several animated projects, including the 2012 film *Wreck-It Ralph*, the television series *Wander Over Yonder* beginning in 2013, and *Big Mouth*. He may have first appeared on *Late Night with Conan O'Brien* in 2006, though this connection has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jack_McBrayer"
     ],
-    "enrichedAt": "2026-07-20T17:26:28.825Z"
+    "enrichedAt": "2026-08-24T16:14:06.569Z"
   },
   "Molly Shannon": {
     "entity": {
@@ -171,7 +220,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Molly_Shannon"
     ],
-    "enrichedAt": "2026-07-20T17:31:24.796Z"
+    "enrichedAt": "2026-08-24T16:18:56.139Z"
   },
   "Will Forte": {
     "entity": {
@@ -207,13 +256,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "Will Forte is an actor, comedian, writer, and producer best known for his work on *Saturday Night Live*, where he was a cast member beginning in 2002. He developed the recurring sketch character MacGruber, which he later adapted into a feature film in 2010 and a television series in 2021. He may have first appeared on *Late Night with Conan O'Brien* as early as 2005, though that connection has not been fully confirmed.",
+    "description": "Will Forte is an actor, comedian, writer, and producer best known for his work on *Saturday Night Live*, where he was a cast member beginning in 2002. He developed the recurring SNL character MacGruber into a feature film in 2010 and later a television series in 2021. Forte may have first appeared on *Late Night with Conan O'Brien* around 2005, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Will_Forte"
     ],
-    "enrichedAt": "2026-07-20T17:26:45.974Z"
+    "enrichedAt": "2026-08-24T16:14:18.804Z"
   },
   "Howie Mandel": {
     "entity": {
@@ -307,13 +356,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
     },
-    "description": "Seth Rogen is a Canadian-American actor, comedian, filmmaker, and cannabis entrepreneur. He rose to prominence in 2007 with prominent roles in the comedies *Knocked Up* and *Superbad*, followed by *Pineapple Express* in 2008. More recently, he has been associated with the Amazon series *The Boys*, which premiered in 2019. In addition to his entertainment career, Rogen has pursued business ventures in the cannabis industry. He may have first appeared on *Late Night with Conan O'Brien* around 2007, roughly coinciding with his breakthrough in film.",
+    "description": "Seth Rogen is a Canadian-American actor, comedian, filmmaker, and cannabis entrepreneur. He rose to prominence with a string of comedy films in the late 2000s, including *Knocked Up*, *Superbad*, and *Pineapple Express*, all released between 2007 and 2008. He has also been associated with the Amazon Prime Video series *The Boys*, which premiered in 2019. Rogen may be familiar to Conan O'Brien's audience from what appears to have been an early *Late Night with Conan O'Brien* appearance around 2007, though the details of that connection have not been fully confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Seth_Rogen"
     ],
-    "enrichedAt": "2026-07-20T17:26:57.983Z"
+    "enrichedAt": "2026-08-24T16:14:30.748Z"
   },
   "Kenan Thompson": {
     "entity": {
@@ -342,13 +391,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "Kenan Thompson is an actor and comedian best known for his long-running tenure on *Saturday Night Live*, which he joined in 2003, making him the longest-tenured cast member in the show's history. He also headlined the NBC sitcom *Kenan* in 2021. Thompson may be familiar to late-night audiences as well, having reportedly first appeared on *Late Night with Conan O'Brien* in 2004.",
+    "description": "Kenan Thompson is an American actor and comedian best known for his long-running tenure on *Saturday Night Live*, which he joined in 2003, making him the longest-serving cast member in the show's history. He also starred in the NBC sitcom *Kenan*, which premiered in 2021. Thompson may have first appeared on *Late Night with Conan O'Brien* in 2004, though this connection has not been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Kenan_Thompson"
     ],
-    "enrichedAt": "2026-07-20T17:27:09.081Z"
+    "enrichedAt": "2026-08-24T16:14:41.176Z"
   },
   "John Leguizamo": {
     "entity": {
@@ -357,8 +406,9 @@
       "confidence": 1
     },
     "profession": [
+      "comedian",
       "actor",
-      "film producer"
+      "filmmaker"
     ],
     "known_for": [],
     "recent_work": [],
@@ -366,13 +416,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "John Alberto Leguizamo Peláez is an American stand-up comedian, actor, and film producer. He has received various accolades including three Emmy Awards and a Tony Award as well as a nominations for an Actor Award, a Critics' Choice Award, and a Golden Globe Award. First appeared on Late Night with Conan O'Brien in 1993.",
+    "description": "John Alberto Leguizamo Peláez (, LEG-wih-ZAH-moh; Colombian Spanish: ; born July 22, 1960 or 1964, is a Colombian American comedian, actor and filmmaker. He has received various accolades including an Emmy Award and a Tony Award as well as a nominations for an Actor Award, a Critics' Choice Award, and a Golden Globe Award. First appeared on Late Night with Conan O'Brien in 1993.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/John_Leguizamo"
     ],
-    "enrichedAt": "2026-07-20T17:27:18.881Z"
+    "enrichedAt": "2026-08-24T16:14:48.694Z"
   },
   "Paul Reubens": {
     "entity": {
@@ -389,16 +439,6 @@
         "title": "Pee-wee Herman",
         "type": "other",
         "year": ""
-      },
-      {
-        "title": "Pee-wee's Big Adventure",
-        "type": "film",
-        "year": "1985"
-      },
-      {
-        "title": "Pee-wee's Playhouse",
-        "type": "tv",
-        "year": "1986"
       }
     ],
     "recent_work": [],
@@ -406,13 +446,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
     },
-    "description": "Paul Reubens is an actor and comedian best known for creating and portraying the character Pee-wee Herman. He brought the character to wide audiences through the 1985 film *Pee-wee's Big Adventure* and the television series *Pee-wee's Playhouse*, which debuted in 1986. No recent projects have been confirmed. Reubens may be familiar to Conan O'Brien's audience through what appears to have been a first appearance on *Late Night with Conan O'Brien* in 2001.",
+    "description": "Paul Reubens is an American actor and comedian best known for creating and portraying the character Pee-wee Herman. The character became the basis for stage productions, films, and a television series that brought Reubens widespread recognition. No recent professional projects have been confirmed. Reubens may be familiar to Conan O'Brien's audience through what appears to have been an appearance on *Late Night with Conan O'Brien* in 2001, though details of that connection remain limited.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Paul_Reubens"
     ],
-    "enrichedAt": "2026-07-20T17:27:29.833Z"
+    "enrichedAt": "2026-08-24T16:15:00.230Z"
   },
   "Charles Barkley": {
     "entity": {
@@ -451,13 +491,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "Charles Barkley is a former professional basketball player and television analyst best known for his work on TNT Sports' *Inside the NBA*. During his playing career, he earned the 1993 NBA MVP award, was selected to eleven NBA All-Star Games, and was named to the NBA 75th Anniversary Team in 2021. He may have first appeared on *Late Night with Conan O'Brien* as early as 2006.",
+    "description": "Charles Barkley is a retired professional basketball player and television analyst. During his playing career, he earned 11 NBA All-Star selections and won the NBA Most Valuable Player Award in 1993. He was named to the NBA 75th Anniversary Team in 2021, recognizing him among the greatest players in the league's history. He is currently best known as an analyst on TNT Sports' *Inside the NBA*. He may have first appeared on *Late Night with Conan O'Brien* as early as 2006.",
     "confidence": 0.7,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Charles_Barkley"
     ],
-    "enrichedAt": "2026-07-20T17:27:40.913Z"
+    "enrichedAt": "2026-08-24T16:15:12.095Z"
   },
   "Tina Fey": {
     "entity": {
@@ -468,13 +508,29 @@
     "profession": [
       "actress",
       "comedian",
-      "writer"
+      "writer",
+      "producer"
     ],
     "known_for": [
       {
-        "title": "Tina",
+        "title": "30 Rock",
         "type": "tv",
-        "year": ""
+        "year": "2006"
+      },
+      {
+        "title": "Saturday Night Live",
+        "type": "tv",
+        "year": "1997"
+      },
+      {
+        "title": "Mean Girls",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Unbreakable Kimmy Schmidt",
+        "type": "tv",
+        "year": "2015"
       }
     ],
     "recent_work": [],
@@ -482,13 +538,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
     },
-    "description": "Elizabeth Stamatina \"Tina\" Fey is an American actress, comedian, writer, and producer. Known for her comedic roles in sketch comedy, television and film, Fey has received numerous accolades, including ten Primetime Emmy Awards and two Golden Globe Awards as well as nominations for a Grammy Award and a Tony Award. She appeared on the Time 100 list of the 100 most influential people in the world in both 2007 and 2009 and was awarded the Mark Twain Prize for American Humor in 2010. First appeared on Late Night with Conan O'Brien in 2001.",
+    "description": "Tina Fey is an actress, comedian, writer, and producer best known for her work on *Saturday Night Live*, which she joined in 1997, and the television series *30 Rock*, which debuted in 2006. She also wrote the screenplay for the 2004 film *Mean Girls* and served as creator and writer on *Unbreakable Kimmy Schmidt*, which premiered in 2015. She may have first appeared on *Late Night with Conan O'Brien* as early as 2001, though the details of that connection have not been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Tina_Fey"
     ],
-    "enrichedAt": "2026-07-20T17:27:51.748Z"
+    "enrichedAt": "2026-08-24T16:15:26.763Z"
   },
   "Ray Romano": {
     "entity": {
@@ -517,13 +573,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Ray Romano is a stand-up comedian and actor best known for the long-running television sitcom *Everybody Loves Raymond*, which debuted in 1996, and for voicing the woolly mammoth Manny in the 2002 animated film *Ice Age*. Romano may have gotten an early career boost from a 1994 appearance on *Late Night with Conan O'Brien*, which is believed to have helped bring him wider attention, though the full significance of that appearance remains a matter of record. He has worked across both television and film throughout his career as a performer in comedy.",
+    "description": "Ray Romano is a stand-up comedian and actor best known for his starring role in the television series *Everybody Loves Raymond*, which debuted in 1996, and for voicing the character Manny in the 2002 animated film *Ice Age*. Romano may have gotten an early career boost from his work in television appearances, including what is believed to have been a 1994 appearance on *Late Night with Conan O'Brien*. No recent projects have been confirmed at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ray_Romano"
     ],
-    "enrichedAt": "2026-07-20T17:28:03.477Z"
+    "enrichedAt": "2026-08-24T16:15:40.965Z"
   },
   "Ike Barinholtz": {
     "entity": {
@@ -606,9 +662,9 @@
         "year": "2005"
       },
       {
-        "title": "Nosferatu the Vampyre",
+        "title": "Aguirre, the Wrath of God",
         "type": "film",
-        "year": "1979"
+        "year": "1972"
       }
     ],
     "recent_work": [],
@@ -616,13 +672,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2008."
     },
-    "description": "Werner Herzog is a German filmmaker, actor, opera director, author, and documentarian associated with the New German Cinema movement. His work spans fiction and nonfiction, with notable titles including *Nosferatu the Vampyre* (1979), *Fitzcarraldo* (1982), and *Grizzly Man* (2005). He may have first appeared on *Late Night with Conan O'Brien* in 2008, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Werner Herzog is a German filmmaker, actor, opera director, author, and documentarian associated with the New German Cinema movement. He is best known for his films *Aguirre, the Wrath of God* (1972), *Fitzcarraldo* (1982), and the documentary *Grizzly Man* (2005). He may have first appeared on *Late Night with Conan O'Brien* in 2008, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Werner_Herzog"
     ],
-    "enrichedAt": "2026-07-20T17:34:49.756Z"
+    "enrichedAt": "2026-08-24T16:22:27.094Z"
   },
   "Julia Louis-Dreyfus": {
     "entity": {
@@ -642,19 +698,19 @@
         "year": "1989"
       },
       {
-        "title": "The New Adventures of Old Christine",
-        "type": "tv",
-        "year": "2006"
-      },
-      {
         "title": "Veep",
         "type": "tv",
         "year": "2012"
       },
       {
-        "title": "Arrested Development",
+        "title": "The New Adventures of Old Christine",
         "type": "tv",
-        "year": "2013"
+        "year": "2006"
+      },
+      {
+        "title": "Saturday Night Live",
+        "type": "tv",
+        "year": "1982"
       }
     ],
     "recent_work": [],
@@ -662,13 +718,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "Julia Louis-Dreyfus is an American actress, comedian, and producer best known for her television work spanning several decades. She gained wide recognition as Elaine Benes on *Seinfeld* (1989) and later starred in *The New Adventures of Old Christine* (2006) and *Veep* (2012), while also appearing in *Arrested Development* (2013). She may have first appeared on *Late Night with Conan O'Brien* in 2002, though this has not been confirmed.",
+    "description": "Julia Louis-Dreyfus is an actress, comedian, and producer best known for her work in television. She joined the cast of *Saturday Night Live* in 1982 and later gained widespread recognition for her role in *Seinfeld*, which premiered in 1989. She subsequently starred in *The New Adventures of Old Christine* beginning in 2006 and *Veep*, which debuted in 2012. She may have first appeared on *Late Night with Conan O'Brien* in 2002, though this has not been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Julia_Louis-Dreyfus"
     ],
-    "enrichedAt": "2026-07-20T17:33:39.256Z"
+    "enrichedAt": "2026-08-24T16:21:24.494Z"
   },
   "Bill Hader": {
     "entity": {
@@ -688,14 +744,14 @@
         "year": "2005"
       },
       {
-        "title": "Stefon",
-        "type": "tv",
-        "year": "2008"
+        "title": "Inside Out",
+        "type": "film",
+        "year": "2015"
       },
       {
-        "title": "Barry",
-        "type": "tv",
-        "year": "2018"
+        "title": "Cloudy with a Chance of Meatballs",
+        "type": "film",
+        "year": "2009"
       }
     ],
     "recent_work": [],
@@ -703,13 +759,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "Bill Hader is an actor, comedian, and filmmaker best known for his work on *Saturday Night Live*, where he was a featured player beginning in 2005 and originated the recurring character Stefon in 2008. He went on to co-create and star in the HBO dark comedy series *Barry*, which premiered in 2018. Hader may have first appeared on *Late Night with Conan O'Brien* in 2005, possibly coinciding with the start of his *SNL* tenure, though this connection has not been confirmed.",
+    "description": "Bill Hader is an actor, comedian, and filmmaker best known for his work on *Saturday Night Live*, which he joined in 2005. He has also contributed voice performances to animated films, including *Cloudy with a Chance of Meatballs* (2009) and Pixar's *Inside Out* (2015). He may have first appeared on *Late Night with Conan O'Brien* around 2005, potentially coinciding with the early period of his *SNL* tenure, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Bill_Hader"
     ],
-    "enrichedAt": "2026-07-20T17:28:17.020Z"
+    "enrichedAt": "2026-08-24T16:15:53.183Z"
   },
   "Maria Bamford": {
     "entity": {
@@ -718,21 +774,43 @@
       "confidence": 1
     },
     "profession": [
-      "actress"
+      "actress",
+      "stand-up comedian"
     ],
-    "known_for": [],
+    "known_for": [
+      {
+        "title": "Lady Dynamite",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "BoJack Horseman",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Arrested Development",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "The Maria Bamford Show",
+        "type": "other",
+        "year": "2007"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "industry",
       "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "Maria Bamford is an American actress and stand-up comedian. Her work often uses self-deprecating and dark topics, including her dysfunctional family, depression, anxiety, suicide, and mental illness. Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 2000.",
+    "description": "Maria Bamford is an actress and stand-up comedian best known for her work in television and online comedy. She first appeared on Late Night with Conan O'Brien in 2000 and has built a career spanning more than two decades. Her credits include Arrested Development (2003), The Maria Bamford Show (2007), BoJack Horseman (2014), and Lady Dynamite (2016), the Netflix series based on her life. A comedy peer of Conan O'Brien, Bamford has remained a recognizable presence in the stand-up world throughout her career.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Maria_Bamford"
     ],
-    "enrichedAt": "2026-07-20T17:28:27.248Z"
+    "enrichedAt": "2026-08-24T16:16:04.456Z"
   },
   "Lisa Kudrow": {
     "entity": {
@@ -794,23 +872,29 @@
         "year": "2000"
       },
       {
-        "title": "Jackass: The Movie",
+        "title": "Jackass (film franchise)",
         "type": "film",
         "year": "2002"
       }
     ],
-    "recent_work": [],
+    "recent_work": [
+      {
+        "title": "Jackass (film franchise)",
+        "type": "film",
+        "year": "2026"
+      }
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "Johnny Knoxville is a stunt performer, actor, producer, and screenwriter best known for creating and starring in the MTV series *Jackass*, which premiered in 2000, and its subsequent feature film adaptation, *Jackass: The Movie*, released in 2002. His work on the franchise brought mainstream attention to stunt-based comedy and established him as a prominent figure in that genre. He may have first appeared on *Late Night with Conan O'Brien* around 2002, likely in connection with the release of the film, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Johnny Knoxville is a stunt performer, actor, producer, and screenwriter best known for creating and starring in the MTV series *Jackass*, which debuted in 2000, and the subsequent film franchise that launched in 2002. He has continued his work with the franchise into 2026. Knoxville may have first appeared on *Late Night with Conan O'Brien* around 2002, coinciding with the release of the original *Jackass* film.",
     "confidence": 1,
-    "needs_review": false,
+    "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Johnny_Knoxville"
     ],
-    "enrichedAt": "2026-07-20T17:28:51.740Z"
+    "enrichedAt": "2026-08-24T16:16:15.338Z"
   },
   "Denis Leary": {
     "entity": {
@@ -849,13 +933,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Denis Leary is a stand-up comedian and actor best known for his 1993 comedy special *No Cure for Cancer* and his roles in the 1993 film *Demolition Man* and the 1994 film *The Ref*. He also released the stand-up special *Lock 'n Load* in 1997. Leary may have first appeared on *Late Night with Conan O'Brien* as early as 1996, though this has not been confirmed. No recent projects have been announced.",
+    "description": "Denis Leary is a stand-up comedian and actor. He released the comedy special *No Cure for Cancer* in 1993, the same year he appeared in the film *Demolition Man*. In 1994 he starred in *The Ref*, and he followed that with the comedy special *Lock 'n Load* in 1997. He may have first appeared on *Late Night with Conan O'Brien* around 1996, though this has not been confirmed. No recent projects have been announced.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Denis_Leary"
     ],
-    "enrichedAt": "2026-07-20T17:29:03.080Z"
+    "enrichedAt": "2026-08-24T16:16:28.880Z"
   },
   "Jon Stewart": {
     "entity": {
@@ -925,7 +1009,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Liam_Neeson"
     ],
-    "enrichedAt": "2026-07-20T17:29:13.678Z"
+    "enrichedAt": "2026-08-24T16:16:38.738Z"
   },
   "Neil Young": {
     "entity": {
@@ -934,28 +1018,29 @@
       "confidence": 1
     },
     "profession": [
-      "singer-songwriter"
+      "singer-songwriter",
+      "musician"
     ],
     "known_for": [
       {
-        "title": "Everybody Knows This Is Nowhere",
-        "type": "other",
-        "year": "1969"
-      },
-      {
-        "title": "After the Gold Rush",
-        "type": "tv",
-        "year": "1970"
-      },
-      {
         "title": "Harvest",
-        "type": "tv",
+        "type": "other",
         "year": "1972"
       },
       {
-        "title": "On the Beach",
-        "type": "tv",
-        "year": "1974"
+        "title": "After the Gold Rush",
+        "type": "other",
+        "year": "1970"
+      },
+      {
+        "title": "Rust Never Sleeps",
+        "type": "other",
+        "year": "1979"
+      },
+      {
+        "title": "Déjà Vu",
+        "type": "other",
+        "year": "1970"
       }
     ],
     "recent_work": [],
@@ -963,13 +1048,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "Neil Percival Young is a Canadian and American singer-songwriter. Son of journalist and author Scott Young, Young embarked on a music career in Winnipeg in the 1960s. He then moved to Los Angeles, forming the folk rock group Buffalo Springfield. His solo career, often backed by the band Crazy Horse, includes critically acclaimed albums such as Everybody Knows This Is Nowhere (1969), After the Gold Rush (1970), Harvest (1972), On the Beach (1974), and Rust Never Sleeps (1979). First appeared on Late Night with Conan O'Brien in 2004.",
+    "description": "Neil Young is a singer-songwriter and musician recognized for a body of work that spans decades of popular and rock music. His albums *After the Gold Rush* (1970), *Harvest* (1972), and *Rust Never Sleeps* (1979) are among his most noted releases, and he contributed to *Déjà Vu* (1970) as part of Crosby, Stills, Nash & Young. No recent projects have been confirmed. Young may have first appeared on *Late Night with Conan O'Brien* in 2004, though this connection has not been fully verified.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Neil_Young"
     ],
-    "enrichedAt": "2026-07-20T17:29:24.914Z"
+    "enrichedAt": "2026-08-24T16:16:50.525Z"
   },
   "Luke Wilson": {
     "entity": {
@@ -1013,7 +1098,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Luke_Wilson"
     ],
-    "enrichedAt": "2026-07-20T17:29:35.514Z"
+    "enrichedAt": "2026-08-24T16:17:00.763Z"
   },
   "Rory Scovel": {
     "entity": {
@@ -1039,7 +1124,7 @@
       },
       {
         "title": "Rory Scovel Tries Stand-Up for the First Time",
-        "type": "tv",
+        "type": "other",
         "year": "2017"
       },
       {
@@ -1053,19 +1138,24 @@
         "title": "Religion, Sex, and a Few Things in Between",
         "type": "other",
         "year": "2024"
+      },
+      {
+        "title": "The Show Must Go On",
+        "type": "other",
+        "year": "2026"
       }
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan in 2017."
     },
-    "description": "Rory Scovel is a comedian, actor, and writer whose recorded stand-up work includes *Dilation* (2011), *The Charleston Special* (2015), the Netflix special *Rory Scovel Tries Stand-Up for the First Time* (2017), and *Live Without Fear* (2021). His most recent special, *Religion, Sex, and a Few Things in Between*, was released in 2024. He may have first appeared on *Conan* in 2017, though that connection has not been confirmed. Over the course of his career, Scovel has built a body of work that spans more than a decade of recorded comedy alongside his acting and writing credits.",
+    "description": "Rory Scovel is a comedian, actor, and writer whose recorded stand-up work includes *Dilation* (2011), *The Charleston Special* (2015), *Rory Scovel Tries Stand-Up for the First Time* (2017), and *Live Without Fear* (2021). His more recent projects include *Religion, Sex, and a Few Things in Between* (2024) and the forthcoming *The Show Must Go On* (2026). He may be familiar to late-night audiences from what appears to have been a first appearance on *Conan* in 2017, though the details of that connection remain limited. Scovel has built a steady body of work across more than a decade in comedy.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Rory_Scovel"
     ],
-    "enrichedAt": "2026-07-20T17:34:13.812Z"
+    "enrichedAt": "2026-08-24T16:22:01.215Z"
   },
   "Claire Danes": {
     "entity": {
@@ -1076,19 +1166,40 @@
     "profession": [
       "actor"
     ],
-    "known_for": [],
+    "known_for": [
+      {
+        "title": "Homeland",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "My So-Called Life",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Romeo + Juliet",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "Temple Grandin",
+        "type": "tv",
+        "year": "2010"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1999."
     },
-    "description": "Claire Catherine Danes is an American actor. Prolific in film and television since her teens, she is the recipient of three Primetime Emmy Awards and four Golden Globe Awards. In 2012 and 2026, Time named her one of the 100 most influential people in the world. First appeared on Late Night with Conan O'Brien in 1999.",
+    "description": "Claire Danes is an actor known for her work in television and film. She came to prominence with the television series *My So-Called Life* and went on to appear in the 1996 film *Romeo + Juliet*. Her television credits include the HBO film *Temple Grandin* (2010) and the series *Homeland*. She may have first appeared on *Late Night with Conan O'Brien* in 1999, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Claire_Danes"
     ],
-    "enrichedAt": "2026-07-20T17:29:43.579Z"
+    "enrichedAt": "2026-08-24T16:17:11.855Z"
   },
   "Bill Burr": {
     "entity": {
@@ -1107,7 +1218,7 @@
       {
         "title": "Monday Morning Podcast",
         "type": "podcast",
-        "year": ""
+        "year": "2007"
       },
       {
         "title": "Breaking Bad",
@@ -1130,13 +1241,13 @@
       "type": "industry",
       "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2012."
     },
-    "description": "Bill Burr is a stand-up comedian, podcaster, actor, writer, and director. He hosts the long-running *Monday Morning Podcast* and has built a substantial screen presence, with notable appearances including *Breaking Bad* (2013), the animated series *F Is for Family* (2015), which he also writes, and *The Mandalorian* (2019). A comedy peer of Conan O'Brien, Burr first appeared on *Conan* in 2012.",
+    "description": "Bill Burr is a stand-up comedian, podcaster, actor, writer, and director. He has hosted the *Monday Morning Podcast* since 2007 and gained wider recognition through his recurring role on *Breaking Bad* in 2013. He created and voices the animated series *F Is for Family*, which debuted in 2015, and appeared in *The Mandalorian* in 2019. A comedy peer of Conan O'Brien, Burr first appeared on *Conan* in 2012.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Bill_Burr"
     ],
-    "enrichedAt": "2026-07-20T17:29:55.492Z"
+    "enrichedAt": "2026-08-24T16:17:23.584Z"
   },
   "David Spade": {
     "entity": {
@@ -1166,9 +1277,9 @@
         "year": "2001"
       },
       {
-        "title": "Rules of Engagement",
-        "type": "tv",
-        "year": ""
+        "title": "Tommy Boy",
+        "type": "film",
+        "year": "1995"
       }
     ],
     "recent_work": [],
@@ -1176,13 +1287,13 @@
       "type": "direct",
       "evidence": "SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "David Spade is a stand-up comedian, actor, and podcaster best known for his work on *Saturday Night Live*, the sitcoms *Just Shoot Me!* and *Rules of Engagement*, and the 2001 film *Joe Dirt*. He was part of the *SNL* and *Simpsons* writers room from 1988 to 1993, overlapping with Conan O'Brien during that period. Spade made his first appearance on *Late Night with Conan O'Brien* in 1994.",
+    "description": "David Spade is a stand-up comedian, actor, and podcaster. He got his start as a cast member on *Saturday Night Live*, where he overlapped with Conan O'Brien during O'Brien's time as a writer from 1988 to 1993. Spade made his first appearance on *Late Night with Conan O'Brien* in 1994. He went on to star in the 1995 film *Tommy Boy* and the 2001 film *Joe Dirt*, and held a lead role on the television series *Just Shoot Me!*",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/David_Spade"
     ],
-    "enrichedAt": "2026-07-20T17:30:06.459Z"
+    "enrichedAt": "2026-08-24T16:17:35.791Z"
   },
   "Anthony Anderson": {
     "entity": {
@@ -1222,13 +1333,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "Anthony Anderson is an actor, comedian, and television host best known for his roles in the long-running television series *Black-ish*, which debuted in 2014, and the crime drama *Law & Order*, as well as appearances in the films *The Departed* (2006) and *Transformers* (2007). His work spans comedy and drama across both television and film. He may have first appeared on *Late Night with Conan O'Brien* as early as 2005, though this has not been confirmed.",
+    "description": "Anthony Anderson is an actor, comedian, and television host recognized for his work across both film and television. He is perhaps best known for his starring role in the ABC series *Black-ish*, which premiered in 2014, and for his long-running presence on *Law & Order*. His film credits include *The Departed* (2006) and *Transformers* (2007). He may have first appeared on *Late Night with Conan O'Brien* as early as 2005, though that connection has not been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Anthony_Anderson"
     ],
-    "enrichedAt": "2026-07-20T17:30:17.470Z"
+    "enrichedAt": "2026-08-24T16:17:47.486Z"
   },
   "Norm Macdonald": {
     "entity": {
@@ -1243,22 +1354,17 @@
     ],
     "known_for": [
       {
-        "title": "Saturday Night Live",
-        "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "Norm Macdonald Has a Show",
-        "type": "tv",
-        "year": "2018"
-      },
-      {
-        "title": "Conan",
+        "title": "Late Night with Conan O'Brien",
         "type": "tv",
         "year": ""
       },
       {
         "title": "Late Show with David Letterman",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Saturday Night Live",
         "type": "tv",
         "year": ""
       }
@@ -1268,13 +1374,13 @@
       "type": "direct",
       "evidence": "SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Norm Macdonald was a stand-up comedian, actor, and writer. He got his start as a writer alongside Conan O'Brien in the SNL and Simpsons writers rooms between 1988 and 1993, before becoming a cast member on Saturday Night Live. He first appeared as a guest on Late Night with Conan O'Brien in 1995 and made recurring appearances on both Conan and Late Show with David Letterman. In 2018, he created and hosted Norm Macdonald Has a Show on Netflix.",
+    "description": "Norm Macdonald is a stand-up comedian, actor, and writer. He got his start in television writing, working alongside Conan O'Brien in the writers room for Saturday Night Live and The Simpsons from 1988 to 1993. He went on to become a cast member on Saturday Night Live and made his first appearance on Late Night with Conan O'Brien in 1995. He has also made notable appearances on Late Show with David Letterman.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Norm_Macdonald"
     ],
-    "enrichedAt": "2026-07-20T17:30:29.373Z"
+    "enrichedAt": "2026-08-24T16:17:58.614Z"
   },
   "Will Arnett": {
     "entity": {
@@ -1288,12 +1394,7 @@
     ],
     "known_for": [
       {
-        "title": "Arrested Development",
-        "type": "tv",
-        "year": "2003"
-      },
-      {
-        "title": "BoJack Horseman",
+        "title": "Netflix animated series BoJack Horseman",
         "type": "tv",
         "year": "2014"
       }
@@ -1303,13 +1404,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "Will Arnett is an actor and comedian best known for his role in the television series *Arrested Development*, which began in 2003, and for voicing the lead character in the animated series *BoJack Horseman*, which premiered in 2014. He may have first appeared on *Late Night with Conan O'Brien* as early as 2004, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "William Emerson Arnett is a Canadian and American actor and comedian. He is widely known for his roles as Gob Bluth in the Fox/Netflix sitcom Arrested Development and the titular character in the Netflix animated series BoJack Horseman (2014–2020). He has received nominations for seven Primetime Emmy Awards and three Screen Actors Guild Awards. First appeared on Late Night with Conan O'Brien in 2004.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Will_Arnett"
     ],
-    "enrichedAt": "2026-07-20T17:30:40.068Z"
+    "enrichedAt": "2026-08-24T16:18:14.105Z"
   },
   "Jeff Goldblum": {
     "entity": {
@@ -1338,13 +1439,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Jeff Goldblum is an American actor and musician best known for his roles in the 1993 film *Jurassic Park* and the 1996 film *Independence Day*. He has also pursued a career in music alongside his acting work. Goldblum may have first appeared on *Late Night with Conan O'Brien* in 1993, though this has not been confirmed. No recent projects have been announced at this time.",
+    "description": "Jeff Goldblum is an American actor and musician. He is best known for his roles in the blockbuster films *Jurassic Park* (1993) and *Independence Day* (1996). In addition to his acting career, Goldblum has pursued work as a musician. He may have first appeared on *Late Night with Conan O'Brien* as early as 1993, though this has not been confirmed. No recent projects have been confirmed at this time.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jeff_Goldblum"
     ],
-    "enrichedAt": "2026-07-20T17:30:50.364Z"
+    "enrichedAt": "2026-08-24T16:18:24.473Z"
   },
   "Adam Sandler": {
     "entity": {
@@ -1356,40 +1457,19 @@
       "actor",
       "comedian"
     ],
-    "known_for": [
-      {
-        "title": "Uncut Gems",
-        "type": "film",
-        "year": "2019"
-      },
-      {
-        "title": "Happy Gilmore",
-        "type": "film",
-        "year": "1996"
-      },
-      {
-        "title": "Billy Madison",
-        "type": "film",
-        "year": "1995"
-      },
-      {
-        "title": "Saturday Night Live",
-        "type": "tv",
-        "year": "1991"
-      }
-    ],
+    "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "direct",
       "evidence": "SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Adam Sandler is an actor and comedian who got his start as a writer and performer on *Saturday Night Live*, where he overlapped with Conan O'Brien in the writers room from 1988 to 1993. He made his first appearance on *Late Night with Conan O'Brien* in 1993. Sandler went on to star in the comedy films *Billy Madison* (1995) and *Happy Gilmore* (1996), establishing himself as a box office draw. He later earned widespread critical recognition for his dramatic performance in the Safdie Brothers' thriller *Uncut Gems* (2019).",
+    "description": "Adam Richard Sandler is an American actor and comedian. Primarily a comedic leading actor in films, his accolades include an Independent Spirit Award, alongside nominations for an Actor Award, three Golden Globes, three Grammy Awards, and seven Primetime Emmy Awards. In 2023, Sandler was awarded the Mark Twain Prize for American Humor. SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1993.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Adam_Sandler"
     ],
-    "enrichedAt": "2026-07-20T17:31:02.761Z"
+    "enrichedAt": "2026-08-24T16:18:33.985Z"
   },
   "Dana Carvey": {
     "entity": {
@@ -1431,13 +1511,13 @@
       "type": "direct",
       "evidence": "SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Dana Carvey is a stand-up comedian, actor, screenwriter, and producer best known for his work on Saturday Night Live, which he joined in 1986. He expanded his reach with the 1992 film Wayne's World and later created and starred in The Dana Carvey Show in 1996. He launched the podcast Fly on the Wall with David Spade in 2023. Carvey and Conan O'Brien share roots in the SNL and Simpsons writers room, where both worked between 1988 and 1993. Carvey first appeared on Late Night with Conan O'Brien in 1994.",
+    "description": "Dana Carvey is a stand-up comedian, actor, screenwriter, and producer best known for his work on *Saturday Night Live*, which he joined in 1986. He expanded his reach with the 1992 film *Wayne's World* and went on to headline *The Dana Carvey Show* in 1996. He launched *Fly on the Wall with Dana Carvey and David Spade* in 2023. Carvey's path crossed with Conan O'Brien through the SNL and *Simpsons* writers room between 1988 and 1993, and he made his first appearance on *Late Night with Conan O'Brien* in 1994.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Dana_Carvey"
     ],
-    "enrichedAt": "2026-07-20T17:31:14.715Z"
+    "enrichedAt": "2026-08-24T16:18:45.659Z"
   },
   "Tim Meadows": {
     "entity": {
@@ -1497,28 +1577,49 @@
       "confidence": 1
     },
     "profession": [
-      "comedian",
+      "stand-up comedian",
       "actor"
     ],
     "known_for": [
       {
-        "title": "Talking for Clapping",
-        "type": "other",
-        "year": "2016"
+        "title": "The King of Queens",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "The Goldbergs",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "A.P. Bio",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "The Sandman",
+        "type": "tv",
+        "year": "2022"
       }
     ],
-    "recent_work": [],
+    "recent_work": [
+      {
+        "title": "The Sandman",
+        "type": "tv",
+        "year": "2025"
+      }
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "Patton Peter Oswalt is an American comedian and actor. He began performing stand-up comedy in 1988 and released his first comedy album 222 in 2003. He has been nominated for the Grammy Award for Best Comedy Album seven times, and won in 2017 for his seventh album Talking for Clapping (2016). First appeared on Late Night with Conan O'Brien in 2000.",
+    "description": "Patton Oswalt is a stand-up comedian and actor whose television credits include *The King of Queens* (1998), *The Goldbergs* (2013), *A.P. Bio* (2018), and *The Sandman* (2022), with recent work continuing on *The Sandman* in 2025. He may have first appeared on *Late Night with Conan O'Brien* as early as 2000. Over the course of a career spanning more than two decades, Oswalt has built a presence across both comedy and dramatic television, demonstrating range through an array of supporting and recurring roles in notable network and streaming productions.",
     "confidence": 1,
-    "needs_review": false,
+    "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Patton_Oswalt"
     ],
-    "enrichedAt": "2026-07-20T17:31:34.771Z"
+    "enrichedAt": "2026-08-24T16:19:08.065Z"
   },
   "Judd Apatow": {
     "entity": {
@@ -1564,7 +1665,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Judd_Apatow"
     ],
-    "enrichedAt": "2026-07-20T17:31:45.407Z"
+    "enrichedAt": "2026-08-24T16:19:19.479Z"
   },
   "Rose Byrne": {
     "entity": {
@@ -1581,13 +1682,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "Mary Rose Byrne is an Australian actress. Renowned for her versatility across screen and stage, she is particularly recognised for her leading roles in blockbuster comedies, independent dramas, and horror films. Her accolades include a Golden Globe, a Silver Bear and a Volpi Cup as well as nominations for an Academy Award, a BAFTA Award, a Tony Award, and two Primetime Emmy Awards. First appeared on Late Night with Conan O'Brien in 2004.",
+    "description": "Mary Rose Byrne is an Australian actress. Renowned for her versatility across screen and stage, she is particularly recognised for her leading roles in blockbuster comedies, independent dramas, and horror films. Her accolades include a Golden Globe Award, a Silver Bear and a Volpi Cup, in addition to nominations for an Academy Award, two Primetime Emmy Awards, and a Tony Award. She is one of the few actors to be nominated for the Triple Crown of Acting. First appeared on Late Night with Conan O'Brien in 2004.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Rose_Byrne"
     ],
-    "enrichedAt": "2026-07-20T17:31:53.197Z"
+    "enrichedAt": "2026-08-24T16:19:33.874Z"
   },
   "Bob Odenkirk": {
     "entity": {
@@ -1628,13 +1729,13 @@
       "type": "direct",
       "evidence": "SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Bob Odenkirk is an actor, screenwriter, comedian, and producer. He got his start as a writer, working alongside Conan O'Brien in the SNL and Simpsons writers rooms between 1988 and 1993, and first appeared on Late Night with Conan O'Brien in 1994. He went on to co-create and star in the sketch comedy series Mr. Show with Bob and David in 1995 before taking on the role of Saul Goodman in Breaking Bad beginning in 2009 and its spinoff Better Call Saul in 2015. He also starred in the action film Nobody in 2021.",
+    "description": "Bob Odenkirk is an actor, screenwriter, comedian, and producer. He got his start as a writer, working alongside Conan O'Brien in the SNL and Simpsons writers rooms between 1988 and 1993, and first appeared on Late Night with Conan O'Brien in 1994. He co-created and starred in the sketch comedy series Mr. Show with Bob and David in 1995 before taking on the role of Saul Goodman in Breaking Bad beginning in 2009, a character he reprised in the spinoff Better Call Saul from 2015. He also starred in the action film Nobody in 2021.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Bob_Odenkirk"
     ],
-    "enrichedAt": "2026-07-20T17:32:05.041Z"
+    "enrichedAt": "2026-08-24T16:19:45.899Z"
   },
   "Ben Stiller": {
     "entity": {
@@ -1674,13 +1775,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Ben Stiller is an American actor, comedian, and filmmaker. He is best known for his roles in the films *There's Something About Mary* (1998), *Meet the Parents* (2000), *Zoolander* (2001), and *Tropic Thunder* (2008), the last of which he also directed. He may have first appeared on *Late Night with Conan O'Brien* as early as 1994, though this has not been independently confirmed. No recent projects have been announced at this time.",
+    "description": "Ben Stiller is an American actor, comedian, and filmmaker. He is known for his work in films including *There's Something About Mary* (1998), *Meet the Parents* (2000), *Zoolander* (2001), and *Tropic Thunder* (2008), the latter of which he also directed. Stiller has demonstrated range across both comedic and behind-the-camera roles throughout his career. He may be among the earlier guests to have appeared on *Late Night with Conan O'Brien*, with a reported visit dating to 1994, though the full details of that connection have not been confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ben_Stiller"
     ],
-    "enrichedAt": "2026-07-20T17:32:15.269Z"
+    "enrichedAt": "2026-08-24T16:19:57.199Z"
   },
   "Sebastian Maniscalco": {
     "entity": {
@@ -1725,13 +1826,13 @@
       "type": "inferred",
       "evidence": "First appeared on Conan in 2017."
     },
-    "description": "Sebastian Maniscalco is a stand-up comedian and actor. He appeared in the 2018 film *Green Book* and Martin Scorsese's *The Irishman* (2019), before taking on a starring role in *About My Father* (2023). He also appears in the television series *Bookie* and had a role in the 2024 film *IF*. He may have first connected with Conan O'Brien's audience through an appearance on *Conan* in 2017.",
+    "description": "Sebastian Maniscalco is a stand-up comedian and actor. He appeared in the 2018 film *Green Book* and Martin Scorsese's *The Irishman* (2019), and went on to star in *About My Father* (2023) and the television series *Bookie*. His most recent film credit is *IF* (2024). Maniscalco may have first connected with late-night audiences through an appearance on *Conan* in 2017, though the details of that relationship are not fully confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Sebastian_Maniscalco"
     ],
-    "enrichedAt": "2026-07-20T17:35:00.668Z"
+    "enrichedAt": "2026-08-24T16:22:38.799Z"
   },
   "Louis CK": {
     "entity": {
@@ -1771,13 +1872,13 @@
       "type": "direct",
       "evidence": "SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Louis C.K. is a stand-up comedian, actor, and filmmaker who got his start writing for television, including time in the SNL and Simpsons writers rooms between 1988 and 1993. He first appeared on Late Night with Conan O'Brien in 1996. He went on to create and star in the sitcom Lucky Louie in 2006 and the critically recognized series Louie in 2010. His stand-up specials include Hilarious and Live at the Beacon Theater, both released in 2011.",
+    "description": "Louis C.K. is a stand-up comedian, actor, and filmmaker who got his start writing for television, including time in the SNL and Simpsons writers rooms between 1988 and 1993. He first appeared on Late Night with Conan O'Brien in 1996. He went on to create and star in the sitcom Lucky Louie in 2006, followed by the critically recognized series Louie beginning in 2010. His stand-up specials include Hilarious and Live at the Beacon Theater, both released in 2011.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Louis_C.K."
     ],
-    "enrichedAt": "2026-07-20T17:32:29.077Z"
+    "enrichedAt": "2026-08-24T16:20:16.462Z"
   },
   "Mindy Kaling": {
     "entity": {
@@ -1793,14 +1894,14 @@
     ],
     "known_for": [
       {
-        "title": "The Office",
-        "type": "tv",
-        "year": "2005"
-      },
-      {
         "title": "The Mindy Project",
         "type": "tv",
         "year": "2012"
+      },
+      {
+        "title": "The Office",
+        "type": "tv",
+        "year": "2005"
       },
       {
         "title": "Never Have I Ever",
@@ -1808,23 +1909,29 @@
         "year": "2020"
       },
       {
-        "title": "Kaling International",
-        "type": "other",
-        "year": "2012"
+        "title": "Inside Out 2",
+        "type": "film",
+        "year": "2024"
       }
     ],
-    "recent_work": [],
+    "recent_work": [
+      {
+        "title": "Inside Out 2",
+        "type": "film",
+        "year": "2024"
+      }
+    ],
     "conan_connection": {
       "type": "direct",
       "evidence": "Harvard Lampoon alumni. First appeared on Late Night with Conan O'Brien in 2007."
     },
-    "description": "Mindy Kaling is an actress, comedian, screenwriter, and producer. A Harvard Lampoon alumna, she first gained widespread recognition for her work on the television series *The Office*, which premiered in 2005. She went on to create and star in *The Mindy Project* beginning in 2012, the same year she founded her production company, Kaling International. She later created the television series *Never Have I Ever*, which debuted in 2020. Kaling first appeared on *Late Night with Conan O'Brien* in 2007.",
+    "description": "Mindy Kaling is an actress, comedian, screenwriter, and producer. A Harvard Lampoon alumna, she first appeared on *Late Night with Conan O'Brien* in 2007. She is known for her work on the television series *The Office*, which began in 2005, and *The Mindy Project*, which she created and starred in beginning in 2012. She also co-created *Never Have I Ever* in 2020. Her most recent notable project is the 2024 film *Inside Out 2*.",
     "confidence": 1,
-    "needs_review": false,
+    "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Mindy_Kaling"
     ],
-    "enrichedAt": "2026-07-20T17:32:40.956Z"
+    "enrichedAt": "2026-08-24T16:20:28.290Z"
   },
   "Zach Galifianakis": {
     "entity": {
@@ -1849,14 +1956,14 @@
         "year": "2008"
       },
       {
+        "title": "Birdman",
+        "type": "film",
+        "year": "2014"
+      },
+      {
         "title": "Baskets",
         "type": "tv",
         "year": "2016"
-      },
-      {
-        "title": "Due Date",
-        "type": "film",
-        "year": "2010"
       }
     ],
     "recent_work": [],
@@ -1864,13 +1971,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "Zach Galifianakis is a comedian, actor, and writer best known for his role in the 2009 film *The Hangover* and its 2010 follow-up *Due Date*. He created and starred in *Between Two Ferns with Zach Galifianakis*, which debuted in 2008, and later developed the FX comedy series *Baskets* in 2016. He may have made his first appearance on *Late Night with Conan O'Brien* in 2000, though this has not been confirmed. No recent projects have been announced.",
+    "description": "Zach Galifianakis is an American comedian, actor, and writer. He is perhaps best known for his role in the 2009 comedy film *The Hangover* and for creating and hosting the mock interview series *Between Two Ferns with Zach Galifianakis*, which debuted in 2008. He also appeared in the 2014 film *Birdman* and starred in the television series *Baskets*, which premiered in 2016. He may have made an early television appearance on *Late Night with Conan O'Brien* in 2000, though the nature of that connection has not been fully confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Zach_Galifianakis"
     ],
-    "enrichedAt": "2026-07-20T17:32:52.606Z"
+    "enrichedAt": "2026-08-24T16:20:40.086Z"
   },
   "Nathan Lane": {
     "entity": {
@@ -1899,7 +2006,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Nathan_Lane"
     ],
-    "enrichedAt": "2026-07-20T17:33:01.668Z"
+    "enrichedAt": "2026-08-24T16:20:48.273Z"
   },
   "Rashida Jones": {
     "entity": {
@@ -1938,13 +2045,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "Rashida Jones is an actress and filmmaker best known for her television work across multiple decades. She gained early recognition with a role on Boston Public in 2000 and later appeared in The Office before becoming widely known for her starring role in Parks and Recreation beginning in 2009. She also co-created and starred in the comedy series Angie Tribeca in 2016. Jones may have first appeared on Late Night with Conan O'Brien in 2006, though that connection has not been fully confirmed. No recent projects have been announced at this time.",
+    "description": "Rashida Jones is an actress and filmmaker whose television credits span more than two decades. She appeared in Boston Public in 2000 before gaining wider recognition through The Office and Parks and Recreation, the latter a comedic ensemble series that premiered in 2009. She later starred in and co-created Angie Tribeca, a comedy series that debuted in 2016. Jones may have first connected with late-night audiences through an appearance on Late Night with Conan O'Brien in 2006, though that detail has not been independently confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Rashida_Jones"
     ],
-    "enrichedAt": "2026-07-20T17:33:16.569Z"
+    "enrichedAt": "2026-08-24T16:21:01.418Z"
   },
   "Ken Burns": {
     "entity": {
@@ -1983,13 +2090,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
-    "description": "Ken Burns is an American filmmaker and documentary director best known for his sweeping multi-part television series on American history and culture. His most celebrated works include *The Civil War* (1990), *Baseball* (1994), *Jazz* (2001), and *The Vietnam War* (2017), each a landmark in the documentary form. Burns appears to have first connected with Conan O'Brien's world through an appearance on *Late Night with Conan O'Brien* in 2003, though the details of that visit remain unconfirmed. No recent projects have been announced at this time.",
+    "description": "Ken Burns is an American filmmaker and documentary director best known for his long-form television series exploring American history and culture. His major works include *The Civil War* (1990), *Baseball* (1994), *Jazz* (2001), and *The Vietnam War* (2017). Burns may have first appeared on *Late Night with Conan O'Brien* as early as 2003, though this has not been confirmed. No recent projects have been announced at this time.",
     "confidence": 0.7,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ken_Burns"
     ],
-    "enrichedAt": "2026-07-20T17:33:28.285Z"
+    "enrichedAt": "2026-08-24T16:21:12.418Z"
   },
   "John Cleese": {
     "entity": {
@@ -10168,16 +10275,16 @@
     ],
     "recent_work": [],
     "conan_connection": {
-      "type": "direct",
-      "evidence": "SNL writers room era, 1988–1991. First appeared on Late Night with Conan O'Brien in 2000."
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "Christopher Walken is an American actor whose career spans several decades of film and television. He is known for his roles in *The Deer Hunter* (1978), *Pulp Fiction* (1994), *Catch Me If You Can* (2002), and the television series *Severance* (2022). Walken's connection to Conan O'Brien dates to the SNL writers room era of 1988–1991, and he first appeared on *Late Night with Conan O'Brien* in 2000.",
+    "description": "Christopher Walken is an American actor whose career spans several decades of film and television. He is perhaps best known for his role in *The Deer Hunter* (1978), which brought him widespread recognition, and has since appeared in notable projects including *Pulp Fiction* (1994), *Catch Me If You Can* (2002), and the television series *Severance* (2022). He may have first appeared on *Late Night with Conan O'Brien* around 2000, though the details of that connection have not been fully confirmed.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Christopher_Walken"
     ],
-    "enrichedAt": "2026-07-20T17:34:01.521Z"
+    "enrichedAt": "2026-08-24T16:23:01.620Z"
   },
   "Stephen Merchant": {
     "entity": {
@@ -10218,13 +10325,13 @@
       "type": "industry",
       "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2011."
     },
-    "description": "Stephen Merchant is a comedian, writer, director, and actor best known for co-creating the British television series *The Office* (2001) and *Extras* (2005). He has also worked across other formats, including voicing a character in the video game *Portal 2* (2011) and appearing as a host on *Lip Sync Battle* (2015). A comedy peer and fellow stand-up, Merchant first appeared on *Conan* in 2011.",
+    "description": "Stephen Merchant is a comedian, writer, director, and actor best known for co-creating the British television series *The Office* (2001) and *Extras* (2005). He has also worked across other entertainment formats, including voicing a character in the video game *Portal 2* (2011) and appearing as a host on *Lip Sync Battle* (2015). A comedy peer and fellow stand-up, Merchant first appeared on *Conan* in 2011.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Stephen_Merchant"
     ],
-    "enrichedAt": "2026-07-20T17:34:24.446Z"
+    "enrichedAt": "2026-08-24T16:22:13.554Z"
   },
   "Harry Shearer": {
     "entity": {
@@ -11083,5 +11190,129 @@
       "https://en.wikipedia.org/wiki/Billy_Connolly"
     ],
     "enrichedAt": "2026-08-17T16:09:03.671Z"
+  },
+  "Nick Offerman": {
+    "entity": {
+      "name": "Nick Offerman",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nick_Offerman",
+      "confidence": 1
+    },
+    "profession": [
+      "actor",
+      "comedian",
+      "carpenter"
+    ],
+    "known_for": [
+      {
+        "title": "Ron Swanson in the NBC sitcom Parks and Recreation",
+        "type": "tv",
+        "year": "2009"
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "industry",
+      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 2007."
+    },
+    "description": "Nicholas David Offerman is an American actor, comedian, carpenter, and writer. He became known for his role as Ron Swanson in the NBC sitcom Parks and Recreation (2009–2015), for which he received the Television Critics Association Award for Individual Achievement in Comedy and was twice nominated for the Critics' Choice Television Award for Best Supporting Actor in a Comedy Series. Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 2007.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nick_Offerman"
+    ],
+    "enrichedAt": "2026-08-24T16:21:34.332Z"
+  },
+  "John Cena": {
+    "entity": {
+      "name": "John Cena",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/John_Cena",
+      "confidence": 1
+    },
+    "profession": [
+      "actor",
+      "retired professional wrestler",
+      "former rapper",
+      "brand ambassador"
+    ],
+    "known_for": [
+      {
+        "title": "WWE",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "The Suicide Squad",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Peacemaker",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "Fast & Furious 9",
+        "type": "film",
+        "year": "2021"
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
+    },
+    "description": "John Cena is an actor, retired professional wrestler, former rapper, and brand ambassador. He spent years as a prominent figure in WWE before transitioning into film and television, appearing in projects including *The Suicide Squad* (2021), *Fast & Furious 9* (2021), and the television series *Peacemaker* (2022). He may have first appeared on *Late Night with Conan O'Brien* as early as 2006.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/John_Cena"
+    ],
+    "enrichedAt": "2026-08-24T16:21:45.658Z"
+  },
+  "Jay Mohr": {
+    "entity": {
+      "name": "Jay Mohr",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jay_Mohr",
+      "confidence": 1
+    },
+    "profession": [
+      "actor",
+      "stand-up comedian",
+      "radio host"
+    ],
+    "known_for": [
+      {
+        "title": "Action",
+        "type": "tv",
+        "year": "1999"
+      },
+      {
+        "title": "Ghost Whisperer",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "Gary Unmarried",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "Saturday Night Live",
+        "type": "tv",
+        "year": "1993"
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "direct",
+      "evidence": "SNL writers room era, 1988–1991. First appeared on Late Night with Conan O'Brien in 1993."
+    },
+    "description": "Jay Mohr is an actor, stand-up comedian, and radio host. He was a cast member on Saturday Night Live beginning in 1993, overlapping with the writing staff era that included Conan O'Brien. He made his first appearance on Late Night with Conan O'Brien that same year. His television credits include the series Action (1999), Ghost Whisperer (2006), and Gary Unmarried (2008).",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jay_Mohr"
+    ],
+    "enrichedAt": "2026-08-24T16:22:50.094Z"
   }
 }
