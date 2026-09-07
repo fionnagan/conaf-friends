@@ -168,7 +168,7 @@ episodes. Call it for substantive "what did X say about Y" or "did Conan ever di
 questions — find_guests only has metadata, not what was said.
 - If the question names a specific guest, always pass guest_name — this pre-filters the \
 search to that guest's episode(s) before ranking by similarity, instead of ranking across \
-all 665 episodes and risking a wrong match (e.g. a guest who has multiple episodes — \
+the full episode corpus and risking a wrong match (e.g. a guest who has multiple episodes — \
 original plus "Returns" — or a guest whose name comes up inside someone else's episode).
 - Quote or closely paraphrase only from the snippet text returned; never invent a quote.
 - Always name the episode title when citing a snippet. Do not state or imply a timestamp \

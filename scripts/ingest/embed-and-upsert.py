@@ -25,6 +25,10 @@ import requests
 ROOT = Path(__file__).parent.parent.parent
 CHUNKS_PATH = ROOT / 'scripts/ingest/chunks.jsonl'
 PROGRESS_PATH = ROOT / 'scripts/ingest/.embed_progress'
+# Committed (not gitignored) record of which episodes are already in Pinecone, so a
+# fresh weekly CI checkout knows not to re-embed the whole corpus — only chunks from
+# episodes missing from this file get embedded + upserted.
+MANIFEST_PATH = ROOT / 'scripts/ingest/embedded-episodes.json'
 
 VOYAGE_API_KEY     = os.environ.get('VOYAGE_API_KEY')
 PINECONE_API_KEY   = os.environ.get('PINECONE_API_KEY')
@@ -75,6 +79,16 @@ def upsert_batch(vectors):
     return r.json()
 
 
+def load_manifest():
+    if MANIFEST_PATH.exists():
+        return set(json.load(open(MANIFEST_PATH)))
+    return set()
+
+
+def save_manifest(slugs):
+    json.dump(sorted(slugs), open(MANIFEST_PATH, 'w'), indent=2)
+
+
 def main():
     missing = [n for n, v in [
         ('VOYAGE_API_KEY', VOYAGE_API_KEY),
@@ -85,11 +99,20 @@ def main():
         print(f'Missing env vars: {", ".join(missing)}. Set them and re-run.')
         sys.exit(1)
 
-    chunks = [json.loads(l) for l in open(CHUNKS_PATH)]
+    all_chunks = [json.loads(l) for l in open(CHUNKS_PATH)]
+    embedded_slugs = load_manifest()
+    chunks = [c for c in all_chunks if c['episode_slug'] not in embedded_slugs]
+
+    if not chunks:
+        print(f'All {len(all_chunks)} chunks already embedded (per {MANIFEST_PATH.name}). Nothing to do.')
+        PROGRESS_PATH.unlink(missing_ok=True)
+        return
+
     start_at = int(PROGRESS_PATH.read_text().strip()) if PROGRESS_PATH.exists() else 0
     if start_at:
-        print(f'Resuming from checkpoint: skipping {start_at} already-upserted chunks')
-    print(f'{len(chunks)} chunks to embed + upsert')
+        print(f'Resuming from checkpoint: skipping {start_at} already-upserted chunks (this run)')
+    print(f'{len(chunks)} new chunks to embed + upsert '
+          f'({len(all_chunks) - len(chunks)} already embedded, skipped)')
 
     for i in range(start_at, len(chunks), BATCH_SIZE):
         batch = chunks[i:i + BATCH_SIZE]
@@ -110,7 +133,9 @@ def main():
         time.sleep(0.1)
 
     PROGRESS_PATH.unlink(missing_ok=True)
-    print('Done.')
+    embedded_slugs |= {c['episode_slug'] for c in chunks}
+    save_manifest(embedded_slugs)
+    print(f'Done. {MANIFEST_PATH.name} now tracks {len(embedded_slugs)} embedded episodes.')
 
 if __name__ == '__main__':
     main()

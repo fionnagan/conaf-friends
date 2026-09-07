@@ -39,6 +39,8 @@ next-env.d.ts
 scripts/cache/
 scripts/ingest/.embed_progress
 scripts/ingest/.backfill_progress
+scripts/ingest/.new-episodes.json
+__pycache__/
 # …except the YouTube match index — this IS committed and updated by CI
 !scripts/cache/youtube-matches.json
 

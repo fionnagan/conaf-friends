@@ -24,8 +24,8 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
-      - name: Install Python dependencies (word cloud)
-        run: pip install pillow numpy
+      - name: Install Python dependencies (word cloud, RAG sync)
+        run: pip install pillow numpy requests
 
       - name: Run ingest pipeline
         env:
@@ -35,6 +35,19 @@ jobs:
           # Always fetch fresh RSS — delete stale cache so new episodes aren't missed
           rm -f scripts/cache/podcast-episodes.json
           npx tsx scripts/ingest/index.ts
+
+      # Fetch transcripts for any new episodes, rebuild chunks.jsonl, and embed +
+      # upsert only the un-embedded ones into Pinecone — keeps search_episodes (the
+      # Ask the Registry RAG tool) current without re-processing the whole corpus
+      # every week. Best-effort: a podscripts.co/Voyage/Pinecone hiccup, or missing
+      # secrets, must never block the metadata + context refresh below.
+      - name: Sync RAG transcript corpus
+        continue-on-error: true
+        env:
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_HOST: ${{ secrets.PINECONE_INDEX_HOST }}
+        run: python3 scripts/ingest/sync-transcripts.py
 
       # Enrich bios for any newly-added guests (incremental — only touches
       # un-cached guests, capped at 50/run). Best-effort: a Wikipedia/Anthropic
@@ -98,5 +111,6 @@ jobs:
           git add api/guests_context.json
           git add public/conan-wordcloud.png
           git add -f scripts/cache/youtube-matches.json scripts/cache/bios.json
+          git add scripts/ingest/transcripts/ scripts/ingest/chunks.jsonl scripts/ingest/embedded-episodes.json
           git diff --staged --quiet || git commit -m "chore: weekly episode ingest $(date -u '+%Y-%m-%d')"
           git push
