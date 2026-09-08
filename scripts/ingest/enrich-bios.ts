@@ -422,11 +422,22 @@ Paragraph only:`,
   const wordCount = description.split(/\s+/).length;
   if (wordCount < 60 || wordCount > 150) return null;
 
+  // Now that known_for is uncapped ("ALL notable works"), a title showing up
+  // in both lists is the expected case whenever someone's most recent work
+  // is also their most notable — not the extraction error it used to signal
+  // back when known_for was a top-6 cut. Filter it out of recent_work here
+  // (known_for already covers it) rather than reject the whole bio over it.
+  const known_for = structured.known_for || [];
+  const knownForTitles = new Set(known_for.map((w: any) => w.title?.toLowerCase()));
+  const recent_work = (structured.recent_work || [])
+    .filter((w: any) => !knownForTitles.has(w.title?.toLowerCase()))
+    .slice(0, 4);
+
   return {
     entity:           { name: entity.name, wikipedia_url: entity.wikipedia_url, confidence: entity.confidence },
     profession:       structured.profession || [],
-    known_for:        structured.known_for || [],
-    recent_work:      (structured.recent_work || []).slice(0, 4),
+    known_for,
+    recent_work,
     conan_connection: effectiveConanConn,
     description,
     confidence:       entity.confidence,
@@ -460,7 +471,11 @@ function extractConanMention(intro: string): ConanConnection | null {
 function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConnection): GuestBio {
   const profession = extractProfessions(entity.intro);
   const known_for  = extractKnownFor(entity.intro);
-  const recent_work = extractRecentWork(entity.intro);
+  // Same dedupe as the Claude pipeline: known_for already covers a title, so
+  // drop it from recent_work rather than show it twice.
+  const knownForTitles = new Set(known_for.map(w => w.title.toLowerCase()));
+  const recent_work = extractRecentWork(entity.intro)
+    .filter(w => !knownForTitles.has(w.title.toLowerCase()));
   const effectiveConanConn = extractConanMention(entity.intro) ?? conanConn;
   const description = buildDescription(entity.intro, guest.name, effectiveConanConn.evidence, effectiveConanConn.type);
 
@@ -497,12 +512,6 @@ function validate(bio: GuestBio): { ok: boolean; reason?: string } {
   for (const w of bio.recent_work) {
     if (w.year && parseInt(w.year) < RECENT_WORK_CUTOFF_YEAR)
       return { ok: false, reason: `stale_recent_work:${w.title}(${w.year})` };
-  }
-
-  const knownTitles = new Set(bio.known_for.map(w => w.title.toLowerCase()));
-  for (const w of bio.recent_work) {
-    if (knownTitles.has(w.title.toLowerCase()))
-      return { ok: false, reason: `duplicate:${w.title}` };
   }
 
   // "Upcoming" work with a year already in the past means the model treated a
