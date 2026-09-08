@@ -1,0 +1,44 @@
+name: Sample Personal Crossed Paths
+
+# One-off, read-only validation of the personal/social strand of "Crossed
+# Paths": scanning trade press for genuine personal events connecting Conan
+# to another named person (e.g. a wedding invitation) — the kind of thing
+# that never shows up in Wikipedia's structured data. Nothing here commits
+# or pushes; it just prints what got matched so real coverage/accuracy can
+# be judged before wiring anything into the weekly cron.
+#
+# Runs fetch-trade-press.ts first since match-personal-crossed-paths.ts
+# reads its cached output (scripts/cache/trade-press.json).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch trade press
+        run: npx tsx scripts/ingest/fetch-trade-press.ts
+
+      - name: Match personal crossed-paths for Conan
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/ingest/match-personal-crossed-paths.ts
+
+      - name: Print full result
+        run: |
+          echo ""
+          echo "================= scripts/cache/personal-crossed-paths.json ================="
+          cat scripts/cache/personal-crossed-paths.json

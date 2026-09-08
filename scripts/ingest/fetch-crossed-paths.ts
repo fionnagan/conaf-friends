@@ -2,10 +2,20 @@
  * fetch-crossed-paths.ts
  * Step 2 of the "Crossed Paths" pipeline: for each of Conan's own recent FILM
  * credits (scripts/cache/conan-activity.json, from fetch-conan-activity.ts),
- * fetch that film's cast off Wikipedia and cross-reference it against
- * data/guests.json — surfacing existing guests he crossed paths with while
- * making it, and brand-new candidates who've never been booked (the
- * Taylor Swift / Toy Story 5 case this whole pipeline exists for).
+ * fetch that film's cast AND soundtrack credits off Wikipedia and cross-
+ * reference them against data/guests.json — surfacing existing guests he
+ * crossed paths with while making it, and brand-new candidates who've never
+ * been booked.
+ *
+ * Music credits are their own signal, not a cast substitute: a real run
+ * found Toy Story 5's cast-only pass missed Taylor Swift entirely, because
+ * her connection is a soundtrack song, not a voice-cast role. That section's
+ * Wikipedia formatting is much less consistent than a cast list (prose,
+ * bullet lists, and tables all show up in the wild), so rather than assuming
+ * a strict "Artist – Song" grammar, this reads the whole Music/Soundtrack
+ * section as text and checks it for existing guests' full names — a
+ * narrower, name-match-only signal (see findMusicCredits below), not a
+ * cast-equivalent new-candidate discovery.
  *
  * Deliberately FILM-ONLY for this first pass. TV credits and awards-show
  * hosting were considered and rejected: a TV Wikipedia article's "Cast"
@@ -36,6 +46,7 @@ const DATA_FILE = path.join(process.cwd(), 'data', 'guests.json');
 // "Cast" — confirmed via a real run where Toy Story 5 came back with 0 cast
 // members found because the plain "Cast" match missed it entirely.
 const CAST_HEADING_RE = /^(voice )?cast$/i;
+const MUSIC_HEADING_RE = /^(music|soundtrack)$/i;
 // He's in his own films' casts, obviously — but he's the whole reason this
 // pipeline exists, not a "never booked" candidate. A live run listed him as
 // exactly that in 3 films before this filter existed.
@@ -58,6 +69,7 @@ interface CrossedPath {
   activityYear: string;
   castName: string;
   character: string;
+  creditType: 'cast' | 'music';
   matchedGuestId: string | null;
   matchedGuestName: string | null;
 }
@@ -107,6 +119,35 @@ async function fetchFilmCast(title: string): Promise<CastMember[]> {
   return members;
 }
 
+// Returns the Music/Soundtrack section's text with citations stripped, or ''
+// if the film's article has no such section.
+async function fetchMusicSectionText(title: string): Promise<string> {
+  const sections = await fetchWikiSections(title);
+  const musicSection = sections.find((s) => MUSIC_HEADING_RE.test(s.line.trim()));
+  if (!musicSection) return '';
+
+  const html = await fetchWikiSectionHtml(title, musicSection.index);
+  const $ = cheerio.load(html);
+  $('sup.reference').remove();
+  $('.reflist, ol.references, .references').remove();
+  return $.root().text().replace(/\s+/g, ' ').trim();
+}
+
+// Name-match only (see file header for why): finds which existing guests are
+// named in the film's Music/Soundtrack section text.
+function findMusicCredits(musicText: string, guests: Guest[]): Guest[] {
+  if (!musicText) return [];
+  const textLower = musicText.toLowerCase();
+  return guests.filter((guest) => {
+    const nameLower = guest.name.toLowerCase();
+    // A single-word name (stage name, mononym) matching inside a whole
+    // section of prose is too easy to false-positive on — require a real
+    // multi-word name, same bar match-upcoming-work.ts uses for trade press.
+    if (nameLower.split(/\s+/).length < 2) return false;
+    return textLower.includes(nameLower);
+  });
+}
+
 async function main() {
   const activity = readCache<{ activity: ConanActivity[] }>('conan-activity.json')?.activity ?? [];
   if (activity.length === 0) {
@@ -140,8 +181,26 @@ async function main() {
         activityYear: film.year,
         castName: member.name,
         character: member.character,
+        creditType: 'cast',
         matchedGuestId: matched?.id ?? null,
         matchedGuestName: matched?.name ?? null,
+      });
+    }
+
+    process.stdout.write(`  Checking "${film.title}" soundtrack for existing guests... `);
+    const musicText = await fetchMusicSectionText(film.title);
+    const musicMatches = findMusicCredits(musicText, guestsData.guests);
+    console.log(`${musicMatches.length} found`);
+
+    for (const guest of musicMatches) {
+      results.push({
+        activityTitle: film.title,
+        activityYear: film.year,
+        castName: guest.name,
+        character: 'soundtrack contributor',
+        creditType: 'music',
+        matchedGuestId: guest.id,
+        matchedGuestName: guest.name,
       });
     }
 
