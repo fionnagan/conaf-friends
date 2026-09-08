@@ -34,9 +34,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
+          > /tmp/sample-guest-names.txt
           IFS=',' read -ra NAMES <<< "${{ github.event.inputs.guests }}"
           for name in "${NAMES[@]}"; do
             trimmed="$(echo "$name" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+            echo "$trimmed" >> /tmp/sample-guest-names.txt
             echo ""
             echo "=== Enriching: $trimmed ==="
             npx tsx scripts/ingest/enrich-bios.ts --force --guest "$trimmed" || echo "(failed for $trimmed, continuing)"
@@ -44,6 +46,15 @@ jobs:
 
       - name: Print sampled results
         run: |
-          echo ""
-          echo "================= RESULTS (scripts/cache/bios.json) ================="
-          cat scripts/cache/bios.json
+          # bios.json holds the FULL production cache (thousands of guests) — print
+          # only the names we just sampled, not the whole file.
+          node -e '
+            const fs = require("fs");
+            const bios = JSON.parse(fs.readFileSync("scripts/cache/bios.json", "utf8"));
+            const names = fs.readFileSync("/tmp/sample-guest-names.txt", "utf8")
+              .split("\n").map(s => s.trim()).filter(Boolean);
+            for (const name of names) {
+              console.log("\n================= " + name + " =================");
+              console.log(JSON.stringify(bios[name] ?? { error: "not found" }, null, 2));
+            }
+          '

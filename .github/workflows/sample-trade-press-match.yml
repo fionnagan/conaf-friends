@@ -1,0 +1,39 @@
+name: Sample Trade Press Match
+
+# One-off, read-only validation of the trade-press -> upcoming_work matching
+# logic against real RSS feeds and the full real guest list. Nothing here
+# commits, pushes, or touches data/guests.json or the committed bios.json —
+# results are printed and written only to gitignored scripts/cache/ files.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch trade press feeds
+        run: npx tsx scripts/ingest/fetch-trade-press.ts
+
+      - name: Match against guest list + confirm with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/ingest/match-upcoming-work.ts
+
+      - name: Print confirmed results
+        run: |
+          echo ""
+          echo "================= CONFIRMED UPCOMING-WORK CANDIDATES ================="
+          cat scripts/cache/upcoming-work-candidates.json

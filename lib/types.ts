@@ -53,7 +53,7 @@ export type FriendshipLabel =
 
 export interface GuestBioWork {
   title: string;
-  type: 'film' | 'tv' | 'podcast' | 'other';
+  type: 'film' | 'tv' | 'music' | 'podcast' | 'other';
   year: string;
 }
 
@@ -96,6 +96,12 @@ export interface GuestBio {
   prestige_signals?: string[];
   /** The single medium the intro emphasizes as their current/primary work. */
   primary_platform?: PrimaryPlatform;
+  /** Announced/forward-dated work mentioned in the intro (e.g. "set to appear in
+   * the upcoming film X (2026)"). Sparse by nature — Wikipedia ledes are
+   * backward-looking by default, so this only catches guests currently being
+   * actively updated for a known upcoming release. Empty, not a promise nothing
+   * is coming. */
+  upcoming_work?: GuestBioWork[];
 }
 
 export interface Guest {

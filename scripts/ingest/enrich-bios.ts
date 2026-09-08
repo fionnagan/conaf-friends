@@ -113,7 +113,11 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
 
       // Confidence: name token overlap + bio signal
       // Normalise dots so "B.J." matches "B. J." and vice versa
-      const norm        = (s: string) => s.toLowerCase().replace(/\./g, '').replace(/\s+/g, ' ');
+      // Strip dots and quote marks (straight + curly) before tokenizing, so a
+      // Wikipedia title like `"Weird Al" Yankovic` still token-matches the
+      // plain guest name "Weird Al Yankovic" instead of losing two tokens to
+      // stuck-on quote characters.
+      const norm        = (s: string) => s.toLowerCase().replace(/["""'']/g, '').replace(/\./g, '').replace(/\s+/g, ' ');
       const nameTokens  = norm(guestName).split(/\s+/);
       const titleTokens = norm(wikiTitle).split(/\s+/);
       const overlap     = nameTokens.filter(t => titleTokens.includes(t)).length / nameTokens.length;
@@ -187,7 +191,7 @@ function extractKnownFor(intro: string): GuestBioWork[] {
     const ctx  = intro.slice(Math.max(0, m.index - 30), m.index + 60);
     const type: GuestBioWork['type'] = /film|movie/i.test(ctx) ? 'film'
       : /series|show|sitcom|drama|comedy series/i.test(ctx) ? 'tv'
-      : /album|song|track/i.test(ctx) ? 'other' : 'tv';
+      : /album|song|track/i.test(ctx) ? 'music' : 'tv';
     works.push({ title, type, year });
   }
   return works
@@ -210,7 +214,7 @@ function extractRecentWork(intro: string): GuestBioWork[] {
     const ctx  = intro.slice(Math.max(0, m.index - 30), m.index + 60);
     const type: GuestBioWork['type'] = /film|movie/i.test(ctx) ? 'film'
       : /series|show|sitcom|drama/i.test(ctx) ? 'tv'
-      : /album|song/i.test(ctx) ? 'other' : 'tv';
+      : /album|song/i.test(ctx) ? 'music' : 'tv';
     works.push({ title, type, year });
   }
   return works
@@ -318,16 +322,24 @@ ${entity.intro}
 Return JSON:
 {
   "profession": [],
-  "known_for": [{"title":"","type":"film|tv|podcast|other","year":""}],
+  "known_for": [{"title":"","type":"film|tv|music|podcast|other","year":""}],
   "recent_work": [],
+  "upcoming_work": [{"title":"","type":"film|tv|music|podcast|other","year":""}],
   "birth_year": "",
   "nationality": "",
   "prestige_signals": [],
   "primary_platform": "film|tv|music|streaming|podcast|sports|other"
 }
 Rules:
-- known_for: 2-4 highest-signal works
+- known_for: up to 6 highest-signal works, across ANY medium (film, TV, music/
+  albums, podcasts) — this is used to find connections between guests who
+  worked on the same project or in the same band, so don't limit to acting
+  credits alone
 - recent_work: year >= ${TWO_YEARS_AGO} only, empty array if none
+- upcoming_work: work explicitly described as upcoming/announced/forthcoming in
+  the intro (e.g. "is set to star in", "an upcoming album"), with a year if one
+  is stated; empty array if the intro doesn't mention anything upcoming — this
+  will be sparse, never infer or guess a future project
 - year: 4-digit string or ""
 - birth_year: 4-digit string from the intro's "(born ...)" clause, or "" if not stated
 - nationality: the demonym Wikipedia's own opening sentence uses (e.g. "American",
@@ -373,7 +385,7 @@ Paragraph only:`,
   return {
     entity:           { name: entity.name, wikipedia_url: entity.wikipedia_url, confidence: entity.confidence },
     profession:       structured.profession || [],
-    known_for:        (structured.known_for || []).slice(0, 4),
+    known_for:        (structured.known_for || []).slice(0, 6),
     recent_work:      (structured.recent_work || []).slice(0, 4),
     conan_connection: conanConn,
     description,
@@ -385,6 +397,7 @@ Paragraph only:`,
     nationality:      structured.nationality || '',
     prestige_signals: structured.prestige_signals || [],
     primary_platform: structured.primary_platform || undefined,
+    upcoming_work:    (structured.upcoming_work || []).slice(0, 3),
   };
 }
 
@@ -434,6 +447,14 @@ function validate(bio: GuestBio): { ok: boolean; reason?: string } {
     if (knownTitles.has(w.title.toLowerCase()))
       return { ok: false, reason: `duplicate:${w.title}` };
   }
+
+  // "Upcoming" work with a year already in the past means the model treated a
+  // since-released project as still forthcoming — stale, not a real signal.
+  for (const w of bio.upcoming_work ?? []) {
+    if (w.year && parseInt(w.year) < CURRENT_YEAR)
+      return { ok: false, reason: `stale_upcoming_work:${w.title}(${w.year})` };
+  }
+
   return { ok: true };
 }
 
@@ -506,6 +527,13 @@ async function main() {
       // Entity resolution
       const entity = await resolveEntityWithRetry(guest.name);
       await sleep(500);
+
+      // --guest is single-name debugging/sampling mode — cheap to also show the
+      // exact source text the extraction step worked from, since "why didn't
+      // field X get extracted" always starts with "was it even in the text".
+      if (ONLY && entity) {
+        console.log(`\n  [debug] Wikipedia intro used for ${entity.name}:\n  "${entity.intro}"\n`);
+      }
 
       if (!entity || entity.confidence < MIN_ENTITY_CONFIDENCE) {
         const conf = entity?.confidence?.toFixed(2) ?? 'none';
