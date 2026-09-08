@@ -10,6 +10,8 @@ interface Props {
   crossover: number[][];
   professionCounts: Record<Era, Record<string, number>>;
   professionEnrichedTotal: Record<Era, number>;
+  generationCounts: Record<Era, Record<string, number>>;
+  generationEnrichedTotal: Record<Era, number>;
 }
 
 // Fixed-order categorical palette (dark-surface steps), validated with the
@@ -31,11 +33,13 @@ const CATEGORY_COLORS = [
 // for the heatmap — magnitude reads by lightness/chroma alone, low to high.
 const SEQUENTIAL_RAMP = ["#2c2226", "#543026", "#803f25", "#b04f24", "#e05f22"];
 
-// Illustrative only — no guest has a backfilled birth_year yet, so this
-// bucket distribution is a placeholder for what the real split will look
-// like once that ingest lands. Static across the era filter on purpose:
-// filtering illustrative numbers would suggest a precision that isn't there.
-const GENERATION_BUCKETS: { label: string; share: number }[] = [
+// Illustrative fallback only — used while zero guests in the selected eras
+// have a backfilled birth_year. The moment even one does, RoundupClient
+// switches to the real computed split (same bucket labels/ranges, so the
+// chart doesn't visually jump when it flips from placeholder to real).
+// Static across the era filter on purpose: filtering illustrative numbers
+// would suggest a precision that isn't there.
+const ILLUSTRATIVE_GENERATION_BUCKETS: { label: string; share: number }[] = [
   { label: "Boomer & earlier (born before 1965)", share: 0.21 },
   { label: "Gen X (1965–1980)", share: 0.34 },
   { label: "Millennial (1981–1996)", share: 0.37 },
@@ -135,6 +139,8 @@ export default function RoundupClient({
   crossover,
   professionCounts,
   professionEnrichedTotal,
+  generationCounts,
+  generationEnrichedTotal,
 }: Props) {
   const [selected, setSelected] = useState<Set<Era>>(new Set(eras));
   const [heatmapTable, setHeatmapTable] = useState(false);
@@ -187,15 +193,44 @@ export default function RoundupClient({
     };
   }, [eras, selected, professionCounts, professionEnrichedTotal]);
 
-  const generationSegments = useMemo(
-    () =>
-      GENERATION_BUCKETS.map((b, i) => ({
+  const generationSegments = useMemo(() => {
+    const totals: Record<string, number> = {};
+    let combinedTotal = 0;
+    for (const era of eras) {
+      if (!selected.has(era)) continue;
+      combinedTotal += generationEnrichedTotal[era];
+      for (const [label, count] of Object.entries(generationCounts[era])) {
+        totals[label] = (totals[label] ?? 0) + count;
+      }
+    }
+
+    // Real data exists for at least one guest in the selected eras — use it.
+    // Fixed chronological order (not sorted by size, unlike Profession) since
+    // generation is ordinal, and so the bars read left-to-right by age.
+    if (combinedTotal > 0) {
+      return {
+        illustrative: false,
+        total: combinedTotal,
+        segments: ILLUSTRATIVE_GENERATION_BUCKETS.map((b, i) => ({
+          label: b.label,
+          value: totals[b.label] ?? 0,
+          color: CATEGORY_COLORS[i % CATEGORY_COLORS.length],
+        })),
+      };
+    }
+
+    // No birth_year data yet for this selection — fall back to the
+    // illustrative placeholder split.
+    return {
+      illustrative: true,
+      total: 1000,
+      segments: ILLUSTRATIVE_GENERATION_BUCKETS.map((b, i) => ({
         label: b.label,
         value: Math.round(b.share * 1000),
         color: CATEGORY_COLORS[i % CATEGORY_COLORS.length],
       })),
-    []
-  );
+    };
+  }, [eras, selected, generationCounts, generationEnrichedTotal]);
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
@@ -342,14 +377,17 @@ export default function RoundupClient({
         <div className="flex items-baseline gap-2 mb-1">
           <h2 className="font-serif text-2xl font-semibold">Generation</h2>
           <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg2)] border border-[var(--border)] text-[var(--text-muted)]">
-            Illustrative
+            {generationSegments.illustrative
+              ? "Illustrative"
+              : `${generationSegments.total} with a birth year`}
           </span>
         </div>
         <p className="text-sm text-[var(--text-muted)] mb-4">
-          Placeholder split — no guest has a backfilled birth year yet, so this is what the real
-          breakdown should look like once that data lands, not a live number.
+          {generationSegments.illustrative
+            ? "Placeholder split — no guest in this selection has a backfilled birth year yet, so this is what the real breakdown should look like once that data lands, not a live number."
+            : "Real, but thin — only a fraction of the roster has a backfilled birth year so far, so treat this as a sample, not the full roster's split."}
         </p>
-        <StackedBar segments={generationSegments} total={1000} />
+        <StackedBar segments={generationSegments.segments} total={generationSegments.total} />
       </section>
 
       {/* Profession breakdown */}

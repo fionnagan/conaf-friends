@@ -101,6 +101,47 @@ export default function RoundupPage() {
     }
   }
 
+  // Generation: real once a guest has a backfilled birth_year, same
+  // birth-year ranges as the illustrative placeholder buckets so the chart
+  // doesn't jump when it switches from placeholder to real data. Right now
+  // this will be empty for almost everyone — birth_year backfill is still
+  // rolling out — so RoundupClient falls back to the illustrative split
+  // whenever enrichedTotal is 0 for the selected eras.
+  const GENERATION_BUCKETS: [string, (year: number) => boolean][] = [
+    ["Boomer & earlier (born before 1965)", (y) => y < 1965],
+    ["Gen X (1965–1980)", (y) => y >= 1965 && y <= 1980],
+    ["Millennial (1981–1996)", (y) => y >= 1981 && y <= 1996],
+    ["Gen Z (1997 & later)", (y) => y >= 1997],
+  ];
+
+  const generationCounts: Record<Era, Record<string, number>> = {
+    "late-night-nbc": {},
+    "tonight-show": {},
+    "tbs-conan": {},
+    podcast: {},
+    "conan-must-go": {},
+  };
+  const generationEnrichedTotal: Record<Era, number> = {
+    "late-night-nbc": 0,
+    "tonight-show": 0,
+    "tbs-conan": 0,
+    podcast: 0,
+    "conan-must-go": 0,
+  };
+
+  for (const guest of data.guests) {
+    const birthYear = guest.bio?.birth_year ? parseInt(guest.bio.birth_year, 10) : NaN;
+    if (!Number.isFinite(birthYear)) continue;
+    const bucket = GENERATION_BUCKETS.find(([, test]) => test(birthYear))?.[0];
+    if (!bucket) continue;
+    const guestEras = new Set(guest.appearances.map((a) => a.era));
+    for (const era of ROUNDUP_ERAS) {
+      if (!guestEras.has(era)) continue;
+      generationCounts[era][bucket] = (generationCounts[era][bucket] ?? 0) + 1;
+      generationEnrichedTotal[era] += 1;
+    }
+  }
+
   return (
     <RoundupClient
       eras={ROUNDUP_ERAS}
@@ -110,6 +151,8 @@ export default function RoundupPage() {
       crossover={crossover}
       professionCounts={professionCounts}
       professionEnrichedTotal={professionEnrichedTotal}
+      generationCounts={generationCounts}
+      generationEnrichedTotal={generationEnrichedTotal}
     />
   );
 }
