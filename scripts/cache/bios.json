@@ -2508,35 +2508,157 @@
     "profession": [
       "comedian",
       "actor",
-      "writer"
+      "writer",
+      "producer",
+      "musician"
     ],
-    "known_for": [],
+    "known_for": [
+      {
+        "title": "The Smothers Brothers Comedy Hour",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Saturday Night Live",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Jerk",
+        "type": "film",
+        "year": "1979"
+      },
+      {
+        "title": "Dead Men Don't Wear Plaid",
+        "type": "film",
+        "year": "1982"
+      },
+      {
+        "title": "The Man with Two Brains",
+        "type": "film",
+        "year": "1983"
+      },
+      {
+        "title": "All of Me",
+        "type": "film",
+        "year": "1984"
+      },
+      {
+        "title": "¡Three Amigos!",
+        "type": "film",
+        "year": "1986"
+      },
+      {
+        "title": "Planes, Trains and Automobiles",
+        "type": "film",
+        "year": "1987"
+      },
+      {
+        "title": "Roxanne",
+        "type": "film",
+        "year": "1987"
+      },
+      {
+        "title": "Dirty Rotten Scoundrels",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Parenthood",
+        "type": "film",
+        "year": "1989"
+      },
+      {
+        "title": "L.A. Story",
+        "type": "film",
+        "year": "1991"
+      },
+      {
+        "title": "Father of the Bride",
+        "type": "film",
+        "year": "1991"
+      },
+      {
+        "title": "Bowfinger",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Bringing Down the House",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Looney Tunes: Back in Action",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Cheaper by the Dozen",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "An Evening You Will Forget for the Rest of Your Life",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "Only Murders in the Building",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Bright Star",
+        "type": "other",
+        "year": "2016"
+      },
+      {
+        "title": "Meteor Shower",
+        "type": "other",
+        "year": "2017"
+      },
+      {
+        "title": "Let's Get Small",
+        "type": "music",
+        "year": "1977"
+      },
+      {
+        "title": "A Wild and Crazy Guy",
+        "type": "music",
+        "year": "1978"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
-      "type": "direct",
-      "evidence": "SNL writers room era, 1988–1991. First appeared on Late Night with Conan O'Brien in 2000."
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "Stephen Glenn Martin is an American comedian, actor, writer, producer, and musician. Known for his work in comedy films, television, and recording, he has received many accolades, including five Grammy Awards, a Primetime Emmy Award, and a Screen Actors Guild Award as well as nominations for eight Golden Globe Awards and two Tony Awards. Martin received the Mark Twain Prize for American Humor in 2005, the Kennedy Center Honors in 2007, the Honorary Academy Award in 2013, and an AFI Life Achievement Award in 2015. SNL writers room era, 1988–1991. First appeared on Late Night with Conan O'Brien in 2000.",
+    "description": "Steve Martin is a comedian, actor, writer, producer, and musician who first gained widespread attention on *The Smothers Brothers Comedy Hour* and as a frequent host of *Saturday Night Live*. He wrote and starred in a string of comedy films including *The Jerk* (1979), *Roxanne* (1987), *Planes, Trains and Automobiles* (1987), and *Bowfinger* (1999), while also releasing comedy albums *Let's Get Small* (1977) and *A Wild and Crazy Guy* (1978). His later work includes the Hulu series *Only Murders in the Building* (2021) and the Netflix special *An Evening You Will Forget for the Rest of Your Life* (2018). He may have first appeared with Conan O'Brien on *Late Night* in 2000.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Steve_Martin"
     ],
-    "enrichedAt": "2026-06-22T19:54:17.738Z",
+    "enrichedAt": "2026-09-08T23:50:01.977Z",
     "birth_year": "1945",
+    "death_year": "",
+    "gender": "male",
     "nationality": "American",
     "prestige_signals": [
-      "Grammy winner",
-      "Primetime Emmy winner",
+      "Grammy Award winner (five)",
+      "Primetime Emmy Award winner",
       "Screen Actors Guild Award winner",
-      "Golden Globe nominee",
-      "Tony Award nominee",
-      "Mark Twain Prize for American Humor",
-      "Kennedy Center Honors",
-      "Honorary Academy Award",
-      "AFI Life Achievement Award"
+      "Golden Globe Award nominee (eight nominations)",
+      "Tony Award nominee (two nominations)",
+      "Mark Twain Prize for American Humor (2005)",
+      "Kennedy Center Honors (2007)",
+      "Honorary Academy Award (2013)",
+      "AFI Life Achievement Award (2015)",
+      "Peabody Award nominee (2021)"
     ],
-    "primary_platform": "film"
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Martin Short": {
     "entity": {
@@ -3084,41 +3206,165 @@
       },
       {
         "title": "I'm a Grown Little Man",
-        "type": "other",
+        "type": "music",
         "year": "2009"
       },
       {
+        "title": "Seriously Funny",
+        "type": "music",
+        "year": "2010"
+      },
+      {
         "title": "Laugh at My Pain",
-        "type": "other",
+        "type": "music",
         "year": "2011"
       },
       {
+        "title": "Let Me Explain",
+        "type": "music",
+        "year": "2013"
+      },
+      {
         "title": "What Now?",
-        "type": "other",
+        "type": "music",
+        "year": "2016"
+      },
+      {
+        "title": "Paper Soldiers",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Scary Movie 3",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Soul Plane",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "In the Mix",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Little Fockers",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Think Like a Man",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Grudge Match",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Ride Along",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "About Last Night",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Get Hard",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Central Intelligence",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "The Secret Life of Pets",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Ride Along 2",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Captain Underpants: The First Epic Movie",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Jumanji",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Night School",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Real Husbands of Hollywood",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Laugh Out Loud Network",
+        "type": "streaming",
+        "year": "2017"
+      },
+      {
+        "title": "The Five-Year Engagement",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "This Is the End",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Kevin Hart: What Now?",
+        "type": "film",
         "year": "2016"
       }
     ],
-    "recent_work": [],
+    "recent_work": [
+      {
+        "title": "Riyadh Comedy Festival",
+        "type": "other",
+        "year": "2025"
+      }
+    ],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 2004."
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "Kevin Hart is a comedian and actor whose career spans television and stand-up specials. He appeared in the TV series *Undeclared* in 2001 and has released several stand-up specials, including *I'm a Grown Little Man* (2009), *Laugh at My Pain* (2011), and *What Now?* (2016). A fixture in the stand-up comedy world, Hart first appeared on *Late Night with Conan O'Brien* in 2004, establishing an early connection to the late-night landscape as a fellow comedian and peer within the industry.",
+    "description": "Kevin Hart is a comedian and actor who began his television career with a role on Undeclared in 2001. He has appeared in numerous films, including Scary Movie 3, Soul Plane, Little Fockers, Think Like a Man, Ride Along, Get Hard, Central Intelligence, Jumanji, and Night School, among others. Hart has also released several stand-up specials, including I'm a Grown Little Man, Seriously Funny, Laugh at My Pain, Let Me Explain, and What Now?, and founded the Laugh Out Loud Network streaming platform in 2017. He may have first appeared on Late Night with Conan O'Brien in 2004. His recent work includes the Riyadh Comedy Festival in 2025.",
     "confidence": 1,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Kevin_Hart"
     ],
-    "enrichedAt": "2026-07-27T17:52:47.946Z",
+    "enrichedAt": "2026-09-08T23:50:55.237Z",
     "birth_year": "1979",
+    "death_year": "",
+    "gender": "male",
     "nationality": "American",
     "prestige_signals": [
-      "Mark Twain Prize for American Humor winner",
-      "Grammy nominee",
-      "Primetime Emmy nominee",
-      "Time 100 most influential people"
+      "Mark Twain Prize for American Humor in 2024",
+      "nominations for two Grammy Awards",
+      "nominations for four Primetime Emmy Awards",
+      "Time magazine 100 most influential people in the world (2015)"
     ],
-    "primary_platform": "film"
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Mike Birbiglia": {
     "entity": {
@@ -4823,7 +5069,7 @@
       {
         "title": "How I Met Your Mother",
         "type": "tv",
-        "year": "2005"
+        "year": ""
       },
       {
         "title": "Freaks and Geeks",
@@ -4834,28 +5080,142 @@
         "title": "Undeclared",
         "type": "tv",
         "year": "2001"
+      },
+      {
+        "title": "Knocked Up",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Forgetting Sarah Marshall",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "I Love You, Man",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Bad Teacher",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "The Five-Year Engagement",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "This Is 40",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Sex Tape",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Despicable Me",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "The Muppets",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "The End of the Tour",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Jeff, Who Lives at Home",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "The Discovery",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Our Friend",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Windfall",
+        "type": "film",
+        "year": "2022"
+      },
+      {
+        "title": "Winning Time: The Rise of the Lakers Dynasty",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "Shrinking",
+        "type": "tv",
+        "year": "2023"
+      },
+      {
+        "title": "Can't Hardly Wait",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Get Him to the Greek",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Gulliver's Travels",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Nightmares!",
+        "type": "other",
+        "year": "2014"
+      },
+      {
+        "title": "CSI: Crime Scene Investigation",
+        "type": "tv",
+        "year": ""
       }
     ],
-    "recent_work": [],
+    "recent_work": [
+      {
+        "title": "Shrinking",
+        "type": "tv",
+        "year": "2023"
+      }
+    ],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 2006."
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "Jason Segel is an actor, comedian, screenwriter, and producer best known for his television work. He gained early recognition through roles on *Freaks and Geeks* (1999) and *Undeclared* (2001) before achieving wider prominence as Marshall Eriksen on the long-running CBS series *How I Met Your Mother*, which premiered in 2005. In addition to his acting career, Segel has worked as a screenwriter and producer. A comedy peer in the same industry circles, he first appeared on *Late Night with Conan O'Brien* in 2006.",
+    "description": "Jason Segel is an American actor, comedian, screenwriter, and producer. He first gained attention with roles in the television series *Freaks and Geeks* (1999) and *Undeclared* (2001) before reaching wider audiences through the long-running sitcom *How I Met Your Mother*. His film credits include *Knocked Up* (2007), *Forgetting Sarah Marshall* (2008), *I Love You, Man* (2009), *The Muppets* (2011), and *The End of the Tour* (2015), among others. He may have first appeared on *Late Night with Conan O'Brien* as early as 2006. His most recent notable work is the television series *Shrinking*, which began in 2023.",
     "confidence": 1,
-    "needs_review": false,
+    "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Jason_Segel"
     ],
-    "enrichedAt": "2026-08-03T17:59:40.432Z",
+    "enrichedAt": "2026-09-08T23:50:21.595Z",
     "birth_year": "1980",
+    "death_year": "",
+    "gender": "male",
     "nationality": "American",
     "prestige_signals": [
       "Independent Spirit Award for Best Male Lead nominee",
-      "Primetime Emmy Award nominee",
-      "Golden Globe Award nominee"
+      "Primetime Emmy Award nominee (two nominations)",
+      "Golden Globe Award nominee (two nominations)"
     ],
-    "primary_platform": "tv"
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Kristin Chenoweth": {
     "entity": {
@@ -13653,5 +14013,2404 @@
       "Tony Award nominee"
     ],
     "primary_platform": "tv"
+  },
+  "Steve Zahn": {
+    "entity": {
+      "name": "Steve Zahn",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Steve_Zahn",
+      "confidence": 1
+    },
+    "profession": [
+      "actor",
+      "comedian"
+    ],
+    "known_for": [
+      {
+        "title": "That Thing You Do!",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "Safe Men",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Happy, Texas",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Joy Ride",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "National Security",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "A Perfect Getaway",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Diary of a Wimpy Kid film series",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Cowboys",
+        "type": "film",
+        "year": "2020"
+      },
+      {
+        "title": "LaRoy, Texas",
+        "type": "film",
+        "year": "2023"
+      },
+      {
+        "title": "Reality Bites",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "Out of Sight",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Forces of Nature",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Employee of the Month",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Stuart Little film series",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Riding in Cars with Boys",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "Chicken Little",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Sahara",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Sunshine Cleaning",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Dallas Buyers Club",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "The Good Dinosaur",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Captain Fantastic",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "War for the Planet of the Apes",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Anaconda",
+        "type": "film",
+        "year": "2025"
+      },
+      {
+        "title": "Treme",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "Mad Dogs",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "The Crossing",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "The White Lotus",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "You've Got Mail",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Shattered Glass",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Rescue Dawn",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Silo",
+        "type": "tv",
+        "year": "2024"
+      }
+    ],
+    "recent_work": [
+      {
+        "title": "LaRoy, Texas",
+        "type": "film",
+        "year": "2023"
+      },
+      {
+        "title": "Anaconda",
+        "type": "film",
+        "year": "2025"
+      },
+      {
+        "title": "Silo",
+        "type": "tv",
+        "year": "2024"
+      }
+    ],
+    "conan_connection": {
+      "type": "industry",
+      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 1998."
+    },
+    "description": "Steve Zahn is an American actor and comedian whose career spans film and television across three decades. He first gained attention in Reality Bites (1994) and established himself through roles in That Thing You Do! (1996), Safe Men (1998), Out of Sight (1998), and You've Got Mail (1998). His subsequent film work includes Joy Ride (2001), Dallas Buyers Club (2013), War for the Planet of the Apes (2017), and Captain Fantastic (2016), alongside voice roles in Stuart Little (1999), Chicken Little (2005), and The Good Dinosaur (2015). On television, he has appeared in Treme, Mad Dogs, The White Lotus, and Silo. His recent projects include LaRoy, Texas (2023) and Anaconda (2025). Zahn first appeared on Late Night with Conan O'Brien in 1998.",
+    "confidence": 1,
+    "needs_review": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Steve_Zahn"
+    ],
+    "enrichedAt": "2026-09-08T23:47:40.562Z",
+    "birth_year": "1967",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Independent Spirit Award winner",
+      "Primetime Emmy Award nominee",
+      "Screen Actors Guild Award winner"
+    ],
+    "primary_platform": "film",
+    "upcoming_work": []
+  },
+  "Charlyne Yi": {
+    "entity": {
+      "name": "Lo Mutuc",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lo_Mutuc",
+      "confidence": 0.3
+    },
+    "profession": [],
+    "known_for": [],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "industry",
+      "evidence": "Comedy peer and fellow stand-up. First appeared on The Tonight Show with Conan O'Brien in 2009."
+    },
+    "description": "",
+    "confidence": 0.3,
+    "needs_review": true,
+    "sources": [],
+    "enrichedAt": "2026-09-08T23:47:41.944Z"
+  },
+  "D'Arcy Carden": {
+    "entity": {
+      "name": "D'Arcy Carden",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/D'Arcy_Carden",
+      "confidence": 1
+    },
+    "profession": [
+      "actress",
+      "comedian"
+    ],
+    "known_for": [
+      {
+        "title": "The Good Place",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "A League of Their Own",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "Broad City",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Barry",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "Inside Amy Schumer",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Crazy Ex-Girlfriend",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "Veep",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Other People",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Let It Snow",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Bombshell",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Thanksgiving Play",
+        "type": "other",
+        "year": "2023"
+      },
+      {
+        "title": "iSteve",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "The To Do List",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Greener Grass",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Bonding",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Robot Chicken",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Mapleworth Murders",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "Terrible Babysitters",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "WikiHole",
+        "type": "podcast",
+        "year": "2024"
+      },
+      {
+        "title": "Seven Hearts",
+        "type": "other",
+        "year": "2001"
+      }
+    ],
+    "recent_work": [
+      {
+        "title": "The Thanksgiving Play",
+        "type": "other",
+        "year": "2023"
+      },
+      {
+        "title": "WikiHole",
+        "type": "podcast",
+        "year": "2024"
+      },
+      {
+        "title": "Sunny Nights",
+        "type": "tv",
+        "year": ""
+      }
+    ],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Conan in 2018."
+    },
+    "description": "D'Arcy Carden is an actress and comedian whose television credits include *The Good Place* (2016), *A League of Their Own* (2022), *Barry* (2018), *Broad City* (2014), *Veep* (2017), *Crazy Ex-Girlfriend* (2016), and *Inside Amy Schumer* (2015). Her film work includes *Bombshell* (2019), *Greener Grass* (2019), *Let It Snow* (2019), and *Other People* (2016). She has also appeared in the stage production *The Thanksgiving Play* (2023) and co-hosts the podcast *WikiHole* (2024). She may have first connected with Conan's orbit around 2018, when she is believed to have made an initial appearance on *Conan*.",
+    "confidence": 1,
+    "needs_review": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/D'Arcy_Carden"
+    ],
+    "enrichedAt": "2026-09-08T23:48:00.468Z",
+    "birth_year": "1980",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "Primetime Emmy Award for Outstanding Supporting Actress in a Comedy Series nominee",
+      "Critics' Choice Television Award for Best Supporting Actress in a Comedy Series nominee",
+      "Screen Actors Guild Award for Outstanding Performance by an Ensemble in a Comedy Series nominee"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Elle Fanning": {
+    "entity": {
+      "name": "Elle Fanning",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Elle_Fanning",
+      "confidence": 1
+    },
+    "profession": [
+      "actress"
+    ],
+    "known_for": [
+      {
+        "title": "I Am Sam",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "Taken",
+        "type": "tv",
+        "year": "2002"
+      },
+      {
+        "title": "Daddy Day Care",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "The Door in the Floor",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Because of Winn-Dixie",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "My Neighbor Totoro",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Babel",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "House MD",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "Criminal Minds",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "Reservation Road",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "The Curious Case of Benjamin Button",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Phoebe in Wonderland",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "The Nutcracker in 3D",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Somewhere",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Twixt",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Super 8",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Ginger & Rosa",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Maleficent",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "The Neon Demon",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "20th Century Women",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "The Beguiled",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Maleficent: Mistress of Evil",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Great",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "The Girl from Plainville",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "Appropriate",
+        "type": "other",
+        "year": "2023"
+      },
+      {
+        "title": "A Complete Unknown",
+        "type": "film",
+        "year": "2024"
+      },
+      {
+        "title": "Sentimental Value",
+        "type": "film",
+        "year": "2025"
+      },
+      {
+        "title": "Predator: Badlands",
+        "type": "film",
+        "year": "2025"
+      },
+      {
+        "title": "Margo's Got Money Troubles",
+        "type": "tv",
+        "year": "2026"
+      }
+    ],
+    "recent_work": [
+      {
+        "title": "Appropriate",
+        "type": "other",
+        "year": "2023"
+      },
+      {
+        "title": "A Complete Unknown",
+        "type": "film",
+        "year": "2024"
+      },
+      {
+        "title": "Sentimental Value",
+        "type": "film",
+        "year": "2025"
+      },
+      {
+        "title": "Predator: Badlands",
+        "type": "film",
+        "year": "2025"
+      }
+    ],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Conan in 2011."
+    },
+    "description": "Elle Fanning is an actress whose career spans more than two decades, beginning with early roles in films such as *I Am Sam* (2001), *Because of Winn-Dixie* (2004), and *The Curious Case of Benjamin Button* (2008). She has worked across film and television, with notable credits including *Super 8* (2011), *Maleficent* (2014), *The Neon Demon* (2016), *The Beguiled* (2017), and the television series *The Great* (2020). Her more recent work includes *A Complete Unknown* (2024) and the upcoming films *Sentimental Value* and *Predator: Badlands*, both due in 2025. She may have first appeared on *Conan* in 2011.",
+    "confidence": 1,
+    "needs_review": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Elle_Fanning"
+    ],
+    "enrichedAt": "2026-09-08T23:48:23.685Z",
+    "birth_year": "1998",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "Academy Award nominee",
+      "Emmy Award nominee",
+      "Golden Globe Award nominee",
+      "Academy Award for Best Supporting Actress nominee",
+      "Primetime Emmy Award for Outstanding Lead Actress in a Comedy Series nominee"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Lin-Manuel Miranda": {
+    "entity": {
+      "name": "Lin-Manuel Miranda",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lin-Manuel_Miranda",
+      "confidence": 1
+    },
+    "profession": [
+      "songwriter",
+      "actor",
+      "filmmaker",
+      "librettist",
+      "producer"
+    ],
+    "known_for": [
+      {
+        "title": "In the Heights",
+        "type": "other",
+        "year": "2008"
+      },
+      {
+        "title": "Hamilton",
+        "type": "other",
+        "year": "2015"
+      },
+      {
+        "title": "Moana",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Vivo",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Encanto",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "In the Heights",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "How Far I'll Go",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Dos Oruguitas",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "We Don't Talk About Bruno",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Mary Poppins Returns",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Hamilton",
+        "type": "streaming",
+        "year": "2020"
+      },
+      {
+        "title": "Tick, Tick... Boom!",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "The Electric Company",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "His Dark Materials",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Saturday Night Live",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "Curb Your Enthusiasm",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "West Side Story",
+        "type": "other",
+        "year": "2009"
+      },
+      {
+        "title": "Working",
+        "type": "other",
+        "year": "2008"
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Conan in 2016."
+    },
+    "description": "Lin-Manuel Miranda is a songwriter, actor, filmmaker, librettist, and producer best known for creating the stage musicals *In the Heights* (2008) and *Hamilton* (2015), the latter of which was also released as a streaming production in 2020. His film credits include *Mary Poppins Returns* (2018), the *In the Heights* film adaptation (2021), and animated features *Moana*, *Vivo*, and *Encanto*, for which he contributed songs including \"How Far I'll Go,\" \"Dos Oruguitas,\" and \"We Don't Talk About Bruno.\" He has also appeared on television in *The Electric Company*, *His Dark Materials*, *Saturday Night Live* (2016), and *Curb Your Enthusiasm* (2018). He may have first appeared on Conan in 2016.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Lin-Manuel_Miranda"
+    ],
+    "enrichedAt": "2026-09-08T23:48:43.906Z",
+    "birth_year": "1980",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Pulitzer Prize for Drama",
+      "three Tony Awards",
+      "two Laurence Olivier Awards",
+      "two Emmy Awards",
+      "five Grammy Awards",
+      "two Academy Award nominations",
+      "Kennedy Center Honor in 2018",
+      "Tony Award for Best Musical",
+      "Tony Award for Best Original Score",
+      "Grammy Award for Best Musical Theater Album",
+      "Pulitzer Prize for Hamilton",
+      "Best Book of a Musical Tony Award",
+      "Golden Globe nomination for Mary Poppins Returns",
+      "Golden Globe nomination for Hamilton",
+      "Primetime Emmy nomination for Hamilton",
+      "Primetime Emmy Award nomination for Saturday Night Live",
+      "Primetime Emmy Award nomination for Curb Your Enthusiasm",
+      "Oscar nomination for How Far I'll Go",
+      "Oscar nomination for Dos Oruguitas"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
+  },
+  "Timothy Olyphant": {
+    "entity": {
+      "name": "Timothy Olyphant",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Timothy_Olyphant",
+      "confidence": 1
+    },
+    "profession": [
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "The Monogamist",
+        "type": "other",
+        "year": "1995"
+      },
+      {
+        "title": "The Santaland Diaries",
+        "type": "other",
+        "year": "1996"
+      },
+      {
+        "title": "Scream 2",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Go",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Gone in 60 Seconds",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "The Broken Hearts Club",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "A Man Apart",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "The Girl Next Door",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Deadwood",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Deadwood: The Movie",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Catch and Release",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Hitman",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Live Free or Die Hard",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "A Perfect Getaway",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Damages",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "The Crazies",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Justified",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "The Office",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "The Mindy Project",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "The Grinder",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Mother's Day",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Snowden",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Santa Clarita Diet",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Once Upon a Time in Hollywood",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Good Place",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "Curb Your Enthusiasm",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "Fargo",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "The Mandalorian",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "The Book of Boba Fett",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Amsterdam",
+        "type": "film",
+        "year": "2022"
+      },
+      {
+        "title": "Justified: City Primeval",
+        "type": "tv",
+        "year": "2023"
+      },
+      {
+        "title": "Alien: Earth",
+        "type": "tv",
+        "year": "2025"
+      }
+    ],
+    "recent_work": [
+      {
+        "title": "Justified: City Primeval",
+        "type": "tv",
+        "year": "2023"
+      },
+      {
+        "title": "Alien: Earth",
+        "type": "tv",
+        "year": "2025"
+      }
+    ],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
+    },
+    "description": "Timothy Olyphant is an American actor whose career spans film and television. He made early screen appearances in The Monogamist (1995) and The Santaland Diaries (1996) before landing roles in Scream 2 (1997), Go (1999), and Gone in 60 Seconds (2000). He is perhaps best known for his lead roles in the HBO Western series Deadwood (2004) and FX's Justified (2010), the latter of which he reprised in Justified: City Primeval (2023). His other television credits include Santa Clarita Diet, Fargo, The Mandalorian, and The Book of Boba Fett. He may have first appeared on Late Night with Conan O'Brien as early as 1997. He is set to appear in Alien: Earth (2025).",
+    "confidence": 1,
+    "needs_review": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Timothy_Olyphant"
+    ],
+    "enrichedAt": "2026-09-08T23:49:05.306Z",
+    "birth_year": "1968",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Theatre World Award for Outstanding Debut Performance",
+      "nominated for a Primetime Emmy Award for Outstanding Lead Actor in a Drama Series in 2011",
+      "Critics' Choice Award"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Josh Brolin": {
+    "entity": {
+      "name": "Josh Brolin",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Josh_Brolin",
+      "confidence": 1
+    },
+    "profession": [
+      "actor",
+      "producer"
+    ],
+    "known_for": [
+      {
+        "title": "The Goonies",
+        "type": "film",
+        "year": "1985"
+      },
+      {
+        "title": "No Country for Old Men",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Milk",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "W.",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "True Grit",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Wall Street: Money Never Sleeps",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Men in Black 3",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Oldboy",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Inherent Vice",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Sicario",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Everest",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Hail, Caesar!",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Avengers: Infinity War",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Deadpool 2",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Avengers: Endgame",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Dune",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Dune: Part Two",
+        "type": "film",
+        "year": "2024"
+      },
+      {
+        "title": "Brothers",
+        "type": "film",
+        "year": "2024"
+      },
+      {
+        "title": "Dune: Part Three",
+        "type": "film",
+        "year": "2026"
+      },
+      {
+        "title": "The Young Riders",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Winnetka Road",
+        "type": "tv",
+        "year": "1994"
+      },
+      {
+        "title": "Mister Sterling",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "21 Jump Street",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "American Gangster",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Flirting With Disaster",
+        "type": "film",
+        "year": "1996"
+      }
+    ],
+    "recent_work": [
+      {
+        "title": "Dune: Part Two",
+        "type": "film",
+        "year": "2024"
+      },
+      {
+        "title": "Brothers",
+        "type": "film",
+        "year": "2024"
+      }
+    ],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
+    },
+    "description": "Josh Brolin is an American actor and producer whose career spans four decades. He first came to wider attention with his role in *The Goonies* (1985) before establishing himself as a prominent film presence with appearances in *No Country for Old Men*, *Milk*, and *W.* (all 2007–2008). He has since appeared in a wide range of projects, including *Sicario* (2015), *Hail, Caesar!* (2016), and the *Avengers* franchise, as well as the *Dune* series, with *Part Two* released in 2024 and *Part Three* scheduled for 2026. His television work includes *The Young Riders* and *Mister Sterling* (2003). He may have first appeared on *The Tonight Show with Conan O'Brien* in 2009.",
+    "confidence": 1,
+    "needs_review": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Josh_Brolin"
+    ],
+    "enrichedAt": "2026-09-08T23:49:26.841Z",
+    "birth_year": "1968",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Academy Award for Best Supporting Actor nominee"
+    ],
+    "primary_platform": "film",
+    "upcoming_work": []
+  },
+  "Natasha Lyonne": {
+    "entity": {
+      "name": "Natasha Lyonne",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Natasha_Lyonne",
+      "confidence": 1
+    },
+    "profession": [
+      "actress",
+      "executive producer",
+      "director",
+      "writer"
+    ],
+    "known_for": [
+      {
+        "title": "Heartburn",
+        "type": "film",
+        "year": "1986"
+      },
+      {
+        "title": "Pee-wee's Playhouse",
+        "type": "tv",
+        "year": "1986"
+      },
+      {
+        "title": "Dennis the Menace",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "Everyone Says I Love You",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "Slums of Beverly Hills",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "But I'm a Cheerleader",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "American Pie",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Detroit Rock City",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Freeway II: Confessions of a Trickbaby",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Party Monster",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "April Fool",
+        "type": "film",
+        "year": "1989"
+      },
+      {
+        "title": "Orange Is the New Black",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Russian Doll",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Poker Face",
+        "type": "tv",
+        "year": "2023"
+      },
+      {
+        "title": "His Three Daughters",
+        "type": "film",
+        "year": "2024"
+      }
+    ],
+    "recent_work": [
+      {
+        "title": "Poker Face",
+        "type": "tv",
+        "year": "2023"
+      },
+      {
+        "title": "His Three Daughters",
+        "type": "film",
+        "year": "2024"
+      }
+    ],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+    },
+    "description": "Natasha Lyonne is an American actress, executive producer, director, and writer whose career spans film and television. She made early appearances in *Heartburn* (1986) and *Pee-wee's Playhouse* (1986) before roles in *Dennis the Menace* (1993), *Everyone Says I Love You* (1996), and *Slums of Beverly Hills* (1998). She became widely recognized through *But I'm a Cheerleader*, *American Pie*, and *Detroit Rock City*, all released in 1999. Later work includes *Orange Is the New Black* (2013), *Russian Doll* (2019), and *Poker Face* (2023), the latter two reflecting her expanded role as a creative force behind the camera. She most recently appeared in *His Three Daughters* (2024). She may have first appeared on *Late Night with Conan O'Brien* in 2001.",
+    "confidence": 1,
+    "needs_review": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Natasha_Lyonne"
+    ],
+    "enrichedAt": "2026-09-08T23:49:42.900Z",
+    "birth_year": "1979",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "nominated for five Primetime Emmy Awards",
+      "nominated for two Golden Globe Awards",
+      "named one of the 100 most influential people in the world by Time Magazine in 2023"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Shaquille O'Neal": {
+    "entity": {
+      "name": "Shaquille O'Neal",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Shaquille_O'Neal",
+      "confidence": 1
+    },
+    "profession": [
+      "professional basketball player",
+      "sports analyst",
+      "rapper",
+      "electronic music producer",
+      "DJ",
+      "actor",
+      "television personality",
+      "podcast host",
+      "sports executive"
+    ],
+    "known_for": [
+      {
+        "title": "Inside the NBA",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Shaq Diesel",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Shaq Fu: Da Return",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Shaq Fu: The Return",
+        "type": "music",
+        "year": "1994"
+      },
+      {
+        "title": "Shaq's Big Challenge",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Shaq Vs.",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Big Podcast with Shaq",
+        "type": "podcast",
+        "year": ""
+      },
+      {
+        "title": "Shaq Talks Back",
+        "type": "other",
+        "year": "2002"
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+    },
+    "description": "Shaquille O'Neal is a professional basketball player, sports analyst, rapper, electronic music producer, DJ, actor, television personality, and podcast host. He is known for his long-running role as an analyst on *Inside the NBA*, his debut rap album *Shaq Diesel*, and subsequent music release *Shaq Fu: Da Return*. His television work includes *Shaq's Big Challenge* and *Shaq Vs.*, and he authored *Shaq Talks Back* in 2002. He also hosts *The Big Podcast with Shaq*. He may have first appeared on *Late Night with Conan O'Brien* in 2001.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Shaquille_O'Neal"
+    ],
+    "enrichedAt": "2026-09-08T23:50:35.101Z",
+    "birth_year": "1972",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "four-time NBA champion",
+      "three-time NBA Finals MVP",
+      "2000 NBA MVP",
+      "NBA Rookie of the Year 1992-93",
+      "15 All-Star Game selections",
+      "three All-Star Game MVP awards",
+      "two scoring titles",
+      "14 All-NBA team selections",
+      "three NBA All-Defensive Team selections",
+      "NBA 50th Anniversary Team",
+      "NBA 75th Anniversary Team",
+      "Naismith Memorial Basketball Hall of Fame 2016",
+      "FIBA Hall of Fame 2017"
+    ],
+    "primary_platform": "sports",
+    "upcoming_work": []
+  },
+  "Jim Parsons": {
+    "entity": {
+      "name": "Jim Parsons",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jim_Parsons",
+      "confidence": 1
+    },
+    "profession": [
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "The Big Bang Theory",
+        "type": "tv",
+        "year": "2007"
+      },
+      {
+        "title": "The Normal Heart",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Special",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Hollywood",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "The Normal Heart",
+        "type": "other",
+        "year": "2011"
+      },
+      {
+        "title": "Harvey",
+        "type": "other",
+        "year": "2012"
+      },
+      {
+        "title": "An Act of God",
+        "type": "other",
+        "year": "2015"
+      },
+      {
+        "title": "The Boys in the Band",
+        "type": "other",
+        "year": "2018"
+      },
+      {
+        "title": "Our Town",
+        "type": "other",
+        "year": "2024"
+      },
+      {
+        "title": "Mother Play",
+        "type": "other",
+        "year": "2024"
+      },
+      {
+        "title": "Home",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Hidden Figures",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "A Kid Like Jake",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Extremely Wicked, Shockingly Evil and Vile",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Boys in the Band",
+        "type": "film",
+        "year": "2020"
+      },
+      {
+        "title": "Spoiler Alert",
+        "type": "film",
+        "year": "2022"
+      }
+    ],
+    "recent_work": [
+      {
+        "title": "Mother Play",
+        "type": "other",
+        "year": "2024"
+      },
+      {
+        "title": "Our Town",
+        "type": "other",
+        "year": "2024"
+      }
+    ],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
+    },
+    "description": "Jim Parsons is an actor best known for his long-running role in the television series *The Big Bang Theory*, which began in 2007. His screen credits include the television films *The Normal Heart* (2014) and *Hollywood* (2020), as well as feature films such as *Hidden Figures* (2016), *A Kid Like Jake* (2018), and *Spoiler Alert* (2022). Parsons has maintained an active stage career, appearing in productions including *The Normal Heart*, *Harvey*, *An Act of God*, *The Boys in the Band*, *Our Town*, and *Mother Play*, the latter two among his most recent work in 2024. He may have first appeared on *The Tonight Show with Conan O'Brien* in 2009.",
+    "confidence": 1,
+    "needs_review": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jim_Parsons"
+    ],
+    "enrichedAt": "2026-09-08T23:51:11.349Z",
+    "birth_year": "1973",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "four Primetime Emmy Awards",
+      "Golden Globe Award",
+      "nomination for a Tony Award",
+      "Emmy-nominated for the television film The Normal Heart (2014)",
+      "Emmy-nominated for the short form series Special (2019)",
+      "Emmy-nominated for Hollywood (2020)",
+      "Tony Award for Best Featured Actor in a Play nomination for Mother Play (2024)",
+      "Forbes named him the world's highest-paid television actor"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Keith Urban": {
+    "entity": {
+      "name": "Keith Urban",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Keith_Urban",
+      "confidence": 1
+    },
+    "profession": [
+      "country singer",
+      "songwriter",
+      "guitarist"
+    ],
+    "known_for": [
+      {
+        "title": "Keith Urban (Australian debut album)",
+        "type": "music",
+        "year": "1991"
+      },
+      {
+        "title": "The Ranch (band)",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Keith Urban (US debut album)",
+        "type": "music",
+        "year": "1999"
+      },
+      {
+        "title": "Golden Road",
+        "type": "music",
+        "year": "2002"
+      },
+      {
+        "title": "Be Here",
+        "type": "music",
+        "year": "2004"
+      },
+      {
+        "title": "Love, Pain & the Whole Crazy Thing",
+        "type": "music",
+        "year": "2006"
+      },
+      {
+        "title": "Greatest Hits: 18 Kids",
+        "type": "music",
+        "year": "2007"
+      },
+      {
+        "title": "Defying Gravity",
+        "type": "music",
+        "year": "2009"
+      },
+      {
+        "title": "Get Closer",
+        "type": "music",
+        "year": "2010"
+      },
+      {
+        "title": "Fuse",
+        "type": "music",
+        "year": "2013"
+      },
+      {
+        "title": "Ripcord",
+        "type": "music",
+        "year": "2016"
+      },
+      {
+        "title": "Graffiti U",
+        "type": "music",
+        "year": "2018"
+      },
+      {
+        "title": "The Speed of Now Part 1",
+        "type": "music",
+        "year": "2020"
+      },
+      {
+        "title": "High",
+        "type": "music",
+        "year": "2024"
+      },
+      {
+        "title": "For You",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Act of Valor",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "But for the Grace of God",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Somebody Like You",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "You'll Think of Me",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Once in a Lifetime",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Stupid Boy",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "John Cougar, John Deere, John 3:16",
+        "type": "music",
+        "year": "2015"
+      },
+      {
+        "title": "Break on Me",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Wasted Time",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Blue Ain't Your Color",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Coming Home",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "One Too Many",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "We Were",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "God Whispered Your Name",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Start a Band",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "You Look Good in My Shirt",
+        "type": "music",
+        "year": "2008"
+      },
+      {
+        "title": "The Voice (Australia)",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "American Idol",
+        "type": "tv",
+        "year": ""
+      }
+    ],
+    "recent_work": [
+      {
+        "title": "High",
+        "type": "music",
+        "year": "2024"
+      }
+    ],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
+    },
+    "description": "Keith Urban is an Australian country singer, songwriter, and guitarist who released his debut album in Australia in 1991 before breaking into the American market with his US debut album in 1999. He has released a string of studio albums including Golden Road (2002), Be Here (2004), Defying Gravity (2009), Ripcord (2016), Graffiti U (2018), and The Speed of Now Part 1 (2020), with his most recent release being High in 2024. His singles include \"Somebody Like You,\" \"You'll Think of Me,\" \"Blue Ain't Your Color,\" and \"We Were.\" He has served as a coach on The Voice Australia and as a judge on American Idol. He may have first appeared on Late Night with Conan O'Brien in 2005.",
+    "confidence": 1,
+    "needs_review": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Keith_Urban"
+    ],
+    "enrichedAt": "2026-09-08T23:51:33.938Z",
+    "birth_year": "1967",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "Australian",
+    "prestige_signals": [
+      "four Grammy Awards",
+      "15 Academy of Country Music Awards",
+      "Jim Reeves International Award",
+      "13 CMA Awards",
+      "six ARIA Music Awards",
+      "nominated at the 70th Golden Globe Awards for Best Original Song",
+      "nominated at the 18th Critics' Choice Awards for Best Original Song"
+    ],
+    "primary_platform": "music",
+    "upcoming_work": []
+  },
+  "Bob Newhart": {
+    "entity": {
+      "name": "Bob Newhart",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bob_Newhart",
+      "confidence": 1
+    },
+    "profession": [
+      "comedian",
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "The Button-Down Mind of Bob Newhart",
+        "type": "music",
+        "year": "1960"
+      },
+      {
+        "title": "The Button-Down Mind Strikes Back!",
+        "type": "music",
+        "year": "1960"
+      },
+      {
+        "title": "The Bob Newhart Show",
+        "type": "tv",
+        "year": "1961"
+      },
+      {
+        "title": "The Bob Newhart Show",
+        "type": "tv",
+        "year": "1972"
+      },
+      {
+        "title": "Newhart",
+        "type": "tv",
+        "year": "1982"
+      },
+      {
+        "title": "Bob",
+        "type": "tv",
+        "year": "1992"
+      },
+      {
+        "title": "George and Leo",
+        "type": "tv",
+        "year": "1997"
+      },
+      {
+        "title": "Hell Is for Heroes",
+        "type": "film",
+        "year": "1962"
+      },
+      {
+        "title": "Hot Millions",
+        "type": "film",
+        "year": "1968"
+      },
+      {
+        "title": "Catch-22",
+        "type": "film",
+        "year": "1970"
+      },
+      {
+        "title": "Cold Turkey",
+        "type": "film",
+        "year": "1971"
+      },
+      {
+        "title": "In & Out",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Elf",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "The Rescuers",
+        "type": "film",
+        "year": "1977"
+      },
+      {
+        "title": "The Rescuers Down Under",
+        "type": "film",
+        "year": "1990"
+      },
+      {
+        "title": "The Big Bang Theory",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Young Sheldon",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Behind the Button-Down Mind of Bob Newhart",
+        "type": "music",
+        "year": "1961"
+      },
+      {
+        "title": "The Button-Down Mind on TV",
+        "type": "music",
+        "year": "1962"
+      },
+      {
+        "title": "Bob Newhart Faces Bob Newhart",
+        "type": "music",
+        "year": "1964"
+      },
+      {
+        "title": "The Windmills Are Weakening",
+        "type": "music",
+        "year": "1965"
+      },
+      {
+        "title": "This Is It",
+        "type": "music",
+        "year": "1967"
+      },
+      {
+        "title": "Best of Bob Newhart",
+        "type": "music",
+        "year": "1971"
+      },
+      {
+        "title": "Very Funny Bob Newhart",
+        "type": "music",
+        "year": "1973"
+      },
+      {
+        "title": "Bob Newhart Off the Record",
+        "type": "music",
+        "year": "1992"
+      },
+      {
+        "title": "The Button-Down Concert",
+        "type": "music",
+        "year": "1997"
+      },
+      {
+        "title": "Something Like This",
+        "type": "music",
+        "year": "2001"
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
+    },
+    "description": "Bob Newhart is an American comedian and actor whose career spans more than six decades across stand-up, television, and film. He first gained wide recognition with his 1960 comedy albums *The Button-Down Mind of Bob Newhart* and *The Button-Down Mind Strikes Back!*, and went on to star in multiple television series bearing his name, including *The Bob Newhart Show* (1961 and 1972) and *Newhart* (1982). His film credits include *Catch-22* (1970), *The Rescuers* (1977), and *Elf* (2003). In later years he appeared in *The Big Bang Theory* (2013) and *Young Sheldon* (2017). He may have first appeared on *Late Night with Conan O'Brien* in 2006.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bob_Newhart"
+    ],
+    "enrichedAt": "2026-09-08T23:51:52.289Z",
+    "birth_year": "1929",
+    "death_year": "2024",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Grammy Award for Album of the Year",
+      "Grammy Award for Best New Artist",
+      "Grammy Award for Best Comedy Performance – Spoken Word",
+      "Emmy Award for Outstanding Guest Actor in a Comedy Series",
+      "Golden Globe Award for Best Male TV Star",
+      "Peabody Award",
+      "Hollywood Walk of Fame Star",
+      "Mark Twain Prize for American Humor"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Tim Conway": {
+    "entity": {
+      "name": "Tim Conway",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tim_Conway",
+      "confidence": 1
+    },
+    "profession": [
+      "comedian",
+      "actor",
+      "writer",
+      "director"
+    ],
+    "known_for": [
+      {
+        "title": "The Carol Burnett Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "McHale's Navy",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Tim Conway Comedy Hour",
+        "type": "tv",
+        "year": "1970"
+      },
+      {
+        "title": "The Tim Conway Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Apple Dumpling Gang",
+        "type": "film",
+        "year": "1975"
+      },
+      {
+        "title": "Gus",
+        "type": "film",
+        "year": "1976"
+      },
+      {
+        "title": "The Apple Dumpling Gang Rides Again",
+        "type": "film",
+        "year": "1979"
+      },
+      {
+        "title": "The Private Eyes",
+        "type": "film",
+        "year": "1980"
+      },
+      {
+        "title": "Dorf",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "SpongeBob SquarePants",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Coach",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "30 Rock",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Steve Allen Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Garry Moore Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Mike Douglas Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Rango",
+        "type": "tv",
+        "year": "1967"
+      },
+      {
+        "title": "Turn-On",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "That's Life",
+        "type": "tv",
+        "year": ""
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "industry",
+      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 1995."
+    },
+    "description": "Tim Conway is a comedian, actor, writer, and director best known for his long-running work on *The Carol Burnett Show* and *McHale's Navy*. His film credits include *The Apple Dumpling Gang* (1975), *Gus* (1976), *The Apple Dumpling Gang Rides Again* (1979), and *The Private Eyes* (1980), along with the *Dorf* film series. His television work spans *The Steve Allen Show*, *The Garry Moore Show*, *Rango* (1967), *The Tim Conway Comedy Hour* (1970), *SpongeBob SquarePants*, *Coach*, and *30 Rock*, among others. Conway first appeared on *Late Night with Conan O'Brien* in 1995.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tim_Conway"
+    ],
+    "enrichedAt": "2026-09-08T23:52:05.346Z",
+    "birth_year": "1933",
+    "death_year": "2019",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "five Primetime Emmy Awards",
+      "Golden Globe Award",
+      "star on the Hollywood Walk of Fame",
+      "inducted into the Television Hall of Fame",
+      "Primetime Emmy Award for Outstanding Supporting Actor in a Comedy Series nominee",
+      "Primetime Emmy Award for Outstanding Guest Actor in a Comedy Series winner (Coach 1996)",
+      "Primetime Emmy Award for Outstanding Guest Actor in a Comedy Series winner (30 Rock 2008)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Andy Kindler": {
+    "entity": {
+      "name": "Andy Kindler",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Andy_Kindler",
+      "confidence": 1
+    },
+    "profession": [
+      "comedian",
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "Everybody Loves Raymond",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Late Show with David Letterman",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Daily Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Dr. Katz",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Home Movies",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Bob's Burgers",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Last Comic Standing",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "Coming to the Stage",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "I Wish I Was Bitter",
+        "type": "music",
+        "year": "2010"
+      },
+      {
+        "title": "Hence the Humor",
+        "type": "music",
+        "year": "2020"
+      },
+      {
+        "title": "Wizards of Waverly Place",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Maron",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Thought Spiral",
+        "type": "podcast",
+        "year": ""
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "industry",
+      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 1997."
+    },
+    "description": "Andy Kindler is a comedian and actor whose television credits include *Everybody Loves Raymond*, *The Daily Show*, *Dr. Katz*, *Home Movies*, *Bob's Burgers*, *Wizards of Waverly Place*, *Maron*, and *Last Comic Standing*. He has made multiple appearances on *Late Show with David Letterman* and *Coming to the Stage*, and hosts the podcast *Thought Spiral*. His recorded comedy work includes the albums *I Wish I Was Bitter* (2010) and *Hence the Humor* (2020). A stand-up comedian with a long industry presence, Kindler first appeared on *Late Night with Conan O'Brien* in 1997.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Andy_Kindler"
+    ],
+    "enrichedAt": "2026-09-08T23:52:15.284Z",
+    "birth_year": "1956",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Courteney Cox": {
+    "entity": {
+      "name": "Courteney Cox",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Courteney_Cox",
+      "confidence": 1
+    },
+    "profession": [
+      "actress",
+      "producer",
+      "director"
+    ],
+    "known_for": [
+      {
+        "title": "Friends",
+        "type": "tv",
+        "year": "1994"
+      },
+      {
+        "title": "Scream",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "Scream 2",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Scream 3",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Family Ties",
+        "type": "tv",
+        "year": "1987"
+      },
+      {
+        "title": "Dirt",
+        "type": "tv",
+        "year": "2007"
+      },
+      {
+        "title": "Cougar Town",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "Shining Vale",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "Masters of the Universe",
+        "type": "film",
+        "year": "1987"
+      },
+      {
+        "title": "Ace Ventura: Pet Detective",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "Barnyard",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Bedtime Stories",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Mothers and Daughters",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "TalhotBlond",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Just Before I Go",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Celebrity Name Game",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Dancing in the Dark",
+        "type": "music",
+        "year": "1984"
+      },
+      {
+        "title": "Misfits of Science",
+        "type": "tv",
+        "year": "1985"
+      },
+      {
+        "title": "The Love Boat",
+        "type": "tv",
+        "year": "1986"
+      },
+      {
+        "title": "Murder, She Wrote",
+        "type": "tv",
+        "year": "1986"
+      },
+      {
+        "title": "Cocoon: The Return",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "I'll Be Home for Christmas",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Mr. Destiny",
+        "type": "film",
+        "year": "1990"
+      },
+      {
+        "title": "The Trouble with Larry",
+        "type": "tv",
+        "year": "1993"
+      },
+      {
+        "title": "Good Intentions",
+        "type": "music",
+        "year": "1995"
+      },
+      {
+        "title": "Saturday Night Live",
+        "type": "tv",
+        "year": "1995"
+      },
+      {
+        "title": "The Runner",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "3000 Miles to Graceland",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "The Shrink Is In",
+        "type": "film",
+        "year": "2001"
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
+    },
+    "description": "Courteney Cox is an American actress, producer, and director whose career spans television, film, and music. She first gained wide recognition with a role in Bruce Springsteen's \"Dancing in the Dark\" music video in 1984, before appearing on television series including *Misfits of Science*, *The Love Boat*, *Murder, She Wrote*, and *Family Ties*. She rose to prominence as Monica Geller on the long-running sitcom *Friends* (1994) and as Gale Weathers in the *Scream* film franchise, beginning in 1996. Her additional credits include *Ace Ventura: Pet Detective*, *Cougar Town*, *Dirt*, and *Shining Vale*. She may have first appeared on *Late Night with Conan O'Brien* in 1997.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Courteney_Cox"
+    ],
+    "enrichedAt": "2026-09-08T23:52:33.219Z",
+    "birth_year": "1964",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "Actor Award winner",
+      "Emmy Award nominee",
+      "Golden Globe Award nominee",
+      "Hollywood Walk of Fame star"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
+  },
+  "Dwayne Perkins": {
+    "entity": {
+      "name": "Dwayne Perkins",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Dwayne_Perkins",
+      "confidence": 1
+    },
+    "profession": [
+      "new york",
+      "currently residing in los angeles"
+    ],
+    "known_for": [
+      {
+        "title": "Five Comics to Watch",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "likeable",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "matter-of-fact.",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Off the Top",
+        "type": "tv",
+        "year": ""
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "direct",
+      "evidence": "Wikipedia: \"While performing at The Comedy Studio in Boston in 1999, he was scouted by Late Night with Conan O'Brien, and he made his television stand-up comedy debut on that show in July of the same year.\""
+    },
+    "description": "Dwayne Perkins (born March 21, 1971) is an American stand-up comedian from Brooklyn, New York, currently residing in Los Angeles. He has made appearances on Conan, Comedy Central, and as a regular correspondent on The Jay Leno Show. In August 2012, he was selected by Rolling Stone magazine as one of their \"Five Comics to Watch\". In October 2015, he was the artist-in-residence at the Rotterdam International Comedy Festival. == Stage ==\nPerkins earned a Bachelor of Science degree from the New York Institute of Technology. Wikipedia: \"While performing at The Comedy Studio in Boston in 1999, he was scouted by Late Night with Conan O'Brien, and he made his television stand-up comedy debut on that show in July of the same year.\"",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dwayne_Perkins"
+    ],
+    "enrichedAt": "2026-09-08T23:52:42.614Z",
+    "birth_year": "1971",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": []
+  },
+  "Magic Johnson": {
+    "entity": {
+      "name": "Magic Johnson",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Magic_Johnson",
+      "confidence": 1
+    },
+    "profession": [
+      "businessman",
+      "former professional basketball player",
+      "entrepreneur",
+      "philanthropist",
+      "broadcaster",
+      "motivational speaker",
+      "part-owner of sports teams"
+    ],
+    "known_for": [
+      {
+        "title": "Los Angeles Lakers",
+        "type": "sports",
+        "year": ""
+      },
+      {
+        "title": "Michigan State Spartans",
+        "type": "sports",
+        "year": "1979"
+      },
+      {
+        "title": "1992 United States men's Olympic basketball team (The Dream Team)",
+        "type": "sports",
+        "year": "1992"
+      },
+      {
+        "title": "Magic Johnson All-Stars",
+        "type": "sports",
+        "year": ""
+      },
+      {
+        "title": "Los Angeles Dodgers",
+        "type": "sports",
+        "year": ""
+      },
+      {
+        "title": "Los Angeles Sparks",
+        "type": "sports",
+        "year": ""
+      },
+      {
+        "title": "Los Angeles FC",
+        "type": "sports",
+        "year": ""
+      },
+      {
+        "title": "Washington Commanders",
+        "type": "sports",
+        "year": ""
+      },
+      {
+        "title": "Washington Spirit",
+        "type": "sports",
+        "year": ""
+      },
+      {
+        "title": "My Life",
+        "type": "other",
+        "year": ""
+      }
+    ],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
+    },
+    "description": "Earvin \"Magic\" Johnson is a businessman, entrepreneur, philanthropist, broadcaster, and motivational speaker who played professionally for the Los Angeles Lakers and competed with the 1992 United States men's Olympic basketball team, known as the Dream Team. He also played college basketball for the Michigan State Spartans and later toured with the Magic Johnson All-Stars. Beyond basketball, Johnson has held ownership stakes in the Los Angeles Dodgers, Los Angeles Sparks, Los Angeles FC, Washington Commanders, and Washington Spirit. He is also the author of *My Life*. He may have first appeared on *Late Night with Conan O'Brien* in 2003.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Magic_Johnson"
+    ],
+    "enrichedAt": "2026-09-08T23:52:56.742Z",
+    "birth_year": "1959",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "three NBA Most Valuable Player awards",
+      "three NBA Finals MVP awards",
+      "nine All-NBA First Team designations",
+      "twelve All-Star Game selections",
+      "All-Star MVP Award",
+      "Olympic gold medal",
+      "50 Greatest Players in NBA History (1996)",
+      "NBA 75th Anniversary Team (2021)",
+      "Naismith Memorial Basketball Hall of Fame inductee (2002)",
+      "Naismith Memorial Basketball Hall of Fame inductee as member of the Dream Team (2010)",
+      "Presidential Medal of Freedom (2025)"
+    ],
+    "primary_platform": "sports",
+    "upcoming_work": []
   }
 }
