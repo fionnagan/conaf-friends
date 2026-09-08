@@ -1,8 +1,9 @@
 /**
  * backfill-booking-signals.ts
- * Fills in the booking-signal fields (birth_year, nationality,
- * prestige_signals, primary_platform, upcoming_work) added to GuestBio in
- * PR #15, for guests who were already enriched BEFORE that schema existed —
+ * Fills in the booking-signal fields (birth_year, death_year, gender,
+ * nationality, prestige_signals, primary_platform, upcoming_work) added to
+ * GuestBio in PR #15 (plus death_year/gender added later), for guests who
+ * were already enriched BEFORE those fields existed —
  * confirmed via a real check: 0 of 3,260 guests in data/guests.json
  * currently have birth_year populated, which blocks the Guest Explorer's
  * Generation filter (Gen Z/Millennial/Gen X/Boomer+) from working for
@@ -68,10 +69,12 @@ Wikipedia intro:
 ${intro}
 
 Return JSON:
-{ "birth_year": "", "nationality": "", "prestige_signals": [], "primary_platform": "film|tv|music|streaming|podcast|sports|other" }
+{ "birth_year": "", "death_year": "", "gender": "", "nationality": "", "prestige_signals": [], "primary_platform": "film|tv|music|streaming|podcast|sports|other" }
 
 Rules:
 - birth_year: 4-digit string from the intro's "(born ...)" clause, or "" if not stated
+- death_year: 4-digit string if the intro states a death date (e.g. "(born X – died Y)" or "(1950–2020)"), or "" if living or not stated — never infer from tense
+- gender: "male", "female", or "" — ONLY from pronouns the intro itself uses (he/him, she/her), never inferred from name, profession, or photo
 - nationality: the demonym Wikipedia's own opening sentence uses (e.g. "American", "British"), or "" if not stated — never infer from name, accent, or any other cue
 - prestige_signals: awards/honors explicitly named in the intro (e.g. "Emmy nominee", "Grammy winner"); empty array if none are mentioned — never infer prestige
 - primary_platform: the ONE medium the intro emphasizes as their current work`,
@@ -146,6 +149,8 @@ async function main() {
 
       const bio = bios[guest.name];
       bio.birth_year = signals.birth_year || '';
+      bio.death_year = signals.death_year || '';
+      bio.gender = signals.gender || '';
       bio.nationality = signals.nationality || '';
       bio.prestige_signals = signals.prestige_signals || [];
       bio.primary_platform = signals.primary_platform || undefined;

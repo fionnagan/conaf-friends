@@ -11,21 +11,19 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import axios from 'axios';
 import type { GuestBio, GuestBioWork, Guest } from '../../lib/types';
-import { fetchWikiExtract } from './wiki';
+import { fetchWikiEntity } from './wiki';
 
 // ── Config ───────────────────────────────────────────────────────────────────
 
 const CACHE_DIR  = path.join(process.cwd(), 'scripts', 'cache');
 const BIOS_FILE  = path.join(CACHE_DIR, 'bios.json');
 const DATA_FILE  = path.join(process.cwd(), 'data', 'guests.json');
-const HEADERS    = { 'User-Agent': 'FriendRegistry-Bot/1.0 (fan project)' };
 const TTL_MS     = 30 * 24 * 60 * 60 * 1000;
 const MIN_ENTITY_CONFIDENCE = 0.65;
 const MAX_PER_RUN = 50;
 const CURRENT_YEAR = new Date().getFullYear();
-const TWO_YEARS_AGO = CURRENT_YEAR - 2;
+const RECENT_WORK_CUTOFF_YEAR = CURRENT_YEAR - 3;
 
 // ── Args ─────────────────────────────────────────────────────────────────────
 
@@ -98,82 +96,59 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   const deduped = namesToTry.filter(n => { if (seen.has(n)) return false; seen.add(n); return true; });
 
   for (const name of deduped) {
+    // One Action API call gets title resolution + full plain-text extract +
+    // disambiguation check together — down from the old two-call pattern (a
+    // REST summary call for title/URL/disambiguation, then a separate Action
+    // API call for the extract, because the REST summary's own `extract`
+    // strips the "(born ...)" clause birth_year needs). Halving the request
+    // count directly cuts how often a guest trips Wikipedia's rate limiter,
+    // on top of being faster when it doesn't. wikiGet() already retries a
+    // 429 internally using Wikipedia's real Retry-After header, so there's
+    // no separate rate-limit handling needed here anymore.
+    let entity: Awaited<ReturnType<typeof fetchWikiEntity>>;
     try {
-      const slug = encodeURIComponent(name.replace(/\s+/g, '_'));
-      const res  = await axios.get(`https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`, {
-        headers: HEADERS, timeout: 10000,
-      });
-      const data = res.data as any;
-      if (data.type === 'disambiguation') continue;
-
-      const summaryIntro = (data.extract || '').slice(0, 1500).trim();
-      if (!summaryIntro) continue;
-
-      const wikiTitle = data.title || name;
-      const wikiUrl   = data.content_urls?.desktop?.page || `https://en.wikipedia.org/wiki/${slug}`;
-
-      // Confirmed via a real backfill run (19/20 real people, all with a
-      // documented birth date on Wikipedia): the REST summary API's `extract`
-      // deliberately strips parenthetical asides like "(born ...)" for its
-      // link-preview tagline, so birth_year extraction was silently starved
-      // of the one clause it needs. The full-article plaintext extract (same
-      // Action API fetch-conan-activity.ts already uses) keeps it — prefer
-      // that for the resolved title, falling back to the summary's intro
-      // only if the full extract comes back empty (e.g. a transient miss).
-      let intro = summaryIntro;
-      try {
-        const fullExtract = (await fetchWikiExtract(wikiTitle)).slice(0, 1500).trim();
-        if (fullExtract) intro = fullExtract;
-      } catch {
-        // keep summaryIntro
-      }
-
-      // Confidence: name token overlap + bio signal
-      // Normalise dots so "B.J." matches "B. J." and vice versa
-      // Strip dots and quote marks (straight + curly) before tokenizing, so a
-      // Wikipedia title like `"Weird Al" Yankovic` still token-matches the
-      // plain guest name "Weird Al Yankovic" instead of losing two tokens to
-      // stuck-on quote characters.
-      const norm        = (s: string) => s.toLowerCase().replace(/["""'']/g, '').replace(/\./g, '').replace(/\s+/g, ' ');
-      const nameTokens  = norm(guestName).split(/\s+/);
-      const titleTokens = norm(wikiTitle).split(/\s+/);
-      const overlap     = nameTokens.filter(t => titleTokens.includes(t)).length / nameTokens.length;
-      const hasBioSig   = /\b(born|actor|actress|comedian|writer|director|musician|author|host|producer|singer|stand-up)\b/i.test(intro);
-      const confidence  = Math.min(1, overlap * 0.7 + (hasBioSig ? 0.3 : 0));
-
-      return { name: wikiTitle, wikipedia_url: wikiUrl, intro, confidence };
-    } catch (e: any) {
-      // 404 = no article for this name variant, try next
-      if (e?.response?.status === 404) continue;
-      // 429 = rate limited — back off and retry this same name variant
-      if (e?.response?.status === 429) {
-        const retryAfter = parseInt(e.response.headers['retry-after'] || '60', 10);
-        const wait = Math.max(retryAfter, 60) * 1000;
-        console.warn(`\n  [Wikipedia] 429 rate limit — waiting ${wait / 1000}s before retry…`);
-        await sleep(wait);
-        // retry same name by re-running the outer loop iteration (via goto-like break)
-        throw Object.assign(new Error('RATE_LIMIT_RETRY'), { isRateLimit: true, name });
-      }
-      // other network error — skip this variant, try next
-      continue;
+      entity = await fetchWikiEntity(name);
+    } catch {
+      continue; // network error or exhausted retries on this name variant — try next
     }
+    if (!entity || entity.isDisambiguation) continue;
+
+    // fetchWikiEntity already returns the FULL article extract (not just the
+    // lead), so this cap decides how much of it we actually use — bumped
+    // from 1500 to 6000 chars to reach well past the intro into Career/
+    // Personal life sections, where both a fuller known_for list and any
+    // explicit Conan O'Brien / Team Coco mention are likely to live, not
+    // just the opening paragraph.
+    const intro = entity.extract.slice(0, 6000).trim();
+    if (!intro) continue;
+
+    const wikiTitle = entity.title;
+    const wikiUrl = entity.url;
+
+    // Confidence: name token overlap + bio signal
+    // Normalise dots so "B.J." matches "B. J." and vice versa
+    // Strip dots and quote marks (straight + curly) before tokenizing, so a
+    // Wikipedia title like `"Weird Al" Yankovic` still token-matches the
+    // plain guest name "Weird Al Yankovic" instead of losing two tokens to
+    // stuck-on quote characters.
+    const norm        = (s: string) => s.toLowerCase().replace(/["""'']/g, '').replace(/\./g, '').replace(/\s+/g, ' ');
+    const nameTokens  = norm(guestName).split(/\s+/);
+    const titleTokens = norm(wikiTitle).split(/\s+/);
+    const overlap     = nameTokens.filter(t => titleTokens.includes(t)).length / nameTokens.length;
+    const hasBioSig   = /\b(born|actor|actress|comedian|writer|director|musician|author|host|producer|singer|stand-up)\b/i.test(intro);
+    const confidence  = Math.min(1, overlap * 0.7 + (hasBioSig ? 0.3 : 0));
+
+    return { name: wikiTitle, wikipedia_url: wikiUrl, intro, confidence };
   }
   return null;
 }
 
-export async function resolveEntityWithRetry(guestName: string, maxAttempts = 3): Promise<WikiEntity | null> {
-  for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    try {
-      return await resolveEntity(guestName);
-    } catch (e: any) {
-      if (e?.isRateLimit && attempt < maxAttempts - 1) {
-        // already slept inside resolveEntity — just retry
-        continue;
-      }
-      return null;
-    }
+export async function resolveEntityWithRetry(guestName: string): Promise<WikiEntity | null> {
+  try {
+    return await resolveEntity(guestName);
+  } catch {
+    return null;
   }
-  return null;
 }
 
 // ── Wikipedia-only extraction (no Claude) ─────────────────────────────────────
@@ -211,9 +186,9 @@ function extractKnownFor(intro: string): GuestBioWork[] {
       : /album|song|track/i.test(ctx) ? 'music' : 'tv';
     works.push({ title, type, year });
   }
-  return works
-    .filter((w, i, arr) => arr.findIndex(x => x.title === w.title) === i)
-    .slice(0, 4);
+  // No fixed cap — a well-established guest may have a dozen+ named works,
+  // and the short intro text already bounds how many can realistically match.
+  return works.filter((w, i, arr) => arr.findIndex(x => x.title === w.title) === i);
 }
 
 function extractRecentWork(intro: string): GuestBioWork[] {
@@ -226,7 +201,7 @@ function extractRecentWork(intro: string): GuestBioWork[] {
       const around = intro.slice(Math.max(0, m!.index - 10), m!.index + title.length + 30);
       return around.match(/\b(20(2[4-9]|[3-9]\d))\b/)?.[0] || '';
     })();
-    if (!year || parseInt(year) < TWO_YEARS_AGO) continue;
+    if (!year || parseInt(year) < RECENT_WORK_CUTOFF_YEAR) continue;
     if (!title || title.length < 3) continue;
     const ctx  = intro.slice(Math.max(0, m.index - 30), m.index + 60);
     const type: GuestBioWork['type'] = /film|movie/i.test(ctx) ? 'film'
@@ -252,6 +227,28 @@ function extractBirthYear(intro: string): string {
 function extractNationality(intro: string): string {
   const m = intro.match(/\bis (?:an?|the) ([A-Z][a-z]+)\b(?=[^.]*\b(?:actor|actress|comedian|writer|director|producer|musician|singer|author|host|journalist|chef|athlete|politician|stand-up)\b)/);
   return m ? m[1] : '';
+}
+
+// Explicit "died [Month Day,] YYYY" wording, or the common "(born ... – died
+// ...)" / date-range parenthetical right after the subject's name (e.g.
+// "(March 5, 1930 – April 12, 2010)" or "(1930–2010)"). Empty means living
+// or no death date stated — never inferred from tense.
+function extractDeathYear(intro: string): string {
+  const died = intro.match(/\bdied\s+(?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\b/);
+  if (died) return died[1];
+  const range = intro.match(/\((?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\s*[–-]\s*(?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\)/);
+  return range ? range[2] : '';
+}
+
+// Best-effort: count standalone he/him/his vs she/her/hers pronouns in the
+// intro and take whichever is used. Only the Claude pipeline's version of
+// this (which reads the actual stated pronoun, not a frequency count) should
+// be trusted for anything but a rough fallback signal.
+function extractGender(intro: string): string {
+  const male   = (intro.match(/\b(he|him|his)\b/gi) || []).length;
+  const female = (intro.match(/\b(she|her|hers)\b/gi) || []).length;
+  if (male === 0 && female === 0) return '';
+  return male >= female ? 'male' : 'female';
 }
 
 function buildDescription(intro: string, guestName: string, conanEvidence: string, conanType: string): string {
@@ -328,7 +325,7 @@ async function runClaudePipeline(
   // Step 1: structured extraction
   const extractMsg = await client.messages.create({
     model: 'claude-sonnet-4-6',
-    max_tokens: 600,
+    max_tokens: 1200,
     system: `Extract structured biographical data from Wikipedia intro. Output valid JSON only. No markdown. Today: ${today}.`,
     messages: [{
       role: 'user',
@@ -343,27 +340,43 @@ Return JSON:
   "recent_work": [],
   "upcoming_work": [{"title":"","type":"film|tv|music|podcast|other","year":""}],
   "birth_year": "",
+  "death_year": "",
+  "gender": "",
   "nationality": "",
   "prestige_signals": [],
-  "primary_platform": "film|tv|music|streaming|podcast|sports|other"
+  "primary_platform": "film|tv|music|streaming|podcast|sports|other",
+  "conan_mentions": []
 }
 Rules:
-- known_for: up to 6 highest-signal works, across ANY medium (film, TV, music/
-  albums, podcasts) — this is used to find connections between guests who
+- known_for: ALL notable works named in the intro, across ANY medium (film, TV,
+  music/albums, podcasts) — this is used to find connections between guests who
   worked on the same project or in the same band, so don't limit to acting
-  credits alone
-- recent_work: year >= ${TWO_YEARS_AGO} only, empty array if none
+  credits alone. No fixed cap — a well-established guest may have a dozen or
+  more; list every one actually named in the text, never invent or pad the list
+- recent_work: year >= ${RECENT_WORK_CUTOFF_YEAR} only, empty array if none
 - upcoming_work: work explicitly described as upcoming/announced/forthcoming in
   the intro (e.g. "is set to star in", "an upcoming album"), with a year if one
   is stated; empty array if the intro doesn't mention anything upcoming — this
   will be sparse, never infer or guess a future project
 - year: 4-digit string or ""
 - birth_year: 4-digit string from the intro's "(born ...)" clause, or "" if not stated
+- death_year: 4-digit string if the intro states a death date (e.g. "(born X –
+  died Y)" or "(1950–2020)"), or "" if the person is living or no date is stated
+  — never infer from tense or context, only an explicit date
+- gender: "male", "female", or "" — ONLY from pronouns the intro itself uses
+  (he/him, she/her, they/them as a stated identity) — never inferred from name,
+  profession, or photo; "" if the intro avoids pronouns or uses "they" generically
 - nationality: the demonym Wikipedia's own opening sentence uses (e.g. "American",
   "British"), or "" if not stated — do not infer from name, accent, or any other cue
 - prestige_signals: awards/honors explicitly named in the intro (e.g. "Emmy nominee",
   "Grammy winner"); empty array if none are mentioned — never infer prestige
-- primary_platform: the ONE medium the intro emphasizes as their current work`,
+- primary_platform: the ONE medium the intro emphasizes as their current work
+- conan_mentions: verbatim sentence(s) or clauses from the text that explicitly
+  name Conan O'Brien, "Team Coco", or one of his shows/podcast by name (Late
+  Night with Conan O'Brien, The Tonight Show with Conan O'Brien, Conan, Conan
+  O'Brien Needs a Friend, Conan O'Brien Must Go) — quote the text exactly,
+  don't paraphrase; empty array if the text never mentions him by name, even
+  if the guest is known to have appeared on his shows`,
     }],
   });
 
@@ -372,12 +385,22 @@ Rules:
     structured = JSON.parse(extractMsg.content[0].text.trim());
   } catch { return null; }
 
-  await sleep(300);
+  // Wikipedia's own text explicitly naming Conan/Team Coco/a named show is
+  // stronger, real evidence than our origin-based inference (which never
+  // reads the article at all) — upgrade to 'direct' when present, quoting
+  // the article rather than guessing. Falls back to the passed-in
+  // origin-based connection when the intro never mentions him by name.
+  const conanMentions: string[] = Array.isArray(structured.conan_mentions) ? structured.conan_mentions : [];
+  const effectiveConanConn: ConanConnection = conanMentions.length > 0
+    ? { type: 'direct', evidence: `Wikipedia: "${conanMentions[0]}"` }
+    : conanConn;
+
+  await sleep(200);
 
   // Step 2: description synthesis
   const knownList  = (structured.known_for || []).map((w: any) => `${w.title} (${w.type}, ${w.year})`).join(', ');
   const recentList = (structured.recent_work || []).map((w: any) => `${w.title} (${w.year})`).join(', ');
-  const softener   = conanConn.type === 'inferred' ? ' Use tentative language for the Conan connection.' : '';
+  const softener   = effectiveConanConn.type === 'inferred' ? ' Use tentative language for the Conan connection.' : '';
 
   const synthMsg = await client.messages.create({
     model: 'claude-sonnet-4-6',
@@ -389,7 +412,7 @@ Rules:
 - Profession: ${(structured.profession || []).join(', ') || 'entertainer'}
 - Known for: ${knownList || 'see intro'}
 - Recent work: ${recentList || 'none confirmed'}
-- Conan connection (${conanConn.type}): ${conanConn.evidence}
+- Conan connection (${effectiveConanConn.type}): ${effectiveConanConn.evidence}
 
 Paragraph only:`,
     }],
@@ -402,15 +425,17 @@ Paragraph only:`,
   return {
     entity:           { name: entity.name, wikipedia_url: entity.wikipedia_url, confidence: entity.confidence },
     profession:       structured.profession || [],
-    known_for:        (structured.known_for || []).slice(0, 6),
+    known_for:        structured.known_for || [],
     recent_work:      (structured.recent_work || []).slice(0, 4),
-    conan_connection: conanConn,
+    conan_connection: effectiveConanConn,
     description,
     confidence:       entity.confidence,
     needs_review:     false,
     sources:          [entity.wikipedia_url],
     enrichedAt:       new Date().toISOString(),
     birth_year:       structured.birth_year || '',
+    death_year:       structured.death_year || '',
+    gender:           structured.gender || '',
     nationality:      structured.nationality || '',
     prestige_signals: structured.prestige_signals || [],
     primary_platform: structured.primary_platform || undefined,
@@ -420,11 +445,24 @@ Paragraph only:`,
 
 // ── Wikipedia-only pipeline ───────────────────────────────────────────────────
 
+// Same idea as the Claude pipeline's conan_mentions field, regex-only for
+// the free fallback path: find the sentence containing an explicit mention
+// of Conan O'Brien, Team Coco, or one of his named shows, and use it as
+// direct evidence instead of the origin-based inference.
+const CONAN_MENTION_RE = /\b(Conan O'?Brien|Team Coco|Late Night with Conan O'?Brien|The Tonight Show with Conan O'?Brien|Conan O'?Brien Needs a Friend|Conan O'?Brien Must Go)\b/i;
+
+function extractConanMention(intro: string): ConanConnection | null {
+  const sentences = intro.split(/(?<=[.!?])\s+/);
+  const hit = sentences.find(s => CONAN_MENTION_RE.test(s));
+  return hit ? { type: 'direct', evidence: `Wikipedia: "${hit.trim()}"` } : null;
+}
+
 function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConnection): GuestBio {
   const profession = extractProfessions(entity.intro);
   const known_for  = extractKnownFor(entity.intro);
   const recent_work = extractRecentWork(entity.intro);
-  const description = buildDescription(entity.intro, guest.name, conanConn.evidence, conanConn.type);
+  const effectiveConanConn = extractConanMention(entity.intro) ?? conanConn;
+  const description = buildDescription(entity.intro, guest.name, effectiveConanConn.evidence, effectiveConanConn.type);
 
   const wordCount = description.split(/\s+/).length;
   const needs_review = wordCount < 20 || wordCount > 160;
@@ -434,13 +472,15 @@ function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConne
     profession,
     known_for,
     recent_work,
-    conan_connection: conanConn,
+    conan_connection: effectiveConanConn,
     description,
     confidence:       entity.confidence,
     needs_review,
     sources:          [entity.wikipedia_url],
     enrichedAt:       new Date().toISOString(),
     birth_year:       extractBirthYear(entity.intro),
+    death_year:       extractDeathYear(entity.intro),
+    gender:           extractGender(entity.intro),
     nationality:      extractNationality(entity.intro),
     // Regex can't reliably tell "awards mentioned" from "no awards" or judge a
     // primary medium — leave these to the Claude pipeline rather than guess.
@@ -455,7 +495,7 @@ function validate(bio: GuestBio): { ok: boolean; reason?: string } {
   if (words < 20 || words > 160) return { ok: false, reason: `word_count:${words}` };
 
   for (const w of bio.recent_work) {
-    if (w.year && parseInt(w.year) < TWO_YEARS_AGO)
+    if (w.year && parseInt(w.year) < RECENT_WORK_CUTOFF_YEAR)
       return { ok: false, reason: `stale_recent_work:${w.title}(${w.year})` };
   }
 
@@ -543,7 +583,7 @@ async function main() {
     try {
       // Entity resolution
       const entity = await resolveEntityWithRetry(guest.name);
-      await sleep(500);
+      await sleep(200);
 
       // --guest is single-name debugging/sampling mode — cheap to also show the
       // exact source text the extraction step worked from, since "why didn't
@@ -571,7 +611,7 @@ async function main() {
         console.log(`needs_review (entity confidence: ${conf})`);
         reviewNeeded++;
         if ((i + 1) % 10 === 0) fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));
-        await sleep(400);
+        await sleep(200);
         continue;
       }
 
@@ -608,7 +648,12 @@ async function main() {
       failed++;
     }
 
-    await sleep(5000);
+    // Was 5000ms — fine for the weekly job's ~50 guests, but a flat 5s/guest
+    // dominates runtime at backlog scale (would add ~4.2 hours across 3,000
+    // guests on its own). 1s still spaces out both the Claude and Wikipedia
+    // calls between guests; real rate-limit backoff (wikiGet's own, honoring
+    // Wikipedia's Retry-After) still applies on top of this when needed.
+    await sleep(1000);
   }
 
   fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));
