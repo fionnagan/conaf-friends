@@ -57,6 +57,15 @@ export interface GuestBioWork {
   year: string;
 }
 
+export type PrimaryPlatform =
+  | 'film'
+  | 'tv'
+  | 'music'
+  | 'streaming'
+  | 'podcast'
+  | 'sports'
+  | 'other';
+
 export interface GuestBio {
   entity: {
     name: string;
@@ -75,6 +84,18 @@ export interface GuestBio {
   needs_review: boolean;
   sources: string[];
   enrichedAt: string;
+  /** Booking-signal fields — same Wikipedia intro, extracted alongside the rest.
+   * All optional/best-effort: absent or "" means "not stated in the intro", not
+   * "unknown fact about this person" — never inferred or guessed beyond the text. */
+  birth_year?: string;
+  /** Nationality/demonym as stated in the intro (e.g. "American", "British") —
+   * not a birth-country lookup, just what Wikipedia's own opening sentence says. */
+  nationality?: string;
+  /** Awards/honors explicitly named in the intro (e.g. "Emmy nominee", "Grammy
+   * winner"). Empty array means none stated, not "no awards exist". */
+  prestige_signals?: string[];
+  /** The single medium the intro emphasizes as their current/primary work. */
+  primary_platform?: PrimaryPlatform;
 }
 
 export interface Guest {
