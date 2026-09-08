@@ -56,10 +56,23 @@ jobs:
         run: npx tsx scripts/ingest/patch-bios-into-guests.ts
 
       - name: Commit updated data
+        # Confirmed via a real run: this workflow's checkout can go stale
+        # while it's mid-run if another workflow/PR pushes to main first
+        # (happened with the roundup page's PR landing mid-backfill) — a
+        # plain `git push` then fails "fetch first" and silently drops this
+        # run's computed birth_year/nationality data. Rebase onto the
+        # latest main before pushing so the commit still lands; if that
+        # rebase itself conflicts (overlapping edits to the same guest),
+        # let the step fail loudly rather than force through it.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/guests.json
           git add -f scripts/cache/bios.json
-          git diff --staged --quiet || git commit -m "chore: backfill booking-signal fields (limit ${{ github.event.inputs.limit }})"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: backfill booking-signal fields (limit ${{ github.event.inputs.limit }})"
+            git pull --rebase origin main
+            git push
+          fi
