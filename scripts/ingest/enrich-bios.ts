@@ -218,6 +218,21 @@ function extractRecentWork(intro: string): GuestBioWork[] {
     .slice(0, 4);
 }
 
+// "(born March 5, 1975)" (US), "(born 5 March 1975)" (UK/international), or
+// "(born 1975)" → "1975". Wikipedia uses day-month-year with no comma for most
+// non-US subjects, so both orderings matter — this is exactly the international-
+// guest case the nationality field most needs to work for.
+function extractBirthYear(intro: string): string {
+  const m = intro.match(/\(born(?:\s+(?:[A-Z][a-z]+\s+\d{1,2},|\d{1,2}\s+[A-Z][a-z]+))?\s+(\d{4})\)/);
+  return m ? m[1] : '';
+}
+
+// "X is an American actor" / "X is a British actor and singer" → "American" / "British"
+function extractNationality(intro: string): string {
+  const m = intro.match(/\bis (?:an?|the) ([A-Z][a-z]+)\b(?=[^.]*\b(?:actor|actress|comedian|writer|director|producer|musician|singer|author|host|journalist|chef|athlete|politician|stand-up)\b)/);
+  return m ? m[1] : '';
+}
+
 function buildDescription(intro: string, guestName: string, conanEvidence: string, conanType: string): string {
   // Take first 1-2 sentences of Wikipedia intro (the "who they are" bit)
   const sentences = intro.split(/(?<=[.!?])\s+/);
@@ -304,12 +319,22 @@ Return JSON:
 {
   "profession": [],
   "known_for": [{"title":"","type":"film|tv|podcast|other","year":""}],
-  "recent_work": []
+  "recent_work": [],
+  "birth_year": "",
+  "nationality": "",
+  "prestige_signals": [],
+  "primary_platform": "film|tv|music|streaming|podcast|sports|other"
 }
 Rules:
 - known_for: 2-4 highest-signal works
 - recent_work: year >= ${TWO_YEARS_AGO} only, empty array if none
-- year: 4-digit string or ""`,
+- year: 4-digit string or ""
+- birth_year: 4-digit string from the intro's "(born ...)" clause, or "" if not stated
+- nationality: the demonym Wikipedia's own opening sentence uses (e.g. "American",
+  "British"), or "" if not stated — do not infer from name, accent, or any other cue
+- prestige_signals: awards/honors explicitly named in the intro (e.g. "Emmy nominee",
+  "Grammy winner"); empty array if none are mentioned — never infer prestige
+- primary_platform: the ONE medium the intro emphasizes as their current work`,
     }],
   });
 
@@ -356,6 +381,10 @@ Paragraph only:`,
     needs_review:     false,
     sources:          [entity.wikipedia_url],
     enrichedAt:       new Date().toISOString(),
+    birth_year:       structured.birth_year || '',
+    nationality:      structured.nationality || '',
+    prestige_signals: structured.prestige_signals || [],
+    primary_platform: structured.primary_platform || undefined,
   };
 }
 
@@ -381,6 +410,11 @@ function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConne
     needs_review,
     sources:          [entity.wikipedia_url],
     enrichedAt:       new Date().toISOString(),
+    birth_year:       extractBirthYear(entity.intro),
+    nationality:      extractNationality(entity.intro),
+    // Regex can't reliably tell "awards mentioned" from "no awards" or judge a
+    // primary medium — leave these to the Claude pipeline rather than guess.
+    prestige_signals: [],
   };
 }
 
