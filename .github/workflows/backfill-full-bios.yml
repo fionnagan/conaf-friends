@@ -1,0 +1,77 @@
+name: Backfill Full Bios
+
+# One-off backfill: enriches guests who have NO cached bio at all yet
+# (~2,970 of 3,260 as of this writing — the weekly ingest only enriches
+# newly-added guests, capped at 50/run, so the pre-existing backlog was
+# never worked through). Full two-Claude-call pipeline per guest (structured
+# extraction + description synthesis), same as enrich-bios.ts always does
+# for a brand-new guest — this is that same path, just run deliberately
+# against the backlog instead of waiting ~60 weekly runs for it to drain.
+#
+# `limit` controls how many guests to process THIS run in total — set it as
+# high as you want in one go (e.g. the full backlog). Internally this runs
+# in chunks of 50, committing + pushing after each chunk, so a large `limit`
+# is safe: if the job times out, gets cancelled, or a chunk errors out, only
+# that in-flight chunk is lost — everything before it is already on `main`.
+# Re-running (with any limit) only ever picks up guests still missing a bio
+# entirely, so nothing gets reprocessed or re-charged for.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max guests to process this run (total, across all chunks)"
+        required: false
+        default: "50"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Enrich bios in chunks, committing progress after each
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          CHUNK=50
+          TOTAL="${{ github.event.inputs.limit }}"
+          DONE=0
+
+          while [ "$DONE" -lt "$TOTAL" ]; do
+            REMAINING=$((TOTAL - DONE))
+            THIS_CHUNK=$((REMAINING < CHUNK ? REMAINING : CHUNK))
+
+            echo "=== Chunk: $THIS_CHUNK guests (done so far: $DONE/$TOTAL) ==="
+            npx tsx scripts/ingest/enrich-bios.ts --limit "$THIS_CHUNK"
+            npx tsx scripts/ingest/patch-bios-into-guests.ts
+
+            git add data/guests.json
+            git add -f scripts/cache/bios.json
+            if git diff --staged --quiet; then
+              echo "No changes this chunk — backlog is exhausted, stopping early."
+              break
+            fi
+            git commit -m "chore: backfill full bios (chunk of $THIS_CHUNK)"
+            git push
+
+            DONE=$((DONE + THIS_CHUNK))
+          done
+
+          echo "=== Done: processed up to $DONE guest(s) this run ==="
