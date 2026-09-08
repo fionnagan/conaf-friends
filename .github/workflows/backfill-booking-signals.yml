@@ -1,0 +1,53 @@
+name: Backfill Booking Signals
+
+# One-off backfill: fills birth_year/nationality/prestige_signals/
+# primary_platform for guests enriched BEFORE those fields existed (PR #15).
+# Confirmed via a real check that 0 of 3,260 guests currently have
+# birth_year — this blocks the Guest Explorer's Generation filter for
+# everyone. `limit` controls how many guests to process THIS run — start
+# small to validate, then re-run with a larger limit (repeatedly, if needed)
+# to work through the rest. Safe to run as many times as needed: each run
+# only touches guests still missing the fields.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max guests to process this run"
+        required: false
+        default: "20"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Backfill booking-signal fields
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/ingest/backfill-booking-signals.ts --limit ${{ github.event.inputs.limit }}
+
+      - name: Patch updated bios into guests.json
+        run: npx tsx scripts/ingest/patch-bios-into-guests.ts
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/guests.json
+          git add -f scripts/cache/bios.json
+          git diff --staged --quiet || git commit -m "chore: backfill booking-signal fields (limit ${{ github.event.inputs.limit }})"
+          git push
