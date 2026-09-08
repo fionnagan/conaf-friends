@@ -180,9 +180,9 @@ function extractKnownFor(intro: string): GuestBioWork[] {
       : /album|song|track/i.test(ctx) ? 'music' : 'tv';
     works.push({ title, type, year });
   }
-  return works
-    .filter((w, i, arr) => arr.findIndex(x => x.title === w.title) === i)
-    .slice(0, 4);
+  // No fixed cap — a well-established guest may have a dozen+ named works,
+  // and the short intro text already bounds how many can realistically match.
+  return works.filter((w, i, arr) => arr.findIndex(x => x.title === w.title) === i);
 }
 
 function extractRecentWork(intro: string): GuestBioWork[] {
@@ -221,6 +221,28 @@ function extractBirthYear(intro: string): string {
 function extractNationality(intro: string): string {
   const m = intro.match(/\bis (?:an?|the) ([A-Z][a-z]+)\b(?=[^.]*\b(?:actor|actress|comedian|writer|director|producer|musician|singer|author|host|journalist|chef|athlete|politician|stand-up)\b)/);
   return m ? m[1] : '';
+}
+
+// Explicit "died [Month Day,] YYYY" wording, or the common "(born ... – died
+// ...)" / date-range parenthetical right after the subject's name (e.g.
+// "(March 5, 1930 – April 12, 2010)" or "(1930–2010)"). Empty means living
+// or no death date stated — never inferred from tense.
+function extractDeathYear(intro: string): string {
+  const died = intro.match(/\bdied\s+(?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\b/);
+  if (died) return died[1];
+  const range = intro.match(/\((?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\s*[–-]\s*(?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\)/);
+  return range ? range[2] : '';
+}
+
+// Best-effort: count standalone he/him/his vs she/her/hers pronouns in the
+// intro and take whichever is used. Only the Claude pipeline's version of
+// this (which reads the actual stated pronoun, not a frequency count) should
+// be trusted for anything but a rough fallback signal.
+function extractGender(intro: string): string {
+  const male   = (intro.match(/\b(he|him|his)\b/gi) || []).length;
+  const female = (intro.match(/\b(she|her|hers)\b/gi) || []).length;
+  if (male === 0 && female === 0) return '';
+  return male >= female ? 'male' : 'female';
 }
 
 function buildDescription(intro: string, guestName: string, conanEvidence: string, conanType: string): string {
@@ -297,7 +319,7 @@ async function runClaudePipeline(
   // Step 1: structured extraction
   const extractMsg = await client.messages.create({
     model: 'claude-sonnet-4-6',
-    max_tokens: 600,
+    max_tokens: 1200,
     system: `Extract structured biographical data from Wikipedia intro. Output valid JSON only. No markdown. Today: ${today}.`,
     messages: [{
       role: 'user',
@@ -312,15 +334,18 @@ Return JSON:
   "recent_work": [],
   "upcoming_work": [{"title":"","type":"film|tv|music|podcast|other","year":""}],
   "birth_year": "",
+  "death_year": "",
+  "gender": "",
   "nationality": "",
   "prestige_signals": [],
   "primary_platform": "film|tv|music|streaming|podcast|sports|other"
 }
 Rules:
-- known_for: up to 6 highest-signal works, across ANY medium (film, TV, music/
-  albums, podcasts) — this is used to find connections between guests who
+- known_for: ALL notable works named in the intro, across ANY medium (film, TV,
+  music/albums, podcasts) — this is used to find connections between guests who
   worked on the same project or in the same band, so don't limit to acting
-  credits alone
+  credits alone. No fixed cap — a well-established guest may have a dozen or
+  more; list every one actually named in the text, never invent or pad the list
 - recent_work: year >= ${RECENT_WORK_CUTOFF_YEAR} only, empty array if none
 - upcoming_work: work explicitly described as upcoming/announced/forthcoming in
   the intro (e.g. "is set to star in", "an upcoming album"), with a year if one
@@ -328,6 +353,12 @@ Rules:
   will be sparse, never infer or guess a future project
 - year: 4-digit string or ""
 - birth_year: 4-digit string from the intro's "(born ...)" clause, or "" if not stated
+- death_year: 4-digit string if the intro states a death date (e.g. "(born X –
+  died Y)" or "(1950–2020)"), or "" if the person is living or no date is stated
+  — never infer from tense or context, only an explicit date
+- gender: "male", "female", or "" — ONLY from pronouns the intro itself uses
+  (he/him, she/her, they/them as a stated identity) — never inferred from name,
+  profession, or photo; "" if the intro avoids pronouns or uses "they" generically
 - nationality: the demonym Wikipedia's own opening sentence uses (e.g. "American",
   "British"), or "" if not stated — do not infer from name, accent, or any other cue
 - prestige_signals: awards/honors explicitly named in the intro (e.g. "Emmy nominee",
@@ -371,7 +402,7 @@ Paragraph only:`,
   return {
     entity:           { name: entity.name, wikipedia_url: entity.wikipedia_url, confidence: entity.confidence },
     profession:       structured.profession || [],
-    known_for:        (structured.known_for || []).slice(0, 6),
+    known_for:        structured.known_for || [],
     recent_work:      (structured.recent_work || []).slice(0, 4),
     conan_connection: conanConn,
     description,
@@ -380,6 +411,8 @@ Paragraph only:`,
     sources:          [entity.wikipedia_url],
     enrichedAt:       new Date().toISOString(),
     birth_year:       structured.birth_year || '',
+    death_year:       structured.death_year || '',
+    gender:           structured.gender || '',
     nationality:      structured.nationality || '',
     prestige_signals: structured.prestige_signals || [],
     primary_platform: structured.primary_platform || undefined,
@@ -410,6 +443,8 @@ function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConne
     sources:          [entity.wikipedia_url],
     enrichedAt:       new Date().toISOString(),
     birth_year:       extractBirthYear(entity.intro),
+    death_year:       extractDeathYear(entity.intro),
+    gender:           extractGender(entity.intro),
     nationality:      extractNationality(entity.intro),
     // Regex can't reliably tell "awards mentioned" from "no awards" or judge a
     // primary medium — leave these to the Claude pipeline rather than guess.

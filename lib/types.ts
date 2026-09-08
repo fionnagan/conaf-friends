@@ -88,6 +88,12 @@ export interface GuestBio {
    * All optional/best-effort: absent or "" means "not stated in the intro", not
    * "unknown fact about this person" — never inferred or guessed beyond the text. */
   birth_year?: string;
+  /** 4-digit year from an explicit death date in the intro (e.g. "(1950–2020)").
+   * Empty/absent means living or not stated — never inferred from tense. */
+  death_year?: string;
+  /** "male" | "female" | "" — extracted ONLY from pronouns the intro itself
+   * uses (he/him, she/her), never inferred from name, profession, or photo. */
+  gender?: string;
   /** Nationality/demonym as stated in the intro (e.g. "American", "British") —
    * not a birth-country lookup, just what Wikipedia's own opening sentence says. */
   nationality?: string;
