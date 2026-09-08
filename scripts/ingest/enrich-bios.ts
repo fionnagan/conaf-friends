@@ -11,16 +11,14 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import axios from 'axios';
 import type { GuestBio, GuestBioWork, Guest } from '../../lib/types';
-import { fetchWikiExtract } from './wiki';
+import { fetchWikiEntity } from './wiki';
 
 // ── Config ───────────────────────────────────────────────────────────────────
 
 const CACHE_DIR  = path.join(process.cwd(), 'scripts', 'cache');
 const BIOS_FILE  = path.join(CACHE_DIR, 'bios.json');
 const DATA_FILE  = path.join(process.cwd(), 'data', 'guests.json');
-const HEADERS    = { 'User-Agent': 'FriendRegistry-Bot/1.0 (fan project)' };
 const TTL_MS     = 30 * 24 * 60 * 60 * 1000;
 const MIN_ENTITY_CONFIDENCE = 0.65;
 const MAX_PER_RUN = 50;
@@ -98,82 +96,53 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   const deduped = namesToTry.filter(n => { if (seen.has(n)) return false; seen.add(n); return true; });
 
   for (const name of deduped) {
+    // One Action API call gets title resolution + full plain-text extract +
+    // disambiguation check together — down from the old two-call pattern (a
+    // REST summary call for title/URL/disambiguation, then a separate Action
+    // API call for the extract, because the REST summary's own `extract`
+    // strips the "(born ...)" clause birth_year needs). Halving the request
+    // count directly cuts how often a guest trips Wikipedia's rate limiter,
+    // on top of being faster when it doesn't. wikiGet() already retries a
+    // 429 internally using Wikipedia's real Retry-After header, so there's
+    // no separate rate-limit handling needed here anymore.
+    let entity: Awaited<ReturnType<typeof fetchWikiEntity>>;
     try {
-      const slug = encodeURIComponent(name.replace(/\s+/g, '_'));
-      const res  = await axios.get(`https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`, {
-        headers: HEADERS, timeout: 10000,
-      });
-      const data = res.data as any;
-      if (data.type === 'disambiguation') continue;
-
-      const summaryIntro = (data.extract || '').slice(0, 1500).trim();
-      if (!summaryIntro) continue;
-
-      const wikiTitle = data.title || name;
-      const wikiUrl   = data.content_urls?.desktop?.page || `https://en.wikipedia.org/wiki/${slug}`;
-
-      // Confirmed via a real backfill run (19/20 real people, all with a
-      // documented birth date on Wikipedia): the REST summary API's `extract`
-      // deliberately strips parenthetical asides like "(born ...)" for its
-      // link-preview tagline, so birth_year extraction was silently starved
-      // of the one clause it needs. The full-article plaintext extract (same
-      // Action API fetch-conan-activity.ts already uses) keeps it — prefer
-      // that for the resolved title, falling back to the summary's intro
-      // only if the full extract comes back empty (e.g. a transient miss).
-      let intro = summaryIntro;
-      try {
-        const fullExtract = (await fetchWikiExtract(wikiTitle)).slice(0, 1500).trim();
-        if (fullExtract) intro = fullExtract;
-      } catch {
-        // keep summaryIntro
-      }
-
-      // Confidence: name token overlap + bio signal
-      // Normalise dots so "B.J." matches "B. J." and vice versa
-      // Strip dots and quote marks (straight + curly) before tokenizing, so a
-      // Wikipedia title like `"Weird Al" Yankovic` still token-matches the
-      // plain guest name "Weird Al Yankovic" instead of losing two tokens to
-      // stuck-on quote characters.
-      const norm        = (s: string) => s.toLowerCase().replace(/["""'']/g, '').replace(/\./g, '').replace(/\s+/g, ' ');
-      const nameTokens  = norm(guestName).split(/\s+/);
-      const titleTokens = norm(wikiTitle).split(/\s+/);
-      const overlap     = nameTokens.filter(t => titleTokens.includes(t)).length / nameTokens.length;
-      const hasBioSig   = /\b(born|actor|actress|comedian|writer|director|musician|author|host|producer|singer|stand-up)\b/i.test(intro);
-      const confidence  = Math.min(1, overlap * 0.7 + (hasBioSig ? 0.3 : 0));
-
-      return { name: wikiTitle, wikipedia_url: wikiUrl, intro, confidence };
-    } catch (e: any) {
-      // 404 = no article for this name variant, try next
-      if (e?.response?.status === 404) continue;
-      // 429 = rate limited — back off and retry this same name variant
-      if (e?.response?.status === 429) {
-        const retryAfter = parseInt(e.response.headers['retry-after'] || '60', 10);
-        const wait = Math.max(retryAfter, 60) * 1000;
-        console.warn(`\n  [Wikipedia] 429 rate limit — waiting ${wait / 1000}s before retry…`);
-        await sleep(wait);
-        // retry same name by re-running the outer loop iteration (via goto-like break)
-        throw Object.assign(new Error('RATE_LIMIT_RETRY'), { isRateLimit: true, name });
-      }
-      // other network error — skip this variant, try next
-      continue;
+      entity = await fetchWikiEntity(name);
+    } catch {
+      continue; // network error or exhausted retries on this name variant — try next
     }
+    if (!entity || entity.isDisambiguation) continue;
+
+    const intro = entity.extract.slice(0, 1500).trim();
+    if (!intro) continue;
+
+    const wikiTitle = entity.title;
+    const wikiUrl = entity.url;
+
+    // Confidence: name token overlap + bio signal
+    // Normalise dots so "B.J." matches "B. J." and vice versa
+    // Strip dots and quote marks (straight + curly) before tokenizing, so a
+    // Wikipedia title like `"Weird Al" Yankovic` still token-matches the
+    // plain guest name "Weird Al Yankovic" instead of losing two tokens to
+    // stuck-on quote characters.
+    const norm        = (s: string) => s.toLowerCase().replace(/["""'']/g, '').replace(/\./g, '').replace(/\s+/g, ' ');
+    const nameTokens  = norm(guestName).split(/\s+/);
+    const titleTokens = norm(wikiTitle).split(/\s+/);
+    const overlap     = nameTokens.filter(t => titleTokens.includes(t)).length / nameTokens.length;
+    const hasBioSig   = /\b(born|actor|actress|comedian|writer|director|musician|author|host|producer|singer|stand-up)\b/i.test(intro);
+    const confidence  = Math.min(1, overlap * 0.7 + (hasBioSig ? 0.3 : 0));
+
+    return { name: wikiTitle, wikipedia_url: wikiUrl, intro, confidence };
   }
   return null;
 }
 
-export async function resolveEntityWithRetry(guestName: string, maxAttempts = 3): Promise<WikiEntity | null> {
-  for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    try {
-      return await resolveEntity(guestName);
-    } catch (e: any) {
-      if (e?.isRateLimit && attempt < maxAttempts - 1) {
-        // already slept inside resolveEntity — just retry
-        continue;
-      }
-      return null;
-    }
+export async function resolveEntityWithRetry(guestName: string): Promise<WikiEntity | null> {
+  try {
+    return await resolveEntity(guestName);
+  } catch {
+    return null;
   }
-  return null;
 }
 
 // ── Wikipedia-only extraction (no Claude) ─────────────────────────────────────
@@ -372,7 +341,7 @@ Rules:
     structured = JSON.parse(extractMsg.content[0].text.trim());
   } catch { return null; }
 
-  await sleep(300);
+  await sleep(200);
 
   // Step 2: description synthesis
   const knownList  = (structured.known_for || []).map((w: any) => `${w.title} (${w.type}, ${w.year})`).join(', ');
@@ -543,7 +512,7 @@ async function main() {
     try {
       // Entity resolution
       const entity = await resolveEntityWithRetry(guest.name);
-      await sleep(500);
+      await sleep(200);
 
       // --guest is single-name debugging/sampling mode — cheap to also show the
       // exact source text the extraction step worked from, since "why didn't
@@ -571,7 +540,7 @@ async function main() {
         console.log(`needs_review (entity confidence: ${conf})`);
         reviewNeeded++;
         if ((i + 1) % 10 === 0) fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));
-        await sleep(400);
+        await sleep(200);
         continue;
       }
 
@@ -608,7 +577,12 @@ async function main() {
       failed++;
     }
 
-    await sleep(5000);
+    // Was 5000ms — fine for the weekly job's ~50 guests, but a flat 5s/guest
+    // dominates runtime at backlog scale (would add ~4.2 hours across 3,000
+    // guests on its own). 1s still spaces out both the Claude and Wikipedia
+    // calls between guests; real rate-limit backoff (wikiGet's own, honoring
+    // Wikipedia's Retry-After) still applies on top of this when needed.
+    await sleep(1000);
   }
 
   fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));

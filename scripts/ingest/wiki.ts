@@ -60,6 +60,43 @@ export async function fetchWikiExtract(title: string): Promise<string> {
   return page?.missing !== undefined ? '' : (page?.extract ?? '');
 }
 
+export interface WikiEntity {
+  title: string;
+  url: string;
+  extract: string;
+  isDisambiguation: boolean;
+}
+
+// Title resolution + full plain-text extract + disambiguation check in ONE
+// Action API call, instead of enrich-bios.ts's old two-call pattern (a REST
+// summary call for title/URL/disambiguation, then a separate Action API call
+// for the extract). Confirmed via a real backfill run that guest enrichment
+// was tripping Wikipedia's rate limiter well within a 250-guest run at 2
+// calls/guest — halving that to 1 call/guest directly cuts how often that
+// happens, on top of being the faster path when it doesn't.
+export async function fetchWikiEntity(pageTitle: string): Promise<WikiEntity | null> {
+  const data = await wikiGet({
+    action: 'query',
+    prop: 'extracts|pageprops',
+    explaintext: 1,
+    ppprop: 'disambiguation',
+    titles: pageTitle,
+    format: 'json',
+    redirects: 1,
+  });
+  const pages = data?.query?.pages ?? {};
+  const page: any = Object.values(pages)[0];
+  if (!page || page.missing !== undefined) return null;
+
+  const title = page.title ?? pageTitle;
+  return {
+    title,
+    url: `https://en.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`,
+    extract: page.extract ?? '',
+    isDisambiguation: page.pageprops?.disambiguation !== undefined,
+  };
+}
+
 export async function fetchWikiSections(title: string): Promise<WikiSection[]> {
   const data = await wikiGet({ action: 'parse', page: title, prop: 'sections', format: 'json', redirects: 1 });
   return data?.parse?.sections ?? [];
