@@ -23,7 +23,7 @@ const TTL_MS     = 30 * 24 * 60 * 60 * 1000;
 const MIN_ENTITY_CONFIDENCE = 0.65;
 const MAX_PER_RUN = 50;
 const CURRENT_YEAR = new Date().getFullYear();
-const TWO_YEARS_AGO = CURRENT_YEAR - 2;
+const RECENT_WORK_CUTOFF_YEAR = CURRENT_YEAR - 3;
 
 // ── Args ─────────────────────────────────────────────────────────────────────
 
@@ -195,7 +195,7 @@ function extractRecentWork(intro: string): GuestBioWork[] {
       const around = intro.slice(Math.max(0, m!.index - 10), m!.index + title.length + 30);
       return around.match(/\b(20(2[4-9]|[3-9]\d))\b/)?.[0] || '';
     })();
-    if (!year || parseInt(year) < TWO_YEARS_AGO) continue;
+    if (!year || parseInt(year) < RECENT_WORK_CUTOFF_YEAR) continue;
     if (!title || title.length < 3) continue;
     const ctx  = intro.slice(Math.max(0, m.index - 30), m.index + 60);
     const type: GuestBioWork['type'] = /film|movie/i.test(ctx) ? 'film'
@@ -321,7 +321,7 @@ Rules:
   albums, podcasts) — this is used to find connections between guests who
   worked on the same project or in the same band, so don't limit to acting
   credits alone
-- recent_work: year >= ${TWO_YEARS_AGO} only, empty array if none
+- recent_work: year >= ${RECENT_WORK_CUTOFF_YEAR} only, empty array if none
 - upcoming_work: work explicitly described as upcoming/announced/forthcoming in
   the intro (e.g. "is set to star in", "an upcoming album"), with a year if one
   is stated; empty array if the intro doesn't mention anything upcoming — this
@@ -424,7 +424,7 @@ function validate(bio: GuestBio): { ok: boolean; reason?: string } {
   if (words < 20 || words > 160) return { ok: false, reason: `word_count:${words}` };
 
   for (const w of bio.recent_work) {
-    if (w.year && parseInt(w.year) < TWO_YEARS_AGO)
+    if (w.year && parseInt(w.year) < RECENT_WORK_CUTOFF_YEAR)
       return { ok: false, reason: `stale_recent_work:${w.title}(${w.year})` };
   }
 
