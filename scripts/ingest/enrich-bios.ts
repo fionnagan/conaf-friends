@@ -61,7 +61,7 @@ function sleep(ms: number) { return new Promise(r => setTimeout(r, ms)); }
 
 // ── Wikipedia ─────────────────────────────────────────────────────────────────
 
-interface WikiEntity {
+export interface WikiEntity {
   name: string;
   wikipedia_url: string;
   intro: string;
@@ -144,7 +144,7 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   return null;
 }
 
-async function resolveEntityWithRetry(guestName: string, maxAttempts = 3): Promise<WikiEntity | null> {
+export async function resolveEntityWithRetry(guestName: string, maxAttempts = 3): Promise<WikiEntity | null> {
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     try {
       return await resolveEntity(guestName);
@@ -603,4 +603,6 @@ async function main() {
   console.log(`Cached:         ${Object.keys(bios).length} guests`);
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+if (require.main === module) {
+  main().catch(err => { console.error(err); process.exit(1); });
+}
