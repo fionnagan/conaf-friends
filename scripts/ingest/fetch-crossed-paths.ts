@@ -36,6 +36,10 @@ const DATA_FILE = path.join(process.cwd(), 'data', 'guests.json');
 // "Cast" — confirmed via a real run where Toy Story 5 came back with 0 cast
 // members found because the plain "Cast" match missed it entirely.
 const CAST_HEADING_RE = /^(voice )?cast$/i;
+// He's in his own films' casts, obviously — but he's the whole reason this
+// pipeline exists, not a "never booked" candidate. A live run listed him as
+// exactly that in 3 films before this filter existed.
+const CONAN_NAME = "conan o'brien";
 
 interface ConanActivity {
   title: string;
@@ -79,10 +83,18 @@ async function fetchFilmCast(title: string): Promise<CastMember[]> {
   // e.g. "Linda[1]") before reading text — confirmed leaking into real
   // character names in a live run otherwise.
   $('li sup.reference').remove();
+  // Some articles (Toy Story 5's included) embed a <references>/reflist block
+  // directly inside the cast section rather than a separate "References"
+  // heading — its <li> citation entries ("^ Battison, Jess (May 25, 2026)...")
+  // got picked up as fake cast rows in a live run. Drop the whole block.
+  $('.reflist, ol.references, .references').remove();
 
   $('li').each((_, li) => {
     const text = $(li).text().trim().replace(/\s+/g, ' ');
     if (!text) return;
+    // Second safety net: a citation entry that survived the block removal
+    // above still starts with Wikipedia's "^" backlink marker.
+    if (text.startsWith('^')) return;
     // Wikipedia cast bullets read "Actor Name as Character" (often with a
     // trailing parenthetical like "(voice)"). Bullets without " as " —
     // occasional framing text like "and others" — are skipped rather than
@@ -121,6 +133,7 @@ async function main() {
 
     for (const member of cast) {
       const normalized = normalizeGuestName(member.name).toLowerCase();
+      if (normalized === CONAN_NAME) continue;
       const matched = guestByName.get(normalized) ?? null;
       results.push({
         activityTitle: film.title,
