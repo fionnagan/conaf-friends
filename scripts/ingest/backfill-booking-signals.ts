@@ -23,7 +23,15 @@
  * predates the field and was never checked").
  *
  * Usage:
- *   npx tsx scripts/ingest/backfill-booking-signals.ts [--limit N]
+ *   npx tsx scripts/ingest/backfill-booking-signals.ts [--limit N] [--retry-empty] [--guest "Name"]
+ *   --retry-empty  also reprocess guests whose birth_year KEY is present but
+ *                  "" — needed after a real run came back 0/20 on birth_year
+ *                  despite the intro text containing "born", to re-check
+ *                  those specific guests once the root cause is fixed rather
+ *                  than skipping them forever (the default filter treats ""
+ *                  as "already checked, not stated").
+ *   --guest "Name" process one guest regardless of the above filter — cheap
+ *                  targeted debugging.
  * Reads/writes scripts/cache/bios.json
  */
 import * as fs from 'fs';
@@ -38,6 +46,8 @@ const DEFAULT_LIMIT = 20; // small default — validate on a sample before scali
 
 const args = process.argv.slice(2);
 const LIMIT = (() => { const i = args.indexOf('--limit'); return i >= 0 ? parseInt(args[i + 1], 10) : DEFAULT_LIMIT; })();
+const RETRY_EMPTY = args.includes('--retry-empty');
+const ONLY_GUEST = (() => { const i = args.indexOf('--guest'); return i >= 0 ? args[i + 1] : null; })();
 
 function readJson<T>(file: string, fallback: T): T {
   if (!fs.existsSync(file)) return fallback;
@@ -86,8 +96,11 @@ async function main() {
   const bios = readJson<Record<string, GuestBio>>(BIOS_FILE, {});
 
   let queue = guestsData.guests.filter((g) => {
+    if (ONLY_GUEST) return g.name.toLowerCase() === ONLY_GUEST.toLowerCase();
     const bio = bios[g.name];
-    return bio && !bio.needs_review && !('birth_year' in bio);
+    if (!bio || bio.needs_review) return false;
+    if (!('birth_year' in bio)) return true;
+    return RETRY_EMPTY && bio.birth_year === '';
   });
 
   console.log(`${queue.length} guest(s) have a bio missing booking-signal fields (of ${guestsData.guests.length} total).`);
@@ -112,6 +125,16 @@ async function main() {
         await sleep(400);
         continue;
       }
+
+      // Debug: confirmed via a real run that birth_year came back empty for
+      // 20/20 guests (including Kenan Thompson, Adam Sandler, Matt Damon —
+      // whose Wikipedia intros certainly state a birth date) while
+      // nationality succeeded 20/20. Log whether the raw intro text even
+      // contains "born" so a data-source problem (REST summary API stripping
+      // it) is distinguishable from an extraction problem (Claude not
+      // reading it out) instead of guessing which one it is.
+      const hasBornText = /\bborn\b/i.test(entity.intro);
+      console.log(`\n  [debug] intro has "born": ${hasBornText} — first 200 chars: "${entity.intro.slice(0, 200)}"`);
 
       const signals = await extractBookingSignals(client, guest.name, entity.intro);
       if (!signals) {
