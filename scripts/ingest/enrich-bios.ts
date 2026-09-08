@@ -113,7 +113,13 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
     }
     if (!entity || entity.isDisambiguation) continue;
 
-    const intro = entity.extract.slice(0, 1500).trim();
+    // fetchWikiEntity already returns the FULL article extract (not just the
+    // lead), so this cap decides how much of it we actually use — bumped
+    // from 1500 to 6000 chars to reach well past the intro into Career/
+    // Personal life sections, where both a fuller known_for list and any
+    // explicit Conan O'Brien / Team Coco mention are likely to live, not
+    // just the opening paragraph.
+    const intro = entity.extract.slice(0, 6000).trim();
     if (!intro) continue;
 
     const wikiTitle = entity.title;
@@ -338,7 +344,8 @@ Return JSON:
   "gender": "",
   "nationality": "",
   "prestige_signals": [],
-  "primary_platform": "film|tv|music|streaming|podcast|sports|other"
+  "primary_platform": "film|tv|music|streaming|podcast|sports|other",
+  "conan_mentions": []
 }
 Rules:
 - known_for: ALL notable works named in the intro, across ANY medium (film, TV,
@@ -363,7 +370,13 @@ Rules:
   "British"), or "" if not stated — do not infer from name, accent, or any other cue
 - prestige_signals: awards/honors explicitly named in the intro (e.g. "Emmy nominee",
   "Grammy winner"); empty array if none are mentioned — never infer prestige
-- primary_platform: the ONE medium the intro emphasizes as their current work`,
+- primary_platform: the ONE medium the intro emphasizes as their current work
+- conan_mentions: verbatim sentence(s) or clauses from the text that explicitly
+  name Conan O'Brien, "Team Coco", or one of his shows/podcast by name (Late
+  Night with Conan O'Brien, The Tonight Show with Conan O'Brien, Conan, Conan
+  O'Brien Needs a Friend, Conan O'Brien Must Go) — quote the text exactly,
+  don't paraphrase; empty array if the text never mentions him by name, even
+  if the guest is known to have appeared on his shows`,
     }],
   });
 
@@ -372,12 +385,22 @@ Rules:
     structured = JSON.parse(extractMsg.content[0].text.trim());
   } catch { return null; }
 
+  // Wikipedia's own text explicitly naming Conan/Team Coco/a named show is
+  // stronger, real evidence than our origin-based inference (which never
+  // reads the article at all) — upgrade to 'direct' when present, quoting
+  // the article rather than guessing. Falls back to the passed-in
+  // origin-based connection when the intro never mentions him by name.
+  const conanMentions: string[] = Array.isArray(structured.conan_mentions) ? structured.conan_mentions : [];
+  const effectiveConanConn: ConanConnection = conanMentions.length > 0
+    ? { type: 'direct', evidence: `Wikipedia: "${conanMentions[0]}"` }
+    : conanConn;
+
   await sleep(200);
 
   // Step 2: description synthesis
   const knownList  = (structured.known_for || []).map((w: any) => `${w.title} (${w.type}, ${w.year})`).join(', ');
   const recentList = (structured.recent_work || []).map((w: any) => `${w.title} (${w.year})`).join(', ');
-  const softener   = conanConn.type === 'inferred' ? ' Use tentative language for the Conan connection.' : '';
+  const softener   = effectiveConanConn.type === 'inferred' ? ' Use tentative language for the Conan connection.' : '';
 
   const synthMsg = await client.messages.create({
     model: 'claude-sonnet-4-6',
@@ -389,7 +412,7 @@ Rules:
 - Profession: ${(structured.profession || []).join(', ') || 'entertainer'}
 - Known for: ${knownList || 'see intro'}
 - Recent work: ${recentList || 'none confirmed'}
-- Conan connection (${conanConn.type}): ${conanConn.evidence}
+- Conan connection (${effectiveConanConn.type}): ${effectiveConanConn.evidence}
 
 Paragraph only:`,
     }],
@@ -404,7 +427,7 @@ Paragraph only:`,
     profession:       structured.profession || [],
     known_for:        structured.known_for || [],
     recent_work:      (structured.recent_work || []).slice(0, 4),
-    conan_connection: conanConn,
+    conan_connection: effectiveConanConn,
     description,
     confidence:       entity.confidence,
     needs_review:     false,
@@ -422,11 +445,24 @@ Paragraph only:`,
 
 // ── Wikipedia-only pipeline ───────────────────────────────────────────────────
 
+// Same idea as the Claude pipeline's conan_mentions field, regex-only for
+// the free fallback path: find the sentence containing an explicit mention
+// of Conan O'Brien, Team Coco, or one of his named shows, and use it as
+// direct evidence instead of the origin-based inference.
+const CONAN_MENTION_RE = /\b(Conan O'?Brien|Team Coco|Late Night with Conan O'?Brien|The Tonight Show with Conan O'?Brien|Conan O'?Brien Needs a Friend|Conan O'?Brien Must Go)\b/i;
+
+function extractConanMention(intro: string): ConanConnection | null {
+  const sentences = intro.split(/(?<=[.!?])\s+/);
+  const hit = sentences.find(s => CONAN_MENTION_RE.test(s));
+  return hit ? { type: 'direct', evidence: `Wikipedia: "${hit.trim()}"` } : null;
+}
+
 function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConnection): GuestBio {
   const profession = extractProfessions(entity.intro);
   const known_for  = extractKnownFor(entity.intro);
   const recent_work = extractRecentWork(entity.intro);
-  const description = buildDescription(entity.intro, guest.name, conanConn.evidence, conanConn.type);
+  const effectiveConanConn = extractConanMention(entity.intro) ?? conanConn;
+  const description = buildDescription(entity.intro, guest.name, effectiveConanConn.evidence, effectiveConanConn.type);
 
   const wordCount = description.split(/\s+/).length;
   const needs_review = wordCount < 20 || wordCount > 160;
@@ -436,7 +472,7 @@ function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConne
     profession,
     known_for,
     recent_work,
-    conan_connection: conanConn,
+    conan_connection: effectiveConanConn,
     description,
     confidence:       entity.confidence,
     needs_review,
