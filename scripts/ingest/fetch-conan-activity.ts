@@ -25,11 +25,10 @@
  *   npx tsx scripts/ingest/fetch-conan-activity.ts
  * Writes scripts/cache/conan-activity.json
  */
-import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { writeCache, USER_AGENT } from './utils';
+import { writeCache } from './utils';
+import { fetchWikiExtract, fetchWikiSections, fetchWikiSectionHtml } from './wiki';
 
-const WIKI_API = 'https://en.wikipedia.org/w/api.php';
 // Subset of RELEVANT_HEADING_RE worth a table fetch — "hosting"/"podcast" content
 // is prose (interviews, ceremonies described in sentences), never a wikitable;
 // only filmography-shaped sections use tables, and a table fetch is a real
@@ -55,50 +54,9 @@ interface ConanActivity {
   role: string;
 }
 
-async function fetchFullArticleText(): Promise<string> {
-  const res = await axios.get(WIKI_API, {
-    headers: { 'User-Agent': USER_AGENT },
-    params: {
-      action: 'query',
-      prop: 'extracts',
-      explaintext: 1,
-      titles: WIKI_TITLE,
-      format: 'json',
-      redirects: 1,
-    },
-    timeout: 20000,
-  });
-  const pages = res.data?.query?.pages ?? {};
-  const page: any = Object.values(pages)[0];
-  if (page?.missing !== undefined) {
-    console.log(`  Wikipedia has no page titled "${WIKI_TITLE}" (redirects should normally prevent this).`);
-  }
-  return page?.extract ?? '';
-}
-
-interface WikiSection {
-  index: string;
-  line: string;
-}
-
-async function fetchSectionList(): Promise<WikiSection[]> {
-  const res = await axios.get(WIKI_API, {
-    headers: { 'User-Agent': USER_AGENT },
-    params: { action: 'parse', page: WIKI_TITLE, prop: 'sections', format: 'json', redirects: 1 },
-    timeout: 20000,
-  });
-  return res.data?.parse?.sections ?? [];
-}
-
 // Table rows as pipe-separated lines — enough structure for Claude to read a
 // filmography table without needing real Markdown/HTML round-tripped through it.
-async function fetchSectionTableRows(sectionIndex: string): Promise<string[]> {
-  const res = await axios.get(WIKI_API, {
-    headers: { 'User-Agent': USER_AGENT },
-    params: { action: 'parse', page: WIKI_TITLE, section: sectionIndex, prop: 'text', format: 'json', redirects: 1 },
-    timeout: 20000,
-  });
-  const html = res.data?.parse?.text?.['*'] ?? '';
+function parseTableRows(html: string): string[] {
   const $ = cheerio.load(html);
   const rows: string[] = [];
   $('table tr').each((_, tr) => {
@@ -115,11 +73,12 @@ async function fetchSectionTableRows(sectionIndex: string): Promise<string[]> {
 // Fetches every filmography-shaped section's table rows in one pass, labeled
 // by heading so Claude can tell a Film row from a Television row.
 async function fetchFilmographyTables(): Promise<string> {
-  const sections = await fetchSectionList();
+  const sections = await fetchWikiSections(WIKI_TITLE);
   const tableSections = sections.filter((s) => TABLE_HEADING_RE.test(s.line));
   const blocks: string[] = [];
   for (const section of tableSections) {
-    const rows = await fetchSectionTableRows(section.index);
+    const html = await fetchWikiSectionHtml(WIKI_TITLE, section.index);
+    const rows = parseTableRows(html);
     if (rows.length > 0) {
       blocks.push(`== ${section.line} (table) ==\n${rows.join('\n')}`);
     }
@@ -188,9 +147,9 @@ async function main() {
   }
 
   console.log('Fetching full Conan O\'Brien Wikipedia article...');
-  const fullText = await fetchFullArticleText();
+  const fullText = await fetchWikiExtract(WIKI_TITLE);
   if (!fullText) {
-    console.log('Could not fetch article text.');
+    console.log(`Could not fetch article text (Wikipedia may have no page titled "${WIKI_TITLE}").`);
     process.exit(1);
   }
   console.log(`  Full article: ${fullText.length} chars`);
