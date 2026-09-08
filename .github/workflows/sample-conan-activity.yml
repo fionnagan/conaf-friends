@@ -35,3 +35,6 @@ jobs:
           echo ""
           echo "================= scripts/cache/conan-activity.json ================="
           cat scripts/cache/conan-activity.json
+          echo ""
+          echo "================= scripts/cache/conan-activity-raw-text.json ================="
+          cat scripts/cache/conan-activity-raw-text.json

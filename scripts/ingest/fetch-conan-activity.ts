@@ -131,6 +131,10 @@ async function main() {
 
   const relevant = extractRelevantSections(fullText);
   console.log(`  Relevant sections (intro + filmography/hosting/award/podcast headings): ${relevant.length} chars`);
+  // Also written to disk (not just logged) so the raw Wikipedia text extraction
+  // fed to Claude can be diffed against the JSON it produced — that's the only
+  // way to tell a real Wikipedia claim from a model extrapolation.
+  writeCache('conan-activity-raw-text.json', { generatedAt: new Date().toISOString(), relevant });
 
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
   const client = new Anthropic({ apiKey });
