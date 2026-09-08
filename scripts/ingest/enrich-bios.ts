@@ -13,6 +13,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import axios from 'axios';
 import type { GuestBio, GuestBioWork, Guest } from '../../lib/types';
+import { fetchWikiExtract } from './wiki';
 
 // ── Config ───────────────────────────────────────────────────────────────────
 
@@ -105,11 +106,27 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
       const data = res.data as any;
       if (data.type === 'disambiguation') continue;
 
-      const intro = (data.extract || '').slice(0, 1500).trim();
-      if (!intro) continue;
+      const summaryIntro = (data.extract || '').slice(0, 1500).trim();
+      if (!summaryIntro) continue;
 
       const wikiTitle = data.title || name;
       const wikiUrl   = data.content_urls?.desktop?.page || `https://en.wikipedia.org/wiki/${slug}`;
+
+      // Confirmed via a real backfill run (19/20 real people, all with a
+      // documented birth date on Wikipedia): the REST summary API's `extract`
+      // deliberately strips parenthetical asides like "(born ...)" for its
+      // link-preview tagline, so birth_year extraction was silently starved
+      // of the one clause it needs. The full-article plaintext extract (same
+      // Action API fetch-conan-activity.ts already uses) keeps it — prefer
+      // that for the resolved title, falling back to the summary's intro
+      // only if the full extract comes back empty (e.g. a transient miss).
+      let intro = summaryIntro;
+      try {
+        const fullExtract = (await fetchWikiExtract(wikiTitle)).slice(0, 1500).trim();
+        if (fullExtract) intro = fullExtract;
+      } catch {
+        // keep summaryIntro
+      }
 
       // Confidence: name token overlap + bio signal
       // Normalise dots so "B.J." matches "B. J." and vice versa
