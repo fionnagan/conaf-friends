@@ -1,0 +1,37 @@
+name: Sample Conan Activity
+
+# One-off, read-only validation of Step 1 of the "Crossed Paths" pipeline:
+# fetching Conan's OWN recent activity (hosting gigs, film/TV roles, podcast
+# guest spots) from his Wikipedia article. Nothing here commits or pushes —
+# it just prints what got extracted so we can judge real coverage before
+# building Step 2 (fetching cast lists for each activity found here).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch and extract Conan's recent activity
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/ingest/fetch-conan-activity.ts
+
+      - name: Print full result
+        run: |
+          echo ""
+          echo "================= scripts/cache/conan-activity.json ================="
+          cat scripts/cache/conan-activity.json
