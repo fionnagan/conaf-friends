@@ -30,19 +30,23 @@ const CATEGORY_COLORS = [
 // Single-hue sequential ramp (brand orange, blended over the card surface)
 // for the heatmap — magnitude reads by lightness/chroma alone, low to high.
 const SEQUENTIAL_RAMP = ["#2c2226", "#543026", "#803f25", "#b04f24", "#e05f22"];
-const DIAGONAL_COLOR = "#232838";
 
 // Illustrative only — no guest has a backfilled birth_year yet, so this
 // bucket distribution is a placeholder for what the real split will look
 // like once that ingest lands. Static across the era filter on purpose:
 // filtering illustrative numbers would suggest a precision that isn't there.
 const GENERATION_BUCKETS: { label: string; share: number }[] = [
-  { label: "Silent Generation", share: 0.03 },
-  { label: "Baby Boomer", share: 0.18 },
-  { label: "Gen X", share: 0.34 },
-  { label: "Millennial", share: 0.37 },
-  { label: "Gen Z", share: 0.08 },
+  { label: "Boomer & earlier (born before 1965)", share: 0.21 },
+  { label: "Gen X (1965–1980)", share: 0.34 },
+  { label: "Millennial (1981–1996)", share: 0.37 },
+  { label: "Gen Z (1997 & later)", share: 0.08 },
 ];
+
+function formatPct(value: number, total: number): string {
+  const pct = (value / total) * 100;
+  if (pct > 0 && pct < 1) return "<1%";
+  return `${Math.round(pct)}%`;
+}
 
 function StackedBar({
   segments,
@@ -65,7 +69,7 @@ function StackedBar({
             .map((s) => (
               <span key={s.label} className="inline-flex items-center gap-1.5 text-xs text-[var(--text-muted)]">
                 <span className="w-2.5 h-2.5 rounded-sm inline-block flex-shrink-0" style={{ background: s.color }} />
-                {s.label} · {Math.round((s.value / total) * 100)}%
+                {s.label} · {formatPct(s.value, total)}
               </span>
             ))}
         </div>
@@ -97,20 +101,20 @@ function StackedBar({
                   </td>
                   <td className="py-1.5 text-right tabular-nums">{s.value}</td>
                   <td className="py-1.5 text-right tabular-nums">
-                    {Math.round((s.value / total) * 100)}%
+                    {formatPct(s.value, total)}
                   </td>
                 </tr>
               ))}
           </tbody>
         </table>
       ) : (
-        <div className="flex w-full h-8 rounded-md overflow-hidden" role="img" aria-label={`${segments.map((s) => `${s.label} ${Math.round((s.value / total) * 100)}%`).join(", ")}`}>
+        <div className="flex w-full h-8 rounded-md overflow-hidden" role="img" aria-label={`${segments.map((s) => `${s.label} ${formatPct(s.value, total)}`).join(", ")}`}>
           {segments
             .filter((s) => s.value > 0)
             .map((s, i) => (
               <div
                 key={s.label}
-                title={`${s.label}: ${s.value} (${Math.round((s.value / total) * 100)}%)`}
+                title={`${s.label}: ${s.value} (${formatPct(s.value, total)})`}
                 style={{
                   width: `${(s.value / total) * 100}%`,
                   background: s.color,
@@ -241,87 +245,86 @@ export default function RoundupClient({
           </button>
         </div>
         <p className="text-sm text-[var(--text-muted)] mb-4">
-          Guests who showed up in both eras — the diagonal is each era&apos;s own total, grayed out
-          since comparing an era to itself is trivial.
+          How many guests showed up in <em>both</em> eras — order doesn&apos;t matter, so each pair
+          appears once. (Each era&apos;s own total is already in its filter chip above.)
         </p>
 
         {heatmapTable ? (
           <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+            <table className="w-full text-sm max-w-md">
               <thead>
                 <tr className="text-left text-[var(--text-muted)] border-b border-[var(--border)]">
-                  <th className="py-1.5 font-medium"> </th>
-                  {eras.map((e) => (
-                    <th key={e} className="py-1.5 font-medium text-right">
-                      {ERA_LABELS[e]}
-                    </th>
-                  ))}
+                  <th className="py-1.5 font-medium">Pair</th>
+                  <th className="py-1.5 font-medium text-right">Both</th>
                 </tr>
               </thead>
               <tbody>
-                {eras.map((rowEra, i) => (
-                  <tr key={rowEra} className="border-b border-[var(--border)]/50">
-                    <td className="py-1.5 font-medium">{ERA_LABELS[rowEra]}</td>
-                    {eras.map((colEra, j) => (
-                      <td key={colEra} className="py-1.5 text-right tabular-nums">
-                        {crossover[i][j]}
-                        {i === j && <span className="text-[var(--text-muted)]"> (self)</span>}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
+                {eras.map((rowEra, i) =>
+                  eras.map((colEra, j) => {
+                    if (j >= i) return null;
+                    return (
+                      <tr key={`${rowEra}-${colEra}`} className="border-b border-[var(--border)]/50">
+                        <td className="py-1.5">
+                          {ERA_LABELS[rowEra]} &amp; {ERA_LABELS[colEra]}
+                        </td>
+                        <td className="py-1.5 text-right tabular-nums">{crossover[i][j]}</td>
+                      </tr>
+                    );
+                  })
+                )}
               </tbody>
             </table>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <div
-              className="grid gap-[3px] min-w-[420px]"
-              style={{ gridTemplateColumns: `120px repeat(${eras.length}, 1fr)` }}
+              className="grid gap-[3px] max-w-md"
+              style={{ gridTemplateColumns: `88px repeat(${eras.length - 1}, 72px)` }}
             >
               <div />
-              {eras.map((e) => (
+              {eras.slice(0, -1).map((e) => (
                 <div
                   key={e}
-                  className="text-xs font-medium text-center px-1 pb-1 flex items-end justify-center"
+                  className="text-[11px] font-medium text-center pb-1.5 flex items-end justify-center leading-tight"
                   style={{ color: getEraTextColor(e) }}
                 >
                   {ERA_LABELS[e]}
                 </div>
               ))}
-              {eras.map((rowEra, i) => (
-                <div key={rowEra} className="contents">
-                  <div
-                    className="text-xs font-medium flex items-center pr-2"
-                    style={{ color: getEraTextColor(rowEra) }}
-                  >
-                    {ERA_LABELS[rowEra]}
+              {eras.slice(1).map((rowEra, ri) => {
+                const i = ri + 1;
+                return (
+                  <div key={rowEra} className="contents">
+                    <div
+                      className="text-[11px] font-medium flex items-center pr-2 leading-tight"
+                      style={{ color: getEraTextColor(rowEra) }}
+                    >
+                      {ERA_LABELS[rowEra]}
+                    </div>
+                    {eras.slice(0, -1).map((colEra, j) => {
+                      if (j >= i) {
+                        return <div key={colEra} />;
+                      }
+                      const value = crossover[i][j];
+                      const dimmed = !selected.has(rowEra) || !selected.has(colEra);
+                      return (
+                        <div
+                          key={colEra}
+                          title={`${ERA_LABELS[rowEra]} & ${ERA_LABELS[colEra]}: ${value} guests appeared in both`}
+                          className="aspect-square rounded-md flex items-center justify-center text-xs font-medium tabular-nums transition-opacity"
+                          style={{
+                            background: SEQUENTIAL_RAMP[rampIndex(value)],
+                            color: "#fff",
+                            opacity: dimmed ? 0.35 : 1,
+                          }}
+                        >
+                          {value}
+                        </div>
+                      );
+                    })}
                   </div>
-                  {eras.map((colEra, j) => {
-                    const value = crossover[i][j];
-                    const isDiagonal = i === j;
-                    const dimmed = !selected.has(rowEra) || !selected.has(colEra);
-                    return (
-                      <div
-                        key={colEra}
-                        title={
-                          isDiagonal
-                            ? `${ERA_LABELS[rowEra]}: ${value} guests total`
-                            : `${ERA_LABELS[rowEra]} × ${ERA_LABELS[colEra]}: ${value} guests appeared in both`
-                        }
-                        className="aspect-square rounded-md flex items-center justify-center text-xs font-medium tabular-nums transition-opacity"
-                        style={{
-                          background: isDiagonal ? DIAGONAL_COLOR : SEQUENTIAL_RAMP[rampIndex(value)],
-                          color: isDiagonal ? "var(--text-muted)" : "#fff",
-                          opacity: dimmed ? 0.35 : 1,
-                        }}
-                      >
-                        {value}
-                      </div>
-                    );
-                  })}
-                </div>
-              ))}
+                );
+              })}
             </div>
             <div className="flex items-center gap-1.5 mt-3 text-xs text-[var(--text-muted)]">
               <span>Fewer</span>

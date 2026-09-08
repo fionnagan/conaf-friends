@@ -43,15 +43,28 @@ export default function RoundupPage() {
   );
 
   // Profession is a real, if sparse, signal (~8% of guests have an enriched
-  // bio so far). Bucket the raw Wikipedia profession strings into a handful
-  // of readable categories, first match wins.
+  // bio so far). Bucket the raw Wikipedia profession text into readable
+  // categories, first match wins. Matched as substrings of the guest's
+  // joined profession text rather than exact array entries — some bios came
+  // through a regex fallback pipeline that captured prose fragments (e.g.
+  // "actor best known for portraying...") instead of clean single words, and
+  // substring matching still buckets those correctly instead of dumping them
+  // in "Other".
   const PROFESSION_BUCKETS: [string, string[]][] = [
-    ["Comedian", ["comedian", "stand-up comedian"]],
+    ["Comedian", ["comedian", "stand-up"]],
     ["Actor", ["actor", "actress"]],
-    ["Musician", ["musician", "singer", "songwriter", "rapper"]],
-    ["Filmmaker", ["filmmaker", "director", "film producer", "producer"]],
+    ["Musician", ["musician", "singer", "songwriter", "rapper", "composer"]],
+    ["Filmmaker", ["filmmaker", "director", "producer", "animator", "cartoonist"]],
     ["Writer", ["writer", "screenwriter", "author"]],
-    ["TV / media host", ["television host", "television presenter", "radio host", "podcaster"]],
+    [
+      "Media / TV host",
+      [
+        "television host", "television presenter", "television personality",
+        "radio host", "podcaster", "journalist", "media personality",
+        "political commentator", "broadcast",
+      ],
+    ],
+    ["Athlete", ["athlete", "basketball", "football", "wrestler", "boxer"]],
   ];
 
   const professionCounts: Record<Era, Record<string, number>> = {
@@ -72,9 +85,10 @@ export default function RoundupPage() {
   for (const guest of data.guests) {
     const professions = guest.bio?.profession;
     if (!professions || professions.length === 0) continue;
+    const joined = professions.join(" ").toLowerCase();
     let bucket = "Other";
     for (const [label, keys] of PROFESSION_BUCKETS) {
-      if (professions.some((p) => keys.includes(p))) {
+      if (keys.some((k) => joined.includes(k))) {
         bucket = label;
         break;
       }
