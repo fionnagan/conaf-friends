@@ -14,12 +14,27 @@
  * (last ~3 years) activity — that's what's actionable for booking; a 2009
  * film cameo isn't.
  *
+ * The plaintext extract API (explaintext=1) silently drops wikitables —
+ * confirmed via a real run where "Filmography"/"Film"/"Television" came back
+ * completely empty even though those are exactly where a film/TV credit like
+ * a Toy Story role would live. So film/TV-shaped sections are ALSO fetched as
+ * parsed HTML (action=parse&prop=text) and their <table> rows extracted with
+ * cheerio, then appended alongside the prose text before extraction.
+ *
  * Usage:
  *   npx tsx scripts/ingest/fetch-conan-activity.ts
  * Writes scripts/cache/conan-activity.json
  */
 import axios from 'axios';
+import * as cheerio from 'cheerio';
 import { writeCache, USER_AGENT } from './utils';
+
+const WIKI_API = 'https://en.wikipedia.org/w/api.php';
+// Subset of RELEVANT_HEADING_RE worth a table fetch — "hosting"/"podcast" content
+// is prose (interviews, ceremonies described in sentences), never a wikitable;
+// only filmography-shaped sections use tables, and a table fetch is a real
+// network round-trip per section, so don't do it for headings that won't have one.
+const TABLE_HEADING_RE = /\b(film|television|filmography)\b/i;
 
 // Plain title — axios encodes query params itself, so a pre-encoded string
 // here (e.g. 'Conan_O%27Brien') gets double-encoded into a literal, nonexistent
@@ -41,7 +56,7 @@ interface ConanActivity {
 }
 
 async function fetchFullArticleText(): Promise<string> {
-  const res = await axios.get('https://en.wikipedia.org/w/api.php', {
+  const res = await axios.get(WIKI_API, {
     headers: { 'User-Agent': USER_AGENT },
     params: {
       action: 'query',
@@ -59,6 +74,57 @@ async function fetchFullArticleText(): Promise<string> {
     console.log(`  Wikipedia has no page titled "${WIKI_TITLE}" (redirects should normally prevent this).`);
   }
   return page?.extract ?? '';
+}
+
+interface WikiSection {
+  index: string;
+  line: string;
+}
+
+async function fetchSectionList(): Promise<WikiSection[]> {
+  const res = await axios.get(WIKI_API, {
+    headers: { 'User-Agent': USER_AGENT },
+    params: { action: 'parse', page: WIKI_TITLE, prop: 'sections', format: 'json', redirects: 1 },
+    timeout: 20000,
+  });
+  return res.data?.parse?.sections ?? [];
+}
+
+// Table rows as pipe-separated lines — enough structure for Claude to read a
+// filmography table without needing real Markdown/HTML round-tripped through it.
+async function fetchSectionTableRows(sectionIndex: string): Promise<string[]> {
+  const res = await axios.get(WIKI_API, {
+    headers: { 'User-Agent': USER_AGENT },
+    params: { action: 'parse', page: WIKI_TITLE, section: sectionIndex, prop: 'text', format: 'json', redirects: 1 },
+    timeout: 20000,
+  });
+  const html = res.data?.parse?.text?.['*'] ?? '';
+  const $ = cheerio.load(html);
+  const rows: string[] = [];
+  $('table tr').each((_, tr) => {
+    const cells = $(tr)
+      .find('th, td')
+      .map((_, cell) => $(cell).text().trim().replace(/\s+/g, ' '))
+      .get()
+      .filter(Boolean);
+    if (cells.length) rows.push(cells.join(' | '));
+  });
+  return rows;
+}
+
+// Fetches every filmography-shaped section's table rows in one pass, labeled
+// by heading so Claude can tell a Film row from a Television row.
+async function fetchFilmographyTables(): Promise<string> {
+  const sections = await fetchSectionList();
+  const tableSections = sections.filter((s) => TABLE_HEADING_RE.test(s.line));
+  const blocks: string[] = [];
+  for (const section of tableSections) {
+    const rows = await fetchSectionTableRows(section.index);
+    if (rows.length > 0) {
+      blocks.push(`== ${section.line} (table) ==\n${rows.join('\n')}`);
+    }
+  }
+  return blocks.join('\n\n');
 }
 
 // Plain-text extracts mark section headings as "== Heading ==" (or "===" for
@@ -91,7 +157,7 @@ async function extractActivity(client: any, text: string): Promise<ConanActivity
     system: `Extract structured data from a Wikipedia article. Output valid JSON only. No markdown. Today: ${new Date().toISOString().slice(0, 10)}.`,
     messages: [{
       role: 'user',
-      content: `Wikipedia article text about Conan O'Brien (intro + filmography/hosting/award sections):
+      content: `Wikipedia article text about Conan O'Brien (intro + filmography/hosting/award sections, plus filmography table rows formatted as "cell | cell | cell"):
 ${text}
 
 Return JSON: { "activity": [{"title":"","type":"film|tv|hosting|podcast_guest|other","year":"","role":""}] }
@@ -131,15 +197,21 @@ async function main() {
 
   const relevant = extractRelevantSections(fullText);
   console.log(`  Relevant sections (intro + filmography/hosting/award/podcast headings): ${relevant.length} chars`);
+
+  console.log('Fetching filmography table rows (dropped by the plaintext extract above)...');
+  const tables = await fetchFilmographyTables();
+  console.log(`  Table rows: ${tables.length} chars`);
+
+  const combined = tables ? `${relevant}\n\n${tables}` : relevant;
   // Also written to disk (not just logged) so the raw Wikipedia text extraction
   // fed to Claude can be diffed against the JSON it produced — that's the only
   // way to tell a real Wikipedia claim from a model extrapolation.
-  writeCache('conan-activity-raw-text.json', { generatedAt: new Date().toISOString(), relevant });
+  writeCache('conan-activity-raw-text.json', { generatedAt: new Date().toISOString(), relevant, tables });
 
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
   const client = new Anthropic({ apiKey });
 
-  const activity = await extractActivity(client, relevant);
+  const activity = await extractActivity(client, combined);
   console.log(`\n${activity.length} recent (${RECENT_CUTOFF}+) activity item(s) found:\n`);
   for (const a of activity) {
     console.log(`  - ${a.title} (${a.type}, ${a.year}) — ${a.role}`);
