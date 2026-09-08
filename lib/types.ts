@@ -192,6 +192,45 @@ export interface SOTUMetric {
   note: string;
 }
 
+// ── Crossed Paths ────────────────────────────────────────────────────────────
+// Mirrors scripts/ingest/merge-crossed-paths.ts's output shape exactly — that
+// script is the only writer of data/crossed-paths.json. Only one candidate
+// tier exists: crossed paths with Conan HIMSELF (his own film/soundtrack/
+// personal connections). A second, weaker tier — connected via an existing
+// guest's own other credits — has no pipeline yet; never fabricate it here.
+
+export interface ConanActivity {
+  title: string;
+  type: 'film' | 'tv' | 'hosting' | 'podcast_guest' | 'other';
+  year: string;
+  role: string;
+}
+
+export interface GuestCrossing {
+  source: 'film-cast' | 'film-music' | 'personal';
+  activityTitle: string;
+  activityYear: string;
+  detail: string;
+  sourceUrl?: string;
+}
+
+export interface NeverBookedCandidate {
+  name: string;
+  tier: 'crossed-with-conan';
+  source: 'film-cast' | 'film-music' | 'personal';
+  activityTitle: string;
+  activityYear: string;
+  detail: string;
+  sourceUrl?: string;
+}
+
+export interface CrossedPathsData {
+  generatedAt: string;
+  conanActivity: ConanActivity[];
+  guestCrossings: Record<string, GuestCrossing[]>;
+  neverBookedCandidates: NeverBookedCandidate[];
+}
+
 export interface SOTURecord {
   id: string;
   title: string;
