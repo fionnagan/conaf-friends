@@ -13,6 +13,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import axios from 'axios';
 import type { GuestBio, GuestBioWork, Guest } from '../../lib/types';
+import { fetchWikiExtract } from './wiki';
 
 // ── Config ───────────────────────────────────────────────────────────────────
 
@@ -68,34 +69,6 @@ export interface WikiEntity {
   confidence: number;
 }
 
-// The Action API's plain-text lead extract, `(born ...)` clause and all — the
-// REST summary endpoint used for entity resolution rewrites that away for
-// card previews. Best-effort: any failure here just falls back to the
-// summary extract in the caller, same as before this existed.
-async function fetchLeadExtract(pageTitle: string): Promise<string | null> {
-  try {
-    const res = await axios.get('https://en.wikipedia.org/w/api.php', {
-      headers: HEADERS,
-      timeout: 10000,
-      params: {
-        action: 'query',
-        prop: 'extracts',
-        exintro: 1,
-        explaintext: 1,
-        redirects: 1,
-        format: 'json',
-        formatversion: 2,
-        titles: pageTitle,
-      },
-    });
-    const page = res.data?.query?.pages?.[0];
-    const extract = (page?.extract || '').trim();
-    return extract || null;
-  } catch {
-    return null;
-  }
-}
-
 async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   // Strategy: try REST summary API (single call, different quota from MediaWiki API)
   // Falls back to name variants for compound titles like "X Live From Y"
@@ -133,23 +106,27 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
       const data = res.data as any;
       if (data.type === 'disambiguation') continue;
 
-      const summaryExtract = (data.extract || '').trim();
-      if (!summaryExtract) continue;
+      const summaryIntro = (data.extract || '').slice(0, 1500).trim();
+      if (!summaryIntro) continue;
 
       const wikiTitle = data.title || name;
       const wikiUrl   = data.content_urls?.desktop?.page || `https://en.wikipedia.org/wiki/${slug}`;
 
-      // The REST summary's `extract` is rewritten for link-preview cards and
-      // drops the subject's "(born ...)" parenthetical from the lead sentence
-      // — that's why birth_year/nationality extraction was silently coming
-      // back empty for everyone, cached or freshly enriched, well-documented
-      // birthdate or not. The older Action API's `extracts` prop returns the
-      // lead section as real plain text, parenthetical intact, so use that as
-      // the intro when it's available and fall back to the summary extract
-      // (previous behavior) if it isn't.
-      const intro = (await fetchLeadExtract(wikiTitle)) || summaryExtract;
-      const introForParsing = intro.slice(0, 1500).trim();
-      if (!introForParsing) continue;
+      // Confirmed via a real backfill run (19/20 real people, all with a
+      // documented birth date on Wikipedia): the REST summary API's `extract`
+      // deliberately strips parenthetical asides like "(born ...)" for its
+      // link-preview tagline, so birth_year extraction was silently starved
+      // of the one clause it needs. The full-article plaintext extract (same
+      // Action API fetch-conan-activity.ts already uses) keeps it — prefer
+      // that for the resolved title, falling back to the summary's intro
+      // only if the full extract comes back empty (e.g. a transient miss).
+      let intro = summaryIntro;
+      try {
+        const fullExtract = (await fetchWikiExtract(wikiTitle)).slice(0, 1500).trim();
+        if (fullExtract) intro = fullExtract;
+      } catch {
+        // keep summaryIntro
+      }
 
       // Confidence: name token overlap + bio signal
       // Normalise dots so "B.J." matches "B. J." and vice versa
@@ -164,7 +141,7 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
       const hasBioSig   = /\b(born|actor|actress|comedian|writer|director|musician|author|host|producer|singer|stand-up)\b/i.test(intro);
       const confidence  = Math.min(1, overlap * 0.7 + (hasBioSig ? 0.3 : 0));
 
-      return { name: wikiTitle, wikipedia_url: wikiUrl, intro: introForParsing, confidence };
+      return { name: wikiTitle, wikipedia_url: wikiUrl, intro, confidence };
     } catch (e: any) {
       // 404 = no article for this name variant, try next
       if (e?.response?.status === 404) continue;

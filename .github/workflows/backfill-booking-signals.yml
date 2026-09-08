@@ -16,6 +16,14 @@ on:
         description: "Max guests to process this run"
         required: false
         default: "20"
+      retryEmpty:
+        description: "Also reprocess guests already checked with an empty birth_year (set true after a bug fix)"
+        required: false
+        default: "false"
+      guest:
+        description: "Debug: process only this one guest by exact name, ignoring limit/retryEmpty filters"
+        required: false
+        default: ""
 
 jobs:
   backfill:
@@ -38,7 +46,11 @@ jobs:
       - name: Backfill booking-signal fields
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: npx tsx scripts/ingest/backfill-booking-signals.ts --limit ${{ github.event.inputs.limit }}
+        run: |
+          npx tsx scripts/ingest/backfill-booking-signals.ts \
+            --limit ${{ github.event.inputs.limit }} \
+            ${{ github.event.inputs.retryEmpty == 'true' && '--retry-empty' || '' }} \
+            ${{ github.event.inputs.guest != '' && format('--guest "{0}"', github.event.inputs.guest) || '' }}
 
       - name: Patch updated bios into guests.json
         run: npx tsx scripts/ingest/patch-bios-into-guests.ts
