@@ -72,6 +72,40 @@ jobs:
       - name: Regenerate word cloud
         run: python3 scripts/generate-wordcloud.py
 
+      # "Crossed Paths": track Conan's OWN recent activity (film/TV roles,
+      # hosting gigs, podcast guest spots), then cross-reference his films'
+      # casts and soundtracks against guests.json — surfacing both existing
+      # guests he crossed paths with and brand-new candidates who've never
+      # been booked (validated for real against Toy Story 5 in PRs #17-#25).
+      # Best-effort: a Wikipedia hiccup here must never block the site update.
+      - name: Track Conan's own activity (Crossed Paths, step 1)
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/ingest/fetch-conan-activity.ts
+
+      - name: Cross-reference film/soundtrack casts against guests (Crossed Paths, step 2)
+        continue-on-error: true
+        run: npx tsx scripts/ingest/fetch-crossed-paths.ts
+
+      # Personal/social crossed-paths (e.g. an invitation, a public appearance
+      # together) never show up in Wikipedia — only entertainment press. This
+      # only has a real chance of catching an event while it's still in each
+      # outlet's RSS feed, hence running it weekly rather than as a one-off.
+      - name: Scan trade press for personal crossed-paths
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          npx tsx scripts/ingest/fetch-trade-press.ts
+          npx tsx scripts/ingest/match-personal-crossed-paths.ts
+
+      # Folds the three caches above into data/crossed-paths.json — the file
+      # the site actually reads. Pure re-merge, no network; runs even if a
+      # step above failed/was skipped (falls back to empty for that source).
+      - name: Merge crossed-paths data
+        run: npx tsx scripts/ingest/merge-crossed-paths.ts
+
       # Guard: never auto-deploy corrupted or truncated data. Fails the job (so
       # nothing is committed or deployed) if guests.json won't parse, the guest
       # count collapsed (e.g. an empty RSS fetch), or emit_context produced a
@@ -107,7 +141,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/guests.json data/cold-opens.json data/top-words.json data/word-guests.json data/guest-photos.json data/fans.json
+          git add data/guests.json data/cold-opens.json data/top-words.json data/word-guests.json data/guest-photos.json data/fans.json data/crossed-paths.json
           git add api/guests_context.json
           git add public/conan-wordcloud.png
           git add -f scripts/cache/youtube-matches.json scripts/cache/bios.json
