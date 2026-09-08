@@ -27,6 +27,18 @@ def slugify(title: str) -> str:
     s = re.sub(r'[^a-z0-9]+', '-', s)
     return s.strip('-')
 
+def parse_date_ymd(pub_date: str):
+    """Best-effort YYYY-MM-DD out of an RFC-822 pubDate string, for telling apart
+    two episodes that happen to share a title (e.g. two "X Returns" episodes)."""
+    m = re.search(r'(\d{1,2}) (\w{3}) (\d{4})', pub_date or '')
+    if not m:
+        return None
+    day, mon, year = m.groups()
+    months = {n: i + 1 for i, n in enumerate(
+        ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])}
+    mi = months.get(mon)
+    return f'{year}-{mi:02d}-{int(day):02d}' if mi else None
+
 def fetch_html(url: str) -> str:
     for attempt in range(5):
         r = subprocess.run(
@@ -82,8 +94,30 @@ def main():
     results = []
     for ep in episodes:
         title = ep['title']
-        slug = slugify(title)
-        url = BASE + slug
+        base_slug = slugify(title)
+        ep_date = parse_date_ymd(ep.get('pubDate'))
+        slug = base_slug
+        out_path = OUT_DIR / f'{slug}.json'
+        url = BASE + base_slug  # podscripts.co has exactly one page per title-slug
+        if out_path.exists():
+            existing = json.load(open(out_path))
+            if parse_date_ymd(existing.get('pubDate')) == ep_date:
+                print(f'\n{title}  ->  already have transcript, skipping')
+                results.append({'title': title, 'slug': slug, 'url': url, 'ok': True, 'skipped': True})
+                continue
+            # Same title, different episode (e.g. two "X Returns" episodes for a repeat
+            # guest) — store this one under a disambiguated slug instead of silently
+            # dropping it or clobbering the earlier episode's transcript. podscripts.co
+            # itself has no distinct page per date, so this may fetch the same page
+            # content as the other episode; that's a source limitation, not a bug here.
+            slug = f'{base_slug}--{ep_date or "unknown"}'
+            out_path = OUT_DIR / f'{slug}.json'
+            if out_path.exists():
+                print(f'\n{title}  ->  already have transcript (disambiguated: {slug}), skipping')
+                results.append({'title': title, 'slug': slug, 'url': url, 'ok': True, 'skipped': True})
+                continue
+            print(f'\n{title}  ->  title collision with an existing transcript on a different '
+                  f'date — fetching under disambiguated slug {slug!r}')
         print(f'\n{title}  ->  {url}')
         html = fetch_html(url)
         groups, page_title = parse_transcript(html)
