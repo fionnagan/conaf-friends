@@ -1,0 +1,43 @@
+name: Sample Crossed Paths
+
+# One-off, read-only validation of Step 2 of the "Crossed Paths" pipeline:
+# fetching the cast of each of Conan's recent FILM credits and cross-
+# referencing it against data/guests.json. Nothing here commits or pushes —
+# it just prints what got matched so we can judge real coverage/accuracy
+# before wiring anything into the weekly cron.
+#
+# Runs fetch-conan-activity.ts first since fetch-crossed-paths.ts reads its
+# cached output (scripts/cache/conan-activity.json).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch Conan's recent activity (Step 1)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/ingest/fetch-conan-activity.ts
+
+      - name: Fetch film casts and cross-reference against guests (Step 2)
+        run: npx tsx scripts/ingest/fetch-crossed-paths.ts
+
+      - name: Print full result
+        run: |
+          echo ""
+          echo "================= scripts/cache/crossed-paths.json ================="
+          cat scripts/cache/crossed-paths.json
