@@ -32,7 +32,10 @@ import { fetchWikiSections, fetchWikiSectionHtml } from './wiki';
 import type { Guest } from '../../lib/types';
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'guests.json');
-const CAST_HEADING_RE = /^cast$/i;
+// Animated films (Toy Story 5 included) title this section "Voice cast", not
+// "Cast" — confirmed via a real run where Toy Story 5 came back with 0 cast
+// members found because the plain "Cast" match missed it entirely.
+const CAST_HEADING_RE = /^(voice )?cast$/i;
 
 interface ConanActivity {
   title: string;
@@ -63,19 +66,27 @@ function readJson<T>(file: string, fallback: T): T {
 async function fetchFilmCast(title: string): Promise<CastMember[]> {
   const sections = await fetchWikiSections(title);
   const castSection = sections.find((s) => CAST_HEADING_RE.test(s.line.trim()));
-  if (!castSection) return [];
+  if (!castSection) {
+    console.log(`    (no cast-shaped section found — headings were: ${sections.map((s) => s.line).join(', ') || '(none)'})`);
+    return [];
+  }
 
   const html = await fetchWikiSectionHtml(title, castSection.index);
   const $ = cheerio.load(html);
   const members: CastMember[] = [];
 
+  // Strip footnote reference markers (Wikipedia renders these as <sup> tags,
+  // e.g. "Linda[1]") before reading text — confirmed leaking into real
+  // character names in a live run otherwise.
+  $('li sup.reference').remove();
+
   $('li').each((_, li) => {
     const text = $(li).text().trim().replace(/\s+/g, ' ');
     if (!text) return;
     // Wikipedia cast bullets read "Actor Name as Character" (often with a
-    // trailing parenthetical like "(voice)" or a footnote number). Bullets
-    // without " as " — occasional framing text like "and others" — are
-    // skipped rather than guessed at.
+    // trailing parenthetical like "(voice)"). Bullets without " as " —
+    // occasional framing text like "and others" — are skipped rather than
+    // guessed at.
     const match = text.match(/^(.+?)\s+as\s+(.+)$/i);
     if (!match) return;
     members.push({ name: match[1].trim(), character: match[2].trim() });
