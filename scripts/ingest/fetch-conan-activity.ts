@@ -21,7 +21,10 @@
 import axios from 'axios';
 import { writeCache, USER_AGENT } from './utils';
 
-const WIKI_TITLE = 'Conan_O%27Brien';
+// Plain title — axios encodes query params itself, so a pre-encoded string
+// here (e.g. 'Conan_O%27Brien') gets double-encoded into a literal, nonexistent
+// page title and the article fetch silently comes back empty.
+const WIKI_TITLE = "Conan O'Brien";
 const CURRENT_YEAR = new Date().getFullYear();
 const RECENT_CUTOFF = CURRENT_YEAR - 3;
 
@@ -52,6 +55,9 @@ async function fetchFullArticleText(): Promise<string> {
   });
   const pages = res.data?.query?.pages ?? {};
   const page: any = Object.values(pages)[0];
+  if (page?.missing !== undefined) {
+    console.log(`  Wikipedia has no page titled "${WIKI_TITLE}" (redirects should normally prevent this).`);
+  }
   return page?.extract ?? '';
 }
 
