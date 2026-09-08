@@ -1,0 +1,58 @@
+name: Backfill Full Bios
+
+# One-off backfill: enriches guests who have NO cached bio at all yet
+# (~2,970 of 3,260 as of this writing — the weekly ingest only enriches
+# newly-added guests, capped at 50/run, so the pre-existing backlog was
+# never worked through). Full two-Claude-call pipeline per guest (structured
+# extraction + description synthesis), same as enrich-bios.ts always does
+# for a brand-new guest — this is that same path, just run deliberately
+# against the backlog instead of waiting ~60 weekly runs for it to drain.
+#
+# `limit` controls how many guests to process THIS run — start small to
+# validate cost/behavior, then re-run with a larger limit (repeatedly, as
+# many times as needed) to work through the rest. Safe to re-run: each run
+# only picks up guests still missing a bio entirely, so it can't reprocess
+# (or re-charge for) anyone already done.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max guests to process this run"
+        required: false
+        default: "50"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Enrich bios for guests with none yet
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/ingest/enrich-bios.ts --limit ${{ github.event.inputs.limit }}
+
+      - name: Patch updated bios into guests.json
+        run: npx tsx scripts/ingest/patch-bios-into-guests.ts
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/guests.json
+          git add -f scripts/cache/bios.json
+          git diff --staged --quiet || git commit -m "chore: backfill full bios (limit ${{ github.event.inputs.limit }})"
+          git push
