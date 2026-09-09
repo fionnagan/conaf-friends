@@ -1,0 +1,86 @@
+name: Backfill Photos
+
+# One-off backfill: resolves a profile photo for guests with none yet
+# (570/3,260 currently have one — the pipeline exists but has never been
+# wired into any automated job, so coverage never grew past whatever was
+# run manually). Genuinely cheap to run at scale: only Wikipedia +
+# Wikimedia Commons requests, no paid API, no ANTHROPIC_API_KEY — the only
+# cost is compute time.
+#
+# Note on quality: this runner doesn't install the optional face_recognition/
+# deepface Python backend (dlib's build step is slow and fragile in CI), so
+# it runs in the pipeline's documented "no face backend" fallback — auto-
+# approves the best-scored candidate from a highly-trusted source (Wikipedia
+# scores 1.0, Wikimedia Commons 0.95, both above the 0.85 auto-approve bar)
+# without the identity-cluster cross-check. Since every candidate here
+# already comes from Wikipedia/Commons, this still auto-approves the large
+# majority of guests; add face_recognition to the pip install step later if
+# stricter face verification in CI turns out to matter.
+#
+# `limit` controls how many guests to process THIS run in total. Runs in
+# chunks of 100, committing + pushing after each — safe to set high, since a
+# failure mid-run only costs the in-flight chunk. Re-running only ever picks
+# up guests still missing a photo, so nothing gets reprocessed.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max guests to process this run (total, across all chunks)"
+        required: false
+        default: "200"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Python dependencies
+        run: pip install pillow numpy requests
+
+      - name: Backfill photos in chunks, committing progress after each
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          CHUNK=100
+          TOTAL="${{ github.event.inputs.limit }}"
+          DONE=0
+
+          while [ "$DONE" -lt "$TOTAL" ]; do
+            REMAINING=$((TOTAL - DONE))
+            THIS_CHUNK=$((REMAINING < CHUNK ? REMAINING : CHUNK))
+
+            echo "=== Chunk: $THIS_CHUNK guests (done so far: $DONE/$TOTAL) ==="
+            npx tsx scripts/ingest/photo-enrichment.ts --limit "$THIS_CHUNK"
+            npx tsx scripts/ingest/patch-photos-into-guests.ts
+
+            git add data/guests.json
+            git add -f scripts/cache/photos.json scripts/cache/review-queue.json scripts/cache/enrichment-log.json scripts/cache/source-trust.json
+            if git diff --staged --quiet; then
+              echo "No changes this chunk — backlog is exhausted, stopping early."
+              break
+            fi
+            git commit -m "chore: backfill photos (chunk of $THIS_CHUNK)"
+            git fetch origin main
+            git rebase origin/main
+            git push
+
+            DONE=$((DONE + THIS_CHUNK))
+          done
+
+          echo "=== Done: processed up to $DONE guest(s) this run ==="
