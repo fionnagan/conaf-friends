@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T08:50:01.592Z",
+  "generatedAt": "2026-09-09T08:55:14.703Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -235013,7 +235013,97 @@
       "id": "wink-martindale",
       "name": "Wink Martindale",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Wink_Martindale_1964.JPG/500px-Wink_Martindale_1964.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Wink Martindale",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Wink_Martindale",
+          "confidence": 1
+        },
+        "profession": [
+          "disc jockey",
+          "radio personality",
+          "game show host",
+          "television producer"
+        ],
+        "known_for": [
+          {
+            "title": "Gambit",
+            "type": "tv",
+            "year": "1972"
+          },
+          {
+            "title": "Tic-Tac-Dough",
+            "type": "tv",
+            "year": "1978"
+          },
+          {
+            "title": "High Rollers",
+            "type": "tv",
+            "year": "1987"
+          },
+          {
+            "title": "Debt",
+            "type": "tv",
+            "year": "1996"
+          },
+          {
+            "title": "Wink's Vault",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "Deck of Cards",
+            "type": "music",
+            "year": "1959"
+          },
+          {
+            "title": "Black Land Farmer",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "What's This Song?",
+            "type": "tv",
+            "year": "1964"
+          },
+          {
+            "title": "Words and Music",
+            "type": "tv",
+            "year": "1970"
+          },
+          {
+            "title": "Dance Party",
+            "type": "tv",
+            "year": "1955"
+          },
+          {
+            "title": "Mars Patrol",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Wink Martindale was an American disc jockey, radio personality, game show host, and television producer who became a pop culture icon over a career spanning decades. He is best remembered for hosting the game shows Gambit, Tic-Tac-Dough, High Rollers, and Debt, and earlier hosted What's This Song? and Words and Music on NBC. His spoken-word recording 'Deck of Cards' reached No. 7 on the Billboard Hot 100 in 1959. He was posthumously inducted into the Radio Hall of Fame in the Legends category. He likely crossed paths with Conan O'Brien during Late Night with Conan O'Brien in 1993, around the same time he was hosting a radio show in Los Angeles. He died in April 2025.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Wink_Martindale"
+        ],
+        "enrichedAt": "2026-09-09T08:50:18.184Z",
+        "birth_year": "1933",
+        "death_year": "2025",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Radio Hall of Fame inductee (Legends category)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235079,7 +235169,161 @@
       "id": "bobcat-goldthwait",
       "name": "Bobcat Goldthwait",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Bobcat_Goldthwait_%2855045080985%29.jpg/500px-Bobcat_Goldthwait_%2855045080985%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Bobcat Goldthwait",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Bobcat_Goldthwait",
+          "confidence": 1
+        },
+        "profession": [
+          "comedian",
+          "actor",
+          "director",
+          "screenwriter",
+          "voice actor"
+        ],
+        "known_for": [
+          {
+            "title": "An Evening with Bobcat Goldthwait—Share the Warmth",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Bob Goldthwait—Is He Like That All the Time?",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Police Academy",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Scrooged",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Wait Wait... Don't Tell Me!",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Shakes the Clown",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Sleeping Dogs Lie",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "World's Greatest Dad",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "God Bless America",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Willow Creek",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Chappelle's Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Jimmy Kimmel Live!",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Maron",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Patton Oswalt: Tragedy Plus Comedy Equals Time",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "Capitol Critters",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Hercules",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Hercules: The Animated Series",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Skylanders: Giants",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "One Crazy Summer",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Burglar",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Hot to Trot",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Radioland Murders",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Tapeheads",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "I Don't Mean to Insult You, But You Look Like Bobcat Goldthwait",
+            "type": "other",
+            "year": "2003"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Bobcat Goldthwait is an American comedian, actor, director, and screenwriter best known for his energetic black comedy stand-up persona and his acting roles as Zed in the Police Academy franchise and Eliot Loudermilk in Scrooged. As a director and writer, he crafted films including Shakes the Clown, World's Greatest Dad, God Bless America, and the horror film Willow Creek, as well as episodes of Chappelle's Show and Maron. He has been a regular panelist on Wait Wait... Don't Tell Me! since 2012 and provided voices for Hercules and the Skylanders video game series. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Bobcat_Goldthwait"
+        ],
+        "enrichedAt": "2026-09-09T08:50:21.260Z",
+        "birth_year": "1962",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235112,7 +235356,64 @@
       "id": "weekly-world-news",
       "name": "Weekly World News",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Weekly World News",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Weekly_World_News",
+          "confidence": 1
+        },
+        "profession": [
+          "tabloid newspaper",
+          "media brand",
+          "online publication"
+        ],
+        "known_for": [
+          {
+            "title": "Weekly World News (print edition)",
+            "type": "other",
+            "year": "1979"
+          },
+          {
+            "title": "Bat Boy",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Ed Anger column",
+            "type": "other",
+            "year": "1979"
+          },
+          {
+            "title": "Batboy Lives!",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Weekly World News Studios",
+            "type": "other",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Weekly World News is an American tabloid founded in 1979 by Generoso Pope Jr., originally published in black-and-white newspaper format and notorious for outlandish, often supernatural or satirical fictional news stories. At its peak in the 2000s, it reached a circulation of 1.2 million copies per issue. The publication is best known for recurring characters such as Bat Boy and the opinion column Ed Anger. It ceased print publication in August 2007 but relaunched as an online and social media outlet in 2009, and again in 2019. In 2021, Weekly World News Studios was formed to develop entertainment projects based on its characters and brand. The outlet likely crossed paths with Late Night with Conan O'Brien as early as 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Weekly_World_News"
+        ],
+        "enrichedAt": "2026-09-09T08:50:16.040Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235145,7 +235446,138 @@
       "id": "russ-meyer",
       "name": "Russ Meyer",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Russ Meyer",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Russ_Meyer",
+          "confidence": 1
+        },
+        "profession": [
+          "filmmaker",
+          "photographer"
+        ],
+        "known_for": [
+          {
+            "title": "Faster, Pussycat! Kill! Kill!",
+            "type": "film",
+            "year": "1965"
+          },
+          {
+            "title": "Vixen!",
+            "type": "film",
+            "year": "1968"
+          },
+          {
+            "title": "Beyond the Valley of the Dolls",
+            "type": "film",
+            "year": "1970"
+          },
+          {
+            "title": "Supervixens",
+            "type": "film",
+            "year": "1975"
+          },
+          {
+            "title": "Beneath the Valley of the Ultra-Vixens",
+            "type": "film",
+            "year": "1979"
+          },
+          {
+            "title": "The Immoral Mr. Teas",
+            "type": "film",
+            "year": "1959"
+          },
+          {
+            "title": "Lorna",
+            "type": "film",
+            "year": "1964"
+          },
+          {
+            "title": "Mudhoney",
+            "type": "film",
+            "year": "1965"
+          },
+          {
+            "title": "Motorpsycho",
+            "type": "film",
+            "year": "1965"
+          },
+          {
+            "title": "Mondo Topless",
+            "type": "film",
+            "year": "1966"
+          },
+          {
+            "title": "Common Law Cabin",
+            "type": "film",
+            "year": "1967"
+          },
+          {
+            "title": "Good Morning... and Goodbye!",
+            "type": "film",
+            "year": "1967"
+          },
+          {
+            "title": "Finders Keepers, Lovers Weepers!",
+            "type": "film",
+            "year": "1969"
+          },
+          {
+            "title": "Cherry, Harry & Raquel!",
+            "type": "film",
+            "year": "1970"
+          },
+          {
+            "title": "Eve and the Handyman",
+            "type": "film",
+            "year": "1960"
+          },
+          {
+            "title": "Fanny Hill",
+            "type": "film",
+            "year": "1964"
+          },
+          {
+            "title": "Europe in the Raw",
+            "type": "film",
+            "year": "1963"
+          },
+          {
+            "title": "Heavenly Bodies!",
+            "type": "film",
+            "year": "1963"
+          },
+          {
+            "title": "Erotica",
+            "type": "film",
+            "year": "1961"
+          },
+          {
+            "title": "Wild Gals of the Naked West",
+            "type": "film",
+            "year": "1962"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Russell Albion Meyer (1922–2004) was an American filmmaker and photographer best known for writing, directing, and self-distributing a series of sexploitation films combining campy humor, sly satire, and outsized cult appeal. A World War II combat cameraman turned Hollywood outsider, he built an independent empire on the success of The Immoral Mr. Teas before achieving wider recognition with Faster, Pussycat! Kill! Kill!, Vixen!, and Beyond the Valley of the Dolls, the last scripted by Roger Ebert for 20th Century Fox. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Russ_Meyer"
+        ],
+        "enrichedAt": "2026-09-09T08:50:18.900Z",
+        "birth_year": "1922",
+        "death_year": "2004",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235178,7 +235610,65 @@
       "id": "paula-newby-fraser",
       "name": "Paula Newby-Fraser",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Paula Newby-Fraser",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Paula_Newby-Fraser",
+          "confidence": 1
+        },
+        "profession": [
+          "Ironman triathlete",
+          "duathlete"
+        ],
+        "known_for": [
+          {
+            "title": "Ironman World Championship",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "PowerMan Zofingen",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "World Duathlon Championships",
+            "type": "other",
+            "year": "1990"
+          },
+          {
+            "title": "John Howard's Lessons In Cycling",
+            "type": "other",
+            "year": "1991"
+          },
+          {
+            "title": "Ridgecrest High Desert 50k",
+            "type": "other",
+            "year": "1997"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Paula Newby-Fraser, born in 1962 in what is now Zimbabwe and raised in South Africa, is a retired Ironman triathlete and duathlete widely regarded as one of the greatest endurance athletes of her era. She won the Ironman World Championship in Hawaii eight times between 1986 and 1996, earning the nickname 'The Queen of Kona,' and won 24 Ironman races overall across her career. She also competed in long-distance duathlons and, later, ultramarathons. The United States Sports Academy recognized her as one of the top five professional women athletes of a 25-year period. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Paula_Newby-Fraser"
+        ],
+        "enrichedAt": "2026-09-09T08:50:22.537Z",
+        "birth_year": "1962",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "",
+        "prestige_signals": [
+          "United States Sports Academy named her as one of the top five professional women athletes of the last 25 years (1972–1997)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235211,7 +235701,89 @@
       "id": "mr-fuji",
       "name": "Mr. Fuji",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Mr. Fuji",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Mr._Fuji",
+          "confidence": 1
+        },
+        "profession": [
+          "professional wrestler",
+          "actor",
+          "manager"
+        ],
+        "known_for": [
+          {
+            "title": "Mr. Fuji (ring name)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "WWWF World Tag Team Championship (with Professor Toru Tanaka)",
+            "type": "other",
+            "year": "1972"
+          },
+          {
+            "title": "WWWF World Tag Team Championship (second reign, with Tanaka)",
+            "type": "other",
+            "year": "1973"
+          },
+          {
+            "title": "WWWF World Tag Team Championship (third reign, with Tanaka)",
+            "type": "other",
+            "year": "1977"
+          },
+          {
+            "title": "WWF Tag Team Championship (with Mr. Saito)",
+            "type": "other",
+            "year": "1981"
+          },
+          {
+            "title": "NWA Georgia Tag Team Championship (with Tanaka)",
+            "type": "other",
+            "year": "1975"
+          },
+          {
+            "title": "NWA San Francisco United States Championship",
+            "type": "other",
+            "year": "1976"
+          },
+          {
+            "title": "Managing Don Muraco",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Managing Yokozuna",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Managing Demolition",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Harry Masayoshi Fujiwara, known professionally as Mr. Fuji, was an American professional wrestler, actor, and manager whose career spanned more than three decades. A five-time WWF or WWWF tag team champion, he is remembered for his villainous in-ring persona — most notably his habit of throwing salt in opponents' eyes — and for his later work as a manager guiding notable talents including Don Muraco, Yokozuna, and Demolition. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993, near the tail end of his active involvement in professional wrestling. Fujiwara passed away in August 2016.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mr._Fuji"
+        ],
+        "enrichedAt": "2026-09-09T08:50:29.065Z",
+        "birth_year": "1934",
+        "death_year": "2016",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235244,7 +235816,88 @@
       "id": "sid-caesar",
       "name": "Sid Caesar",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Sid Caesar",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Sid_Caesar",
+          "confidence": 1
+        },
+        "profession": [
+          "comic actor",
+          "comedian",
+          "saxophonist",
+          "author"
+        ],
+        "known_for": [
+          {
+            "title": "Your Show of Shows",
+            "type": "tv",
+            "year": "1950"
+          },
+          {
+            "title": "Caesar's Hour",
+            "type": "tv",
+            "year": "1954"
+          },
+          {
+            "title": "It's a Mad, Mad, Mad, Mad World",
+            "type": "film",
+            "year": "1963"
+          },
+          {
+            "title": "Silent Movie",
+            "type": "film",
+            "year": "1976"
+          },
+          {
+            "title": "Grease",
+            "type": "film",
+            "year": "1978"
+          },
+          {
+            "title": "History of the World, Part I",
+            "type": "film",
+            "year": "1981"
+          },
+          {
+            "title": "Grease 2",
+            "type": "film",
+            "year": "1982"
+          },
+          {
+            "title": "Cannonball Run II",
+            "type": "film",
+            "year": "1984"
+          },
+          {
+            "title": "Vegas Vacation",
+            "type": "film",
+            "year": "1997"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Sid Caesar was an American comic actor and comedian whose 60-year career made him one of the most influential figures in television history. He was best known for the pioneering live sketch series Your Show of Shows (1950–1954) and its successor Caesar's Hour (1954–1957), which drew 60 million weekly viewers and earned eleven Emmy nominations, including two wins. His writers' room launched the early careers of Mel Brooks, Neil Simon, Carl Reiner, and Woody Allen. He also appeared in films including Grease, It's a Mad, Mad, Mad, Mad World, and Vegas Vacation. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Sid_Caesar"
+        ],
+        "enrichedAt": "2026-09-09T08:50:29.715Z",
+        "birth_year": "1922",
+        "death_year": "2014",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Emmy nominee",
+          "Emmy winner"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235277,7 +235930,71 @@
       "id": "david-dinkins",
       "name": "David Dinkins",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "David Dinkins",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/David_Dinkins",
+          "confidence": 1
+        },
+        "profession": [
+          "politician",
+          "lawyer",
+          "author"
+        ],
+        "known_for": [
+          {
+            "title": "107th Mayor of New York City",
+            "type": "other",
+            "year": "1990"
+          },
+          {
+            "title": "Manhattan Borough President",
+            "type": "other",
+            "year": "1985"
+          },
+          {
+            "title": "New York State Assembly",
+            "type": "other",
+            "year": "1966"
+          },
+          {
+            "title": "Montford Point Marines",
+            "type": "other",
+            "year": "1945"
+          },
+          {
+            "title": "New York City Board of Elections President",
+            "type": "other",
+            "year": "1972"
+          },
+          {
+            "title": "Columbia University faculty",
+            "type": "other",
+            "year": "1993"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "David Norman Dinkins (1927–2020) was an American politician, lawyer, and author best known as the 107th Mayor of New York City, serving from 1990 to 1993 as the first African American to hold that office. A cum laude graduate of Howard University and Brooklyn Law School, he rose through Harlem's Democratic Party ranks, serving in the New York State Assembly and as Manhattan Borough President before winning the 1989 mayoral race. A recipient of the Congressional Gold Medal as one of the Montford Point Marines, Dinkins later joined the Columbia University faculty. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/David_Dinkins"
+        ],
+        "enrichedAt": "2026-09-09T08:51:09.149Z",
+        "birth_year": "1927",
+        "death_year": "2020",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Congressional Gold Medal"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235310,7 +236027,105 @@
       "id": "dustin-diamond",
       "name": "Dustin Diamond",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Dustin Diamond",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Dustin_Diamond",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "stand-up comedian",
+          "musician",
+          "author"
+        ],
+        "known_for": [
+          {
+            "title": "Good Morning, Miss Bliss",
+            "type": "tv",
+            "year": "1988"
+          },
+          {
+            "title": "Saved by the Bell",
+            "type": "tv",
+            "year": "1989"
+          },
+          {
+            "title": "Saved by the Bell: The College Years",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "Saved by the Bell: The New Class",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "Celebrity Fit Club",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Made",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Dickie Roberts: Former Child Star",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "American Pie Presents: The Book of Love",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Tetherball: The Movie",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Hamlet A.D.D.",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Behind the Bell",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Celebrity Big Brother",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Hulk Hogan's Celebrity Championship Wrestling",
+            "type": "tv",
+            "year": "2008"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Dustin Diamond (1977–2021) was an American actor, stand-up comedian, and musician best known for playing Samuel 'Screech' Powers across the Saved by the Bell franchise, from the original Good Morning, Miss Bliss (1988–89) through The College Years and The New Class, making him one of only two cast members to appear in all three series. After the franchise ended, he pursued stand-up comedy, released a memoir titled Behind the Bell, and appeared in films including Made and Dickie Roberts: Former Child Star, as well as reality television including Celebrity Fit Club. He likely crossed paths with Conan O'Brien during his first appearance on Late Night with Conan O'Brien in 1993. Diamond died in February 2021 following a diagnosis of small-cell carcinoma.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dustin_Diamond"
+        ],
+        "enrichedAt": "2026-09-09T08:51:11.591Z",
+        "birth_year": "1977",
+        "death_year": "2021",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235343,7 +236158,102 @@
       "id": "alan-dershowitz",
       "name": "Alan Dershowitz",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Alan Dershowitz",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Alan_Dershowitz",
+          "confidence": 1
+        },
+        "profession": [
+          "lawyer",
+          "law professor",
+          "author",
+          "political commentator",
+          "legal analyst",
+          "media contributor"
+        ],
+        "known_for": [
+          {
+            "title": "Reversal of Fortune: Inside the von Bülow Case",
+            "type": "other",
+            "year": "1985"
+          },
+          {
+            "title": "Reversal of Fortune (film basis)",
+            "type": "film",
+            "year": "1990"
+          },
+          {
+            "title": "Chutzpah",
+            "type": "other",
+            "year": "1991"
+          },
+          {
+            "title": "Reasonable Doubts: The Criminal Justice System and the O. J. Simpson Case",
+            "type": "other",
+            "year": "1996"
+          },
+          {
+            "title": "The Case for Israel",
+            "type": "other",
+            "year": "2003"
+          },
+          {
+            "title": "The Case for Peace",
+            "type": "other",
+            "year": "2005"
+          },
+          {
+            "title": "The Case Against Impeaching Trump",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "Guilt by Accusation: The Challenge of Proving Innocence in the Age of #MeToo",
+            "type": "other",
+            "year": "2019"
+          },
+          {
+            "title": "O. J. Simpson murder trial (appellate adviser)",
+            "type": "other",
+            "year": "1995"
+          },
+          {
+            "title": "Harvey Weinstein defense team",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "Donald Trump first impeachment defense team",
+            "type": "other",
+            "year": "2020"
+          },
+          {
+            "title": "Jeffrey Epstein defense team",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Alan Dershowitz is an American lawyer, law professor, author, and political commentator best known for his work in U.S. constitutional and criminal law. He taught at Harvard Law School from 1964 to 2013, holding the Felix Frankfurter Professorship, and has represented high-profile clients including O. J. Simpson, Mike Tyson, Harvey Weinstein, Jeffrey Epstein, and Donald Trump. His book Reversal of Fortune served as the basis for the 1990 film of the same name. A prolific author, his titles span legal commentary and Middle East politics. Dershowitz likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Alan_Dershowitz"
+        ],
+        "enrichedAt": "2026-09-09T08:51:12.213Z",
+        "birth_year": "1938",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235376,7 +236286,46 @@
       "id": "the-war-room",
       "name": "The War Room",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "The War Room",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/The_War_Room",
+          "confidence": 1
+        },
+        "profession": [
+          "documentary film"
+        ],
+        "known_for": [
+          {
+            "title": "The War Room",
+            "type": "film",
+            "year": "1993"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "The War Room is a 1993 American documentary film directed by Chris Hegedus and D. A. Pennebaker, chronicling Bill Clinton's successful 1992 presidential campaign through unprecedented access to strategists James Carville and George Stephanopoulos. Released December 5, 1993, the film earned a nomination for the Academy Award for Best Documentary Feature and won recognition from the National Board of Review. It holds a 96% rating on Rotten Tomatoes and has become a landmark study in campaign politics and media spin. The film likely crossed paths with Late Night with Conan O'Brien in 1993, the same year both arrived on the cultural scene.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/The_War_Room"
+        ],
+        "enrichedAt": "2026-09-09T08:51:06.932Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "American",
+        "prestige_signals": [
+          "Academy Award nominee for Best Documentary Feature",
+          "National Board of Review Special Recognition in Filmmaking",
+          "National Board of Review Award for Best Documentary"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235442,7 +236391,118 @@
       "id": "billy-west",
       "name": "Billy West",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Billy West",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Billy_West",
+          "confidence": 1
+        },
+        "profession": [
+          "voice actor",
+          "musician"
+        ],
+        "known_for": [
+          {
+            "title": "Space Jam",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Doug",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Ren & Stimpy Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Jungle Junction",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The 7D",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Futurama",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Howard Stern Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Beany and Cecil",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Project Geeker",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Invader Zim",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Rick & Steve: The Happiest Gay Couple in All the World",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Moobeard the Cow Pirate",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Looney Tunes Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Dilbert",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "The Weird Al Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "I Lost My M in Vegas",
+            "type": "film",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Billy West is an American voice actor and musician best known for an extensive roster of animated characters spanning decades of film and television. His credits include Bugs Bunny in Space Jam, the title roles in Doug and The Ren & Stimpy Show, and multiple major characters in Futurama, among them Philip J. Fry, Professor Farnsworth, and Dr. Zoidberg. He also voices the Red M&M in commercials and established characters such as Elmer Fudd, Popeye, and Shaggy Rogers. Before his voice acting career, West was a regular performer on The Howard Stern Show. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien as early as 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Billy_West"
+        ],
+        "enrichedAt": "2026-09-09T08:51:16.506Z",
+        "birth_year": "1952",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235475,7 +236535,120 @@
       "id": "bronson-pinchot",
       "name": "Bronson Pinchot",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Bronson Pinchot",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Bronson_Pinchot",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "audiobook narrator"
+        ],
+        "known_for": [
+          {
+            "title": "Perfect Strangers",
+            "type": "tv",
+            "year": "1986"
+          },
+          {
+            "title": "Beverly Hills Cop",
+            "type": "film",
+            "year": "1984"
+          },
+          {
+            "title": "Risky Business",
+            "type": "film",
+            "year": "1983"
+          },
+          {
+            "title": "The Flamingo Kid",
+            "type": "film",
+            "year": "1984"
+          },
+          {
+            "title": "After Hours",
+            "type": "film",
+            "year": "1985"
+          },
+          {
+            "title": "True Romance",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "The First Wives Club",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Sara",
+            "type": "tv",
+            "year": "1985"
+          },
+          {
+            "title": "Lois & Clark: The New Adventures of Superman",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "Ray Donovan",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Chilling Adventures of Sabrina",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Lodge 49",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "The Residence",
+            "type": "tv",
+            "year": "2025"
+          },
+          {
+            "title": "The Bronson Pinchot Project",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "The Hero's Guide to Being an Outlaw",
+            "type": "other",
+            "year": "2012"
+          }
+        ],
+        "recent_work": [
+          "The Residence (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Bronson Pinchot is an American actor and prolific audiobook narrator best known for playing Balki Bartokomous on the ABC sitcom Perfect Strangers and Serge across the Beverly Hills Cop film series. His screen credits span Risky Business, True Romance, The First Wives Club, and more recently The Residence. A Primetime Emmy nominee, Pinchot has also built a parallel career in audio performance, earning Audible's Narrator of the Year honor and six Audie Awards, with over 400 recordings to his name. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien, where he is believed to have first appeared in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Bronson_Pinchot"
+        ],
+        "enrichedAt": "2026-09-09T08:51:22.340Z",
+        "birth_year": "1959",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award nominee for Outstanding Lead Actor in a Comedy Series",
+          "AudioFile magazine Best Voice in Fiction & Classic (2010)",
+          "Audible Narrator of the Year (2010)",
+          "Audie Award winner (six awards, including Best Male Narrator)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235508,7 +236681,156 @@
       "id": "werner-klemperer",
       "name": "Werner Klemperer",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Werner Klemperer",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Werner_Klemperer",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Hogan's Heroes",
+            "type": "tv",
+            "year": "1965"
+          },
+          {
+            "title": "The Wrong Man",
+            "type": "film",
+            "year": "1956"
+          },
+          {
+            "title": "Judgment at Nuremberg",
+            "type": "film",
+            "year": "1961"
+          },
+          {
+            "title": "Houseboat",
+            "type": "film",
+            "year": "1958"
+          },
+          {
+            "title": "Alfred Hitchcock Presents",
+            "type": "tv",
+            "year": "1956"
+          },
+          {
+            "title": "Perry Mason",
+            "type": "tv",
+            "year": "1957"
+          },
+          {
+            "title": "Maverick",
+            "type": "tv",
+            "year": "1957"
+          },
+          {
+            "title": "Gunsmoke",
+            "type": "tv",
+            "year": "1958"
+          },
+          {
+            "title": "The Untouchables",
+            "type": "tv",
+            "year": "1960"
+          },
+          {
+            "title": "Have Gun – Will Travel",
+            "type": "tv",
+            "year": "1961"
+          },
+          {
+            "title": "Operation Eichmann",
+            "type": "film",
+            "year": "1961"
+          },
+          {
+            "title": "Death of a Scoundrel",
+            "type": "film",
+            "year": "1956"
+          },
+          {
+            "title": "Istanbul",
+            "type": "film",
+            "year": "1957"
+          },
+          {
+            "title": "One Step Beyond",
+            "type": "tv",
+            "year": "1959"
+          },
+          {
+            "title": "Ship of Fools",
+            "type": "film",
+            "year": "1965"
+          },
+          {
+            "title": "How to Marry a Millionaire",
+            "type": "tv",
+            "year": "1957"
+          },
+          {
+            "title": "Batman",
+            "type": "tv",
+            "year": "1966"
+          },
+          {
+            "title": "Lost in Space",
+            "type": "tv",
+            "year": "1966"
+          },
+          {
+            "title": "The Wicked Dreams of Paula Schultz",
+            "type": "film",
+            "year": "1968"
+          },
+          {
+            "title": "Wake Me When the War Is Over",
+            "type": "tv",
+            "year": "1969"
+          },
+          {
+            "title": "Voyage to the Bottom of the Sea",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Cabaret",
+            "type": "other",
+            "year": "1987"
+          },
+          {
+            "title": "The Night of the Tribades",
+            "type": "other",
+            "year": "1977"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Werner Klemperer (1920–2000) was an American actor best known for playing the bumbling Colonel Wilhelm Klink on the CBS sitcom Hogan's Heroes, a role he held from 1965 to 1971 and for which he won back-to-back Primetime Emmy Awards in 1968 and 1969. Before that defining role, he built a substantial film and television career with appearances in The Wrong Man, Judgment at Nuremberg, Perry Mason, Gunsmoke, and The Untouchables, among many others. He also earned a Tony nomination for the 1987 Broadway revival of Cabaret. Klemperer likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Werner_Klemperer"
+        ],
+        "enrichedAt": "2026-09-09T08:51:25.870Z",
+        "birth_year": "1920",
+        "death_year": "2000",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award winner for Outstanding Supporting Actor in a Comedy Series (1968)",
+          "Primetime Emmy Award winner for Outstanding Supporting Actor in a Comedy Series (1969)",
+          "Tony Award nominee for Best Featured Actor for Cabaret (1987)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235541,7 +236863,89 @@
       "id": "katie-couric",
       "name": "Katie Couric",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Katie Couric",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Katie_Couric",
+          "confidence": 1
+        },
+        "profession": [
+          "journalist",
+          "television presenter",
+          "podcast host",
+          "author"
+        ],
+        "known_for": [
+          {
+            "title": "Today",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "CBS Evening News",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "60 Minutes",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Katie",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Next Question with Katie Couric",
+            "type": "podcast",
+            "year": "2016"
+          },
+          {
+            "title": "Jeopardy!",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Now with Tom Brokaw and Katie Couric",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "The Best Advice I Ever Got: Lessons from Extraordinary Lives",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "Wake Up Call",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Katie Couric is an American journalist, television presenter, and podcast host who built one of the most prominent careers in broadcast news, serving as co-anchor of Today, anchor of the CBS Evening News — where she became the first solo female anchor of a major network evening newscast — and correspondent for 60 Minutes. She also hosted the syndicated talk show Katie and, in 2021, became the first woman to host the flagship American version of Jeopardy!. A Television Hall of Fame inductee, she now runs Katie Couric Media, publishes the daily newsletter Wake Up Call, and hosts the podcast Next Question with Katie Couric. She likely crossed paths with Conan O'Brien during his early Late Night years around 1993, when she was a rising correspondent at NBC News.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Katie_Couric"
+        ],
+        "enrichedAt": "2026-09-09T08:51:23.139Z",
+        "birth_year": "1957",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Television Hall of Fame inductee (2004)",
+          "Emmy winner",
+          "New York Times bestseller"
+        ],
+        "primary_platform": "podcast",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235607,7 +237011,70 @@
       "id": "chuck-sklar",
       "name": "Chuck Sklar",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Chuck Sklar",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Chuck_Sklar",
+          "confidence": 1
+        },
+        "profession": [
+          "comedian",
+          "film writer",
+          "television writer",
+          "television producer"
+        ],
+        "known_for": [
+          {
+            "title": "The Chris Rock Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Man Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Weekends at the D.L.",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Totally Biased with W. Kamau Bell",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Tomorrow Night",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Who's the Caboose?",
+            "type": "film",
+            "year": "1997"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Chuck Sklar is an American comedian, television writer, and producer whose comedy writing credits include The Chris Rock Show, The Man Show, and Weekends at the D.L. In 2012, he and Chris Rock produced the pilot that launched Totally Biased with W. Kamau Bell on FX. As an actor, Sklar played the lead role of Charles in Louis C.K.'s Tomorrow Night and appeared in the 1997 independent comedy Who's the Caboose? alongside Sarah Silverman. He likely crossed paths with Conan O'Brien during an early appearance on Late Night with Conan O'Brien around 1993, early in both of their careers.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chuck_Sklar"
+        ],
+        "enrichedAt": "2026-09-09T08:52:06.539Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235640,7 +237107,142 @@
       "id": "peter-riegert",
       "name": "Peter Riegert",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Peter Riegert",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Peter_Riegert",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "director",
+          "screenwriter"
+        ],
+        "known_for": [
+          {
+            "title": "Animal House",
+            "type": "film",
+            "year": "1978"
+          },
+          {
+            "title": "Local Hero",
+            "type": "film",
+            "year": "1983"
+          },
+          {
+            "title": "Crossing Delancey",
+            "type": "film",
+            "year": "1988"
+          },
+          {
+            "title": "The Mask",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "By Courier",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "The Sopranos",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "Barbarians at the Gate",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "Damages",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Dads",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Ellis Island",
+            "type": "tv",
+            "year": "1984"
+          },
+          {
+            "title": "Seinfeld",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Family Guy",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Law & Order: Special Victims Unit",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Good Wife",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Unbreakable Kimmy Schmidt",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Disjointed",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Succession",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "King of the Corner",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Traffic",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "We Bought a Zoo",
+            "type": "film",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Peter Riegert is an American actor, director, and screenwriter whose career spans film, television, and stage. He is best known for playing Donald 'Boon' Schoenstein in Animal House, oil executive 'Mac' MacIntyre in Local Hero, and Lt. Mitch Kellaway in The Mask. On television, he earned a Primetime Emmy nomination for Barbarians at the Gate and had notable recurring roles in The Sopranos, Damages, The Good Wife, Unbreakable Kimmy Schmidt, and Succession. He also directed and co-wrote the short film By Courier, which received an Academy Award nomination for Best Live Action Short Film. He likely crossed paths with Conan O'Brien during his first appearance on Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Peter_Riegert"
+        ],
+        "enrichedAt": "2026-09-09T08:52:12.616Z",
+        "birth_year": "1947",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Academy Award nominee (Best Live Action Short Film) for By Courier",
+          "Primetime Emmy Award nominee for Barbarians at the Gate"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235673,7 +237275,108 @@
       "id": "carol-alt",
       "name": "Carol Alt",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Carol Alt",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Carol_Alt",
+          "confidence": 1
+        },
+        "profession": [
+          "model",
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Harper's Bazaar cover",
+            "type": "other",
+            "year": "1979"
+          },
+          {
+            "title": "Sports Illustrated Swimsuit Issue",
+            "type": "other",
+            "year": "1982"
+          },
+          {
+            "title": "Thunder in Paradise",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "The Protector",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Amazon",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "Wings",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "King of the Hill",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Snakehead Terror",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Caterina e le sue figlie 2",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Piper",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "The Celebrity Apprentice",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Who Wants To Be A Millionaire",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "A Healthy You & Carol Alt",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Stealing Chanel",
+            "type": "tv",
+            "year": "2015"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Carol Alt is an American model and actress who rose to supermodel status during the 1980s, appearing on over 500 magazine covers including the 1982 Sports Illustrated Swimsuit Issue cover and the pages of Vogue, Elle, and Cosmopolitan. Her acting credits span film and television, including Thunder in Paradise, The Protector, and the Lifetime comedy Stealing Chanel. She hosted the Fox News wellness series A Healthy You & Carol Alt beginning in 2013 and competed on NBC's The Celebrity Apprentice in 2008. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Carol_Alt"
+        ],
+        "enrichedAt": "2026-09-09T08:52:11.665Z",
+        "birth_year": "1961",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235739,7 +237442,126 @@
       "id": "nicole-eggert",
       "name": "Nicole Eggert",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Nicole Eggert",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Nicole_Eggert",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "podcast host",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "Charles in Charge",
+            "type": "tv",
+            "year": "1987"
+          },
+          {
+            "title": "Baywatch",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "The Super Mario Bros. Super Show!",
+            "type": "tv",
+            "year": "1989"
+          },
+          {
+            "title": "Boy Meets World",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Who's the Boss?",
+            "type": "tv",
+            "year": "1985"
+          },
+          {
+            "title": "Danielle Steel's Secrets",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "Baywatch: Hawaiian Wedding",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Married... with Children",
+            "type": "tv",
+            "year": "1996"
+          },
+          {
+            "title": "The Real Gilligan's Island",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Celebrity Fit Club",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Splash",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Back in the Game",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Perfectly Twisted with Nicole Eggert",
+            "type": "podcast",
+            "year": ""
+          },
+          {
+            "title": "After Baywatch: Moment in the Sun",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "Rich and Famous",
+            "type": "film",
+            "year": "1980"
+          },
+          {
+            "title": "When She Was Bad...",
+            "type": "film",
+            "year": "1979"
+          },
+          {
+            "title": "Lemonade and Brownies",
+            "type": "music",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "After Baywatch: Moment in the Sun (2024, producer and cast member)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Nicole Eggert is an American actress best known for playing Jamie Powell on the sitcom Charles in Charge and Summer Quinn on the long-running syndicated series Baywatch. She has also appeared in Who's the Boss?, The Super Mario Bros. Super Show!, Boy Meets World, and Married... with Children, and competed on reality programs including Celebrity Fit Club and ABC's celebrity diving show Splash. More recently she served as a producer and cast member on the 2024 Hulu docuseries After Baywatch: Moment in the Sun. She additionally hosts the podcast Perfectly Twisted with Nicole Eggert. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nicole_Eggert"
+        ],
+        "enrichedAt": "2026-09-09T08:52:12.958Z",
+        "birth_year": "1972",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235772,7 +237594,71 @@
       "id": "john-starks",
       "name": "John Starks",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "John Starks",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/John_Starks",
+          "confidence": 1
+        },
+        "profession": [
+          "professional basketball player",
+          "shooting guard"
+        ],
+        "known_for": [
+          {
+            "title": "New York Knicks",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "1993 Eastern Conference Finals Dunk over Michael Jordan",
+            "type": "other",
+            "year": "1993"
+          },
+          {
+            "title": "1994 NBA Finals",
+            "type": "other",
+            "year": "1994"
+          },
+          {
+            "title": "NBA All-Star",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "NBA Sixth Man of the Year",
+            "type": "other",
+            "year": "1997"
+          },
+          {
+            "title": "1992 NBA Slam Dunk Contest",
+            "type": "other",
+            "year": "1992"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "John Starks is a former American professional basketball player who spent the bulk of his NBA career as a shooting guard for the New York Knicks from 1990 to 1998. Undrafted out of Oklahoma State University in 1988, he rose from fringe roster player to one of the league's most recognizable competitors, earning an NBA All-Star selection and the NBA Sixth Man of the Year award in 1997. He is best remembered for a celebrated dunk over Michael Jordan in the 1993 Eastern Conference Finals and a pivotal, difficult Game 7 in the 1994 NBA Finals. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1993, during the height of his Knicks fame.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/John_Starks"
+        ],
+        "enrichedAt": "2026-09-09T08:52:15.906Z",
+        "birth_year": "1965",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "NBA All-Star",
+          "NBA Sixth Man of the Year"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235805,7 +237691,104 @@
       "id": "russell-baker",
       "name": "Russell Baker",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Russell Baker",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Russell_Baker",
+          "confidence": 1
+        },
+        "profession": [
+          "journalist",
+          "columnist",
+          "author",
+          "television host",
+          "narrator"
+        ],
+        "known_for": [
+          {
+            "title": "Growing Up",
+            "type": "other",
+            "year": "1982"
+          },
+          {
+            "title": "Observer (New York Times column)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Masterpiece Theatre",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Good Times",
+            "type": "other",
+            "year": "1989"
+          },
+          {
+            "title": "An American in Washington",
+            "type": "other",
+            "year": "1961"
+          },
+          {
+            "title": "No Cause for Panic",
+            "type": "other",
+            "year": "1964"
+          },
+          {
+            "title": "Poor Russell's Almanac",
+            "type": "other",
+            "year": "1972"
+          },
+          {
+            "title": "The Norton Book of Light Verse",
+            "type": "other",
+            "year": "1986"
+          },
+          {
+            "title": "Russell Baker's Book of American Humor",
+            "type": "other",
+            "year": "1993"
+          },
+          {
+            "title": "Looking Back: Heroes, Rascals, and Other Icons of the American Imagination",
+            "type": "other",
+            "year": "2002"
+          },
+          {
+            "title": "Home Again, Home Again",
+            "type": "other",
+            "year": "1979"
+          },
+          {
+            "title": "The Way West",
+            "type": "tv",
+            "year": "1995"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Russell Baker was an American journalist, columnist, author, and television host best known for his Pulitzer Prize-winning autobiography Growing Up and his long-running satirical 'Observer' column in The New York Times. He hosted eleven seasons of PBS's Masterpiece Theatre and narrated the documentary The Way West. A two-time Pulitzer Prize recipient — for commentary and biography — Baker was a widely respected figure in American letters. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993, the same year he was hosting Masterpiece Theatre and elected a fellow of the American Academy of Arts and Sciences.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Russell_Baker"
+        ],
+        "enrichedAt": "2026-09-09T08:52:21.564Z",
+        "birth_year": "1925",
+        "death_year": "2019",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Pulitzer Prize winner",
+          "fellow of the American Academy of Arts and Sciences"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235838,7 +237821,152 @@
       "id": "brandon-tartikoff",
       "name": "Brandon Tartikoff",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Brandon_Tartikoff_at_the_1988_Emmy_Awards.jpg/500px-Brandon_Tartikoff_at_the_1988_Emmy_Awards.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Brandon Tartikoff",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Brandon_Tartikoff",
+          "confidence": 1
+        },
+        "profession": [
+          "television executive"
+        ],
+        "known_for": [
+          {
+            "title": "Hill Street Blues",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "L.A. Law",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Law & Order",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "ALF",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Family Ties",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Cosby Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Cheers",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Seinfeld",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Golden Girls",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Wings",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Miami Vice",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Knight Rider",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The A-Team",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Saved by the Bell",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Fresh Prince of Bel-Air",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "St. Elsewhere",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Night Court",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "V",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Punky Brewster",
+            "type": "tv",
+            "year": "1984"
+          },
+          {
+            "title": "Star Trek: Deep Space Nine",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Beggars and Choosers",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Wayne's World",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "All I Want for Christmas",
+            "type": "film",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Brandon Tartikoff was an American television executive best remembered as the head of NBC's entertainment division from 1981 to 1991, a tenure widely credited with rescuing the network from last place by shepherding some of the decade's most defining series, including The Cosby Show, Cheers, Seinfeld, Miami Vice, Family Ties, The Golden Girls, and Law & Order, among many others. He subsequently served as chairman of Paramount Pictures, where Wayne's World became a major hit. After leaving Paramount he founded Moving Target Productions. He likely crossed paths with Conan O'Brien during the early days of Late Night with Conan O'Brien around 1993. Tartikoff died in 1997 at the age of 48.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Brandon_Tartikoff"
+        ],
+        "enrichedAt": "2026-09-09T08:52:24.920Z",
+        "birth_year": "1949",
+        "death_year": "1997",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235871,7 +237999,96 @@
       "id": "micky-dolenz",
       "name": "Micky Dolenz",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Dolenz_2022.jpg/500px-Dolenz_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Micky Dolenz",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Micky_Dolenz",
+          "confidence": 1
+        },
+        "profession": [
+          "musician",
+          "singer",
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "The Monkees (band)",
+            "type": "music",
+            "year": "1966"
+          },
+          {
+            "title": "The Monkees",
+            "type": "tv",
+            "year": "1966"
+          },
+          {
+            "title": "Circus Boy",
+            "type": "tv",
+            "year": "1956"
+          },
+          {
+            "title": "Mr. Novak",
+            "type": "tv",
+            "year": "1964"
+          },
+          {
+            "title": "Headquarters",
+            "type": "music",
+            "year": "1967"
+          },
+          {
+            "title": "Pisces, Aquarius, Capricorn & Jones Ltd.",
+            "type": "music",
+            "year": "1967"
+          },
+          {
+            "title": "Last Train to Clarksville",
+            "type": "music",
+            "year": "1966"
+          },
+          {
+            "title": "Pleasant Valley Sunday",
+            "type": "music",
+            "year": "1967"
+          },
+          {
+            "title": "I'm a Believer",
+            "type": "music",
+            "year": "1966"
+          },
+          {
+            "title": "Randy Scouse Git",
+            "type": "music",
+            "year": "1967"
+          },
+          {
+            "title": "Daily Nightly",
+            "type": "music",
+            "year": "1967"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Micky Dolenz is an American musician, singer, and actor best known as one of the primary vocalists and the drummer of the Monkees, the pop rock group created for the Emmy-winning NBC sitcom of the same name. He sang lead on signature hits including 'Last Train to Clarksville,' 'I'm a Believer,' and 'Pleasant Valley Sunday,' and wrote 'Randy Scouse Git' for the album Headquarters. Now the last surviving member of the group following the deaths of Davy Jones, Peter Tork, and Michael Nesmith, Dolenz began his career as a child actor on Circus Boy in 1956. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Micky_Dolenz"
+        ],
+        "enrichedAt": "2026-09-09T08:52:23.201Z",
+        "birth_year": "1945",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Emmy-winning TV sitcom The Monkees"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235904,7 +238121,90 @@
       "id": "dave-marsh",
       "name": "Dave Marsh",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/American_music_writer_Dave_Marsh.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Dave Marsh",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Dave_Marsh",
+          "confidence": 1
+        },
+        "profession": [
+          "music critic",
+          "radio talk show host",
+          "author",
+          "editor"
+        ],
+        "known_for": [
+          {
+            "title": "Creem",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "The Heart of Rock and Soul: the 1001 Greatest Singles Ever Made",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Born to Run",
+            "type": "other",
+            "year": "1979"
+          },
+          {
+            "title": "Glory Days",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Rock and Roll Confidential",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Mid-Life Confidential",
+            "type": "other",
+            "year": "1994"
+          },
+          {
+            "title": "360 Sound: The Columbia Records Story—Legends and Legacy",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "Live from E Street Nation",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Kick Out the Jams",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Live from the Land of Hopes and Dreams",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Dave Marsh (1950–2026) was an American music critic, author, and radio talk show host who helped launch Creem magazine before becoming one of rock journalism's most influential and combative voices. He wrote extensively for Rolling Stone, Newsday, and The Village Voice, and published several books about Bruce Springsteen, including the bestselling biography Born to Run and Glory Days. His book The Heart of Rock and Soul ranked the 1001 greatest singles of all time. He hosted three Sirius XM shows and served as a Rock and Roll Hall of Fame committee member. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dave_Marsh"
+        ],
+        "enrichedAt": "2026-09-09T08:52:26.057Z",
+        "birth_year": "1950",
+        "death_year": "2026",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235937,7 +238237,100 @@
       "id": "casey-kasem",
       "name": "Casey Kasem",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Casey_Kasem.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Casey Kasem",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Casey_Kasem",
+          "confidence": 1
+        },
+        "profession": [
+          "disc jockey",
+          "actor",
+          "radio presenter",
+          "voice actor"
+        ],
+        "known_for": [
+          {
+            "title": "American Top 40",
+            "type": "other",
+            "year": "1970"
+          },
+          {
+            "title": "America's Top 10",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Scooby-Doo (Shaggy Rogers)",
+            "type": "tv",
+            "year": "1969"
+          },
+          {
+            "title": "Super Friends (Dick Grayson/Robin)",
+            "type": "tv",
+            "year": "1973"
+          },
+          {
+            "title": "Casey's Top 40",
+            "type": "other",
+            "year": "1989"
+          },
+          {
+            "title": "American Video Awards",
+            "type": "tv",
+            "year": "1983"
+          },
+          {
+            "title": "Sesame Street",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Transformers",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Shebang",
+            "type": "tv",
+            "year": "1964"
+          },
+          {
+            "title": "Hawaii Five-O",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Ironside",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Dating Game",
+            "type": "tv",
+            "year": "1967"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Casey Kasem was an American disc jockey, actor, and radio presenter best known for creating and hosting American Top 40, the syndicated radio countdown he launched in 1970 and helmed in various forms for decades. He was equally recognized as the original voice of Shaggy Rogers in the Scooby-Doo franchise and as Robin in Super Friends, and contributed voice work to Sesame Street and the Transformers animated series. He also founded and hosted the American Video Awards from 1983 to 1987. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993, near the height of his revival of American Top 40.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Casey_Kasem"
+        ],
+        "enrichedAt": "2026-09-09T08:53:11.812Z",
+        "birth_year": "1932",
+        "death_year": "2014",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -235970,7 +238363,83 @@
       "id": "grant-shaud",
       "name": "Grant Shaud",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Grant Shaud",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Grant_Shaud",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "voice actor"
+        ],
+        "known_for": [
+          {
+            "title": "Murphy Brown",
+            "type": "tv",
+            "year": "1988"
+          },
+          {
+            "title": "The Distinguished Gentleman",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Antz",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Wild Thornberrys",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Godzilla: The Series",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Batman: The Animated Series",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Kate & Allie",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Drew Carey Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Madigan Men",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Grant Shaud is an American actor best known for playing Miles Silverberg on the long-running television sitcom Murphy Brown, a role he held from 1988 to 1996 and reprised in the 2018 revival. He has also appeared on screen in The Distinguished Gentleman and voiced characters in animated series including Antz, Batman: The Animated Series, The Wild Thornberrys, and Godzilla: The Series. Additional television credits include The Drew Carey Show and Madigan Men. Shaud likely crossed paths with Conan O'Brien during his first appearance on Late Night with Conan O'Brien in 1993, around the height of his Murphy Brown prominence.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Grant_Shaud"
+        ],
+        "enrichedAt": "2026-09-09T08:53:14.254Z",
+        "birth_year": "1961",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236003,7 +238472,80 @@
       "id": "charlie-rose",
       "name": "Charlie Rose",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Charlie Rose",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Charlie_Rose",
+          "confidence": 1
+        },
+        "profession": [
+          "journalist",
+          "talk show host"
+        ],
+        "known_for": [
+          {
+            "title": "Charlie Rose",
+            "type": "tv",
+            "year": "1991"
+          },
+          {
+            "title": "CBS This Morning",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "CBS News Nightwatch",
+            "type": "tv",
+            "year": "1984"
+          },
+          {
+            "title": "Person to Person",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Breaking Bad",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "House of Cards",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Charlie Rose Conversations",
+            "type": "other",
+            "year": "2022"
+          },
+          {
+            "title": "60 Minutes II",
+            "type": "tv",
+            "year": "1999"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Charlie Rose is an American journalist and talk show host best known for hosting the long-running PBS and Bloomberg talk show Charlie Rose from 1991 to 2017, a program distinguished by its intellectual tone and access to presidents, filmmakers, scientists, and world leaders. He co-anchored CBS This Morning from 2012 to 2017 alongside Gayle King and Norah O'Donnell, and earlier anchored CBS News Nightwatch. He has made occasional television acting appearances, including on Breaking Bad and House of Cards. Since 2022 he has hosted Charlie Rose Conversations online. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Charlie_Rose"
+        ],
+        "enrichedAt": "2026-09-09T08:53:09.631Z",
+        "birth_year": "1942",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "News & Documentary Emmy Award winner"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236036,7 +238578,110 @@
       "id": "mary-beth-hurt",
       "name": "Mary Beth Hurt",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Mary Beth Hurt",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Mary_Beth_Hurt",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Interiors",
+            "type": "film",
+            "year": "1978"
+          },
+          {
+            "title": "Chilly Scenes of Winter",
+            "type": "film",
+            "year": "1979"
+          },
+          {
+            "title": "The World According to Garp",
+            "type": "film",
+            "year": "1982"
+          },
+          {
+            "title": "Light Sleeper",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "The Age of Innocence",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Six Degrees of Separation",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "From the Journals of Jean Seberg",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Affliction",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "The Dead Girl",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Trelawny of the Wells",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Crimes of the Heart",
+            "type": "other",
+            "year": "1981"
+          },
+          {
+            "title": "Benefactors",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Love for Love",
+            "type": "other",
+            "year": "1975"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Mary Beth Hurt was an American actress of stage and screen whose career spanned five decades. A three-time Tony Award nominee, she also earned an Obie Award, a Clarence Derwent Award, and nominations from BAFTA and the Independent Spirit Awards. She made her film debut in Woody Allen's Interiors (1978) and went on to appear in The World According to Garp (1982), The Age of Innocence (1993), Six Degrees of Separation (1993), and Affliction (1997), among others. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien in 1993. Hurt died in March 2026 at the age of 79.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mary_Beth_Hurt"
+        ],
+        "enrichedAt": "2026-09-09T08:53:10.420Z",
+        "birth_year": "1946",
+        "death_year": "2026",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "three-time Tony Award nominee",
+          "BAFTA Award nominee",
+          "Independent Spirit Award nominee",
+          "Obie Award recipient",
+          "Clarence Derwent Award recipient",
+          "BAFTA Award for Most Promising Newcomer to Leading Film Roles nominee",
+          "Drama Desk Award for Outstanding Actress in a Play nominee"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236069,7 +238714,104 @@
       "id": "robert-vaughn",
       "name": "Robert Vaughn",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Robert Vaughn",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Robert_Vaughn",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "political activist"
+        ],
+        "known_for": [
+          {
+            "title": "The Man from U.N.C.L.E.",
+            "type": "tv",
+            "year": "1964"
+          },
+          {
+            "title": "The Young Philadelphians",
+            "type": "film",
+            "year": "1959"
+          },
+          {
+            "title": "The Magnificent Seven",
+            "type": "film",
+            "year": "1960"
+          },
+          {
+            "title": "Bullitt",
+            "type": "film",
+            "year": "1968"
+          },
+          {
+            "title": "The Bridge at Remagen",
+            "type": "film",
+            "year": "1969"
+          },
+          {
+            "title": "Demon Seed",
+            "type": "film",
+            "year": "1977"
+          },
+          {
+            "title": "Superman III",
+            "type": "film",
+            "year": "1983"
+          },
+          {
+            "title": "The Protectors",
+            "type": "tv",
+            "year": "1972"
+          },
+          {
+            "title": "Centennial",
+            "type": "tv",
+            "year": "1978"
+          },
+          {
+            "title": "Washington: Behind Closed Doors",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Hustle",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Coronation Street",
+            "type": "tv",
+            "year": "2012"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Robert Vaughn was an American actor and political activist whose career in film, television, and theater spanned nearly six decades. He is best remembered as secret agent Napoleon Solo on The Man from U.N.C.L.E. and for notable film roles in The Magnificent Seven, Bullitt, and Superman III. A Primetime Emmy winner for Washington: Behind Closed Doors and an Oscar nominee for The Young Philadelphians, Vaughn also holds a star on the Hollywood Walk of Fame. Beyond acting, he earned a PhD in communications and was a vocal opponent of the Vietnam War. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Robert_Vaughn"
+        ],
+        "enrichedAt": "2026-09-09T08:53:21.172Z",
+        "birth_year": "1932",
+        "death_year": "2016",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award winner",
+          "Academy Award nominee",
+          "BAFTA Award nominee",
+          "Golden Globe Award nominee",
+          "Hollywood Walk of Fame star"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236135,7 +238877,57 @@
       "id": "geraldine-ferraro",
       "name": "Geraldine Ferraro",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Geraldine Ferraro",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Geraldine_Ferraro",
+          "confidence": 1
+        },
+        "profession": [
+          "politician",
+          "diplomat",
+          "attorney",
+          "journalist",
+          "author",
+          "businesswoman"
+        ],
+        "known_for": [
+          {
+            "title": "United States House of Representatives (New York's 9th congressional district)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "1984 Democratic vice-presidential nominee (Mondale–Ferraro ticket)",
+            "type": "other",
+            "year": "1984"
+          },
+          {
+            "title": "Ambassador to the United Nations Commission on Human Rights",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Geraldine Ferraro was an American politician, diplomat, attorney, journalist, and author best known as the first female vice-presidential nominee of a major American political party, running alongside Walter Mondale on the 1984 Democratic ticket. She previously served in the U.S. House of Representatives from 1979 to 1985, representing New York's 9th congressional district, and later served as Ambassador to the United Nations Commission on Human Rights under President Clinton from 1993 to 1996. She also played a role in Hillary Clinton's 2008 presidential campaign. Ferraro likely crossed paths with Conan O'Brien during his early tenure at Late Night, around 1994, when she remained a prominent public figure.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Geraldine_Ferraro"
+        ],
+        "enrichedAt": "2026-09-09T08:53:19.348Z",
+        "birth_year": "1935",
+        "death_year": "2011",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236168,7 +238960,199 @@
       "id": "peter-horton",
       "name": "Peter Horton",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Peter Horton",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Peter_Horton",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "director",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "Thirtysomething",
+            "type": "tv",
+            "year": "1987"
+          },
+          {
+            "title": "Seven Brides for Seven Brothers",
+            "type": "tv",
+            "year": "1982"
+          },
+          {
+            "title": "Split Image",
+            "type": "film",
+            "year": "1982"
+          },
+          {
+            "title": "Children of the Corn",
+            "type": "film",
+            "year": "1984"
+          },
+          {
+            "title": "Where the River Runs Black",
+            "type": "film",
+            "year": "1986"
+          },
+          {
+            "title": "Amazon Women on the Moon",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "One Too Many",
+            "type": "tv",
+            "year": "1985"
+          },
+          {
+            "title": "Sideout",
+            "type": "film",
+            "year": "1990"
+          },
+          {
+            "title": "Extreme Close-Up",
+            "type": "tv",
+            "year": "1990"
+          },
+          {
+            "title": "Singles",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Cure",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Two Days in the Valley",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Brimstone",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Into Thin Air: Death on Everest",
+            "type": "tv",
+            "year": "1997"
+          },
+          {
+            "title": "St. Elsewhere",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The White Shadow",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Dallas",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Eight Is Enough",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "In Treatment",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Geena Davis Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Who Killed the Electric Car?",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Shield",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Wonder Years",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Once and Again",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Grey's Anatomy",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Dirty Sexy Money",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Philanthropist",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Reconstruction",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Lone Star",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Six Degrees",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Murder Live",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "American Odyssey",
+            "type": "tv",
+            "year": "2015"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Peter Horton is an American actor, director, and producer best known for playing Professor Gary Shepherd on the long-running drama Thirtysomething from 1987 to 1991. His acting credits span television series including St. Elsewhere, Dallas, Brimstone, and In Treatment, as well as films such as Children of the Corn, Two Days in the Valley, and Singles. As a director, he helmed the pilots for Grey's Anatomy and Dirty Sexy Money, among others, and served as an executive producer on Grey's Anatomy. He co-created the 2015 series American Odyssey. Horton likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1994, during an active stretch of his on-screen career.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Peter_Horton"
+        ],
+        "enrichedAt": "2026-09-09T08:53:25.049Z",
+        "birth_year": "1953",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236234,7 +239218,81 @@
       "id": "jimmy-breslin",
       "name": "Jimmy Breslin",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jimmy Breslin",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jimmy_Breslin",
+          "confidence": 1
+        },
+        "profession": [
+          "journalist",
+          "author",
+          "columnist"
+        ],
+        "known_for": [
+          {
+            "title": "New York Daily News (column)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Newsday (column)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "New York Herald Tribune (column)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "It's an Honor (Grave Digger Story)",
+            "type": "other",
+            "year": "1963"
+          },
+          {
+            "title": "Jimmy Breslin's People",
+            "type": "tv",
+            "year": "1986"
+          },
+          {
+            "title": "Summer of Sam",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "If Ever I See You Again",
+            "type": "film",
+            "year": "1978"
+          },
+          {
+            "title": "New York magazine",
+            "type": "other",
+            "year": "1962"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Jimmy Breslin (1928–2017) was an American journalist, author, and newspaper columnist whose decades-long career spanned the New York Herald Tribune, Newsday, and the New York Daily News, where he chronicled working-class New Yorkers, organized crime, and urban power with a distinctive street-level voice. He won the 1986 Pulitzer Prize for Commentary and became a notable public figure during the Son of Sam case, when killer David Berkowitz addressed letters directly to him. Breslin also had a brief television presence with his ABC late-night show Jimmy Breslin's People and appeared in the film Summer of Sam. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jimmy_Breslin"
+        ],
+        "enrichedAt": "2026-09-09T08:53:24.206Z",
+        "birth_year": "1928",
+        "death_year": "2017",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "1986 Pulitzer Prize for Commentary"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236267,7 +239325,106 @@
       "id": "branford-marsalis",
       "name": "Branford Marsalis",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Branford Marsalis",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Branford_Marsalis",
+          "confidence": 1
+        },
+        "profession": [
+          "saxophonist",
+          "composer",
+          "bandleader"
+        ],
+        "known_for": [
+          {
+            "title": "Branford Marsalis Quartet",
+            "type": "music",
+            "year": "1986"
+          },
+          {
+            "title": "Buckshot LeFonque",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "The Tonight Show Band",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "Scenes in the City",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Royal Garden Blues",
+            "type": "music",
+            "year": "1986"
+          },
+          {
+            "title": "I Heard You Twice the First Time",
+            "type": "music",
+            "year": "1992"
+          },
+          {
+            "title": "School Daze",
+            "type": "film",
+            "year": "1988"
+          },
+          {
+            "title": "Do the Right Thing",
+            "type": "film",
+            "year": "1989"
+          },
+          {
+            "title": "Without a Net",
+            "type": "music",
+            "year": "1990"
+          },
+          {
+            "title": "Wake Up to Find Out",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "The Dream of the Blue Turtles",
+            "type": "music",
+            "year": "1985"
+          },
+          {
+            "title": "Stolen Moments: Red Hot + Cool",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "Buckshot LeFonque",
+            "type": "music",
+            "year": "1994"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Branford Marsalis is an American saxophonist, composer, and bandleader best known as the leader of the Branford Marsalis Quartet, which he formed in 1986 and which earned a Grammy for Best Instrumental Jazz Album for I Heard You Twice the First Time. He led The Tonight Show Band from 1992 to 1995 and has collaborated widely across genres, including with Sting on The Dream of the Blue Turtles and with the Grateful Dead. He also fronts the jazz-rock-hip-hop hybrid group Buckshot LeFonque. He likely crossed paths with Conan O'Brien during Late Night with Conan O'Brien around 1994, when his Tonight Show tenure and Buckshot LeFonque project were both underway.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Branford_Marsalis"
+        ],
+        "enrichedAt": "2026-09-09T08:54:11.136Z",
+        "birth_year": "1960",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Grammy Award for Best Instrumental Jazz Album, Individual or Group"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236300,7 +239457,69 @@
       "id": "lisa-mcree",
       "name": "Lisa McRee",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Lisa McRee",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Lisa_McRee",
+          "confidence": 1
+        },
+        "profession": [
+          "television journalist",
+          "news anchor"
+        ],
+        "known_for": [
+          {
+            "title": "World News Now",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "Good Morning America",
+            "type": "tv",
+            "year": "1997"
+          },
+          {
+            "title": "California Connected",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Good Day L.A.",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "LA TIMES TODAY",
+            "type": "tv",
+            "year": "2018"
+          }
+        ],
+        "recent_work": [
+          "LA TIMES TODAY"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Lisa McRee is an American television journalist and news anchor best known for co-anchoring Good Morning America from 1997 to 1999 and for her role as one of the original anchors of ABC News' World News Now in 1992. A multiple Emmy Award winner, she also received the 2007 Alfred I. duPont-Columbia Journalism Award for her work on California Connected and was named Television Journalist of the Year by the Los Angeles Press Club in 2021. She currently anchors LA TIMES TODAY on Spectrum News 1. McRee likely crossed paths with Conan O'Brien during her early broadcast career, with a first reported appearance on Late Night with Conan O'Brien in 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lisa_McRee"
+        ],
+        "enrichedAt": "2026-09-09T08:54:07.321Z",
+        "birth_year": "1961",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Emmy Award winner",
+          "2007 Alfred I. duPont-Columbia Journalism Award",
+          "2021 Los Angeles Press Club Television Journalist of the Year"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236333,7 +239552,126 @@
       "id": "tom-wopat",
       "name": "Tom Wopat",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Tom Wopat",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Tom_Wopat",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "singer"
+        ],
+        "known_for": [
+          {
+            "title": "The Dukes of Hazzard",
+            "type": "tv",
+            "year": "1979"
+          },
+          {
+            "title": "Cybill",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Django Unchained",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Longmire",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "I Love My Wife",
+            "type": "other",
+            "year": "1977"
+          },
+          {
+            "title": "City of Angels",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Guys and Dolls",
+            "type": "other",
+            "year": "1992"
+          },
+          {
+            "title": "Carousel",
+            "type": "other",
+            "year": "1981"
+          },
+          {
+            "title": "Annie Get Your Gun",
+            "type": "other",
+            "year": "1999"
+          },
+          {
+            "title": "Chicago",
+            "type": "other",
+            "year": "2004"
+          },
+          {
+            "title": "42nd Street",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Glengarry Glen Ross",
+            "type": "other",
+            "year": "2005"
+          },
+          {
+            "title": "The Music Man",
+            "type": "other",
+            "year": "2006"
+          },
+          {
+            "title": "A Catered Affair",
+            "type": "other",
+            "year": "2008"
+          },
+          {
+            "title": "Catch Me If You Can",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Sondheim on Sondheim",
+            "type": "other",
+            "year": "2010"
+          },
+          {
+            "title": "Dissertation on the State of Bliss",
+            "type": "music",
+            "year": "2005"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Tom Wopat is an American actor and singer best known for playing Lucas K. \"Luke\" Duke on the long-running television series The Dukes of Hazzard. Since that role, he has built a substantial stage career in Broadway musicals, including Annie Get Your Gun, Chicago, A Catered Affair, and Sondheim on Sondheim, earning two Tony Award nominations along the way. On screen, he had a recurring role on the 1990s comedy Cybill and appeared as a U.S. Marshal in Django Unchained. He has also recorded multiple albums of country music and pop standards. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Tom_Wopat"
+        ],
+        "enrichedAt": "2026-09-09T08:54:11.995Z",
+        "birth_year": "1951",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Tony Award nominee 1999",
+          "Tony Award nominee 2008"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236366,7 +239704,97 @@
       "id": "linda-ellerbee",
       "name": "Linda Ellerbee",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Linda Ellerbee",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Linda_Ellerbee",
+          "confidence": 1
+        },
+        "profession": [
+          "journalist",
+          "anchor",
+          "producer",
+          "reporter",
+          "author",
+          "speaker",
+          "commentator"
+        ],
+        "known_for": [
+          {
+            "title": "NBC News Overnight",
+            "type": "tv",
+            "year": "1982"
+          },
+          {
+            "title": "Nick News",
+            "type": "tv",
+            "year": "1987"
+          },
+          {
+            "title": "Weekend",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Summer Sunday USA",
+            "type": "tv",
+            "year": "1984"
+          },
+          {
+            "title": "Our World",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "When I Was a Girl",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "And So It Goes: Adventures in Television",
+            "type": "other",
+            "year": "1986"
+          },
+          {
+            "title": "Move On: Adventures in the Real World",
+            "type": "other",
+            "year": "1991"
+          },
+          {
+            "title": "Take Big Bites: Adventures Around the World and Across the Table",
+            "type": "other",
+            "year": "2005"
+          },
+          {
+            "title": "Murphy Brown",
+            "type": "tv",
+            "year": "1989"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Linda Ellerbee is an American journalist, anchor, producer, author, and commentator with 44 years in journalism before retiring in 2015. She is best known as Washington correspondent and anchor for NBC News and for hosting NBC News Overnight, which jurors of the duPont Columbia Awards called possibly the best written and most intelligent news program ever. She spent twenty-five years hosting Nick News on Nickelodeon, earning multiple Emmy and Peabody Awards, including a personal Peabody for her coverage of the Clinton investigation. She also co-anchored Our World on ABC, winning an Emmy for that work. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Linda_Ellerbee"
+        ],
+        "enrichedAt": "2026-09-09T08:54:11.991Z",
+        "birth_year": "1944",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Emmy Award winner",
+          "Peabody Award winner",
+          "duPont Columbia Award"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236399,7 +239827,72 @@
       "id": "gordie-howe",
       "name": "Gordie Howe",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Gordie Howe",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Gordie_Howe",
+          "confidence": 1
+        },
+        "profession": [
+          "professional ice hockey player"
+        ],
+        "known_for": [
+          {
+            "title": "Detroit Red Wings",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Houston Aeros (WHA)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "New England Whalers (WHA)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Hartford Whalers (NHL)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Detroit Vipers (IHL)",
+            "type": "other",
+            "year": "1997"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Gordie Howe, nicknamed 'Mr. Hockey,' was a Canadian professional ice hockey player widely regarded as one of the greatest to ever play the game. Over a career spanning 1946 to 1980, he played 25 seasons with the Detroit Red Wings, winning four Stanley Cups and six Hart Trophies as the league's most valuable player, before extending his career into the WHA with the Houston Aeros and New England Whalers. A six-time Art Ross Trophy winner and 23-time NHL All-Star, he was inducted into the Hockey Hall of Fame in 1972. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Gordie_Howe"
+        ],
+        "enrichedAt": "2026-09-09T08:54:17.505Z",
+        "birth_year": "1928",
+        "death_year": "2016",
+        "gender": "male",
+        "nationality": "Canadian",
+        "prestige_signals": [
+          "Art Ross Trophy winner (six times)",
+          "Stanley Cup winner (four times)",
+          "Hart Trophy winner (six times)",
+          "23-time NHL All-Star",
+          "Hockey Hall of Fame inductee",
+          "Saskatchewan Sports Hall of Fame inductee",
+          "Named one of the 100 Greatest NHL Players (2017)",
+          "NHL Lifetime Achievement Award inaugural recipient (2008)",
+          "WHA Most Valuable Player (1974)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236432,7 +239925,112 @@
       "id": "florence-henderson",
       "name": "Florence Henderson",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Florence Henderson",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Florence_Henderson",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "actress",
+          "television host"
+        ],
+        "known_for": [
+          {
+            "title": "The Brady Bunch",
+            "type": "tv",
+            "year": "1969"
+          },
+          {
+            "title": "Fanny",
+            "type": "other",
+            "year": "1954"
+          },
+          {
+            "title": "Wish You Were Here",
+            "type": "other",
+            "year": "1952"
+          },
+          {
+            "title": "The Girl Who Came to Supper",
+            "type": "other",
+            "year": "1963"
+          },
+          {
+            "title": "General Foods 25th Anniversary Show: A Salute to Rodgers and Hammerstein",
+            "type": "tv",
+            "year": "1954"
+          },
+          {
+            "title": "Little Women",
+            "type": "tv",
+            "year": "1958"
+          },
+          {
+            "title": "Hollywood Squares",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The $25,000 Pyramid",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Country Kitchen",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Love Boat",
+            "type": "tv",
+            "year": "1977"
+          },
+          {
+            "title": "Later Today",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "The Florence Henderson Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Who's Cooking with Florence Henderson",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Dancing with the Stars",
+            "type": "tv",
+            "year": "2010"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Florence Henderson (1934–2016) was an American singer, actress, and television host whose six-decade career moved from Broadway musicals — including originating the title role in the 1954 production of Fanny — to enduring television fame. She is best remembered as Carol Brady on ABC's The Brady Bunch (1969–1974), a role that earned her a place on TV Land and Entertainment Weekly's list of the 100 Greatest TV Icons. Henderson was also a fixture on game shows including Hollywood Squares and The $25,000 Pyramid, hosted cooking and talk programs including Country Kitchen and Later Today, and competed on Dancing with the Stars in 2010. She likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Florence_Henderson"
+        ],
+        "enrichedAt": "2026-09-09T08:54:21.754Z",
+        "birth_year": "1934",
+        "death_year": "2016",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Sarah Siddons Award winner (1962)",
+          "TV Land and Entertainment Weekly 100 Greatest TV Icons (#54)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236465,7 +240063,130 @@
       "id": "julie-hagerty",
       "name": "Julie Hagerty",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Julie Hagerty",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Julie_Hagerty",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Airplane!",
+            "type": "film",
+            "year": "1980"
+          },
+          {
+            "title": "Airplane II: The Sequel",
+            "type": "film",
+            "year": "1982"
+          },
+          {
+            "title": "A Midsummer Night's Sex Comedy",
+            "type": "film",
+            "year": "1982"
+          },
+          {
+            "title": "Lost in America",
+            "type": "film",
+            "year": "1985"
+          },
+          {
+            "title": "What About Bob?",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Princesses",
+            "type": "tv",
+            "year": "1991"
+          },
+          {
+            "title": "Malcolm in the Middle",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Family Guy",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "She's the Man",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "A Master Builder",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Trial & Error",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "Instant Family",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Black Monday",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Noelle",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Marriage Story",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "A Christmas Story Christmas",
+            "type": "film",
+            "year": "2022"
+          },
+          {
+            "title": "The Out-Laws",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Somebody I Used to Know",
+            "type": "film",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "The Out-Laws (2023)",
+          "Somebody I Used to Know (2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Julie Hagerty is an American actress best known for playing Elaine Dickinson in the comedy classics Airplane! (1980) and Airplane II: The Sequel (1982), roles that established her as a distinctive comedic presence. Her extensive film career includes A Midsummer Night's Sex Comedy, Lost in America, What About Bob?, Marriage Story, and A Christmas Story Christmas. On television she has contributed recurring work to Malcolm in the Middle, Family Guy, and Black Monday. Her two most recent features, The Out-Laws and Somebody I Used to Know, both released in 2023, underscore her continued visibility. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Julie_Hagerty"
+        ],
+        "enrichedAt": "2026-09-09T08:54:22.706Z",
+        "birth_year": "1955",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236498,7 +240219,154 @@
       "id": "david-johansen",
       "name": "David Johansen",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/The_New_York_Dolls_%285573237979%29.jpg/500px-The_New_York_Dolls_%285573237979%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "David Johansen",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/David_Johansen",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "songwriter",
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "New York Dolls",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "New York Dolls",
+            "type": "music",
+            "year": "1973"
+          },
+          {
+            "title": "Too Much Too Soon",
+            "type": "music",
+            "year": "1974"
+          },
+          {
+            "title": "Buster Poindexter",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Hot Hot Hot",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Buster's Happy Hour",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Buster Poindexter's Spanish Rocket Ship",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Scrooged",
+            "type": "film",
+            "year": "1988"
+          },
+          {
+            "title": "Let It Ride",
+            "type": "film",
+            "year": "1989"
+          },
+          {
+            "title": "Tales from the Darkside: The Movie",
+            "type": "film",
+            "year": "1990"
+          },
+          {
+            "title": "Freejack",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "Mr. Nanny",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Car 54, Where Are You?",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "Oz",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "The Adventures of Pete & Pete",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Jim Henson Hour",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Equalizer",
+            "type": "tv",
+            "year": "1987"
+          },
+          {
+            "title": "Miami Vice",
+            "type": "tv",
+            "year": "1985"
+          },
+          {
+            "title": "Searching for the Wrong Eyed Jesus",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "A Very Murray Christmas",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Teen Titans",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Up Your Legs Forever",
+            "type": "film",
+            "year": "1971"
+          },
+          {
+            "title": "Centaurworld",
+            "type": "tv",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "David Johansen (1950–2025) was an American singer, songwriter, and actor best known as the lead singer of the proto-punk band the New York Dolls, whose albums New York Dolls (1973) and Too Much Too Soon (1974) proved foundational to punk and alternative rock. He later found mainstream recognition under the pseudonym Buster Poindexter, scoring a ubiquitous hit with 'Hot Hot Hot,' and built a parallel acting career with roles in Scrooged (1988), Freejack (1992), Mr. Nanny (1993), and the HBO series Oz. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/David_Johansen"
+        ],
+        "enrichedAt": "2026-09-09T08:54:24.141Z",
+        "birth_year": "1950",
+        "death_year": "2025",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236531,7 +240399,80 @@
       "id": "robert-culp",
       "name": "Robert Culp",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Robert_Culp_1965.JPG/500px-Robert_Culp_1965.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Robert Culp",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Robert_Culp",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "screenwriter"
+        ],
+        "known_for": [
+          {
+            "title": "I Spy",
+            "type": "tv",
+            "year": "1965"
+          },
+          {
+            "title": "Trackdown",
+            "type": "tv",
+            "year": "1957"
+          },
+          {
+            "title": "The Greatest American Hero",
+            "type": "tv",
+            "year": "1981"
+          },
+          {
+            "title": "Everybody Loves Raymond",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Half-Life 2",
+            "type": "other",
+            "year": "2004"
+          },
+          {
+            "title": "The Outer Limits",
+            "type": "tv",
+            "year": "1963"
+          },
+          {
+            "title": "Columbo",
+            "type": "tv",
+            "year": "1971"
+          },
+          {
+            "title": "The Name of the Game",
+            "type": "tv",
+            "year": "1971"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Robert Culp (1930–2010) was an American actor and screenwriter whose career in television spanned more than five decades. He is best remembered for playing secret agent Kelly Robinson opposite Bill Cosby in the NBC espionage series I Spy (1965–1968), a role that earned him multiple Emmy nominations for both acting and writing. Earlier, he starred as Texas Ranger Hoby Gilman in 71 episodes of the CBS Western Trackdown, and he later found a new audience as FBI Agent Bill Maxwell on The Greatest American Hero and in a recurring role on Everybody Loves Raymond. He also contributed voice work to the video game Half-Life 2. Culp likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Robert_Culp"
+        ],
+        "enrichedAt": "2026-09-09T08:54:27.352Z",
+        "birth_year": "1930",
+        "death_year": "2010",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Emmy nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236564,7 +240505,150 @@
       "id": "martha-plimpton",
       "name": "Martha Plimpton",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Martha_Plimpton_at_Rose_City_Comic_Con_01.jpg/500px-Martha_Plimpton_at_Rose_City_Comic_Con_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Martha Plimpton",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Martha_Plimpton",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Rollover",
+            "type": "film",
+            "year": "1981"
+          },
+          {
+            "title": "The Goonies",
+            "type": "film",
+            "year": "1985"
+          },
+          {
+            "title": "The Mosquito Coast",
+            "type": "film",
+            "year": "1986"
+          },
+          {
+            "title": "Shy People",
+            "type": "film",
+            "year": "1987"
+          },
+          {
+            "title": "Running on Empty",
+            "type": "film",
+            "year": "1988"
+          },
+          {
+            "title": "Parenthood",
+            "type": "film",
+            "year": "1989"
+          },
+          {
+            "title": "Samantha",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Beautiful Girls",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Small Town Murder Songs",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Frozen 2",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Mass",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "The Good Wife",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Raising Hope",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Law & Order: Special Victims Unit",
+            "type": "tv",
+            "year": "2002"
+          },
+          {
+            "title": "The Real O'Neals",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Sixteen Wounded",
+            "type": "other",
+            "year": "2004"
+          },
+          {
+            "title": "The Coast of Utopia",
+            "type": "other",
+            "year": "2006"
+          },
+          {
+            "title": "Top Girls",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "Pal Joey",
+            "type": "other",
+            "year": "2008"
+          },
+          {
+            "title": "Shining City",
+            "type": "other",
+            "year": "2006"
+          },
+          {
+            "title": "Cymbeline",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "A Delicate Balance",
+            "type": "other",
+            "year": "2014"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Martha Plimpton is an American actress whose career spans film, television, and Broadway. She rose to prominence as a teenager in the adventure film The Goonies (1985) and followed with roles in Running on Empty (1988) and Parenthood (1989). On television, she earned a Primetime Emmy Award for her recurring role on The Good Wife and additional Emmy nominations for Raising Hope and Law & Order: Special Victims Unit. Her stage work earned three consecutive Tony Award nominations for The Coast of Utopia, Top Girls, and Pal Joey. She likely crossed paths with Conan O'Brien during what was reportedly a first appearance on Late Night with Conan O'Brien in 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Martha_Plimpton"
+        ],
+        "enrichedAt": "2026-09-09T08:54:35.433Z",
+        "birth_year": "1970",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award winner",
+          "Tony Award nominee (three nominations)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236597,7 +240681,150 @@
       "id": "gregory-harrison",
       "name": "Gregory Harrison",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Gregory_Harrison_Logan%27s_Run_1977_%28cropped%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Gregory Harrison",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Gregory_Harrison",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Trapper John, M.D.",
+            "type": "tv",
+            "year": "1979"
+          },
+          {
+            "title": "Falcon Crest",
+            "type": "tv",
+            "year": "1989"
+          },
+          {
+            "title": "Logan's Run",
+            "type": "tv",
+            "year": "1977"
+          },
+          {
+            "title": "Centennial",
+            "type": "tv",
+            "year": "1978"
+          },
+          {
+            "title": "For Ladies Only",
+            "type": "tv",
+            "year": "1981"
+          },
+          {
+            "title": "Fresno",
+            "type": "tv",
+            "year": "1986"
+          },
+          {
+            "title": "The Family Man",
+            "type": "tv",
+            "year": "1990"
+          },
+          {
+            "title": "Sisters",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "It's My Party",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Au Pair",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "Safe Harbor",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "One Tree Hill",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Ringer",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Rizzoli & Isles",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Chesapeake Shores",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Body of Proof",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Signed, Sealed and Delivered",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "General Hospital",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "9-1-1",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Chicago",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Follies",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Steel Pier",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "9-1-1",
+          "General Hospital"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Gregory Harrison is an American actor best known for playing Dr. George 'Gonzo' Gates on the long-running CBS medical drama Trapper John, M.D. and ruthless tycoon Michael Sharpe on Falcon Crest. His television career spans decades, including the title role in the sci-fi series Logan's Run, a starring turn in the NBC miniseries Centennial, and appearances in One Tree Hill, Rizzoli & Isles, and Chesapeake Shores. More recently, he played Gregory Chase on General Hospital from 2020 to 2024 and has held a recurring role on 9-1-1 since 2021. He has also appeared on Broadway in Chicago, Follies, and Steel Pier. Harrison likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Gregory_Harrison"
+        ],
+        "enrichedAt": "2026-09-09T08:55:12.256Z",
+        "birth_year": "1950",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236630,7 +240857,157 @@
       "id": "scott-baio",
       "name": "Scott Baio",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Scott_Baio_on_RealTVfilms.jpg/500px-Scott_Baio_on_RealTVfilms.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Scott Baio",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Scott_Baio",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "director",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "Happy Days",
+            "type": "tv",
+            "year": "1977"
+          },
+          {
+            "title": "Joanie Loves Chachi",
+            "type": "tv",
+            "year": "1982"
+          },
+          {
+            "title": "Charles in Charge",
+            "type": "tv",
+            "year": "1984"
+          },
+          {
+            "title": "Diagnosis: Murder",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "Bugsy Malone",
+            "type": "film",
+            "year": "1976"
+          },
+          {
+            "title": "Foxes",
+            "type": "film",
+            "year": "1980"
+          },
+          {
+            "title": "Zapped!",
+            "type": "film",
+            "year": "1982"
+          },
+          {
+            "title": "Gemini",
+            "type": "tv",
+            "year": "1982"
+          },
+          {
+            "title": "Alice in Wonderland",
+            "type": "tv",
+            "year": "1985"
+          },
+          {
+            "title": "Out of This World",
+            "type": "tv",
+            "year": "1987"
+          },
+          {
+            "title": "Baby Talk",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Perry Mason and the Case of the Fatal Fashion",
+            "type": "tv",
+            "year": "1991"
+          },
+          {
+            "title": "Very Mean Men",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Face to Face",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "The Bread, My Sweet",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Superbabies: Baby Geniuses 2",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Cursed",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Arrested Development",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Scott Baio Is 45...and Single",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Scott Baio Is 46...and Pregnant",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Confessions of a Teen Idol",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "See Dad Run",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Sam & Cat",
+            "type": "tv",
+            "year": "2014"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Scott Baio is an American actor best known for playing Chachi Arcola on the long-running sitcom Happy Days and its spin-off Joanie Loves Chachi, as well as the title role in Charles in Charge. His film debut came in the 1976 musical Bugsy Malone, and he later appeared in Foxes, Zapped!, and the Wes Craven film Cursed. On television, he portrayed Dr. Jack Stewart in Diagnosis: Murder and earned notice for a recurring guest role on Arrested Development. He also starred in the reality series Scott Baio Is 45...and Single and produced the Nickelodeon sitcom See Dad Run. He likely crossed paths with Conan O'Brien during a Late Night appearance around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Scott_Baio"
+        ],
+        "enrichedAt": "2026-09-09T08:55:13.564Z",
+        "birth_year": "1960",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Daytime Emmy Award nominee",
+          "Young Artist Award winner"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
