@@ -23,6 +23,10 @@ on:
         description: "Max guests to process this run (total, across all chunks)"
         required: false
         default: "50"
+      model:
+        description: "Claude model to use (leave blank for the pipeline's default, claude-sonnet-4-6). Set to e.g. claude-haiku-4-5-20251001 to A/B test a cheaper model on real guests before committing to it as the default."
+        required: false
+        default: ""
 
 # Only one Wikipedia-touching workflow runs at a time — a second trigger
 # queues behind whichever one is already running instead of both hitting
@@ -59,6 +63,7 @@ jobs:
 
           CHUNK=50
           TOTAL="${{ github.event.inputs.limit }}"
+          MODEL="${{ github.event.inputs.model }}"
           DONE=0
 
           while [ "$DONE" -lt "$TOTAL" ]; do
@@ -66,7 +71,12 @@ jobs:
             THIS_CHUNK=$((REMAINING < CHUNK ? REMAINING : CHUNK))
 
             echo "=== Chunk: $THIS_CHUNK guests (done so far: $DONE/$TOTAL) ==="
-            npx tsx scripts/ingest/enrich-bios.ts --limit "$THIS_CHUNK"
+            if [ -n "$MODEL" ]; then
+              echo "=== Using model override: $MODEL ==="
+              npx tsx scripts/ingest/enrich-bios.ts --limit "$THIS_CHUNK" --model "$MODEL"
+            else
+              npx tsx scripts/ingest/enrich-bios.ts --limit "$THIS_CHUNK"
+            fi
             npx tsx scripts/ingest/patch-bios-into-guests.ts
 
             git add data/guests.json
