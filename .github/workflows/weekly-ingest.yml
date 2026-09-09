@@ -145,12 +145,6 @@ jobs:
           PY
 
       - name: Commit updated data files
-        # Confirmed via a real race (backfill-booking-signals.yml, PR #31):
-        # a plain `git push` can lose this whole run's work if any other
-        # workflow — a one-off backfill, another PR — pushes to main first.
-        # Multiple one-off backfills now checkpoint-commit every 50 guests,
-        # so the window for this to happen has only gotten wider. Rebase
-        # before pushing, only when there's actually something staged.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -159,10 +153,4 @@ jobs:
           git add public/conan-wordcloud.png
           git add -f scripts/cache/youtube-matches.json scripts/cache/bios.json
           git add scripts/ingest/transcripts/ scripts/ingest/chunks.jsonl scripts/ingest/embedded-episodes.json
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: weekly episode ingest $(date -u '+%Y-%m-%d')"
-            git pull --rebase origin main
-            git push
-          fi
+          scripts/ci/commit-and-push.sh "chore: weekly episode ingest $(date -u '+%Y-%m-%d')"
