@@ -109,13 +109,31 @@ jobs:
             THIS_CHUNK=$((REMAINING < CHUNK ? REMAINING : CHUNK))
 
             echo "=== Chunk: $THIS_CHUNK guests (done so far: $DONE/$TOTAL) ==="
+            # enrich-bios.ts exits 2 (not 0) when its queue is empty — nothing
+            # left to enqueue, as opposed to 0 ("ran and did work") or a real
+            # failure. We must catch that ourselves: patch-bios-into-guests.ts
+            # unconditionally bumps data/guests.json's generatedAt on every
+            # call, so relying on the git-diff check below to detect "nothing
+            # happened" never worked — that field always differs, so the loop
+            # ran all the way to $TOTAL even once the backlog was genuinely
+            # exhausted. Skipping patch/emit/commit entirely on exit 2 is what
+            # actually stops it early, and avoids the pointless diff too.
+            ENRICH_EXIT=0
             if [ -n "$MODEL" ]; then
               echo "=== Using model override: $MODEL ==="
-              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK" --model "$MODEL"
+              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK" --model "$MODEL" || ENRICH_EXIT=$?
             else
-              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK"
+              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK" || ENRICH_EXIT=$?
             fi
             SKIP_SMOKE_TEST="1"
+
+            if [ "$ENRICH_EXIT" -eq 2 ]; then
+              echo "No guests left to enrich — backlog is exhausted, stopping early."
+              break
+            elif [ "$ENRICH_EXIT" -ne 0 ]; then
+              exit "$ENRICH_EXIT"
+            fi
+
             npx tsx scripts/ingest/patch-bios-into-guests.ts
 
             # Ask the Registry's Q&A endpoint (api/ask.py) reads
