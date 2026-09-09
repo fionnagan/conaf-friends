@@ -33,6 +33,11 @@ const WIKI_ONLY    = args.includes('--wiki-only');
 const RETRY_REVIEW = args.includes('--retry-review');
 const LIMIT        = (() => { const i = args.indexOf('--limit'); return i >= 0 ? parseInt(args[i + 1]) : MAX_PER_RUN; })();
 const ONLY         = (() => { const i = args.indexOf('--guest'); return i >= 0 ? args[i + 1] : null; })();
+// Lets a run be pointed at a cheaper model (e.g. a Haiku generation) for
+// direct quality comparison against known-good Sonnet output on the same
+// guests, without editing code — defaults to the model this pipeline has
+// been validated against.
+const MODEL        = (() => { const i = args.indexOf('--model'); return i >= 0 ? args[i + 1] : 'claude-sonnet-4-6'; })();
 
 // ── Env loading ───────────────────────────────────────────────────────────────
 
@@ -381,12 +386,13 @@ async function runClaudePipeline(
   client: any,
   guest: Guest,
   entity: WikiEntity,
-  conanConn: ConanConnection
+  conanConn: ConanConnection,
+  model: string
 ): Promise<GuestBio | null> {
   const today = new Date().toISOString().slice(0, 10);
 
   const msg = await client.messages.create({
-    model: 'claude-sonnet-4-6',
+    model,
     // known_for is uncapped ("ALL notable works") — a truly prolific guest's
     // list alone can approach 1000+ tokens, plus ~150-200 for the description
     // now folded into the same response. A response cut off mid-JSON fails
@@ -546,7 +552,7 @@ async function main() {
           max_tokens: 5,
           messages: [{ role: 'user', content: 'hi' }],
         });
-        console.log('[Bios] Claude available — using full pipeline\n');
+        console.log(`[Bios] Claude available — using full pipeline (model: ${MODEL})\n`);
       } catch (e: any) {
         const msg = e?.message || '';
         if (msg.includes('credit') || msg.includes('balance') || msg.includes('quota')) {
@@ -597,7 +603,6 @@ async function main() {
     try {
       // Entity resolution
       const entity = await resolveEntityWithRetry(guest.name);
-      await sleep(200);
 
       // --guest is single-name debugging/sampling mode — cheap to also show the
       // exact source text the extraction step worked from, since "why didn't
@@ -633,7 +638,7 @@ async function main() {
       let bio: GuestBio | null = null;
 
       if (claudeClient) {
-        bio = await runClaudePipeline(claudeClient, guest, entity, conanConn);
+        bio = await runClaudePipeline(claudeClient, guest, entity, conanConn, MODEL);
         if (!bio) {
           // Fallback to wiki-only if Claude fails
           bio = runWikiPipeline(guest, entity, conanConn);
@@ -662,12 +667,16 @@ async function main() {
       failed++;
     }
 
-    // Was 5000ms — fine for the weekly job's ~50 guests, but a flat 5s/guest
-    // dominates runtime at backlog scale (would add ~4.2 hours across 3,000
-    // guests on its own). 1s still spaces out both the Claude and Wikipedia
-    // calls between guests; real rate-limit backoff (wikiGet's own, honoring
-    // Wikipedia's Retry-After) still applies on top of this when needed.
-    await sleep(1000);
+    // Was 5000ms, then 1000ms — the 1000ms figure was sized for a 2-Claude-
+    // call-per-guest pipeline that no longer exists (now 1 call). Wikipedia's
+    // real rate-limit backoff (wikiGet's own, honoring the actual Retry-After
+    // header) is what actually protects against 429s, not this flat sleep —
+    // confirmed working on its own in an earlier validation run (six 429s
+    // correctly retried). 400ms is still a real, deliberate pause between
+    // guests, just no longer sized for calls that don't happen anymore.
+    // Saves ~35-40 minutes of pure dead time across the full ~2,900-guest
+    // backlog with no change to rate-limit safety.
+    await sleep(400);
   }
 
   fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));
