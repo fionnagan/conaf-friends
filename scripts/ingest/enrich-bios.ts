@@ -314,31 +314,12 @@ function buildConanConnection(guest: Guest): ConanConnection {
 
 // ── Claude pipeline ───────────────────────────────────────────────────────────
 
-async function runClaudePipeline(
-  client: any,
-  guest: Guest,
-  entity: WikiEntity,
-  conanConn: ConanConnection
-): Promise<GuestBio | null> {
-  const today = new Date().toISOString().slice(0, 10);
-
-  // Step 1: structured extraction
-  const extractMsg = await client.messages.create({
-    model: 'claude-sonnet-4-6',
-    // known_for is uncapped ("ALL notable works") — a truly prolific guest's
-    // list alone can approach 1000+ tokens. A response cut off mid-JSON
-    // fails JSON.parse below and silently falls back to the weaker wiki-only
-    // pipeline for exactly the well-established guests this was meant to
-    // help most. 2500 gives real headroom without inflating cost for a
-    // typical guest — max_tokens is a cap, Claude only generates what the
-    // response actually needs.
-    max_tokens: 2500,
-    system: `Extract structured biographical data from Wikipedia intro. Output valid JSON only. No markdown. Today: ${today}.`,
-    messages: [{
-      role: 'user',
-      content: `Guest: ${guest.name}
-Wikipedia intro:
-${entity.intro}
+// Static across every guest in every run — marked with cache_control so
+// Anthropic serves it from cache (~90% cheaper than a fresh input token)
+// on every call after the first within the cache TTL. Previously this same
+// rules text (plus a near-duplicate synthesis-only system prompt) was paid
+// for in full, twice, per guest, across two separate Sonnet calls.
+const EXTRACTION_SYSTEM_PROMPT = `Extract structured biographical data from a Wikipedia intro AND write a tight editorial bio paragraph from that same data, in one JSON response. Output valid JSON only. No markdown.
 
 Return JSON:
 {
@@ -352,7 +333,8 @@ Return JSON:
   "nationality": "",
   "prestige_signals": [],
   "primary_platform": "film|tv|music|streaming|podcast|sports|other",
-  "conan_mentions": []
+  "conan_mentions": [],
+  "description": ""
 }
 Rules:
 - known_for: ALL notable works named in the intro, across ANY medium (film, TV,
@@ -360,7 +342,8 @@ Rules:
   worked on the same project or in the same band, so don't limit to acting
   credits alone. No fixed cap — a well-established guest may have a dozen or
   more; list every one actually named in the text, never invent or pad the list
-- recent_work: year >= ${RECENT_WORK_CUTOFF_YEAR} only, empty array if none
+- recent_work: year >= RECENT_WORK_CUTOFF_YEAR (given per-request below) only,
+  empty array if none
 - upcoming_work: work explicitly described as upcoming/announced/forthcoming in
   the intro (e.g. "is set to star in", "an upcoming album"), with a year if one
   is stated; empty array if the intro doesn't mention anything upcoming — this
@@ -383,13 +366,51 @@ Rules:
   Night with Conan O'Brien, The Tonight Show with Conan O'Brien, Conan, Conan
   O'Brien Needs a Friend, Conan O'Brien Must Go) — quote the text exactly,
   don't paraphrase; empty array if the text never mentions him by name, even
-  if the guest is known to have appeared on his shows`,
+  if the guest is known to have appeared on his shows
+- description: 80–120 words, one paragraph, neutral editorial tone, no hype.
+  Built ONLY from the profession/known_for/recent_work facts you just
+  extracted above plus the given Conan connection — no new claims, nothing
+  not grounded in those fields. For how to handle the Conan connection: if
+  conan_mentions is non-empty, state that connection directly and naturally
+  (you may paraphrase the mention, but don't invent detail beyond it); if
+  conan_mentions is empty, use the given Conan connection below, and if its
+  type is "inferred", use tentative language ("likely crossed paths with...",
+  not a flat assertion)`;
+
+async function runClaudePipeline(
+  client: any,
+  guest: Guest,
+  entity: WikiEntity,
+  conanConn: ConanConnection
+): Promise<GuestBio | null> {
+  const today = new Date().toISOString().slice(0, 10);
+
+  const msg = await client.messages.create({
+    model: 'claude-sonnet-4-6',
+    // known_for is uncapped ("ALL notable works") — a truly prolific guest's
+    // list alone can approach 1000+ tokens, plus ~150-200 for the description
+    // now folded into the same response. A response cut off mid-JSON fails
+    // JSON.parse below and silently falls back to the weaker wiki-only
+    // pipeline for exactly the well-established guests this was meant to
+    // help most. 2800 gives real headroom without inflating cost for a
+    // typical guest — max_tokens is a cap, Claude only generates what the
+    // response actually needs.
+    max_tokens: 2800,
+    system: [{ type: 'text', text: EXTRACTION_SYSTEM_PROMPT, cache_control: { type: 'ephemeral' } }],
+    messages: [{
+      role: 'user',
+      content: `Today: ${today}
+RECENT_WORK_CUTOFF_YEAR: ${RECENT_WORK_CUTOFF_YEAR}
+Guest: ${guest.name}
+Given Conan connection (${conanConn.type}): ${conanConn.evidence}
+Wikipedia intro:
+${entity.intro}`,
     }],
   });
 
   let structured: any;
   try {
-    structured = JSON.parse(extractMsg.content[0].text.trim());
+    structured = JSON.parse(msg.content[0].text.trim());
   } catch { return null; }
 
   // Wikipedia's own text explicitly naming Conan/Team Coco/a named show is
@@ -402,30 +423,7 @@ Rules:
     ? { type: 'direct', evidence: `Wikipedia: "${conanMentions[0]}"` }
     : conanConn;
 
-  await sleep(200);
-
-  // Step 2: description synthesis
-  const knownList  = (structured.known_for || []).map((w: any) => `${w.title} (${w.type}, ${w.year})`).join(', ');
-  const recentList = (structured.recent_work || []).map((w: any) => `${w.title} (${w.year})`).join(', ');
-  const softener   = effectiveConanConn.type === 'inferred' ? ' Use tentative language for the Conan connection.' : '';
-
-  const synthMsg = await client.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 300,
-    system: `Write tight editorial bios. Neutral, no hype. 80–120 words. One paragraph. ONLY use provided facts. No new claims.${softener}`,
-    messages: [{
-      role: 'user',
-      content: `Bio for ${guest.name}.
-- Profession: ${(structured.profession || []).join(', ') || 'entertainer'}
-- Known for: ${knownList || 'see intro'}
-- Recent work: ${recentList || 'none confirmed'}
-- Conan connection (${effectiveConanConn.type}): ${effectiveConanConn.evidence}
-
-Paragraph only:`,
-    }],
-  });
-
-  const description = synthMsg.content[0].text.trim();
+  const description = (structured.description || '').trim();
   const wordCount = description.split(/\s+/).length;
   if (wordCount < 60 || wordCount > 150) return null;
 
