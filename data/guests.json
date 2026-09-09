@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T11:35:19.454Z",
+  "generatedAt": "2026-09-09T11:36:23.758Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -431098,7 +431098,122 @@
       "id": "rachel-brosnahan",
       "name": "Rachel Brosnahan",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Rachel_Brosnahan_Manilla_2025.jpg/500px-Rachel_Brosnahan_Manilla_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Rachel Brosnahan",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Rachel_Brosnahan",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "The Marvelous Mrs. Maisel",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "House of Cards",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Manhattan",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Crisis in Six Scenes",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "The Unborn",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "The Courier",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "I'm Your Woman",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "Dead for a Dollar",
+            "type": "film",
+            "year": "2022"
+          },
+          {
+            "title": "Superman",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "The Amateur",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "The Big Knife",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "Othello",
+            "type": "other",
+            "year": "2016"
+          },
+          {
+            "title": "The Sign in Sidney Brustein's Window",
+            "type": "other",
+            "year": "2023"
+          },
+          {
+            "title": "The Blacklist",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Black Box",
+            "type": "tv",
+            "year": "2014"
+          }
+        ],
+        "recent_work": [
+          "The Sign in Sidney Brustein's Window (Broadway revival, 2023)",
+          "Superman (2025)",
+          "The Amateur (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2021."
+        },
+        "description": "Rachel Brosnahan is an American actress best known for playing Midge Maisel in Amazon Prime Video's period comedy series The Marvelous Mrs. Maisel, a role that earned her a Primetime Emmy Award and two consecutive Golden Globe Awards. She first gained wider attention as Rachel Posner in House of Cards and has since built a diverse screen and stage career spanning films such as The Courier, I'm Your Woman, and the 2025 DC Universe film Superman, in which she portrays Lois Lane. On Broadway, she earned a Drama League nomination for the 2023 revival of The Sign in Sidney Brustein's Window. She likely crossed paths with Conan O'Brien around 2021, during the height of her Maisel years.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Rachel_Brosnahan"
+        ],
+        "enrichedAt": "2026-09-09T11:35:37.763Z",
+        "birth_year": "1990",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award winner (2018)",
+          "Primetime Emmy Award nominee (House of Cards)",
+          "Golden Globe Award winner (2018)",
+          "Golden Globe Award winner (2019)",
+          "Drama League Distinguished Performance Award nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431131,7 +431246,69 @@
       "id": "george-wallace",
       "name": "George Wallace",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/George_Wallace_%28D-AL%29_%28cropped%29.jpg/500px-George_Wallace_%28D-AL%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "George Wallace",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/George_Wallace",
+          "confidence": 1
+        },
+        "profession": [
+          "politician",
+          "lawyer",
+          "governor"
+        ],
+        "known_for": [
+          {
+            "title": "45th Governor of Alabama",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "1968 presidential election (American Independent Party candidate)",
+            "type": "other",
+            "year": "1968"
+          },
+          {
+            "title": "1964 Democratic presidential primaries",
+            "type": "other",
+            "year": "1964"
+          },
+          {
+            "title": "1972 Democratic presidential primaries",
+            "type": "other",
+            "year": "1972"
+          },
+          {
+            "title": "1976 Democratic presidential primaries",
+            "type": "other",
+            "year": "1976"
+          },
+          {
+            "title": "Stand in the Schoolhouse Door (University of Alabama)",
+            "type": "other",
+            "year": "1963"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2021."
+        },
+        "description": "George Corley Wallace Jr. (1919–1998) was an American politician and lawyer who served as the 45th Governor of Alabama across four terms, making him the longest-serving governor in that state's history and the longest-serving Democratic governor in the nation. He ran unsuccessfully for president four times, most notably as the American Independent Party candidate in 1968, when he carried five Southern states and secured Electoral College votes as a third-party candidate. He is widely remembered for his staunch segregationist positions during the Civil Rights era, though he later renounced those views. Given the inferred timeline, Wallace likely crossed paths with Conan O'Brien's orbit in some capacity around 2021.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/George_Wallace"
+        ],
+        "enrichedAt": "2026-09-09T11:35:43.091Z",
+        "birth_year": "1919",
+        "death_year": "1998",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431164,7 +431341,130 @@
       "id": "phoebe-dynevor",
       "name": "Phoebe Dynevor",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Phoebe_Dynevor_Interview_2023_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Phoebe Dynevor",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Phoebe_Dynevor",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Bridgerton",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "The Colour Room",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "Fair Play",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Inheritance",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "Waterloo Road",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Prisoners' Wives",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Dickensian",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Younger",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "Snatch",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "Ten Percent",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "Bank of Dave",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Anniversary",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "Thrash",
+            "type": "film",
+            "year": "2026"
+          },
+          {
+            "title": "The Housekeeper",
+            "type": "film",
+            "year": "2024"
+          }
+        ],
+        "recent_work": [
+          "Fair Play (2023)",
+          "Bank of Dave (2023)",
+          "Inheritance (2025)",
+          "Anniversary (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2021."
+        },
+        "description": "Phoebe Dynevor is an English actress who rose to prominence playing Daphne Bridgerton in the first two seasons of Netflix's period drama Bridgerton. She made her feature film debut in the 2021 biographical film The Colour Room and followed that with the critically acclaimed thriller Fair Play, which premiered at the Sundance Film Festival in 2023. She earned a BAFTA Rising Star Award nomination in 2024 and has since appeared in Inheritance and The Housekeeper, with several further projects in development. She likely crossed paths with Conan O'Brien around 2021, coinciding with her breakout as one of television's most talked-about new stars.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Phoebe_Dynevor"
+        ],
+        "enrichedAt": "2026-09-09T11:35:40.386Z",
+        "birth_year": "1995",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "English",
+        "prestige_signals": [
+          "BAFTA Rising Star Award nomination (2024)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": [
+          {
+            "title": "I Heart Murder",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Wichita Libra",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Outlaws Scarlett and Browne",
+            "type": "film",
+            "year": ""
+          }
+        ]
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431197,7 +431497,66 @@
       "id": "fortune-feimster",
       "name": "Fortune Feimster",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Fortune_Feimster_2016.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Fortune Feimster",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Fortune_Feimster",
+          "confidence": 1
+        },
+        "profession": [
+          "writer",
+          "comedian",
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Last Comic Standing",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "The Mindy Project",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "What a Joke with Papa and Fortune",
+            "type": "other",
+            "year": "2019"
+          },
+          {
+            "title": "The L Word: Generation Q",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Zootopia 2",
+            "type": "film",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "Zootopia 2"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2021."
+        },
+        "description": "Fortune Feimster is an American comedian, actress, and writer who made her television debut on NBC's Last Comic Standing in 2010. She went on to star as Colette on The Mindy Project and play Heather in The L Word: Generation Q. Since 2019, she has co-hosted the SiriusXM radio show What a Joke with Papa and Fortune alongside Tom Papa. Her recent work includes a supporting voice role in the 2025 animated film Zootopia 2. Feimster likely first crossed paths with Conan O'Brien on his show in 2021, reflecting her steady rise as a stand-up and character performer in Hollywood.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fortune_Feimster"
+        ],
+        "enrichedAt": "2026-09-09T11:35:35.714Z",
+        "birth_year": "1980",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431230,7 +431589,93 @@
       "id": "baratunde-thurston",
       "name": "Baratunde Thurston",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Baratunde_R._Thurston_%282%29.jpg/500px-Baratunde_R._Thurston_%282%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Baratunde Thurston",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Baratunde_Thurston",
+          "confidence": 1
+        },
+        "profession": [
+          "writer",
+          "comedian",
+          "commentator"
+        ],
+        "known_for": [
+          {
+            "title": "Jack and Jill Politics",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "How to Be Black",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "This Week in Tech",
+            "type": "podcast",
+            "year": ""
+          },
+          {
+            "title": "Popular Science's Future of...",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "The Daily Show with Trevor Noah",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "We're Having A Moment",
+            "type": "podcast",
+            "year": "2020"
+          },
+          {
+            "title": "America Outdoors",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "Better than Crying",
+            "type": "other",
+            "year": "2004"
+          },
+          {
+            "title": "Keep Jerry Falwell Away from My Oreo Cookies",
+            "type": "other",
+            "year": "2005"
+          },
+          {
+            "title": "Thank You Congressional Pages (For Being So Damn Sexy!)",
+            "type": "other",
+            "year": "2006"
+          }
+        ],
+        "recent_work": [
+          "America Outdoors (PBS, 2022)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2021."
+        },
+        "description": "Baratunde Thurston is an American writer, comedian, and commentator best known for his 2012 New York Times bestseller How to Be Black, a blend of satirical self-help and personal memoir. He co-founded the Black political blog Jack and Jill Politics and served as Director of Digital at The Onion before joining The Daily Show with Trevor Noah as supervising producer in 2015. He has appeared as a semi-regular panelist on the podcast This Week in Tech and launched his own podcast, We're Having A Moment, in 2020. Most recently, he hosted the PBS travelogue series America Outdoors. He likely crossed paths with Conan O'Brien around 2021.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Baratunde_Thurston"
+        ],
+        "enrichedAt": "2026-09-09T11:36:07.330Z",
+        "birth_year": "1977",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "New York Times bestseller"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431263,7 +431708,119 @@
       "id": "gal-gadot",
       "name": "Gal Gadot",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Gal_Gadot_by_Gage_Skidmore_3.jpg/500px-Gal_Gadot_by_Gage_Skidmore_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Gal Gadot",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Gal_Gadot",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "film producer",
+          "model"
+        ],
+        "known_for": [
+          {
+            "title": "DC Extended Universe (Wonder Woman)",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Bubot",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Fast & Furious",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Asfur",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Kathmandu",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Batman v Superman: Dawn of Justice",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Wonder Woman",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Justice League",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Wonder Woman 1984",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "Red Notice",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "Death on the Nile",
+            "type": "film",
+            "year": "2022"
+          },
+          {
+            "title": "Heart of Stone",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Snow White",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "In the Hand of Dante",
+            "type": "film",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "Heart of Stone (2023)",
+          "Snow White (2025)",
+          "In the Hand of Dante (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2021."
+        },
+        "description": "Gal Gadot is an Israeli actress and producer best known for portraying Wonder Woman across the DC Extended Universe films from 2016 to 2023, a role that made her one of the most recognizable figures in Hollywood. She first broke through internationally as Gisele Yashar in the Fast & Furious franchise beginning in 2009. Her recent credits include Heart of Stone (2023), which she co-produced, and two 2025 releases: Snow White, in which she played the Evil Queen, and In the Hand of Dante. She likely crossed paths with Conan O'Brien around 2021, during her run of high-profile film appearances.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Gal_Gadot"
+        ],
+        "enrichedAt": "2026-09-09T11:36:12.277Z",
+        "birth_year": "1985",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Israeli",
+        "prestige_signals": [
+          "Time's 100 most influential people (2018)",
+          "Forbes tenth-highest-paid actress (2018)",
+          "Forbes third-highest-paid actress (2020)",
+          "Hollywood Walk of Fame star (2025)",
+          "Genesis Prize recipient"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431296,7 +431853,124 @@
       "id": "michelle-buteau",
       "name": "Michelle Buteau",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/MichelleButeau-byPhilipRomano.jpg/500px-MichelleButeau-byPhilipRomano.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Michelle Buteau",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Michelle_Buteau",
+          "confidence": 1
+        },
+        "profession": [
+          "stand-up comedian",
+          "actress",
+          "television host",
+          "writer",
+          "director",
+          "producer",
+          "podcast host"
+        ],
+        "known_for": [
+          {
+            "title": "Late Night Whenever!",
+            "type": "podcast",
+            "year": "2018"
+          },
+          {
+            "title": "The Comedy Lineup",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Someone Great",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Isn't It Romantic",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Sell By",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Always Be My Maybe",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Adulting",
+            "type": "podcast",
+            "year": "2019"
+          },
+          {
+            "title": "First Wives Club",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Tales of the City",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "The Circle",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Survival of the Thickest",
+            "type": "other",
+            "year": "2020"
+          },
+          {
+            "title": "Michelle Buteau: Welcome to Buteaupia",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Survival of the Thickest",
+            "type": "tv",
+            "year": "2023"
+          },
+          {
+            "title": "Babes",
+            "type": "film",
+            "year": "2024"
+          },
+          {
+            "title": "Fixed",
+            "type": "film",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "Survival of the Thickest (Netflix series, 2023)",
+          "Babes (2024)",
+          "Fixed (animated film)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2021."
+        },
+        "description": "Michelle Buteau is an American stand-up comedian, actress, television host, writer, director, producer, and podcast host. She is best known for hosting Netflix's reality competition series The Circle and for Survival of the Thickest, her Netflix adaptation of her 2020 essay collection, which premiered in 2023. Her stand-up special Michelle Buteau: Welcome to Buteaupia earned her a Critics' Choice Television Award for Best Comedy Special in 2021. Her film credits include Isn't It Romantic, Always Be My Maybe, and the 2024 comedy Babes. She has also co-hosted the podcasts Late Night Whenever! and Adulting. She likely crossed paths with Conan O'Brien around 2021.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michelle_Buteau"
+        ],
+        "enrichedAt": "2026-09-09T11:36:10.844Z",
+        "birth_year": "1977",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Critics' Choice Television Award for Best Comedy Special (2021)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431329,7 +432003,185 @@
       "id": "charli-xcx",
       "name": "Charli XCX",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Charli XCX",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Charli_XCX",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "songwriter",
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "I Love It",
+            "type": "music",
+            "year": "2012"
+          },
+          {
+            "title": "True Romance",
+            "type": "music",
+            "year": "2013"
+          },
+          {
+            "title": "Fancy",
+            "type": "music",
+            "year": "2014"
+          },
+          {
+            "title": "Boom Clap",
+            "type": "music",
+            "year": "2014"
+          },
+          {
+            "title": "Sucker",
+            "type": "music",
+            "year": "2014"
+          },
+          {
+            "title": "Break the Rules",
+            "type": "music",
+            "year": "2014"
+          },
+          {
+            "title": "Doing It",
+            "type": "music",
+            "year": "2014"
+          },
+          {
+            "title": "Vroom Vroom",
+            "type": "music",
+            "year": "2016"
+          },
+          {
+            "title": "Number 1 Angel",
+            "type": "music",
+            "year": "2017"
+          },
+          {
+            "title": "Pop 2",
+            "type": "music",
+            "year": "2017"
+          },
+          {
+            "title": "Charli",
+            "type": "music",
+            "year": "2019"
+          },
+          {
+            "title": "1999",
+            "type": "music",
+            "year": "2019"
+          },
+          {
+            "title": "How I'm Feeling Now",
+            "type": "music",
+            "year": "2020"
+          },
+          {
+            "title": "Crash",
+            "type": "music",
+            "year": "2022"
+          },
+          {
+            "title": "Speed Drive",
+            "type": "music",
+            "year": "2023"
+          },
+          {
+            "title": "Brat",
+            "type": "music",
+            "year": "2024"
+          },
+          {
+            "title": "Apple",
+            "type": "music",
+            "year": "2024"
+          },
+          {
+            "title": "Guess",
+            "type": "music",
+            "year": "2024"
+          },
+          {
+            "title": "Von Dutch",
+            "type": "music",
+            "year": "2024"
+          },
+          {
+            "title": "The Moment",
+            "type": "film",
+            "year": "2026"
+          },
+          {
+            "title": "Erupcja",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "Sacrifice",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "100 Nights of Hero",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "I Want Your Sex",
+            "type": "film",
+            "year": "2026"
+          },
+          {
+            "title": "Faces of Death",
+            "type": "film",
+            "year": "2026"
+          },
+          {
+            "title": "Wuthering Heights",
+            "type": "music",
+            "year": "2026"
+          },
+          {
+            "title": "Music, Fashion, Film",
+            "type": "music",
+            "year": "2026"
+          }
+        ],
+        "recent_work": [
+          "Speed Drive (2023 Barbie soundtrack single)",
+          "Brat (2024 album)",
+          "Apple (2024 single)",
+          "Guess featuring Billie Eilish (2024 single)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2026."
+        },
+        "description": "Charli XCX is a British singer, songwriter, and actress who rose to prominence co-writing Icona Pop's global hit 'I Love It' and scoring her own breakout with 'Fancy' and 'Boom Clap' in 2014. Her sixth album, Brat (2024), became a cultural phenomenon, yielding Grammy wins for Best Dance Pop Recording, Best Dance/Electronic Album, and Best Recording Package, and was named album of the year by Billboard and Rolling Stone. She has also expanded into independent cinema, appearing in several films in 2025 and 2026, and released two further albums, Wuthering Heights and Music, Fashion, Film, in 2026. She likely first appeared on Conan O'Brien Needs a Friend in 2026.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Charli_XCX"
+        ],
+        "enrichedAt": "2026-09-09T11:36:18.830Z",
+        "birth_year": "1992",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "British",
+        "prestige_signals": [
+          "Grammy Award winner – Best Dance Pop Recording (Von Dutch)",
+          "Grammy Award winner – Best Dance/Electronic Album (Brat)",
+          "Grammy Award winner – Best Recording Package (Brat)",
+          "ASCAP Global Impact Award (2024)",
+          "Gold House A100 list (2024)"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431446,7 +432298,63 @@
       "id": "hannah-einbinder",
       "name": "Hannah Einbinder",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Hannah Einbinder",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Hannah_Einbinder",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "stand-up comedian"
+        ],
+        "known_for": [
+          {
+            "title": "Hacks",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Hannah Einbinder: Everything Must Go",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "Seekers of Infinite Love",
+            "type": "film",
+            "year": "2026"
+          }
+        ],
+        "recent_work": [
+          {
+            "title": "Teenage Sex and Death at Camp Miasma",
+            "type": "film",
+            "year": "2025"
+          }
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2021."
+        },
+        "description": "Hannah Einbinder is an American actress and stand-up comedian best known for playing comedy writer Ava Daniels in the HBO Max series Hacks, a role she held from 2021 to 2026 and for which she earned a Primetime Emmy Award, a Critics' Choice Television Award, and four Golden Globe nominations. She released her debut stand-up special, Hannah Einbinder: Everything Must Go, on Max in 2024, and made her leading film debut in the 2026 comedy Seekers of Infinite Love. She likely crossed paths with Conan O'Brien on his podcast Conan O'Brien Needs a Friend around 2021, early in her rise to wider recognition.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hannah_Einbinder"
+        ],
+        "enrichedAt": "2026-09-09T11:36:17.546Z",
+        "birth_year": "1995",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award winner",
+          "Critics' Choice Television Award winner",
+          "Golden Globe nominee (four nominations)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -431485,7 +432393,88 @@
       "id": "hannah-gadsby",
       "name": "Hannah Gadsby",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Hannah Gadsby",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Hannah_Gadsby",
+          "confidence": 1
+        },
+        "profession": [
+          "comedian",
+          "writer",
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Nanette",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Douglas",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Ten Steps to Nanette: A Memoir Situation",
+            "type": "other",
+            "year": "2022"
+          },
+          {
+            "title": "Sex Education",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Adam Hills Tonight",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Hannah Gadsby's Oz",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Something Special",
+            "type": "tv",
+            "year": "2023"
+          },
+          {
+            "title": "Hannah Gadsby's Gender Agenda",
+            "type": "tv",
+            "year": "2024"
+          }
+        ],
+        "recent_work": [
+          "Something Special (Netflix, 2023)",
+          "Hannah Gadsby's Gender Agenda (Netflix, 2024)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2019."
+        },
+        "description": "Hannah Gadsby is an Australian comedian, writer, and actor who rose to international prominence with their 2018 Netflix special Nanette, which won a Primetime Emmy Award for Outstanding Writing for a Variety Special and a Peabody Award. Their follow-up special Douglas arrived on Netflix in 2020, and their memoir Ten Steps to Nanette: A Memoir Situation was published in 2022. They appeared as a recurring cast member in Sex Education on Netflix and released the comedy special Something Special in 2023. Gadsby likely first crossed paths with Conan O'Brien on his podcast Conan O'Brien Needs a Friend around 2019.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hannah_Gadsby"
+        ],
+        "enrichedAt": "2026-09-09T11:36:22.566Z",
+        "birth_year": "1978",
+        "death_year": "",
+        "gender": "",
+        "nationality": "Australian",
+        "prestige_signals": [
+          "Primetime Emmy Award for Outstanding Writing for a Variety Special (Nanette)",
+          "Peabody Award (Nanette)",
+          "Melbourne International Comedy Festival Barry Award",
+          "Edinburgh Festival Fringe Comedy Award",
+          "Helpmann Award for Best Comedy Performer"
+        ],
+        "primary_platform": "streaming",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
