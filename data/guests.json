@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T22:41:13.871Z",
+  "generatedAt": "2026-09-09T22:49:23.963Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -110184,7 +110184,83 @@
       "id": "anthony-clark",
       "name": "Anthony Clark",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Anthony Clark (actor)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Anthony_Clark_(actor)",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "comedian",
+          "stand-up comedian",
+          "television host"
+        ],
+        "known_for": [
+          {
+            "title": "Yes, Dear",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "The Thing Called Love",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "The Rock",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Ellen",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Boston Common",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Soul Man",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Last Comic Standing",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "My Uncle Rafael",
+            "type": "film",
+            "year": "2011"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
+        },
+        "description": "Anthony Clark is an American actor, comedian, and stand-up performer best known for starring as Greg Warner in the long-running CBS sitcom Yes, Dear, a role that earned him both a Young Artist Award nomination and a Prism Award nomination. Before that, he built his career through stand-up comedy and supporting film roles, including appearances in The Thing Called Love and The Rock, as well as a recurring role on Ellen. He later hosted NBC's Last Comic Standing. Clark likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1997, during the height of his rise as a television presence.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Anthony_Clark_(actor)"
+        ],
+        "enrichedAt": "2026-09-09T22:44:08.439Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Young Artist Award nominee",
+          "Prism Award nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -140839,7 +140915,111 @@
       "id": "slash",
       "name": "Slash",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Slash (album)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Slash_(album)",
+          "confidence": 1
+        },
+        "profession": [
+          "musician",
+          "guitarist",
+          "rock musician"
+        ],
+        "known_for": [
+          {
+            "title": "Guns N' Roses",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Slash (album)",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Velvet Revolver",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Slash's Snakepit",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Appetite for Destruction",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "By the Sword",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Back from Cali",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Gotten",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Sahara",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "Doctor Alibi",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Ghost",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Saint Is a Sinner Too",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Mother Maria",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Paradise City",
+            "type": "music",
+            "year": "2010"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"While performing the song on Jay Leno's show, Slash was wearing an \"I'm With Coco\" pin, to show support for former Tonight Show host Conan O'Brien.\""
+        },
+        "description": "Slash is an American rock musician best known as the lead guitarist of Guns N' Roses, one of rock's most iconic bands. He has also been a driving force behind Velvet Revolver and Slash's Snakepit, and in 2010 released his debut solo album, simply titled Slash, which entered the Billboard 200 at number three and reached number one in Canada, Austria, New Zealand, and Sweden. The album featured collaborators including Myles Kennedy, Izzy Stradlin, Duff McKagan, Steven Adler, and others. His connection to Conan O'Brien is tangible: while performing on The Tonight Show with Jay Leno in 2010, Slash wore an 'I'm With Coco' pin in public support of Conan O'Brien, and he likely appeared on Conan's own show around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Slash_(album)"
+        ],
+        "enrichedAt": "2026-09-09T22:46:11.593Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Western Single of the Year at the 24th Japan Gold Disc Award"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -163246,7 +163426,152 @@
       "id": "kate-walsh",
       "name": "Kate Walsh",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Kate Walsh (actress)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Kate_Walsh_(actress)",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "businesswoman"
+        ],
+        "known_for": [
+          {
+            "title": "Grey's Anatomy",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Private Practice",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "The Drew Carey Show",
+            "type": "tv",
+            "year": "1997"
+          },
+          {
+            "title": "Bad Judge",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "13 Reasons Why",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "The Umbrella Academy",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Emily in Paris",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "The Mind of the Married Man",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Norm Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Karen Sisco",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Fargo",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Full Circle",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "The Hotwives of Orlando",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Normal Life",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Kicking & Screaming",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Bewitched",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Wake Up, Ron Burgundy: The Lost Movie",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Under the Tuscan Sun",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Legion",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "The Perks of Being a Wallflower",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Dusk Rings a Bell",
+            "type": "other",
+            "year": "2010"
+          }
+        ],
+        "recent_work": [
+          "Grey's Anatomy (2026)",
+          "Emily in Paris (ongoing)"
+        ],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"She sometimes appeared in sketches on Late Night with Conan O'Brien.\""
+        },
+        "description": "Kate Walsh is an American actress and businesswoman best known for playing Dr. Addison Montgomery across two long-running ABC medical dramas, Grey's Anatomy and its spinoff Private Practice. Her television career spans three decades and includes notable roles in 13 Reasons Why, The Umbrella Academy, and Emily in Paris, the last of which remains ongoing. She also founded Boyfriend LLC, a beauty and lifestyle company, in 2010. In 2026, she is set to lead the CBS sitcom pilot The Tillbrooks. Walsh has a longstanding connection to Conan O'Brien, having appeared in sketches on Late Night with Conan O'Brien during her earlier career.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Kate_Walsh_(actress)"
+        ],
+        "enrichedAt": "2026-09-09T22:46:13.952Z",
+        "birth_year": "1967",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": [
+          {
+            "title": "The Tillbrooks",
+            "type": "tv",
+            "year": "2026"
+          }
+        ]
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -173432,7 +173757,143 @@
       "id": "loudon-wainwright",
       "name": "Loudon Wainwright",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Loudon Wainwright III",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Loudon_Wainwright_III",
+          "confidence": 1
+        },
+        "profession": [
+          "singer-songwriter",
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Dead Skunk (in the Middle of the Road)",
+            "type": "music",
+            "year": "1972"
+          },
+          {
+            "title": "The Swimming Song",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Motel Blues",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "The Man Who Couldn't Cry",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Lullaby",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "M*A*S*H",
+            "type": "tv",
+            "year": "1974"
+          },
+          {
+            "title": "Knocked Up",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "I'm Alright",
+            "type": "music",
+            "year": "1985"
+          },
+          {
+            "title": "More Love Songs",
+            "type": "music",
+            "year": "1986"
+          },
+          {
+            "title": "High Wide & Handsome: The Charlie Poole Project",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "The Aviator",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Big Fish",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Elizabethtown",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The 40-Year-Old Virgin",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "28 Days",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Undeclared",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Parks and Recreation",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "History",
+            "type": "music",
+            "year": "1992"
+          },
+          {
+            "title": "Last Man on Earth",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "Liner Notes: On Parents & Children, Exes & Excess, Death & Decay, and a Few of My Other Favorite Things",
+            "type": "other",
+            "year": "2017"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Loudon Wainwright III is an American singer-songwriter and occasional actor whose career spans more than five decades and twenty-six studio albums. He is perhaps best known for the 1972 novelty hit 'Dead Skunk (in the Middle of the Road)' and for playing a singing surgeon on M*A*S*H. Three of his albums earned Grammy nominations, and his 2009 project High Wide & Handsome: The Charlie Poole Project won the Grammy for Best Traditional Folk Album. He has also appeared in films including Knocked Up, The 40-Year-Old Virgin, and Big Fish. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1996.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Loudon_Wainwright_III"
+        ],
+        "enrichedAt": "2026-09-09T22:47:12.895Z",
+        "birth_year": "1946",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Grammy winner for Best Traditional Folk Album (2010)",
+          "Grammy nominee for I'm Alright (1985)",
+          "Grammy nominee for More Love Songs (1986)",
+          "Grammy nominee for High Wide & Handsome: The Charlie Poole Project (2009)"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -206057,7 +206518,55 @@
       "id": "jesse-james",
       "name": "Jesse James",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jesse James",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jesse_James",
+          "confidence": 1
+        },
+        "profession": [
+          "outlaw",
+          "bank robber",
+          "train robber",
+          "guerrilla leader"
+        ],
+        "known_for": [
+          {
+            "title": "James–Younger Gang",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Centralia Massacre",
+            "type": "other",
+            "year": "1864"
+          },
+          {
+            "title": "Northfield, Minnesota bank robbery attempt",
+            "type": "other",
+            "year": "1876"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
+        },
+        "description": "Jesse James (1847–1882) was an American outlaw, bank and train robber, and guerrilla leader who headed the James–Younger Gang during and after the American Civil War. A Confederate sympathizer from Clay County, Missouri, he and his brother Frank became notorious for robbing banks, stagecoaches, and trains across the Midwest, gaining national fame before James was shot and killed by gang recruit Robert Ford in 1882. Though popularly romanticized as a Robin Hood figure, historians characterize him as a post-Civil War criminal rather than a champion of economic justice. He likely crossed paths with Conan O'Brien's world only in legend — a first appearance on Late Night reportedly occurred in 2003, well over a century after his death.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jesse_James"
+        ],
+        "enrichedAt": "2026-09-09T22:49:08.572Z",
+        "birth_year": "1847",
+        "death_year": "1882",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -206581,7 +207090,90 @@
       "id": "david-feherty",
       "name": "David Feherty",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "David Feherty",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/David_Feherty",
+          "confidence": 1
+        },
+        "profession": [
+          "professional golfer (retired)",
+          "golf broadcaster",
+          "television personality",
+          "author",
+          "columnist"
+        ],
+        "known_for": [
+          {
+            "title": "CBS Sports PGA Tour coverage",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Feherty",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "A Nasty Bit of Rough",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Somewhere in Ireland a Village Is Missing an Idiot",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "An Idiot for All Seasons",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "David Feherty's Totally Subjective History of the Ryder Cup",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "EA Sports Tiger Woods PGA Tour",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "1991 Ryder Cup",
+            "type": "other",
+            "year": "1991"
+          },
+          {
+            "title": "Yes, Dear",
+            "type": "tv",
+            "year": "2005"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
+        },
+        "description": "David Feherty is a Northern Irish-born former professional golfer turned television broadcaster and author. During his playing career he won five European Tour events, competed in the 1991 Ryder Cup, and twice finished in the top ten of the Open Championship. After retiring from competition, he spent nearly two decades as an on-course reporter for CBS Sports, launched the Golf Channel interview series Feherty in 2011, and later joined NBC Sports before moving to LIV Golf as an analyst in 2022. A New York Times bestselling author, he has also written four books on golf. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2003.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/David_Feherty"
+        ],
+        "enrichedAt": "2026-09-09T22:49:10.097Z",
+        "birth_year": "1958",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "Northern Irish",
+        "prestige_signals": [
+          "New York Times best-selling author",
+          "Booksense best-selling author",
+          "Outstanding Civilian Service Award (2012)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -206883,7 +207475,147 @@
       "id": "jamie-lynn-discala",
       "name": "Jamie-Lynn DiScala",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jamie-Lynn Sigler",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jamie-Lynn_Sigler",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "actress",
+          "singer"
+        ],
+        "known_for": [
+          {
+            "title": "The Sopranos",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "Cinderella (tour)",
+            "type": "other",
+            "year": "2001"
+          },
+          {
+            "title": "Beauty and the Beast (Broadway)",
+            "type": "other",
+            "year": "2002"
+          },
+          {
+            "title": "Call Me: The Rise and Fall of Heidi Fleiss",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Extreme Dating",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Love Wrecked",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Homie Spumoni",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Entourage",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "How I Met Your Mother",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Saturday Night Live",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Beneath the Dark",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Ugly Betty",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Guys with Kids",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Here to Heaven",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "You (with Romeo Santos)",
+            "type": "music",
+            "year": "2012"
+          },
+          {
+            "title": "Wise Girl: What I've Learned About Life, Love, and Loss",
+            "type": "other",
+            "year": "2002"
+          },
+          {
+            "title": "Pyramid",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Beef House",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "MeSsy (podcast)",
+            "type": "podcast",
+            "year": "2024"
+          },
+          {
+            "title": "Grey's Anatomy",
+            "type": "tv",
+            "year": "2026"
+          },
+          {
+            "title": "And So It Is (memoir)",
+            "type": "other",
+            "year": "2026"
+          }
+        ],
+        "recent_work": [
+          "MeSsy podcast (2024)",
+          "Grey's Anatomy guest appearance (2026)",
+          "And So It Is memoir (2026)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
+        },
+        "description": "Jamie-Lynn Sigler is an American actress and singer best known for playing Meadow Soprano on HBO's landmark drama The Sopranos from 1999 to 2007. Her career has spanned film, television, Broadway, and music, with stage credits including Beauty and the Beast and a touring production of Cinderella, as well as a pop album, Here to Heaven. More recently she co-hosts MeSsy, a podcast with actress Christina Applegate focused on their shared experiences living with multiple sclerosis, and released a memoir, And So It Is, in 2026. She likely crossed paths with Conan O'Brien during a Late Night with Conan O'Brien appearance around 2004.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jamie-Lynn_Sigler"
+        ],
+        "enrichedAt": "2026-09-09T22:49:22.668Z",
+        "birth_year": "1981",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
