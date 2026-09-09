@@ -195,7 +195,12 @@ name listed for an era is the first guest who came out on air that night.
 - For cold-open questions ("what did X say about being Conan's friend?", "X's cold opens"), \
 read the guest's coldOpens list from find_guests and quote the word/phrase verbatim, with \
 the episode date. If the list is empty, say you don't have a cold open recorded for them.
-- If profession data is missing for a guest, say you don't have that detail rather than guessing.
+- If profession or bio data (birthYear, deathYear, gender, nationality, knownFor, \
+prestigeSignals, primaryPlatform, conanConnection, bioSummary) is missing/empty for a \
+guest, say you don't have that detail yet rather than guessing — the bios backfill is \
+still in progress across the archive, so an empty field means "not processed yet," not \
+"confirmed absent." Never state or imply a guest is deceased unless deathYear is \
+populated for them.
 - Always give a complete answer in one response. Never end with "Would you like me to...".
 - Do not invent guests, dates, cold opens, or details not in the data."""
 
@@ -253,9 +258,16 @@ FIND_GUESTS_TOOL = {
     'description': (
         "Look up Conan guests by name, or filter the full guest archive by era, year, "
         "or profession. Use for any question about a specific person or a filtered "
-        "subset. Returns exact records (name, professions, appearance count, eras, "
-        "first/last appearance, years active, and cold opens — the words guests gave "
-        "about being Conan's friend on the podcast)."
+        "subset. Returns exact records: name, professions, appearance count, eras, "
+        "first/last appearance, years active, cold opens (the words guests gave about "
+        "being Conan's friend on the podcast), and — when the bios backfill has reached "
+        "that guest — birthYear, deathYear, gender, nationality, knownFor (their notable "
+        "works), prestigeSignals (awards/honors), primaryPlatform, conanConnection (how "
+        "they connect to Conan, sourced from Wikipedia or the show's own record), and "
+        "bioSummary (a short editorial bio paragraph). Bio fields are still being "
+        "backfilled across the full archive — an empty bio field for a given guest means "
+        "not yet processed, not confirmed-absent; say you don't have that detail yet "
+        "rather than treating an empty field as a real answer."
     ),
     'input_schema': {
         'type': 'object',
@@ -383,6 +395,46 @@ def _build_digest(guests):
     for prof, count in prof_counts.most_common(15):
         lines.append(f"  {prof}: {count} guests")
 
+    # Bio fields (birthYear, gender, etc.) come from an in-progress backfill —
+    # only count guests where the relevant field is actually populated, and
+    # always state that denominator so a fan can tell "X of the archive" from
+    # "X of everyone." Same generation buckets/labels as the site's own
+    # Roundup page (app/roundup/page.tsx), so an answer here never disagrees
+    # with what a fan can see rendered on that page.
+    with_birth_year = [g for g in guests if g.get('birthYear')]
+    if with_birth_year:
+        GEN_BUCKETS = [
+            ('Boomer & earlier (born before 1965)', lambda y: y < 1965),
+            ('Gen X (1965–1980)', lambda y: 1965 <= y <= 1980),
+            ('Millennial (1981–1996)', lambda y: 1981 <= y <= 1996),
+            ('Gen Z (1997 & later)', lambda y: y >= 1997),
+        ]
+        gen_counts = Counter()
+        for g in with_birth_year:
+            try:
+                y = int(g['birthYear'])
+            except (TypeError, ValueError):
+                continue
+            for label, test in GEN_BUCKETS:
+                if test(y):
+                    gen_counts[label] += 1
+                    break
+        lines += ["", f"Generation breakdown (birth year known for {len(with_birth_year)} of {total} guests so far — backfill in progress):"]
+        for label, _ in GEN_BUCKETS:
+            if gen_counts.get(label):
+                lines.append(f"  {label}: {gen_counts[label]} guests")
+
+    with_gender = [g for g in guests if g.get('gender')]
+    if with_gender:
+        gender_counts = Counter(g['gender'] for g in with_gender)
+        lines += ["", f"Gender breakdown (known for {len(with_gender)} of {total} guests so far — backfill in progress):"]
+        for gender, count in gender_counts.most_common():
+            lines.append(f"  {gender}: {count} guests")
+
+    deceased = [g for g in guests if g.get('deathYear')]
+    if deceased:
+        lines += ["", f"Guests with a recorded death year: {len(deceased)} (of {total} total) — do not assume anyone not listed here is deceased, bio data is still being backfilled."]
+
     return '\n'.join(lines)
 
 
@@ -396,6 +448,15 @@ def _compact(g):
         'lastAppearance': g.get('lastAppearance', ''),
         'years': g.get('appearanceYears', []),
         'coldOpens': g.get('coldOpens', []),
+        'birthYear': g.get('birthYear', ''),
+        'deathYear': g.get('deathYear', ''),
+        'gender': g.get('gender', ''),
+        'nationality': g.get('nationality', ''),
+        'knownFor': g.get('knownFor', []),
+        'prestigeSignals': g.get('prestigeSignals', []),
+        'primaryPlatform': g.get('primaryPlatform', ''),
+        'conanConnection': g.get('conanConnection', ''),
+        'bioSummary': g.get('bioSummary', ''),
     }
 
 
