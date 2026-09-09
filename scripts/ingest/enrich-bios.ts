@@ -577,7 +577,13 @@ ${BOOKING_SIGNAL_RULES}
   (you may paraphrase the mention, but don't invent detail beyond it); if
   conan_mentions is empty, use the given Conan connection below, and if its
   type is "inferred", use tentative language ("likely crossed paths with...",
-  not a flat assertion)`;
+  not a flat assertion). Plain prose only — never wrap a title in asterisks
+  or any other markdown emphasis (confirmed a real, widespread issue: 216
+  guests' descriptions came back with Wikipedia's *Title* italics carried
+  straight through, and the frontend renders this field as plain text, so
+  the literal asterisks showed up on the page). A title's own name may
+  itself contain an asterisk (e.g. M*A*S*H) — leave that character alone,
+  just don't ADD asterisks around a title that doesn't already have them.`;
 
 export async function runClaudePipeline(
   client: any,
