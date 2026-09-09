@@ -10,8 +10,10 @@ interface Props {
   crossover: number[][];
   professionCounts: Record<Era, Record<string, number>>;
   professionEnrichedTotal: Record<Era, number>;
+  professionCategoryOrder: string[];
   generationCounts: Record<Era, Record<string, number>>;
   generationEnrichedTotal: Record<Era, number>;
+  generationCategoryOrder: string[];
 }
 
 // Fixed-order categorical palette (dark-surface steps), validated with the
@@ -32,6 +34,14 @@ const CATEGORY_COLORS = [
 // Single-hue sequential ramp (brand orange, blended over the card surface)
 // for the heatmap — magnitude reads by lightness/chroma alone, low to high.
 const SEQUENTIAL_RAMP = ["#2c2226", "#543026", "#803f25", "#b04f24", "#e05f22"];
+
+// A category's color comes from its fixed position in the caller-supplied
+// order, never from its rank in the current filter view — so Gen X (say) is
+// always the same color whether it's the biggest slice or the smallest.
+function colorForCategory(order: string[], label: string): string {
+  const idx = order.indexOf(label);
+  return CATEGORY_COLORS[(idx >= 0 ? idx : order.length) % CATEGORY_COLORS.length];
+}
 
 // Illustrative fallback only — used while zero guests in the selected eras
 // have a backfilled birth_year. The moment even one does, RoundupClient
@@ -139,8 +149,10 @@ export default function RoundupClient({
   crossover,
   professionCounts,
   professionEnrichedTotal,
+  professionCategoryOrder,
   generationCounts,
   generationEnrichedTotal,
+  generationCategoryOrder,
 }: Props) {
   const [selected, setSelected] = useState<Set<Era>>(new Set(eras));
   const [heatmapTable, setHeatmapTable] = useState(false);
@@ -185,13 +197,13 @@ export default function RoundupClient({
     const labels = Object.keys(totals).sort((a, b) => totals[b] - totals[a]);
     return {
       total: combinedTotal,
-      segments: labels.map((label, i) => ({
+      segments: labels.map((label) => ({
         label,
         value: totals[label],
-        color: CATEGORY_COLORS[i % CATEGORY_COLORS.length],
+        color: colorForCategory(professionCategoryOrder, label),
       })),
     };
-  }, [eras, selected, professionCounts, professionEnrichedTotal]);
+  }, [eras, selected, professionCounts, professionEnrichedTotal, professionCategoryOrder]);
 
   const generationSegments = useMemo(() => {
     const totals: Record<string, number> = {};
@@ -211,10 +223,10 @@ export default function RoundupClient({
       return {
         illustrative: false,
         total: combinedTotal,
-        segments: ILLUSTRATIVE_GENERATION_BUCKETS.map((b, i) => ({
+        segments: ILLUSTRATIVE_GENERATION_BUCKETS.map((b) => ({
           label: b.label,
           value: totals[b.label] ?? 0,
-          color: CATEGORY_COLORS[i % CATEGORY_COLORS.length],
+          color: colorForCategory(generationCategoryOrder, b.label),
         })),
       };
     }
@@ -224,20 +236,20 @@ export default function RoundupClient({
     return {
       illustrative: true,
       total: 1000,
-      segments: ILLUSTRATIVE_GENERATION_BUCKETS.map((b, i) => ({
+      segments: ILLUSTRATIVE_GENERATION_BUCKETS.map((b) => ({
         label: b.label,
         value: Math.round(b.share * 1000),
-        color: CATEGORY_COLORS[i % CATEGORY_COLORS.length],
+        color: colorForCategory(generationCategoryOrder, b.label),
       })),
     };
-  }, [eras, selected, generationCounts, generationEnrichedTotal]);
+  }, [eras, selected, generationCounts, generationEnrichedTotal, generationCategoryOrder]);
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
       <h1 className="font-serif text-4xl font-semibold mb-2">The Roundup</h1>
       <p className="text-[var(--text-muted)] mb-8">
-        A roster overview across the four broadcast &amp; podcast eras — who came back, and what
-        they do for a living.
+        Three decades, four sets, one very recurring cast of friends — who they are, and what they
+        do when they&apos;re not on the couch.
       </p>
 
       {/* Era filter row */}
@@ -268,8 +280,41 @@ export default function RoundupClient({
         })}
       </div>
 
-      {/* Era Crossover heatmap */}
+      {/* Generation breakdown */}
       <section className="mb-12">
+        <div className="flex items-baseline gap-2 mb-1">
+          <h2 className="font-serif text-2xl font-semibold">Generation</h2>
+          <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg2)] border border-[var(--border)] text-[var(--text-muted)]">
+            {generationSegments.illustrative
+              ? "Illustrative"
+              : `${generationSegments.total} indexed`}
+          </span>
+        </div>
+        <p className="text-sm text-[var(--text-muted)] mb-4">
+          {generationSegments.illustrative
+            ? "A placeholder, not a live number — no one in this selection has an indexed birth year yet, so this is roughly what the real split should look like once that data's in."
+            : "Based on the birth years we've tracked down so far — most of the roster at this point, with a few stragglers still missing."}
+        </p>
+        <StackedBar segments={generationSegments.segments} total={generationSegments.total} />
+      </section>
+
+      {/* Profession breakdown */}
+      <section className="mb-12">
+        <div className="flex items-baseline gap-2 mb-1">
+          <h2 className="font-serif text-2xl font-semibold">Profession</h2>
+          <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg2)] border border-[var(--border)] text-[var(--text-muted)]">
+            {professionSegments.total} enriched bios
+          </span>
+        </div>
+        <p className="text-sm text-[var(--text-muted)] mb-4">
+          Based on real, enriched bios — we&apos;ve got most of the roster covered at this point,
+          with a handful still to go.
+        </p>
+        <StackedBar segments={professionSegments.segments} total={professionSegments.total} />
+      </section>
+
+      {/* Era Crossover heatmap */}
+      <section>
         <div className="flex items-baseline justify-between mb-1">
           <h2 className="font-serif text-2xl font-semibold">Era Crossover</h2>
           <button
@@ -280,8 +325,8 @@ export default function RoundupClient({
           </button>
         </div>
         <p className="text-sm text-[var(--text-muted)] mb-4">
-          How many guests showed up in <em>both</em> eras — order doesn&apos;t matter, so each pair
-          appears once. (Each era&apos;s own total is already in its filter chip above.)
+          How many guests stuck around across two eras, not just one — each pair counted once,
+          regardless of order. (An era&apos;s own total is already up in its filter chip.)
         </p>
 
         {heatmapTable ? (
@@ -370,39 +415,6 @@ export default function RoundupClient({
             </div>
           </div>
         )}
-      </section>
-
-      {/* Generation breakdown */}
-      <section className="mb-12">
-        <div className="flex items-baseline gap-2 mb-1">
-          <h2 className="font-serif text-2xl font-semibold">Generation</h2>
-          <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg2)] border border-[var(--border)] text-[var(--text-muted)]">
-            {generationSegments.illustrative
-              ? "Illustrative"
-              : `${generationSegments.total} with a birth year`}
-          </span>
-        </div>
-        <p className="text-sm text-[var(--text-muted)] mb-4">
-          {generationSegments.illustrative
-            ? "Placeholder split — no guest in this selection has a backfilled birth year yet, so this is what the real breakdown should look like once that data lands, not a live number."
-            : "Real, but thin — only a fraction of the roster has a backfilled birth year so far, so treat this as a sample, not the full roster's split."}
-        </p>
-        <StackedBar segments={generationSegments.segments} total={generationSegments.total} />
-      </section>
-
-      {/* Profession breakdown */}
-      <section>
-        <div className="flex items-baseline gap-2 mb-1">
-          <h2 className="font-serif text-2xl font-semibold">Profession</h2>
-          <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg2)] border border-[var(--border)] text-[var(--text-muted)]">
-            {professionSegments.total} enriched bios
-          </span>
-        </div>
-        <p className="text-sm text-[var(--text-muted)] mb-4">
-          Real, but thin — only a fraction of the roster has an enriched bio so far, so treat this
-          as a sample, not the full roster&apos;s split.
-        </p>
-        <StackedBar segments={professionSegments.segments} total={professionSegments.total} />
       </section>
     </div>
   );
