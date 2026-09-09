@@ -2,35 +2,40 @@
  * backfill-booking-signals.ts
  * Fills in the booking-signal fields (birth_year, death_year, gender,
  * nationality, prestige_signals, primary_platform, upcoming_work) added to
- * GuestBio in PR #15 (plus death_year/gender added later), for guests who
- * were already enriched BEFORE those fields existed —
- * confirmed via a real check: 0 of 3,260 guests in data/guests.json
- * currently have birth_year populated, which blocks the Guest Explorer's
- * Generation filter (Gen Z/Millennial/Gen X/Boomer+) from working for
- * anyone.
+ * GuestBio in PR #15 (plus death_year/gender added later, in a separate
+ * change), for guests who were already enriched before ALL of those fields
+ * existed.
  *
  * Deliberately NOT a re-run of enrich-bios.ts --force: that would redo the
- * full two-Claude-call pipeline (re-synthesizing descriptions that are
- * already fine) for all 3,260 guests, roughly doubling cost and runtime for
- * no benefit. This does ONE Claude call per guest — structured extraction
- * only — and merges just the new fields into the EXISTING bio, leaving
+ * full Claude pipeline (re-synthesizing descriptions that are already fine)
+ * for every guest, roughly doubling cost and runtime for no benefit. This
+ * does ONE Claude call per guest — structured extraction only — and merges
+ * just the new fields into the EXISTING bio, leaving
  * description/known_for/recent_work/profession untouched.
  *
- * Only touches guests whose cached bio exists, isn't needs_review (that
+ * Only touches guests whose cached bio exists and isn't needs_review (that
  * guest's Wikipedia entity resolution already failed once — re-running the
- * same resolution isn't expected to succeed now), and is missing the
- * birth_year KEY entirely (not just empty string — "" means "checked,
- * Wikipedia's intro doesn't state it", a real distinct fact from "this bio
- * predates the field and was never checked").
+ * same resolution isn't expected to succeed now). Queues a guest whenever
+ * ANY of the booking-signal fields' KEYS is entirely missing from the
+ * cached bio — not just birth_year. death_year and gender were added to
+ * this schema after birth_year/nationality/prestige_signals/
+ * primary_platform were, so a bio processed by an earlier version of this
+ * script (or of enrich-bios.ts, before gender/death_year existed) can have
+ * birth_year present while gender/death_year are entirely absent. A filter
+ * that only checked for birth_year's presence would treat that bio as
+ * "already checked" and skip it forever — confirmed via a real check: 245
+ * of 297 valid cached bios have birth_year but are missing gender and
+ * death_year, and were being silently skipped by the old birth_year-only
+ * filter.
  *
  * Usage:
  *   npx tsx scripts/ingest/backfill-booking-signals.ts [--limit N] [--retry-empty] [--guest "Name"]
- *   --retry-empty  also reprocess guests whose birth_year KEY is present but
- *                  "" — needed after a real run came back 0/20 on birth_year
- *                  despite the intro text containing "born", to re-check
- *                  those specific guests once the root cause is fixed rather
- *                  than skipping them forever (the default filter treats ""
- *                  as "already checked, not stated").
+ *   --retry-empty  also reprocess guests where every field's KEY is present
+ *                  but birth_year is "" — needed after a real run came back
+ *                  0/20 on birth_year despite the intro text containing
+ *                  "born", to re-check those specific guests once the root
+ *                  cause is fixed rather than skipping them forever (the
+ *                  default filter treats "" as "checked, not stated").
  *   --guest "Name" process one guest regardless of the above filter — cheap
  *                  targeted debugging.
  * Reads/writes scripts/cache/bios.json
@@ -98,11 +103,17 @@ async function main() {
   const guestsData = readJson<{ guests: Guest[] }>(DATA_FILE, { guests: [] });
   const bios = readJson<Record<string, GuestBio>>(BIOS_FILE, {});
 
+  // All fields this script writes together in one call — a bio is only
+  // "fully checked" once every one of these keys is present, regardless of
+  // which earlier run (or which version of enrich-bios.ts) touched it.
+  const BOOKING_SIGNAL_KEYS = ['birth_year', 'death_year', 'gender', 'nationality', 'prestige_signals', 'primary_platform'] as const;
+  const isFullyChecked = (bio: GuestBio) => BOOKING_SIGNAL_KEYS.every((k) => k in bio);
+
   let queue = guestsData.guests.filter((g) => {
     if (ONLY_GUEST) return g.name.toLowerCase() === ONLY_GUEST.toLowerCase();
     const bio = bios[g.name];
     if (!bio || bio.needs_review) return false;
-    if (!('birth_year' in bio)) return true;
+    if (!isFullyChecked(bio)) return true;
     return RETRY_EMPTY && bio.birth_year === '';
   });
 
