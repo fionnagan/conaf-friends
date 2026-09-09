@@ -85,8 +85,17 @@ jobs:
               echo "No changes this chunk — backlog is exhausted, stopping early."
               break
             fi
-            git commit -m "chore: backfill full bios (chunk of $THIS_CHUNK)"
-            git push
+            # A concurrent push to main (e.g. a PR merging, or another
+            # backfill's own checkpoint) between chunks makes a bare `git
+            # push` fail non-fast-forward, and Actions runs `run:` blocks
+            # under `bash -e` by default — that failure would kill this whole
+            # job, not just the in-flight chunk, contradicting this
+            # workflow's own promise above. Shared with
+            # backfill-booking-signals.yml/weekly-ingest.yml — previously
+            # each ingest workflow hand-rolled its own version of this same
+            # commit/rebase/push-with-retry block, which is exactly how a fix
+            # to one (PR #31) failed to reach the others.
+            scripts/ci/commit-and-push.sh "chore: backfill full bios (chunk of $THIS_CHUNK)"
 
             DONE=$((DONE + THIS_CHUNK))
           done

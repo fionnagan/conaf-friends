@@ -30,9 +30,21 @@ export interface WikiSection {
 // results" — confirmed via a real photo-backfill run that guests with an
 // unambiguous Wikipedia photo (Seth Rogen, Denis Leary, Maria Bamford) got
 // cached as photo-less after 3 back-to-back requests without this.
+// deadlineMs is an optional absolute Date.now()-scale timestamp — when a 429
+// wait would push past it, wikiGet gives up immediately (throws) instead of
+// waiting Wikipedia's real Retry-After in full. Omitted, behavior is
+// unchanged from before this param existed: every other current caller
+// (photo-candidates.ts, backfill-booking-signals.ts, fetch-conan-activity.ts,
+// fetch-crossed-paths.ts) omits it and keeps waiting out 429s in full, same
+// as always. Added for enrich-bios.ts's resolveEntity(), which tries up to 5
+// name variants per guest sequentially — without a real per-call deadline, a
+// between-attempts-only budget check couldn't cap a single call's own
+// internal retry-wait, so total time could still exceed the intended cap by
+// a full uncapped Retry-After.
 export async function wikiGet(
   params: Record<string, string | number>,
-  apiUrl: string = WIKI_API
+  apiUrl: string = WIKI_API,
+  deadlineMs?: number
 ): Promise<any> {
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
@@ -46,8 +58,13 @@ export async function wikiGet(
       const status = err?.response?.status;
       if (status !== 429 || attempt === MAX_RETRIES) throw err;
       const retryAfter = Number(err.response.headers?.['retry-after']) || DEFAULT_RETRY_SECONDS;
+      const waitMs = retryAfter * 1000;
+      if (deadlineMs !== undefined && Date.now() + waitMs > deadlineMs) {
+        console.log(`  Wikipedia rate limit hit (429) — a ${retryAfter}s wait would exceed the caller's deadline, giving up early instead of waiting.`);
+        throw err;
+      }
       console.log(`  Wikipedia rate limit hit (429) — waiting ${retryAfter}s before retry ${attempt + 1}/${MAX_RETRIES}...`);
-      await sleep(retryAfter * 1000);
+      await sleep(waitMs);
     }
   }
   throw new Error('unreachable');
@@ -83,7 +100,7 @@ export interface WikiEntity {
 // was tripping Wikipedia's rate limiter well within a 250-guest run at 2
 // calls/guest — halving that to 1 call/guest directly cuts how often that
 // happens, on top of being the faster path when it doesn't.
-export async function fetchWikiEntity(pageTitle: string): Promise<WikiEntity | null> {
+export async function fetchWikiEntity(pageTitle: string, deadlineMs?: number): Promise<WikiEntity | null> {
   const data = await wikiGet({
     action: 'query',
     prop: 'extracts|pageprops',
@@ -92,7 +109,7 @@ export async function fetchWikiEntity(pageTitle: string): Promise<WikiEntity | n
     titles: pageTitle,
     format: 'json',
     redirects: 1,
-  });
+  }, WIKI_API, deadlineMs);
   const pages = data?.query?.pages ?? {};
   const page: any = Object.values(pages)[0];
   if (!page || page.missing !== undefined) return null;

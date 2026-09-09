@@ -43,6 +43,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { resolveEntityWithRetry } from './enrich-bios';
+import { BOOKING_SIGNAL_RULES, checkDeathYearPlausibility } from './booking-signal-schema';
 import type { GuestBio, Guest } from '../../lib/types';
 
 const CACHE_DIR = path.join(process.cwd(), 'scripts', 'cache');
@@ -77,12 +78,7 @@ Return JSON:
 { "birth_year": "", "death_year": "", "gender": "", "nationality": "", "prestige_signals": [], "primary_platform": "film|tv|music|streaming|podcast|sports|other" }
 
 Rules:
-- birth_year: 4-digit string from the intro's "(born ...)" clause, or "" if not stated
-- death_year: 4-digit string if the intro states a death date (e.g. "(born X – died Y)" or "(1950–2020)"), or "" if living or not stated — never infer from tense
-- gender: "male", "female", or "" — ONLY from pronouns the intro itself uses (he/him, she/her), never inferred from name, profession, or photo
-- nationality: the demonym Wikipedia's own opening sentence uses (e.g. "American", "British"), or "" if not stated — never infer from name, accent, or any other cue
-- prestige_signals: awards/honors explicitly named in the intro (e.g. "Emmy nominee", "Grammy winner"); empty array if none are mentioned — never infer prestige
-- primary_platform: the ONE medium the intro emphasizes as their current work`,
+${BOOKING_SIGNAL_RULES}`,
     }],
   });
 
@@ -165,20 +161,14 @@ async function main() {
       // death_year for 4 of 5 real, living guests, misreading an unrelated
       // in-text year (most often a career-span end-year) as a death date —
       // this script uses the same kind of extraction call, so the same
-      // failure mode is possible here regardless of model. A death_year
-      // with no birth_year, one that isn't strictly after birth_year, or
-      // one in the future is never a real fact pattern — drop it and flag
-      // for review rather than write it as fact.
+      // failure mode is possible here regardless of model. Shared with
+      // enrich-bios.ts's identical check (checkDeathYearPlausibility) so the
+      // two call sites can't drift out of agreement.
       const birthYear = signals.birth_year || '';
       let deathYear = signals.death_year || '';
-      if (deathYear) {
-        const death = parseInt(deathYear);
-        const birth = parseInt(birthYear);
-        const implausible = !birthYear || death <= birth || death > new Date().getFullYear();
-        if (implausible) {
-          console.log(`\n  [warn] dropping implausible death_year "${deathYear}" (birth_year: "${birthYear || 'none'}") — needs manual review`);
-          deathYear = '';
-        }
+      if (deathYear && !checkDeathYearPlausibility(birthYear, deathYear).ok) {
+        console.log(`\n  [warn] dropping implausible death_year "${deathYear}" (birth_year: "${birthYear || 'none'}") — needs manual review`);
+        deathYear = '';
       }
 
       const bio = bios[guest.name];

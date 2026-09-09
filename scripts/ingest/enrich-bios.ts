@@ -13,6 +13,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import type { GuestBio, GuestBioWork, Guest } from '../../lib/types';
 import { fetchWikiEntity } from './wiki';
+import { BOOKING_SIGNAL_RULES, checkDeathYearPlausibility } from './booking-signal-schema';
 
 // ── Config ───────────────────────────────────────────────────────────────────
 
@@ -100,7 +101,29 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   const seen = new Set<string>();
   const deduped = namesToTry.filter(n => { if (seen.has(n)) return false; seen.add(n); return true; });
 
+  // A REAL wall-clock cap across all variant attempts for one guest,
+  // including each call's own internal 429 retry-wait — not just a check
+  // between attempts. A guest whose name matches multiple stripping rules
+  // above tries up to 5 variants sequentially; without threading this
+  // deadline into wikiGet() itself, a between-attempts-only check couldn't
+  // stop a single call from still waiting out an uncapped Retry-After, so
+  // total time could exceed the intended budget by a full extra wait.
+  // wikiGet() gives up early (throws, caught below) rather than waiting past
+  // this deadline — one oddly-named guest can no longer stall a whole chunk
+  // for minutes with no other guest able to make progress meanwhile.
+  const RESOLVE_BUDGET_MS = 60_000;
+  const resolveDeadline = Date.now() + RESOLVE_BUDGET_MS;
+
   for (const name of deduped) {
+    if (Date.now() >= resolveDeadline) {
+      // Distinguishes "gave up on remaining variants due to the time budget"
+      // from a genuine "no matching Wikipedia entity" — both look identical
+      // (null return) to the caller otherwise, with no way to tell how often
+      // this actually fires versus a real not-found.
+      console.log(`  Entity resolution budget (${RESOLVE_BUDGET_MS / 1000}s) exceeded for "${guestName}" — ${deduped.indexOf(name)}/${deduped.length} name variant(s) left untried.`);
+      break;
+    }
+
     // One Action API call gets title resolution + full plain-text extract +
     // disambiguation check together — down from the old two-call pattern (a
     // REST summary call for title/URL/disambiguation, then a separate Action
@@ -112,9 +135,9 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
     // no separate rate-limit handling needed here anymore.
     let entity: Awaited<ReturnType<typeof fetchWikiEntity>>;
     try {
-      entity = await fetchWikiEntity(name);
+      entity = await fetchWikiEntity(name, resolveDeadline);
     } catch {
-      continue; // network error or exhausted retries on this name variant — try next
+      continue; // network error, exhausted retries, or deadline exceeded on this name variant — try next
     }
     if (!entity || entity.isDisambiguation) continue;
 
@@ -170,10 +193,34 @@ function extractProfessions(intro: string): string[] {
 }
 
 // Match "Title (year)" or "Title (year–year)" patterns common in Wikipedia intros
-// Captures unquoted titles like "The Mindy Project (2012–2017)" and quoted ones
-const TITLE_YEAR_RE = /[""]([^"""]{3,60})[""]|(?<!\w)([A-Z][A-Za-z0-9 ':!?&,-]{2,50}?)\s+\((\d{4})(?:[–-]\d{4}|[–-]present)?\)/g;
+// Captures unquoted titles like "The Mindy Project (2012–2017)" and quoted ones.
+// The negative lookahead excludes common sentence-initial pronouns as a match
+// start — without it, a sentence like "He starred in Employee of the Month
+// (2006)" captures the title as "He starred in Employee of the Month" instead
+// of "Employee of the Month": the pattern's only start-of-match requirement was
+// "not preceded by a word character" (true at both "He" and "Employee"), and
+// since nothing shorter than the full clause reaches a "(" + digits, the
+// non-greedy quantifier is forced to extend the match all the way from "He".
+// Verified via a real test (extractKnownFor tests) that reproduced this exact
+// failure before the lookahead was added.
+// Excludes common sentence-initial words capitalized only by English
+// convention (pronouns, demonstratives, transition/conjunction words) as a
+// match-start — a punctuation-anchored requirement was tested and rejected:
+// it breaks legitimate real titles preceded by a lowercase noun phrase (e.g.
+// "...the television show Big Brother's Big Mouth (2004)" — "Big" is
+// preceded by "show ", not punctuation, but is a real, correct title-start;
+// the character class already can't start a match mid-lowercase-run, so
+// punctuation-anchoring was solving a problem that didn't exist while
+// breaking one that did). This blacklist targets the actual failure shape
+// instead: a common word that's ONLY capitalized because it opens a
+// sentence, not because it's part of a title.
+const SENTENCE_OPENER_BLACKLIST = 'He|She|They|It|His|Her|Its|We|I|You|This|That|These|Those|Also|However|Meanwhile|During|After|Before|Since|While|Although|Additionally|Furthermore|Then|Later';
+const TITLE_YEAR_RE = new RegExp(
+  `[""]([^"""]{3,60})[""]|(?<!\\w)(?!(?:${SENTENCE_OPENER_BLACKLIST})\\b)([A-Z][A-Za-z0-9 ':!?&,-]{2,50}?)\\s+\\((\\d{4})(?:[–-]\\d{4}|[–-]present)?\\)`,
+  'g'
+);
 
-function extractKnownFor(intro: string): GuestBioWork[] {
+export function extractKnownFor(intro: string): GuestBioWork[] {
   const works: GuestBioWork[] = [];
   let m: RegExpExecArray | null;
   const re = new RegExp(TITLE_YEAR_RE.source, 'g');
@@ -196,7 +243,7 @@ function extractKnownFor(intro: string): GuestBioWork[] {
   return works.filter((w, i, arr) => arr.findIndex(x => x.title === w.title) === i);
 }
 
-function extractRecentWork(intro: string): GuestBioWork[] {
+export function extractRecentWork(intro: string): GuestBioWork[] {
   const works: GuestBioWork[] = [];
   let m: RegExpExecArray | null;
   const re = new RegExp(TITLE_YEAR_RE.source, 'g');
@@ -223,13 +270,13 @@ function extractRecentWork(intro: string): GuestBioWork[] {
 // "(born 1975)" → "1975". Wikipedia uses day-month-year with no comma for most
 // non-US subjects, so both orderings matter — this is exactly the international-
 // guest case the nationality field most needs to work for.
-function extractBirthYear(intro: string): string {
+export function extractBirthYear(intro: string): string {
   const m = intro.match(/\(born(?:\s+(?:[A-Z][a-z]+\s+\d{1,2},|\d{1,2}\s+[A-Z][a-z]+))?\s+(\d{4})\)/);
   return m ? m[1] : '';
 }
 
 // "X is an American actor" / "X is a British actor and singer" → "American" / "British"
-function extractNationality(intro: string): string {
+export function extractNationality(intro: string): string {
   const m = intro.match(/\bis (?:an?|the) ([A-Z][a-z]+)\b(?=[^.]*\b(?:actor|actress|comedian|writer|director|producer|musician|singer|author|host|journalist|chef|athlete|politician|stand-up)\b)/);
   return m ? m[1] : '';
 }
@@ -238,7 +285,7 @@ function extractNationality(intro: string): string {
 // ...)" / date-range parenthetical right after the subject's name (e.g.
 // "(March 5, 1930 – April 12, 2010)" or "(1930–2010)"). Empty means living
 // or no death date stated — never inferred from tense.
-function extractDeathYear(intro: string): string {
+export function extractDeathYear(intro: string): string {
   const died = intro.match(/\bdied\s+(?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\b/);
   if (died) return died[1];
   const range = intro.match(/\((?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\s*[–-]\s*(?:[A-Z][a-z]+\s+\d{1,2},\s+)?(\d{4})\)/);
@@ -249,7 +296,7 @@ function extractDeathYear(intro: string): string {
 // intro and take whichever is used. Only the Claude pipeline's version of
 // this (which reads the actual stated pronoun, not a frequency count) should
 // be trusted for anything but a rough fallback signal.
-function extractGender(intro: string): string {
+export function extractGender(intro: string): string {
   const male   = (intro.match(/\b(he|him|his)\b/gi) || []).length;
   const female = (intro.match(/\b(she|her|hers)\b/gi) || []).length;
   if (male === 0 && female === 0) return '';
@@ -354,18 +401,7 @@ Rules:
   is stated; empty array if the intro doesn't mention anything upcoming — this
   will be sparse, never infer or guess a future project
 - year: 4-digit string or ""
-- birth_year: 4-digit string from the intro's "(born ...)" clause, or "" if not stated
-- death_year: 4-digit string if the intro states a death date (e.g. "(born X –
-  died Y)" or "(1950–2020)"), or "" if the person is living or no date is stated
-  — never infer from tense or context, only an explicit date
-- gender: "male", "female", or "" — ONLY from pronouns the intro itself uses
-  (he/him, she/her, they/them as a stated identity) — never inferred from name,
-  profession, or photo; "" if the intro avoids pronouns or uses "they" generically
-- nationality: the demonym Wikipedia's own opening sentence uses (e.g. "American",
-  "British"), or "" if not stated — do not infer from name, accent, or any other cue
-- prestige_signals: awards/honors explicitly named in the intro (e.g. "Emmy nominee",
-  "Grammy winner"); empty array if none are mentioned — never infer prestige
-- primary_platform: the ONE medium the intro emphasizes as their current work
+${BOOKING_SIGNAL_RULES}
 - conan_mentions: verbatim sentence(s) or clauses from the text that explicitly
   name Conan O'Brien, "Team Coco", or one of his shows/podcast by name (Late
   Night with Conan O'Brien, The Tonight Show with Conan O'Brien, Conan, Conan
@@ -382,7 +418,7 @@ Rules:
   type is "inferred", use tentative language ("likely crossed paths with...",
   not a flat assertion)`;
 
-async function runClaudePipeline(
+export async function runClaudePipeline(
   client: any,
   guest: Guest,
   entity: WikiEntity,
@@ -516,7 +552,7 @@ function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConne
 
 // ── Validation ────────────────────────────────────────────────────────────────
 
-function validate(bio: GuestBio): { ok: boolean; reason?: string } {
+export function validate(bio: GuestBio): { ok: boolean; reason?: string } {
   const words = bio.description.split(/\s+/).length;
   if (words < 20 || words > 160) return { ok: false, reason: `word_count:${words}` };
 
@@ -539,16 +575,10 @@ function validate(bio: GuestBio): { ok: boolean; reason?: string } {
   // living guests, misreading an unrelated in-text year (most often a
   // career-span end-year like "Reno 911! (2003–2009)") as a death date —
   // and 2 of those 4 also failed to extract a plainly-stated birth_year in
-  // the same response. A death_year with no birth_year, or a death_year
-  // that isn't strictly after birth_year, or one in the future, is never a
-  // real fact pattern — flag for review rather than publish it as fact.
-  if (bio.death_year) {
-    const death = parseInt(bio.death_year);
-    if (!bio.birth_year) return { ok: false, reason: `death_year_without_birth_year:${bio.death_year}` };
-    const birth = parseInt(bio.birth_year);
-    if (death <= birth) return { ok: false, reason: `death_year_before_birth_year:${bio.birth_year}-${bio.death_year}` };
-    if (death > CURRENT_YEAR) return { ok: false, reason: `death_year_in_future:${bio.death_year}` };
-  }
+  // the same response. Shared with backfill-booking-signals.ts's identical
+  // check so the two call sites can't drift out of agreement.
+  const deathYearCheck = checkDeathYearPlausibility(bio.birth_year ?? '', bio.death_year ?? '', CURRENT_YEAR);
+  if (!deathYearCheck.ok) return deathYearCheck;
 
   return { ok: true };
 }
