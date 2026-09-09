@@ -647,6 +647,22 @@ ${entity.intro}`,
     .filter((w: any) => !knownForTitles.has(w.title?.toLowerCase()))
     .slice(0, 4);
 
+  // Claude extracts "upcoming" straight from Wikipedia's own wording ("is set
+  // to star in...") without weighing whether that framing is still current —
+  // Wikipedia prose describing a 2025 project as upcoming doesn't get
+  // re-edited the moment the year turns, so by the time this runs in 2026
+  // the same true, once-current sentence produces a now-stale entry. That's
+  // real-world drift, not a bad extraction: everything else about the bio
+  // (profession, known_for, description) is still correct. validate()
+  // rejects the WHOLE bio over a single stale upcoming_work entry — real
+  // guests this hit (Samuel L. Jackson, Russell Crowe, Vera Farmiga, ...)
+  // are otherwise perfectly fine, high-confidence matches. Drop only the
+  // stale entries here, mirroring the recent_work/known_for de-dup above,
+  // so a merely-outdated "upcoming" claim doesn't cost the guest their bio.
+  const upcoming_work = (structured.upcoming_work || [])
+    .filter((w: any) => !w.year || parseInt(w.year) >= CURRENT_YEAR)
+    .slice(0, 3);
+
   return {
     entity:           { name: entity.name, wikipedia_url: entity.wikipedia_url, confidence: entity.confidence },
     profession:       structured.profession || [],
@@ -664,7 +680,7 @@ ${entity.intro}`,
     nationality:      structured.nationality || '',
     prestige_signals: structured.prestige_signals || [],
     primary_platform: structured.primary_platform || undefined,
-    upcoming_work:    (structured.upcoming_work || []).slice(0, 3),
+    upcoming_work,
   };
 }
 
