@@ -24,10 +24,19 @@ export interface WikiSection {
   line: string;
 }
 
-async function wikiGet(params: Record<string, string | number>): Promise<any> {
+// Exported so callers hitting a different MediaWiki Action API (e.g.
+// Wikimedia Commons) get the same real-Retry-After retry behavior instead
+// of writing their own bare try/catch that silently swallows a 429 as "no
+// results" — confirmed via a real photo-backfill run that guests with an
+// unambiguous Wikipedia photo (Seth Rogen, Denis Leary, Maria Bamford) got
+// cached as photo-less after 3 back-to-back requests without this.
+export async function wikiGet(
+  params: Record<string, string | number>,
+  apiUrl: string = WIKI_API
+): Promise<any> {
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
-      const res = await axios.get(WIKI_API, {
+      const res = await axios.get(apiUrl, {
         headers: { 'User-Agent': USER_AGENT },
         params,
         timeout: 20000,
