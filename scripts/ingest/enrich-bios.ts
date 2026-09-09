@@ -342,7 +342,12 @@ function extractProfessions(intro: string): string[] {
   const m = intro.match(/^[^.]+?\bis (?:an? |a )?(?:[A-Za-z-]+ )*?((?:actor|actress|comedian|writer|director|producer|musician|singer|author|host|journalist|chef|athlete|politician|stand-up)[^.]*)/i);
   if (!m) return [];
   return m[1]
-    .split(/\s*(?:and|,)\s*/i)
+    // Split on a comma, or "and" as a standalone word — not as a bare
+    // substring. The old `(?:and|,)` matched "and" anywhere it appeared,
+    // including inside a word like "Ireland", silently truncating it to
+    // "Irel" (confirmed for real: Liam Neeson's "actor from Northern
+    // Ireland" became "actor from northern irel").
+    .split(/\s*,\s*|\s+and\s+/i)
     .map(s => s.trim().replace(/[^a-zA-Z -]/g, '').toLowerCase())
     .filter(s => /^[a-z]/.test(s) && s.length > 2)
     .slice(0, 3);
