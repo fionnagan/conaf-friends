@@ -45,6 +45,10 @@ while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
     if git push; then
       exit 0
     fi
+    if [ "$attempt" -eq "$MAX_ATTEMPTS" ]; then
+      echo "::error::Push rejected after $MAX_ATTEMPTS clean rebases — this run's data was NOT committed or pushed. main is moving faster than this job can keep up with (several backfills checkpoint-commit every 50 guests). Re-trigger this workflow once main settles."
+      exit 1
+    fi
     echo "Push rejected after a clean rebase (attempt $attempt/$MAX_ATTEMPTS) — main moved again, retrying..."
     attempt=$((attempt + 1))
     continue
@@ -63,3 +67,11 @@ while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
   echo "Rebase conflicted (attempt $attempt/$MAX_ATTEMPTS) — aborting and retrying against latest main..."
   attempt=$((attempt + 1))
 done
+
+# Unreachable in practice (every branch above either exits or continues the
+# loop), but fail loudly rather than silently succeed if control ever gets
+# here — falling off the end of the script under `set -e` would otherwise
+# exit 0 on the last command's status, exactly the silent-success bug this
+# guards against.
+echo "::error::commit-and-push.sh exhausted $MAX_ATTEMPTS attempts without pushing or a clear conflict — this run's data was NOT committed or pushed."
+exit 1
