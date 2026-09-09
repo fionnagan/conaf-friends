@@ -207,8 +207,8 @@ describe('extractKnownFor()', () => {
 
 describe('extractRecentWork()', () => {
   const CURRENT_YEAR = new Date().getFullYear();
-  const RECENT = String(CURRENT_YEAR);
-  const STALE = String(CURRENT_YEAR - 10);
+  const RECENT = String(new Date().getFullYear());
+  const STALE = String(new Date().getFullYear() - 10);
 
   it('includes a work within the recent-work cutoff window', () => {
     const works = extractRecentWork(`He appeared in Only Murders in the Building (${RECENT}), a hit series.`);
@@ -287,6 +287,33 @@ describe('runClaudePipeline() — mocked Anthropic client', () => {
     }));
     const bio = await runClaudePipeline(client, makeGuest(), testEntity, testConanConn, 'claude-sonnet-4-6');
     expect(bio?.recent_work.map(w => w.title)).toEqual(['A Different Show']);
+  });
+
+  // Regression coverage for real needs_review guests reprocessed via
+  // --retry-review (Samuel L. Jackson, Russell Crowe, Vera Farmiga, and 10
+  // others — all otherwise perfectly good, high-confidence bios) that
+  // validate() rejected wholesale over a single now-past "upcoming" entry.
+  // Wikipedia's prose describing a project as upcoming doesn't get
+  // re-edited the moment its year passes, so Claude's extraction was
+  // faithful to a now-outdated source, not wrong — dropping just that
+  // entry here is what actually fixes it, since validate() itself is
+  // correct to reject a genuinely-stale entry if one reaches it.
+  it('drops an upcoming_work entry whose year has already passed instead of losing the whole bio', async () => {
+    const client = makeMockClient(validClaudeResponse({
+      upcoming_work: [{ title: 'A Past-Due Project', type: 'film', year: String(new Date().getFullYear() - 1) }],
+    }));
+    const bio = await runClaudePipeline(client, makeGuest(), testEntity, testConanConn, 'claude-sonnet-4-6');
+    expect(bio).not.toBeNull();
+    expect(bio?.upcoming_work).toEqual([]);
+    expect(validate(bio!).ok).toBe(true);
+  });
+
+  it('keeps an upcoming_work entry whose year has not passed yet', async () => {
+    const client = makeMockClient(validClaudeResponse({
+      upcoming_work: [{ title: 'A Real Upcoming Project', type: 'film', year: String(new Date().getFullYear() + 1) }],
+    }));
+    const bio = await runClaudePipeline(client, makeGuest(), testEntity, testConanConn, 'claude-sonnet-4-6');
+    expect(bio?.upcoming_work?.map(w => w.title)).toEqual(['A Real Upcoming Project']);
   });
 
   it('upgrades conan_connection to direct when conan_mentions is non-empty', async () => {
