@@ -905,7 +905,10 @@
     },
     "profession": [
       "actor",
-      "comedian"
+      "comedian",
+      "writer",
+      "director",
+      "producer"
     ],
     "known_for": [
       {
@@ -914,9 +917,19 @@
         "year": "2002"
       },
       {
+        "title": "Eastbound & Down",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
         "title": "The Mindy Project",
         "type": "tv",
         "year": "2012"
+      },
+      {
+        "title": "Bless the Harts",
+        "type": "tv",
+        "year": "2019"
       },
       {
         "title": "The Afterparty",
@@ -924,29 +937,119 @@
         "year": "2022"
       },
       {
-        "title": "The Studio",
+        "title": "History of the World, Part II",
         "type": "tv",
-        "year": "2025"
-      }
-    ],
-    "recent_work": [
+        "year": "2023"
+      },
       {
         "title": "The Studio",
         "type": "tv",
         "year": "2025"
+      },
+      {
+        "title": "Disaster Movie",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Neighbors",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Sisters",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Neighbors 2: Sorority Rising",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Suicide Squad",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Central Intelligence",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Snatched",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "The Oath",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Blockers",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Late Night",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Hunt",
+        "type": "film",
+        "year": "2020"
+      },
+      {
+        "title": "The Unbearable Weight of Massive Talent",
+        "type": "film",
+        "year": "2022"
+      },
+      {
+        "title": "Celebrity Jeopardy!",
+        "type": "tv",
+        "year": "2023"
       }
     ],
+    "recent_work": [
+      "History of the World, Part II (2023)",
+      "Celebrity Jeopardy! — won inaugural primetime season (2023)",
+      "The Studio (2025–present)"
+    ],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2013."
+      "type": "inferred",
+      "evidence": "First appeared on Conan in 2013."
     },
-    "description": "Ike Barinholtz is an actor and comedian best known for his work on MADtv, where he was a cast member beginning in 2002, and for his recurring role on The Mindy Project, which premiered in 2012. He has continued to work steadily in television, appearing in The Afterparty in 2022 and most recently in The Studio in 2025. A stand-up comedian and comedy peer, Barinholtz first appeared on Conan in 2013.",
+    "description": "Ike Barinholtz is an American actor, comedian, writer, director, and producer who built his career through long-running television roles on MADtv, The Mindy Project, and Bless the Harts before earning a Critics' Choice Award and an Emmy nomination for his work on Apple TV+'s The Studio. His film credits include Neighbors, Suicide Squad, Blockers, and The Unbearable Weight of Massive Talent, and he co-wrote Central Intelligence. He also won the inaugural primetime season of Celebrity Jeopardy! in 2023, raising $1,000,000 for charity. Barinholtz likely first crossed paths with Conan O'Brien around 2013, during his rising profile as a cast member on The Mindy Project.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ike_Barinholtz"
     ],
-    "enrichedAt": "2026-06-19T20:35:39.924Z"
+    "enrichedAt": "2026-09-09T21:51:03.392Z",
+    "birth_year": "1977",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Critics' Choice Award for Best Supporting Actor in a Comedy Series",
+      "Primetime Emmy Award nominee",
+      "Actor Award nominee"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": [
+      {
+        "title": "Artificial",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "CoComelon: The Movie",
+        "type": "film",
+        "year": "2027"
+      }
+    ]
   },
   "Werner Herzog": {
     "entity": {
@@ -1168,7 +1271,8 @@
     },
     "profession": [
       "actress",
-      "writer"
+      "writer",
+      "producer"
     ],
     "known_for": [
       {
@@ -1180,26 +1284,128 @@
         "title": "The Comeback",
         "type": "tv",
         "year": "2005"
+      },
+      {
+        "title": "Mad About You",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Web Therapy",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "Unbreakable Kimmy Schmidt",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "Feel Good",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "Space Force",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "HouseBroken",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Time Bandits",
+        "type": "tv",
+        "year": "2024"
+      },
+      {
+        "title": "No Good Deed",
+        "type": "tv",
+        "year": "2024"
+      },
+      {
+        "title": "Who Do You Think You Are?",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "25 Words or Less",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "Romy and Michele's High School Reunion",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "The Opposite of Sex",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Kabluey",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Analyze This",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "P.S. I Love You",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Easy A",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Neighbors",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "The Boss Baby",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Booksmart",
+        "type": "film",
+        "year": "2019"
       }
     ],
     "recent_work": [
-      {
-        "title": "The Comeback",
-        "type": "tv",
-        "year": "2026"
-      }
+      "Time Bandits (2024)",
+      "No Good Deed (2024)"
     ],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+      "type": "direct",
+      "evidence": "Wikipedia: \"Briefly, Kudrow joined with Conan O'Brien and director Tim Hillman in the short-lived improv troupe Unexpected Company.\""
     },
-    "description": "Lisa Kudrow is an American actress and writer best known for her role in the long-running television series *Friends*, which premiered in 1994, and for *The Comeback*, which she created and starred in beginning in 2005 and which returned for a new installment in 2026. She may have first appeared on *Late Night with Conan O'Brien* as early as 1994, possibly coinciding with the debut of *Friends*. Her work across both comedy and dramatic television has established her as a significant presence in American entertainment over several decades.",
+    "description": "Lisa Kudrow is an American actress, writer, and producer best known for playing Phoebe Buffay on the long-running NBC sitcom Friends and Valerie Cherish on HBO's mockumentary series The Comeback, on which she also served as co-creator and executive producer. A Primetime Emmy Award winner, she began her career with The Groundlings improv troupe in Los Angeles — where she briefly shared a stage with Conan O'Brien in the short-lived troupe Unexpected Company. Her television work spans Web Therapy, Unbreakable Kimmy Schmidt, Space Force, and most recently Time Bandits and No Good Deed, both in 2024. On film, she earned praise for Romy and Michele's High School Reunion and The Opposite of Sex.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Lisa_Kudrow"
     ],
-    "enrichedAt": "2026-07-20T17:28:40.400Z"
+    "enrichedAt": "2026-09-09T21:51:03.249Z",
+    "birth_year": "1963",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "Primetime Emmy Award winner",
+      "two Actor Awards"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Johnny Knoxville": {
     "entity": {
@@ -1220,29 +1426,132 @@
         "year": "2000"
       },
       {
-        "title": "Jackass (film franchise)",
+        "title": "Jackass: The Movie",
         "type": "film",
         "year": "2002"
+      },
+      {
+        "title": "Jackass Number Two",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Jackass 2.5",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Jackass 3D",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Jackass 3.5",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Jackass Presents: Bad Grandpa",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Jackass Forever",
+        "type": "film",
+        "year": "2022"
+      },
+      {
+        "title": "Jackass 4.5",
+        "type": "film",
+        "year": "2022"
+      },
+      {
+        "title": "Jackass: Best and Last",
+        "type": "film",
+        "year": "2026"
+      },
+      {
+        "title": "Men in Black II",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Grand Theft Parsons",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "A Dirty Shame",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Walking Tall",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "The Dukes of Hazzard",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "The Ringer",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Lords of Dogtown",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Daltry Calhoun",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "The Last Stand",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Teenage Mutant Ninja Turtles",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Skiptrace",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Reboot",
+        "type": "tv",
+        "year": "2022"
       }
     ],
     "recent_work": [
-      {
-        "title": "Jackass (film franchise)",
-        "type": "film",
-        "year": "2026"
-      }
+      "Jackass: Best and Last (2026)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "Johnny Knoxville is a stunt performer, actor, producer, and screenwriter best known for creating and starring in the MTV series *Jackass*, which debuted in 2000, and the subsequent film franchise that launched in 2002. He has continued his work with the franchise into 2026. Knoxville may have first appeared on *Late Night with Conan O'Brien* around 2002, coinciding with the release of the original *Jackass* film.",
+    "description": "Johnny Knoxville is an American stunt performer, actor, producer, and screenwriter best known as a co-creator and star of MTV's Jackass, the reality slapstick stunt franchise that ran from 2000 through its final film installment, Jackass: Best and Last, in 2026. Beyond the Jackass universe—which includes Bad Grandpa and Jackass Forever—he has taken on acting roles in Men in Black II, The Dukes of Hazzard, Walking Tall, A Dirty Shame, and The Last Stand, and voiced Leonardo in Teenage Mutant Ninja Turtles. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien around 2002, coinciding with the launch of his film career.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Johnny_Knoxville"
     ],
-    "enrichedAt": "2026-08-24T16:16:15.338Z"
+    "enrichedAt": "2026-09-09T21:51:01.119Z",
+    "birth_year": "1971",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Denis Leary": {
     "entity": {
@@ -1308,7 +1617,6 @@
       "director",
       "political commentator",
       "actor",
-      "activist",
       "television host"
     ],
     "known_for": [
@@ -1321,26 +1629,101 @@
         "title": "The Problem with Jon Stewart",
         "type": "tv",
         "year": "2021"
+      },
+      {
+        "title": "Short Attention Span Theater",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "You Wrote It, You Watch It",
+        "type": "tv",
+        "year": "1992"
+      },
+      {
+        "title": "The Jon Stewart Show",
+        "type": "tv",
+        "year": "1993"
+      },
+      {
+        "title": "Big Daddy",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Death to Smoochy",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Rally to Restore Sanity and/or Fear",
+        "type": "other",
+        "year": "2010"
+      },
+      {
+        "title": "The Colbert Report",
+        "type": "tv",
+        "year": "2005"
+      },
+      {
+        "title": "The Nightly Show with Larry Wilmore",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "The Late Show with Stephen Colbert",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "America (The Book): A Citizen's Guide to Democracy Inaction",
+        "type": "other",
+        "year": "2004"
+      },
+      {
+        "title": "Earth (The Book): A Visitor's Guide to the Human Race",
+        "type": "other",
+        "year": "2010"
+      },
+      {
+        "title": "78th Academy Awards",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "80th Academy Awards",
+        "type": "tv",
+        "year": ""
       }
     ],
     "recent_work": [
-      {
-        "title": "The Daily Show",
-        "type": "tv",
-        "year": "2024"
-      }
+      "Returned to The Daily Show for Monday episodes as host and executive producer (2024)",
+      "The Daily Show part-time since 2024"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Jon Stewart is a comedian, writer, producer, director, actor, political commentator, activist, and television host. He is best known for hosting *The Daily Show*, a role he held beginning in 1999, and for *The Problem with Jon Stewart*, which debuted in 2021. He returned to *The Daily Show* in 2024. Stewart may have first crossed paths with Conan O'Brien as early as 1993, when he reportedly appeared on *Late Night with Conan O'Brien* in the show's early days.",
+    "description": "Jon Stewart is an American comedian, writer, producer, director, actor, and television host best known as the longtime anchor of Comedy Central's The Daily Show, which he helmed from 1999 to 2015 and to which he returned part-time in 2024. He previously hosted The Problem with Jon Stewart on Apple TV+ from 2021 to 2023, and has served as executive producer of The Colbert Report, The Nightly Show with Larry Wilmore, and The Late Show with Stephen Colbert. A recipient of 24 Primetime Emmy Awards, two Grammys, five Peabody Awards, and the Mark Twain Prize for American Humor, Stewart likely crossed paths with Conan O'Brien during his early television career, having first appeared on Late Night with Conan O'Brien in 1993.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jon_Stewart"
     ],
-    "enrichedAt": "2026-06-19T20:37:11.873Z"
+    "enrichedAt": "2026-09-09T21:51:13.208Z",
+    "birth_year": "1962",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "24 Primetime Emmy Awards",
+      "2 Grammy Awards",
+      "5 Peabody Awards",
+      "Bronze Medallion (2019)",
+      "Mark Twain Prize for American Humor (2022)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Liam Neeson": {
     "entity": {
@@ -3233,13 +3616,19 @@
     "profession": [
       "comedian",
       "actor",
+      "singer",
       "writer"
     ],
     "known_for": [
       {
+        "title": "SCTV",
+        "type": "tv",
+        "year": ""
+      },
+      {
         "title": "Saturday Night Live",
         "type": "tv",
-        "year": "1984"
+        "year": ""
       },
       {
         "title": "Three Amigos",
@@ -3247,34 +3636,163 @@
         "year": "1986"
       },
       {
-        "title": "Only Murders in the Building",
-        "type": "tv",
-        "year": "2021"
+        "title": "Innerspace",
+        "type": "film",
+        "year": "1987"
+      },
+      {
+        "title": "Three Fugitives",
+        "type": "film",
+        "year": "1989"
       },
       {
         "title": "Father of the Bride",
         "type": "film",
         "year": "1991"
-      }
-    ],
-    "recent_work": [
+      },
+      {
+        "title": "Captain Ron",
+        "type": "film",
+        "year": "1992"
+      },
+      {
+        "title": "Clifford",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "The Pebble and the Penguin",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Father of the Bride Part II",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Mars Attacks!",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "Jungle 2 Jungle",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "The Prince of Egypt",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "The Goodbye Girl",
+        "type": "other",
+        "year": "1993"
+      },
+      {
+        "title": "Little Me",
+        "type": "other",
+        "year": "1998"
+      },
+      {
+        "title": "Mumford",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Jimmy Neutron: Boy Genius",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "Treasure Planet",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "The Santa Clause 3: The Escape Clause",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "The Cat in the Hat Knows a Lot About That!",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "Madagascar 3: Europe's Most Wanted",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Frankenweenie",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "The Wind Rises",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Mulaney",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Maya & Marty",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "The Morning Show",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "An Evening You Will Forget for the Rest of Your Life",
+        "type": "other",
+        "year": "2018"
+      },
       {
         "title": "Only Murders in the Building",
         "type": "tv",
-        "year": "2024"
+        "year": "2021"
       }
+    ],
+    "recent_work": [
+      "Only Murders in the Building"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
     },
-    "description": "Martin Short is a comedian, actor, and writer best known for his work on *Saturday Night Live* (1984) and films including *Three Amigos* (1986) and *Father of the Bride* (1991). He has remained a consistent presence in television and film, with recent work including *Only Murders in the Building*, in which he has starred since 2021 and continued through 2024. Short may have first appeared on *Late Night with Conan O'Brien* as early as 1997, suggesting a connection to O'Brien that spans several decades.",
+    "description": "Martin Short is a Canadian comedian, actor, singer, and writer who built his reputation through sketch comedy on SCTV and Saturday Night Live, where he originated beloved characters including Ed Grimley and Jiminy Glick. His film credits span decades, from Three Amigos and Father of the Bride to voice work in The Prince of Egypt and Treasure Planet. On Broadway, he won a Tony Award for Little Me. Since 2021, he has co-starred alongside Steve Martin and Selena Gomez in the Hulu comedy series Only Murders in the Building, earning Emmy, Golden Globe, and SAG Award recognition. He likely crossed paths with Conan O'Brien as early as his first appearance on Late Night with Conan O'Brien in 1997.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Martin_Short"
     ],
-    "enrichedAt": "2026-07-27T17:58:14.420Z"
+    "enrichedAt": "2026-09-09T21:53:18.158Z",
+    "birth_year": "1950",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "Canadian",
+    "prestige_signals": [
+      "two Primetime Emmy Awards",
+      "two SAG Best Actor Awards",
+      "Tony Award for Best Actor in a Musical",
+      "Tony Award nomination for Best Actor in a Musical",
+      "four Primetime Emmy Award nominations for An Evening You Will Forget for the Rest of Your Life",
+      "Primetime Emmy Award nomination for Only Murders in the Building",
+      "Golden Globe Award nomination for Only Murders in the Building",
+      "Critics' Choice Television Award nomination for Only Murders in the Building",
+      "SAG Award winner for Only Murders in the Building",
+      "Officer of the Order of Canada"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Jon Lovitz": {
     "entity": {
@@ -4261,9 +4779,89 @@
     ],
     "known_for": [
       {
+        "title": "Hillside",
+        "type": "tv",
+        "year": "1991"
+      },
+      {
+        "title": "Two Guys and a Girl",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "National Lampoon's Van Wilder",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Blade: Trinity",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Waiting...",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "X-Men Origins: Wolverine",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "The Proposal",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Green Lantern",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "The Croods",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Turbo",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Woman in Gold",
+        "type": "film",
+        "year": "2015"
+      },
+      {
         "title": "Deadpool",
         "type": "film",
         "year": "2016"
+      },
+      {
+        "title": "Life",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Deadpool 2",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Detective Pikachu",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "6 Underground",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Croods franchise",
+        "type": "film",
+        "year": "2020"
       },
       {
         "title": "Free Guy",
@@ -4271,9 +4869,14 @@
         "year": "2021"
       },
       {
-        "title": "The Proposal",
+        "title": "The Adam Project",
         "type": "film",
-        "year": "2009"
+        "year": "2022"
+      },
+      {
+        "title": "Welcome to Wrexham",
+        "type": "tv",
+        "year": "2022"
       },
       {
         "title": "Deadpool & Wolverine",
@@ -4282,23 +4885,35 @@
       }
     ],
     "recent_work": [
-      {
-        "title": "Deadpool & Wolverine",
-        "type": "film",
-        "year": "2024"
-      }
+      "Welcome to Wrexham (2022–present)",
+      "Deadpool & Wolverine (2024)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "Ryan Reynolds is an actor, entrepreneur, and film producer. He is known for his roles in *The Proposal* (2009), *Free Guy* (2021), and the *Deadpool* franchise, including *Deadpool* (2016) and *Deadpool & Wolverine* (2024), his most recent major release. Reynolds has also pursued ventures beyond acting as an entrepreneur and producer. He may have first appeared on *Late Night with Conan O'Brien* as early as 2002.",
+    "description": "Ryan Reynolds is a Canadian-American actor, entrepreneur, and film producer whose films as a leading actor have grossed over $6.6 billion worldwide. He rose to prominence through comedic roles in National Lampoon's Van Wilder and The Proposal before achieving his greatest commercial success as the title character in the Deadpool franchise, culminating in the record-breaking Deadpool & Wolverine (2024). A two-time Primetime Emmy winner, Reynolds also co-owns Welsh soccer club Wrexham, documented in the Emmy Award-winning series Welcome to Wrexham. A businessman with a stake in Mint Mobile, he likely crossed paths with Conan O'Brien as early as his Late Night appearances around 2002.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ryan_Reynolds"
     ],
-    "enrichedAt": "2026-06-22T19:58:11.434Z"
+    "enrichedAt": "2026-09-09T21:52:16.089Z",
+    "birth_year": "1976",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "Canadian",
+    "prestige_signals": [
+      "two Primetime Emmy Award winner",
+      "Grammy Award nominee (two nominations)",
+      "Golden Globe Award nominee",
+      "Time 100 (2017)",
+      "People's Sexiest Man Alive (2010)",
+      "Hollywood Walk of Fame star (2017)",
+      "world's second-highest-paid actor in 2020 and 2024"
+    ],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Christina Applegate": {
     "entity": {
@@ -4677,26 +5292,74 @@
         "title": "Average Joe",
         "type": "tv",
         "year": ""
-      }
-    ],
-    "recent_work": [
+      },
       {
-        "title": "Average Joe",
+        "title": "The Tonight Show with Conan O'Brien",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "Conan",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "Deon Cole's Black Box",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Angie Tribeca",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "Face Value",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "The Standups",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Deon Cole: Cole Hearted",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Grown-ish",
         "type": "tv",
         "year": ""
       }
     ],
+    "recent_work": [
+      "Average Joe"
+    ],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Conan in 2016."
+      "type": "direct",
+      "evidence": "Wikipedia: \"Cole was nominated for two Primetime Emmy Awards for co-writing the late-night talk shows The Tonight Show with Conan O'Brien and Conan; for the latter, he was also nominated for three Writers Guild of America Awards.\""
     },
-    "description": "Deon Cole is an American actor, comedian, and screenwriter. He is perhaps best known for his role in the television series *Black-ish*, which premiered in 2014, and for his appearances on the game show *To Tell the Truth* beginning in 2020. His more recent work includes the television series *Average Joe*. Cole may also have a connection to *Conan*, with what appears to be a first appearance on the program in 2016, though the extent of that relationship is unclear.",
+    "description": "Deon Cole is an American actor, comedian, and screenwriter best known for his long-running role as Charlie Telphy on the ABC sitcom Black-ish, a performance that earned him nominations for two NAACP Image Awards and two Screen Actors Guild Awards. He currently stars in Average Joe. Before his acting profile rose, Cole was a staff writer on The Tonight Show with Conan O'Brien and Conan, work that brought him two Primetime Emmy nominations and three Writers Guild of America nominations, and he also performed on Conan O'Brien's 2010 comedy tour. His other credits include Angie Tribeca, Grown-ish, and the Netflix stand-up special Deon Cole: Cole Hearted.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Deon_Cole"
     ],
-    "enrichedAt": "2026-06-22T19:59:46.460Z"
+    "enrichedAt": "2026-09-09T21:51:13.682Z",
+    "birth_year": "1972",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "NAACP Image Award nominee",
+      "Screen Actors Guild Award nominee",
+      "Primetime Emmy Award nominee",
+      "Writers Guild of America Award nominee"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Susie Essman": {
     "entity": {
@@ -4725,26 +5388,78 @@
         "title": "Broad City",
         "type": "tv",
         "year": "2015"
-      }
-    ],
-    "recent_work": [
+      },
       {
-        "title": "Curb Your Enthusiasm",
+        "title": "Crank Yankers",
         "type": "tv",
-        "year": "2024"
+        "year": ""
+      },
+      {
+        "title": "The Daily Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Roast of Bob Saget",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "Super Rhino",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Million Dollar Password",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Crocodile Dundee II",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Punchline",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "What Would Susie Say: Bullshit Wisdom About Love, Life and Comedy",
+        "type": "other",
+        "year": "2009"
+      },
+      {
+        "title": "8 Out of 10 Cats",
+        "type": "tv",
+        "year": "2007"
       }
     ],
+    "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "Susie Essman is a comedian, actress, producer, and writer best known for her role on HBO's *Curb Your Enthusiasm*, which she has appeared in since 2000 and most recently in 2024. Her additional credits include the animated film *Bolt* (2008) and the comedy series *Broad City* (2015). She may have first appeared on *Late Night with Conan O'Brien* in 2004, though this has not been confirmed. Over the course of her career, Essman has established herself as a consistent presence across stand-up, television, and film.",
+    "description": "Susie Essman is an American comedian, actress, producer, and writer best known for playing the sharp-tongued Susie Greene on HBO's Curb Your Enthusiasm, a role she held from 2000 through 2024. She also voiced Mittens in the Disney animated film Bolt and played Bobbi Wexler on Broad City. Her comedy career spans more than three decades of stand-up, with early television appearances on The Tonight Show with Johnny Carson and HBO specials. She has an upcoming guest role in season two of Adults. Essman likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2004.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Susie_Essman"
     ],
-    "enrichedAt": "2026-06-22T19:59:58.243Z"
+    "enrichedAt": "2026-09-09T21:52:09.683Z",
+    "birth_year": "1955",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": [
+      {
+        "title": "Adults",
+        "type": "tv",
+        "year": ""
+      }
+    ]
   },
   "Ron Howard": {
     "entity": {
@@ -5033,26 +5748,75 @@
         "title": "The Late Show with Stephen Colbert",
         "type": "tv",
         "year": "2015"
-      }
-    ],
-    "recent_work": [
+      },
       {
-        "title": "The Late Show with Stephen Colbert",
+        "title": "The Daily Show",
         "type": "tv",
-        "year": "2026"
+        "year": ""
+      },
+      {
+        "title": "Exit 57",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Dana Carvey Show",
+        "type": "tv",
+        "year": "1996"
+      },
+      {
+        "title": "Strangers with Candy",
+        "type": "tv",
+        "year": "1999"
+      },
+      {
+        "title": "Rally to Restore Sanity and/or Fear",
+        "type": "other",
+        "year": "2010"
+      },
+      {
+        "title": "Colbert Super PAC",
+        "type": "other",
+        "year": "2011"
+      },
+      {
+        "title": "I Am America (And So Can You!)",
+        "type": "other",
+        "year": "2007"
+      },
+      {
+        "title": "White House Correspondents' Association Dinner",
+        "type": "other",
+        "year": "2006"
       }
     ],
+    "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
-    "description": "Stephen Colbert is a comedian, writer, producer, actor, and political commentator best known for hosting Comedy Central's *The Colbert Report*, which launched in 2005, and CBS's *The Late Show with Stephen Colbert*, which he has hosted since 2015 and continues to host as of 2026. He may have first appeared on *Late Night with Conan O'Brien* as early as 2003, though that connection has not been fully confirmed. Across his career, Colbert has worked in multiple capacities in television, including as a writer and producer in addition to his on-screen roles.",
+    "description": "Stephen Colbert is an American comedian, writer, producer, actor, and television host best known for hosting Comedy Central's satirical The Colbert Report from 2005 to 2014, where he popularized the term 'truthiness,' and CBS's The Late Show with Stephen Colbert from 2015 to 2026. A veteran of The Daily Show as a correspondent, he also appeared on The Dana Carvey Show and co-created the sketch series Exit 57 and sitcom Strangers with Candy. A winner of eleven Primetime Emmy Awards, two Grammys, and three Peabody Awards, Colbert likely crossed paths with Conan O'Brien as early as 2003 on Late Night with Conan O'Brien, during the years he was building his profile as a Daily Show correspondent.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Stephen_Colbert"
     ],
-    "enrichedAt": "2026-06-22T20:01:14.194Z"
+    "enrichedAt": "2026-09-09T21:52:22.848Z",
+    "birth_year": "1964",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "eleven Primetime Emmy Awards winner",
+      "two Grammy Awards winner",
+      "three Peabody Awards winner",
+      "Time's 100 Most Influential People 2006",
+      "Time's 100 Most Influential People 2012",
+      "New York Times Best Seller list No. 1 (2007)",
+      "hosted 69th Primetime Emmy Awards"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Jeff Ross": {
     "entity": {
@@ -5111,20 +5875,120 @@
     "entity": {
       "name": "B. J. Novak",
       "wikipedia_url": "https://en.wikipedia.org/wiki/B._J._Novak",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actor",
+      "comedian",
+      "screenwriter",
+      "author",
+      "producer",
+      "director"
+    ],
+    "known_for": [
+      {
+        "title": "Punk'd",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "The Office",
+        "type": "tv",
+        "year": "2005"
+      },
+      {
+        "title": "Reign Over Me",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Inglourious Basterds",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "The Smurfs",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Saving Mr. Banks",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "The Smurfs 2",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "One More Thing: Stories and Other Stories",
+        "type": "other",
+        "year": "2014"
+      },
+      {
+        "title": "The Book with No Pictures",
+        "type": "other",
+        "year": "2014"
+      },
+      {
+        "title": "The Amazing Spider-Man 2",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "The Newsroom",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "The Founder",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "The Premise",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Vengeance",
+        "type": "film",
+        "year": "2022"
+      }
+    ],
+    "recent_work": [
+      "The Premise (2021)",
+      "Vengeance (2022)"
+    ],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
+      "type": "direct",
+      "evidence": "Wikipedia: \"He performed on Comedy Central's Premium Blend and on Late Night with Conan O'Brien.\""
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-06-22T20:01:30.866Z"
+    "description": "BJ Novak is an American actor, comedian, screenwriter, author, producer, and director best known for his breakout role as Ryan Howard on the NBC mockumentary sitcom The Office, where his acting, writing, and producing earned him two Screen Actors Guild Awards, a Writers Guild of America Award, and five Emmy nominations. His film credits include Inglourious Basterds, Saving Mr. Banks, The Amazing Spider-Man 2, and The Founder, and he made his directorial debut with Vengeance in 2022. He has also authored the books One More Thing and The Book with No Pictures. Early in his career, he performed on Late Night with Conan O'Brien.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/B._J._Novak"
+    ],
+    "enrichedAt": "2026-09-09T21:52:27.983Z",
+    "birth_year": "1979",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Screen Actors Guild Award winner (two)",
+      "Writers Guild of America Award winner",
+      "Primetime Emmy Award for Outstanding Comedy Series nominee (five nominations)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": [
+      {
+        "title": "The Devil Wears Prada 2",
+        "type": "film",
+        "year": "2026"
+      }
+    ]
   },
   "Paul F Tompkins": {
     "entity": {
@@ -5143,7 +6007,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-06-22T20:01:32.205Z"
+    "enrichedAt": "2026-09-09T21:52:16.583Z"
   },
   "David Cross": {
     "entity": {
@@ -5511,24 +6375,25 @@
         "year": "2006"
       }
     ],
-    "recent_work": [
-      {
-        "title": "Late Night with Seth Meyers",
-        "type": "tv",
-        "year": "2024"
-      }
-    ],
+    "recent_work": [],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
+      "type": "industry",
+      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "Seth Meyers is a comedian, television host, writer, actor, and producer. He joined the cast of *Saturday Night Live* in 2001 and became a prominent presence on the show as anchor of *Weekend Update* beginning in 2006. He has hosted *Late Night with Seth Meyers* since 2014, continuing that work through 2024. He may have had an early television appearance on *Late Night with Conan O'Brien* in 2002, which could represent one of his earlier national platform appearances prior to his rise at *SNL*.",
+    "description": "Seth Meyers is an American comedian, writer, actor, and producer best known as the host of Late Night with Seth Meyers on NBC, a role he has held since 2014. Before stepping behind the desk, he spent over a decade as a cast member on Saturday Night Live, where he served as head writer and longtime anchor of the news parody segment Weekend Update. A comedy peer of Conan O'Brien, Meyers likely crossed paths with him early in his career, having first appeared on Late Night with Conan O'Brien in 2002, around the time he was establishing himself on the SNL cast.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Seth_Meyers"
     ],
-    "enrichedAt": "2026-06-22T20:03:09.863Z"
+    "enrichedAt": "2026-09-09T21:50:59.402Z",
+    "birth_year": "1973",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Kate Hudson": {
     "entity": {
@@ -5661,7 +6526,22 @@
         "year": "2009"
       },
       {
+        "title": "Despicable Me",
+        "type": "film",
+        "year": "2010"
+      },
+      {
         "title": "Bad Teacher",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "The Muppets",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Jeff, Who Lives at Home",
         "type": "film",
         "year": "2011"
       },
@@ -5681,24 +6561,9 @@
         "year": "2014"
       },
       {
-        "title": "Despicable Me",
-        "type": "film",
-        "year": "2010"
-      },
-      {
-        "title": "The Muppets",
-        "type": "film",
-        "year": "2011"
-      },
-      {
         "title": "The End of the Tour",
         "type": "film",
         "year": "2015"
-      },
-      {
-        "title": "Jeff, Who Lives at Home",
-        "type": "film",
-        "year": "2011"
       },
       {
         "title": "The Discovery",
@@ -5724,59 +6589,30 @@
         "title": "Shrinking",
         "type": "tv",
         "year": "2023"
-      },
-      {
-        "title": "Can't Hardly Wait",
-        "type": "film",
-        "year": "1998"
-      },
-      {
-        "title": "Get Him to the Greek",
-        "type": "film",
-        "year": "2010"
-      },
-      {
-        "title": "Gulliver's Travels",
-        "type": "film",
-        "year": "2010"
-      },
-      {
-        "title": "Nightmares!",
-        "type": "other",
-        "year": "2014"
-      },
-      {
-        "title": "CSI: Crime Scene Investigation",
-        "type": "tv",
-        "year": ""
       }
     ],
     "recent_work": [
-      {
-        "title": "Shrinking",
-        "type": "tv",
-        "year": "2023"
-      }
+      "Shrinking"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "Jason Segel is an American actor, comedian, screenwriter, and producer. He first gained attention with roles in the television series *Freaks and Geeks* (1999) and *Undeclared* (2001) before reaching wider audiences through the long-running sitcom *How I Met Your Mother*. His film credits include *Knocked Up* (2007), *Forgetting Sarah Marshall* (2008), *I Love You, Man* (2009), *The Muppets* (2011), and *The End of the Tour* (2015), among others. He may have first appeared on *Late Night with Conan O'Brien* as early as 2006. His most recent notable work is the television series *Shrinking*, which began in 2023.",
+    "description": "Jason Segel is an American actor, comedian, screenwriter, and producer best known for playing Marshall Eriksen on the long-running CBS sitcom How I Met Your Mother. He launched his career with Judd Apatow on Freaks and Geeks and Undeclared before starring in a string of studio comedies including Forgetting Sarah Marshall, which he also wrote, I Love You, Man, and The Muppets. His dramatic turn in The End of the Tour earned him an Independent Spirit Award nomination. Most recently, he co-created and stars in the Apple TV+ series Shrinking, earning two Emmy and two Golden Globe nominations for the role. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2006.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jason_Segel"
     ],
-    "enrichedAt": "2026-09-08T23:50:21.595Z",
+    "enrichedAt": "2026-09-09T21:52:14.345Z",
     "birth_year": "1980",
     "death_year": "",
     "gender": "male",
     "nationality": "American",
     "prestige_signals": [
-      "Independent Spirit Award for Best Male Lead nominee",
-      "Primetime Emmy Award nominee (two nominations)",
-      "Golden Globe Award nominee (two nominations)"
+      "Independent Spirit Award nomination for Best Male Lead",
+      "two Primetime Emmy Award nominations",
+      "two Golden Globe Award nominations"
     ],
     "primary_platform": "tv",
     "upcoming_work": []
@@ -6480,7 +7316,8 @@
     },
     "profession": [
       "actress",
-      "model"
+      "model",
+      "television host"
     ],
     "known_for": [
       {
@@ -6489,34 +7326,136 @@
         "year": "2000"
       },
       {
-        "title": "Star Trek: Strange New Worlds",
-        "type": "tv",
-        "year": "2022"
+        "title": "X2",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "X-Men: The Last Stand",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "X-Men: First Class",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Femme Fatale",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Rollerball",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "The Punisher",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Godsend",
+        "type": "film",
+        "year": ""
       },
       {
         "title": "Star Trek: Discovery",
         "type": "tv",
         "year": "2019"
-      }
-    ],
-    "recent_work": [
+      },
       {
         "title": "Star Trek: Strange New Worlds",
         "type": "tv",
-        "year": "2024"
+        "year": "2022"
+      },
+      {
+        "title": "Ugly Betty",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "The Librarians",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Skin Wars",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Pepper Dennis",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Eastwick",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "King & Maxwell",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "NTSF:SD:SUV::",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Carpoolers",
+        "type": "tv",
+        "year": "2007"
+      },
+      {
+        "title": "House of Style",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "Space Ghost Coast to Coast",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Electro Goth Tribute to Prince",
+        "type": "music",
+        "year": "2005"
+      },
+      {
+        "title": "Realness",
+        "type": "music",
+        "year": "2015"
       }
     ],
+    "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Rebecca Romijn is an American actress and model. She gained recognition for her role in *X-Men* (2000) and has more recently been seen in the Star Trek franchise, appearing in *Star Trek: Discovery* (2019) and *Star Trek: Strange New Worlds*, with work on the latter continuing through 2024. She may have first appeared on *Late Night with Conan O'Brien* as early as 1996.",
+    "description": "Rebecca Romijn is an American actress and former model best known for playing the shape-shifting Mystique across the X-Men film series and for her ongoing role as Una Chin-Riley in Star Trek: Strange New Worlds. Her television work includes recurring roles on Ugly Betty and The Librarians, as well as hosting the reality competition Skin Wars. She has also voiced Lois Lane in the DC Animated Movie Universe and contributed to music projects including a cover of Prince's 'Darling Nikki.' She likely crossed paths with Conan O'Brien early in her public profile, with a first appearance on Late Night with Conan O'Brien believed to date to 1996.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Rebecca_Romijn"
     ],
-    "enrichedAt": "2026-09-07T20:14:43.494Z"
+    "enrichedAt": "2026-09-09T21:53:12.879Z",
+    "birth_year": "1972",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": [
+      {
+        "title": "X-Men",
+        "type": "film",
+        "year": "2026"
+      }
+    ]
   },
   "Jackie Chan": {
     "entity": {
@@ -6906,7 +7845,7 @@
     "entity": {
       "name": "Joe Buck",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Joe_Buck",
-      "confidence": 0.7
+      "confidence": 1
     },
     "profession": [
       "sportscaster",
@@ -6920,44 +7859,57 @@
         "year": ""
       },
       {
-        "title": "Fox NFL Coverage",
+        "title": "ESPN Jeopardy!",
         "type": "tv",
-        "year": "1994"
+        "year": ""
       },
       {
-        "title": "Fox MLB Coverage",
+        "title": "Fox Sports NFL coverage",
         "type": "tv",
-        "year": "1994"
+        "year": ""
       },
       {
-        "title": "Sports Jeopardy!",
+        "title": "Fox Sports MLB coverage",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Super Bowl (six calls)",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "World Series (23 calls)",
         "type": "tv",
         "year": ""
       }
     ],
     "recent_work": [
-      {
-        "title": "Monday Night Football",
-        "type": "tv",
-        "year": "2024"
-      },
-      {
-        "title": "Sports Jeopardy!",
-        "type": "tv",
-        "year": "2024"
-      }
+      "Lead play-by-play announcer for Monday Night Football on ESPN and ABC",
+      "Host of ESPN Jeopardy! on Disney+"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
-    "description": "Joe Buck is a sportscaster, play-by-play announcer, and television host. He has been a fixture in sports broadcasting since 1994, when he began covering NFL and MLB games for Fox. His work on Fox NFL Coverage and Fox MLB Coverage established him as one of the most recognizable voices in American sports television. Buck has also hosted Sports Jeopardy! and currently calls games for Monday Night Football, with both roles continuing into 2024. He may be best known to late-night audiences through an appearance on Late Night with Conan O'Brien, where he reportedly first appeared in 2003.",
-    "confidence": 0.7,
-    "needs_review": true,
+    "description": "Joe Buck is an American sportscaster widely regarded as one of the most recognizable voices in sports broadcasting. He currently serves as the lead play-by-play announcer for Monday Night Football on ESPN and ABC and hosts ESPN Jeopardy! on Disney+. Previously the flagship voice of Fox Sports from 1994 to 2022, he has called six Super Bowls and 23 World Series, earning membership in the Sports Broadcasting Hall of Fame alongside his father Jack Buck. His honors include the 2020 Pete Rozelle Radio-Television Award and the 2026 Ford C. Frick Award. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2003.",
+    "confidence": 1,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Joe_Buck"
     ],
-    "enrichedAt": "2026-08-03T18:04:08.607Z"
+    "enrichedAt": "2026-09-09T21:53:11.033Z",
+    "birth_year": "1969",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Member of the Sports Broadcasting Hall of Fame",
+      "2020 Pete Rozelle Radio-Television Award from the Pro Football Hall of Fame",
+      "2026 Ford C. Frick Award from the National Baseball Hall of Fame"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Paul Bettany": {
     "entity": {
@@ -7774,31 +8726,70 @@
         "title": "Politically Incorrect",
         "type": "tv",
         "year": "1993"
-      }
-    ],
-    "recent_work": [
-      {
-        "title": "Real Time with Bill Maher",
-        "type": "tv",
-        "year": "2026"
       },
       {
-        "title": "Club Random",
-        "type": "podcast",
-        "year": "2026"
+        "title": "Religulous",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Vice",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "D.C. Cab",
+        "type": "film",
+        "year": "1983"
+      },
+      {
+        "title": "Ratboy",
+        "type": "film",
+        "year": "1986"
+      },
+      {
+        "title": "House II: The Second Story",
+        "type": "film",
+        "year": "1987"
+      },
+      {
+        "title": "Cannibal Women in the Avocado Jungle of Death",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Pizza Man",
+        "type": "film",
+        "year": "1991"
       }
     ],
+    "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Bill Maher is a television host, comedian, actor, and political commentator best known for his long-running HBO series *Real Time with Bill Maher*, which premiered in 2003 and continues to air as of 2026. He first gained national attention hosting *Politically Incorrect* beginning in 1993. In 2022, he launched the podcast *Club Random*, which remains active in 2026. Maher may be familiar to Conan O'Brien's audience, having possibly appeared on *Late Night with Conan O'Brien* as early as 1995.",
+    "description": "Bill Maher is an American comedian, television host, actor, and political commentator best known for his long-running HBO political talk show Real Time with Bill Maher, which he has hosted since 2003, and his podcast Club Random, launched in 2022. He previously hosted Politically Incorrect on Comedy Central and ABC from 1993 to 2002. A recipient of the Mark Twain Prize for American Humor and a Hollywood Walk of Fame star, Maher has earned 41 Primetime Emmy nominations and a win for his work as executive producer on Vice. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1995.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Bill_Maher"
     ],
-    "enrichedAt": "2026-08-03T18:07:18.984Z"
+    "enrichedAt": "2026-09-09T21:53:22.965Z",
+    "birth_year": "1956",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Comedy Central's 100 greatest stand-up comedians of all time (No. 38, 2005)",
+      "Hollywood Walk of Fame star (2010)",
+      "Mark Twain Prize for American Humor (2026)",
+      "41 Primetime Emmy Award nominations",
+      "Primetime Emmy Award win for executive producer of Vice (2014)",
+      "Two Grammy Award nominations",
+      "Tony Award nomination"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Queen Latifah": {
     "entity": {
@@ -8872,20 +9863,105 @@
     "entity": {
       "name": "Eric André",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Eric_Andr%C3%A9",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "comedian",
+      "actor",
+      "singer",
+      "television host",
+      "writer",
+      "producer",
+      "musician"
+    ],
+    "known_for": [
+      {
+        "title": "The Eric Andre Show",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "Man Seeking Woman",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Ironheart",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Disenchantment",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "The Lion King",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Mitchells vs. The Machines",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Sing 2",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Trolls Band Together",
+        "type": "film",
+        "year": "2023"
+      },
+      {
+        "title": "Don't Trust the B— in Apartment 23",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "2 Broke Girls",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Legalize Everything",
+        "type": "other",
+        "year": "2020"
+      },
+      {
+        "title": "Bad Trip",
+        "type": "film",
+        "year": "2021"
+      }
+    ],
+    "recent_work": [
+      "Trolls Band Together (2023)",
+      "The Eric Andre Show (concluded 2023)",
+      "Ironheart (Marvel Cinematic Universe miniseries)",
+      "2024 Emmy Award win for The Eric Andre Show"
+    ],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2012."
+      "type": "inferred",
+      "evidence": "First appeared on Conan in 2012."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-07-06T18:28:58.880Z"
+    "description": "Eric Andre is an American comedian, actor, writer, producer, and musician best known as the creator and host of The Eric Andre Show, the Adult Swim surreal comedy series that ran from 2012 to 2023 and earned him a 2024 Emmy Award. His acting credits include Man Seeking Woman on FXX and Stuart Clarke in the Marvel Cinematic Universe series Ironheart, while his voice work spans The Lion King, Sing 2, The Mitchells vs. The Machines, and Trolls Band Together. He also created and starred in the Netflix prank film Bad Trip. He likely crossed paths with Conan O'Brien as early as 2012, around the time The Eric Andre Show launched.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Eric_Andr%C3%A9"
+    ],
+    "enrichedAt": "2026-09-09T21:54:11.495Z",
+    "birth_year": "1983",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Emmy Award winner – Outstanding Performer in a Short Form Comedy or Drama Series (2024)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Wanda Sykes": {
     "entity": {
@@ -8902,7 +9978,7 @@
       {
         "title": "The Chris Rock Show",
         "type": "tv",
-        "year": "1999"
+        "year": "1997"
       },
       {
         "title": "The New Adventures of Old Christine",
@@ -8915,29 +9991,138 @@
         "year": "2001"
       },
       {
-        "title": "The Upshaws",
+        "title": "Black-ish",
         "type": "tv",
-        "year": "2021"
-      }
-    ],
-    "recent_work": [
+        "year": "2015"
+      },
+      {
+        "title": "The Marvelous Mrs. Maisel",
+        "type": "tv",
+        "year": "2020"
+      },
       {
         "title": "The Upshaws",
         "type": "tv",
-        "year": "2026"
+        "year": "2021"
+      },
+      {
+        "title": "The Other Two",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "The Good Fight",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Monster-in-Law",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "My Super Ex-Girlfriend",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Evan Almighty",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "License to Wed",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Over the Hedge",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Barnyard",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Brother Bear 2",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Rio",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Ice Age: Continental Drift",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Ice Age: Collision Course",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "UglyDolls",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Wanda at Large",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Tongue Untied",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Wanda Sykes: Sick & Tired",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "The Wanda Sykes Show",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "Pootie Tang",
+        "type": "film",
+        "year": ""
       }
     ],
+    "recent_work": [
+      "The Upshaws (2021–2026) on Netflix",
+      "The Other Two (2019–2023)"
+    ],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
+      "type": "industry",
+      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "Wanda Sykes is a stand-up comedian, actress, and writer whose television credits include *The Chris Rock Show* (1999), *Curb Your Enthusiasm* (2001), *The New Adventures of Old Christine* (2006), and *The Upshaws* (2021), which she continues with new work in 2026. She may be best known to Conan O'Brien's audience through what appears to have been an early appearance on *Late Night with Conan O'Brien* in 1998, possibly marking one of her prominent national television appearances during that period.",
+    "description": "Wanda Sykes is an American stand-up comedian, actress, and writer who first gained industry recognition as a writer on The Chris Rock Show, earning a Primetime Emmy Award in 1999. She built a sustained television presence through recurring roles on Curb Your Enthusiasm, The New Adventures of Old Christine, Black-ish, and The Marvelous Mrs. Maisel, and more recently starred in the Netflix comedy The Upshaws through 2026. Her film work spans live-action features such as Monster-in-Law and Evan Almighty alongside voice roles in animated films including Over the Hedge and the Ice Age franchise. A comedy peer of Conan O'Brien's, she likely crossed paths with him early in both their careers, having first appeared on Late Night with Conan O'Brien in 1998.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Wanda_Sykes"
     ],
-    "enrichedAt": "2026-07-06T18:29:06.288Z"
+    "enrichedAt": "2026-09-09T21:51:18.726Z",
+    "birth_year": "1964",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "Primetime Emmy Award winner (Outstanding Writing for a Variety, Music, or Comedy Special, 1999)",
+      "Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series nominee (Black-ish)",
+      "Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series nominee (The Marvelous Mrs. Maisel)",
+      "Named one of the 25 funniest people in America by Entertainment Weekly (2004)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Ed Helms": {
     "entity": {
@@ -9058,22 +10243,150 @@
   },
   "Tom Arnold": {
     "entity": {
-      "name": "Tom Arnold",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Tom Arnold (actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tom_Arnold_(actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "comedian"
+    ],
+    "known_for": [
+      {
+        "title": "Roseanne",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Jackie Thomas Show",
+        "type": "tv",
+        "year": "1992"
+      },
+      {
+        "title": "The Woman Who Loved Elvis",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "True Lies",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "Nine Months",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Big Bully",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "Carpool",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "The Stupids",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "McHale's Navy",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Animal Factory",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "The Best Damn Sports Show Period",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Cradle 2 the Grave",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Mr. 3000",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Happy Endings",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "The Kid & I",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Pride",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Gardens of the Night",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "The Great Buck Howard",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "My Big Redneck Wedding",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Sons of Anarchy",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Madea's Witness Protection",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "I'm A Celebrity...Get Me Out of Here!",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "The Hunt for the Trump Tapes",
+        "type": "tv",
+        "year": "2018"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-07-06T18:29:44.685Z"
+    "description": "Tom Arnold is an American actor and comedian best known for playing Arnie Thomas on the long-running sitcom Roseanne, a role he wrote for himself during his marriage to the show's star, Roseanne Barr. His film credits span several decades and include True Lies, Nine Months, McHale's Navy, Cradle 2 the Grave, and Madea's Witness Protection, among many others. He also hosted The Best Damn Sports Show Period for four years and appeared on Sons of Anarchy. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1994, around the time his Hollywood profile was rising with the release of True Lies.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tom_Arnold_(actor)"
+    ],
+    "enrichedAt": "2026-09-09T21:54:14.969Z",
+    "birth_year": "1959",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Matthew Broderick": {
     "entity": {
@@ -9642,7 +10955,8 @@
     "profession": [
       "actress",
       "comedian",
-      "director"
+      "director",
+      "producer"
     ],
     "known_for": [
       {
@@ -9659,26 +10973,85 @@
         "title": "Serious Moonlight",
         "type": "film",
         "year": "2009"
+      },
+      {
+        "title": "RV",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Waitress",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "The Grand",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "In the Motherhood",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "Brothers & Sisters",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "A Fairly Odd Movie: Grow Up, Timmy Turner!",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "School Pride",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "We Need Help",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "I Can See Your Voice",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Tig and Cheryl: True Story",
+        "type": "podcast",
+        "year": "2020"
       }
     ],
     "recent_work": [
-      {
-        "title": "Curb Your Enthusiasm",
-        "type": "tv",
-        "year": "2024"
-      }
+      "Curb Your Enthusiasm (final season, 2024)",
+      "The Tim Dillon Show (2025)",
+      "The Joe Rogan Experience (2026)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
     },
-    "description": "Cheryl Hines is an American actress, comedian, and director best known for her role in the HBO series *Curb Your Enthusiasm*, which premiered in 2000 and in which she continued to appear as recently as 2024. Her additional credits include the television series *Suburgatory* (2011) and the 2009 film *Serious Moonlight*. She may have first appeared on *Late Night with Conan O'Brien* in 2007, though the precise nature of that connection has not been fully confirmed.",
+    "description": "Cheryl Hines is an American actress, comedian, and director best known for playing Cheryl David on HBO's long-running comedy Curb Your Enthusiasm (2000–2024), a role that earned her two Primetime Emmy nominations. She also starred as Dallas Royce on the ABC sitcom Suburgatory and made her directorial debut with the 2009 film Serious Moonlight. Her screen credits include RV, Waitress, and the poker mockumentary The Grand. She co-hosted the podcast Tig and Cheryl: True Story alongside Tig Notaro from 2020 to 2024. She likely crossed paths with Conan O'Brien during her appearances on Late Night with Conan O'Brien, where she is believed to have first appeared around 2007.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Cheryl_Hines"
     ],
-    "enrichedAt": "2026-07-06T18:32:04.980Z"
+    "enrichedAt": "2026-09-09T21:54:10.879Z",
+    "birth_year": "1965",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "Primetime Emmy Award nominee (Outstanding Supporting Actress in a Comedy Series, 2003)",
+      "Primetime Emmy Award nominee (Outstanding Supporting Actress in a Comedy Series, 2006)",
+      "Hollywood Walk of Fame star (2014)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Eva Mendes": {
     "entity": {
@@ -10016,48 +11389,99 @@
     },
     "profession": [
       "comedian",
-      "television host"
+      "presenter",
+      "writer"
     ],
     "known_for": [
-      {
-        "title": "8 Out of 10 Cats",
-        "type": "tv",
-        "year": "2005"
-      },
       {
         "title": "The Big Fat Quiz of the Year",
         "type": "tv",
         "year": "2004"
       },
       {
-        "title": "8 Out of 10 Cats Does Countdown",
+        "title": "8 Out of 10 Cats",
         "type": "tv",
-        "year": "2012"
-      }
-    ],
-    "recent_work": [
-      {
-        "title": "The Big Fat Quiz of the Year",
-        "type": "tv",
-        "year": "2024"
+        "year": "2005"
       },
       {
         "title": "8 Out of 10 Cats Does Countdown",
         "type": "tv",
-        "year": "2024"
+        "year": "2012"
+      },
+      {
+        "title": "Distraction",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Your Face or Mine?",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "10 O'Clock Live",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "A Comedy Roast",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "Roast Battle",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "The Fix",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "I Literally Just Told You",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Funny Business",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "LOL: Last One Laughing UK",
+        "type": "tv",
+        "year": "2025"
+      },
+      {
+        "title": "Am I The A******?",
+        "type": "tv",
+        "year": "2025"
       }
     ],
+    "recent_work": [
+      "LOL: Last One Laughing UK (2025)",
+      "Am I The A******? (2025)",
+      "The Tonight Show with Jimmy Fallon appearance (2024)"
+    ],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
+      "type": "direct",
+      "evidence": "Wikipedia: \"Conan O'Brien was an early supporter of Carr's career, with Carr appearing on Late Night with Conan O'Brien twice in 2002, twice in 2006, and again every year between 2007 and 2009  (the last appearance being on The Tonight Show with Conan O'Brien).\""
     },
-    "description": "Jimmy Carr is a British comedian and television host best known for his work on the long-running panel shows *8 Out of 10 Cats*, which began in 2005, and *The Big Fat Quiz of the Year*, which launched in 2004. He has also hosted *8 Out of 10 Cats Does Countdown* since its debut in 2012. Carr remains active in all three formats, with recent appearances on *The Big Fat Quiz of the Year* and *8 Out of 10 Cats Does Countdown* in 2024. He may have first appeared on *Late Night with Conan O'Brien* as early as 2002, though that connection has not been confirmed.",
+    "description": "Jimmy Carr is a British comedian, presenter, and writer known for his rapid-fire deadpan delivery of one-liners and dark, often controversial humour. He has hosted Channel 4's long-running panel shows The Big Fat Quiz of the Year, 8 Out of 10 Cats, and 8 Out of 10 Cats Does Countdown, while also establishing himself as an internationally touring stand-up comedian. His Netflix special Funny Business made him the first British comedian to headline the platform in that format. More recently he has hosted LOL: Last One Laughing UK and Am I The A******? on Comedy Central. Conan O'Brien was an early champion of Carr's career, with Carr appearing on Late Night with Conan O'Brien twice in 2002 and multiple further times through 2009.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Jimmy_Carr"
     ],
-    "enrichedAt": "2026-07-06T18:33:35.073Z"
+    "enrichedAt": "2026-09-09T21:55:12.299Z",
+    "birth_year": "1972",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "British",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "John Mayer": {
     "entity": {
@@ -10250,44 +11674,118 @@
         "year": "2015"
       },
       {
-        "title": "Star Trek: Discovery",
-        "type": "tv",
-        "year": "2019"
-      },
-      {
         "title": "The Morning Show",
         "type": "tv",
         "year": "2023"
       },
       {
-        "title": "Come See Me in the Good Light",
-        "type": "film",
-        "year": "2026"
-      }
-    ],
-    "recent_work": [
+        "title": "Star Trek: Discovery",
+        "type": "tv",
+        "year": "2019"
+      },
       {
         "title": "Star Trek: Starfleet Academy",
         "type": "tv",
         "year": "2026"
       },
       {
+        "title": "Under a Rock with Tig Notaro",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Tig Notaro: Boyish Girl Interrupted",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
         "title": "Come See Me in the Good Light",
         "type": "film",
         "year": "2026"
+      },
+      {
+        "title": "Good One",
+        "type": "music",
+        "year": "2011"
+      },
+      {
+        "title": "Live",
+        "type": "music",
+        "year": "2012"
+      },
+      {
+        "title": "Happy to Be Here",
+        "type": "other",
+        "year": "2018"
+      },
+      {
+        "title": "Professor Blastoff",
+        "type": "podcast",
+        "year": "2011"
+      },
+      {
+        "title": "Tig",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Knock Knock, It's Tig Notaro",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Army of the Dead",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Inside Amy Schumer",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Clown Service",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "I'm Just a Person",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "The Sarah Silverman Program",
+        "type": "tv",
+        "year": ""
       }
     ],
+    "recent_work": [
+      "The Morning Show (2023–2025)",
+      "Come See Me in the Good Light (2026)",
+      "Star Trek: Starfleet Academy (2026–present)"
+    ],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2012."
+      "type": "direct",
+      "evidence": "Wikipedia: \"In 2012, she appeared on Conan, and in May of that year on the live episode of This American Life, which was broadcast to theaters nationwide and on radio in edited form.\""
     },
-    "description": "Tig Notaro is a stand-up comedian, actress, writer, producer, and director. She is known for the semi-autobiographical television series *One Mississippi* (2015) and recurring roles in *Star Trek: Discovery* (2019) and *The Morning Show* (2023). A comedy peer of Conan O'Brien's, she first appeared on *Conan* in 2012. Her recent work includes *Star Trek: Starfleet Academy* and the film *Come See Me in the Good Light*, both arriving in 2026.",
+    "description": "Tig Notaro is an American stand-up comedian, actress, writer, director, and producer best known for her deadpan style and deeply personal material. She created and starred in the semi-autobiographical Amazon series One Mississippi, plays Chief Engineer Jett Reno across Star Trek: Discovery and Star Trek: Starfleet Academy, and has recurred on The Morning Show. Her 2015 HBO special Boyish Girl Interrupted earned an Emmy nomination, and she has twice been nominated for a Grammy for Best Comedy Album; in 2026 she received an Academy Award nomination as a producer on the documentary Come See Me in the Good Light. She first appeared on Conan in 2012, the same year she released her celebrated live album Live.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Tig_Notaro"
     ],
-    "enrichedAt": "2026-07-06T18:34:20.371Z"
+    "enrichedAt": "2026-09-09T21:52:21.169Z",
+    "birth_year": "1971",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "two-time Grammy Award for Best Comedy Album nominee",
+      "Primetime Emmy Award nominee for Boyish Girl Interrupted",
+      "Academy Award nominee for Come See Me in the Good Light (producer)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Rachel Dratch": {
     "entity": {
@@ -11299,9 +12797,19 @@
         "year": "1995"
       },
       {
+        "title": "Don't Be a Menace",
+        "type": "film",
+        "year": "1996"
+      },
+      {
         "title": "Scary Movie",
         "type": "film",
         "year": "2000"
+      },
+      {
+        "title": "Scary Movie 2",
+        "type": "film",
+        "year": "2001"
       },
       {
         "title": "White Chicks",
@@ -11309,29 +12817,129 @@
         "year": "2004"
       },
       {
-        "title": "Don't Be a Menace",
+        "title": "Little Man",
         "type": "film",
-        "year": "1996"
+        "year": "2006"
+      },
+      {
+        "title": "Dance Flick",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Above the Rim",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "The 6th Man",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Requiem for a Dream",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Norbit",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "G.I. Joe: The Rise of Cobra",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "The Heat",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "A Haunted House",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "A Haunted House 2",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Fifty Shades of Black",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Naked",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Sextuplets",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "On the Rocks",
+        "type": "film",
+        "year": "2020"
+      },
+      {
+        "title": "Respect",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Marlon",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Funniest Wins",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "In Living Color",
+        "type": "tv",
+        "year": "1992"
+      },
+      {
+        "title": "Him",
+        "type": "film",
+        "year": "2025"
       }
     ],
     "recent_work": [
-      {
-        "title": "Scary Movie",
-        "type": "film",
-        "year": "2026"
-      }
+      "Him (2025)",
+      "Scary Movie (2026)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Marlon Wayans is an actor, comedian, writer, and producer who first gained wide recognition through the television series *The Wayans Bros.*, which debuted in 1995. His film credits include *Don't Be a Menace* (1996), *Scary Movie* (2000), and *White Chicks* (2004). He is currently attached to *Scary Movie* (2026). Wayans may have first appeared on *Late Night with Conan O'Brien* as early as 1994, though the details of that connection remain unconfirmed. Throughout his career, he has worked consistently across performance, writing, and production.",
+    "description": "Marlon Wayans is an American actor, comedian, writer, and producer best known for his long creative partnership with brother Shawn Wayans on the WB sitcom The Wayans Bros. and a string of comedy films including Scary Movie, White Chicks, and the A Haunted House series. He has also taken on dramatic roles in films such as Requiem for a Dream and Respect. His television work includes co-writing and starring in the NBC sitcom Marlon and hosting the TBS competition series Funniest Wins. Recent credits include the supernatural horror film Him and the forthcoming Scary Movie reboot. Wayans likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1994.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Marlon_Wayans"
     ],
-    "enrichedAt": "2026-07-13T18:07:46.675Z"
+    "enrichedAt": "2026-09-09T21:55:13.658Z",
+    "birth_year": "1972",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "film",
+    "upcoming_work": [
+      {
+        "title": "Scary Movie",
+        "type": "film",
+        "year": "2026"
+      }
+    ]
   },
   "Natalie Portman": {
     "entity": {
@@ -11922,43 +13530,88 @@
     "profession": [
       "actor",
       "television director",
-      "producer"
+      "producer",
+      "writer"
     ],
     "known_for": [
       {
-        "title": "John Carter in the NBC medical drama ER",
+        "title": "ER",
         "type": "tv",
         "year": "1994"
       },
       {
-        "title": "Robby",
-        "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "Robinavitch in the HBO Max medical drama The Pitt",
+        "title": "The Pitt",
         "type": "tv",
         "year": "2025"
+      },
+      {
+        "title": "Pirates of Silicon Valley",
+        "type": "tv",
+        "year": "1999"
+      },
+      {
+        "title": "The Librarian",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Falling Skies",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "The Red Line",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Leverage: Redemption",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "A Few Good Men",
+        "type": "film",
+        "year": "1992"
+      },
+      {
+        "title": "Donnie Darko",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "Enough",
+        "type": "film",
+        "year": "2002"
       }
     ],
     "recent_work": [
-      {
-        "title": "Robinavitch in the HBO Max medical drama The Pitt",
-        "type": "tv",
-        "year": "2025"
-      }
+      "The Pitt (2025–present)",
+      "Leverage: Redemption (2021–2025)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Noah Strausser Speer Wyle is an American actor, television director, producer and writer. He is best known for portraying Dr. John Carter in the NBC medical drama ER (1994–2005) and Dr. Michael \"Robby\" Robinavitch in the HBO Max medical drama The Pitt (2025–present). These performances earned him six Actor Awards, a Golden Globe Award and two Primetime Emmy Awards. First appeared on Late Night with Conan O'Brien in 1995.",
+    "description": "Noah Wyle is an American actor, director, producer, and writer best known for his long-running role as Dr. John Carter on the NBC drama ER and more recently as Dr. Michael Robinavitch on the HBO Max series The Pitt. His television work has earned him a Golden Globe, two Primetime Emmy Awards, and six Actor Awards. Beyond those flagship roles, he portrayed Steve Jobs in Pirates of Silicon Valley, led The Librarian franchise, and starred in Falling Skies, while also appearing in films including A Few Good Men and Donnie Darko. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1995, during his breakout years on ER.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Noah_Wyle"
     ],
-    "enrichedAt": "2026-07-13T18:09:58.477Z"
+    "enrichedAt": "2026-09-09T21:55:11.290Z",
+    "birth_year": "1971",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Golden Globe Award winner",
+      "two Primetime Emmy Awards winner",
+      "six Actor Awards winner",
+      "Critics' Choice Award nominee"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Matt LeBlanc": {
     "entity": {
@@ -13060,7 +14713,8 @@
       "actor",
       "voice actor",
       "television producer",
-      "screenwriter"
+      "screenwriter",
+      "podcast host"
     ],
     "known_for": [
       {
@@ -13069,9 +14723,39 @@
         "year": "1997"
       },
       {
+        "title": "I Still Know What You Did Last Summer",
+        "type": "film",
+        "year": "1998"
+      },
+      {
         "title": "She's All That",
         "type": "film",
         "year": "1999"
+      },
+      {
+        "title": "Wing Commander",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Down to You",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Boys and Girls",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Head over Heels",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "Summer Catch",
+        "type": "film",
+        "year": "2001"
       },
       {
         "title": "Scooby-Doo",
@@ -13079,29 +14763,83 @@
         "year": "2002"
       },
       {
+        "title": "Scooby-Doo 2: Monsters Unleashed",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Boston Legal",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Freddie",
+        "type": "tv",
+        "year": "2005"
+      },
+      {
         "title": "Star Wars Rebels",
         "type": "tv",
         "year": "2014"
-      }
-    ],
-    "recent_work": [
+      },
+      {
+        "title": "Star Wars: The Rise of Skywalker",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "24",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "Punky Brewster",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Mass Effect 3",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Dragon Age: Inquisition",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "That Was Pretty Scary",
+        "type": "podcast",
+        "year": "2023"
+      },
       {
         "title": "I Know What You Did Last Summer",
         "type": "film",
         "year": "2025"
       }
     ],
+    "recent_work": [
+      "That Was Pretty Scary (podcast, 2023)",
+      "I Know What You Did Last Summer (film, 2025)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1999."
     },
-    "description": "Freddie Prinze Jr. is an American actor, voice actor, television producer, and screenwriter. He rose to prominence with the horror film *I Know What You Did Last Summer* (1997), followed by the teen comedy *She's All That* (1999) and the live-action adaptation *Scooby-Doo* (2002). He later expanded his work into animation, voicing a lead character in the acclaimed *Star Wars Rebels* beginning in 2014. He returned to his breakthrough franchise with *I Know What You Did Last Summer* in 2025. He may have first appeared on *Late Night with Conan O'Brien* in 1999, likely connected to his rising film profile at the time.",
+    "description": "Freddie Prinze Jr. is an American actor who rose to prominence in the late 1990s with the horror franchise I Know What You Did Last Summer and the romantic comedy She's All That. He co-created and executive produced the ABC sitcom Freddie and spent four years voicing Jedi Knight Kanan Jarrus in Star Wars Rebels. He has also worked as a WWE writer and producer and lent his voice to video game roles in Mass Effect 3 and Dragon Age: Inquisition. In 2023 he launched the podcast That Was Pretty Scary, and he returned to his breakthrough franchise with a new installment of I Know What You Did Last Summer in 2025. He likely crossed paths with Conan O'Brien during a Late Night appearance around 1999, coinciding with the peak of his early film career.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Freddie_Prinze_Jr."
     ],
-    "enrichedAt": "2026-07-13T18:14:10.764Z"
+    "enrichedAt": "2026-09-09T21:55:24.754Z",
+    "birth_year": "1976",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Jason Schwartzman": {
     "entity": {
@@ -13650,7 +15388,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-07-27T17:58:51.814Z"
+    "enrichedAt": "2026-09-09T21:52:00.814Z"
   },
   "Hilary Swank": {
     "entity": {
@@ -13865,20 +15603,128 @@
     "entity": {
       "name": "Christopher Meloni",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Christopher_Meloni",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actor",
+      "executive producer"
+    ],
+    "known_for": [
+      {
+        "title": "Law & Order: Special Victims Unit",
+        "type": "tv",
+        "year": "1999"
+      },
+      {
+        "title": "Law & Order: Organized Crime",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Oz",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "Happy!",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "12 Monkeys",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Fear and Loathing in Las Vegas",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Runaway Bride",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Wet Hot American Summer",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "Harold & Kumar Go to White Castle",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Green Lantern: First Flight",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "42",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Man of Steel",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "True Blood",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "They Came Together",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Call of Duty: Black Ops III",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Marauders",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Pose",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "The Handmaid's Tale",
+        "type": "tv",
+        "year": "2019"
+      }
+    ],
+    "recent_work": [
+      "Law & Order: Special Victims Unit",
+      "Law & Order: Organized Crime"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-07-27T17:59:39.374Z"
+    "description": "Chris Meloni is an American actor best known for playing NYPD Detective Elliot Stabler across two NBC series — Law & Order: Special Victims Unit, where he appeared from 1999 to 2011 and again from 2021, and its spin-off Law & Order: Organized Crime — a role that earned him a Primetime Emmy nomination. He also portrayed the bisexual criminal Chris Keller on HBO's Oz and starred in and executive produced Syfy's Happy!. His film credits span 12 Monkeys, Fear and Loathing in Las Vegas, Wet Hot American Summer, and Man of Steel, among others. He likely crossed paths with Conan O'Brien during Late Night with Conan O'Brien around 2000.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Christopher_Meloni"
+    ],
+    "enrichedAt": "2026-09-09T21:55:24.754Z",
+    "birth_year": "1961",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Primetime Emmy Award nominee"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Ice Cube": {
     "entity": {
@@ -13946,34 +15792,107 @@
     ],
     "known_for": [
       {
-        "title": "Edwin Park in the Netflix series The Residence",
+        "title": "Agent Jimmy Woo (Marvel Cinematic Universe)",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "The Residence",
         "type": "tv",
         "year": "2025"
       },
       {
-        "title": "Louis Huang in the ABC sitcom Fresh Off the Boat",
+        "title": "Fresh Off the Boat",
         "type": "tv",
         "year": "2015"
+      },
+      {
+        "title": "IKEA Heights",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Office",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Veep",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Always Be My Maybe",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Shortcomings",
+        "type": "film",
+        "year": "2023"
+      },
+      {
+        "title": "Ant-Man and the Wasp",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Ant-Man and the Wasp: Quantumania",
+        "type": "film",
+        "year": "2023"
+      },
+      {
+        "title": "WandaVision",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Young Rock",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "The Interview",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Aquaman",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Aquaman and the Lost Kingdom",
+        "type": "film",
+        "year": "2023"
       }
     ],
     "recent_work": [
-      {
-        "title": "Edwin Park in the Netflix series The Residence",
-        "type": "tv",
-        "year": "2025"
-      }
+      "The Residence (2025)",
+      "Ant-Man and the Wasp: Quantumania (2023)",
+      "Shortcomings (2023)",
+      "Aquaman and the Lost Kingdom (2023)"
     ],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2015."
+      "type": "inferred",
+      "evidence": "First appeared on Conan in 2015."
     },
-    "description": "Randall Park is an American actor, filmmaker, and comedian. He is best known for his roles as Agent Jimmy Woo in the Marvel Cinematic Universe, FBI Special Agent Edwin Park in the Netflix series The Residence (2025), Louis Huang in the ABC sitcom Fresh Off the Boat (2015–2020), for which he was nominated for the Critics' Choice Television Award for Best Actor in a Comedy Series in 2016, and for IKEA Heights, a comedy web series. Comedy peer and fellow stand-up. First appeared on Conan in 2015.",
+    "description": "Randall Park is an American actor, filmmaker, and comedian best known for playing Agent Jimmy Woo in the Marvel Cinematic Universe — appearing in Ant-Man and the Wasp, Ant-Man and the Wasp: Quantumania, and WandaVision — and for starring as Louis Huang in the ABC sitcom Fresh Off the Boat, a role that earned him a Critics' Choice Television Award nomination. He also had recurring roles in Veep and The Office, co-wrote and co-starred in the Netflix film Always Be My Maybe, and directed the 2023 comedy-drama Shortcomings. More recently he led the Netflix series The Residence. He likely first crossed paths with Conan O'Brien in 2015.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Randall_Park"
     ],
-    "enrichedAt": "2026-08-10T16:30:13.199Z"
+    "enrichedAt": "2026-09-09T21:53:12.987Z",
+    "birth_year": "1974",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Critics' Choice Television Award for Best Actor in a Comedy Series nominee (2016)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Adam Devine": {
     "entity": {
@@ -14008,20 +15927,151 @@
     "entity": {
       "name": "J. B. Smoove",
       "wikipedia_url": "https://en.wikipedia.org/wiki/J._B._Smoove",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "comedian",
+      "actor",
+      "writer"
+    ],
+    "known_for": [
+      {
+        "title": "Def Comedy Jam",
+        "type": "tv",
+        "year": "1995"
+      },
+      {
+        "title": "Saturday Night Live",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Curb Your Enthusiasm",
+        "type": "tv",
+        "year": "2007"
+      },
+      {
+        "title": "Everybody Hates Chris",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Til Death",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Gong Show with Dave Attell",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "Cedric the Entertainer Presents",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Russell Simmons Presents: Stand-Up at The El Rey",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "The Millers",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Real Husbands of Hollywood",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Last Comic Standing",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Comedians in Cars Getting Coffee",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "Epic Rap Battles of History",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "Mapleworth Murders",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "Four Courses with J.B. Smoove",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "JB Smoove: That's How I Dooz It",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "The Smurfs 2",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Movie 43",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Dealin' with Idiots",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Spider-Man: Far From Home",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Spider-Man: No Way Home",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Grand Theft Auto V",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "May I Elaborate? Daily Wisdom from JB Smoove",
+        "type": "podcast",
+        "year": "2021"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2011."
+      "type": "direct",
+      "evidence": "Wikipedia: \"Smoove and Miles Grose co-host and created May I Elaborate? Daily Wisdom from JB Smoove, a podcast that debuted in April 2021 on the Team Coco podcast network.\""
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-08-10T16:32:30.291Z"
+    "description": "JB Smoove is an American comedian, actor, and writer best known for his long-running role as Leon Black on HBO's Curb Your Enthusiasm (2007–2024) and as a cast member of CBS's The Millers. He began his career on Def Comedy Jam in 1995 and later spent three years as a writer and performer on Saturday Night Live, earning a Writers Guild of America award. His screen credits include Spider-Man: Far From Home and Spider-Man: No Way Home, and he co-hosts the podcast May I Elaborate? Daily Wisdom from JB Smoove, which launched on the Team Coco podcast network in 2021.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/J._B._Smoove"
+    ],
+    "enrichedAt": "2026-09-09T21:55:13.698Z",
+    "birth_year": "1965",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "2007 Writers Guild of America award for Best Comedy/Variety Series"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Dave Chappelle": {
     "entity": {
@@ -14137,29 +16187,101 @@
         "year": "2005"
       },
       {
-        "title": "Scrabble",
+        "title": "Celebrity Name Game",
         "type": "tv",
-        "year": "2026"
-      }
-    ],
-    "recent_work": [
+        "year": "2014"
+      },
+      {
+        "title": "Join or Die with Craig Ferguson",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "Couple Thinkers",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "The Hustler",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Joy",
+        "type": "podcast",
+        "year": "2023"
+      },
+      {
+        "title": "The Drew Carey Show",
+        "type": "tv",
+        "year": "1996"
+      },
+      {
+        "title": "How to Train Your Dragon",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Winnie the Pooh",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Brave",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Between the Bridge and the River",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "American on Purpose",
+        "type": "other",
+        "year": "2009"
+      },
+      {
+        "title": "Riding the Elephant: A Memoir of Altercations, Humiliations, Hallucinations & Observations",
+        "type": "other",
+        "year": "2019"
+      },
+      {
+        "title": "Saving Grace",
+        "type": "film",
+        "year": "2000"
+      },
       {
         "title": "Scrabble",
         "type": "tv",
         "year": "2026"
       }
     ],
+    "recent_work": [
+      "Joy (podcast, 2023)",
+      "Scrabble on The CW Network (2026)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "Craig Ferguson is an actor, comedian, writer, and television host best known for his long tenure on *The Late Late Show with Craig Ferguson*, which he hosted beginning in 2005. His more recent work includes *Scrabble*, a television project set for 2026. Ferguson may have first appeared on *Late Night with Conan O'Brien* as early as 2000, though that connection has not been fully confirmed.",
+    "description": "Craig Ferguson is a Scottish-American actor, comedian, writer, and television host best known for hosting CBS's The Late Late Show with Craig Ferguson from 2005 to 2014, a run that earned him a Peabody Award. He subsequently won two Daytime Emmy Awards hosting Celebrity Name Game and has appeared as a game show host on The Hustler and, currently, Scrabble on The CW Network. He voiced Gobber in the How to Train Your Dragon film series and appeared for years as Nigel Wick on The Drew Carey Show. He launched his podcast Joy in 2023. Ferguson likely crossed paths with Conan O'Brien as early as his first reported appearance on Late Night with Conan O'Brien in 2000.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Craig_Ferguson"
     ],
-    "enrichedAt": "2026-08-10T16:38:28.321Z"
+    "enrichedAt": "2026-09-09T21:55:31.422Z",
+    "birth_year": "1962",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "Scottish and American",
+    "prestige_signals": [
+      "Peabody Award winner",
+      "Daytime Emmy Award winner (two)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Henry Winkler": {
     "entity": {
@@ -15197,7 +17319,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-08T23:47:41.944Z"
+    "enrichedAt": "2026-09-09T21:52:00.300Z"
   },
   "D'Arcy Carden": {
     "entity": {
@@ -18159,7 +20281,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T00:08:55.673Z"
+    "enrichedAt": "2026-09-09T21:54:02.246Z"
   },
   "Greg Fitzsimmons": {
     "entity": {
@@ -26721,7 +28843,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T06:47:00.414Z"
+    "enrichedAt": "2026-09-09T21:56:01.805Z"
   },
   "Martha Stewart": {
     "entity": {
@@ -27316,20 +29438,20 @@
       }
     ],
     "recent_work": [
-      "Secret Invasion (2023)",
-      "What If...? (2021–2024)"
+      "Secret Invasion (Disney+, 2023)",
+      "What If...? (Disney+, 2021–2024)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Samuel L. Jackson is an American actor and film producer whose credits span more than four decades and whose films have collectively grossed over $27 billion worldwide, making him the highest-grossing actor of all time. A BAFTA winner and Oscar nominee for his breakout role as Jules Winnfield in Pulp Fiction, he is equally recognized as Mace Windu in the Star Wars prequel trilogy and Nick Fury across eleven Marvel Cinematic Universe films, most recently in the Disney+ series Secret Invasion. He received the Academy Honorary Award in 2022. Jackson likely crossed paths with Conan O'Brien as far back as 1996, when he is believed to have first appeared on Late Night with Conan O'Brien.",
+    "description": "Samuel L. Jackson is an American actor and film producer whose career spans more than four decades and whose films have collectively grossed over $27 billion worldwide, making him the highest-grossing actor of all time. He earned a BAFTA for his breakout role as Jules Winnfield in Pulp Fiction and received the Academy Honorary Award in 2022. He is widely recognized as Mace Windu in the Star Wars prequel trilogy and as Nick Fury across eleven Marvel Cinematic Universe films, most recently in the Disney+ series Secret Invasion. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1996, the same year A Time to Kill was released.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Samuel_L._Jackson"
     ],
-    "enrichedAt": "2026-09-09T06:47:20.051Z",
+    "enrichedAt": "2026-09-09T21:56:22.952Z",
     "birth_year": "1948",
     "death_year": "",
     "gender": "male",
@@ -31815,7 +33937,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T06:51:01.154Z"
+    "enrichedAt": "2026-09-09T21:56:02.269Z"
   },
   "Michelle Obama": {
     "entity": {
@@ -33451,7 +35573,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T06:52:26.758Z"
+    "enrichedAt": "2026-09-09T21:56:01.707Z"
   },
   "James Spader": {
     "entity": {
@@ -33916,7 +36038,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T06:53:01.160Z"
+    "enrichedAt": "2026-09-09T21:57:01.006Z"
   },
   "Mike Tyson": {
     "entity": {
@@ -35806,7 +37928,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T06:54:36.887Z"
+    "enrichedAt": "2026-09-09T21:57:01.102Z"
   },
   "Arnold Schwarzenegger": {
     "entity": {
@@ -37535,20 +39657,122 @@
     "entity": {
       "name": "J. J. Abrams",
       "wikipedia_url": "https://en.wikipedia.org/wiki/J._J._Abrams",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "filmmaker",
+      "director",
+      "producer",
+      "screenwriter",
+      "television creator",
+      "composer"
+    ],
+    "known_for": [
+      {
+        "title": "Regarding Henry",
+        "type": "film",
+        "year": "1991"
+      },
+      {
+        "title": "Forever Young",
+        "type": "film",
+        "year": "1992"
+      },
+      {
+        "title": "Armageddon",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Felicity",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "Alias",
+        "type": "tv",
+        "year": "2001"
+      },
+      {
+        "title": "Cloverfield",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Lost",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Fringe",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "Star Trek",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Super 8",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Mission: Impossible III",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Star Trek Into Darkness",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Star Wars: The Force Awakens",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Star Wars: The Last Jedi",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Star Wars: The Rise of Skywalker",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Duster",
+        "type": "tv",
+        "year": "2025"
+      }
+    ],
+    "recent_work": [
+      "Duster (2025, co-creator, TV)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan in 2012."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T06:56:10.570Z"
+    "description": "J.J. Abrams is an American filmmaker whose career spans writing, directing, producing, and television creation across action, drama, and science fiction. He wrote or produced films including Armageddon, Cloverfield, the Star Trek reboot series, Super 8, and the Star Wars sequel trilogy entries The Force Awakens and The Rise of Skywalker — a body of work that has grossed over $4 billion worldwide. On television, he co-created Felicity, Alias, Lost, Fringe, and most recently Duster. He is a two-time Emmy winner for Lost. Abrams likely first crossed paths with Conan O'Brien around 2012, during a period when his Bad Robot projects were a dominant force in mainstream entertainment.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/J._J._Abrams"
+    ],
+    "enrichedAt": "2026-09-09T21:57:13.135Z",
+    "birth_year": "1966",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Emmy Award winner – Outstanding Directing for a Drama Series (Lost)",
+      "Emmy Award winner – Outstanding Drama Series (Lost)"
+    ],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Aimee Mann": {
     "entity": {
@@ -38869,47 +41093,107 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Phil_Hartman",
       "confidence": 1
     },
-    "profession": [],
+    "profession": [
+      "comedian",
+      "actor",
+      "screenwriter",
+      "graphic designer"
+    ],
     "known_for": [
       {
-        "title": "Glue",
+        "title": "Saturday Night Live",
+        "type": "tv",
+        "year": "1986"
+      },
+      {
+        "title": "NewsRadio",
+        "type": "tv",
+        "year": "1994"
+      },
+      {
+        "title": "The Simpsons",
         "type": "tv",
         "year": ""
       },
       {
-        "title": "The Simpsons, and appeared in the films Houseguest",
+        "title": "Pee-wee's Big Adventure",
+        "type": "film",
+        "year": "1985"
+      },
+      {
+        "title": "Pee-wee's Playhouse",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Pee-wee Herman Show",
+        "type": "tv",
+        "year": "1981"
+      },
+      {
+        "title": "Houseguest",
         "type": "film",
         "year": "1995"
       },
       {
-        "title": "Bilko",
+        "title": "Sgt. Bilko",
         "type": "film",
         "year": "1996"
       },
       {
         "title": "Jingle All the Way",
-        "type": "tv",
+        "type": "film",
         "year": "1996"
       },
       {
         "title": "Small Soldiers",
-        "type": "tv",
+        "type": "film",
         "year": "1998"
       },
       {
-        "title": "The Groundlings and Pee-Wee Herman",
-        "type": "tv",
-        "year": "1975"
+        "title": "Cheech and Chong's Next Movie",
+        "type": "film",
+        "year": "1980"
       },
       {
-        "title": "flights of voice fantasies",
-        "type": "tv",
-        "year": "1975"
-      },
-      {
-        "title": "Saturday Night Live",
-        "type": "tv",
+        "title": "Jumpin' Jack Flash",
+        "type": "film",
         "year": "1986"
+      },
+      {
+        "title": "Three Amigos",
+        "type": "film",
+        "year": "1986"
+      },
+      {
+        "title": "Stunt Rock",
+        "type": "film",
+        "year": "1978"
+      },
+      {
+        "title": "The Smurfs",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Challenge of the GoBots",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The 13 Ghosts of Scooby-Doo",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Dennis the Menace",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Spaceballs",
+        "type": "film",
+        "year": ""
       }
     ],
     "recent_work": [],
@@ -38917,18 +41201,24 @@
       "type": "direct",
       "evidence": "SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Philip Edward Hartman (né Hartmann; September 24, 1948 – May 28, 1998) was a Canadian and American comedian, actor, screenwriter, and graphic designer. Hartman was born in Brantford, Ontario, and his family moved to the United States when he was ten years old. After graduating from California State University, Northridge, with a degree in graphic arts, he designed album covers for bands including Poco and America. In 1975, Hartman joined the comedy group the Groundlings, where he helped Paul Reubens develop his character Pee-wee Herman. SNL/Simpsons writers room, 1988–1993. First appeared on Late Night with Conan O'Brien in 1994.",
+    "description": "Phil Hartman (1948–1998) was a Canadian-American comedian, actor, screenwriter, and graphic designer who spent eight seasons on Saturday Night Live, where he earned a Primetime Emmy Award in 1989 and became celebrated for portraying over 70 characters and impressions. He co-wrote Pee-wee's Big Adventure and made recurring appearances on Pee-wee's Playhouse, and voiced beloved recurring characters Lionel Hutz and Troy McClure on The Simpsons. After leaving SNL in 1994, he starred as Bill McNeal on the sitcom NewsRadio. A veteran of both the SNL and Simpsons writers' rooms, Hartman first appeared on Late Night with Conan O'Brien in 1994, the same year he departed the sketch series.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Phil_Hartman"
     ],
-    "enrichedAt": "2026-09-09T06:57:22.598Z",
-    "birth_year": "",
-    "death_year": "1985",
+    "enrichedAt": "2026-09-09T21:57:16.445Z",
+    "birth_year": "1948",
+    "death_year": "1998",
     "gender": "male",
-    "nationality": "",
-    "prestige_signals": []
+    "nationality": "Canadian and American",
+    "prestige_signals": [
+      "Primetime Emmy Award winner (1989)",
+      "Canada's Walk of Fame inductee (2012)",
+      "Hollywood Walk of Fame inductee (2014)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Katherine Heigl": {
     "entity": {
@@ -39908,9 +42198,9 @@
   },
   "Tom Jones": {
     "entity": {
-      "name": "Tom Jones",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "The Ballad of Tom Jones",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/The_Ballad_of_Tom_Jones",
+      "confidence": 1
     },
     "profession": [],
     "known_for": [],
@@ -39919,11 +42209,20 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T06:58:11.735Z"
+    "description": "Tom Jones is a music figure who likely crossed paths with Conan O'Brien as early as 1995 on Late Night with Conan O'Brien. He is perhaps best known in popular culture as the subject of \"The Ballad of Tom Jones,\" a 1998 collaboration between British band Space and Catatonia's Cerys Matthews that peaked at number four on the UK Singles Chart and earned a silver BPI certification for sales of at least 200,000 copies. The song also led to Space performing alongside Jones on Jools Holland's New Year's Eve television programme.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/The_Ballad_of_Tom_Jones"
+    ],
+    "enrichedAt": "2026-09-09T21:58:06.388Z",
+    "birth_year": "",
+    "death_year": "",
+    "gender": "",
+    "nationality": "",
+    "prestige_signals": [],
+    "primary_platform": "music",
+    "upcoming_work": []
   },
   "Jonathan Katz": {
     "entity": {
@@ -40397,7 +42696,7 @@
       "actress",
       "author",
       "television personality",
-      "podcast host"
+      "podcaster"
     ],
     "known_for": [
       {
@@ -40431,24 +42730,14 @@
         "year": "1999"
       },
       {
-        "title": "Scary Movie 2",
-        "type": "film",
-        "year": "2001"
-      },
-      {
         "title": "A Carol Christmas",
         "type": "tv",
         "year": "2003"
       },
       {
-        "title": "Cthulhu",
+        "title": "Scary Movie 2",
         "type": "film",
-        "year": "2007"
-      },
-      {
-        "title": "Kiss the Bride",
-        "type": "film",
-        "year": "2007"
+        "year": "2001"
       },
       {
         "title": "So Notorious",
@@ -40461,9 +42750,29 @@
         "year": "2007"
       },
       {
+        "title": "Cthulhu",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Kiss the Bride",
+        "type": "film",
+        "year": "2007"
+      },
+      {
         "title": "sTori Telling",
         "type": "other",
         "year": "2008"
+      },
+      {
+        "title": "Mommywood",
+        "type": "other",
+        "year": "2009"
+      },
+      {
+        "title": "Uncharted TerriTORI",
+        "type": "other",
+        "year": "2010"
       },
       {
         "title": "The Mistle-Tones",
@@ -40491,12 +42800,12 @@
         "year": "2018"
       },
       {
-        "title": "BH90210",
+        "title": "The Masked Singer",
         "type": "tv",
         "year": "2019"
       },
       {
-        "title": "The Masked Singer",
+        "title": "BH90210",
         "type": "tv",
         "year": "2019"
       },
@@ -40517,20 +42826,19 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Tori Spelling is an American actress, author, and podcast host best known for playing Donna Martin across the full run of Beverly Hills, 90210 and its spin-off BH90210. Her screen credits span television movies including A Friend to Die For and The Last Sharknado: It's About Time, and independent films such as Scary Movie 2 and The House of Yes. She has also built a presence as an author, with her autobiography sTori Telling reaching the top of the New York Times Best Seller list, and as co-host of the podcast 9021OMG alongside former co-star Jennie Garth. She likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1995, during her Beverly Hills, 90210 years.",
+    "description": "Tori Spelling is an American actress, author, and podcaster best known for playing Donna Martin across the full run of Beverly Hills, 90210 and its 2019 revival BH90210. She has worked steadily in television movies, including The Last Sharknado: It's About Time, and independent films such as The House of Yes, Trick, and Scary Movie 2. Her memoir sTori Telling reached the top of the New York Times Best Seller list, and she co-hosts the Beverly Hills, 90210 rewatch podcast 9021OMG with former co-star Jennie Garth. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 1995.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Tori_Spelling"
     ],
-    "enrichedAt": "2026-09-09T06:58:27.625Z",
+    "enrichedAt": "2026-09-09T21:58:15.198Z",
     "birth_year": "1973",
     "death_year": "",
     "gender": "female",
     "nationality": "American",
     "prestige_signals": [
-      "New York Times Best Seller list (sTori Telling)",
-      "Young Artist Award nominee (two nominations)"
+      "New York Times Best Seller list"
     ],
     "primary_platform": "tv",
     "upcoming_work": []
@@ -40824,7 +43132,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T06:59:00.292Z"
+    "enrichedAt": "2026-09-09T21:58:01.109Z"
   },
   "Steve Irwin": {
     "entity": {
@@ -41160,13 +43468,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Russell Crowe is a New Zealand-born actor and film director who has earned an Academy Award, a BAFTA Award, and two Golden Globes across a career spanning several decades. He broke through with Romper Stomper in 1992, gained international recognition with L.A. Confidential and The Insider, and reached global stardom playing the title role in Gladiator and portraying mathematician John Forbes Nash Jr. in A Beautiful Mind. His many subsequent credits include Master and Commander, Cinderella Man, American Gangster, The Nice Guys, and The Pope's Exorcist. He made his directorial debut with The Water Diviner in 2014. He likely crossed paths with Conan O'Brien as early as 1995, when he is believed to have first appeared on Late Night with Conan O'Brien.",
+    "description": "Russell Crowe is a New Zealand-born actor and film director whose career spans more than three decades. An Academy Award, a BAFTA, and two Golden Globes reflect a body of work that includes landmark roles in Gladiator, A Beautiful Mind, L.A. Confidential, and The Insider. He has also appeared in major studio productions ranging from Les Misérables and Man of Steel to The Nice Guys and Thor: Love and Thunder, and made his directorial debut with The Water Diviner in 2014. His most recent film credit is The Pope's Exorcist. He likely crossed paths with Conan O'Brien as far back as his early breakthrough years, with a first reported appearance on Late Night with Conan O'Brien in 1995.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Russell_Crowe"
     ],
-    "enrichedAt": "2026-09-09T06:59:14.215Z",
+    "enrichedAt": "2026-09-09T21:58:13.393Z",
     "birth_year": "1964",
     "death_year": "",
     "gender": "male",
@@ -41174,7 +43482,7 @@
     "prestige_signals": [
       "Academy Award winner",
       "BAFTA Award winner",
-      "Golden Globe winner (two)",
+      "Golden Globe winner",
       "AACTA Award for Best Actor in a Leading Role"
     ],
     "primary_platform": "film",
@@ -42424,20 +44732,151 @@
     "entity": {
       "name": "D. L. Hughley",
       "wikipedia_url": "https://en.wikipedia.org/wiki/D._L._Hughley",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "stand-up comedian",
+      "television host",
+      "radio personality",
+      "author"
+    ],
+    "known_for": [
+      {
+        "title": "ComicView",
+        "type": "tv",
+        "year": "1992"
+      },
+      {
+        "title": "The Hughleys",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "The Original Kings of Comedy",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "D. L. Hughley Breaks the News",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "The Jay Leno Show",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "The Fresh Prince of Bel-Air",
+        "type": "tv",
+        "year": "1993"
+      },
+      {
+        "title": "Studio 60 on the Sunset Strip",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Scrubs",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Dancing with the Stars",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Inspector Gadget",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "The Brothers",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "Inspector Gadget 2",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Scary Movie 3",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Soul Plane",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Cloud 9",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "D.L. Hughley: Notes From The GED Section",
+        "type": "music",
+        "year": "2005"
+      },
+      {
+        "title": "Weekends at the D.L.",
+        "type": "tv",
+        "year": "2005"
+      },
+      {
+        "title": "The D.L. Hughley Show",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "I Want You to Shut the F#ck Up",
+        "type": "other",
+        "year": "2012"
+      },
+      {
+        "title": "Black Man, White House",
+        "type": "other",
+        "year": "2017"
+      },
+      {
+        "title": "How Not to Get Shot",
+        "type": "other",
+        "year": "2018"
+      },
+      {
+        "title": "Surrender, White People",
+        "type": "other",
+        "year": "2020"
+      },
+      {
+        "title": "How to Survive America",
+        "type": "other",
+        "year": "2021"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:00:18.293Z"
+    "description": "D.L. Hughley is an American actor, stand-up comedian, television host, radio personality, and author best known as the original host of BET's ComicView, the star of the ABC/UPN sitcom The Hughleys, and one of the \"Big Four\" comedians featured in The Original Kings of Comedy. His television work spans CNN's D.L. Hughley Breaks the News, a correspondent role on The Jay Leno Show, and hosting The D.L. Hughley Show on TV One. His film credits include Inspector Gadget, Scary Movie 3, and Soul Plane. He has also authored five books on American politics and culture. Hughley likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1998.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/D._L._Hughley"
+    ],
+    "enrichedAt": "2026-09-09T21:59:14.492Z",
+    "birth_year": "1963",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Allen Covert": {
     "entity": {
@@ -43735,7 +46174,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:01:21.426Z"
+    "enrichedAt": "2026-09-09T21:59:01.505Z"
   },
   "Anthony Bourdain": {
     "entity": {
@@ -44143,7 +46582,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:02:00.632Z"
+    "enrichedAt": "2026-09-09T21:59:01.644Z"
   },
   "Benjamin McKenzie": {
     "entity": {
@@ -44151,18 +46590,93 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Ben_McKenzie",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actor",
+      "author",
+      "commentator",
+      "documentary filmmaker"
+    ],
+    "known_for": [
+      {
+        "title": "The O.C.",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Southland",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "Gotham",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Junebug",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "88 Minutes",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Goodbye World",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Some Kind of Beautiful",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Line of Duty",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Grand Horizons",
+        "type": "other",
+        "year": "2020"
+      },
+      {
+        "title": "Easy Money: Cryptocurrency, Casino Capitalism, and the Golden Age of Fraud",
+        "type": "other",
+        "year": "2023"
+      },
+      {
+        "title": "Everyone Is Lying to You for Money",
+        "type": "film",
+        "year": "2026"
+      }
+    ],
+    "recent_work": [
+      "Easy Money: Cryptocurrency, Casino Capitalism, and the Golden Age of Fraud (book, 2023)",
+      "Everyone Is Lying to You for Money (documentary film, 2026)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "",
+    "description": "Benjamin McKenzie is an American actor, author, and documentary filmmaker best known for starring television roles as Ryan Atwood on The O.C. (2003–2007), Ben Sherman on Southland (2009–2013), and James Gordon on Gotham (2014–2019). His film credits include the Academy Award-nominated Junebug (2005), 88 Minutes, and Line of Duty. In 2020 he made his Broadway debut in Grand Horizons. Beyond acting, McKenzie has become a prominent critic of the cryptocurrency industry, co-authoring Easy Money: Cryptocurrency, Casino Capitalism, and the Golden Age of Fraud (2023) and directing the investigative documentary Everyone Is Lying to You for Money (2026). He likely crossed paths with Conan O'Brien during his early rise to fame, with a first reported appearance on Late Night with Conan O'Brien in 2004.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:02:00.987Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ben_McKenzie"
+    ],
+    "enrichedAt": "2026-09-09T21:59:12.187Z",
+    "birth_year": "1978",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Academy Award-nominated film Junebug"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Roseanne Barr": {
     "entity": {
@@ -46944,7 +49458,7 @@
         "year": "2001"
       },
       {
-        "title": "The Proud Family (revival)",
+        "title": "The Proud Family (2022 revival)",
         "type": "tv",
         "year": "2022"
       },
@@ -46972,26 +49486,28 @@
         "title": "Living in Color: What's Funny about Me",
         "type": "other",
         "year": "2020"
-      }
-    ],
-    "recent_work": [
+      },
       {
         "title": "Storybound",
         "type": "tv",
         "year": "2022"
       }
     ],
+    "recent_work": [
+      "The Proud Family 2022 revival series",
+      "Storybound (2022), reading from his book Living in Color: What's Funny about Me"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "Tommy Davidson is an American actor and comedian best known as an original cast member of the sketch comedy series In Living Color. His television work spans several decades, including recurring roles on Between Brothers and Malcolm & Eddie, and his long-running voice role as Oscar Proud on The Proud Family, a character he reprised for the show's 2022 revival. His film credits include Booty Call, Bamboozled, and Black Dynamite. He is also the author of Living in Color: What's Funny about Me. Davidson likely crossed paths with Conan O'Brien as early as 1994, when he is believed to have first appeared on Late Night with Conan O'Brien.",
+    "description": "Tommy Davidson is an American actor and comedian best known as an original cast member of the sketch comedy series In Living Color. His television credits include Between Brothers, Malcolm & Eddie, and a long-running role as the voice of Oscar Proud on The Proud Family, a part he reprised for the show's 2022 revival. His film work includes Booty Call, Bamboozled, and Black Dynamite, which also spawned a television series. Davidson began his career as a stand-up comedian in 1984 and is the author of the memoir Living in Color: What's Funny about Me. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1994.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Tommy_Davidson"
     ],
-    "enrichedAt": "2026-09-09T07:04:43.332Z",
+    "enrichedAt": "2026-09-09T22:00:10.838Z",
     "birth_year": "1963",
     "death_year": "",
     "gender": "male",
@@ -47284,7 +49800,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:05:00.167Z"
+    "enrichedAt": "2026-09-09T22:00:01.001Z"
   },
   "Chris Eigeman": {
     "entity": {
