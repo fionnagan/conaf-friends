@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T22:21:01.487Z",
+  "generatedAt": "2026-09-09T22:31:01.715Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -142066,7 +142066,143 @@
       "id": "joe-queenan",
       "name": "Joe Queenan",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Joe Queenan (author)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Joe_Queenan_(author)",
+          "confidence": 1
+        },
+        "profession": [
+          "satirist",
+          "critic",
+          "author",
+          "columnist",
+          "playwright"
+        ],
+        "known_for": [
+          {
+            "title": "Red Lobster, White Trash and the Blue Lagoon",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "If You're Talking to Me, Your Career Must Be in Trouble",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Closing Time",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "The Unkindest Cut",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Balsamic Dreams",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Imperial Caddy",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "My Goodness",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Queenan Country",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "True Believers",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "One for the Books",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "Mickey Rourke for a Day",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "My Fair Hugh",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "So You Wanna Be a Gangster",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "12 Steps to Death",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Alms",
+            "type": "other",
+            "year": "2019"
+          },
+          {
+            "title": "Grudges",
+            "type": "other",
+            "year": "2020"
+          },
+          {
+            "title": "Genealogy",
+            "type": "other",
+            "year": "2021"
+          },
+          {
+            "title": "The Oracle",
+            "type": "other",
+            "year": "2022"
+          },
+          {
+            "title": "Serb Heat",
+            "type": "other",
+            "year": "1997"
+          },
+          {
+            "title": "Inside the NFL",
+            "type": "tv",
+            "year": "2005"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"Queenan has been a guest on The Late Show with David Letterman, Real Time with Bill Maher, The Daily Show, Today, Good Morning, America, Charlie Rose and Late Night with Conan O'Brien, and appeared more than a dozen times on Politically Incorrect.\""
+        },
+        "description": "Joe Queenan is an American satirist, critic, and author whose work spans books, journalism, film, and theater. He has written nine books, including the cultural tour Red Lobster, White Trash and the Blue Lagoon, the film criticism collection If You're Talking to Me, Your Career Must Be in Trouble, and the memoir Closing Time, a 2009 New York Times Notable Book. A longtime contributor to The Wall Street Journal and The Guardian, he won a Sports Emmy for his work on HBO's Inside the NFL. He has also written and directed short films and co-authored several stage plays. Queenan has appeared on Late Night with Conan O'Brien, among numerous other television programs.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Joe_Queenan_(author)"
+        ],
+        "enrichedAt": "2026-09-09T22:27:19.423Z",
+        "birth_year": "1950",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Sports Emmy winner"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -177893,7 +178029,90 @@
       "id": "andrew-scott",
       "name": "Andrew Scott",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Andrew Cunningham Scott",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Andrew_Cunningham_Scott",
+          "confidence": 1
+        },
+        "profession": [
+          "geologist",
+          "professor emeritus",
+          "palaeobotanist",
+          "science communicator"
+        ],
+        "known_for": [
+          {
+            "title": "Gilbert H. Cady Award",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "Fire on Earth (textbook)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "The Paper Museum of Cassiano dal Pozzo: Fossil Woods and Other Geological Specimens",
+            "type": "other",
+            "year": "2000"
+          },
+          {
+            "title": "In Our Time (BBC)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "BBC documentary on coal research",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          {
+            "title": "Richardson Award from the Geologists Association",
+            "type": "other",
+            "year": "2025"
+          },
+          {
+            "title": "Distinguished Research Professor appointment",
+            "type": "other",
+            "year": "2023"
+          },
+          {
+            "title": "POSTnote 717: Wildfire risks to UK landscapes",
+            "type": "other",
+            "year": "2024"
+          }
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2026."
+        },
+        "description": "Andrew Scott is a British geologist, palaeobotanist, and professor emeritus at Royal Holloway, University of London, widely regarded as a leading expert on wildfire, charcoal, and fire in deep time. He received the Gilbert H. Cady Award from the Geological Society of America in 2007 and the Richardson Award from the Geologists Association in 2025, and was appointed Distinguished Research Professor in 2023. His work spans academic publishing, science communication, and media appearances including BBC Radio's In Our Time. He likely crossed paths with Conan O'Brien on Conan O'Brien Needs a Friend around 2026, possibly in the context of his science communication work.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Andrew_Cunningham_Scott"
+        ],
+        "enrichedAt": "2026-09-09T22:29:11.742Z",
+        "birth_year": "1952",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "British",
+        "prestige_signals": [
+          "Gilbert H. Cady Award from the Geological Society of America (2007)",
+          "Presidents Award of the Geological Society of London",
+          "Presidents Award of the Palaeontological Society",
+          "Richardson Award from the Geologists Association (2025)",
+          "Fellow of the Geological Society of London",
+          "Fellow of the Geological Society of America",
+          "Fellow of the Royal Society of Arts",
+          "Leverhulme Fellowship"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -180425,7 +180644,37 @@
       "id": "george-hamilton",
       "name": "George Hamilton",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "George Douglas Hamilton",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/George_Douglas_Hamilton",
+          "confidence": 1
+        },
+        "profession": [
+          "runholder",
+          "station manager"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "George Douglas Hamilton was a New Zealand runholder and station manager, born in Antwerp, Belgium in 1835 and active in the nineteenth century until his death in 1911. The Wikipedia entry retrieved for this guest does not appear to match the George Hamilton associated with entertainment or Conan O'Brien's program. Based on available context, this guest likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1994, though the biographical record provided here does not support further detail about that connection or the guest's creative work.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/George_Douglas_Hamilton"
+        ],
+        "enrichedAt": "2026-09-09T22:30:06.108Z",
+        "birth_year": "1835",
+        "death_year": "1911",
+        "gender": "male",
+        "nationality": "New Zealand",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -197456,7 +197705,94 @@
       "id": "pj-orourke",
       "name": "PJ O'Rourke",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "P. J. O'Rourke",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/P._J._O'Rourke",
+          "confidence": 1
+        },
+        "profession": [
+          "author",
+          "journalist",
+          "political satirist"
+        ],
+        "known_for": [
+          {
+            "title": "Parliament of Whores",
+            "type": "other",
+            "year": "1991"
+          },
+          {
+            "title": "Give War a Chance",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "National Lampoon's Lemmings",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "National Lampoon's 1964 High School Yearbook",
+            "type": "other",
+            "year": "1974"
+          },
+          {
+            "title": "Modern Manners",
+            "type": "other",
+            "year": "1983"
+          },
+          {
+            "title": "Holidays in Hell",
+            "type": "other",
+            "year": "1989"
+          },
+          {
+            "title": "Republican Party Reptile",
+            "type": "other",
+            "year": "1987"
+          },
+          {
+            "title": "Driving Like Crazy",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Easy Money",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Wait Wait... Don't Tell Me!",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Real Time with Bill Maher",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "PJ O'Rourke was an American author, journalist, and political satirist who wrote more than twenty books spanning politics, economics, cars, and etiquette. His titles Parliament of Whores and Give War a Chance both reached No. 1 on The New York Times bestseller list, and he spent two decades as foreign-affairs desk chief at Rolling Stone. A longtime panelist on NPR's Wait Wait... Don't Tell Me! and a contributor to The Atlantic, the Wall Street Journal, and other major publications, he was one of the foremost voices in libertarian-conservative political humor. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1995. O'Rourke died in February 2022 at the age of 74.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/P._J._O'Rourke"
+        ],
+        "enrichedAt": "2026-09-09T22:30:10.092Z",
+        "birth_year": "1947",
+        "death_year": "2022",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
