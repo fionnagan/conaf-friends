@@ -325,7 +325,14 @@ async function runClaudePipeline(
   // Step 1: structured extraction
   const extractMsg = await client.messages.create({
     model: 'claude-sonnet-4-6',
-    max_tokens: 1200,
+    // known_for is uncapped ("ALL notable works") — a truly prolific guest's
+    // list alone can approach 1000+ tokens. A response cut off mid-JSON
+    // fails JSON.parse below and silently falls back to the weaker wiki-only
+    // pipeline for exactly the well-established guests this was meant to
+    // help most. 2500 gives real headroom without inflating cost for a
+    // typical guest — max_tokens is a cap, Claude only generates what the
+    // response actually needs.
+    max_tokens: 2500,
     system: `Extract structured biographical data from Wikipedia intro. Output valid JSON only. No markdown. Today: ${today}.`,
     messages: [{
       role: 'user',
