@@ -29,9 +29,32 @@ const RECENT_WORK_CUTOFF_YEAR = CURRENT_YEAR - 3;
 // ── Args ─────────────────────────────────────────────────────────────────────
 
 const args = process.argv.slice(2);
+// Deliberately reprocesses EVERY queued guest regardless of any other
+// filter, including --new-only below — an independent review flagged this
+// interaction explicitly: --force is the manual escape hatch for a targeted
+// fix (typically paired with --guest), and no automated caller passes both
+// flags together today, but if a future manual invocation does, --force
+// silently wins. That's --force's whole documented purpose working as
+// designed, not a bug, but worth stating outright rather than leaving
+// implicit in filter-ordering.
 const FORCE        = args.includes('--force');
 const WIKI_ONLY    = args.includes('--wiki-only');
 const RETRY_REVIEW = args.includes('--retry-review');
+// Real dollar-risk found in a cost review: without this flag, ANY guest's
+// bio re-qualifies for full re-enrichment once its enrichedAt timestamp
+// ages past TTL_MS — including guests a backlog-catchup run already
+// finished. Once the full guest archive is caught up, simply re-triggering
+// Backfill Full Bios after 30 days would silently re-spend real Claude
+// calls on the ENTIRE archive, not just guests that never had a bio —
+// directly contradicting that workflow's own header comment ("only ever
+// picks up guests still missing a bio entirely"), which was aspirational,
+// not actually enforced, before this flag existed. --new-only makes that
+// promise real: only a guest with NO existing bio at all ever qualifies,
+// regardless of staleness. weekly-ingest.yml's own invocation (`npm run
+// enrich:bios`, no flags) is unaffected and keeps today's TTL-based
+// staleness-refresh behavior — this is deliberately scoped to the one
+// workflow where re-spending on the whole archive was a real, unbounded risk.
+const NEW_ONLY      = args.includes('--new-only');
 const LIMIT        = (() => { const i = args.indexOf('--limit'); return i >= 0 ? parseInt(args[i + 1]) : MAX_PER_RUN; })();
 const ONLY         = (() => { const i = args.indexOf('--guest'); return i >= 0 ? args[i + 1] : null; })();
 // Lets a run be pointed at a cheaper model (e.g. a Haiku generation) for
@@ -39,6 +62,18 @@ const ONLY         = (() => { const i = args.indexOf('--guest'); return i >= 0 ?
 // guests, without editing code — defaults to the model this pipeline has
 // been validated against.
 const MODEL        = (() => { const i = args.indexOf('--model'); return i >= 0 ? args[i + 1] : 'claude-sonnet-4-6'; })();
+// Bounded concurrency for the guest-processing loop — cuts wall-clock time
+// (guests overlap their Wikipedia/Claude network waits) without changing
+// steady-state tokens/dollars spent, since concurrency doesn't change what's
+// sent per guest. Defaults to 1 (today's original, fully-serial behavior) —
+// an independent review caught that defaulting this above 1 would silently
+// change behavior for EVERY caller of this script, including
+// weekly-ingest.yml's unflagged `npm run enrich:bios` invocation, which
+// never asked for concurrency and whose real Anthropic per-minute rate
+// limit headroom was never validated against it. Concurrency is opt-in per
+// caller via --concurrency; backfill-full-bios.yml passes it explicitly
+// since it's the workflow this optimization pass actually targets.
+const CONCURRENCY  = (() => { const i = args.indexOf('--concurrency'); return i >= 0 ? parseInt(args[i + 1]) : 1; })();
 
 // ── Env loading ───────────────────────────────────────────────────────────────
 
@@ -550,6 +585,37 @@ function runWikiPipeline(guest: Guest, entity: WikiEntity, conanConn: ConanConne
   };
 }
 
+// ── Total-failure guard ──────────────────────────────────────────────────────
+
+// Extracted as a pure predicate so this real-money-safety logic is unit-
+// testable, not just verified by reading the code — an independent review
+// found the specific failure mode this guards against: a chunk where every
+// guest fails (broken credential, Anthropic outage) writes nothing new to
+// bios.json, which the chunked workflow's "no changes staged = backlog
+// exhausted" check can't distinguish from a genuinely finished backlog.
+export function isTotalChunkFailure(claudeEnabled: boolean, queueLength: number, failedCount: number): boolean {
+  return claudeEnabled && queueLength > 0 && failedCount === queueLength;
+}
+
+// ── Queue filter ─────────────────────────────────────────────────────────────
+
+// Pure decision function extracted out of main()'s filter specifically so
+// the real-dollar-stakes --new-only logic (see its definition above) is
+// unit-testable rather than only verified by an offline script. Handles
+// only the "does this guest's EXISTING bio state mean re-enrich" decision —
+// the --guest/--force debug short-circuits stay inline in main() since
+// they're trivial and don't carry the same risk.
+export function shouldEnqueueGuest(
+  existing: GuestBio | undefined,
+  opts: { retryReview: boolean; newOnly: boolean; now: number; ttlMs: number }
+): boolean {
+  if (!existing) return true;
+  // --retry-review re-attempts needs_review entries (usually rate-limited)
+  if (existing.needs_review) return opts.retryReview;
+  if (opts.newOnly) return false;
+  return opts.now - new Date(existing.enrichedAt).getTime() > opts.ttlMs;
+}
+
 // ── Validation ────────────────────────────────────────────────────────────────
 
 export function validate(bio: GuestBio): { ok: boolean; reason?: string } {
@@ -594,12 +660,22 @@ async function main() {
       try {
         const { default: Anthropic } = await import('@anthropic-ai/sdk');
         claudeClient = new Anthropic({ apiKey });
-        // Quick smoke-test to verify credits
-        await claudeClient.messages.create({
-          model: 'claude-haiku-4-5-20251001',
-          max_tokens: 5,
-          messages: [{ role: 'user', content: 'hi' }],
-        });
+        // Quick smoke-test to verify credits — skippable via env var because
+        // a chunked backfill workflow spawns a FRESH node process per chunk
+        // (up to ~58 times across the full ~2,900-guest backlog at 50/chunk),
+        // so without this flag the same smoke-test round-trip pays its
+        // latency cost on every single chunk instead of once per run. The
+        // caller (backfill-full-bios.yml) verifies once before the chunk
+        // loop starts, then sets SKIP_CLAUDE_SMOKE_TEST for every subsequent
+        // chunk. Unset/empty (any run invoked directly, e.g. --guest
+        // debugging) still verifies every time, same as before.
+        if (!process.env.SKIP_CLAUDE_SMOKE_TEST) {
+          await claudeClient.messages.create({
+            model: 'claude-haiku-4-5-20251001',
+            max_tokens: 5,
+            messages: [{ role: 'user', content: 'hi' }],
+          });
+        }
         console.log(`[Bios] Claude available — using full pipeline (model: ${MODEL})\n`);
       } catch (e: any) {
         const msg = e?.message || '';
@@ -625,11 +701,7 @@ async function main() {
   let queue = guestsData.guests.filter(g => {
     if (ONLY) return g.name.toLowerCase() === ONLY.toLowerCase();
     if (FORCE) return true;
-    const existing = bios[g.name];
-    if (!existing) return true;
-    // --retry-review re-attempts needs_review entries (usually rate-limited)
-    if (existing.needs_review) return RETRY_REVIEW;
-    return now - new Date(existing.enrichedAt).getTime() > TTL_MS;
+    return shouldEnqueueGuest(bios[g.name], { retryReview: RETRY_REVIEW, newOnly: NEW_ONLY, now, ttlMs: TTL_MS });
   });
 
   if (queue.length === 0) {
@@ -639,14 +711,12 @@ async function main() {
 
   queue = queue.slice(0, LIMIT);
   const mode = claudeClient ? 'Claude+Wikipedia' : 'Wikipedia-only';
-  console.log(`[Bios] Enriching ${queue.length} guests via ${mode}\n`);
+  console.log(`[Bios] Enriching ${queue.length} guests via ${mode} (concurrency: ${CONCURRENCY})\n`);
 
-  let success = 0, reviewNeeded = 0, failed = 0;
+  let success = 0, reviewNeeded = 0, failed = 0, completed = 0;
 
-  for (let i = 0; i < queue.length; i++) {
-    const guest = queue[i];
-    const tag   = `[${i + 1}/${queue.length}]`;
-    process.stdout.write(`${tag} ${guest.name} ... `);
+  async function processGuest(guest: Guest, i: number): Promise<void> {
+    const tag = `[${i + 1}/${queue.length}]`;
 
     try {
       // Entity resolution
@@ -656,7 +726,7 @@ async function main() {
       // exact source text the extraction step worked from, since "why didn't
       // field X get extracted" always starts with "was it even in the text".
       if (ONLY && entity) {
-        console.log(`\n  [debug] Wikipedia intro used for ${entity.name}:\n  "${entity.intro}"\n`);
+        console.log(`${tag} [debug] Wikipedia intro used for ${entity.name}:\n  "${entity.intro}"\n`);
       }
 
       if (!entity || entity.confidence < MIN_ENTITY_CONFIDENCE) {
@@ -675,11 +745,10 @@ async function main() {
           sources:          [],
           enrichedAt:       new Date().toISOString(),
         };
-        console.log(`needs_review (entity confidence: ${conf})`);
+        console.log(`${tag} ${guest.name} ... needs_review (entity confidence: ${conf})`);
         reviewNeeded++;
-        if ((i + 1) % 10 === 0) fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));
         await sleep(200);
-        continue;
+        return;
       }
 
       const conanConn = buildConanConnection(guest);
@@ -698,20 +767,19 @@ async function main() {
       const check = validate(bio);
       if (!check.ok) {
         bio.needs_review = true;
-        console.log(`needs_review (${check.reason})`);
+        console.log(`${tag} ${guest.name} ... needs_review (${check.reason})`);
         reviewNeeded++;
       } else {
         const words = bio.description.split(/\s+/).length;
         const src   = claudeClient ? 'claude' : 'wiki';
-        console.log(`✓ (${words}w, conf ${bio.confidence.toFixed(2)}, ${src})`);
+        console.log(`${tag} ${guest.name} ... ✓ (${words}w, conf ${bio.confidence.toFixed(2)}, ${src})`);
         success++;
       }
 
       bios[guest.name] = bio;
-      if ((i + 1) % 10 === 0) fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));
 
     } catch (err: any) {
-      console.log(`error: ${err.message?.slice(0, 80)}`);
+      console.log(`${tag} ${guest.name} ... error: ${err.message?.slice(0, 80)}`);
       failed++;
     }
 
@@ -720,12 +788,36 @@ async function main() {
     // real rate-limit backoff (wikiGet's own, honoring the actual Retry-After
     // header) is what actually protects against 429s, not this flat sleep —
     // confirmed working on its own in an earlier validation run (six 429s
-    // correctly retried). 400ms is still a real, deliberate pause between
-    // guests, just no longer sized for calls that don't happen anymore.
-    // Saves ~35-40 minutes of pure dead time across the full ~2,900-guest
-    // backlog with no change to rate-limit safety.
+    // correctly retried). 400ms is still a real, deliberate pause per worker
+    // slot between its own guests — with CONCURRENCY workers each pacing
+    // themselves this way, the aggregate request rate scales with
+    // concurrency while each individual worker still spaces its own calls out.
     await sleep(400);
   }
+
+  // Bounded concurrency: CONCURRENCY workers pull from a single shared index
+  // instead of processing strictly one guest at a time. This is primarily a
+  // wall-clock optimization (overlapping network waits) — token/dollar cost
+  // is unchanged for the STEADY STATE of a chunk, but not perfectly free at
+  // chunk start: an independent review caught that the first wave of up to
+  // CONCURRENCY requests can all miss the not-yet-written prompt cache and
+  // each pay the cache-write premium instead of a cache read. Real but
+  // small and bounded (at most CONCURRENCY extra cache-writes per chunk, not
+  // per guest) — not worth staggering worker startup to avoid. Node is
+  // single-threaded, so the shared `nextIndex`/`completed` counters and the
+  // `bios` object are safe to mutate directly between `await` points — no
+  // lock needed. Checkpoint writes trigger on COMPLETION count, not start
+  // index, so they're still meaningful under out-of-order completion.
+  let nextIndex = 0;
+  async function worker() {
+    while (nextIndex < queue.length) {
+      const i = nextIndex++;
+      await processGuest(queue[i], i);
+      completed++;
+      if (completed % 10 === 0) fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, queue.length) }, worker));
 
   fs.writeFileSync(BIOS_FILE, JSON.stringify(bios, null, 2));
 
@@ -734,6 +826,21 @@ async function main() {
   console.log(`⚠ Needs review: ${reviewNeeded}`);
   console.log(`✗ Failed:       ${failed}`);
   console.log(`Cached:         ${Object.keys(bios).length} guests`);
+
+  // A real finding from an independent review of this pipeline: a chunk
+  // where every single guest fails (e.g. a Claude credential that breaks
+  // mid-run — revoked key, org spend cap hit) writes nothing new to
+  // bios.json. The chunked workflow's own "no changes staged = backlog
+  // exhausted, stop cleanly" check can't tell that apart from a genuinely
+  // finished backlog — it would print "Done" and exit 0 as if the run
+  // completed, when what actually happened is every guest in this chunk was
+  // silently dropped. Fail loudly instead: a real credential/API break
+  // should always be visible, never look identical to a successful,
+  // deliberate stop.
+  if (isTotalChunkFailure(!!claudeClient, queue.length, failed)) {
+    console.error(`\n[Bios] FATAL: every guest in this chunk (${failed}/${queue.length}) failed — this looks like a broken Claude credential or an Anthropic API outage, not a normal per-guest failure rate. Stopping loudly rather than letting this look like a completed run.`);
+    process.exit(1);
+  }
 }
 
 if (require.main === module) {

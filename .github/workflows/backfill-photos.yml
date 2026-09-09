@@ -60,12 +60,19 @@ jobs:
         run: pip install pillow numpy requests
 
       - name: Backfill photos in chunks, committing progress after each
+        env:
+          # Passed as a real env var, referenced via $INPUT_LIMIT, not
+          # interpolated via ${{ }} into the script body — GitHub substitutes
+          # ${{ }} as literal text into the run: script BEFORE bash executes
+          # it, so a crafted workflow_dispatch input could otherwise execute
+          # as arbitrary shell in a runner holding contents:write.
+          INPUT_LIMIT: ${{ github.event.inputs.limit }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           CHUNK=100
-          TOTAL="${{ github.event.inputs.limit }}"
+          TOTAL="$INPUT_LIMIT"
           DONE=0
 
           while [ "$DONE" -lt "$TOTAL" ]; do
@@ -82,10 +89,11 @@ jobs:
               echo "No changes this chunk — backlog is exhausted, stopping early."
               break
             fi
-            git commit -m "chore: backfill photos (chunk of $THIS_CHUNK)"
-            git fetch origin main
-            git rebase origin/main
-            git push
+            # Single rebase+push attempt, no retry — the same gap PR #44
+            # fixed in backfill-full-bios.yml by adopting this shared script
+            # (a genuine rebase conflict, not just a push race, would kill
+            # every remaining chunk with no retry otherwise).
+            scripts/ci/commit-and-push.sh "chore: backfill photos (chunk of $THIS_CHUNK)"
 
             DONE=$((DONE + THIS_CHUNK))
           done

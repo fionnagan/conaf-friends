@@ -40,9 +40,17 @@ jobs:
       - name: Enrich each sample guest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Passed as a real env var, referenced via $INPUT_GUESTS, not
+          # interpolated via ${{ }} into the script body — GitHub substitutes
+          # ${{ }} as literal text into the run: script BEFORE bash executes
+          # it, so a crafted guests input could otherwise execute as
+          # arbitrary shell in a runner holding ANTHROPIC_API_KEY (this job
+          # spends real, billed Claude API calls even though it never commits
+          # or pushes anything).
+          INPUT_GUESTS: ${{ github.event.inputs.guests }}
         run: |
           > /tmp/sample-guest-names.txt
-          IFS=',' read -ra NAMES <<< "${{ github.event.inputs.guests }}"
+          IFS=',' read -ra NAMES <<< "$INPUT_GUESTS"
           for name in "${NAMES[@]}"; do
             trimmed="$(echo "$name" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
             echo "$trimmed" >> /tmp/sample-guest-names.txt

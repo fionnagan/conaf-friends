@@ -8,6 +8,8 @@ import {
   validate,
   runClaudePipeline,
   resolveEntityWithRetry,
+  shouldEnqueueGuest,
+  isTotalChunkFailure,
 } from '../scripts/ingest/enrich-bios';
 import { checkDeathYearPlausibility } from '../scripts/ingest/booking-signal-schema';
 import type { GuestBio, Guest } from '../lib/types';
@@ -424,5 +426,81 @@ describe('checkDeathYearPlausibility() — shared validator', () => {
     const result = checkDeathYearPlausibility('garbage', '2020');
     expect(result.ok).toBe(false);
     expect(result.reason).toContain('birth_year_malformed');
+  });
+});
+
+// ── shouldEnqueueGuest() — the --new-only re-spend-risk guardrail ─────────
+// Regression coverage for the real cost-review finding: without --new-only,
+// ANY guest re-qualifies for full re-enrichment once its enrichedAt ages
+// past the 30-day TTL, including guests a backlog-catchup run just
+// finished — meaning simply re-triggering Backfill Full Bios after 30 days
+// would silently re-spend real Claude calls on the entire archive.
+
+describe('shouldEnqueueGuest() — new-only vs TTL re-enrichment gating', () => {
+  const DAY_MS = 24 * 60 * 60 * 1000;
+  const TTL_MS = 30 * DAY_MS;
+  const NOW = Date.now();
+
+  it('always queues a guest with no existing bio, in both modes', () => {
+    expect(shouldEnqueueGuest(undefined, { retryReview: false, newOnly: true, now: NOW, ttlMs: TTL_MS })).toBe(true);
+    expect(shouldEnqueueGuest(undefined, { retryReview: false, newOnly: false, now: NOW, ttlMs: TTL_MS })).toBe(true);
+  });
+
+  it('--new-only never re-queues an existing, non-stale bio', () => {
+    const fresh = makeBio({ enrichedAt: new Date(NOW).toISOString() });
+    expect(shouldEnqueueGuest(fresh, { retryReview: false, newOnly: true, now: NOW, ttlMs: TTL_MS })).toBe(false);
+  });
+
+  it('--new-only never re-queues an existing bio even once it is TTL-stale (the actual fix)', () => {
+    const stale = makeBio({ enrichedAt: new Date(NOW - 31 * DAY_MS).toISOString() });
+    expect(shouldEnqueueGuest(stale, { retryReview: false, newOnly: true, now: NOW, ttlMs: TTL_MS })).toBe(false);
+  });
+
+  it('TTL mode (newOnly: false) re-queues once a bio ages past the TTL', () => {
+    const stale = makeBio({ enrichedAt: new Date(NOW - 31 * DAY_MS).toISOString() });
+    expect(shouldEnqueueGuest(stale, { retryReview: false, newOnly: false, now: NOW, ttlMs: TTL_MS })).toBe(true);
+  });
+
+  it('TTL mode does not re-queue a bio still within the TTL window', () => {
+    const recent = makeBio({ enrichedAt: new Date(NOW - 5 * DAY_MS).toISOString() });
+    expect(shouldEnqueueGuest(recent, { retryReview: false, newOnly: false, now: NOW, ttlMs: TTL_MS })).toBe(false);
+  });
+
+  it('a needs_review bio is gated by retryReview regardless of newOnly/TTL', () => {
+    const reviewBio = makeBio({ needs_review: true, enrichedAt: new Date(NOW).toISOString() });
+    expect(shouldEnqueueGuest(reviewBio, { retryReview: false, newOnly: true, now: NOW, ttlMs: TTL_MS })).toBe(false);
+    expect(shouldEnqueueGuest(reviewBio, { retryReview: true, newOnly: true, now: NOW, ttlMs: TTL_MS })).toBe(true);
+  });
+});
+
+// ── isTotalChunkFailure() — the fail-loud-not-silent guard ─────────────────
+// Regression coverage for a real bug an independent review caught: without
+// this guard, a chunk where every guest fails (broken credential, Anthropic
+// outage) writes zero new bios and the chunked workflow's own "no changes =
+// backlog exhausted" check silently treats that identically to a
+// successfully finished run.
+
+describe('isTotalChunkFailure() — fail-loud guard', () => {
+  it('flags a Claude-enabled chunk where every queued guest failed', () => {
+    expect(isTotalChunkFailure(true, 50, 50)).toBe(true);
+  });
+
+  it('does not flag a mixed chunk (some succeeded/reviewed, some failed)', () => {
+    expect(isTotalChunkFailure(true, 50, 3)).toBe(false);
+  });
+
+  it('does not flag an empty queue (genuinely nothing to process)', () => {
+    expect(isTotalChunkFailure(true, 0, 0)).toBe(false);
+  });
+
+  it('does not flag wiki-only mode (claudeClient disabled) even if failed count is high', () => {
+    // Wiki-only guests essentially never throw (pure regex, no Claude call),
+    // so a high failed count here would itself be a different, unrelated bug
+    // — but this guard is specifically about Claude credential/API breaks.
+    expect(isTotalChunkFailure(false, 50, 50)).toBe(false);
+  });
+
+  it('does not flag a fully successful chunk', () => {
+    expect(isTotalChunkFailure(true, 50, 0)).toBe(false);
   });
 });
