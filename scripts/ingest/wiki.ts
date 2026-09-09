@@ -123,6 +123,30 @@ export async function fetchWikiEntity(pageTitle: string, deadlineMs?: number): P
   };
 }
 
+// Links out of a disambiguation page, restricted to namespace 0 (real
+// articles — excludes Talk/Category/Help pages a disambig page also links
+// to). Lets a caller that hit a disambiguation page (fetchWikiEntity's
+// isDisambiguation: true) resolve WHICH of several same-named people is the
+// right one, instead of giving up outright — confirmed as a real gap: guests
+// like "Leslie Jones" or "Tom Arnold" have a Wikipedia disambiguation page
+// at their bare name, and resolveEntity() previously just skipped it with
+// no fallback, needlessly landing them in needs_review.
+export async function fetchDisambiguationLinks(pageTitle: string, deadlineMs?: number): Promise<string[]> {
+  const data = await wikiGet({
+    action: 'query',
+    prop: 'links',
+    titles: pageTitle,
+    plnamespace: 0,
+    pllimit: 50,
+    format: 'json',
+    redirects: 1,
+  }, WIKI_API, deadlineMs);
+  const pages = data?.query?.pages ?? {};
+  const page: any = Object.values(pages)[0];
+  const links: Array<{ title: string }> = page?.links ?? [];
+  return links.map(l => l.title);
+}
+
 export async function fetchWikiSections(title: string): Promise<WikiSection[]> {
   const data = await wikiGet({ action: 'parse', page: title, prop: 'sections', format: 'json', redirects: 1 });
   return data?.parse?.sections ?? [];

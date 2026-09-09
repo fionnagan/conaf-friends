@@ -12,7 +12,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import type { GuestBio, GuestBioWork, Guest } from '../../lib/types';
-import { fetchWikiEntity } from './wiki';
+import { fetchWikiEntity, fetchDisambiguationLinks } from './wiki';
 import { BOOKING_SIGNAL_RULES, checkDeathYearPlausibility } from './booking-signal-schema';
 
 // ── Config ───────────────────────────────────────────────────────────────────
@@ -108,6 +108,128 @@ export interface WikiEntity {
   confidence: number;
 }
 
+// Diacritic-insensitive — Wikipedia titles keep the accent ("André"),
+// data/guests.json names are plain ASCII ("Andre"). Without stripping,
+// these tokens never match at all.
+const stripDiacritics = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+// Strip dots and quote marks (straight + curly) so a Wikipedia title like
+// `"Weird Al" Yankovic` still token-matches the plain guest name "Weird Al
+// Yankovic" instead of losing two tokens to stuck-on quote characters, and
+// so "B.J." matches "B. J." either way.
+export function normNameTokens(s: string): string[] {
+  return stripDiacritics(s)
+    .toLowerCase()
+    .replace(/["“”'’]/g, '')
+    .replace(/\./g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(/\s+/);
+}
+
+// Confirmed against real needs_review guests that all landed at exactly the
+// 0.65 rejection threshold despite the Wikipedia entity being the right
+// person: plain exact-token overlap misses two common, legitimate name-form
+// differences —
+//   - compound initials: guest name has "bj" as one token, the Wikipedia
+//     title spells it "B. J." (two single-letter tokens after normalizing).
+//     Same for "jj"/"jb" etc. (BJ Novak, JJ Abrams, JB Smoove).
+//   - nickname prefix: "Chris" vs "Christopher", "Mike" vs "Michael" — a
+//     short first name that's a genuine prefix of the title's full form.
+//     Gated to >=3 chars and <=6 chars of length difference so it can't
+//     fuzzy-match unrelated short names (e.g. "Al" prefix-matching
+//     "Alabama" would be wrong; "chris"/"christopher" is a 6-char gap).
+export function tokenOverlap(nameTokens: string[], titleTokens: string[]): number {
+  if (nameTokens.length === 0) return 0;
+
+  // Every contiguous run of single-letter title tokens, concatenated — so
+  // title tokens ["b","j"] contributes candidate "bj" (and "b") to match
+  // against a guest-name token spelled as one word.
+  const initialRuns = new Set<string>();
+  for (let i = 0; i < titleTokens.length; i++) {
+    if (titleTokens[i].length !== 1) continue;
+    let combined = '';
+    for (let j = i; j < titleTokens.length && titleTokens[j].length === 1; j++) {
+      combined += titleTokens[j];
+      initialRuns.add(combined);
+    }
+  }
+
+  const matched = nameTokens.filter(t =>
+    titleTokens.includes(t) ||
+    initialRuns.has(t) ||
+    titleTokens.some(tt => t.length >= 3 && tt.startsWith(t) && tt.length - t.length <= 6)
+  ).length;
+
+  return matched / nameTokens.length;
+}
+
+const BIO_SIGNAL_RE = /\b(born|actor|actress|comedian|writer|director|musician|author|host|producer|singer|stand-up)\b/i;
+
+export function scoreEntityMatch(guestName: string, wikiTitle: string, intro: string): number {
+  const overlap   = tokenOverlap(normNameTokens(guestName), normNameTokens(wikiTitle));
+  const hasBioSig = BIO_SIGNAL_RE.test(intro);
+  return Math.min(1, overlap * 0.7 + (hasBioSig ? 0.3 : 0));
+}
+
+// A disambiguation page for a name like "Leslie Jones" links out to every
+// person who shares it — some genuinely relevant (comedian, actor), most
+// not (a rugby player, an RAF officer, a 19th-century politician). Probing
+// each one with the existing name/bio-signal scorer can tell "this is
+// clearly not a match" from "this looks right", but when TWO OR MORE
+// candidates both clear the confidence bar, guessing between them risks
+// publishing a real, wrong person's bio under this guest's name — worse
+// than the guest simply staying in needs_review. Only auto-resolves when
+// exactly one candidate is a plausible match.
+const MAX_DISAMBIG_CANDIDATES = 8;
+
+async function resolveFromDisambiguation(
+  disambigTitle: string,
+  guestName: string,
+  deadlineMs: number
+): Promise<WikiEntity | null> {
+  let links: string[];
+  try {
+    links = await fetchDisambiguationLinks(disambigTitle, deadlineMs);
+  } catch {
+    return null;
+  }
+
+  const matches: WikiEntity[] = [];
+  for (const candidateTitle of links.slice(0, MAX_DISAMBIG_CANDIDATES)) {
+    if (Date.now() >= deadlineMs) break;
+
+    let candidate: Awaited<ReturnType<typeof fetchWikiEntity>>;
+    try {
+      candidate = await fetchWikiEntity(candidateTitle, deadlineMs);
+    } catch {
+      continue;
+    }
+    if (!candidate || candidate.isDisambiguation) continue;
+
+    const intro = candidate.extract.slice(0, 6000).trim();
+    if (!intro) continue;
+
+    // Every candidate on this disambiguation page already shares the
+    // guest's name almost verbatim (that's why it's linked here) — so
+    // name-token overlap alone can't tell two same-named people apart, it
+    // only screens out a junk link (a bare year, an unrelated "List of..."
+    // page). The real discriminator is the bio signal: does this specific
+    // candidate read like a person at all, let alone the right kind (actor/
+    // comedian/writer/...), which is the population Conan's guest list is
+    // drawn from.
+    const overlap   = tokenOverlap(normNameTokens(guestName), normNameTokens(candidate.title));
+    const hasBioSig = BIO_SIGNAL_RE.test(intro);
+    if (overlap >= 0.9 && hasBioSig) {
+      const confidence = scoreEntityMatch(guestName, candidate.title, intro);
+      matches.push({ name: candidate.title, wikipedia_url: candidate.url, intro, confidence });
+    }
+  }
+
+  if (matches.length !== 1) return null;
+  return matches[0];
+}
+
 async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   // Strategy: try REST summary API (single call, different quota from MediaWiki API)
   // Falls back to name variants for compound titles like "X Live From Y"
@@ -174,7 +296,18 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
     } catch {
       continue; // network error, exhausted retries, or deadline exceeded on this name variant — try next
     }
-    if (!entity || entity.isDisambiguation) continue;
+    if (!entity) continue;
+
+    if (entity.isDisambiguation) {
+      // Previously just skipped outright — a real, needless source of
+      // needs_review for guests whose bare name collides with someone else's
+      // (Leslie Jones, Tom Arnold, Richard Lewis, ...). Try to resolve which
+      // linked candidate is actually this guest before giving up on this
+      // name variant.
+      const resolved = await resolveFromDisambiguation(name, guestName, resolveDeadline);
+      if (resolved) return resolved;
+      continue;
+    }
 
     // fetchWikiEntity already returns the FULL article extract (not just the
     // lead), so this cap decides how much of it we actually use — bumped
@@ -185,21 +318,9 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
     const intro = entity.extract.slice(0, 6000).trim();
     if (!intro) continue;
 
-    const wikiTitle = entity.title;
-    const wikiUrl = entity.url;
-
-    // Confidence: name token overlap + bio signal
-    // Normalise dots so "B.J." matches "B. J." and vice versa
-    // Strip dots and quote marks (straight + curly) before tokenizing, so a
-    // Wikipedia title like `"Weird Al" Yankovic` still token-matches the
-    // plain guest name "Weird Al Yankovic" instead of losing two tokens to
-    // stuck-on quote characters.
-    const norm        = (s: string) => s.toLowerCase().replace(/["""'']/g, '').replace(/\./g, '').replace(/\s+/g, ' ');
-    const nameTokens  = norm(guestName).split(/\s+/);
-    const titleTokens = norm(wikiTitle).split(/\s+/);
-    const overlap     = nameTokens.filter(t => titleTokens.includes(t)).length / nameTokens.length;
-    const hasBioSig   = /\b(born|actor|actress|comedian|writer|director|musician|author|host|producer|singer|stand-up)\b/i.test(intro);
-    const confidence  = Math.min(1, overlap * 0.7 + (hasBioSig ? 0.3 : 0));
+    const wikiTitle   = entity.title;
+    const wikiUrl     = entity.url;
+    const confidence  = scoreEntityMatch(guestName, wikiTitle, intro);
 
     return { name: wikiTitle, wikipedia_url: wikiUrl, intro, confidence };
   }
@@ -739,7 +860,12 @@ async function main() {
         console.log(`${tag} [debug] Wikipedia intro used for ${entity.name}:\n  "${entity.intro}"\n`);
       }
 
-      if (!entity || entity.confidence < MIN_ENTITY_CONFIDENCE) {
+      // A tiny epsilon so a genuinely-at-threshold score (0.5 overlap + 0.3
+      // bio signal = 0.65 exactly) isn't rejected over float representation
+      // error (0.5 * 0.7 computes as 0.6499999999999999 in JS) — confirmed
+      // this was silently rejecting real, correctly-resolved guests (BJ
+      // Novak, JJ Abrams) whose overlap score legitimately equals 0.65.
+      if (!entity || entity.confidence < MIN_ENTITY_CONFIDENCE - 1e-9) {
         const conf = entity?.confidence?.toFixed(2) ?? 'none';
         bios[guest.name] = {
           entity:           entity

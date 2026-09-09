@@ -10,6 +10,8 @@ import {
   resolveEntityWithRetry,
   shouldEnqueueGuest,
   isTotalChunkFailure,
+  tokenOverlap,
+  normNameTokens,
 } from '../scripts/ingest/enrich-bios';
 import { checkDeathYearPlausibility } from '../scripts/ingest/booking-signal-schema';
 import type { GuestBio, Guest } from '../lib/types';
@@ -18,8 +20,10 @@ import * as wiki from '../scripts/ingest/wiki';
 jest.mock('../scripts/ingest/wiki', () => ({
   ...jest.requireActual('../scripts/ingest/wiki'),
   fetchWikiEntity: jest.fn(),
+  fetchDisambiguationLinks: jest.fn(),
 }));
 const mockedFetchWikiEntity = wiki.fetchWikiEntity as jest.Mock;
+const mockedFetchDisambiguationLinks = wiki.fetchDisambiguationLinks as jest.Mock;
 
 function makeBio(overrides: Partial<GuestBio> = {}): GuestBio {
   return {
@@ -328,7 +332,10 @@ describe('runClaudePipeline() — mocked Anthropic client', () => {
 // ── resolveEntityWithRetry() — mocked Wikipedia fetch ──────────────────────
 
 describe('resolveEntityWithRetry() — mocked Wikipedia fetch', () => {
-  beforeEach(() => mockedFetchWikiEntity.mockReset());
+  beforeEach(() => {
+    mockedFetchWikiEntity.mockReset();
+    mockedFetchDisambiguationLinks.mockReset();
+  });
 
   it('returns a high-confidence match for a direct name hit with a bio signal', async () => {
     mockedFetchWikiEntity.mockResolvedValue({
@@ -343,15 +350,107 @@ describe('resolveEntityWithRetry() — mocked Wikipedia fetch', () => {
     expect(result!.intro).toContain('born 1980');
   });
 
-  it('skips a disambiguation page and returns null if no variant resolves', async () => {
+  it('returns null when a disambiguation page has no resolvable links', async () => {
     mockedFetchWikiEntity.mockResolvedValue({
       title: 'Ambiguous Name',
       url: 'https://en.wikipedia.org/wiki/Ambiguous_Name',
       extract: '',
       isDisambiguation: true,
     });
+    mockedFetchDisambiguationLinks.mockResolvedValue([]);
     const result = await resolveEntityWithRetry('Ambiguous Name');
     expect(result).toBeNull();
+  });
+
+  describe('disambiguation fallback', () => {
+    it('resolves through a disambiguation page when exactly one linked candidate matches', async () => {
+      mockedFetchWikiEntity.mockImplementation(async (title: string) => {
+        if (title === 'Leslie Jones') {
+          return {
+            title: 'Leslie Jones',
+            url: 'https://en.wikipedia.org/wiki/Leslie_Jones',
+            extract: '',
+            isDisambiguation: true,
+          };
+        }
+        if (title === 'Leslie Jones (comedian)') {
+          return {
+            title: 'Leslie Jones (comedian)',
+            url: 'https://en.wikipedia.org/wiki/Leslie_Jones_(comedian)',
+            extract: 'Leslie Jones (born 1967) is an American comedian and actress, known for Saturday Night Live.',
+            isDisambiguation: false,
+          };
+        }
+        if (title === 'Leslie Jones (footballer)') {
+          return {
+            title: 'Leslie Jones (footballer)',
+            url: 'https://en.wikipedia.org/wiki/Leslie_Jones_(footballer)',
+            extract: 'Leslie Jones was an English professional footballer.',
+            isDisambiguation: false,
+          };
+        }
+        return null;
+      });
+      mockedFetchDisambiguationLinks.mockResolvedValue([
+        'Leslie Jones (footballer)', // no bio-signal word -> won't clear the bar
+        '1955', // junk link a real disambig page also carries -> no entity at all
+        'England national football team',
+        'Leslie Jones (comedian)', // the only candidate that clears the bar
+      ]);
+      const result = await resolveEntityWithRetry('Leslie Jones');
+      expect(result).not.toBeNull();
+      expect(result!.name).toBe('Leslie Jones (comedian)');
+    });
+
+    it('refuses to guess when two or more disambiguation candidates both plausibly match', async () => {
+      mockedFetchWikiEntity.mockImplementation(async (title: string) => {
+        if (title === 'Tom Arnold') {
+          return {
+            title: 'Tom Arnold',
+            url: 'https://en.wikipedia.org/wiki/Tom_Arnold',
+            extract: '',
+            isDisambiguation: true,
+          };
+        }
+        if (title === 'Tom Arnold (comedian)') {
+          return {
+            title: 'Tom Arnold (comedian)',
+            url: 'https://en.wikipedia.org/wiki/Tom_Arnold_(comedian)',
+            extract: 'Tom Arnold (born 1959) is an American actor and comedian.',
+            isDisambiguation: false,
+          };
+        }
+        if (title === 'Tom Arnold (musician)') {
+          return {
+            title: 'Tom Arnold (musician)',
+            url: 'https://en.wikipedia.org/wiki/Tom_Arnold_(musician)',
+            extract: 'Tom Arnold is an English musician and record producer.',
+            isDisambiguation: false,
+          };
+        }
+        return null;
+      });
+      mockedFetchDisambiguationLinks.mockResolvedValue(['Tom Arnold (comedian)', 'Tom Arnold (musician)']);
+      const result = await resolveEntityWithRetry('Tom Arnold');
+      // Two plausible same-named people — must not guess between them.
+      expect(result).toBeNull();
+    });
+
+    it('caps how many disambiguation candidates it probes', async () => {
+      const probed: string[] = [];
+      mockedFetchWikiEntity.mockImplementation(async (title: string) => {
+        if (title === 'Many People') {
+          return { title: 'Many People', url: '', extract: '', isDisambiguation: true };
+        }
+        probed.push(title);
+        return null; // none resolve — just measuring how many were tried
+      });
+      mockedFetchDisambiguationLinks.mockResolvedValue(
+        Array.from({ length: 20 }, (_, i) => `Many People (variant ${i})`)
+      );
+      await resolveEntityWithRetry('Many People');
+      expect(probed.length).toBeLessThanOrEqual(8);
+    });
   });
 
   it('returns null when Wikipedia has no matching page', async () => {
@@ -387,6 +486,110 @@ describe('resolveEntityWithRetry() — mocked Wikipedia fetch', () => {
     const result = await resolveEntityWithRetry('Some Person');
     expect(result).not.toBeNull();
     expect(result!.confidence).toBeLessThan(0.9);
+  });
+
+  // Regression coverage for real needs_review guests (production bios.json,
+  // Sept 2026 Backfill Full Bios run) that all landed at exactly 0.65
+  // confidence — the correct Wikipedia entity, rejected anyway by
+  // exact-token-only overlap plus float imprecision at the threshold.
+  describe('name-form mismatches that previously scored exactly 0.65 and got rejected', () => {
+    const withBioSig = (name: string) => `${name} (born 1975) is an American actor and comedian.`;
+
+    it('matches compound initials against spaced Wikipedia initials (BJ Novak / B. J. Novak)', async () => {
+      mockedFetchWikiEntity.mockResolvedValue({
+        title: 'B. J. Novak',
+        url: 'https://en.wikipedia.org/wiki/B._J._Novak',
+        extract: withBioSig('B. J. Novak'),
+        isDisambiguation: false,
+      });
+      const result = await resolveEntityWithRetry('BJ Novak');
+      expect(result).not.toBeNull();
+      expect(result!.confidence).toBeCloseTo(1, 5);
+    });
+
+    it('matches compound initials the other direction (JJ Abrams / J. J. Abrams)', async () => {
+      mockedFetchWikiEntity.mockResolvedValue({
+        title: 'J. J. Abrams',
+        url: 'https://en.wikipedia.org/wiki/J._J._Abrams',
+        extract: withBioSig('J. J. Abrams'),
+        isDisambiguation: false,
+      });
+      const result = await resolveEntityWithRetry('JJ Abrams');
+      expect(result).not.toBeNull();
+      expect(result!.confidence).toBeCloseTo(1, 5);
+    });
+
+    it('matches a diacritic Wikipedia title against a plain-ASCII guest name (Eric Andre / Eric André)', async () => {
+      mockedFetchWikiEntity.mockResolvedValue({
+        title: 'Eric André',
+        url: 'https://en.wikipedia.org/wiki/Eric_Andr%C3%A9',
+        extract: withBioSig('Eric André'),
+        isDisambiguation: false,
+      });
+      const result = await resolveEntityWithRetry('Eric Andre');
+      expect(result).not.toBeNull();
+      expect(result!.confidence).toBeCloseTo(1, 5);
+    });
+
+    it('matches a short first name as a prefix of the Wikipedia full form (Chris Meloni / Christopher Meloni)', async () => {
+      mockedFetchWikiEntity.mockResolvedValue({
+        title: 'Christopher Meloni',
+        url: 'https://en.wikipedia.org/wiki/Christopher_Meloni',
+        extract: withBioSig('Christopher Meloni'),
+        isDisambiguation: false,
+      });
+      const result = await resolveEntityWithRetry('Chris Meloni');
+      expect(result).not.toBeNull();
+      expect(result!.confidence).toBeGreaterThanOrEqual(0.65);
+    });
+
+    it('does not let the nickname-prefix rule fuzzy-match an unrelated short name', async () => {
+      mockedFetchWikiEntity.mockResolvedValue({
+        title: 'Alabama Shakes',
+        url: 'https://en.wikipedia.org/wiki/Alabama_Shakes',
+        extract: 'Alabama Shakes is an American rock band formed in 2009.',
+        isDisambiguation: false,
+      });
+      const result = await resolveEntityWithRetry('Al Shakes');
+      // "al" is a 2-char token — below the >=3 char gate for prefix matching
+      // — so it must NOT get credit for "al" -> "alabama".
+      expect(result).not.toBeNull();
+      expect(result!.confidence).toBeLessThan(0.65);
+    });
+  });
+});
+
+// ── tokenOverlap() / normNameTokens() — pure name-matching helpers ────────
+
+describe('tokenOverlap() and normNameTokens()', () => {
+  it('scores a full match at 1', () => {
+    expect(tokenOverlap(normNameTokens('Jane Actor'), normNameTokens('Jane Actor'))).toBe(1);
+  });
+
+  it('merges contiguous single-letter title tokens to match a compound-initial name token', () => {
+    expect(tokenOverlap(normNameTokens('BJ Novak'), normNameTokens('B. J. Novak'))).toBe(1);
+  });
+
+  it('strips diacritics before comparing', () => {
+    expect(normNameTokens('André')).toEqual(['andre']);
+    expect(tokenOverlap(normNameTokens('Eric Andre'), normNameTokens('Eric André'))).toBe(1);
+  });
+
+  it('credits a genuine nickname prefix within the length-gap cap', () => {
+    expect(tokenOverlap(normNameTokens('Chris Meloni'), normNameTokens('Christopher Meloni'))).toBe(1);
+  });
+
+  it('does not credit a prefix match past the 6-character gap cap', () => {
+    // "chris" (5) vs a hypothetical 13-char title token is a 8-char gap — too far.
+    expect(tokenOverlap(normNameTokens('Chris X'), normNameTokens('Christopherson X'))).toBeLessThan(1);
+  });
+
+  it('does not credit a short (<3 char) token as a prefix match', () => {
+    expect(tokenOverlap(normNameTokens('Al Shakes'), normNameTokens('Alabama Shakes'))).toBeLessThan(1);
+  });
+
+  it('returns 0 for an empty name', () => {
+    expect(tokenOverlap([], normNameTokens('Some Title'))).toBe(0);
   });
 });
 
