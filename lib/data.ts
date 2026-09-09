@@ -1,4 +1,4 @@
-import type { Guest, GuestsData, FriendshipLabel, Era } from './types';
+import type { Guest, GuestsData, FriendshipLabel, Era, CrossedPathsData } from './types';
 
 export const ERA_LABELS: Record<Era, string> = {
   'late-night-nbc': 'Late Night NBC',
@@ -149,4 +149,57 @@ export function getGuestsData(): GuestsData {
       guests: [],
     };
   }
+}
+
+let _cachedCrossedPaths: CrossedPathsData | null = null;
+
+// data/crossed-paths.json is written by the weekly-ingest cron's merge step
+// (scripts/ingest/merge-crossed-paths.ts) — it won't exist until that job has
+// actually run at least once, so this must fall back to an empty structure
+// exactly like getGuestsData() does, not throw.
+export function getCrossedPathsData(): CrossedPathsData {
+  if (_cachedCrossedPaths) return _cachedCrossedPaths;
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const data = require('../data/crossed-paths.json') as CrossedPathsData;
+    _cachedCrossedPaths = data;
+    return data;
+  } catch {
+    return {
+      generatedAt: new Date().toISOString(),
+      conanActivity: [],
+      guestCrossings: {},
+      neverBookedCandidates: [],
+    };
+  }
+}
+
+export type Generation = 'Gen Z' | 'Millennial' | 'Gen X' | 'Boomer+';
+
+// Computed on the fly from bio.birth_year, never stored — same ranges the
+// Roundup page uses for its own (differently-labeled) generation buckets, so
+// the two pages agree on where the lines fall.
+export function getGeneration(birthYear: number): Generation | null {
+  if (!Number.isFinite(birthYear)) return null;
+  if (birthYear >= 1997) return 'Gen Z';
+  if (birthYear >= 1981) return 'Millennial';
+  if (birthYear >= 1965) return 'Gen X';
+  return 'Boomer+';
+}
+
+// "3 years ago", "last month", etc. — appearance dates are plain calendar
+// dates (YYYY-MM-DD), so this compares against UTC midnight today to match
+// formatDate's UTC handling and avoid a viewer-timezone off-by-one.
+export function formatTimeAgo(dateStr: string): string {
+  const then = new Date(dateStr).getTime();
+  const now = Date.now();
+  const days = Math.floor((now - then) / (1000 * 60 * 60 * 24));
+  if (days < 0) return 'upcoming';
+  if (days === 0) return 'today';
+  if (days === 1) return 'yesterday';
+  if (days < 30) return `${days} days ago`;
+  const months = Math.floor(days / 30);
+  if (months < 12) return months === 1 ? '1 month ago' : `${months} months ago`;
+  const years = Math.floor(days / 365);
+  return years === 1 ? '1 year ago' : `${years} years ago`;
 }
