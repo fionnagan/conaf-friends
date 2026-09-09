@@ -118,7 +118,18 @@ jobs:
             SKIP_SMOKE_TEST="1"
             npx tsx scripts/ingest/patch-bios-into-guests.ts
 
+            # Ask the Registry's Q&A endpoint (api/ask.py) reads
+            # api/guests_context.json, not data/guests.json directly — only
+            # weekly-ingest.yml regenerated it, on its own Monday schedule.
+            # Real gap this pass found: 4 guests already had a correct bio
+            # in data/guests.json but were still invisible to the live Q&A
+            # feature, because the context snapshot predated their fix.
+            # Regenerating it every chunk keeps new/corrected bios queryable
+            # within the same run instead of waiting up to a week.
+            npx tsx scripts/emit_context.ts
+
             git add data/guests.json
+            git add api/guests_context.json
             git add -f scripts/cache/bios.json
             if git diff --staged --quiet; then
               echo "No changes this chunk — backlog is exhausted, stopping early."

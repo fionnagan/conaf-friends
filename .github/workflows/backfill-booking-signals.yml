@@ -80,6 +80,15 @@ jobs:
       - name: Patch updated bios into guests.json
         run: npx tsx scripts/ingest/patch-bios-into-guests.ts
 
+      - name: Regenerate Ask the Registry's Q&A context
+        # Ask the Registry (api/ask.py) reads api/guests_context.json, not
+        # data/guests.json directly — birth_year/death_year/gender/
+        # nationality/prestige_signals/primary_platform (exactly what this
+        # workflow fills in) are part of that context. Without regenerating
+        # it here, guests this backfill just enriched stay invisible to the
+        # live Q&A feature until weekly-ingest.yml's next Monday run.
+        run: npx tsx scripts/emit_context.ts
+
       - name: Commit updated data
         env:
           INPUT_LIMIT: ${{ github.event.inputs.limit }}
@@ -87,5 +96,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/guests.json
+          git add api/guests_context.json
           git add -f scripts/cache/bios.json
           scripts/ci/commit-and-push.sh "chore: backfill booking-signal fields (limit $INPUT_LIMIT)"
