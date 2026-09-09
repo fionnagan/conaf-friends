@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T22:11:13.512Z",
+  "generatedAt": "2026-09-09T22:21:01.487Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -77425,7 +77425,161 @@
       "id": "tori-spelling",
       "name": "Tori Spelling",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Tori Spelling",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Tori_Spelling",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "author",
+          "podcaster",
+          "television personality"
+        ],
+        "known_for": [
+          {
+            "title": "Beverly Hills, 90210",
+            "type": "tv",
+            "year": "1990"
+          },
+          {
+            "title": "BH90210",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "A Friend to Die For",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "A Carol Christmas",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "The Mistle-Tones",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Mother, May I Sleep with Danger?",
+            "type": "tv",
+            "year": "1996"
+          },
+          {
+            "title": "Mother, May I Sleep with Danger?",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "The Last Sharknado: It's About Time",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "The House of Yes",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Trick",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Scary Movie 2",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Cthulhu",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Kiss the Bride",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Izzie's Way Home",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "So Notorious",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Tori & Dean: Inn Love",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Tori & Dean: Home Sweet Hollywood",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Mystery Girls",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "The Masked Singer",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "9021OMG",
+            "type": "podcast",
+            "year": "2020"
+          },
+          {
+            "title": "sTori Telling",
+            "type": "other",
+            "year": "2008"
+          },
+          {
+            "title": "Mommywood",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Uncharted TerriTORI",
+            "type": "other",
+            "year": "2010"
+          }
+        ],
+        "recent_work": [
+          "The Masked Singer (Australian version, 2022)",
+          "The Masked Singer (French version, 2022)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Tori Spelling is an American actress, author, and podcaster best known for playing Donna Martin on Beverly Hills, 90210 throughout its entire run from 1990 to 2000, a role she reprised in the 2019 spin-off BH90210. Her screen work spans made-for-television films such as A Friend to Die For and The Last Sharknado: It's About Time, as well as independent features including Scary Movie 2 and The House of Yes. Her autobiography sTori Telling topped the New York Times Best Seller list, and she co-hosts the podcast 9021OMG with former co-star Jennie Garth. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 1995.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Tori_Spelling"
+        ],
+        "enrichedAt": "2026-09-09T22:13:16.331Z",
+        "birth_year": "1973",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "New York Times Best Seller list (sTori Telling)",
+          "Young Artist Award nominee (two nominations)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -178973,7 +179127,119 @@
       "id": "mike-schur",
       "name": "Mike Schur",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Michael_Schur_2012_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Michael Schur",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_Schur",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "television writer",
+          "producer",
+          "director",
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Saturday Night Live",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "The Office",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Parks and Recreation",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Brooklyn Nine-Nine",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "The Good Place",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Rutherford Falls",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "A Man on the Inside",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "Master of None",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Hacks",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "The Comeback",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Black Mirror",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "The PosCast",
+            "type": "podcast",
+            "year": "2013"
+          },
+          {
+            "title": "How to Be Perfect: The Correct Answer to Every Moral Question",
+            "type": "other",
+            "year": "2022"
+          },
+          {
+            "title": "Sorry/Not Sorry",
+            "type": "film",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "A Man on the Inside (2024–present)",
+          "Hacks (2021–2026)",
+          "Sorry/Not Sorry (2023)",
+          "Hollywood Walk of Fame star (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2022."
+        },
+        "description": "Mike Schur is an American television writer, producer, director, and actor whose career spans more than two decades of acclaimed comedy. He began as a writer on Saturday Night Live before becoming a key creative force behind The Office, where he also played Mose Schrute. He went on to co-create Parks and Recreation and Brooklyn Nine-Nine and to create The Good Place, Rutherford Falls, and A Man on the Inside. He has also produced Master of None and Hacks, the latter earning him one of his three Emmy wins from 21 career nominations. In May 2025, he received a star on the Hollywood Walk of Fame. Schur likely crossed paths with Conan O'Brien on Conan O'Brien Needs a Friend around 2022.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michael_Schur"
+        ],
+        "enrichedAt": "2026-09-09T22:20:13.128Z",
+        "birth_year": "1975",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "21 Primetime Emmy Award nominations",
+          "Three Primetime Emmy Award wins (Saturday Night Live, The Office, Hacks)",
+          "Hollywood Walk of Fame star (May 2025)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -185834,7 +186100,58 @@
       "id": "michelle-williams",
       "name": "Michelle Williams",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Michelle Ann Williams",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Michelle_Ann_Williams",
+          "confidence": 1
+        },
+        "profession": [
+          "epidemiologist",
+          "public health scientist",
+          "educator",
+          "dean"
+        ],
+        "known_for": [
+          {
+            "title": "Harvard T.H. Chan School of Public Health (Dean)",
+            "type": "other",
+            "year": "2016"
+          },
+          {
+            "title": "Apple Women's Health Study",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Center for Perinatal Studies (co-director)",
+            "type": "other",
+            "year": "2000"
+          }
+        ],
+        "recent_work": [
+          "Professor of Epidemiology and Population Health at Stanford University, School of Medicine (2024–present)",
+          "Stepped down as Dean of Harvard T.H. Chan School of Public Health (December 2024)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1999."
+        },
+        "description": "Michelle Ann Williams is a Jamaican-American epidemiologist, public health scientist, and educator whose career has centered on reproductive health, pediatrics, and public health policy. She served as dean of the Harvard T.H. Chan School of Public Health from 2016 to 2024, becoming the first Black woman to lead a Harvard school, and co-led initiatives including the Apple Women's Health Study. She has since joined Stanford University's School of Medicine as a professor of epidemiology and population health. Williams likely crossed paths with Conan O'Brien's Late Night in 1999, during a period when her academic work at the University of Washington was gaining national attention.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michelle_Ann_Williams"
+        ],
+        "enrichedAt": "2026-09-09T22:20:08.681Z",
+        "birth_year": "1962",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Jamaican-American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
