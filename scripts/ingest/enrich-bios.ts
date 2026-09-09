@@ -532,6 +532,24 @@ function validate(bio: GuestBio): { ok: boolean; reason?: string } {
       return { ok: false, reason: `stale_upcoming_work:${w.title}(${w.year})` };
   }
 
+  // death_year is the highest-stakes field this pipeline writes — wrongly
+  // marking a living person as deceased is about as bad an accuracy failure
+  // as this can produce. Confirmed via a real A/B test against
+  // claude-haiku-4-5-20251001: it fabricated a death_year for 4 of 5 real,
+  // living guests, misreading an unrelated in-text year (most often a
+  // career-span end-year like "Reno 911! (2003–2009)") as a death date —
+  // and 2 of those 4 also failed to extract a plainly-stated birth_year in
+  // the same response. A death_year with no birth_year, or a death_year
+  // that isn't strictly after birth_year, or one in the future, is never a
+  // real fact pattern — flag for review rather than publish it as fact.
+  if (bio.death_year) {
+    const death = parseInt(bio.death_year);
+    if (!bio.birth_year) return { ok: false, reason: `death_year_without_birth_year:${bio.death_year}` };
+    const birth = parseInt(bio.birth_year);
+    if (death <= birth) return { ok: false, reason: `death_year_before_birth_year:${bio.birth_year}-${bio.death_year}` };
+    if (death > CURRENT_YEAR) return { ok: false, reason: `death_year_in_future:${bio.death_year}` };
+  }
+
   return { ok: true };
 }
 

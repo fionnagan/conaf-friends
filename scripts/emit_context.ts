@@ -35,6 +35,25 @@ const context = (guests as any).guests.map((g: any) => {
     }))
     .sort((x: any, y: any) => (x.date || '').localeCompare(y.date || ''));
 
+  // Everything the bios backfill pipeline (enrich-bios.ts / backfill-booking-
+  // signals.ts) has produced, surfaced so the Ask the Registry Q&A agent's
+  // find_guests tool can answer questions this data was built for — "who's
+  // an Emmy winner", "what's X known for", "what's X's connection to Conan"
+  // — without a separate ingestion step. This is exact structured/lookup
+  // data (returned per-guest on a name or filter match), not something that
+  // needs semantic search — that's what search_episodes/Pinecone is for
+  // (actual transcript text). known_for is compacted to "Title (year)"
+  // strings here rather than the full {title,type,year} objects the bios
+  // pipeline stores, to keep find_guests' tool-result tokens down when a
+  // filtered query returns many guests at once.
+  const bio = g.bio ?? {};
+  const knownFor: string[] = (bio.known_for ?? []).map((w: any) =>
+    w.year ? `${w.title} (${w.year})` : w.title
+  );
+  const conanConnection = bio.conan_connection
+    ? `${bio.conan_connection.type}: ${bio.conan_connection.evidence}`
+    : '';
+
   return {
     id: g.id,
     name: g.name,
@@ -46,6 +65,15 @@ const context = (guests as any).guests.map((g: any) => {
     appearanceYears: [...new Set(dates.map((d: string) => d.slice(0, 4)))].sort() as string[],
     firstByEra,
     coldOpens,
+    birthYear: bio.birth_year ?? '',
+    deathYear: bio.death_year ?? '',
+    gender: bio.gender ?? '',
+    nationality: bio.nationality ?? '',
+    knownFor,
+    prestigeSignals: bio.prestige_signals ?? [],
+    primaryPlatform: bio.primary_platform ?? '',
+    conanConnection,
+    bioSummary: bio.description ?? '',
   };
 });
 
