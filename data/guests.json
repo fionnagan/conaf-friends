@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T09:55:16.021Z",
+  "generatedAt": "2026-09-09T10:00:09.237Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -312501,7 +312501,117 @@
       "id": "hugh-hefner",
       "name": "Hugh Hefner",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Hugh Hefner",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Hugh_Hefner",
+          "confidence": 1
+        },
+        "profession": [
+          "magazine publisher",
+          "businessman",
+          "editor-in-chief"
+        ],
+        "known_for": [
+          {
+            "title": "Playboy magazine",
+            "type": "other",
+            "year": "1953"
+          },
+          {
+            "title": "Playboy's Penthouse",
+            "type": "tv",
+            "year": "1959"
+          },
+          {
+            "title": "Playboy After Dark",
+            "type": "tv",
+            "year": "1969"
+          },
+          {
+            "title": "The Simpsons",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "Discovering the It Girl",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Sex and the City",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "Curb Your Enthusiasm",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Entourage",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "The Girls Next Door",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Robot Chicken",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Family Guy",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Miss March",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Hugh Hefner: Playboy, Activist and Rebel",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Hop",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Hugh Hefner: American Playboy",
+            "type": "tv",
+            "year": "1996"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Hugh Hefner was an American magazine publisher and businessman best known as the founder and editor-in-chief of Playboy, which he launched in 1953 and built into a global brand encompassing Playboy Clubs and two television variety shows, Playboy's Penthouse and Playboy After Dark. In later decades he became a recognizable pop-culture presence, voicing or playing himself on The Simpsons, Sex and the City, Curb Your Enthusiasm, Entourage, Robot Chicken, and Family Guy, and appearing in films including Miss March. He also produced the reality series The Girls Next Door. He likely crossed paths with Conan O'Brien as early as 2000 on Late Night with Conan O'Brien. Hefner died in 2017.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hugh_Hefner"
+        ],
+        "enrichedAt": "2026-09-09T09:55:31.481Z",
+        "birth_year": "1926",
+        "death_year": "2017",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Golden Raspberry Award nominee for Worst Supporting Actor",
+          "star on the Hollywood Walk of Fame"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312534,7 +312644,113 @@
       "id": "sherman-hemsley",
       "name": "Sherman Hemsley",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Sherman Hemsley",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Sherman_Hemsley",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "comedian"
+        ],
+        "known_for": [
+          {
+            "title": "All in the Family",
+            "type": "tv",
+            "year": "1973"
+          },
+          {
+            "title": "The Jeffersons",
+            "type": "tv",
+            "year": "1975"
+          },
+          {
+            "title": "Amen",
+            "type": "tv",
+            "year": "1986"
+          },
+          {
+            "title": "Dinosaurs",
+            "type": "tv",
+            "year": "1991"
+          },
+          {
+            "title": "Purlie",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Sister, Sister",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Goode Behavior",
+            "type": "tv",
+            "year": "1996"
+          },
+          {
+            "title": "The Real Live Jeffersons",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Sprung",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Who Wants to Be a Millionaire",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "Family Guy",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "American Pie Presents: The Book of Love",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Tyler Perry's House of Payne",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Dance",
+            "type": "music",
+            "year": "1992"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Sherman Hemsley (1938–2012) was an American actor and comedian best known for playing George Jefferson across two landmark CBS series, All in the Family and its spin-off The Jeffersons, which ran for eleven seasons. He later starred as Deacon Ernest Frye in NBC's Amen and voiced B. P. Richfield in ABC's Dinosaurs. A Golden Globe and Emmy nominee, he also won an NAACP Image Award for The Jeffersons and was inducted into the Television Academy Hall of Fame in 2012. Beyond acting, Hemsley released the R&B album Dance in 1992. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Sherman_Hemsley"
+        ],
+        "enrichedAt": "2026-09-09T09:55:32.697Z",
+        "birth_year": "1938",
+        "death_year": "2012",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Golden Globe Award nominee",
+          "Emmy Award nominee",
+          "NAACP Image Award winner",
+          "Television Academy Hall of Fame inductee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312567,7 +312783,121 @@
       "id": "josh-rouse",
       "name": "Josh Rouse",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Josh Rouse",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Josh_Rouse",
+          "confidence": 1
+        },
+        "profession": [
+          "singer-songwriter"
+        ],
+        "known_for": [
+          {
+            "title": "Dressed Up Like Nebraska",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "Chester (EP with Kurt Wagner)",
+            "type": "music",
+            "year": "1999"
+          },
+          {
+            "title": "Home",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Under Cold Blue Stars",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "1972",
+            "type": "music",
+            "year": "2003"
+          },
+          {
+            "title": "Nashville",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "Subtítulo",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "Country Mouse City House",
+            "type": "music",
+            "year": "2007"
+          },
+          {
+            "title": "She's Spanish, I'm American (EP with Paz Suay)",
+            "type": "music",
+            "year": "2007"
+          },
+          {
+            "title": "El Turista",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "The Happiness Waltz",
+            "type": "music",
+            "year": "2013"
+          },
+          {
+            "title": "La Gran Familia Española (soundtrack)",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "The Embers of Time",
+            "type": "music",
+            "year": "2015"
+          },
+          {
+            "title": "Love in the Modern Age",
+            "type": "music",
+            "year": "2018"
+          },
+          {
+            "title": "The Holiday Sounds of Josh Rouse",
+            "type": "music",
+            "year": "2019"
+          },
+          {
+            "title": "Going Places",
+            "type": "music",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [
+          "Streets of Your Town (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Josh Rouse is an American folk and indie pop singer-songwriter born in Nebraska who launched his recording career in Nashville in 1998 with the critically acclaimed debut Dressed Up Like Nebraska. Over the following decades he built a substantial catalog spanning albums such as Home, Under Cold Blue Stars, 1972, Nashville, El Turista, and Going Places, and in 2014 won a Spanish Goya Film Award for Best Original Song for his contribution to La Gran Familia Española. His most recent release is Streets of Your Town (2025). Rouse likely crossed paths with Conan O'Brien on Late Night around 2000, near the time his second album Home was released.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Josh_Rouse"
+        ],
+        "enrichedAt": "2026-09-09T09:55:32.349Z",
+        "birth_year": "1972",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Spanish Goya Film Award winner, Best Original Song (2014)"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312600,7 +312930,171 @@
       "id": "harvey-keitel",
       "name": "Harvey Keitel",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Harvey Keitel",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Harvey_Keitel",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "Who's That Knocking at My Door",
+            "type": "film",
+            "year": "1967"
+          },
+          {
+            "title": "Mean Streets",
+            "type": "film",
+            "year": "1973"
+          },
+          {
+            "title": "Alice Doesn't Live Here Anymore",
+            "type": "film",
+            "year": "1974"
+          },
+          {
+            "title": "Taxi Driver",
+            "type": "film",
+            "year": "1976"
+          },
+          {
+            "title": "The Last Temptation of Christ",
+            "type": "film",
+            "year": "1988"
+          },
+          {
+            "title": "The Irishman",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Reservoir Dogs",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "Pulp Fiction",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "Moonrise Kingdom",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "The Grand Budapest Hotel",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Isle of Dogs",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Bugsy",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "The Piano",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Blue Collar",
+            "type": "film",
+            "year": "1978"
+          },
+          {
+            "title": "Thelma & Louise",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Bad Lieutenant",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "Sister Act",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "Imaginary Crimes",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "From Dusk till Dawn",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Cop Land",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Holy Smoke!",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "U-571",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Red Dragon",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "National Treasure",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "National Treasure: Book of Secrets",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Youth",
+            "type": "film",
+            "year": "2015"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Harvey Keitel is an American actor and producer born in 1939, long celebrated for his portrayals of morally ambiguous and tough-guy characters across more than five decades of film. A central figure of the New Hollywood movement, he is closely associated with Martin Scorsese — collaborating on six films including Mean Streets, Taxi Driver, and The Irishman — and with Quentin Tarantino on Reservoir Dogs and Pulp Fiction. His role in Bugsy earned him an Academy Award nomination, while The Piano won him the AACTA Award for Best Actor. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Harvey_Keitel"
+        ],
+        "enrichedAt": "2026-09-09T09:55:36.085Z",
+        "birth_year": "1939",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Academy Award for Best Supporting Actor nominee",
+          "AACTA Award for Best Actor in a Leading Role winner"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312633,7 +313127,66 @@
       "id": "allan-houston",
       "name": "Allan Houston",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Allan Houston",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Allan_Houston",
+          "confidence": 1
+        },
+        "profession": [
+          "professional basketball player",
+          "NBA executive"
+        ],
+        "known_for": [
+          {
+            "title": "New York Knicks",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Detroit Pistons",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "1999 NBA Finals",
+            "type": "other",
+            "year": "1999"
+          },
+          {
+            "title": "2000 Summer Olympics",
+            "type": "other",
+            "year": "2000"
+          },
+          {
+            "title": "Allan Houston Rule",
+            "type": "other",
+            "year": "2005"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Allan Houston is a former NBA shooting guard who played for the Detroit Pistons and, most notably, the New York Knicks from 1996 to 2005. A two-time NBA All-Star, he is best remembered for a last-second running jumper that eliminated the Miami Heat in the 1999 playoffs and for his role on the Knicks' 1999 NBA Finals team. He won a gold medal with the U.S. men's basketball team at the 2000 Summer Olympics. His expensive contract later gave rise to the so-called Allan Houston Rule. Since retiring, he has moved into team management with the Knicks organization. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Allan_Houston"
+        ],
+        "enrichedAt": "2026-09-09T09:55:42.007Z",
+        "birth_year": "1971",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "NBA All-Star Team twice",
+          "2000 Summer Olympics gold medal"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312666,7 +313219,92 @@
       "id": "barry-white",
       "name": "Barry White",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Barry White",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Barry_White",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "songwriter",
+          "actor",
+          "record producer"
+        ],
+        "known_for": [
+          {
+            "title": "Love's Theme",
+            "type": "music",
+            "year": "1973"
+          },
+          {
+            "title": "Can't Get Enough of Your Love, Babe",
+            "type": "music",
+            "year": "1974"
+          },
+          {
+            "title": "You're the First, the Last, My Everything",
+            "type": "music",
+            "year": "1974"
+          },
+          {
+            "title": "From A Girl's Point of View We Give to You... Love Unlimited",
+            "type": "music",
+            "year": "1972"
+          },
+          {
+            "title": "Walkin' in the Rain with the One I Love",
+            "type": "music",
+            "year": "1972"
+          },
+          {
+            "title": "I Feel Love Comin' On",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "It May Be Winter Outside (But in My Heart It's Spring)",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Under the Influence of Love",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "All in the Run of a Day",
+            "type": "music",
+            "year": "1967"
+          },
+          {
+            "title": "Doin' the Banana Split",
+            "type": "music",
+            "year": "1968"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Barry White was an American R&B, soul, and disco singer, songwriter, actor, and record producer, best known for his distinctive bass voice and romantic image. A two-time Grammy winner, he rose to prominence in the 1970s as a solo artist and through his work with the Love Unlimited Orchestra, whose 'Love's Theme' reached number one. His catalog includes enduring hits such as 'Can't Get Enough of Your Love, Babe' and 'You're the First, the Last, My Everything.' Over his career he recorded 20 studio albums and sold in excess of 100 million records worldwide. He likely crossed paths with Conan O'Brien, first appearing on Late Night with Conan O'Brien in 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Barry_White"
+        ],
+        "enrichedAt": "2026-09-09T09:55:42.519Z",
+        "birth_year": "1944",
+        "death_year": "2003",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "two-time Grammy Award winner"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312699,7 +313337,122 @@
       "id": "britney-spears",
       "name": "Britney Spears",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Britney Spears",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Britney_Spears",
+          "confidence": 1
+        },
+        "profession": [
+          "singer"
+        ],
+        "known_for": [
+          {
+            "title": "Ruthless!",
+            "type": "other",
+            "year": "1992"
+          },
+          {
+            "title": "The All-New Mickey Mouse Club",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "...Baby One More Time",
+            "type": "music",
+            "year": "1999"
+          },
+          {
+            "title": "Oops!... I Did It Again",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Britney",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "Crossroads",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "In the Zone",
+            "type": "music",
+            "year": "2003"
+          },
+          {
+            "title": "Toxic",
+            "type": "music",
+            "year": "2003"
+          },
+          {
+            "title": "Blackout",
+            "type": "music",
+            "year": "2007"
+          },
+          {
+            "title": "Circus",
+            "type": "music",
+            "year": "2008"
+          },
+          {
+            "title": "Femme Fatale",
+            "type": "music",
+            "year": "2011"
+          },
+          {
+            "title": "Britney Jean",
+            "type": "music",
+            "year": "2013"
+          },
+          {
+            "title": "Glory",
+            "type": "music",
+            "year": "2016"
+          },
+          {
+            "title": "Framing Britney Spears",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "The Woman in Me",
+            "type": "other",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "The Woman in Me (memoir, 2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Britney Spears is an American singer widely credited with reviving teen pop in the late 1990s and early 2000s. Her debut album ...Baby One More Time (1999) and its follow-up Oops!... I Did It Again (2000) made her the best-selling teenage artist of all time, and she went on to release a string of albums including In the Zone, Blackout, and Glory. The single 'Toxic' earned her a Grammy Award for Best Dance/Electronic Recording. Beyond music, she starred in the film Crossroads and published the memoir The Woman in Me in 2023. A Grammy winner and Hollywood Walk of Fame honoree, she likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Britney_Spears"
+        ],
+        "enrichedAt": "2026-09-09T09:56:12.988Z",
+        "birth_year": "1981",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Grammy Award winner (Best Dance/Electronic Recording for 'Toxic')",
+          "Six MTV Video Music Awards winner (including Michael Jackson Video Vanguard Award)",
+          "Seven Billboard Music Awards winner",
+          "Hollywood Walk of Fame star",
+          "Forbes world's highest-paid female musician (2000 and 2012)",
+          "Time 100 Most Influential People (2021)",
+          "Billboard greatest pop stars of the 21st century (2023)"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312732,7 +313485,67 @@
       "id": "buzz-aldrin",
       "name": "Buzz Aldrin",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Buzz Aldrin",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Buzz_Aldrin",
+          "confidence": 1
+        },
+        "profession": [
+          "astronaut",
+          "aeronautical engineer",
+          "fighter pilot",
+          "author"
+        ],
+        "known_for": [
+          {
+            "title": "Apollo 11 Moon landing",
+            "type": "other",
+            "year": "1969"
+          },
+          {
+            "title": "Gemini 12",
+            "type": "other",
+            "year": "1966"
+          },
+          {
+            "title": "Return to Earth",
+            "type": "other",
+            "year": "1973"
+          },
+          {
+            "title": "Magnificent Desolation",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Aldrin cycler",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Buzz Aldrin is an American former astronaut, aeronautical engineer, and fighter pilot best known as the second person to walk on the Moon during the 1969 Apollo 11 mission. He also made three spacewalks as pilot of NASA's 1966 Gemini 12 mission and remains the last surviving Apollo 11 crew member. A recipient of the Presidential Medal of Freedom, Aldrin has written two autobiographies — Return to Earth and Magnificent Desolation — and continues to advocate for human missions to Mars, having developed the Aldrin cycler spacecraft trajectory. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Buzz_Aldrin"
+        ],
+        "enrichedAt": "2026-09-09T09:56:08.586Z",
+        "birth_year": "1930",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Presidential Medal of Freedom in 1969"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312765,7 +313578,116 @@
       "id": "marie-osmond",
       "name": "Marie Osmond",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Marie Osmond",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Marie_Osmond",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "actress",
+          "author",
+          "businesswoman",
+          "television personality"
+        ],
+        "known_for": [
+          {
+            "title": "Paper Roses",
+            "type": "music",
+            "year": "1973"
+          },
+          {
+            "title": "Meet Me in Montana",
+            "type": "music",
+            "year": "1985"
+          },
+          {
+            "title": "There's No Stopping Your Heart",
+            "type": "music",
+            "year": "1985"
+          },
+          {
+            "title": "You're Still New to Me",
+            "type": "music",
+            "year": "1986"
+          },
+          {
+            "title": "There's No Stopping Your Heart (album)",
+            "type": "music",
+            "year": "1985"
+          },
+          {
+            "title": "Donny & Marie",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Talk",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The King and I",
+            "type": "other",
+            "year": "1994"
+          },
+          {
+            "title": "Behind the Smile: My Journey Out of Postpartum Depression",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Marie & Friends",
+            "type": "other",
+            "year": "2004"
+          },
+          {
+            "title": "Dancing with the Stars",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "I Can Do This",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Music Is Medicine",
+            "type": "music",
+            "year": "2016"
+          },
+          {
+            "title": "Unexpected",
+            "type": "music",
+            "year": "2021"
+          },
+          {
+            "title": "The Christmas Edition",
+            "type": "tv",
+            "year": "2020"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Marie Osmond is an American singer, actress, author, and businesswoman whose career spans more than five decades. She first gained national attention at 14 with her debut single 'Paper Roses,' which reached number one on the US country chart, making her the youngest female artist to achieve that distinction. She went on to score additional number-one country singles in the mid-1980s and co-hosted the variety program Donny & Marie alongside her brother. Her television work also includes co-hosting The Talk and appearing in Lifetime films such as The Christmas Edition. She made her Broadway debut in The King and I in 1994 and has released albums spanning country, pop, and classical styles. She likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Marie_Osmond"
+        ],
+        "enrichedAt": "2026-09-09T09:56:09.835Z",
+        "birth_year": "1959",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312798,7 +313720,93 @@
       "id": "son-seals",
       "name": "Son Seals",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Son Seals",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Son_Seals",
+          "confidence": 1
+        },
+        "profession": [
+          "electric blues guitarist",
+          "singer"
+        ],
+        "known_for": [
+          {
+            "title": "The Son Seals Blues Band",
+            "type": "music",
+            "year": "1973"
+          },
+          {
+            "title": "Midnight Son",
+            "type": "music",
+            "year": "1976"
+          },
+          {
+            "title": "Live and Burning",
+            "type": "music",
+            "year": "1978"
+          },
+          {
+            "title": "Chicago Fire",
+            "type": "music",
+            "year": "1980"
+          },
+          {
+            "title": "Bad Axe",
+            "type": "music",
+            "year": "1984"
+          },
+          {
+            "title": "Living in the Danger Zone",
+            "type": "music",
+            "year": "1991"
+          },
+          {
+            "title": "Nothing but the Truth",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "Live: Spontaneous Combustion",
+            "type": "music",
+            "year": "1996"
+          },
+          {
+            "title": "Lettin' Go",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Hey Bo Diddley – A Tribute!",
+            "type": "music",
+            "year": "2002"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Frank \"Son\" Seals (1942–2004) was an American electric blues guitarist and singer who began performing professionally at age 13, first as a drummer and later as a guitarist alongside figures such as Albert King and Bobby Bland. Signed to Alligator Records, he built a catalog spanning The Son Seals Blues Band (1973), Midnight Son (1976), Chicago Fire (1980), and several subsequent albums, earning three W.C. Handy Awards and posthumous induction into the Blues Hall of Fame. His 2000 album Lettin' Go was co-written with novelist Andrew Vachss. Seals likely crossed paths with Late Night with Conan O'Brien around 2000, near the end of his active recording career.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Son_Seals"
+        ],
+        "enrichedAt": "2026-09-09T09:56:09.690Z",
+        "birth_year": "1942",
+        "death_year": "2004",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "W.C. Handy Award (1985)",
+          "W.C. Handy Award (1987)",
+          "W.C. Handy Award (2001)",
+          "inducted into the Blues Hall of Fame (2009)"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312831,7 +313839,144 @@
       "id": "jimmy-smits",
       "name": "Jimmy Smits",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jimmy Smits",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jimmy_Smits",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "L.A. Law",
+            "type": "tv",
+            "year": "1986"
+          },
+          {
+            "title": "NYPD Blue",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "The West Wing",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Star Wars: Episode II – Attack of the Clones",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Star Wars: Episode III – Revenge of the Sith",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Rogue One",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Obi-Wan Kenobi",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "Dexter",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Sons of Anarchy",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Bluff City Law",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "In the Heights",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "My Family",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Switch",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "The Jane Austen Book Club",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "The Get Down",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Cane",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Running Scared",
+            "type": "film",
+            "year": "1986"
+          },
+          {
+            "title": "Old Gringo",
+            "type": "film",
+            "year": "1989"
+          },
+          {
+            "title": "Miami Vice",
+            "type": "tv",
+            "year": "1984"
+          },
+          {
+            "title": "Star Wars: The Force Unleashed",
+            "type": "other",
+            "year": "2008"
+          }
+        ],
+        "recent_work": [
+          "Dexter: Resurrection (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Jimmy Smits is an American actor with a career spanning four decades across television, film, and stage. He is best known for his Emmy-winning role as attorney Victor Sifuentes on L.A. Law, his acclaimed portrayal of NYPD Detective Bobby Simone on NYPD Blue, Congressman Matt Santos on The West Wing, and Bail Organa across multiple entries in the Star Wars franchise, including Obi-Wan Kenobi. His film credits include My Family, In the Heights, and Rogue One. Most recently he reprised his Dexter role in the 2025 series Dexter: Resurrection. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jimmy_Smits"
+        ],
+        "enrichedAt": "2026-09-09T09:56:22.483Z",
+        "birth_year": "1955",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series winner (1990)",
+          "Emmy nominated for Outstanding Supporting Actor in a Drama Series (six nominations for L.A. Law)",
+          "Emmy nominated for Outstanding Guest Actor in a Drama Series (Dexter)",
+          "ALMA Award winner (twice)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312897,7 +314042,133 @@
       "id": "cheri-oteri",
       "name": "Cheri Oteri",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Cheri_Oteri_2016.png/500px-Cheri_Oteri_2016.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Cheri Oteri",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Cheri_Oteri",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "comedian"
+        ],
+        "known_for": [
+          {
+            "title": "Saturday Night Live",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Scary Movie",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Liar Liar",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Inspector Gadget",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Dumb and Dumberer: When Harry Met Lloyd",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Southland Tales",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Ant Bully",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Shrek the Third",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Just Shoot Me!",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Strangers with Candy",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Curb Your Enthusiasm",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Sit Down, Shut Up",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Imagination Movers",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Liza Life Coach",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Glory Daze",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Gotham Comedy Live",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Beat Bobby Flay",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Happy's Place",
+            "type": "tv",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "Happy's Place (NBC sitcom, 2025, recurring role as Monica the health inspector)",
+          "Scary Movie sequel (2026, reprised role as Gail Hailstorm)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Cheri Oteri is an American actress and comedian best known for her five-year tenure as a cast member on Saturday Night Live from 1995 to 2000, where she originated memorable characters alongside Will Ferrell and Chris Kattan. A Primetime Emmy Award nominee, she went on to appear in films including Scary Movie, Liar Liar, and Shrek the Third, and has made recurring television appearances across comedy and animated series. Most recently, she joined the NBC sitcom Happy's Place in a recurring role and reprised her Scary Movie character in 2026. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 2000, near the close of her SNL run.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cheri_Oteri"
+        ],
+        "enrichedAt": "2026-09-09T09:56:21.655Z",
+        "birth_year": "1962",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312930,7 +314201,76 @@
       "id": "calista-flockhart",
       "name": "Calista Flockhart",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Calista_Flockhart_at_the_2009_Deauville_American_Film_Festival-01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Calista Flockhart",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Calista_Flockhart",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Ally McBeal",
+            "type": "tv",
+            "year": "1997"
+          },
+          {
+            "title": "Brothers & Sisters",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Supergirl",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Feud: Capote vs. The Swans",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "The Birdcage",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "A Midsummer Night's Dream",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Things You Can Tell Just by Looking at Her",
+            "type": "film",
+            "year": "2000"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Calista Flockhart is an American actress best known for playing the title role on the Fox legal comedy Ally McBeal from 1997 to 2002, a performance that earned her a Golden Globe Award and three Emmy nominations. She followed that with starring roles as Kitty Walker on Brothers & Sisters and Cat Grant on Supergirl, and most recently portrayed Lee Radziwill in Feud: Capote vs. The Swans in 2024. Her film credits include The Birdcage, A Midsummer Night's Dream, and Things You Can Tell Just by Looking at Her. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Calista_Flockhart"
+        ],
+        "enrichedAt": "2026-09-09T09:56:18.137Z",
+        "birth_year": "1964",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Golden Globe Award winner (Best Actress – Television Series Musical or Comedy, 1998)",
+          "Primetime Emmy Award nominee (Outstanding Lead Actress in a Comedy Series, three nominations)",
+          "Clarence Derwent Award recipient"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312963,7 +314303,128 @@
       "id": "swan-dive",
       "name": "Swan Dive",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Swan Dive",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Swan_Dive",
+          "confidence": 1
+        },
+        "profession": [
+          "musical duo",
+          "singer-songwriter",
+          "journalist"
+        ],
+        "known_for": [
+          {
+            "title": "Circle",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "Wintergreen",
+            "type": "music",
+            "year": "1997"
+          },
+          {
+            "title": "You're Beautiful",
+            "type": "music",
+            "year": "1997"
+          },
+          {
+            "title": "Swan Dive",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "June",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "Words You Whisper",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "William & Marlys",
+            "type": "music",
+            "year": "2004"
+          },
+          {
+            "title": "Popcorn & a Mama Who Loves Me Too",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "Until",
+            "type": "music",
+            "year": "2007"
+          },
+          {
+            "title": "Mayfair",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "Soundtrack to Me and You",
+            "type": "music",
+            "year": "2014"
+          },
+          {
+            "title": "The Look of Love: The Burt Bacharach Collection",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Felicity",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The L Word",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Unfabulous",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"Swan Dive has appeared on Late Night with Conan O'Brien\""
+        },
+        "description": "Swan Dive is an American musical duo consisting of Bill DeMain and Molly Felder, active since 1995. The group is best known for the 1998 album Circle, which won the inaugural Independent Music Awards for Pop Song, and has released a catalog spanning releases including Wintergreen, June, Words You Whisper, and Soundtrack to Me and You. Their music has been featured on television series including Felicity, The L Word, and Unfabulous, and they have built a following in Japan, Korea, and Thailand. DeMain is also a Grammy-nominated songwriter. Swan Dive has appeared on Late Night with Conan O'Brien, and have new singles Stop Buying Things and Jenny arriving in 2026.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Swan_Dive"
+        ],
+        "enrichedAt": "2026-09-09T09:56:22.270Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "American",
+        "prestige_signals": [
+          "Grammy-nominated writer",
+          "1st Annual Independent Music Awards winner for Pop Song"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": [
+          {
+            "title": "Stop Buying Things",
+            "type": "music",
+            "year": "2026"
+          },
+          {
+            "title": "Jenny",
+            "type": "music",
+            "year": "2026"
+          }
+        ]
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -312996,7 +314457,142 @@
       "id": "bill-flanagan",
       "name": "Bill Flanagan",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/BillFlanagin.jpg/500px-BillFlanagin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Bill Flanagan",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Bill_Flanagan",
+          "confidence": 1
+        },
+        "profession": [
+          "author",
+          "television executive",
+          "radio host",
+          "screenwriter",
+          "producer",
+          "essayist"
+        ],
+        "known_for": [
+          {
+            "title": "Written in My Soul",
+            "type": "other",
+            "year": "1986"
+          },
+          {
+            "title": "Last of the Moe Haircuts",
+            "type": "other",
+            "year": "1986"
+          },
+          {
+            "title": "U2 at the End of the World",
+            "type": "other",
+            "year": "1995"
+          },
+          {
+            "title": "A&R",
+            "type": "other",
+            "year": "2000"
+          },
+          {
+            "title": "New Bedlam",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "Evening's Empire",
+            "type": "other",
+            "year": "2010"
+          },
+          {
+            "title": "Fifty in Reverse",
+            "type": "other",
+            "year": "2020"
+          },
+          {
+            "title": "Jimmy Carter: Rock n Roll President",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "Breakshot: James Taylor",
+            "type": "podcast",
+            "year": "2020"
+          },
+          {
+            "title": "St. Vincent: Words + Music",
+            "type": "podcast",
+            "year": "2020"
+          },
+          {
+            "title": "VH1 Storytellers",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "CMT Crossroads",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Concert for New York City",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Beatles Revolution",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Elvis Lives",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Spectacle: Elvis Costello with...",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Flanagan's Wake",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Written In My Soul",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "The Fab Fourum",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Northern Songs",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Bill Flanagan is an American author, television executive, radio host, and screenwriter born in Rhode Island and educated at Brown University. He has written several books including the novels A&R, New Bedlam, Evening's Empire, and Fifty in Reverse, as well as music nonfiction such as U2 at the End of the World. A former Executive Vice President at MTV Networks and the Viacom Music Group, he oversaw VH1 Storytellers and CMT Crossroads and produced major televised events including The Concert for New York City. He currently hosts multiple series on Sirius XM and contributes essays to CBS News Sunday Morning. He likely crossed paths with Conan O'Brien during his Late Night appearances around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Bill_Flanagan"
+        ],
+        "enrichedAt": "2026-09-09T09:56:36.051Z",
+        "birth_year": "1955",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313029,7 +314625,87 @@
       "id": "greg-hahn",
       "name": "Greg Hahn",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Greg_Hahn.jpg/500px-Greg_Hahn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Greg Hahn",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Greg_Hahn",
+          "confidence": 1
+        },
+        "profession": [
+          "stand-up comedian"
+        ],
+        "known_for": [
+          {
+            "title": "Late Night with Conan O'Brien",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Bob & Tom Show",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Comedy Central's Premium Blend",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Make Me Laugh",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Pulp Comics",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Cedric the Entertainer Presents",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "30 Seconds to Fame",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Star Search",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Comedy.TV",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Comics Unleashed with Byron Allen",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"He is a frequent guest on the nationally syndicated The Bob & Tom Show, and has several television appearances including Late Night with Conan O'Brien.\""
+        },
+        "description": "Greg Hahn is an American stand-up comedian known for his high-energy style, delivered in loud, rapid-fire bursts. A graduate of Rollins College and former Marine Corps captain, he built his comedy career through television appearances including Late Night with Conan O'Brien, Comedy Central's Premium Blend, Cedric the Entertainer Presents, Star Search, and Comics Unleashed with Byron Allen. He is perhaps best recognized as a fixture on the nationally syndicated Bob & Tom Show, where his aggressive comedic style and drumming ability have made him a recurring presence, including in the show's first Comedy Central special. He is based in Los Angeles.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Greg_Hahn"
+        ],
+        "enrichedAt": "2026-09-09T09:57:09.294Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313062,7 +314738,91 @@
       "id": "shawn-wayans",
       "name": "Shawn Wayans",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Shawnwayans04.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Shawn Wayans",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Shawn_Wayans",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "comedian",
+          "writer",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "In Living Color",
+            "type": "tv",
+            "year": "1990"
+          },
+          {
+            "title": "The Wayans Bros.",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Don't Be a Menace to South Central While Drinking Your Juice in the Hood",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Scary Movie",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Scary Movie 2",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "White Chicks",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Little Man",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Dance Flick",
+            "type": "film",
+            "year": "2009"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Shawn Wayans is an American actor, comedian, writer, and producer who built his career through a series of collaborations with his brother Marlon Wayans. He first gained wide attention on the sketch comedy series In Living Color before starring in the WB sitcom The Wayans Bros. His film work includes Don't Be a Menace to South Central While Drinking Your Juice in the Hood, Scary Movie, Scary Movie 2, White Chicks, Little Man, and Dance Flick. After an extended break from acting, he is set to return in Scary Movie (2026) and White Chicks 2. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Shawn_Wayans"
+        ],
+        "enrichedAt": "2026-09-09T09:57:08.149Z",
+        "birth_year": "1971",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": [
+          {
+            "title": "Scary Movie",
+            "type": "film",
+            "year": "2026"
+          },
+          {
+            "title": "White Chicks 2",
+            "type": "film",
+            "year": ""
+          }
+        ]
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313095,7 +314855,80 @@
       "id": "steve-earle",
       "name": "Steve Earle",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/20180705-Rudolstadt-Festival-Steve_Earle-and-the-Dukes-4821_%28cropped%29.jpg/500px-20180705-Rudolstadt-Festival-Steve_Earle-and-the-Dukes-4821_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Steve Earle",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Steve_Earle",
+          "confidence": 1
+        },
+        "profession": [
+          "singer-songwriter",
+          "actor",
+          "novelist",
+          "playwright"
+        ],
+        "known_for": [
+          {
+            "title": "Guitar Town",
+            "type": "music",
+            "year": "1986"
+          },
+          {
+            "title": "Copperhead Road",
+            "type": "music",
+            "year": "1988"
+          },
+          {
+            "title": "Exit 0",
+            "type": "music",
+            "year": "1987"
+          },
+          {
+            "title": "The Hard Way",
+            "type": "music",
+            "year": "1990"
+          },
+          {
+            "title": "The Wire",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Treme",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Heartworn Highways",
+            "type": "film",
+            "year": "1976"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Steve Earle is an American country, rock, and folk singer-songwriter whose 1986 debut album Guitar Town launched a career spanning more than two dozen studio albums. His 1988 single 'Copperhead Road' remains his bestselling track and has seen renewed popularity in the 21st century. A three-time Grammy winner for Best Contemporary Folk Album, Earle was inducted into the Nashville Songwriters Hall of Fame in 2020 and joined the Grand Ole Opry in 2025. Beyond music, he has appeared as recurring characters in the HBO dramas The Wire and Treme, and has published a novel, a play, and a book of short stories. He likely crossed paths with Conan O'Brien as far back as 2000 on Late Night with Conan O'Brien.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Steve_Earle"
+        ],
+        "enrichedAt": "2026-09-09T09:57:10.671Z",
+        "birth_year": "1955",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "three Grammy awards for Best Contemporary Folk Album",
+          "four additional Grammy nominations for Best Contemporary Folk Album",
+          "inducted into the Nashville Songwriters Hall of Fame in 2020",
+          "member of the Grand Ole Opry"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313128,7 +314961,88 @@
       "id": "amber-valletta",
       "name": "Amber Valletta",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Amber Valletta",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Amber_Valletta",
+          "confidence": 1
+        },
+        "profession": [
+          "model",
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "House of Style",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "What Lies Beneath",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Hitch",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Transporter 2",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Man About Town",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Dead Silence",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Gamer",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "The Spy Next Door",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Revenge",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Blood & Oil",
+            "type": "tv",
+            "year": "2015"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Amber Valletta is an American model and actress who rose to supermodel status in the 1990s, serving as the face of major fashion houses including Chanel, Prada, Gucci, and Versace, and co-hosting MTV's House of Style alongside Shalom Harlow. She transitioned into acting with her role in Robert Zemeckis's supernatural thriller What Lies Beneath and went on to appear in films such as Hitch, Transporter 2, Dead Silence, and Gamer. On television, she played recurring roles in ABC dramas Revenge and Blood & Oil. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Amber_Valletta"
+        ],
+        "enrichedAt": "2026-09-09T09:57:07.695Z",
+        "birth_year": "1974",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313161,7 +315075,144 @@
       "id": "skipp-sudduth",
       "name": "Skipp Sudduth",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Skipp Sudduth",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Skipp_Sudduth",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "director",
+          "singer-songwriter"
+        ],
+        "known_for": [
+          {
+            "title": "Ronin",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Third Watch",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "54",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "A Cool, Dry Place",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Clockers",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Flawless",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "One Life to Live",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Iceman Cometh",
+            "type": "other",
+            "year": "1999"
+          },
+          {
+            "title": "Riverside Drive",
+            "type": "other",
+            "year": "2003"
+          },
+          {
+            "title": "South Pacific",
+            "type": "other",
+            "year": "2008"
+          },
+          {
+            "title": "NYC 22",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Hope and Damage",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "Really Really",
+            "type": "music",
+            "year": "1999"
+          },
+          {
+            "title": "Hope and Damage Revisited",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "Homicide: Life on the Street",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Law & Order",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Oz",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "ER",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Criminal Minds",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "CSI: NY",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "CSI: Cyber",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Skipp Sudduth is an American actor, director, and singer-songwriter with a career spanning theater, film, and television. He is best known for playing NYPD officer John 'Sully' Sullivan across all six seasons of the NBC drama Third Watch and for his role alongside Robert De Niro in the 1998 action film Ronin. His stage credits include a Tony Award-winning revival of South Pacific at Lincoln Center and a 1999 Broadway production of The Iceman Cometh. He has also directed episodes of ER, Criminal Minds, and CSI: NY. Sudduth likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2000, during his Third Watch years.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Skipp_Sudduth"
+        ],
+        "enrichedAt": "2026-09-09T09:57:17.121Z",
+        "birth_year": "1956",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313227,7 +315278,93 @@
       "id": "kylie-bax",
       "name": "Kylie Bax",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Kylie Bax",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Kylie_Bax",
+          "confidence": 1
+        },
+        "profession": [
+          "model",
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Vogue",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Marie Claire",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Sports Illustrated Swimsuit Issue",
+            "type": "other",
+            "year": "2000"
+          },
+          {
+            "title": "Tennis, Anyone...?",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Get Over It",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Perfume",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Boys and Girls",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Jill Rips",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "We Married Margo",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "The Big Tease",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Storm Catcher",
+            "type": "film",
+            "year": "1999"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Kylie Bax is a New Zealand-based model and actress who built an international career appearing on the covers of Vogue, Marie Claire, Harper's Bazaar, Vanity Fair, and ELLE, accumulating more than twenty Vogue covers worldwide. A protégé of photographer Steven Meisel, she worked with industry figures including Karl Lagerfeld, Helmut Newton, and Richard Avedon, and walked runways for houses such as Chanel, Prada, and Alexander McQueen. Between 1999 and 2005 she took on supporting roles in films including The Big Tease, Boys and Girls, and Get Over It. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Kylie_Bax"
+        ],
+        "enrichedAt": "2026-09-09T09:57:18.865Z",
+        "birth_year": "1975",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "New Zealand",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313260,7 +315397,104 @@
       "id": "richard-roeper",
       "name": "Richard Roeper",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Richard Roeper",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Richard_Roeper",
+          "confidence": 1
+        },
+        "profession": [
+          "writer",
+          "film critic",
+          "columnist",
+          "television host",
+          "radio host",
+          "podcaster"
+        ],
+        "known_for": [
+          {
+            "title": "At the Movies with Roger Ebert",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "Ebert & Roeper and the Movies",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "Ebert & Roeper",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "The Roe and Roeper Show",
+            "type": "other",
+            "year": "2010"
+          },
+          {
+            "title": "Good Day Chicago",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Windy City Live",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Windy City Weekend",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "The Richard Roeper Show",
+            "type": "podcast",
+            "year": "2021"
+          },
+          {
+            "title": "Bet the House",
+            "type": "other",
+            "year": "2010"
+          },
+          {
+            "title": "Starz Inside",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Movie of Your Life",
+            "type": "podcast",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "Joined RogerEbert.com as a regular contributor (2025)",
+          "Co-hosting The Movie of Your Life podcast (2025)",
+          "Became a regular contributor to WMAQ-TV (2026)",
+          "Appeared in a commercial for Mr. Submarine during its 50th anniversary campaign (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Richard Roeper is an American writer, film critic, and television host best known for co-hosting At the Movies with Roger Ebert from 2000 to 2008, stepping into the role vacated by the late Gene Siskel. He spent 39 years as a columnist and film critic at the Chicago Sun-Times before departing in 2025, and has hosted radio programs, the podcast The Richard Roeper Show, and the Fox Chicago morning program Good Day Chicago. Since 2025, he has contributed to RogerEbert.com and co-hosts The Movie of Your Life podcast. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Richard_Roeper"
+        ],
+        "enrichedAt": "2026-09-09T09:57:21.218Z",
+        "birth_year": "1959",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "voted best columnist in Illinois by the Associated Press on numerous occasions"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313293,7 +315527,97 @@
       "id": "tara-maclean",
       "name": "Tara MacLean",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Tara MacLean",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Tara_MacLean",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "songwriter",
+          "author",
+          "playwright"
+        ],
+        "known_for": [
+          {
+            "title": "Silence",
+            "type": "music",
+            "year": "1995"
+          },
+          {
+            "title": "If You See Me",
+            "type": "music",
+            "year": "1997"
+          },
+          {
+            "title": "Passenger",
+            "type": "music",
+            "year": "1999"
+          },
+          {
+            "title": "Inventing the Abbotts",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Coyote Ugly",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Good vs Evil",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Bridge",
+            "type": "music",
+            "year": "2003"
+          },
+          {
+            "title": "Lake of Fire",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "Wake",
+            "type": "music",
+            "year": "2008"
+          },
+          {
+            "title": "Atlantic Blue",
+            "type": "music",
+            "year": "2017"
+          },
+          {
+            "title": "Song of the Sparrow",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"She also appeared on Late Night with Conan O'Brien and had a Cameo in the Jerry Bruckheimer film Coyote Ugly, and USA Network's Good vs Evil.\""
+        },
+        "description": "Tara MacLean is an Irish-Canadian singer, songwriter, bestselling author, and playwright born in 1973. She released her debut album Silence in 1995, followed by Passenger in 1999, and subsequently became a member of the Juno-nominated Atlantic Canadian group Shaye alongside Kim Stockwood and Damhnait Doyle, releasing The Bridge and Lake of Fire. Her solo catalog also includes Wake and Atlantic Blue. Her bestselling memoir Song of the Sparrow debuted at number four on the Canadian non-fiction chart. While promoting Passenger, she appeared on Late Night with Conan O'Brien, alongside a cameo in the Jerry Bruckheimer film Coyote Ugly.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Tara_MacLean"
+        ],
+        "enrichedAt": "2026-09-09T09:57:22.227Z",
+        "birth_year": "1973",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Irish-Canadian",
+        "prestige_signals": [
+          "Juno nominated"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313326,7 +315650,186 @@
       "id": "donald-sutherland",
       "name": "Donald Sutherland",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Donald Sutherland",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Donald_Sutherland",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "The Dirty Dozen",
+            "type": "film",
+            "year": "1967"
+          },
+          {
+            "title": "M*A*S*H",
+            "type": "film",
+            "year": "1970"
+          },
+          {
+            "title": "Kelly's Heroes",
+            "type": "film",
+            "year": "1970"
+          },
+          {
+            "title": "Klute",
+            "type": "film",
+            "year": "1971"
+          },
+          {
+            "title": "Don't Look Now",
+            "type": "film",
+            "year": "1973"
+          },
+          {
+            "title": "The Day of the Locust",
+            "type": "film",
+            "year": "1975"
+          },
+          {
+            "title": "1900",
+            "type": "film",
+            "year": "1976"
+          },
+          {
+            "title": "Fellini's Casanova",
+            "type": "film",
+            "year": "1976"
+          },
+          {
+            "title": "Animal House",
+            "type": "film",
+            "year": "1978"
+          },
+          {
+            "title": "Invasion of the Body Snatchers",
+            "type": "film",
+            "year": "1978"
+          },
+          {
+            "title": "Ordinary People",
+            "type": "film",
+            "year": "1980"
+          },
+          {
+            "title": "The Eye of the Needle",
+            "type": "film",
+            "year": "1981"
+          },
+          {
+            "title": "A Dry White Season",
+            "type": "film",
+            "year": "1989"
+          },
+          {
+            "title": "JFK",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Six Degrees of Separation",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Citizen X",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Without Limits",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Space Cowboys",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Uprising",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "Path to War",
+            "type": "tv",
+            "year": "2002"
+          },
+          {
+            "title": "Cold Mountain",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "The Italian Job",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Human Trafficking",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Pride & Prejudice",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "The Hunger Games",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Trust",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Ad Astra",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "The Undoing",
+            "type": "tv",
+            "year": "2020"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Donald Sutherland (1935–2024) was a Canadian actor whose career spanned six decades, earning him a Primetime Emmy Award, two Golden Globe Awards, and an Academy Honorary Award. He rose to prominence in war films such as The Dirty Dozen, M*A*S*H, and Kelly's Heroes, and went on to deliver acclaimed performances in Klute, Don't Look Now, Ordinary People, and Invasion of the Body Snatchers, among many others. On television, he was recognized for Citizen X and Path to War. He reached a new generation of audiences as President Snow in The Hunger Games franchise. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Donald_Sutherland"
+        ],
+        "enrichedAt": "2026-09-09T09:57:33.291Z",
+        "birth_year": "1935",
+        "death_year": "2024",
+        "gender": "male",
+        "nationality": "Canadian",
+        "prestige_signals": [
+          "Primetime Emmy Award winner",
+          "Golden Globe Award winner (two)",
+          "BAFTA Award nominee",
+          "Academy Honorary Award (2017)",
+          "Officer of the Order of Canada (1978)",
+          "Companion of the Order of Canada (2019)",
+          "Canadian Walk of Fame inductee (2000)",
+          "Hollywood Walk of Fame inductee (2011)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313359,7 +315862,73 @@
       "id": "tom-clancy",
       "name": "Tom Clancy",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Tom Clancy",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Tom_Clancy",
+          "confidence": 1
+        },
+        "profession": [
+          "novelist",
+          "writer"
+        ],
+        "known_for": [
+          {
+            "title": "The Hunt for Red October",
+            "type": "other",
+            "year": "1984"
+          },
+          {
+            "title": "Red Storm Rising",
+            "type": "other",
+            "year": "1986"
+          },
+          {
+            "title": "Without Remorse",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Rainbow Six",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Ghost Recon",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Splinter Cell",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "The Division",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Tom Clancy was an American novelist best known for popularizing the techno-thriller genre, blending meticulous technical detail with espionage and military settings. A former insurance agent, he published his debut novel The Hunt for Red October in 1984, which became a national bestseller after receiving public praise from President Ronald Reagan. His Ryanverse series, centered on CIA analyst Jack Ryan, has sold more than 100 million copies worldwide, with seventeen of his novels reaching the top of the New York Times bestseller list. His creations also inspired video game franchises including Rainbow Six, Ghost Recon, Splinter Cell, and The Division. He likely crossed paths with Conan O'Brien, having reportedly first appeared on Late Night with Conan O'Brien in 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Tom_Clancy"
+        ],
+        "enrichedAt": "2026-09-09T09:58:09.119Z",
+        "birth_year": "1947",
+        "death_year": "2013",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313392,7 +315961,78 @@
       "id": "judge-mills-lane",
       "name": "Judge Mills Lane",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Mills Lane",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Mills_Lane",
+          "confidence": 0.7666666666666666
+        },
+        "profession": [
+          "boxing referee",
+          "professional boxer",
+          "district court judge",
+          "television personality"
+        ],
+        "known_for": [
+          {
+            "title": "Judge Mills Lane",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "Celebrity Deathmatch",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "Evander Holyfield vs. Mike Tyson II",
+            "type": "other",
+            "year": "1997"
+          },
+          {
+            "title": "Lennox Lewis vs. Henry Akinwande",
+            "type": "other",
+            "year": "1997"
+          },
+          {
+            "title": "Buzz Lightyear of Star Command",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "WWE Raw",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "WCW Bash at the Beach",
+            "type": "other",
+            "year": "1999"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Mills Lane was an American boxing referee, professional boxer, two-term Washoe County district court judge, and television personality. He is best remembered for officiating major heavyweight championship bouts, including the infamous 1997 rematch between Evander Holyfield and Mike Tyson, in which he disqualified Tyson for biting. Lane later became a television fixture as the host of the syndicated court show Judge Mills Lane and as the voice referee on MTV's Celebrity Deathmatch. Inducted into both the International Boxing Hall of Fame and the Nevada Boxing Hall of Fame in 2013, he likely crossed paths with Conan O'Brien during a Late Night appearance around 2000, at the height of his TV visibility.",
+        "confidence": 0.7666666666666666,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mills_Lane"
+        ],
+        "enrichedAt": "2026-09-09T09:58:08.482Z",
+        "birth_year": "1937",
+        "death_year": "2022",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "International Boxing Hall of Fame inductee",
+          "Nevada Boxing Hall of Fame inductee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313458,7 +316098,81 @@
       "id": "rulon-gardner",
       "name": "Rulon Gardner",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Rulon Gardner",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Rulon_Gardner",
+          "confidence": 1
+        },
+        "profession": [
+          "Greco-Roman wrestler",
+          "motivational speaker",
+          "television personality"
+        ],
+        "known_for": [
+          {
+            "title": "2000 Summer Olympics (gold medal)",
+            "type": "other",
+            "year": "2000"
+          },
+          {
+            "title": "2004 Summer Olympics (bronze medal)",
+            "type": "other",
+            "year": "2004"
+          },
+          {
+            "title": "2001 World Championship",
+            "type": "other",
+            "year": "2001"
+          },
+          {
+            "title": "Real Pro Wrestling (host)",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "The Biggest Loser (Season 11)",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Never Stop Pushing (autobiography)",
+            "type": "other",
+            "year": "2005"
+          },
+          {
+            "title": "I Survived... (Season 1)",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "National Wrestling Hall of Fame induction",
+            "type": "other",
+            "year": "2010"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Rulon Gardner is an American retired Greco-Roman wrestler best known for one of the greatest upsets in sports history: his gold medal victory over three-time reigning Olympic champion Aleksandr Karelin at the 2000 Sydney Games, ending Karelin's 13-year unbeaten streak. Gardner added a World Championship title in 2001 and a bronze medal at the 2004 Athens Olympics, becoming the only American to hold both World and Olympic titles in Greco-Roman wrestling. Inducted into the National Wrestling Hall of Fame in 2010, he has since worked as a motivational speaker and television personality. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around the time of his historic 2000 Olympic triumph.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Rulon_Gardner"
+        ],
+        "enrichedAt": "2026-09-09T09:58:18.922Z",
+        "birth_year": "1971",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "National Wrestling Hall of Fame Distinguished Member"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313524,7 +316238,90 @@
       "id": "squirrel-nut-zippers",
       "name": "Squirrel Nut Zippers",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Squirrel Nut Zippers",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Squirrel_Nut_Zippers",
+          "confidence": 1
+        },
+        "profession": [
+          "swing band",
+          "jazz band"
+        ],
+        "known_for": [
+          {
+            "title": "The Inevitable",
+            "type": "music",
+            "year": "1995"
+          },
+          {
+            "title": "Hot",
+            "type": "music",
+            "year": "1996"
+          },
+          {
+            "title": "Hell",
+            "type": "music",
+            "year": "1996"
+          },
+          {
+            "title": "Perennial Favorites",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "Christmas Caravan",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "Bedlam Ballroom",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Lost at Sea",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "Beasts of Burgundy",
+            "type": "music",
+            "year": "2018"
+          },
+          {
+            "title": "Lost Songs of Doc Souchon",
+            "type": "music",
+            "year": "2020"
+          },
+          {
+            "title": "The Squirrel Nut Zippers Starring in Fat City (The Ballad of Lil Tony)",
+            "type": "music",
+            "year": "2026"
+          }
+        ],
+        "recent_work": [
+          "The Squirrel Nut Zippers Starring in Fat City (The Ballad of Lil Tony) (2026)"
+        ],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"Their numerous appearances included such notables as the radio show Prairie Home Companion and on television shows The Tonight Show, Late Show with David Letterman, Conan O'Brien, Viva Variety, and Dick Clark's New Year's Rockin' Eve.\""
+        },
+        "description": "Squirrel Nut Zippers is an American swing and jazz band formed in 1993 in Chapel Hill, North Carolina. Fusing Delta blues, gypsy jazz, 1930s-era swing, and klezmer, the band rode the late-1990s swing revival to commercial success with their platinum album Hot and the breakout single 'Hell.' After a hiatus and a 2007 reunion, the group has continued recording and touring, releasing Beasts of Burgundy in 2018, Lost Songs of Doc Souchon in 2020, and their most recent album in 2026. Their television appearances have included Conan O'Brien, among other major programs, reflecting their sustained presence in American popular music.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Squirrel_Nut_Zippers"
+        ],
+        "enrichedAt": "2026-09-09T09:58:11.307Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313557,7 +316354,101 @@
       "id": "badly-drawn-boy",
       "name": "Badly Drawn Boy",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Badly Drawn Boy",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Badly_Drawn_Boy",
+          "confidence": 1
+        },
+        "profession": [
+          "indie singer-songwriter",
+          "multi-instrumentalist",
+          "film composer"
+        ],
+        "known_for": [
+          {
+            "title": "The Hour of Bewilderbeast",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "About a Boy (soundtrack)",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Have You Fed the Fish?",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "One Plus One Is One",
+            "type": "music",
+            "year": "2004"
+          },
+          {
+            "title": "Born in the U.K.",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "Is There Nothing We Could Do?",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "It's What I'm Thinking Pt.1 – Photographing Snowflakes",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Psyence Fiction",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "EP1",
+            "type": "music",
+            "year": "1997"
+          },
+          {
+            "title": "EP2",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "EP3",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "Once Around the Block",
+            "type": "music",
+            "year": "1999"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Damon Gough, performing as Badly Drawn Boy, is an English indie singer-songwriter and multi-instrumentalist who rose to prominence with his 2000 debut album The Hour of Bewilderbeast, which won the Mercury Music Prize. He further expanded his profile by scoring the film adaptation of Nick Hornby's About a Boy in 2002, and has since released a string of albums including Have You Fed the Fish?, One Plus One Is One, Born in the U.K., and It's What I'm Thinking Pt.1 – Photographing Snowflakes. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 2000, around the time of his breakthrough debut.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Badly_Drawn_Boy"
+        ],
+        "enrichedAt": "2026-09-09T09:58:21.384Z",
+        "birth_year": "1969",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "English",
+        "prestige_signals": [
+          "2000 Mercury Music Prize winner"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313656,7 +316547,104 @@
       "id": "flogging-molly",
       "name": "Flogging Molly",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Flogging Molly",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Flogging_Molly",
+          "confidence": 1
+        },
+        "profession": [
+          "Celtic punk band",
+          "musicians"
+        ],
+        "known_for": [
+          {
+            "title": "Alive Behind the Green Door",
+            "type": "music",
+            "year": "1997"
+          },
+          {
+            "title": "Swagger",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Drunken Lullabies",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "Within a Mile of Home",
+            "type": "music",
+            "year": "2004"
+          },
+          {
+            "title": "Whiskey on a Sunday",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "Complete Control Sessions",
+            "type": "music",
+            "year": "2007"
+          },
+          {
+            "title": "Float",
+            "type": "music",
+            "year": "2008"
+          },
+          {
+            "title": "Live at the Greek Theatre",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Speed of Darkness",
+            "type": "music",
+            "year": "2011"
+          },
+          {
+            "title": "Life Is Good",
+            "type": "music",
+            "year": "2017"
+          },
+          {
+            "title": "Anthem",
+            "type": "music",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [
+          {
+            "title": "Shamrock Rebellion Fest",
+            "type": "other",
+            "year": "2024"
+          },
+          {
+            "title": "Sinéad & Shane at Carnegie Hall",
+            "type": "other",
+            "year": "2024"
+          }
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Flogging Molly is an Irish-American seven-piece Celtic punk band formed in Los Angeles in 1994, led by Dublin-born vocalist Dave King, formerly of the hard rock band Fastway. Building their following through weekly residencies at LA's Molly Malone's pub, the band went on to release a string of albums including Swagger, Drunken Lullabies—certified gold by the RIAA—and Float, which debuted at No. 4 on the Billboard 200. Their 2022 album Anthem, released on Rise Records, marks their most recent studio effort. They operate their own label, Borstal Beat Records, and have remained an active touring presence. The band likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Flogging_Molly"
+        ],
+        "enrichedAt": "2026-09-09T09:58:22.167Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "Irish-American",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313689,7 +316677,126 @@
       "id": "nancy-cartwright",
       "name": "Nancy Cartwright",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Nancy Cartwright",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Nancy_Cartwright",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "voice actress"
+        ],
+        "known_for": [
+          {
+            "title": "The Simpsons",
+            "type": "tv",
+            "year": "1989"
+          },
+          {
+            "title": "Rugrats",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "All Grown Up!",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Tracey Ullman Show",
+            "type": "tv",
+            "year": "1987"
+          },
+          {
+            "title": "Richie Rich",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Marian Rose White",
+            "type": "tv",
+            "year": "1982"
+          },
+          {
+            "title": "Twilight Zone: The Movie",
+            "type": "film",
+            "year": "1983"
+          },
+          {
+            "title": "Snorks",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Toonsylvania",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Kim Possible",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Animaniacs",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Goof Troop",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Crashbox",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Critic",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Replacements",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "My Life as a 10-Year-Old Boy",
+            "type": "other",
+            "year": "2000"
+          },
+          {
+            "title": "In Search of Fellini",
+            "type": "film",
+            "year": "2017"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Nancy Cartwright is an American actress and voice actress best known as the long-running voice of Bart Simpson on The Simpsons, a role she has held since the character's debut on The Tracey Ullman Show in 1987 and the spinoff series beginning in 1989. Her performance earned her a Primetime Emmy Award and an Annie Award. Beyond Springfield, she has voiced Chuckie Finster in Rugrats and All Grown Up!, and a wide range of animated characters across series including Kim Possible, Animaniacs, and Goof Troop. She also wrote her autobiography My Life as a 10-Year-Old Boy and produced the film In Search of Fellini. She likely crossed paths with Conan O'Brien as early as 2000 on Late Night with Conan O'Brien.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nancy_Cartwright"
+        ],
+        "enrichedAt": "2026-09-09T09:59:12.874Z",
+        "birth_year": "1957",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Primetime Emmy Award for Outstanding Voice-Over Performance",
+          "Annie Award for Best Voice Acting in the Field of Animation"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313722,7 +316829,119 @@
       "id": "will-kimbrough",
       "name": "Will Kimbrough",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Will_Kimbrough_acoustic.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Will Kimbrough",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Will_Kimbrough",
+          "confidence": 1
+        },
+        "profession": [
+          "singer-songwriter",
+          "multi-instrumentalist",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "Will & the Bushmen",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Bis-Quits",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Daddy",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Willie Sugarcapps",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Trigger Hippy",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Fireworks, Vol. 2",
+            "type": "music",
+            "year": "1999"
+          },
+          {
+            "title": "This",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Home Away",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "Godsend",
+            "type": "music",
+            "year": "2003"
+          },
+          {
+            "title": "Americanitis",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "Wings",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "Sideshow Love",
+            "type": "music",
+            "year": "2014"
+          },
+          {
+            "title": "I Like It Down Here",
+            "type": "music",
+            "year": "2019"
+          },
+          {
+            "title": "Daddy at the Women's Club",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "For a Second Time",
+            "type": "music",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "For the Life of Me (2024)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Will Kimbrough is an American singer-songwriter, multi-instrumentalist, and producer based in Nashville, Tennessee. A founding member of college band Will & the Bushmen and later the Bis-Quits — whose eponymous album appeared on John Prine's Oh Boy Records — he has released a string of solo albums including Americanitis, Wings, and the 2024 record For the Life of Me. The Americana Music Association named him Instrumentalist of the Year in 2004. As a producer, he has worked with artists including Rodney Crowell, Todd Snider, and Josh Rouse. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 2000.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Will_Kimbrough"
+        ],
+        "enrichedAt": "2026-09-09T09:59:12.920Z",
+        "birth_year": "1964",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Instrumentalist of the Year, Americana Music Association (2004)",
+          "Blues Music Award nominee (co-writer of 'Too Far to Be Gone', 2023)"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313755,7 +316974,142 @@
       "id": "tim-blake-nelson",
       "name": "Tim Blake Nelson",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Tim_Blake_Nelson_2016.jpg/500px-Tim_Blake_Nelson_2016.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Tim Blake Nelson",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Tim_Blake_Nelson",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "director",
+          "writer",
+          "playwright"
+        ],
+        "known_for": [
+          {
+            "title": "O Brother, Where Art Thou?",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Minority Report",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Holes",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Scooby-Doo 2: Monsters Unleashed",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Syriana",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "The Incredible Hulk",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Fantastic Four",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Lincoln",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "The Ballad of Buster Scruggs",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Watchmen",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Just Mercy",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Old Henry",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "Captain America: Brave New World",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Eye of God",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "O",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "The Grey Zone",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Leaves of Grass",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Kansas",
+            "type": "film",
+            "year": "1998"
+          }
+        ],
+        "recent_work": [
+          "Captain America: Brave New World",
+          "Superhero (novel, December 2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Tim Blake Nelson is an American actor, director, writer, and playwright best known for his memorable character work across more than two decades of film and television. His roles include Delmar O'Donnell in O Brother, Where Art Thou?, Samuel Sterns in the Marvel Cinematic Universe, the title character in The Ballad of Buster Scruggs, and Wade Tillman in HBO's Watchmen, for which he earned a Critics' Choice Television Award nomination. As a filmmaker, his directorial credits include Eye of God, The Grey Zone, and O. He likely crossed paths with Conan O'Brien during his Late Night appearances around 2001, a period when his profile was rising with multiple notable film and directing credits.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Tim_Blake_Nelson"
+        ],
+        "enrichedAt": "2026-09-09T09:59:15.466Z",
+        "birth_year": "1964",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Critics' Choice Television Awards nomination for Best Supporting Actor in a Drama Series (2020)",
+          "Independent Spirit Award nomination (Eye of God)",
+          "Sundance Grand Jury Prize nomination (Eye of God)",
+          "Tokyo Bronze Prize at the Tokyo International Film Festival (1997)",
+          "American Independent Award at the Seattle International Film Festival (1997)",
+          "Best Director Award at the Seattle International Film Festival (2001)",
+          "National Board of Review Freedom of Expression Award (2002)",
+          "Independent Spirit Awards nomination for Someone to Watch Award"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313821,7 +317175,103 @@
       "id": "shemekia-copeland",
       "name": "Shemekia Copeland",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Shemekia_Copeland%2C_Summit_on_Race.jpg/500px-Shemekia_Copeland%2C_Summit_on_Race.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Shemekia Copeland",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Shemekia_Copeland",
+          "confidence": 1
+        },
+        "profession": [
+          "electric blues vocalist"
+        ],
+        "known_for": [
+          {
+            "title": "Turn the Heat Up!",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "Wicked",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Talking to Strangers",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "The Soul Truth",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "Never Going Back",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "33 ⅓",
+            "type": "music",
+            "year": "2012"
+          },
+          {
+            "title": "Outskirts of Love",
+            "type": "music",
+            "year": "2015"
+          },
+          {
+            "title": "America's Child",
+            "type": "music",
+            "year": "2018"
+          },
+          {
+            "title": "Uncivil War",
+            "type": "music",
+            "year": "2020"
+          },
+          {
+            "title": "Done Come Too Far",
+            "type": "music",
+            "year": "2022"
+          },
+          {
+            "title": "Blame it on Eve",
+            "type": "music",
+            "year": "2024"
+          }
+        ],
+        "recent_work": [
+          "Done Come Too Far (2022)",
+          "Blame it on Eve (2024)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Shemekia Copeland is an American electric blues vocalist born in Harlem, New York, and informally crowned the New Queen of the Blues at the 2011 Chicago Blues Festival. She has released eleven studio albums on Alligator and Telarc, earning nine Blues Music Awards and five Blues Blast Music Awards over her career. Her 2022 album Done Come Too Far and her 2024 follow-up Blame it on Eve brought fresh recognition, with the latter earning three Grammy nominations at the 67th Annual Grammy Awards. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 2001.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Shemekia_Copeland"
+        ],
+        "enrichedAt": "2026-09-09T09:59:11.865Z",
+        "birth_year": "1979",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "nine Blues Music Awards winner",
+          "five Blues Blast Music Awards winner",
+          "Grammy nominee – Best American Roots Performance (67th Annual Grammy Awards)",
+          "Grammy nominee – Best American Roots Song (67th Annual Grammy Awards)",
+          "Grammy nominee – Best Contemporary Blues Album (67th Annual Grammy Awards)",
+          "Rising Star – Blues Artist, DownBeat Critics Poll (2009)",
+          "Blues Artist of the Year, DownBeat Critics Poll (2022)"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313854,7 +317304,139 @@
       "id": "marla-sokoloff",
       "name": "Marla Sokoloff",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Marla_Sokoloff_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Marla Sokoloff",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Marla_Sokoloff",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Full House",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "Fuller House",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "The Babysitters Club",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "The Practice",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "Friends",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Desperate Housewives",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "True Crime",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "The Climb",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Whatever It Takes",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Dude, Where's My Car?",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Sugar & Spice",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "The Tollbooth",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Love on the Side",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Big Day",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Burn Notice",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Play the Game",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Bionicle: The Legend Reborn",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Meteor",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "A Christmas Wedding Date",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "The Merry Gentlemen",
+            "type": "film",
+            "year": "2024"
+          }
+        ],
+        "recent_work": [
+          "The Merry Gentlemen"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Marla Sokoloff is an American actress best known for playing Gia Mahan across multiple seasons of Full House and its Netflix sequel Fuller House, receptionist Lucy Hatcher on the long-running legal drama The Practice, and Cokie Mason in the 1995 film adaptation of The Babysitters Club. She has also made memorable guest appearances on Friends and Desperate Housewives, and has built a steady film career spanning comedies and romantic features including Dude, Where's My Car? and Sugar & Spice. Her most recent credit is the 2024 film The Merry Gentlemen. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2001.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Marla_Sokoloff"
+        ],
+        "enrichedAt": "2026-09-09T09:59:21.527Z",
+        "birth_year": "1980",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313887,7 +317469,118 @@
       "id": "dar-williams",
       "name": "Dar Williams",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Dar Williams",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Dar_Williams",
+          "confidence": 1
+        },
+        "profession": [
+          "singer-songwriter"
+        ],
+        "known_for": [
+          {
+            "title": "I Have No History",
+            "type": "music",
+            "year": "1990"
+          },
+          {
+            "title": "All My Heroes Are Dead",
+            "type": "music",
+            "year": "1991"
+          },
+          {
+            "title": "The Honesty Room",
+            "type": "music",
+            "year": "1995"
+          },
+          {
+            "title": "Mortal City",
+            "type": "music",
+            "year": "1996"
+          },
+          {
+            "title": "End of The Summer",
+            "type": "music",
+            "year": "1997"
+          },
+          {
+            "title": "Cry Cry Cry",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "The Green World",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Out There Live",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "The Beauty of the Rain",
+            "type": "music",
+            "year": "2003"
+          },
+          {
+            "title": "My Better Self",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "Promised Land",
+            "type": "music",
+            "year": "2008"
+          },
+          {
+            "title": "Many Great Companions",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "In the Time of Gods",
+            "type": "music",
+            "year": "2012"
+          },
+          {
+            "title": "Live at Bearsville Theater",
+            "type": "music",
+            "year": "2007"
+          },
+          {
+            "title": "What I Found in a Thousand Towns",
+            "type": "other",
+            "year": "2017"
+          }
+        ],
+        "recent_work": [
+          {
+            "title": "Hummingbird Highway",
+            "type": "music",
+            "year": "2025"
+          }
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Dar Williams is an American pop folk singer-songwriter from Mount Kisco, New York, whose career spans more than three decades of independent folk recording. She first gained wider recognition through tours with Joan Baez and a string of albums on Razor and Tie, including The Honesty Room, Mortal City, and End of The Summer. In 1998 she co-founded the acclaimed folk supergroup Cry Cry Cry alongside Richard Shindell and Lucy Kaplansky. Her most recent album, Hummingbird Highway, was released in 2025 on Righteous Babe Records. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 2001.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dar_Williams"
+        ],
+        "enrichedAt": "2026-09-09T09:59:24.114Z",
+        "birth_year": "1967",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313920,7 +317613,83 @@
       "id": "josh-joplin-group",
       "name": "Josh Joplin Group",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Josh Joplin Group",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Josh_Joplin_Group",
+          "confidence": 1
+        },
+        "profession": [
+          "alternative rock band",
+          "singer-songwriter"
+        ],
+        "known_for": [
+          {
+            "title": "Projector Head",
+            "type": "music",
+            "year": "1996"
+          },
+          {
+            "title": "Boxing Nostalgic",
+            "type": "music",
+            "year": "1997"
+          },
+          {
+            "title": "Useful Music",
+            "type": "music",
+            "year": "1999"
+          },
+          {
+            "title": "Useful Music (Artemis re-release)",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "Camera One",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "The Future That Was",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "Figure Drawing",
+            "type": "music",
+            "year": "2023"
+          },
+          {
+            "title": "GpYr",
+            "type": "music",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "Figure Drawing (2023)",
+          "GpYr (2025)"
+        ],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"The band has also appeared on Late Night with Conan O'Brien, Late Show with David Letterman, The Late Late Show with Craig Ferguson, The Panel (Australian TV series), The Mike Bullard Show, Viva TV (Germany), MTV, VH1.\""
+        },
+        "description": "The Josh Joplin Group is an Atlanta-based alternative rock band led by singer-songwriter Josh Joplin. The band built their reputation through relentless touring and a string of releases beginning with Projector Head in 1996, before breaking through on Artemis Records with the 2001 re-release of Useful Music, whose single 'Camera One' reached number one at Triple A radio and earned the American Association of Independent Music's Single of the Year award. The band appeared on Late Night with Conan O'Brien alongside high-profile television bookings during that run. After disbanding in 2003, Joplin reformed the group in 2022, releasing Figure Drawing in 2023 and GpYr in 2025.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Josh_Joplin_Group"
+        ],
+        "enrichedAt": "2026-09-09T09:59:23.304Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "",
+        "prestige_signals": [
+          "Single Of The Year award by the American Association of Independent Music"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313953,7 +317722,71 @@
       "id": "prince-naseem-hamed",
       "name": "Prince Naseem Hamed",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Naseem Hamed",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Naseem_Hamed",
+          "confidence": 0.7666666666666666
+        },
+        "profession": [
+          "professional boxer"
+        ],
+        "known_for": [
+          {
+            "title": "WBO Featherweight Championship",
+            "type": "other",
+            "year": "1995"
+          },
+          {
+            "title": "IBF Featherweight Championship",
+            "type": "other",
+            "year": "1997"
+          },
+          {
+            "title": "WBC Featherweight Championship",
+            "type": "other",
+            "year": "1999"
+          },
+          {
+            "title": "IBO Featherweight Championship",
+            "type": "other",
+            "year": "2002"
+          },
+          {
+            "title": "International Boxing Hall of Fame Induction",
+            "type": "other",
+            "year": "2015"
+          },
+          {
+            "title": "The Ring honorary featherweight title",
+            "type": "other",
+            "year": "2019"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Prince Naseem Hamed is a British former professional boxer who competed from 1992 to 2002, holding multiple featherweight world championships including the WBO, IBF, and WBC titles between 1995 and 2000. Known for his flamboyant ring entrances, southpaw style, and an 84% knockout-to-win ratio, he was a dominant figure in 1990s British pop culture and a globally recognised sporting star. Inducted into the International Boxing Hall of Fame in 2015, he received The Ring magazine's honorary featherweight title in 2019. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2001, near the end of his professional career.",
+        "confidence": 0.7666666666666666,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Naseem_Hamed"
+        ],
+        "enrichedAt": "2026-09-09T09:59:25.617Z",
+        "birth_year": "1974",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "British",
+        "prestige_signals": [
+          "International Boxing Hall of Fame inductee (2015)",
+          "The Ring honorary featherweight title (2019)",
+          "ESPN top 25 pound-for-pound fighters of the last 25 years (ranked 22nd, 2016)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -313986,7 +317819,165 @@
       "id": "rhea-perlman",
       "name": "Rhea Perlman",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Rhea Perlman",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Rhea_Perlman",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "author"
+        ],
+        "known_for": [
+          {
+            "title": "Cheers",
+            "type": "tv",
+            "year": "1982"
+          },
+          {
+            "title": "Canadian Bacon",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Matilda",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "The Sessions",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Poms",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Barbie",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Poker Face",
+            "type": "tv",
+            "year": "2025"
+          },
+          {
+            "title": "To Grandmother's House We Go",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "Pearl",
+            "type": "tv",
+            "year": "1996"
+          },
+          {
+            "title": "Kate Brasher",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "The Mindy Project",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Hung",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Wilfred",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Amazing Stories",
+            "type": "tv",
+            "year": "1986"
+          },
+          {
+            "title": "Taxi",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Boeing Boeing",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "Love, Loss, and What I Wore",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Carpool",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Sunset Park",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "10 Items Or Less",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Love Comes Lately",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "The Christmas Choir",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Beethoven's Big Break",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Otto Undercover",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "Barbie (2023)",
+          "Poker Face season 2 (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Rhea Perlman is an American actress and author best known for her eleven-season run as wisecracking barmaid Carla Tortelli on the landmark sitcom Cheers, a role that earned her four Emmy Awards for Outstanding Supporting Actress and a record six Golden Globe nominations in that category. Her film credits include Matilda, Canadian Bacon, The Sessions, and Poms, and she earned considerable critical praise playing Barbie creator Ruth Handler in Greta Gerwig's Barbie (2023). More recently, she appeared in the second season of the crime mystery series Poker Face. Perlman also writes illustrated children's books under the Otto Undercover series. She likely crossed paths with Conan O'Brien during his tenure on Late Night with Conan O'Brien, with a first appearance dating to around 2001.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Rhea_Perlman"
+        ],
+        "enrichedAt": "2026-09-09T09:59:35.764Z",
+        "birth_year": "1948",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Emmy Award winner for Outstanding Supporting Actress in a Comedy (1984, 1985, 1986, 1989)",
+          "10 Emmy Award nominations for Outstanding Supporting Actress",
+          "6 Golden Globe Award nominations for Best Supporting Actress in a Television Series"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -314052,7 +318043,121 @@
       "id": "the-minus-five",
       "name": "The Minus Five",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "The Minus 5",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/The_Minus_5",
+          "confidence": 0.7666666666666666
+        },
+        "profession": [
+          "musician scott mccaughey of young fresh fellows",
+          "often in partnership with r"
+        ],
+        "known_for": [
+          {
+            "title": "Loser So Supreme",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Drunkard's Lullaby",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Brotherhood Of Pain",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "read one press release.",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "I Still Miss Someone",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Barstool Blues",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Worse,",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Story",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Basing Street",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Country Feedback.",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Emperor Of The Bathroom",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Winter Goes Away",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "When It Comes My Way.",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Minus 5 No. 2 Record",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Emperor Of The Bathroom",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Heartache For Sale",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "This Little Woody.",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "The Minus 5 is an American pop rock band headed by musician Scott McCaughey of Young Fresh Fellows, often in partnership with R.E.M. guitarist Peter Buck. == Band history ==\nMcCaughey formed the band in 1993 as a side project with Buck, Jon Auer and Ken Stringfellow of the Posies. Buck had moved to the Seattle area in 1992; the other principals were longtime fixtures of the Seattle music scene. First appeared on Late Night with Conan O'Brien in 2001.",
+        "confidence": 0.7666666666666666,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/The_Minus_5"
+        ],
+        "enrichedAt": "2026-09-09T10:00:08.050Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
