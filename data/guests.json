@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T22:31:01.715Z",
+  "generatedAt": "2026-09-09T22:41:13.871Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -70724,7 +70724,95 @@
       "id": "dan-levy",
       "name": "Dan Levy",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Dan Levy (American comedian)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Dan_Levy_(American_comedian)",
+          "confidence": 1
+        },
+        "profession": [
+          "comedian",
+          "actor",
+          "writer",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "Whitney",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "The Awesomes",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Mulaney",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "The Goldbergs",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Congrats on Your Success",
+            "type": "music",
+            "year": "2012"
+          },
+          {
+            "title": "Dan Levy: Lion",
+            "type": "other",
+            "year": "2016"
+          },
+          {
+            "title": "My Long Distance Relationship",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Pretty Wild",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Stevie TV",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Indebted",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "House Hunters: Comedians on Couches",
+            "type": "tv",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2016."
+        },
+        "description": "Dan Levy is an American comedian, actor, writer, and producer based in Los Angeles who began performing stand-up in the 2000s. He has written for television comedies including Whitney and Mulaney, and served as executive producer on The Goldbergs. As a creator, he launched the NBC series Indebted in 2020 and has hosted the discovery+ series House Hunters: Comedians on Couches since 2021. His comedy albums include Congrats on Your Success and the hour-long special Dan Levy: Lion. He likely crossed paths with Conan O'Brien around 2016, when his special Lion was released and his television career was in full stride.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dan_Levy_(American_comedian)"
+        ],
+        "enrichedAt": "2026-09-09T22:33:08.814Z",
+        "birth_year": "1981",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -126456,7 +126544,108 @@
       "id": "jack-ford",
       "name": "Jack Ford",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jack Ford (journalist)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jack_Ford_(journalist)",
+          "confidence": 1
+        },
+        "profession": [
+          "television news personality",
+          "legal commentator",
+          "television host",
+          "lecturer",
+          "author",
+          "college football analyst"
+        ],
+        "known_for": [
+          {
+            "title": "WCBS-TV",
+            "type": "tv",
+            "year": "1984"
+          },
+          {
+            "title": "Courtroom Television Network",
+            "type": "tv",
+            "year": "1991"
+          },
+          {
+            "title": "Weekend Today",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "20/20",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "Good Morning America",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "ABC 2000 Today",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "The Sports Reporters",
+            "type": "tv",
+            "year": "2002"
+          },
+          {
+            "title": "Living It Up! With Ali & Jack",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Banfield & Ford: Courtside",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "CBS News",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "The Osiris Alliance",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Jeopardy!",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Jack Ford is an American television news personality and legal commentator whose career spans more than four decades in broadcast journalism. He has served as a legal analyst and anchor at WCBS-TV, NBC News, ABC News, and Court TV, where he co-hosted Banfield & Ford: Courtside, and has been a CBS News Legal Analyst since 2009. His credits include Weekend Today, 20/20, Good Morning America, and ESPN's The Sports Reporters. A Yale graduate and Fordham-trained attorney, he also teaches at Yale University. He is a two-time Emmy winner and Peabody Award recipient. He likely crossed paths with Conan O'Brien during his time at NBC News, where he first appeared on Late Night with Conan O'Brien in 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jack_Ford_(journalist)"
+        ],
+        "enrichedAt": "2026-09-09T22:36:13.405Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Emmy Awards (two)",
+          "Peabody Award",
+          "American Radio and Television Award",
+          "National Headliner Award",
+          "March of Dimes FDR Award"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -143847,7 +144036,63 @@
       "id": "holly-robinson",
       "name": "Holly Robinson",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Holly Robinson (athlete)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Holly_Robinson_(athlete)",
+          "confidence": 1
+        },
+        "profession": [
+          "para-athlete",
+          "javelin thrower"
+        ],
+        "known_for": [
+          {
+            "title": "2012 Summer Paralympics",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "2016 Summer Paralympics",
+            "type": "other",
+            "year": "2016"
+          },
+          {
+            "title": "2020 Summer Paralympics",
+            "type": "other",
+            "year": "2020"
+          },
+          {
+            "title": "2018 Commonwealth Games",
+            "type": "other",
+            "year": "2018"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Holly Robinson is a New Zealand para-athlete specialising in the javelin throw, competing in the F46 classification. Born in Hokitika and of Ngāi Tahu descent, she has represented New Zealand at three consecutive Summer Paralympics — 2012, 2016, and 2020 — winning silver at the 2016 Games and gold at the 2020 Games. She also served as New Zealand's flagbearer at the 2016 opening ceremony and claimed silver at the 2018 Commonwealth Games. Appointed a Member of the New Zealand Order of Merit for services to athletics, she likely crossed paths with the Late Night with Conan O'Brien orbit, though the connection predates her competitive career.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Holly_Robinson_(athlete)"
+        ],
+        "enrichedAt": "2026-09-09T22:37:07.884Z",
+        "birth_year": "1994",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "New Zealand",
+        "prestige_signals": [
+          "silver medal at 2016 Summer Paralympics",
+          "gold medal at 2020 Summer Paralympics",
+          "2016 Paralympics flagbearer for New Zealand opening ceremony",
+          "Member of the New Zealand Order of Merit"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -202167,7 +202412,73 @@
       "id": "ed-byrne",
       "name": "Ed Byrne",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Ed Byrne (musician)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Ed_Byrne_(musician)",
+          "confidence": 1
+        },
+        "profession": [
+          "trombonist",
+          "composer",
+          "arranger",
+          "author",
+          "educator"
+        ],
+        "known_for": [
+          {
+            "title": "Carnegie Hall Concert (Gerry Mulligan and Chet Baker album)",
+            "type": "music",
+            "year": "1974"
+          },
+          {
+            "title": "Unfinished Masterpiece",
+            "type": "music",
+            "year": "1974"
+          },
+          {
+            "title": "Linear Jazz Improvisation",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Two Shades of Blue",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Conquistador",
+            "type": "music",
+            "year": "2012"
+          }
+        ],
+        "recent_work": [
+          "Salsa: Mis Mejores Exitos (Fania All Stars, 2023)",
+          "Salsa: Mis Mejores Exitos (Willie Colón, 2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1999."
+        },
+        "description": "Ed Byrne is an American trombonist, composer, arranger, author, and educator born in 1946 and based in Massachusetts. A fixture of the New York jazz scene since the 1970s, he has contributed to more than 70 recordings as sideman and leader, including the Gerry Mulligan and Chet Baker Carnegie Hall Concert and Eddie Palmieri's Grammy Award-winning Latin jazz album Unfinished Masterpiece. He led his own groups across albums including Two Shades of Blue and Conquistador, and authored the 17-book Linear Jazz Improvisation series while serving as a jazz professor at Berklee College of Music. He likely crossed paths with Conan O'Brien's Late Night program around 1999.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Ed_Byrne_(musician)"
+        ],
+        "enrichedAt": "2026-09-09T22:41:12.597Z",
+        "birth_year": "1946",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Grammy Award-winning (Eddie Palmieri's Unfinished Masterpiece)",
+          "Nominated Best Trombone Soloist by Latin New York Magazine (1976)",
+          "Fenway Funk nominated for Grammy Award"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
