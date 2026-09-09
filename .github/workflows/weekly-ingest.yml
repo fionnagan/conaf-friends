@@ -6,6 +6,13 @@ on:
     - cron: "0 14 * * 1"
   workflow_dispatch: # Allow manual trigger
 
+# Only one Wikipedia-touching workflow runs at a time — a second trigger
+# queues behind whichever one is already running instead of both hitting
+# the same rate limits simultaneously.
+concurrency:
+  group: wikipedia-ingest
+  cancel-in-progress: false
+
 jobs:
   ingest:
     runs-on: ubuntu-latest

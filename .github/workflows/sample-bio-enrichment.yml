@@ -14,6 +14,13 @@ on:
         required: false
         default: "Bill Burr,Daniel Radcliffe,Nick Offerman,Weird Al Yankovic,Kenan Thompson,Andy Daly,Robert Smigel"
 
+# Only one Wikipedia-touching workflow runs at a time — a second trigger
+# queues behind whichever one is already running instead of both hitting
+# the same rate limits simultaneously.
+concurrency:
+  group: wikipedia-ingest
+  cancel-in-progress: false
+
 jobs:
   sample:
     runs-on: ubuntu-latest
