@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T11:05:24.802Z",
+  "generatedAt": "2026-09-09T11:10:24.663Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -394749,7 +394749,85 @@
       "id": "alex-wagner",
       "name": "Alex Wagner",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Alex Wagner",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Alex_Wagner",
+          "confidence": 1
+        },
+        "profession": [
+          "journalist",
+          "television host",
+          "author",
+          "podcast host"
+        ],
+        "known_for": [
+          {
+            "title": "Now with Alex Wagner",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Alex Wagner Tonight",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "The Circus",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "CBS This Morning Saturday",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "The Mole",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "FutureFace: A Family Mystery, an Epic Quest, and the Secret to Belonging",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "Six Feet Apart",
+            "type": "podcast",
+            "year": "2020"
+          },
+          {
+            "title": "Pod Save America",
+            "type": "podcast",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "Alex Wagner Tonight (concluded 2025)",
+          "Runaway Country with Alex Wagner podcast (premiered October 2025)",
+          "Contributing analyst at MSNBC",
+          "Contributing editor at The Atlantic"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2012."
+        },
+        "description": "Alex Wagner is an American journalist, television host, and author best known for anchoring MSNBC programs including Now with Alex Wagner and Alex Wagner Tonight, the latter of which ran from 2022 until its cancellation in 2025. She co-hosted The Circus on Showtime, served as a weekend anchor on CBS This Morning Saturday, and hosted the first season of Netflix's reboot of The Mole in 2022. A contributing editor at The Atlantic and a contributor to Crooked Media's Pod Save America, she launched her own Crooked Media podcast, Runaway Country with Alex Wagner, in late 2025. She is also the author of the 2018 memoir FutureFace. Wagner likely crossed paths with Conan O'Brien during a probable appearance on his show around 2012.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Alex_Wagner"
+        ],
+        "enrichedAt": "2026-09-09T11:05:41.610Z",
+        "birth_year": "1977",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -394782,7 +394860,97 @@
       "id": "chuck-lorre",
       "name": "Chuck Lorre",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Chuck Lorre",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Chuck_Lorre",
+          "confidence": 1
+        },
+        "profession": [
+          "television producer",
+          "writer",
+          "director",
+          "composer"
+        ],
+        "known_for": [
+          {
+            "title": "Cybill",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Dharma & Greg",
+            "type": "tv",
+            "year": "1997"
+          },
+          {
+            "title": "Two and a Half Men",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "The Big Bang Theory",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Mom",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Roseanne",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Grace Under Fire",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "Frannie's Turn",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Teenage Mutant Ninja Turtles",
+            "type": "tv",
+            "year": "1987"
+          },
+          {
+            "title": "Heathcliff",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "French Kissin",
+            "type": "music",
+            "year": "1986"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2012."
+        },
+        "description": "Chuck Lorre is an American television producer, writer, director, and composer nicknamed the 'King of Sitcoms.' He created or co-created some of the most-watched sitcoms in American television history, including Two and a Half Men, The Big Bang Theory, Dharma & Greg, Cybill, and Mom, and served as executive producer of Roseanne. A two-time Golden Globe Award winner, Lorre began his career as a guitarist and songwriter before transitioning into animation and then sitcom writing. He likely crossed paths with Conan O'Brien when he first appeared on Conan in 2012, around the height of The Big Bang Theory's cultural dominance.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chuck_Lorre"
+        ],
+        "enrichedAt": "2026-09-09T11:05:39.816Z",
+        "birth_year": "1952",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Golden Globe Award winner"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -394815,7 +394983,73 @@
       "id": "hunter-pence",
       "name": "Hunter Pence",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Hunter Pence",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Hunter_Pence",
+          "confidence": 1
+        },
+        "profession": [
+          "professional baseball player",
+          "right fielder",
+          "designated hitter"
+        ],
+        "known_for": [
+          {
+            "title": "Houston Astros",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Philadelphia Phillies",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "San Francisco Giants",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Texas Rangers",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "2012 World Series Championship",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "2014 World Series Championship",
+            "type": "other",
+            "year": "2014"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2012."
+        },
+        "description": "Hunter Pence is a former American professional baseball right fielder and designated hitter who spent his Major League Baseball career with the Houston Astros, Philadelphia Phillies, San Francisco Giants, and Texas Rangers. Nicknamed 'the Reverend,' Pence made his major league debut in 2007 and earned four All-Star selections over the course of his career. He was a key member of the San Francisco Giants teams that won the World Series in both 2012 and 2014. He likely crossed paths with Conan O'Brien around 2012, when his Giants championship run would have made him a natural guest.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hunter_Pence"
+        ],
+        "enrichedAt": "2026-09-09T11:05:38.696Z",
+        "birth_year": "1983",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "four-time All-Star",
+          "2012 World Series champion",
+          "2014 World Series champion"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -394848,7 +395082,68 @@
       "id": "willard-wigan",
       "name": "Willard Wigan",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Willard Wigan",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Willard_Wigan",
+          "confidence": 1
+        },
+        "profession": [
+          "sculptor",
+          "micro miniature sculptor"
+        ],
+        "known_for": [
+          {
+            "title": "Micro miniature sculptures placed in the eye of a needle or on the head of a pin",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Smallest handmade sculpture in the world (Guinness World Record)",
+            "type": "other",
+            "year": "2017"
+          },
+          {
+            "title": "TED Conference guest speaker",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "The Great Big Tiny Design Challenge (judge)",
+            "type": "tv",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [
+          {
+            "title": "Micro sculpture of an alien and a stag's head",
+            "type": "other",
+            "year": "2026"
+          }
+        ],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"later that year also as a guest on The Tonight Show with Conan O'Brien in the US.\""
+        },
+        "description": "Willard Wigan is a British micro miniature sculptor from Wednesfield, England, known for creating works so small they are typically placed in the eye of a needle or on the head of a pin — a single piece can measure as little as 0.005 mm. A Guinness World Record holder for the smallest handmade sculpture, he holds an MBE and an honorary doctorate from the University of Warwick. He appeared as a guest speaker at the TED Conference in 2009 and served as a judge on The Great Big Tiny Design Challenge in 2022. Wigan has appeared on Conan O'Brien's platforms twice, as a guest on The Tonight Show with Conan O'Brien in 2009 and on Conan on TBS on election night in 2012.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Willard_Wigan"
+        ],
+        "enrichedAt": "2026-09-09T11:05:39.012Z",
+        "birth_year": "1957",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "British",
+        "prestige_signals": [
+          "MBE (2007)",
+          "Guinness World Record for smallest handmade sculpture (2017)",
+          "Honorary doctorate from the University of Warwick (2018)"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -394881,7 +395176,89 @@
       "id": "jennifer-carpenter",
       "name": "Jennifer Carpenter",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jennifer Carpenter",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jennifer_Carpenter",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "White Chicks",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "The Exorcism of Emily Rose",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Dexter",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Quarantine",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Limitless",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "The Enemy Within",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Mortal Kombat Legends: Scorpion's Revenge",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "Mortal Kombat Legends: Battle of the Realms",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "Dexter: New Blood",
+            "type": "tv",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [
+          "1923"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2012."
+        },
+        "description": "Jennifer Carpenter is an American actress best known for playing Debra Morgan in the long-running Showtime crime drama Dexter and its miniseries revival Dexter: New Blood. Her early film work includes the cult comedy White Chicks and The Exorcism of Emily Rose, the latter earning her a reputation as a scream queen and an MTV Movie Award. Her television credits also include Limitless and The Enemy Within, and she voiced characters in the Mortal Kombat animated films. Most recently, she appeared as Mamie Fossett in the Western drama series 1923. She likely crossed paths with Conan O'Brien during his show around 2012.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jennifer_Carpenter"
+        ],
+        "enrichedAt": "2026-09-09T11:06:09.788Z",
+        "birth_year": "1979",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "MTV Movie Award winner",
+          "Saturn Award winner",
+          "Critics' Choice Television Award nominee",
+          "Screen Actors Guild Award nominee (four nominations)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -394914,7 +395291,107 @@
       "id": "anna-torv",
       "name": "Anna Torv",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Anna Torv",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Anna_Torv",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Fringe",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Mindhunter",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "The Last of Us",
+            "type": "tv",
+            "year": "2023"
+          },
+          {
+            "title": "The Newsreader",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Territory",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "The Secret Life of Us",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Mistresses",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "The Pacific",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Heavenly Sword",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "Heavenly Sword",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Fires",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Dustfall",
+            "type": "tv",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "The Last of Us (2023)",
+          "The Newsreader Season 2 (2023)",
+          "Territory (2024)",
+          "Dustfall (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2012."
+        },
+        "description": "Anna Torv is an Australian actress best known for playing Agent Olivia Dunham in the Fox science fiction series Fringe (2008–2013), a role that earned her four consecutive Saturn Awards for Best Actress on Television. She later portrayed psychologist Wendy Carr in Netflix's Mindhunter and delivered a widely praised guest turn as Tess in HBO's The Last of Us (2023), which earned her a Primetime Emmy nomination. In Australia, she is acclaimed for her lead role in the ABC drama The Newsreader, winning three consecutive AACTA Awards for the performance. Most recently she starred in the Netflix series Territory (2024). She likely crossed paths with Conan O'Brien around 2012, during her Fringe years.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Anna_Torv"
+        ],
+        "enrichedAt": "2026-09-09T11:06:10.895Z",
+        "birth_year": "1979",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Australian",
+        "prestige_signals": [
+          "Saturn Award for Best Actress on Television (four consecutive wins)",
+          "Primetime Emmy Award nomination for Outstanding Guest Actress in a Drama Series",
+          "AACTA Award for Best Lead Actress in a Drama Series (three consecutive wins)",
+          "Logie Award for Most Outstanding Actress (2022)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -394947,7 +395424,57 @@
       "id": "natalie-irish",
       "name": "Natalie Irish",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Natalie Irish",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Natalie_Irish",
+          "confidence": 1
+        },
+        "profession": [
+          "visual artist"
+        ],
+        "known_for": [
+          {
+            "title": "Lip print portrait of Marilyn Monroe",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "Lip print portrait of Jimi Hendrix",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "Lip print portrait of Roy Rogers",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "Lip print portrait of Princess Catherine",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"She has been featured in ABC News, Bored Panda, Glam.com, The Conan O'Brien Show, The Huffington Post, Time, and Yahoo News.\""
+        },
+        "description": "Natalie Irish is a Houston-based visual artist working across metal, paint, clay, fabric, and charcoal. She is best known for a distinctive technique she pioneered in 2001: creating portraits entirely through lipstick kiss prints on canvas. Her lip print likenesses of pop icons including Marilyn Monroe, Jimi Hendrix, and Roy Rogers drew widespread media attention in 2011, and a portrait of Princess Catherine is on permanent display at Ripley's Believe It or Not in London. Beyond her signature lip prints, Irish produces fashion accessories, sculptures, and charcoal and oil works. She has been featured on The Conan O'Brien Show, as well as in Time, ABC News, and The Huffington Post.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Natalie_Irish"
+        ],
+        "enrichedAt": "2026-09-09T11:06:09.037Z",
+        "birth_year": "1982",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -394980,7 +395507,137 @@
       "id": "marion-cotillard",
       "name": "Marion Cotillard",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Marion Cotillard",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Marion_Cotillard",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Highlander",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "The Story of a Boy Who Wanted to Be Kissed",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "Taxi",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "A Very Long Engagement",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Big Fish",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "A Good Year",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "La Vie en Rose",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Public Enemies",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Nine",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Inception",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Contagion",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Midnight in Paris",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "The Dark Knight Rises",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Rust and Bone",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "The Immigrant",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Two Days, One Night",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Little Girl Blue",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Joan of Arc at the Stake",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "Little Girl Blue (2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Marion Cotillard is a French actress who has worked across European and Hollywood cinema for four decades. An Academy Award winner for her portrayal of Édith Piaf in La Vie en Rose, she has also earned a BAFTA, two César Awards, and a Golden Globe. Her extensive film credits include Inception, The Dark Knight Rises, Midnight in Paris, Contagion, Rust and Bone, and Two Days, One Night, among many others. Her most recent feature, Little Girl Blue, was released in 2023. She likely first crossed paths with Conan O'Brien around 2013, during the height of her Hollywood prominence following a run of major international productions.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Marion_Cotillard"
+        ],
+        "enrichedAt": "2026-09-09T11:06:12.650Z",
+        "birth_year": "1975",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "French",
+        "prestige_signals": [
+          "Academy Award winner",
+          "British Academy Film Award winner",
+          "César Award winner (two)",
+          "Golden Globe Award winner",
+          "Knight of the Order of Arts and Letters (France)",
+          "Officer of the Order of Arts and Letters (France)",
+          "Knight of the Legion of Honour"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395013,7 +395670,152 @@
       "id": "gemma-arterton",
       "name": "Gemma Arterton",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Gemma Arterton",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Gemma_Arterton",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "Love's Labour's Lost",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "St Trinian's",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Quantum of Solace",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Tess of the d'Urbervilles",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Lost in Austen",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "The Disappearance of Alice Creed",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Clash of the Titans",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Prince of Persia: The Sands of Time",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Tamara Drewe",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "The Duchess of Malfi",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "Made in Dagenham",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "Hansel & Gretel: Witch Hunters",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "The Voices",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Gemma Bovery",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Nell Gwynn",
+            "type": "other",
+            "year": "2016"
+          },
+          {
+            "title": "Their Finest",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Saint Joan",
+            "type": "other",
+            "year": "2017"
+          },
+          {
+            "title": "The Escape",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Vita and Virginia",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "The King's Man",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "Culprits",
+            "type": "tv",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "Culprits (2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Gemma Arterton is an English actress and producer who trained at the Royal Academy of Dramatic Art and built a career spanning film, television, and stage. She first attracted wide attention as Bond Girl Strawberry Fields in Quantum of Solace (2008), a role that earned her an Empire Award for Best Newcomer. Her extensive film credits include Prince of Persia: The Sands of Time, Clash of the Titans, Their Finest, The King's Man, and the 2023 series Culprits. A decorated stage performer, she received Olivier Award nominations for Made in Dagenham and Nell Gwynn, winning the Evening Standard Theatre Award for the former. She likely crossed paths with Conan O'Brien around 2013, when her profile was rising on the back of Hansel & Gretel: Witch Hunters.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Gemma_Arterton"
+        ],
+        "enrichedAt": "2026-09-09T11:06:23.812Z",
+        "birth_year": "1986",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "English",
+        "prestige_signals": [
+          "Empire Award for Best Newcomer",
+          "Harper's Bazaar Woman of the Year Award",
+          "Olivier Award nominee for Nell Gwynn",
+          "Olivier Award nominee for Made in Dagenham",
+          "Evening Standard Theatre Award winner for Made in Dagenham",
+          "BAFTA Rising Star Award nominee"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395046,7 +395848,126 @@
       "id": "genesis-rodriguez",
       "name": "Genesis Rodriguez",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Genesis_Rodriguez_%28close-up%29.jpg/500px-Genesis_Rodriguez_%28close-up%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Genesis Rodriguez",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Genesis_Rodriguez",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "voice actress"
+        ],
+        "known_for": [
+          {
+            "title": "Prisionera",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Dame Chocolate",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Doña Bárbara",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Entourage",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Man on a Ledge",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Casa de Mi Padre",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "What to Expect When You're Expecting",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Hours",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "The Last Stand",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Big Hero 6",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Tusk",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Run All Night",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Time After Time",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "Big Hero 6: The Series",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "The Umbrella Academy",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "Lioness",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "The Night Agent",
+            "type": "tv",
+            "year": "2026"
+          }
+        ],
+        "recent_work": [
+          "Lioness (2024–present) as Captain Josephina Carrillo",
+          "The Night Agent Season 3 (2026) as Isabel De Leon"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Genesis Rodriguez is an American actress who began her career in Telemundo telenovelas, including Prisionera, Dame Chocolate, and Doña Bárbara, before transitioning to English-language film and television. She co-starred with Paul Walker in Hours and appeared in several studio films, among them Man on a Ledge, Casa de Mi Padre, and The Last Stand. She is widely recognized for voicing Honey Lemon in Disney's Big Hero 6 and its animated series. Her television credits include HBO's Entourage, ABC's Time After Time, and a recurring role in The Umbrella Academy. She currently stars in the Paramount+ thriller Lioness and appeared in the 2026 season of Netflix's The Night Agent. She likely crossed paths with Conan O'Brien when she first appeared on his show in 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Genesis_Rodriguez"
+        ],
+        "enrichedAt": "2026-09-09T11:06:20.909Z",
+        "birth_year": "1987",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395079,7 +396000,98 @@
       "id": "rooney-mara",
       "name": "Rooney Mara",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Rooney_Mara-9298.jpg/500px-Rooney_Mara-9298.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Rooney Mara",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Rooney_Mara",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Tanner Hall",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "The Social Network",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "The Girl with the Dragon Tattoo",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Side Effects",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Her",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Carol",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Lion",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "A Ghost Story",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Mary Magdalene",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Nightmare Alley",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "Women Talking",
+            "type": "film",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Rooney Mara is an American actress whose film career spans independent drama, thriller, and prestige cinema. She first drew wide attention with a supporting role in David Fincher's The Social Network before earning an Academy Award nomination for Best Actress for her lead performance as Lisbeth Salander in Fincher's The Girl with the Dragon Tattoo. She received a second Oscar nomination, for Best Supporting Actress, for Carol, a film that also brought her the Cannes Film Festival Award for Best Actress. Further credits include Her, Lion, A Ghost Story, Mary Magdalene, Nightmare Alley, and Women Talking. Mara likely crossed paths with Conan O'Brien when she first appeared on his show in 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Rooney_Mara"
+        ],
+        "enrichedAt": "2026-09-09T11:06:21.930Z",
+        "birth_year": "1985",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Academy Award nominee (Best Actress)",
+          "Academy Award nominee (Best Supporting Actress)",
+          "Golden Globe Award nominee (two nominations)",
+          "BAFTA nominee",
+          "Cannes Film Festival Award for Best Actress winner"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395112,7 +396124,48 @@
       "id": "celeste-anderson",
       "name": "Celeste Anderson",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Celeste_Anderson%2C_DC%2C_University_of_Waterloo_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Celeste Anderson",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Celeste_Anderson",
+          "confidence": 1
+        },
+        "profession": [
+          "competitive gamer",
+          "reality television personality"
+        ],
+        "known_for": [
+          {
+            "title": "King of the Nerds",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Halo series",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"To promote her appearance on that series, she was a guest on the late-night TV talk show Conan on February 12, 2013.\""
+        },
+        "description": "Celeste Anderson, also known as BiiTTERSWEET, is a Canadian competitive gamer and reality television personality best known for winning the first season of the TBS reality series King of the Nerds in 2013, taking home a $100,000 prize. A University of Waterloo computer science graduate, she built her gaming reputation as a semi-professional player in the Halo series and is regarded as one of Canada's top female video game competitors. She also pursues competitive Rubik's Cube speed-solving. To promote her King of the Nerds appearance, Anderson appeared as a guest on the late-night talk show Conan on February 12, 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Celeste_Anderson"
+        ],
+        "enrichedAt": "2026-09-09T11:06:19.467Z",
+        "birth_year": "1989",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Canadian",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395145,7 +396198,105 @@
       "id": "kathryn-bigelow",
       "name": "Kathryn Bigelow",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Kathryn_Bigelow_A_House_of_Dynamite-13_%28cropped%29.jpg/500px-Kathryn_Bigelow_A_House_of_Dynamite-13_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Kathryn Bigelow",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Kathryn_Bigelow",
+          "confidence": 1
+        },
+        "profession": [
+          "filmmaker",
+          "director"
+        ],
+        "known_for": [
+          {
+            "title": "The Loveless",
+            "type": "film",
+            "year": "1981"
+          },
+          {
+            "title": "Near Dark",
+            "type": "film",
+            "year": "1987"
+          },
+          {
+            "title": "Blue Steel",
+            "type": "film",
+            "year": "1990"
+          },
+          {
+            "title": "Point Break",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Strange Days",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "K-19: The Widowmaker",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "The Hurt Locker",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Homicide: Life on the Street",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "Cartel Land",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Zero Dark Thirty",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Detroit",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "A House of Dynamite",
+            "type": "film",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "A House of Dynamite"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Kathryn Bigelow is an American filmmaker whose career spans more than four decades of feature films across multiple genres, from the outlaw biker film The Loveless to the Iraq War drama The Hurt Locker, which made her the first woman to win the Academy Award for Best Director. Her other credits include Near Dark, Point Break, Strange Days, Zero Dark Thirty, and Detroit. Her most recent film, A House of Dynamite, was released in 2025. She also holds a Primetime Emmy Award for her work on the documentary Cartel Land. Bigelow likely crossed paths with Conan O'Brien around 2013, possibly connected to her political thriller Zero Dark Thirty.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Kathryn_Bigelow"
+        ],
+        "enrichedAt": "2026-09-09T11:06:30.911Z",
+        "birth_year": "1951",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Academy Award for Best Director winner (first woman)",
+          "Two Academy Awards",
+          "Two BAFTA Awards",
+          "Primetime Emmy Award for Exceptional Merit in Documentary Filmmaking"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395178,7 +396329,53 @@
       "id": "julian-newman",
       "name": "Julian Newman",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Julian Newman",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Julian_Newman",
+          "confidence": 1
+        },
+        "profession": [
+          "basketball player",
+          "point guard"
+        ],
+        "known_for": [
+          {
+            "title": "Viral YouTube highlight videos",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "Downey Christian School varsity basketball",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "Prodigy Prep basketball",
+            "type": "other",
+            "year": "2020"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Julian Newman is an American college basketball player and point guard currently playing for the Bethesda Lion Angels of the NCCAA. He first came to widespread attention in 2012 when highlight videos of him playing varsity basketball as a fifth grader at Downey Christian School in Orlando, Florida, went viral on YouTube, sparking debate about child prodigies in sports. He later graduated from Prodigy Prep, a school founded by his father, in 2020. Newman likely crossed paths with Conan O'Brien's show around 2013, when his viral fame was at its peak and he was making the rounds of national television programs.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Julian_Newman"
+        ],
+        "enrichedAt": "2026-09-09T11:06:29.336Z",
+        "birth_year": "2001",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395211,7 +396408,140 @@
       "id": "justin-chon",
       "name": "Justin Chon",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Justin_Chon%2C_Montclair_Film_Festival_2017%2C_New_Jersey_%284x6%29%28cropped%29.jpg/500px-Justin_Chon%2C_Montclair_Film_Festival_2017%2C_New_Jersey_%284x6%29%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Justin Chon",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Justin_Chon",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "filmmaker",
+          "director"
+        ],
+        "known_for": [
+          {
+            "title": "The Twilight Saga",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Twilight",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "New Moon",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Wendy Wu: Homecoming Warrior",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Just Jordan",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "21 & Over",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Innocent Blood",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Revenge of the Green Dragons",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Seoul Searching",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Dramaworld",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Deception",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "High Resolution",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Man Up",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Gook",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Ms. Purple",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Blue Bayou",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "Jamojaya",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Chief of War",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Boys Generally Asian",
+            "type": "music",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "Chief of War"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Justin Chon is an American actor and filmmaker best known for portraying Eric Yorkie in The Twilight Saga film series and for writing and directing a string of independent features including Gook, which won the NEXT Audience Award at the 2017 Sundance Film Festival, Ms. Purple, and Blue Bayou. He also directed the first two episodes of the Apple TV+ period drama Chief of War. As a performer, his credits span the Disney Channel film Wendy Wu: Homecoming Warrior, 21 & Over, and Revenge of the Green Dragons. He is a member of the K-pop parody group Boys Generally Asian. Chon likely crossed paths with Conan O'Brien around 2013, coinciding with his early directorial and acting work.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Justin_Chon"
+        ],
+        "enrichedAt": "2026-09-09T11:07:12.556Z",
+        "birth_year": "1981",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "NEXT Audience Award (Sundance 2017, Gook)",
+          "Grand Jury Award for Best Narrative Feature Film (LA Asian Pacific Film Festival 2017, Gook)",
+          "Best Director (LA Asian Pacific Film Festival 2017, Gook)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395277,7 +396607,67 @@
       "id": "rorke-denver",
       "name": "Rorke Denver",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Rorke Denver",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Rorke_Denver",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "author",
+          "former United States Navy SEALs commander"
+        ],
+        "known_for": [
+          {
+            "title": "Act of Valor",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "American Grit",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "MeatEater",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Damn Few: Making the Modern SEAL Warrior",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "Worth Dying For: A Navy Seal's Call to a Nation",
+            "type": "other",
+            "year": "2016"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Rorke Denver is an American actor, author, and former Navy SEALs commander best known for starring in the 2012 war film Act of Valor, in which he played a character based on his own military background, and for appearing as a team leader on the Fox reality series American Grit. He also guest starred on MeatEater and has authored two books, Damn Few: Making the Modern SEAL Warrior and Worth Dying For: A Navy Seal's Call to a Nation, co-written with Ellis Henican. A decorated veteran awarded the Bronze Star with V device, Denver likely crossed paths with Conan O'Brien during his media tour around 2013, shortly after Act of Valor brought him into the public eye.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Rorke_Denver"
+        ],
+        "enrichedAt": "2026-09-09T11:07:08.963Z",
+        "birth_year": "1973",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Bronze Star with V for valorous action in combat",
+          "All-American honors at defense (lacrosse)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395310,7 +396700,100 @@
       "id": "ben-hoffman",
       "name": "Ben Hoffman",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Ben Hoffman",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Ben_Hoffman",
+          "confidence": 1
+        },
+        "profession": [
+          "comedian",
+          "actor",
+          "writer",
+          "musician"
+        ],
+        "known_for": [
+          {
+            "title": "The Ben Show",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Sports Show with Norm Macdonald",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Archer",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Late Late Show with James Corden",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Arrested Development",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "New Girl",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Drunk History",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Hoops",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Redneck Shit",
+            "type": "music",
+            "year": "2016"
+          },
+          {
+            "title": "Ol' Wheeler",
+            "type": "music",
+            "year": "2017"
+          },
+          {
+            "title": "WW III",
+            "type": "music",
+            "year": "2018"
+          },
+          {
+            "title": "Fuck You Bitch: All Time Greatest Hits",
+            "type": "music",
+            "year": "2020"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Ben Hoffman is an American comedian, actor, writer, and musician best known for his satirical country music alter ego Wheeler Walker, Jr. His debut album Redneck Shit (2016) made chart history by debuting in the top ten of both the Billboard Top Country Albums and Top Comedy Albums charts simultaneously. He followed it with Ol' Wheeler (2017) and WW III (2018), both of which topped the Comedy chart. On television, Hoffman created Comedy Central's The Ben Show and the Netflix animated series Hoops, and has written for Archer and The Late Late Show with James Corden. He likely first crossed paths with Conan O'Brien around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Ben_Hoffman"
+        ],
+        "enrichedAt": "2026-09-09T11:07:09.749Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395376,7 +396859,122 @@
       "id": "jerry-trainor",
       "name": "Jerry Trainor",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jerry Trainor",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jerry_Trainor",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "voice actor",
+          "musician"
+        ],
+        "known_for": [
+          {
+            "title": "Drake & Josh",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "iCarly",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "iCarly (Paramount+ revival)",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "T.U.F.F. Puppy",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Crossing Jordan",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "2 Broke Girls",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Wendell & Vinnie",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Hunt the Truth",
+            "type": "podcast",
+            "year": ""
+          },
+          {
+            "title": "Bunsen Is a Beast",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "The Porch",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "Cover Versions",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Wreckless Epic",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Donnie Darko",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Bring It On Again",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Best Player",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Hanover Hideaway",
+            "type": "music",
+            "year": "2016"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Jerry Trainor is an American actor and voice actor best known for playing 'Crazy' Steve on the Nickelodeon series Drake & Josh and Spencer Shay on iCarly, a role he reprised when the show was revived on Paramount+ in 2021. He earned a Daytime Emmy nomination for voicing Dudley Puppy in the animated series T.U.F.F. Puppy and won three Kids' Choice Awards for his work on iCarly. He has also appeared in films including Donnie Darko and Cover Versions, voiced Commander Cone on Bunsen Is a Beast, and co-stars in the YouTube comedy web series The Porch. As a musician, he plays bass in the band Nice Enough People. He likely crossed paths with Conan O'Brien around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jerry_Trainor"
+        ],
+        "enrichedAt": "2026-09-09T11:07:11.611Z",
+        "birth_year": "1977",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Daytime Emmy Award nomination for Outstanding Performer in an Animated Program",
+          "three Kids' Choice Awards"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395409,7 +397007,142 @@
       "id": "james-lesure",
       "name": "James Lesure",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "James Lesure",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/James_Lesure",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "For Your Love",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "Las Vegas",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Girlfriends' Guide to Divorce",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "Good Girls",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Mad About You",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Martin",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Seinfeld",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "NYPD Blue",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Alias",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Half & Half",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Studio 60 on the Sunset Strip",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Lipstick Jungle",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The New Adventures of Old Christine",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Blue Bloods",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Mr. Sunshine",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Men at Work",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "CSI: Crime Scene Investigation",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Uncle Buck",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Salvation",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Divorce",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Rebel",
+            "type": "tv",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "James Lesure is an American television actor best known for his starring roles in the NBC/WB sitcom For Your Love, which ran from 1998 to 2002, and the NBC comedy-drama Las Vegas, where he played Mike Cannon from 2003 to 2008. He has maintained a steady presence on television through recurring roles in series including Good Girls, Girlfriends' Guide to Divorce, Blue Bloods, and Men at Work, and appeared in the 2021 series Rebel. Trained at the USC School of Dramatic Arts, Lesure likely crossed paths with Conan O'Brien when he first appeared on Conan around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/James_Lesure"
+        ],
+        "enrichedAt": "2026-09-09T11:07:18.887Z",
+        "birth_year": "1970",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395442,7 +397175,156 @@
       "id": "chris-messina",
       "name": "Chris Messina",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Chris Messina",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Messina",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "director",
+          "writer",
+          "executive producer"
+        ],
+        "known_for": [
+          {
+            "title": "The Mindy Project",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Vicky Cristina Barcelona",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Julie & Julia",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Devil",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Argo",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Ruby Sparks",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Celeste and Jesse Forever",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Fairhaven",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Cake",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Alex of Venice",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Birds of Prey",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "I Care a Lot",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "Call Jane",
+            "type": "film",
+            "year": "2022"
+          },
+          {
+            "title": "Air",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "The Boogeyman",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Six Feet Under",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Damages",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "The Newsroom",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Sharp Objects",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "The Sinner",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Gaslit",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "Based on a True Story",
+            "type": "tv",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "Air (2023)",
+          "The Boogeyman (2023)",
+          "Based on a True Story (2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Chris Messina is an American actor, director, and writer best known for playing Danny Castellano on the Fox/Hulu sitcom The Mindy Project, a role that earned him two Critics' Choice Television Award nominations for Best Actor in a Comedy Series. His extensive film credits include Argo, Vicky Cristina Barcelona, Birds of Prey, I Care a Lot, and Air, while television work spans prestige HBO productions including Six Feet Under, The Newsroom, Sharp Objects, and the Starz miniseries Gaslit. He also wrote, directed, and starred in independent projects including Fairhaven and Alex of Venice. He likely crossed paths with Conan O'Brien around 2013, during his run on The Mindy Project.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chris_Messina"
+        ],
+        "enrichedAt": "2026-09-09T11:07:22.541Z",
+        "birth_year": "1974",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Critics' Choice Television Award for Best Actor in a Comedy Series nominee (two nominations)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395541,7 +397423,164 @@
       "id": "lena-headey",
       "name": "Lena Headey",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Lena Headey",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Lena_Headey",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "director"
+        ],
+        "known_for": [
+          {
+            "title": "Game of Thrones",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "300",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "The Trap",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Waterland",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "The Clothes in the Wardrobe",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "The Brothers Grimm",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "The Remains of the Day",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "The Jungle Book",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "Mrs Dalloway",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Ripley's Game",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Imagine Me & You",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Dredd",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "The Purge",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "300: Rise of an Empire",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Pride and Prejudice and Zombies",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Fighting with My Family",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Terminator: The Sarah Connor Chronicles",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Rise of the Teenage Mutant Ninja Turtles",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Infinity Train",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Risen",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Kingsglaive: Final Fantasy XV",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Danger Mouse",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Tales of Arcadia",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "The Dark Crystal: Age of Resistance",
+            "type": "tv",
+            "year": "2019"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Lena Headey is a British actress and director best known for playing Cersei Lannister in the HBO fantasy series Game of Thrones (2011–2019), a role that earned her five Emmy Award nominations and a Golden Globe Award nomination. She previously starred as Sarah Connor in Terminator: The Sarah Connor Chronicles and earned a Saturn Award nomination for her performance in 300 (2006). Her film credits span three decades, including The Remains of the Day, The Jungle Book, The Purge, and Fighting with My Family. She also received a BAFTA nomination for directing the short film The Trap. Headey likely crossed paths with Conan O'Brien around 2013, during the height of her Game of Thrones prominence.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lena_Headey"
+        ],
+        "enrichedAt": "2026-09-09T11:08:15.735Z",
+        "birth_year": "1973",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "British",
+        "prestige_signals": [
+          "five Emmy Award nominations",
+          "Golden Globe Award nomination",
+          "Saturn Award nomination",
+          "BAFTA Award nomination for directing",
+          "Silver Iris Award for Best Actress at the 2001 Brussels European Film Festival"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395574,7 +397613,114 @@
       "id": "giada-de-laurentiis",
       "name": "Giada De Laurentiis",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Giada De Laurentiis",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Giada_De_Laurentiis",
+          "confidence": 1
+        },
+        "profession": [
+          "chef",
+          "entrepreneur",
+          "writer",
+          "television personality"
+        ],
+        "known_for": [
+          {
+            "title": "Giada at Home",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Everyday Italian",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Behind the Bash",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "Giada's Weekend Getaways",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Giada in Paradise",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "The Next Food Network Star",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "Food Network Star",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Iron Chef America",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Today",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Handy Manny",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Pixie Hollow Bake Off",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "GIADA (restaurant)",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "GDL Foods",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Giadzy.com",
+            "type": "other",
+            "year": "2017"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Giada De Laurentiis is an Italian-American chef, entrepreneur, writer, and television personality best known for hosting Food Network programs including Everyday Italian, Giada at Home, Behind the Bash, and Giada's Weekend Getaways. She has also appeared regularly as a contributor and guest co-host on NBC's Today. A Daytime Emmy Award winner for Outstanding Lifestyle Host and recipient of the Gracie Award for Best Television Host, she founded the catering business GDL Foods and opened her Las Vegas restaurant GIADA in 2014. She trained at Le Cordon Bleu in Paris before working in professional kitchens. De Laurentiis likely crossed paths with Conan O'Brien during what is believed to have been a first appearance on his show in 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Giada_De_Laurentiis"
+        ],
+        "enrichedAt": "2026-09-09T11:08:12.178Z",
+        "birth_year": "1970",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Italian-American",
+        "prestige_signals": [
+          "Daytime Emmy Award winner for Outstanding Lifestyle Host",
+          "Gracie Award winner for Best Television Host",
+          "International Hospitality Institute Global 100 in Hospitality"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395607,7 +397753,68 @@
       "id": "chris-kluwe",
       "name": "Chris Kluwe",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Chris Kluwe",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Kluwe",
+          "confidence": 1
+        },
+        "profession": [
+          "writer",
+          "social activist",
+          "politician",
+          "former professional football player",
+          "punter",
+          "humor columnist"
+        ],
+        "known_for": [
+          {
+            "title": "Minnesota Vikings (NFL career)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Seattle Seahawks (NFL career)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Oakland Raiders (NFL career)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Deadspin (humor columnist)",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Chris Kluwe is an American writer, social activist, politician, and former NFL punter best known for eight seasons with the Minnesota Vikings, where he set eight individual team records. An outspoken advocate for same-sex marriage and gay rights during his playing career, he retired from professional football in 2013 after stints with the Seattle Seahawks, Minnesota Vikings, and Oakland Raiders, attributing his inability to re-sign to his public criticism of homophobia and misogyny in the league. He subsequently pursued a writing career, including a humor column for Deadspin, and in Fall 2026 ran for the California State Assembly in District 72 as a Democrat. He likely crossed paths with Conan O'Brien around 2013, coinciding with his football retirement and rising public profile.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chris_Kluwe"
+        ],
+        "enrichedAt": "2026-09-09T11:08:09.492Z",
+        "birth_year": "1981",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": [
+          {
+            "title": "California State Assembly District 72 (Democratic candidate)",
+            "type": "other",
+            "year": "2026"
+          }
+        ]
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395640,7 +397847,143 @@
       "id": "derek-waters",
       "name": "Derek Waters",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Derek Waters",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Derek_Waters",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "comedian",
+          "screenwriter",
+          "producer",
+          "director"
+        ],
+        "known_for": [
+          {
+            "title": "Drunk History",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Derek & Simon: The Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Derek & Simon: The Pity Card",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Derek & Simon: A Bee and a Cigarette",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Married to the Kellys",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "The League",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Funny or Die Presents",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "It's Always Sunny in Philadelphia",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Nick Swardson's Pretend Time",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Maron",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Happy Endings",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Suburgatory",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Sarah Silverman Program",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Santa Clarita Diet",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Middle",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Brothers Solomon",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Hall Pass",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "For Your Consideration",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "This Means War",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Weasel Town",
+            "type": "tv",
+            "year": "2012"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Derek Waters is an American actor, comedian, screenwriter, producer, and director best known for co-creating and hosting the Comedy Central series Drunk History, which ran from 2013 to 2019 and earned him eight Primetime Emmy Award nominations. His career spans television appearances including It's Always Sunny in Philadelphia, Happy Endings, and Santa Clarita Diet, as well as films such as Hall Pass and For Your Consideration. He also co-created the comedy duo project Derek & Simon: The Show alongside Simon Helberg, with involvement from Bob Odenkirk. Waters likely crossed paths with Conan O'Brien around 2013, coinciding with the launch of Drunk History.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Derek_Waters"
+        ],
+        "enrichedAt": "2026-09-09T11:08:10.157Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "eight Primetime Emmy Award nominations"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395673,7 +398016,106 @@
       "id": "brittney-griner",
       "name": "Brittney Griner",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Brittney Griner",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Brittney_Griner",
+          "confidence": 1
+        },
+        "profession": [
+          "professional basketball player"
+        ],
+        "known_for": [
+          {
+            "title": "Phoenix Mercury (WNBA)",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "2014 WNBA Championship",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "U.S. Women's National Basketball Team",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "2016 Rio Olympics Gold Medal",
+            "type": "other",
+            "year": "2016"
+          },
+          {
+            "title": "2020 Tokyo Olympics Gold Medal",
+            "type": "other",
+            "year": "2021"
+          },
+          {
+            "title": "2024 Paris Olympics Gold Medal",
+            "type": "other",
+            "year": "2024"
+          },
+          {
+            "title": "2014 FIBA Women's World Cup",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "2018 FIBA Women's World Cup",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "Baylor Lady Bears National Championship",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "Connecticut Sun (WNBA)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Vinyl of Unrivaled",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "Named one of Time magazine's 100 most influential people in the world (2023)",
+          "Won third consecutive Olympic gold medal with Team USA at the 2024 Olympics in France",
+          "Playing for the Connecticut Sun of the WNBA",
+          "Playing for the Vinyl of Unrivaled"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Brittney Griner is an American professional basketball player currently competing for the Connecticut Sun in the WNBA and the Vinyl in the Unrivaled league. A three-time Olympic gold medalist with the U.S. women's national basketball team and a six-time WNBA All-Star, she won the 2014 WNBA championship with the Phoenix Mercury and back-to-back-to-back Olympic golds in 2016, 2021, and 2024. She is also a two-time FIBA Women's World Cup champion. In 2023, Time magazine named her one of the 100 most influential people in the world. Griner likely crossed paths with Conan O'Brien when she first appeared on his show in 2013, shortly after being selected first overall in the WNBA draft.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Brittney_Griner"
+        ],
+        "enrichedAt": "2026-09-09T11:08:24.043Z",
+        "birth_year": "1990",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Three-time Olympic gold medalist",
+          "Six-time WNBA All-Star",
+          "Named one of Time magazine's 100 most influential people in the world (2023)",
+          "AP Player of the Year (2012)",
+          "Most Outstanding Player of the Final Four (2012)",
+          "Best Female Athlete ESPY Award (2012)",
+          "Two-time FIBA Women's World Cup winner",
+          "2014 WNBA Championship winner"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395706,7 +398148,61 @@
       "id": "mitchie-brusco",
       "name": "Mitchie Brusco",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Mitchie Brusco",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Mitchie_Brusco",
+          "confidence": 1
+        },
+        "profession": [
+          "professional skateboarder"
+        ],
+        "known_for": [
+          {
+            "title": "2002 Gravity Games",
+            "type": "other",
+            "year": "2002"
+          },
+          {
+            "title": "X Games XVIII",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "X Games Minneapolis",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "SkateIQ",
+            "type": "other",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [
+          "SkateIQ — co-launched online skateboarding coaching platform (2022)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Mitchie Brusco is an American professional skateboarder who began skating at age three in Kirkland, Washington. Nicknamed 'Little Tricky,' he is the first skateboarder in history to land a 1260 in competition and holds records involving the 1080 and 900. He earned his first X Games gold medal in 2018 at X Games Minneapolis. In 2022, he co-founded SkateIQ, an online coaching platform offering subscription programs and individual video reviews. Brusco likely crossed paths with Conan O'Brien on his show around 2013, the same year he made history as the first skateboarder to land a 1080 at the X Games.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mitchie_Brusco"
+        ],
+        "enrichedAt": "2026-09-09T11:08:17.813Z",
+        "birth_year": "1997",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "X Games gold medal (2018)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395739,7 +398235,122 @@
       "id": "michael-b-jordan",
       "name": "Michael B Jordan",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Michael B. Jordan",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_B._Jordan",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "producer",
+          "director"
+        ],
+        "known_for": [
+          {
+            "title": "The Wire",
+            "type": "tv",
+            "year": "2002"
+          },
+          {
+            "title": "All My Children",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Friday Night Lights",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Fahrenheit 451",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Fruitvale Station",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Creed",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Black Panther",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Sinners",
+            "type": "film",
+            "year": "2025"
+          },
+          {
+            "title": "Creed II",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Creed III",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Chronicle",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "That Awkward Moment",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Fantastic Four",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Just Mercy",
+            "type": "film",
+            "year": "2019"
+          }
+        ],
+        "recent_work": [
+          "Creed III",
+          "Sinners"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Michael B. Jordan is an American actor, producer, and director who first gained recognition playing Wallace in HBO's The Wire before starring in All My Children and Friday Night Lights. His film breakthrough came with Fruitvale Station, launching a celebrated collaboration with director Ryan Coogler that produced Creed, Black Panther, and Sinners, the last of which earned Jordan the Academy Award for Best Actor. He also directed Creed III in 2023, marking his feature directorial debut. An Academy Award winner and multiple Emmy nominee, Jordan likely crossed paths with Conan O'Brien early in his rise to prominence, with a first appearance on Conan estimated around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michael_B._Jordan"
+        ],
+        "enrichedAt": "2026-09-09T11:08:24.815Z",
+        "birth_year": "1987",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Academy Award winner",
+          "three Actor Awards winner",
+          "Producers Guild Award winner",
+          "BAFTA nominee",
+          "Golden Globe nominee",
+          "Emmy nominee",
+          "Time 100 most influential people 2020 and 2023",
+          "People's Sexiest Man Alive 2020",
+          "New York Times 25 greatest actors of the 21st century (ranked 15th)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395772,7 +398383,121 @@
       "id": "edie-brickell",
       "name": "Edie Brickell",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Edie Brickell",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Edie_Brickell",
+          "confidence": 1
+        },
+        "profession": [
+          "singer-songwriter",
+          "vocalist"
+        ],
+        "known_for": [
+          {
+            "title": "Shooting Rubberbands at the Stars",
+            "type": "music",
+            "year": "1988"
+          },
+          {
+            "title": "What I Am",
+            "type": "music",
+            "year": "1988"
+          },
+          {
+            "title": "Ghost of a Dog",
+            "type": "music",
+            "year": "1990"
+          },
+          {
+            "title": "Stranger Things",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "Picture Perfect Morning",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "Volcano",
+            "type": "music",
+            "year": "2003"
+          },
+          {
+            "title": "Edie Brickell",
+            "type": "music",
+            "year": "2011"
+          },
+          {
+            "title": "The Gaddabouts",
+            "type": "music",
+            "year": "2011"
+          },
+          {
+            "title": "Love Has Come for You",
+            "type": "music",
+            "year": "2013"
+          },
+          {
+            "title": "Rocket",
+            "type": "music",
+            "year": "2018"
+          },
+          {
+            "title": "Bright Star",
+            "type": "other",
+            "year": "2016"
+          },
+          {
+            "title": "The American Epic Sessions",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Music from The American Epic Sessions",
+            "type": "music",
+            "year": "2017"
+          },
+          {
+            "title": "Hunter and the Dog Star",
+            "type": "music",
+            "year": "2021"
+          },
+          {
+            "title": "Heavy MakeUp",
+            "type": "music",
+            "year": "2023"
+          },
+          {
+            "title": "Here It Comes",
+            "type": "music",
+            "year": "2024"
+          }
+        ],
+        "recent_work": [
+          "Heavy MakeUp (self-titled debut album, 2023)",
+          "Here It Comes by Heavy MakeUp (2024)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Edie Brickell is an American singer-songwriter best known as the lead vocalist of Edie Brickell & New Bohemians, whose 1988 debut album Shooting Rubberbands at the Stars reached No. 4 on the Billboard albums chart and spawned the Top Ten single 'What I Am.' She has also released several solo albums and collaborated with Steve Martin on Love Has Come for You and the 2016 Broadway musical Bright Star. More recently, she co-founded the band Heavy MakeUp, releasing a self-titled debut in 2023 and a follow-up, Here It Comes, in 2024. She likely crossed paths with Conan O'Brien around 2013, coinciding with her active promotion of the Steve Martin collaboration.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Edie_Brickell"
+        ],
+        "enrichedAt": "2026-09-09T11:08:26.576Z",
+        "birth_year": "1966",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395805,7 +398530,134 @@
       "id": "leven-rambin",
       "name": "Leven Rambin",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Leven Rambin",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Leven_Rambin",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "All My Children",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Grey's Anatomy",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Gone",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Terminator: The Sarah Connor Chronicles",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "One Tree Hill",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Wizards of Waverly Place",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "CSI: Miami",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Hunger Games",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Percy Jackson: Sea of Monsters",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Gigantic",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Lipstick Jungle",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Scoundrels",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Chasing Mavericks",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Two Night Stand",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Walter",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Seven Minutes",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "The Tomorrow People",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "True Detective",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "I Am Michael",
+            "type": "film",
+            "year": "2015"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Leven Rambin is an American actress who began her career as a teenager on the ABC soap opera All My Children, earning a Daytime Emmy nomination for her dual role as half-sisters Lily Montgomery and Ava Benton. She built a substantial television resume through recurring roles on Grey's Anatomy, Terminator: The Sarah Connor Chronicles, One Tree Hill, Wizards of Waverly Place, and CSI: Miami before transitioning to film, most notably as Glimmer in The Hunger Games (2012) and Clarisse La Rue in Percy Jackson: Sea of Monsters (2013). She likely crossed paths with Conan O'Brien around 2013, coinciding with her high-profile film work during that period.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Leven_Rambin"
+        ],
+        "enrichedAt": "2026-09-09T11:08:30.026Z",
+        "birth_year": "1990",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Daytime Emmy Award nominee (Outstanding Younger Actress in a Drama Series)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395838,7 +398690,129 @@
       "id": "amber-heard",
       "name": "Amber Heard",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Amber Heard",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Amber_Heard",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "All the Boys Love Mandy Lane",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "The Ward",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Drive Angry",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "London Fields",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Pineapple Express",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Never Back Down",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "The Joneses",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "The Rum Diary",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Paranoia",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Machete Kills",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "3 Days to Kill",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Magic Mike XXL",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "The Danish Girl",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Justice League",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Aquaman",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Aquaman and the Lost Kingdom",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Hidden Palms",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "The Stand",
+            "type": "tv",
+            "year": "2020"
+          }
+        ],
+        "recent_work": [
+          "Aquaman and the Lost Kingdom (2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Amber Heard is an American actress who made her first leading role in the horror film All the Boys Love Mandy Lane (2006) before building a broad film career spanning genres from action to drama. She is perhaps best known for playing Mera in the DC Extended Universe across Justice League (2017), Aquaman (2018), and Aquaman and the Lost Kingdom (2023), her most recent screen credit. Her supporting work includes Pineapple Express, The Rum Diary, Magic Mike XXL, and The Danish Girl, among others. She has also appeared in television series including Hidden Palms and The Stand. Heard likely crossed paths with Conan O'Brien when she first appeared on his show around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Amber_Heard"
+        ],
+        "enrichedAt": "2026-09-09T11:08:35.728Z",
+        "birth_year": "1986",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395871,7 +398845,156 @@
       "id": "alison-pill",
       "name": "Alison Pill",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Alison Pill",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Alison_Pill",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "The Book of Daniel",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "The Lieutenant of Inishmore",
+            "type": "other",
+            "year": "2006"
+          },
+          {
+            "title": "Blackbird",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "Mauritius",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "The Miracle Worker",
+            "type": "other",
+            "year": "2010"
+          },
+          {
+            "title": "The House of Blue Leaves",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "Three Tall Women",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "Confessions of a Teenage Drama Queen",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Plain Truth",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Dan in Real Life",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Milk",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Midnight in Paris",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Hail, Caesar!",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Vice",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "The Newsroom",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "In Treatment",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "The Pillars of the Earth",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "American Horror Story: Cult",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "Star Trek: Picard",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Devs",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Them",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Scott Pilgrim vs. the World",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Scott Pilgrim Takes Off",
+            "type": "tv",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "Scott Pilgrim Takes Off"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Alison Pill is a Canadian actress who began her career as a child performer before breaking through in the NBC drama The Book of Daniel and earning a Tony nomination for her Broadway debut in The Lieutenant of Inishmore. Her film credits include Milk, Midnight in Paris, Hail, Caesar!, and Scott Pilgrim vs. the World, in which she played Kim Pine — a role she reprised in the 2023 Netflix animated series Scott Pilgrim Takes Off. On television she is also recognized for playing Maggie Jordan in Aaron Sorkin's The Newsroom and for appearances in Star Trek: Picard and Devs. She likely first crossed paths with Conan O'Brien around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Alison_Pill"
+        ],
+        "enrichedAt": "2026-09-09T11:09:10.934Z",
+        "birth_year": "1985",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Canadian",
+        "prestige_signals": [
+          "Tony Award for Best Featured Actress in a Play nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395904,7 +399027,94 @@
       "id": "katie-aselton",
       "name": "Katie Aselton",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Katie Aselton",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Katie_Aselton",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "film director",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "The Freebie",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "The League",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Legion",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Puffy Chair",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Scrapple",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "The Office",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Easier with Practice",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Togetherness",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Casual",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Fun Mom Dinner",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Curb Your Enthusiasm",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Katie Aselton is an American actress, film director, and producer best known for her seven-season run on the FX sitcom The League and for directing and co-starring in The Freebie, which screened in the 'Next' category at the Sundance Film Festival in 2010. She also appeared in the first two seasons of FX's drama Legion and has had supporting roles in Togetherness, Casual, Fun Mom Dinner, and Curb Your Enthusiasm. Her feature-length acting debut came in The Puffy Chair, which premiered at Sundance in 2005. She likely crossed paths with Conan O'Brien when she first appeared on his show in 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Katie_Aselton"
+        ],
+        "enrichedAt": "2026-09-09T11:09:08.653Z",
+        "birth_year": "1978",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395937,7 +399147,114 @@
       "id": "kirk-fox",
       "name": "Kirk Fox",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Kirk Fox",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Kirk_Fox",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "screenwriter",
+          "stand-up comedian"
+        ],
+        "known_for": [
+          {
+            "title": "How to Rock",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Reservation Dogs",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Parks and Recreation",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Community",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Who Gets the Last Laugh?",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Brooklyn Nine-Nine",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "The Test",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Jury Duty",
+            "type": "tv",
+            "year": "2023"
+          },
+          {
+            "title": "Tennis Anyone?",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Comedy Central Presents: Kirk Fox",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Live at Gotham",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Forgetting Sarah Marshall",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Heckle U",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Romantic Encounters",
+            "type": "tv",
+            "year": "2012"
+          }
+        ],
+        "recent_work": [
+          "Jury Duty"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Kirk Fox is an American actor, screenwriter, and stand-up comedian with a long track record in television comedy. He is best known for playing Sewage Joe on Parks and Recreation, Mr. March on Nickelodeon's How to Rock, and Kenny Boy on the FX/Hulu series Reservation Dogs. In 2023 he earned wider attention starring as juror Pat McCurdy in Jury Duty, the Peabody Award-winning docu-comedy that premiered on Amazon Freevee. A veteran of the stand-up circuit since 2002, Fox also hosted the syndicated daytime talk show The Test from 2013 to 2014. He likely crossed paths with Conan O'Brien around 2013, early in that hosting run.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Kirk_Fox"
+        ],
+        "enrichedAt": "2026-09-09T11:09:10.878Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Jury Prize for best standup at the HBO Comedy Festival in Aspen (2007)",
+          "Peabody Award-winning series Jury Duty (2023)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -395970,7 +399287,81 @@
       "id": "diane-kruger",
       "name": "Diane Kruger",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Diane Kruger",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Diane_Kruger",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "model"
+        ],
+        "known_for": [
+          {
+            "title": "Troy",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "National Treasure",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "National Treasure 2",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Inglourious Basterds",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Unknown",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "The Bridge",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "In the Fade",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "The Operative",
+            "type": "film",
+            "year": "2019"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Diane Kruger is a German actress and former model who parlayed a successful international modelling career — with campaigns for Chanel, Dior, and Armani — into prominent film and television roles. She is widely recognized for playing Helen in Troy, Dr. Abigail Chase in National Treasure and its sequel, Bridget von Hammersmark in Quentin Tarantino's Inglourious Basterds, and Detective Sonya Cross in the FX series The Bridge. Her performance in Fatih Akin's In the Fade earned her the Cannes Film Festival Award for Best Actress. She likely crossed paths with Conan O'Brien around 2013, when she first appeared on his show.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Diane_Kruger"
+        ],
+        "enrichedAt": "2026-09-09T11:09:09.809Z",
+        "birth_year": "1976",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "German",
+        "prestige_signals": [
+          "Trophée Chopard from the Cannes Film Festival",
+          "Cannes Film Festival Award for Best Actress"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396003,7 +399394,78 @@
       "id": "stephen-rannazzisi",
       "name": "Stephen Rannazzisi",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Stephen Rannazzisi",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Stephen_Rannazzisi",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "stand-up comedian"
+        ],
+        "known_for": [
+          {
+            "title": "The League",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Punk'd",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Big Day",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Paul Blart: Mall Cop",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Be a Man",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Roast Battles",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "New Girl",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Brews Brothers",
+            "type": "tv",
+            "year": "2020"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Stephen Rannazzisi is an American actor and stand-up comedian best known for playing Kevin MacArthur on the FXX comedy series The League, which ran from 2009 to 2015. He got his start as a cast member on MTV's Punk'd in 2003 and later starred in the short-lived sitcom Big Day before landing a supporting role in the 2009 blockbuster Paul Blart: Mall Cop. He has since made appearances on New Girl and Brews Brothers. Rannazzisi likely crossed paths with Conan O'Brien during a first appearance on Conan around 2013, during the height of The League's run.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Stephen_Rannazzisi"
+        ],
+        "enrichedAt": "2026-09-09T11:09:15.355Z",
+        "birth_year": "1977",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396036,7 +399498,127 @@
       "id": "ceelo-green",
       "name": "CeeLo Green",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "CeeLo Green",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/CeeLo_Green",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "songwriter",
+          "rapper",
+          "record producer",
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Goodie Mob",
+            "type": "music",
+            "year": "1991"
+          },
+          {
+            "title": "Cee-Lo Green and His Perfect Imperfections",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "Cee-Lo Green... Is the Soul Machine",
+            "type": "music",
+            "year": "2004"
+          },
+          {
+            "title": "Crazy",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "St. Elsewhere",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "The Odd Couple",
+            "type": "music",
+            "year": "2008"
+          },
+          {
+            "title": "The Lady Killer",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Fuck You",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "The Voice",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Cee Lo's Magic Moment",
+            "type": "music",
+            "year": "2012"
+          },
+          {
+            "title": "Hotel Transylvania",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "CeeLo Green's The Good Life",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Age Against the Machine",
+            "type": "music",
+            "year": "2013"
+          },
+          {
+            "title": "Heart Blanche",
+            "type": "music",
+            "year": "2015"
+          },
+          {
+            "title": "CeeLo Green Is Thomas Callaway",
+            "type": "music",
+            "year": "2020"
+          },
+          {
+            "title": "Survival Kit",
+            "type": "music",
+            "year": "2020"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "CeeLo Green is an American singer, songwriter, rapper, record producer, and actor who first rose to prominence as a member of Atlanta Southern hip-hop group Goodie Mob before launching a solo career. He is best known for the Gnarls Barkley collaboration 'Crazy' and his solo hit 'Fuck You,' which won Best Urban/Alternative Performance at the 53rd Grammy Awards — one of five Grammys he has received. His television credits include four seasons as a judge and coach on The Voice, and he voiced a character in the animated film Hotel Transylvania. He likely crossed paths with Conan O'Brien around 2013, during his most commercially active period.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/CeeLo_Green"
+        ],
+        "enrichedAt": "2026-09-09T11:09:22.950Z",
+        "birth_year": "1975",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Grammy Award winner (five Grammy Awards)",
+          "BET Award winner",
+          "Billboard Music Award winner",
+          "Brit Award winner",
+          "Best Urban/Alternative Performance at the 53rd Annual Grammy Awards"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396069,7 +399651,53 @@
       "id": "samantha-gordon",
       "name": "Samantha Gordon",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Samantha Gordon",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Samantha_Gordon",
+          "confidence": 1
+        },
+        "profession": [
+          "football running back",
+          "football linebacker"
+        ],
+        "known_for": [
+          {
+            "title": "Sweet Feet: Samantha Gordon's Winning Season",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "NFL Evolution commercial",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "Utah Girls Tackle Football League",
+            "type": "other",
+            "year": "2015"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"appearing on Conan and Fox and Friends to promote the book\""
+        },
+        "description": "Samantha Gordon is an American football running back and linebacker for the Salt Lake Wildcats of the Women's Football Alliance. Born in 2003, she first gained widespread attention as a nine-year-old when her father uploaded a YouTube highlight reel of her playing against all-male teams, a video that drew tens of millions of views and led to appearances on Good Morning America, an NFL Evolution commercial, and a spot on a Wheaties box. She co-authored a memoir, Sweet Feet: Samantha Gordon's Winning Season, and appeared on Conan to promote the book. Gordon was also a founding member of the Utah Girls Tackle Football League and later played collegiate soccer at Columbia University.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Samantha_Gordon"
+        ],
+        "enrichedAt": "2026-09-09T11:09:17.861Z",
+        "birth_year": "2003",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396102,7 +399730,74 @@
       "id": "jesse-bering",
       "name": "Jesse Bering",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Jesse_Bering_speaking_at_The_GLBT_History_Museum_in_San_Francisco_%28cropped%29.jpg/500px-Jesse_Bering_speaking_at_The_GLBT_History_Museum_in_San_Francisco_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jesse Bering",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jesse_Bering",
+          "confidence": 1
+        },
+        "profession": [
+          "psychologist",
+          "writer",
+          "academic",
+          "professor"
+        ],
+        "known_for": [
+          {
+            "title": "Bering in Mind (Scientific American blog)",
+            "type": "other",
+            "year": "2010"
+          },
+          {
+            "title": "The Belief Instinct: The Psychology of Souls, Destiny, and the Meaning of Life",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "Why is the Penis Shaped Like That? And Other Reflections on Being Human",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "Perv: The Sexual Deviant in All of Us",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "Suicidal: Why We Kill Ourselves",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "A Very Human Ending: How suicide haunts our species",
+            "type": "other",
+            "year": "2018"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Jesse Bering is an American psychologist, writer, and academic who serves as a professor of psychology and Director of the Centre for Science Communication at the University of Otago. He is known for frank, often humorous engagement with controversial topics in psychological science, particularly human sexuality and the cognitive science of religion. His books include The Belief Instinct, named one of the American Library Association's top 25 books of 2011, Why is the Penis Shaped Like That?, and Perv: The Sexual Deviant in All of Us. His Scientific American blog, Bering in Mind, earned a Webby Award Honoree distinction in 2010. He likely crossed paths with Conan O'Brien during a first appearance on the show in 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jesse_Bering"
+        ],
+        "enrichedAt": "2026-09-09T11:09:19.416Z",
+        "birth_year": "1975",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "2010 Webby Award Honoree for the Blog-Cultural category",
+          "2010 Scientist of the Year Award from the National Organization of Gay and Lesbian Scientists and Technical Professionals (NOGLSTP)",
+          "The Belief Instinct named one of the top 25 books of 2011 by the American Library Association"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396135,7 +399830,71 @@
       "id": "pope-francis",
       "name": "Pope Francis",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Pope_Francis_Korea_Haemi_Castle_19_%284x5_cropped%29.jpg/500px-Pope_Francis_Korea_Haemi_Castle_19_%284x5_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Pope Francis",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Pope_Francis",
+          "confidence": 1
+        },
+        "profession": [
+          "Pope",
+          "Head of the Catholic Church",
+          "Sovereign of Vatican City",
+          "Catholic priest",
+          "Archbishop",
+          "Cardinal"
+        ],
+        "known_for": [
+          {
+            "title": "Papacy of Pope Francis",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "Synod on Synodality",
+            "type": "other",
+            "year": "2023"
+          },
+          {
+            "title": "Restoration of US-Cuba diplomatic relations",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "Vatican treaty with Palestine",
+            "type": "other",
+            "year": "2015"
+          },
+          {
+            "title": "Apology for Canadian Indian residential school system",
+            "type": "other",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [
+          "Convened and concluded the Synod on Synodality",
+          "Condemned Israel's military operations in Gaza and called for investigations of war crimes",
+          "Made last public appearance on Easter Sunday 2025 before dying on 21 April 2025"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Pope Francis, born Jorge Mario Bergoglio in Buenos Aires in 1936, served as head of the Catholic Church and sovereign of Vatican City from 2013 until his death on 21 April 2025. He was the first Jesuit pope, the first Latin American pope, and the first pope from outside Europe since the 8th century. His papacy was defined by an emphasis on mercy, concern for the poor and migrants, interreligious dialogue, and action on climate change. He convened the Synod on Synodality and helped restore US-Cuba diplomatic relations. He likely crossed paths with Conan O'Brien's world around the time of his election in 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pope_Francis"
+        ],
+        "enrichedAt": "2026-09-09T11:09:25.093Z",
+        "birth_year": "1936",
+        "death_year": "2025",
+        "gender": "male",
+        "nationality": "Argentine",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396168,7 +399927,58 @@
       "id": "jackson-nicoll",
       "name": "Jackson Nicoll",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Jackson_Nicoll_Bad_Grandpa_cast_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jackson Nicoll",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jackson_Nicoll",
+          "confidence": 1
+        },
+        "profession": [
+          "former actor",
+          "fishing captain"
+        ],
+        "known_for": [
+          {
+            "title": "Jackass Presents: Bad Grandpa",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "The Fighter",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "What's Your Number?",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Fun Size",
+            "type": "film",
+            "year": "2012"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Jackson Nicoll is an American former child actor best known for playing Billy, the mischievous grandson in Jackass Presents: Bad Grandpa (2013), a role that brought him widespread recognition. His earlier credits include The Fighter (2010), What's Your Number? (2011), and Fun Size (2012). He retired from acting in 2017 and has since pursued a life on the water, chronicling fishing excursions and serving as a full-time captain for Al Gauron Deep Sea Fishing and Whale Watching in New Hampshire. He likely crossed paths with Conan O'Brien around 2013, coinciding with the release of Bad Grandpa.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jackson_Nicoll"
+        ],
+        "enrichedAt": "2026-09-09T11:09:23.886Z",
+        "birth_year": "2003",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396201,7 +400011,122 @@
       "id": "brie-larson",
       "name": "Brie Larson",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Captain_Marvel_trailer_at_the_National_Air_and_Space_Museum_4_%28cropped%29.jpg/500px-Captain_Marvel_trailer_at_the_National_Air_and_Space_Museum_4_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Brie Larson",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Brie_Larson",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "singer",
+          "filmmaker"
+        ],
+        "known_for": [
+          {
+            "title": "Raising Dad",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "Finally Out of P.E.",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "Hoot",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "United States of Tara",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Scott Pilgrim vs. the World",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "21 Jump Street",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Short Term 12",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "The Spectacular Now",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Trainwreck",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Room",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Unicorn Store",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Kong: Skull Island",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Captain Marvel",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "The Messy Truth VR Experience",
+            "type": "other",
+            "year": "2020"
+          },
+          {
+            "title": "Lessons in Chemistry",
+            "type": "tv",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "Lessons in Chemistry"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Brie Larson is an American actress, singer, and filmmaker who began her career as a teenager in supporting comedy roles before breaking through in independent film and blockbusters. Her performance in Room (2015) earned her the Academy Award for Best Actress, and she has since become widely recognized for starring as Carol Danvers / Captain Marvel in the Marvel Cinematic Universe. Her earlier credits include Short Term 12, Scott Pilgrim vs. the World, and 21 Jump Street, and she returned to television with the miniseries Lessons in Chemistry (2023), earning a Primetime Emmy nomination. She likely crossed paths with Conan O'Brien around 2013, coinciding with her breakthrough in Short Term 12.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Brie_Larson"
+        ],
+        "enrichedAt": "2026-09-09T11:10:12.502Z",
+        "birth_year": "1989",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Academy Award winner",
+          "Golden Globe Award winner",
+          "Primetime Emmy Award winner",
+          "Primetime Emmy Award nominee (Outstanding Lead Actress, Lessons in Chemistry)",
+          "Time 100 most influential people (2019)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396234,7 +400159,80 @@
       "id": "shane-victorino",
       "name": "Shane Victorino",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Shane_Victorino_on_July_28%2C_2013.jpg/500px-Shane_Victorino_on_July_28%2C_2013.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Shane Victorino",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Shane_Victorino",
+          "confidence": 1
+        },
+        "profession": [
+          "professional baseball player",
+          "outfielder"
+        ],
+        "known_for": [
+          {
+            "title": "San Diego Padres",
+            "type": "other",
+            "year": "2003"
+          },
+          {
+            "title": "Philadelphia Phillies",
+            "type": "other",
+            "year": "2005"
+          },
+          {
+            "title": "Los Angeles Dodgers",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Boston Red Sox",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "Los Angeles Angels of Anaheim",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "2008 World Series",
+            "type": "other",
+            "year": "2008"
+          },
+          {
+            "title": "2013 World Series",
+            "type": "other",
+            "year": "2013"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Shane Victorino, nicknamed 'the Flyin' Hawaiian,' is a former American professional baseball outfielder who played in Major League Baseball for the San Diego Padres, Philadelphia Phillies, Los Angeles Dodgers, Boston Red Sox, and Los Angeles Angels of Anaheim. A four-time Gold Glove Award winner and two-time All-Star, Victorino was a member of two World Series championship teams — the 2008 Philadelphia Phillies and the 2013 Boston Red Sox — and earned the Lou Gehrig Memorial Award in 2008 and the Branch Rickey Award in 2011. He likely crossed paths with Conan O'Brien when he first appeared on Conan in 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Shane_Victorino"
+        ],
+        "enrichedAt": "2026-09-09T11:10:10.376Z",
+        "birth_year": "1980",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Gold Glove Award winner (four times)",
+          "MLB All-Star (two-time selection)",
+          "2008 World Series champion",
+          "2013 World Series champion",
+          "Lou Gehrig Memorial Award winner (2008)",
+          "Branch Rickey Award winner (2011)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396267,7 +400265,73 @@
       "id": "jonny-gomes",
       "name": "Jonny Gomes",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jonny Gomes",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jonny_Gomes",
+          "confidence": 1
+        },
+        "profession": [
+          "professional baseball coach",
+          "former outfielder"
+        ],
+        "known_for": [
+          {
+            "title": "Tampa Bay Devil Rays/Rays",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Cincinnati Reds",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Washington Nationals",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Oakland Athletics",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Boston Red Sox",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Atlanta Braves",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Kansas City Royals",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Jonny Gomes is an American former Major League Baseball outfielder who played from 2003 through 2015 for seven franchises, including the Tampa Bay Rays, Boston Red Sox, and Oakland Athletics. Known for his aggressive hustle and power hitting, he finished third in 2005 American League Rookie of the Year voting. Since retiring as a player, he has moved into coaching and currently serves as the minor league outfield and baserunning coordinator for the Arizona Diamondbacks. Gomes likely crossed paths with Conan O'Brien during a first appearance on Conan around 2013, during his active playing days.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jonny_Gomes"
+        ],
+        "enrichedAt": "2026-09-09T11:10:10.602Z",
+        "birth_year": "1980",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396300,7 +400364,66 @@
       "id": "chris-hadfield",
       "name": "Chris Hadfield",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Chris Hadfield",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Hadfield",
+          "confidence": 1
+        },
+        "profession": [
+          "astronaut",
+          "test pilot",
+          "military pilot",
+          "author",
+          "retired Royal Canadian Air Force colonel"
+        ],
+        "known_for": [
+          {
+            "title": "STS-74",
+            "type": "other",
+            "year": "1995"
+          },
+          {
+            "title": "STS-100",
+            "type": "other",
+            "year": "2001"
+          },
+          {
+            "title": "Soyuz TMA-07M / Expedition 34",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "Expedition 35 (ISS Commander)",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "An Astronaut's Guide to Life on Earth",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Chris Hadfield is a retired Royal Canadian Air Force colonel, test pilot, and Canadian Space Agency astronaut best known as the first Canadian to perform a spacewalk and as commander of the International Space Station during Expedition 35 in 2013. He flew three missions in total, including STS-74 to the Russian station Mir, STS-100 to install the Canadarm2 on the ISS, and a long-duration stay aboard Soyuz TMA-07M. A published author, his autobiography An Astronaut's Guide to Life on Earth became a New York Times bestseller. Hadfield likely crossed paths with Conan O'Brien around the time of his return to Earth and high-profile media appearances in 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chris_Hadfield"
+        ],
+        "enrichedAt": "2026-09-09T11:10:09.173Z",
+        "birth_year": "1959",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "Canadian",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396333,7 +400456,78 @@
       "id": "david-morrissey",
       "name": "David Morrissey",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "David Morrissey",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/David_Morrissey",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "filmmaker",
+          "director"
+        ],
+        "known_for": [
+          {
+            "title": "The Deal",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "State of Play",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "The Walking Dead",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Sherwood",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "Sweet Revenge",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "Passer By",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Don't Worry About Me",
+            "type": "film",
+            "year": "2010"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "David Morrissey is an English actor and filmmaker who built a reputation through extensive stage work with the Royal Shakespeare Company and Royal National Theatre before breaking through on screen. He is best known for playing Gordon Brown in The Deal, the political journalist thriller State of Play — for which he received a BAFTA nomination and a Royal Television Society Best Actor award — and the menacing Governor across two seasons of The Walking Dead. More recently he has starred as DCS Ian St Clair in the ongoing BBC drama Sherwood. Morrissey has also directed television films including Don't Worry About Me. He likely crossed paths with Conan O'Brien's show around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/David_Morrissey"
+        ],
+        "enrichedAt": "2026-09-09T11:10:20.070Z",
+        "birth_year": "1964",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "English",
+        "prestige_signals": [
+          "BAFTA nominated for Best Actor for State of Play",
+          "Royal Television Society Best Actor winner for The Deal",
+          "Honorary doctorate from Edge Hill University (2016)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -396366,7 +400560,137 @@
       "id": "paulina-rubio",
       "name": "Paulina Rubio",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Paulina Rubio",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Paulina_Rubio",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "songwriter",
+          "television personality"
+        ],
+        "known_for": [
+          {
+            "title": "Timbiriche",
+            "type": "music",
+            "year": "1982"
+          },
+          {
+            "title": "La Chica Dorada",
+            "type": "music",
+            "year": "1992"
+          },
+          {
+            "title": "24 Kilates",
+            "type": "music",
+            "year": "1993"
+          },
+          {
+            "title": "El Tiempo Es Oro",
+            "type": "music",
+            "year": "1995"
+          },
+          {
+            "title": "Planeta Paulina",
+            "type": "music",
+            "year": "1996"
+          },
+          {
+            "title": "Bésame en la Boca",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Paulina",
+            "type": "music",
+            "year": "2000"
+          },
+          {
+            "title": "Border Girl",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "Pau-Latina",
+            "type": "music",
+            "year": "2004"
+          },
+          {
+            "title": "Ananda",
+            "type": "music",
+            "year": "2006"
+          },
+          {
+            "title": "Gran City Pop",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "Brava!",
+            "type": "music",
+            "year": "2011"
+          },
+          {
+            "title": "La Voz... Mexico",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "La Voz Kids",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "The X Factor USA",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Deseo",
+            "type": "music",
+            "year": "2018"
+          },
+          {
+            "title": "La Voz... España",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "La Voz Senior",
+            "type": "tv",
+            "year": "2019"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2013."
+        },
+        "description": "Paulina Rubio is a Mexican singer, songwriter, and television personality who first rose to fame as a member of the pop group Timbiriche from 1982 to 1991. After launching a solo career, she became one of the best-selling Latin music artists of all time, with over 15 million records sold and albums including Paulina, Border Girl, Pau-Latina, and Deseo. Five of her singles have reached number one on the US Billboard Hot Latin Songs, and she has earned seven Billboard Latin Music Awards and nominations for both the Grammy and Latin Grammy Awards. She also served as a coach on La Voz... Mexico and La Voz Kids and as a judge on The X Factor USA. She likely crossed paths with Conan O'Brien around 2013.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Paulina_Rubio"
+        ],
+        "enrichedAt": "2026-09-09T11:10:23.434Z",
+        "birth_year": "1971",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Mexican",
+        "prestige_signals": [
+          "Grammy Award nominee",
+          "Latin Grammy Award nominee",
+          "seven Billboard Latin Music Awards",
+          "five Lo Nuestro Awards",
+          "three MTV Latinoamerica Awards",
+          "two Telehit Awards including the Trajectory Award",
+          "Greatest Latin Artists of All Time by Billboard (2020)"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
