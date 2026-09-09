@@ -14,7 +14,15 @@ name: Backfill Full Bios
 # is safe: if the job times out, gets cancelled, or a chunk errors out, only
 # that in-flight chunk is lost — everything before it is already on `main`.
 # Re-running (with any limit) only ever picks up guests still missing a bio
-# entirely, so nothing gets reprocessed or re-charged for.
+# entirely, so nothing gets reprocessed or re-charged for — enforced via
+# --new-only (a real cost-review finding: without it, the pipeline's own
+# 30-day staleness TTL would silently re-qualify the ENTIRE archive for
+# re-enrichment once this backfill finishes and 30 days pass, since
+# "enrichedAt > 30 days ago" doesn't distinguish "never enriched" from
+# "enriched by this exact backfill a month ago"). weekly-ingest.yml's own
+# enrich-bios.ts invocation is untouched and keeps that staleness-refresh
+# behavior — this flag is scoped to this workflow specifically, where
+# re-spending on the whole archive was the real, unbounded risk.
 
 on:
   workflow_dispatch:
@@ -79,6 +87,22 @@ jobs:
           TOTAL="$INPUT_LIMIT"
           MODEL="$INPUT_MODEL"
           DONE=0
+          # Each chunk spawns a FRESH `npx tsx` process, so enrich-bios.ts's
+          # own Claude credential smoke-test would otherwise re-verify on
+          # every single chunk — up to ~58 times across the full ~2,900-guest
+          # backlog at 50/chunk, each one a real network round-trip that adds
+          # up to real time even though its dollar cost is trivial. Verify
+          # once (the first chunk), then tell every later chunk to skip its
+          # own check. A credential that breaks mid-run (not just at chunk 1)
+          # is still caught: an independent review found that skipping the
+          # smoke test alone would let a mid-run break silently zero out a
+          # whole chunk's bios.json changes, which this loop's own "no
+          # changes staged = backlog exhausted" check would then
+          # misinterpret as a clean, finished run. enrich-bios.ts now exits
+          # non-zero when every guest in a Claude-enabled chunk fails
+          # outright, which aborts this whole job loudly under bash -e
+          # instead of looking like a successful stop.
+          SKIP_SMOKE_TEST=""
 
           while [ "$DONE" -lt "$TOTAL" ]; do
             REMAINING=$((TOTAL - DONE))
@@ -87,10 +111,11 @@ jobs:
             echo "=== Chunk: $THIS_CHUNK guests (done so far: $DONE/$TOTAL) ==="
             if [ -n "$MODEL" ]; then
               echo "=== Using model override: $MODEL ==="
-              npx tsx scripts/ingest/enrich-bios.ts --limit "$THIS_CHUNK" --model "$MODEL"
+              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK" --model "$MODEL"
             else
-              npx tsx scripts/ingest/enrich-bios.ts --limit "$THIS_CHUNK"
+              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK"
             fi
+            SKIP_SMOKE_TEST="1"
             npx tsx scripts/ingest/patch-bios-into-guests.ts
 
             git add data/guests.json
