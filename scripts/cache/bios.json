@@ -6007,7 +6007,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:52:16.583Z"
+    "enrichedAt": "2026-09-09T22:00:19.339Z"
   },
   "David Cross": {
     "entity": {
@@ -15388,7 +15388,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:52:00.814Z"
+    "enrichedAt": "2026-09-09T22:01:01.127Z"
   },
   "Hilary Swank": {
     "entity": {
@@ -17319,7 +17319,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:52:00.300Z"
+    "enrichedAt": "2026-09-09T22:00:19.351Z"
   },
   "D'Arcy Carden": {
     "entity": {
@@ -20281,7 +20281,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:54:02.246Z"
+    "enrichedAt": "2026-09-09T22:01:01.230Z"
   },
   "Greg Fitzsimmons": {
     "entity": {
@@ -28843,7 +28843,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:56:01.805Z"
+    "enrichedAt": "2026-09-09T22:01:01.276Z"
   },
   "Martha Stewart": {
     "entity": {
@@ -29257,12 +29257,12 @@
         "year": "2022"
       },
       {
-        "title": "Coming to America",
+        "title": "School Daze",
         "type": "film",
         "year": "1988"
       },
       {
-        "title": "School Daze",
+        "title": "Coming to America",
         "type": "film",
         "year": "1988"
       },
@@ -29325,6 +29325,11 @@
         "title": "Jackie Brown",
         "type": "film",
         "year": "1997"
+      },
+      {
+        "title": "Star Wars prequel trilogy",
+        "type": "film",
+        "year": "1999"
       },
       {
         "title": "Unbreakable",
@@ -29425,33 +29430,23 @@
         "title": "Secret Invasion",
         "type": "tv",
         "year": "2023"
-      },
-      {
-        "title": "Star Wars prequel trilogy",
-        "type": "film",
-        "year": "1999"
-      },
-      {
-        "title": "Marvel Cinematic Universe (Nick Fury)",
-        "type": "film",
-        "year": "2008"
       }
     ],
     "recent_work": [
-      "Secret Invasion (Disney+, 2023)",
-      "What If...? (Disney+, 2021–2024)"
+      "Secret Invasion (2023)",
+      "What If...? (2021–2024)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Samuel L. Jackson is an American actor and film producer whose career spans more than four decades and whose films have collectively grossed over $27 billion worldwide, making him the highest-grossing actor of all time. He earned a BAFTA for his breakout role as Jules Winnfield in Pulp Fiction and received the Academy Honorary Award in 2022. He is widely recognized as Mace Windu in the Star Wars prequel trilogy and as Nick Fury across eleven Marvel Cinematic Universe films, most recently in the Disney+ series Secret Invasion. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1996, the same year A Time to Kill was released.",
+    "description": "Samuel L. Jackson is an American actor and film producer whose career spans theater, blockbuster franchises, and prestige cinema. His films have collectively grossed more than $27 billion worldwide, making him the highest-grossing actor of all time. He broke through with Pulp Fiction (1994), winning a BAFTA and earning an Oscar nomination, and went on to iconic roles as Mace Windu in the Star Wars prequels and Nick Fury across eleven Marvel Cinematic Universe films, most recently in Secret Invasion (2023). A 2022 Academy Honorary Award recipient, he also received a Tony nomination that year for the Broadway revival of The Piano Lesson. He likely crossed paths with Conan O'Brien as early as 1996 on Late Night with Conan O'Brien.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Samuel_L._Jackson"
     ],
-    "enrichedAt": "2026-09-09T21:56:22.952Z",
+    "enrichedAt": "2026-09-09T22:01:20.289Z",
     "birth_year": "1948",
     "death_year": "",
     "gender": "male",
@@ -29460,7 +29455,7 @@
       "Academy Honorary Award (2022)",
       "BAFTA Award for Best Actor in a Supporting Role winner (Pulp Fiction)",
       "Academy Award for Best Supporting Actor nominee (Pulp Fiction)",
-      "Tony Award for Best Featured Actor in a Play nominee (The Piano Lesson, 2022)"
+      "Tony Award for Best Featured Actor in a Play nominee (The Piano Lesson revival, 2022)"
     ],
     "primary_platform": "film",
     "upcoming_work": [
@@ -33922,22 +33917,151 @@
   },
   "Sam Richardson": {
     "entity": {
-      "name": "Sam Richardson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Sam Richardson (actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sam_Richardson_(actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actor",
+      "comedian"
+    ],
+    "known_for": [
+      {
+        "title": "Detroiters",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Veep",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "I Think You Should Leave with Tim Robinson",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "The Afterparty",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "Velma",
+        "type": "tv",
+        "year": "2023"
+      },
+      {
+        "title": "Ted Lasso",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "The Office",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Arrested Development",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Drunk History",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "New Girl",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Teachers",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Harder Than It Looks",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Champaign ILL",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "The Second City Project",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "We're the Millers",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Horrible Bosses 2",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Spy",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Neighbors 2: Sorority Rising",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Mike and Dave Need Wedding Dates",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Ghostbusters",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Hocus Pocus 2",
+        "type": "film",
+        "year": "2022"
+      }
+    ],
+    "recent_work": [
+      "I Think You Should Leave with Tim Robinson (2023)",
+      "The Afterparty (2022–2023)",
+      "Velma (2023–2024)",
+      "Ted Lasso (2022–2023)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan in 2017."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T21:56:02.269Z"
+    "description": "Sam Richardson is an American actor and comedian best known for co-creating and starring in the Comedy Central series Detroiters alongside Tim Robinson, playing Richard Splett across seven seasons of HBO's Veep, and appearing in the Netflix sketch series I Think You Should Leave with Tim Robinson. He earned Emmy nominations in 2022 and 2023 for his recurring role as Edwin Akufo in Ted Lasso, winning the award in 2023. Recent credits include the Apple TV+ mystery comedy The Afterparty and the Max animated series Velma. He likely crossed paths with Conan O'Brien around 2017, coinciding with his rising profile on both Detroiters and Veep.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sam_Richardson_(actor)"
+    ],
+    "enrichedAt": "2026-09-09T22:02:14.386Z",
+    "birth_year": "1984",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Primetime Emmy Award for Outstanding Guest Actor in a Comedy Series winner (2023)",
+      "Primetime Emmy Award for Outstanding Guest Actor in a Comedy Series nominee (2022)",
+      "Screen Actors Guild Award for Outstanding Performance by an Ensemble in a Comedy Series winner (2018)",
+      "Screen Actors Guild Award for Outstanding Performance by an Ensemble in a Comedy Series nominee (2015, 2016, 2017)",
+      "Canadian Screen Award nominee for Best Performance in a Variety or Sketch Comedy Program or Series (2016)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Michelle Obama": {
     "entity": {
@@ -35573,7 +35697,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:56:01.707Z"
+    "enrichedAt": "2026-09-09T22:02:01.127Z"
   },
   "James Spader": {
     "entity": {
@@ -36023,22 +36147,100 @@
   },
   "Steven Ho": {
     "entity": {
-      "name": "Steven Ho",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Steven Ho (martial artist)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Steven_Ho_(martial_artist)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "martial artist",
+      "stunt coordinator",
+      "stuntman"
+    ],
+    "known_for": [
+      {
+        "title": "Teenage Mutant Ninja Turtles II: The Secret of the Ooze",
+        "type": "film",
+        "year": "1991"
+      },
+      {
+        "title": "Teenage Mutant Ninja Turtles III",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "Mortal Kombat",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Hold It Against Me",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "The Bachelor",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Bachelor Pad",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Dragon Fight",
+        "type": "film",
+        "year": "1989"
+      },
+      {
+        "title": "The Master",
+        "type": "film",
+        "year": "1989"
+      },
+      {
+        "title": "Rock & Roll High School Forever",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Soundman",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Pirates of the Caribbean: At World's End",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Shadow of the Day",
+        "type": "music",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T21:57:01.006Z"
+    "description": "Steven Ho is an American martial artist, stunt coordinator, and stuntman credited as an early pioneer of non-traditional martial arts forms and widely recognized for popularizing techniques such as the 540 kick. He is best known for performing stunts as Donatello in Teenage Mutant Ninja Turtles II: The Secret of the Ooze and Teenage Mutant Ninja Turtles III, and for his role as Chan in Mortal Kombat. His choreography and training credits include Britney Spears's Hold It Against Me video and fight preparation for major Hollywood productions. He likely first crossed paths with Conan O'Brien during an appearance on The Tonight Show with Conan O'Brien in 2009.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Steven_Ho_(martial_artist)"
+    ],
+    "enrichedAt": "2026-09-09T22:02:11.018Z",
+    "birth_year": "1973",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "member of the Academy of Television Arts & Sciences",
+      "Screen Actors Guild award nominee for Outstanding Performance by a Stunt Ensemble in a Motion Picture (Pirates of the Caribbean: At World's End)",
+      "MTV Video Music Award for Best Rock Video (Shadow of the Day)"
+    ],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Mike Tyson": {
     "entity": {
@@ -37928,7 +38130,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:57:01.102Z"
+    "enrichedAt": "2026-09-09T22:02:00.803Z"
   },
   "Arnold Schwarzenegger": {
     "entity": {
@@ -42730,24 +42932,14 @@
         "year": "1999"
       },
       {
-        "title": "A Carol Christmas",
-        "type": "tv",
-        "year": "2003"
-      },
-      {
         "title": "Scary Movie 2",
         "type": "film",
         "year": "2001"
       },
       {
-        "title": "So Notorious",
+        "title": "A Carol Christmas",
         "type": "tv",
-        "year": "2006"
-      },
-      {
-        "title": "Tori & Dean: Inn Love",
-        "type": "tv",
-        "year": "2007"
+        "year": "2003"
       },
       {
         "title": "Cthulhu",
@@ -42760,6 +42952,16 @@
         "year": "2007"
       },
       {
+        "title": "So Notorious",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "Tori & Dean: Inn Love",
+        "type": "tv",
+        "year": "2007"
+      },
+      {
         "title": "sTori Telling",
         "type": "other",
         "year": "2008"
@@ -42768,11 +42970,6 @@
         "title": "Mommywood",
         "type": "other",
         "year": "2009"
-      },
-      {
-        "title": "Uncharted TerriTORI",
-        "type": "other",
-        "year": "2010"
       },
       {
         "title": "The Mistle-Tones",
@@ -42826,13 +43023,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Tori Spelling is an American actress, author, and podcaster best known for playing Donna Martin across the full run of Beverly Hills, 90210 and its 2019 revival BH90210. She has worked steadily in television movies, including The Last Sharknado: It's About Time, and independent films such as The House of Yes, Trick, and Scary Movie 2. Her memoir sTori Telling reached the top of the New York Times Best Seller list, and she co-hosts the Beverly Hills, 90210 rewatch podcast 9021OMG with former co-star Jennie Garth. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 1995.",
+    "description": "Tori Spelling is an American actress, author, and podcaster best known for playing Donna Martin across the full run of Beverly Hills, 90210 and its spin-off BH90210. Beyond the franchise, she has built a varied career in made-for-television films such as A Friend to Die For and The Last Sharknado: It's About Time, independent films including Trick and Scary Movie 2, and reality television. Her autobiography sTori Telling reached the top of the New York Times Best Seller list. More recently she co-hosts the podcast 9021OMG alongside former co-star Jennie Garth. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1995.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Tori_Spelling"
     ],
-    "enrichedAt": "2026-09-09T21:58:15.198Z",
+    "enrichedAt": "2026-09-09T22:03:14.336Z",
     "birth_year": "1973",
     "death_year": "",
     "gender": "female",
@@ -43132,7 +43329,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:58:01.109Z"
+    "enrichedAt": "2026-09-09T22:03:01.068Z"
   },
   "Steve Irwin": {
     "entity": {
@@ -43462,19 +43659,19 @@
       }
     ],
     "recent_work": [
-      "The Pope's Exorcist"
+      "The Pope's Exorcist (2023)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Russell Crowe is a New Zealand-born actor and film director whose career spans more than three decades. An Academy Award, a BAFTA, and two Golden Globes reflect a body of work that includes landmark roles in Gladiator, A Beautiful Mind, L.A. Confidential, and The Insider. He has also appeared in major studio productions ranging from Les Misérables and Man of Steel to The Nice Guys and Thor: Love and Thunder, and made his directorial debut with The Water Diviner in 2014. His most recent film credit is The Pope's Exorcist. He likely crossed paths with Conan O'Brien as far back as his early breakthrough years, with a first reported appearance on Late Night with Conan O'Brien in 1995.",
+    "description": "Russell Crowe is a New Zealand-born actor and film director whose career spans more than three decades of major Hollywood productions. He holds an Academy Award, a BAFTA Award, and two Golden Globes, having broken through internationally with L.A. Confidential and The Insider before winning the Academy Award for Best Actor for Gladiator. Subsequent starring roles in A Beautiful Mind, Master and Commander, American Gangster, Les Misérables, and The Nice Guys cemented his standing as one of his generation's most versatile leading men. His most recent film credit is The Pope's Exorcist (2023). He also made his directorial debut with The Water Diviner in 2014. Crowe likely crossed paths with Conan O'Brien as early as 1995, when he is believed to have first appeared on Late Night with Conan O'Brien.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Russell_Crowe"
     ],
-    "enrichedAt": "2026-09-09T21:58:13.393Z",
+    "enrichedAt": "2026-09-09T22:03:14.232Z",
     "birth_year": "1964",
     "death_year": "",
     "gender": "male",
@@ -43482,8 +43679,11 @@
     "prestige_signals": [
       "Academy Award winner",
       "BAFTA Award winner",
-      "Golden Globe winner",
-      "AACTA Award for Best Actor in a Leading Role"
+      "Golden Globe winner (two)",
+      "AACTA Award for Best Actor in a Leading Role",
+      "Academy Award for Best Actor (Gladiator)",
+      "Academy Award nominee (The Insider)",
+      "Academy Award nominee (A Beautiful Mind)"
     ],
     "primary_platform": "film",
     "upcoming_work": [
@@ -46159,22 +46359,55 @@
   },
   "Matt Walsh": {
     "entity": {
-      "name": "Matt Walsh",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Matt Walsh (basketball)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Matt_Walsh_(basketball)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "professional basketball player",
+      "sports executive"
+    ],
+    "known_for": [
+      {
+        "title": "Florida Gators basketball",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Miami Heat",
+        "type": "other",
+        "year": "2005"
+      },
+      {
+        "title": "New Jersey Nets",
+        "type": "other",
+        "year": "2006"
+      },
+      {
+        "title": "New Zealand Breakers (owner/CEO)",
+        "type": "other",
+        "year": "2018"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T21:59:01.505Z"
+    "description": "Matt Walsh is an American former professional basketball player who spent ten seasons competing in leagues across the world, including brief stints with the Miami Heat and New Jersey Nets before building a lengthy career in Europe, playing in Greece, Spain, France, Belgium, and Italy for clubs including Olympia Larissa, Bàsquet Manresa, ASVEL Lyon-Villeurbanne, and Virtus Bologna. A shooting guard and small forward, he played college basketball for the Florida Gators before retiring in 2015. He later became majority owner and CEO of the New Zealand Breakers. Given the timeline, Walsh likely crossed paths with Late Night with Conan O'Brien around 2002, during his college years at Florida.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Matt_Walsh_(basketball)"
+    ],
+    "enrichedAt": "2026-09-09T22:03:08.711Z",
+    "birth_year": "1982",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "sports",
+    "upcoming_work": []
   },
   "Anthony Bourdain": {
     "entity": {
@@ -46582,7 +46815,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T21:59:01.644Z"
+    "enrichedAt": "2026-09-09T22:04:01.209Z"
   },
   "Benjamin McKenzie": {
     "entity": {
@@ -49800,7 +50033,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:00:01.001Z"
+    "enrichedAt": "2026-09-09T22:04:00.309Z"
   },
   "Chris Eigeman": {
     "entity": {
@@ -50964,6 +51197,11 @@
         "year": "2017"
       },
       {
+        "title": "Love Starvation",
+        "type": "music",
+        "year": "2019"
+      },
+      {
         "title": "Psycho Beach Party",
         "type": "film",
         "year": "2000"
@@ -50981,19 +51219,19 @@
       "type": "direct",
       "evidence": "Wikipedia: \"In the late 1990s, Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program.\""
     },
-    "description": "Los Straitjackets are an American instrumental rock band formed in Nashville in 1988, known for their tight guitar work, elaborate live shows, and signature Mexican wrestling masks. Over fourteen studio albums, they have built a devoted cult following and become noted collaborators, working extensively with singer-songwriter Nick Lowe — most recently on the 2024 album Indoor Safari — and earning a Grammy nomination for their collaboration with blues singer Eddy Clearwater on Rock 'N' Roll City. Their new album Somos Los Straitjackets is set for release in September 2025. Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program during the late 1990s.",
+    "description": "Los Straitjackets are an American instrumental rock band formed in Nashville in 1988, known for their surf- and rockabilly-inflected sound, elaborate live shows, and the trademark Mexican wrestling masks their members wear onstage. Over fourteen studio albums, they have built a devoted cult following and earned a Grammy nomination for their collaboration with blues singer Eddy Clearwater on Rock 'N' Roll City. They are frequent collaborators with British singer-songwriter Nick Lowe, with whom they released Indoor Safari in 2024 and co-wrote the song 'Went to a Party.' A new album, Somos Los Straitjackets, is set for release in September 2025. In the late 1990s, Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Los_Straitjackets"
     ],
-    "enrichedAt": "2026-09-09T07:06:10.632Z",
+    "enrichedAt": "2026-09-09T22:04:11.111Z",
     "birth_year": "",
     "death_year": "",
     "gender": "",
     "nationality": "American",
     "prestige_signals": [
-      "Grammy nominee"
+      "Grammy nominated for Rock 'N' Roll City"
     ],
     "primary_platform": "music",
     "upcoming_work": [
@@ -51700,7 +51938,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:06:32.173Z"
+    "enrichedAt": "2026-09-09T22:04:00.896Z"
   },
   "James Woods": {
     "entity": {
@@ -56910,20 +57148,121 @@
     "entity": {
       "name": "Niecy Nash-Betts",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Niecy_Nash-Betts",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actress",
+      "television host",
+      "producer"
+    ],
+    "known_for": [
+      {
+        "title": "Boys on the Side",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Cookie's Fortune",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Reno 911!",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Clean House",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "The Soul Man",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "Getting On",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Selma",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Scream Queens",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Claws",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "When They See Us",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Mrs. America",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "Monster",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "Origin",
+        "type": "film",
+        "year": "2023"
+      },
+      {
+        "title": "Grotesquerie",
+        "type": "tv",
+        "year": "2024"
+      },
+      {
+        "title": "All's Fair",
+        "type": "tv",
+        "year": "2025"
+      }
+    ],
+    "recent_work": [
+      "Origin (2023)",
+      "Grotesquerie (2024)",
+      "All's Fair (2025–present)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan in 2015."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:11:02.329Z"
+    "description": "Niecy Nash-Betts is an American actress and producer whose career spans film, television, and hosting. She first gained wide recognition playing Deputy Raineesha Williams on Reno 911! and hosting the Style Network's Clean House, earning a Daytime Emmy for the latter. Subsequent dramatic work in Getting On brought two Primetime Emmy nominations, while her performance in the Netflix anthology series Monster won her a Primetime Emmy for Outstanding Supporting Actress. She has collaborated repeatedly with director Ava DuVernay on Selma, When They See Us, and Origin, and currently stars in the legal drama All's Fair. She likely first crossed paths with Conan O'Brien around 2015.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Niecy_Nash-Betts"
+    ],
+    "enrichedAt": "2026-09-09T22:04:13.081Z",
+    "birth_year": "1970",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "Daytime Emmy Award winner",
+      "Primetime Emmy Award nominee (Getting On, 2015 and 2016)",
+      "Primetime Emmy Award nominee (When They See Us)",
+      "Primetime Emmy Award winner for Outstanding Supporting Actress (Monster)",
+      "Golden Globe nominee",
+      "Screen Actors Guild Award nominee",
+      "Satellite Award winner"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Daniel Sloss": {
     "entity": {
@@ -57822,11 +58161,6 @@
         "year": "2020"
       },
       {
-        "title": "Zoey's Extraordinary Christmas",
-        "type": "tv",
-        "year": ""
-      },
-      {
         "title": "Grey's Anatomy",
         "type": "tv",
         "year": "2021"
@@ -57837,21 +58171,18 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Peter Gallagher is an American actor with a career spanning film, television, and Broadway since 1980. He is best known for playing Sandy Cohen in the Fox drama The O.C. and has held recurring roles on Law & Order: Special Victims Unit, Californication, Grace & Frankie, and Covert Affairs. His film credits include sex, lies, and videotape, The Player, While You Were Sleeping, American Beauty, and Palm Springs. On Broadway, he starred in the 1992 revival of Guys and Dolls and the 2015 revival of On the Twentieth Century. He also released the album 7 Days in Memphis in 2005. Gallagher likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993.",
+    "description": "Peter Gallagher is an American actor with a career spanning film, television, and Broadway since the early 1980s. He is best known for playing Sandy Cohen on the long-running Fox drama The O.C. and has built an extensive résumé of notable film roles in The Player, While You Were Sleeping, American Beauty, and Short Cuts, among others. On television he has recurred in Law & Order: Special Victims Unit, Californication, Covert Affairs, and Grace & Frankie. A accomplished stage performer, he starred in Broadway revivals of Guys and Dolls and On the Twentieth Century. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1993.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Peter_Gallagher"
     ],
-    "enrichedAt": "2026-09-09T07:11:31.952Z",
+    "enrichedAt": "2026-09-09T22:05:13.635Z",
     "birth_year": "1955",
     "death_year": "",
     "gender": "male",
     "nationality": "American",
-    "prestige_signals": [
-      "P.T. Barnum Award from Tufts University",
-      "Light on the Hill award from Tufts University"
-    ],
+    "prestige_signals": [],
     "primary_platform": "tv",
     "upcoming_work": [
       {
@@ -58288,22 +58619,95 @@
   },
   "Scott Thompson": {
     "entity": {
-      "name": "Scott Thompson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Scott Thompson (actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Scott_Thompson_(actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "comedian"
+    ],
+    "known_for": [
+      {
+        "title": "The Kids in the Hall",
+        "type": "tv",
+        "year": "1989"
+      },
+      {
+        "title": "The Larry Sanders Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Mouth Congress",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Buddy Babylon: The Autobiography of Buddy Cole",
+        "type": "other",
+        "year": "1998"
+      },
+      {
+        "title": "The Hollow Planet",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "My Fabulous Gay Wedding",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Death Comes to Town",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "Hannibal",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Reno 911!",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Mouth Congress",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Après le Déluge – The Buddy Cole Monologues",
+        "type": "other",
+        "year": "2018"
+      },
+      {
+        "title": "The Lowest Show on Earth",
+        "type": "other",
+        "year": "2001"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+      "type": "direct",
+      "evidence": "Wikipedia: \"made numerous guest appearances on other television series, including Politically Incorrect, The Late Show, Late Night with Conan O'Brien, and Train 48\""
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:12:11.684Z"
+    "description": "Scott Thompson is a Canadian actor and comedian best known as a member of the comedy troupe The Kids in the Hall, whose sketch comedy series ran on CBC and HBO beginning in 1989. On the show he became closely associated with his character Buddy Cole, a flamboyant socialite whose monologues became a signature element of the series. Thompson also had a recurring role as Brian on The Larry Sanders Show and later played FBI investigator Jimmy Price on NBC's Hannibal. He and collaborator Paul Bellini recorded and performed together in the queercore band Mouth Congress, which became the subject of a 2021 documentary film. Thompson appeared as a guest on Late Night with Conan O'Brien during the show's run.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Scott_Thompson_(actor)"
+    ],
+    "enrichedAt": "2026-09-09T22:05:11.968Z",
+    "birth_year": "1959",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "Canadian",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Jay Thomas": {
     "entity": {
@@ -60147,20 +60551,139 @@
     "entity": {
       "name": "D. B. Sweeney",
       "wikipedia_url": "https://en.wikipedia.org/wiki/D._B._Sweeney",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "voice actor",
+      "narrator"
+    ],
+    "known_for": [
+      {
+        "title": "Gardens of Stone",
+        "type": "film",
+        "year": "1987"
+      },
+      {
+        "title": "Eight Men Out",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Lonesome Dove",
+        "type": "tv",
+        "year": "1989"
+      },
+      {
+        "title": "Memphis Belle",
+        "type": "film",
+        "year": "1990"
+      },
+      {
+        "title": "The Cutting Edge",
+        "type": "film",
+        "year": "1992"
+      },
+      {
+        "title": "Fire in the Sky",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "Dinosaur",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Brother Bear",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "House",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "Jericho",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "Criminal Minds",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "Crash",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "The Event",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "The Closer",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Major Crimes",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Castle",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "The Legend of Korra",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "Two and a Half Men",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "The Resurrection of Gavin Stone",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Mountain Men",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Universal Dead",
+        "type": "tv",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:14:00.614Z"
+    "description": "D.B. Sweeney is an American actor and voice artist best known for a string of film roles in the late 1980s and early 1990s, including Shoeless Joe Jackson in Eight Men Out, Doug Dorsey in The Cutting Edge, and Travis Walton in Fire in the Sky. He has lent his voice to major animated projects, notably voicing Aladar in Disney's Dinosaur and adult Avatar Aang in The Legend of Korra. On television, he has appeared in House, Jericho, Castle, The Closer, and Major Crimes, and currently narrates the reality series Mountain Men. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1994, during the height of his film career.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/D._B._Sweeney"
+    ],
+    "enrichedAt": "2026-09-09T22:05:11.242Z",
+    "birth_year": "1961",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Boyd Matson": {
     "entity": {
@@ -62858,20 +63381,21 @@
       }
     ],
     "recent_work": [
-      "The Baxters (Amazon Prime Video, Spring 2024)",
-      "Be an Angel: Devotions to Inspire and Encourage Love and Light Along the Way (2023)"
+      "Be an Angel: Devotions to Inspire and Encourage Love and Light Along the Way (book, 2023)",
+      "The Baxters (Amazon Prime Video, 2024)",
+      "Merv (Amazon Prime, winter 2025)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Roma Downey is an Irish actress, producer, and author best known for playing Monica the angel in the long-running CBS series Touched by an Angel, a role that earned her two Emmy nominations and two Golden Globe nominations. She also portrayed Jacqueline Kennedy Onassis in the Emmy Award-winning miniseries A Woman Named Jackie. As president of Lightworkers Media, she and husband Mark Burnett produced major faith-based projects including The Bible miniseries, Ben-Hur, and Son of God. Her recent work includes starring in and producing The Baxters on Amazon Prime Video and the 2023 devotional book Be an Angel. She likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1995, during her Touched by an Angel years.",
+    "description": "Roma Downey is an Irish actress, producer, and author best known for playing Monica the angel in the long-running CBS series Touched by an Angel, a role that earned her two Emmy nominations and two Golden Globe nominations. She earlier portrayed Jacqueline Kennedy Onassis in the Emmy Award-winning miniseries A Woman Named Jackie. As president of Lightworkers Media, she has co-produced numerous faith-based projects with husband Mark Burnett, including The Bible miniseries and the film Ben-Hur. She stars in and produces the family drama The Baxters on Amazon Prime Video, and her book Be an Angel was released in 2023. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1995.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Roma_Downey"
     ],
-    "enrichedAt": "2026-09-09T07:16:17.356Z",
+    "enrichedAt": "2026-09-09T22:05:16.809Z",
     "birth_year": "1960",
     "death_year": "",
     "gender": "female",
@@ -62879,16 +63403,14 @@
     "prestige_signals": [
       "Emmy Award nominations (two) for Touched by an Angel",
       "Golden Globe nominations (two) for Touched by an Angel",
-      "Emmy Award-winning miniseries A Woman Named Jackie",
       "IFTA for Best Short Film (Rough, 2021)",
       "Hollywood Walk of Fame star (2016)",
       "Lifetime Achievement Award at the International Christian Film & Music Festival (2021)",
-      "Officer of the Order of the British Empire (OBE)",
+      "Officer of the Order of the British Empire (OBE, 2021)",
       "Variety '100 Most Powerful Women in Hollywood'",
       "The Hollywood Reporter 'Most Influential People of 2013'",
       "Variety 'Women of Impact' 2014",
-      "Sarasota Film Festival Lifetime Achievement Award",
-      "New York Times best-seller Box of Butterflies"
+      "Sarasota Film Festival Lifetime Achievement Award"
     ],
     "primary_platform": "tv",
     "upcoming_work": [
@@ -63515,7 +64037,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:17:00.455Z"
+    "enrichedAt": "2026-09-09T22:05:11.820Z"
   },
   "David Blaine": {
     "entity": {
@@ -63985,7 +64507,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:17:12.689Z"
+    "enrichedAt": "2026-09-09T22:06:02.066Z"
   },
   "Jake Johannsen": {
     "entity": {
@@ -64311,7 +64833,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:18:00.774Z"
+    "enrichedAt": "2026-09-09T22:06:00.527Z"
   },
   "George Stephanopoulos": {
     "entity": {
@@ -64775,18 +65297,155 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Rebecca_Romijn",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actress",
+      "model",
+      "television host"
+    ],
+    "known_for": [
+      {
+        "title": "X-Men",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "X2",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "X-Men: The Last Stand",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "X-Men: First Class",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Femme Fatale",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Rollerball",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "The Punisher",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Godsend",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Ugly Betty",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "Pepper Dennis",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Carpoolers",
+        "type": "tv",
+        "year": "2007"
+      },
+      {
+        "title": "Eastwick",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "NTSF:SD:SUV::",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "King & Maxwell",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "The Librarians",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Skin Wars",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Star Trek: Discovery",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Star Trek: Strange New Worlds",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "DC Animated Movie Universe (Lois Lane)",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "MTV's House of Style",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "Electro Goth Tribute to Prince",
+        "type": "music",
+        "year": "2005"
+      },
+      {
+        "title": "Realness",
+        "type": "music",
+        "year": "2015"
+      },
+      {
+        "title": "Space Ghost Coast to Coast",
+        "type": "tv",
+        "year": ""
+      }
+    ],
+    "recent_work": [
+      "Star Trek: Strange New Worlds (2022–present)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "",
+    "description": "Rebecca Romijn is an American actress and former model best known for playing Mystique in the X-Men film series and Una Chin-Riley in Star Trek: Strange New Worlds, a role she continues to hold. A former host of MTV's House of Style, she has built a wide-ranging television résumé that includes recurring roles on Ugly Betty, The Librarians, and the reality competition Skin Wars. She has also voiced Lois Lane in the DC Animated Movie Universe and contributed to music projects including a cover of Prince's 'Darling Nikki.' She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1998, early in her entertainment career.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:18:14.960Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rebecca_Romijn"
+    ],
+    "enrichedAt": "2026-09-09T22:06:12.445Z",
+    "birth_year": "1972",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": [
+      {
+        "title": "X-Men film series",
+        "type": "film",
+        "year": "2026"
+      }
+    ]
   },
   "Sam Donaldson": {
     "entity": {
@@ -66834,7 +67493,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:20:12.280Z"
+    "enrichedAt": "2026-09-09T22:06:00.948Z"
   },
   "Katie Holmes": {
     "entity": {
@@ -71780,7 +72439,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:24:12.763Z"
+    "enrichedAt": "2026-09-09T22:06:00.778Z"
   },
   "Blake Anderson": {
     "entity": {
@@ -72319,9 +72978,9 @@
   },
   "Dr. Phil": {
     "entity": {
-      "name": "Phil McGraw",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Phil_McGraw",
-      "confidence": 0.6499999999999999
+      "name": "Dr. Phil",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -72331,10 +72990,10 @@
       "evidence": "First appeared on Conan in 2014."
     },
     "description": "",
-    "confidence": 0.6499999999999999,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:25:01.118Z"
+    "enrichedAt": "2026-09-09T22:07:00.926Z"
   },
   "Conor McGregor": {
     "entity": {
@@ -74856,7 +75515,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:27:20.254Z"
+    "enrichedAt": "2026-09-09T22:07:00.911Z"
   },
   "Montel Williams": {
     "entity": {
@@ -75358,22 +76017,68 @@
   },
   "Anthony Edwards": {
     "entity": {
-      "name": "Anthony Edwards",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Anthony David Edwards",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Anthony_David_Edwards",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "Paediatrician",
+      "Neuroscientist",
+      "Professor",
+      "Neonatologist"
+    ],
+    "known_for": [
+      {
+        "title": "Therapeutic hypothermia for birth asphyxia",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Developing Human Connectome Project",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Neonatal MRI development",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Neonatal Neural Rescue (book)",
+        "type": "other",
+        "year": ""
+      }
+    ],
+    "recent_work": [
+      "James Spence Medal recipient, Royal College of Paediatrics and Child Health (2023)",
+      "Honorary Member, Neonatal Society (2023)",
+      "Member of the Order of the British Empire (2024)",
+      "Invited to give oral evidence to the House of Lords Committee on Preterm Birth (2024)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:28:00.189Z"
+    "description": "Anthony Edwards MBE is a British paediatrician and neuroscientist specialising in neonatal medicine and brain development. He serves as Professor of Paediatrics and Neonatal Medicine and Director of the Centre for the Developing Brain at King's College London, and as Consultant Neonatologist at Guy's and St Thomas' NHS Foundation Trust. He is recognised for pioneering therapeutic hypothermia as a treatment for birth asphyxia and for advancing neonatal MRI, and he led the Developing Human Connectome Project. His honours include the James Spence Medal and the Arvo Ylppo Prize. He likely crossed paths with Conan O'Brien's world first appearing on Late Night with Conan O'Brien around 1994.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Anthony_David_Edwards"
+    ],
+    "enrichedAt": "2026-09-09T22:07:10.136Z",
+    "birth_year": "1954",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "British",
+    "prestige_signals": [
+      "Member of the Order of the British Empire (MBE)",
+      "James Spence Medal, Royal College of Paediatrics and Child Health",
+      "Arvo Ylppo Prize, Finnish Academy",
+      "Fellow of Academy of Medical Sciences",
+      "National Institute for Health Research Senior Investigator"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Larry Miller": {
     "entity": {
@@ -75392,7 +76097,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:28:00.531Z"
+    "enrichedAt": "2026-09-09T22:07:00.958Z"
   },
   "Ruth Westheimer": {
     "entity": {
@@ -76182,7 +76887,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:29:08.953Z"
+    "enrichedAt": "2026-09-09T22:08:01.034Z"
   },
   "Alan King": {
     "entity": {
@@ -76306,7 +77011,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:29:11.313Z"
+    "enrichedAt": "2026-09-09T22:08:01.231Z"
   },
   "Marcia Cross": {
     "entity": {
@@ -76990,22 +77695,42 @@
   },
   "Brian Regan": {
     "entity": {
-      "name": "Brian Regan",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Brian Patrick Regan",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Brian_Patrick_Regan",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "convicted spy",
+      "former intelligence officer",
+      "former United States Air Force master sergeant",
+      "signals intelligence specialist"
+    ],
+    "known_for": [
+      {
+        "title": "Brian Regan espionage case (\"the spy who couldn't spell\")",
+        "type": "other",
+        "year": "2003"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:30:00.787Z"
+    "description": "Brian Regan is an American convicted spy and former United States Air Force master sergeant who served as a signals intelligence specialist at the National Reconnaissance Office. Sentenced to life without parole after being convicted on two counts of attempted espionage, he became known in media coverage as 'the spy who couldn't spell,' a reference to the severe dyslexia that contributed to his identification and capture. He is currently imprisoned at Federal Correctional Institution, Cumberland in Maryland. Given the significant overlap in timelines, Brian Regan likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1997, though the two men's careers have taken markedly different trajectories since.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Brian_Patrick_Regan"
+    ],
+    "enrichedAt": "2026-09-09T22:08:09.351Z",
+    "birth_year": "1962",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Thane Maynard": {
     "entity": {
@@ -77578,7 +78303,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:30:23.772Z"
+    "enrichedAt": "2026-09-09T22:08:00.651Z"
   },
   "Bill Murray": {
     "entity": {
@@ -81895,7 +82620,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:34:00.548Z"
+    "enrichedAt": "2026-09-09T22:08:00.899Z"
   },
   "Piper Perabo": {
     "entity": {
@@ -82137,7 +82862,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:34:10.817Z"
+    "enrichedAt": "2026-09-09T22:09:00.915Z"
   },
   "Michael Imperioli": {
     "entity": {
@@ -85191,7 +85916,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:37:00.717Z"
+    "enrichedAt": "2026-09-09T22:09:01.028Z"
   },
   "Ron Reagan": {
     "entity": {
@@ -86229,7 +86954,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:38:08.813Z"
+    "enrichedAt": "2026-09-09T22:09:00.801Z"
   },
   "Adam West": {
     "entity": {
@@ -87336,7 +88061,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:39:11.225Z"
+    "enrichedAt": "2026-09-09T22:09:00.861Z"
   },
   "Sandra Bernhard": {
     "entity": {
@@ -91200,18 +91925,88 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Rudy_Giuliani",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "politician",
+      "lawyer"
+    ],
+    "known_for": [
+      {
+        "title": "Mayor of New York City (108th)",
+        "type": "other",
+        "year": "1994"
+      },
+      {
+        "title": "U.S. Associate Attorney General",
+        "type": "other",
+        "year": "1981"
+      },
+      {
+        "title": "U.S. Attorney for the Southern District of New York",
+        "type": "other",
+        "year": "1983"
+      },
+      {
+        "title": "Federal prosecution of New York City mafia bosses",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Time Person of the Year 2001",
+        "type": "other",
+        "year": "2001"
+      },
+      {
+        "title": "Giuliani Partners",
+        "type": "other",
+        "year": "2002"
+      },
+      {
+        "title": "Bracewell & Giuliani",
+        "type": "other",
+        "year": "2005"
+      },
+      {
+        "title": "Trump personal legal team",
+        "type": "other",
+        "year": "2018"
+      },
+      {
+        "title": "Trump–Ukraine scandal",
+        "type": "other",
+        "year": "2019"
+      },
+      {
+        "title": "January 6 United States Capitol attack rally speech",
+        "type": "other",
+        "year": "2021"
+      }
+    ],
+    "recent_work": [
+      "Indicted in Georgia prosecution related to the 2020 election (August 2023)",
+      "Lost $148-million defamation lawsuit for false claims about Georgia election workers (2023)",
+      "Unsuccessfully attempted to declare bankruptcy; later reached settlement to pay damages (2023)",
+      "Indicted on charges related to the 2020 election in Arizona (April 2024)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "",
+    "description": "Rudolph Giuliani is an American politician and disbarred lawyer who served as the 108th mayor of New York City from 1994 to 2001, previously holding roles as U.S. Associate Attorney General and U.S. Attorney for the Southern District of New York, where he led the federal prosecution of New York City mafia bosses. Named Time Person of the Year in 2001 for his leadership following the September 11 attacks, he later became a central figure in efforts to overturn the 2020 presidential election, resulting in a $148-million defamation judgment, criminal indictments in Georgia and Arizona, and disbarment in New York and Washington, D.C. He likely crossed paths with Conan O'Brien on Late Night around 2000.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:42:19.310Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rudy_Giuliani"
+    ],
+    "enrichedAt": "2026-09-09T22:10:15.592Z",
+    "birth_year": "1944",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Time Person of the Year 2001"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Andy Blitz": {
     "entity": {
@@ -94473,7 +95268,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:45:16.050Z"
+    "enrichedAt": "2026-09-09T22:10:01.691Z"
   },
   "Uma Thurman": {
     "entity": {
@@ -94651,18 +95446,126 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Nick_Di_Paolo",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "stand-up comedian",
+      "writer",
+      "actor",
+      "radio personality",
+      "podcast host"
+    ],
+    "known_for": [
+      {
+        "title": "Tough Crowd with Colin Quinn",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Comedy Central Roast of Pamela Anderson",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Comedy Central Roast of Denis Leary",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Comedy Central Roast of Jeff Foxworthy",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Comedy Central Roast of Larry the Cable Guy",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Chris Rock Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Opie and Anthony",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "The Howard Stern Show",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Louie",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Grace Under Fire",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "World's Dumbest...",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Horace and Pete",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Nick Di Paolo Show",
+        "type": "podcast",
+        "year": ""
+      },
+      {
+        "title": "Born This Way",
+        "type": "other",
+        "year": "1999"
+      },
+      {
+        "title": "Road Rage",
+        "type": "other",
+        "year": "2004"
+      },
+      {
+        "title": "Shorties Watchin' Shorties",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Lucky Louie",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Artie Lange's Beer League",
+        "type": "film",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "",
+    "description": "Nick DiPaolo is an American stand-up comedian, writer, actor, radio personality, and podcast host best known for his regular appearances on Tough Crowd with Colin Quinn, multiple Comedy Central Roasts, The Chris Rock Show, The Howard Stern Show, and Opie and Anthony. He has held recurring television roles on Louie, Grace Under Fire, World's Dumbest..., and Horace and Pete, and earned two Emmy nominations, including one for his writing work on The Chris Rock Show. He currently hosts The Nick Di Paolo Show podcast. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien around 2005.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:45:17.711Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Nick_Di_Paolo"
+    ],
+    "enrichedAt": "2026-09-09T22:10:11.869Z",
+    "birth_year": "1962",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Emmy Award nominee (Outstanding Writing for a Variety, Music, or Comedy Program)"
+    ],
+    "primary_platform": "podcast",
+    "upcoming_work": []
   },
   "Tiger Woods": {
     "entity": {
@@ -94934,11 +95837,6 @@
         "year": "2002"
       },
       {
-        "title": "Stuck on You",
-        "type": "film",
-        "year": "2003"
-      },
-      {
         "title": "The Life of David Gale",
         "type": "film",
         "year": "2003"
@@ -95011,20 +95909,19 @@
     ],
     "recent_work": [
       "Hounds of War (2023)",
-      "Prisoners of Paradise (2023)",
-      "Ben Fogle: New Lives in the Wild (2023)"
+      "Prisoners of Paradise (2023)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "Rhona Mitra is a British actress with a career spanning film and television over more than two decades. She is perhaps best known for playing Sonja in Underworld: Rise of the Lycans, Major Eden Sinclair in the sci-fi action film Doomsday, and for recurring television roles in The Practice, Boston Legal, Strike Back, and The Last Ship. Earlier in her career she also released two studio albums produced by Dave Stewart. More recently she appeared in Hounds of War and Prisoners of Paradise in 2023, with the TNT miniseries Debriefing the President and the fantasy film Red Sonja among her forthcoming projects. She likely crossed paths with Conan O'Brien during a Late Night appearance around 2004.",
+    "description": "Rhona Mitra is a British actress with a career spanning film and television since the late 1990s. She is perhaps best known for leading the sci-fi action film Doomsday, playing Sonja in Underworld: Rise of the Lycans, and starring in the television series Strike Back, The Last Ship, and Boston Legal. Her recent credits include the films Hounds of War and Prisoners of Paradise, both from 2023, and she has several projects in the pipeline including the TNT miniseries Debriefing the President and the fantasy film Red Sonja. She likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2004.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Rhona_Mitra"
     ],
-    "enrichedAt": "2026-09-09T07:45:31.187Z",
+    "enrichedAt": "2026-09-09T22:10:14.368Z",
     "birth_year": "1976",
     "death_year": "",
     "gender": "female",
@@ -95037,7 +95934,7 @@
       {
         "title": "Debriefing the President",
         "type": "tv",
-        "year": "2025"
+        "year": ""
       },
       {
         "title": "Red Sonja",
@@ -96514,49 +97411,124 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
     },
-    "description": "Ashley Tisdale is an American actress, singer, and producer who first rose to mainstream attention as Maddie Fitzpatrick in the Disney Channel sitcom The Suite Life of Zack & Cody and cemented her profile as Sharpay Evans in the High School Musical film series. Her debut album Headstrong earned RIAA gold certification, and she has lent her voice to the long-running animated series Phineas and Ferb since 2007. Her production company Blondie Girl Productions has overseen projects including Young & Hungry. She likely crossed paths with Conan O'Brien during a first appearance on Late Night with Conan O'Brien in 2007, at the height of her early Disney success.",
+    "description": "Ashley Tisdale is an American actress, singer, and producer who first found mainstream success as Maddie Fitzpatrick in the Disney Channel sitcom The Suite Life of Zack & Cody and cemented her star status playing Sharpay Evans in the High School Musical film series. Her debut album Headstrong earned RIAA gold certification, and she has continued recording, releasing her third studio album Symptoms in 2019. Her television work spans comedy, reality, and animation, including voicing Candace Flynn on Phineas and Ferb and serving as a panelist on The Masked Dancer. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 2007.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Ashley_Tisdale"
     ],
-    "enrichedAt": "2026-09-09T07:46:36.485Z",
+    "enrichedAt": "2026-09-09T22:10:14.011Z",
     "birth_year": "1985",
     "death_year": "",
     "gender": "female",
     "nationality": "American",
     "prestige_signals": [
-      "Nickelodeon UK Kids' Choice Awards winner",
-      "2000 Young Artist Award nomination for Best Guest Performance in a TV Drama",
-      "RIAA gold certification for Headstrong"
+      "RIAA gold certification (Headstrong)",
+      "Young Artist Award nomination (2000)"
     ],
     "primary_platform": "tv",
-    "upcoming_work": [
-      {
-        "title": "Phineas and Ferb",
-        "type": "tv",
-        "year": "2025"
-      }
-    ]
+    "upcoming_work": []
   },
   "AJ Jacobs": {
     "entity": {
       "name": "A. J. Jacobs",
       "wikipedia_url": "https://en.wikipedia.org/wiki/A._J._Jacobs",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "journalist",
+      "author",
+      "lecturer",
+      "editor"
+    ],
+    "known_for": [
+      {
+        "title": "The Know-It-All: One Man's Humble Quest to Become the Smartest Person in the World",
+        "type": "other",
+        "year": "2004"
+      },
+      {
+        "title": "My Outsourced Life",
+        "type": "other",
+        "year": "2005"
+      },
+      {
+        "title": "I Think You're Fat",
+        "type": "other",
+        "year": "2007"
+      },
+      {
+        "title": "The Year of Living Biblically: One Man's Humble Quest to Follow the Bible as Literally as Possible",
+        "type": "other",
+        "year": "2007"
+      },
+      {
+        "title": "Living Biblically",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "The Guinea Pig Diaries: My Life as an Experiment",
+        "type": "other",
+        "year": "2009"
+      },
+      {
+        "title": "The Two Kings: Elvis and Jesus",
+        "type": "other",
+        "year": "1994"
+      },
+      {
+        "title": "America Off-Line",
+        "type": "other",
+        "year": "1996"
+      },
+      {
+        "title": "Drop Dead Healthy: One Man's Humble Quest for Bodily Perfection",
+        "type": "other",
+        "year": "2012"
+      },
+      {
+        "title": "It's All Relative",
+        "type": "other",
+        "year": "2017"
+      },
+      {
+        "title": "Twice Removed",
+        "type": "podcast",
+        "year": "2016"
+      },
+      {
+        "title": "The Puzzler",
+        "type": "other",
+        "year": "2022"
+      },
+      {
+        "title": "The Puzzler with A.J. Jacobs",
+        "type": "podcast",
+        "year": "2023"
+      }
+    ],
+    "recent_work": [
+      "The Puzzler with A.J. Jacobs (podcast, 2023)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:47:00.978Z"
+    "description": "A.J. Jacobs is an American journalist, author, and lecturer known for immersion journalism in which he adopts extreme lifestyles and documents the results. His books include The Know-It-All, The Year of Living Biblically — which spent eleven weeks on the New York Times bestseller list and spawned a CBS television series — and Drop Dead Healthy. He serves as editor at large for Esquire and has hosted the genealogy podcast Twice Removed. His most recent project, The Puzzler with A.J. Jacobs, launched as a daily podcast in 2023. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 2007.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/A._J._Jacobs"
+    ],
+    "enrichedAt": "2026-09-09T22:11:12.248Z",
+    "birth_year": "1968",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Chris Tucker": {
     "entity": {
@@ -101468,7 +102440,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T07:51:12.586Z"
+    "enrichedAt": "2026-09-09T22:11:01.675Z"
   },
   "Ginnifer Goodwin": {
     "entity": {
@@ -102738,22 +103710,122 @@
   },
   "Kevin Connolly": {
     "entity": {
-      "name": "Kevin Connolly",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Kevin Connolly (actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kevin_Connolly_(actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "director"
+    ],
+    "known_for": [
+      {
+        "title": "Entourage",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Unhappily Ever After",
+        "type": "tv",
+        "year": "1995"
+      },
+      {
+        "title": "Gardener of Eden",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Dear Eleanor",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Gotti",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Rocky V",
+        "type": "film",
+        "year": "1990"
+      },
+      {
+        "title": "Alan & Naomi",
+        "type": "film",
+        "year": "1992"
+      },
+      {
+        "title": "Great Scott!",
+        "type": "tv",
+        "year": "1992"
+      },
+      {
+        "title": "The Beverly Hillbillies",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Don's Plum",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Antwone Fisher",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Secretariat",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "John Q.",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "The Notebook",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "He's Just Not That Into You",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Big Shot",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Entourage",
+        "type": "film",
+        "year": "2015"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T07:52:21.023Z"
+    "description": "Kevin Connolly is an American actor and director best known for playing Eric Murphy on HBO's long-running series Entourage, a role that earned him a Golden Globe nomination for Best Actor in a Television Series Musical or Comedy in 2009. He also starred in the 1990s sitcom Unhappily Ever After and has appeared in films including The Notebook, He's Just Not That Into You, and Antwone Fisher. Behind the camera, he has directed television episodes and feature films including Gardener of Eden, the documentary Big Shot, and Gotti. He likely crossed paths with Conan O'Brien when he first appeared on The Tonight Show with Conan O'Brien in 2009.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kevin_Connolly_(actor)"
+    ],
+    "enrichedAt": "2026-09-09T22:11:11.614Z",
+    "birth_year": "1974",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Golden Globe Award nominee for Best Actor – Television Series Musical or Comedy"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Kobe Bryant": {
     "entity": {
