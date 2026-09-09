@@ -142,6 +142,16 @@ export default function RoundupPage() {
     }
   }
 
+  // Fixed label order for both charts, passed down so a category's color is
+  // tied to the category itself, not to its rank in a given filter view —
+  // confirmed as a real issue: Profession's segments were colored by
+  // sorted-by-count order, so deselecting an era could reshuffle which
+  // category was "biggest" and swap two categories' colors out from under
+  // the legend. "Other" is appended since it's PROFESSION_BUCKETS' implicit
+  // fallback bucket, not one of its own entries.
+  const professionCategoryOrder = [...PROFESSION_BUCKETS.map(([label]) => label), "Other"];
+  const generationCategoryOrder = GENERATION_BUCKETS.map(([label]) => label);
+
   return (
     <RoundupClient
       eras={ROUNDUP_ERAS}
@@ -151,8 +161,10 @@ export default function RoundupPage() {
       crossover={crossover}
       professionCounts={professionCounts}
       professionEnrichedTotal={professionEnrichedTotal}
+      professionCategoryOrder={professionCategoryOrder}
       generationCounts={generationCounts}
       generationEnrichedTotal={generationEnrichedTotal}
+      generationCategoryOrder={generationCategoryOrder}
     />
   );
 }
