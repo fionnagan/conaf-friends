@@ -158,9 +158,32 @@ async function main() {
         continue;
       }
 
+      // death_year is the highest-stakes field this script writes — wrongly
+      // marking a living person as deceased is about as bad an accuracy
+      // failure as this pipeline can produce. Confirmed via a real A/B test
+      // of enrich-bios.ts against claude-haiku-4-5-20251001: it fabricated a
+      // death_year for 4 of 5 real, living guests, misreading an unrelated
+      // in-text year (most often a career-span end-year) as a death date —
+      // this script uses the same kind of extraction call, so the same
+      // failure mode is possible here regardless of model. A death_year
+      // with no birth_year, one that isn't strictly after birth_year, or
+      // one in the future is never a real fact pattern — drop it and flag
+      // for review rather than write it as fact.
+      const birthYear = signals.birth_year || '';
+      let deathYear = signals.death_year || '';
+      if (deathYear) {
+        const death = parseInt(deathYear);
+        const birth = parseInt(birthYear);
+        const implausible = !birthYear || death <= birth || death > new Date().getFullYear();
+        if (implausible) {
+          console.log(`\n  [warn] dropping implausible death_year "${deathYear}" (birth_year: "${birthYear || 'none'}") — needs manual review`);
+          deathYear = '';
+        }
+      }
+
       const bio = bios[guest.name];
-      bio.birth_year = signals.birth_year || '';
-      bio.death_year = signals.death_year || '';
+      bio.birth_year = birthYear;
+      bio.death_year = deathYear;
       bio.gender = signals.gender || '';
       bio.nationality = signals.nationality || '';
       bio.prestige_signals = signals.prestige_signals || [];
