@@ -35,6 +35,10 @@ on:
         description: "Claude model to use (leave blank for the pipeline's default, claude-sonnet-4-6). Set to e.g. claude-haiku-4-5-20251001 to A/B test a cheaper model on real guests before committing to it as the default."
         required: false
         default: ""
+      retryReview:
+        description: "Also re-attempt guests already flagged needs_review (set true after an entity-resolution/validation fix, to re-run it against previously-rejected guests instead of only ever-untouched ones)"
+        required: false
+        default: "false"
 
 # Only one Wikipedia-touching workflow runs at a time — a second trigger
 # queues behind whichever one is already running instead of both hitting
@@ -79,6 +83,7 @@ jobs:
           # class entirely.
           INPUT_LIMIT: ${{ github.event.inputs.limit }}
           INPUT_MODEL: ${{ github.event.inputs.model }}
+          INPUT_RETRY_REVIEW: ${{ github.event.inputs.retryReview }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -118,13 +123,22 @@ jobs:
             # ran all the way to $TOTAL even once the backlog was genuinely
             # exhausted. Skipping patch/emit/commit entirely on exit 2 is what
             # actually stops it early, and avoids the pointless diff too.
-            ENRICH_EXIT=0
+            ENRICH_ARGS=(--new-only --concurrency 4 --limit "$THIS_CHUNK")
             if [ -n "$MODEL" ]; then
               echo "=== Using model override: $MODEL ==="
-              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK" --model "$MODEL" || ENRICH_EXIT=$?
-            else
-              SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts --new-only --concurrency 4 --limit "$THIS_CHUNK" || ENRICH_EXIT=$?
+              ENRICH_ARGS+=(--model "$MODEL")
             fi
+            if [ "$INPUT_RETRY_REVIEW" = "true" ]; then
+              # Safe to combine with --new-only: shouldEnqueueGuest() checks
+              # needs_review before newOnly, so this re-attempts only the
+              # needs_review backlog — it does NOT also re-open the 30-day
+              # TTL re-enrichment risk --new-only exists to block for
+              # already-clean guests.
+              ENRICH_ARGS+=(--retry-review)
+            fi
+
+            ENRICH_EXIT=0
+            SKIP_CLAUDE_SMOKE_TEST="$SKIP_SMOKE_TEST" npx tsx scripts/ingest/enrich-bios.ts "${ENRICH_ARGS[@]}" || ENRICH_EXIT=$?
             SKIP_SMOKE_TEST="1"
 
             if [ "$ENRICH_EXIT" -eq 2 ]; then
