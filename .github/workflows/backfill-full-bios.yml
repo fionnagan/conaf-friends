@@ -38,7 +38,8 @@ on:
       retryReview:
         description: "Also re-attempt guests already flagged needs_review (set true after an entity-resolution/validation fix, to re-run it against previously-rejected guests instead of only ever-untouched ones)"
         required: false
-        default: "false"
+        type: boolean
+        default: false
 
 # Only one Wikipedia-touching workflow runs at a time — a second trigger
 # queues behind whichever one is already running instead of both hitting
@@ -128,7 +129,16 @@ jobs:
               echo "=== Using model override: $MODEL ==="
               ENRICH_ARGS+=(--model "$MODEL")
             fi
-            if [ "$INPUT_RETRY_REVIEW" = "true" ]; then
+            # Case-insensitive: a real, reproduced failure — a workflow_dispatch
+            # boolean input without `type: boolean` came through as the
+            # capitalized Python/YAML-style "True" (not "true") when this
+            # workflow was triggered via the API, which this case-sensitive
+            # check silently failed, so --retry-review never got added and the
+            # run behaved as if it were false. `type: boolean` on the input
+            # itself is the real fix (GitHub then always sends lowercase
+            # "true"/"false" regardless of trigger source) — this
+            # case-insensitive check is defense-in-depth on top of that.
+            if [ "${INPUT_RETRY_REVIEW,,}" = "true" ]; then
               # Safe to combine with --new-only: shouldEnqueueGuest() checks
               # needs_review before newOnly, so this re-attempts only the
               # needs_review backlog — it does NOT also re-open the 30-day
