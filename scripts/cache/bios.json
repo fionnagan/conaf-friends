@@ -6007,7 +6007,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:50:00.707Z"
+    "enrichedAt": "2026-09-09T22:58:20.407Z"
   },
   "David Cross": {
     "entity": {
@@ -15388,7 +15388,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:50:01.271Z"
+    "enrichedAt": "2026-09-09T22:59:01.200Z"
   },
   "Hilary Swank": {
     "entity": {
@@ -17319,7 +17319,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:50:00.701Z"
+    "enrichedAt": "2026-09-09T22:58:20.408Z"
   },
   "D'Arcy Carden": {
     "entity": {
@@ -20281,7 +20281,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:50:01.285Z"
+    "enrichedAt": "2026-09-09T22:59:01.168Z"
   },
   "Greg Fitzsimmons": {
     "entity": {
@@ -28843,7 +28843,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:51:00.757Z"
+    "enrichedAt": "2026-09-09T22:59:01.314Z"
   },
   "Martha Stewart": {
     "entity": {
@@ -29222,22 +29222,249 @@
   },
   "Samuel L Jackson": {
     "entity": {
-      "name": "Samuel L Jackson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Samuel L. Jackson",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Samuel_L._Jackson",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actor",
+      "film producer"
+    ],
+    "known_for": [
+      {
+        "title": "Mother Courage and Her Children",
+        "type": "other",
+        "year": "1980"
+      },
+      {
+        "title": "A Soldier's Play",
+        "type": "other",
+        "year": "1981"
+      },
+      {
+        "title": "The Piano Lesson",
+        "type": "other",
+        "year": "1987"
+      },
+      {
+        "title": "The Mountaintop",
+        "type": "other",
+        "year": "2011"
+      },
+      {
+        "title": "The Piano Lesson (Broadway revival)",
+        "type": "other",
+        "year": "2022"
+      },
+      {
+        "title": "School Daze",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Coming to America",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Do the Right Thing",
+        "type": "film",
+        "year": "1989"
+      },
+      {
+        "title": "Mo' Better Blues",
+        "type": "film",
+        "year": "1990"
+      },
+      {
+        "title": "Jungle Fever",
+        "type": "film",
+        "year": "1991"
+      },
+      {
+        "title": "Juice",
+        "type": "film",
+        "year": "1992"
+      },
+      {
+        "title": "True Romance",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "Jurassic Park",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "Menace II Society",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "Fresh",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "Pulp Fiction",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "Die Hard with a Vengeance",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "A Time to Kill",
+        "type": "film",
+        "year": "1996"
+      },
+      {
+        "title": "Jackie Brown",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Unbreakable",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Shaft",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "XXX",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Kill Bill: Volume 2",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "The Incredibles",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Coach Carter",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Snakes on a Plane",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Iron Man",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Django Unchained",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Oldboy",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Agents of S.H.I.E.L.D.",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Kingsman: The Secret Service",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "The Hateful Eight",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Chi-Raq",
+        "type": "film",
+        "year": "2015"
+      },
+      {
+        "title": "Kong: Skull Island",
+        "type": "film",
+        "year": "2017"
+      },
+      {
+        "title": "Incredibles 2",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Shaft (reboot)",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "Glass",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "What If...?",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Secret Invasion",
+        "type": "tv",
+        "year": "2023"
+      },
+      {
+        "title": "Star Wars prequel trilogy",
+        "type": "film",
+        "year": "1999"
+      }
+    ],
+    "recent_work": [
+      "Secret Invasion (2023)",
+      "What If...? (2021–2024)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "",
-    "confidence": 0,
+    "description": "Samuel L. Jackson is an American actor and film producer whose career spans theater, film, and television across more than four decades. He broke through with Quentin Tarantino's Pulp Fiction, winning the BAFTA for Best Supporting Actor, and has since appeared in dozens of major productions including the Star Wars prequel trilogy, eleven Marvel Cinematic Universe films as Nick Fury, and the Disney+ series Secret Invasion. A 2022 Academy Honorary Award recipient, he is recognized as the highest-grossing actor of all time. Jackson likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1996, around the time of A Time to Kill.",
+    "confidence": 1,
     "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T22:50:00.958Z"
+    "sources": [
+      "https://en.wikipedia.org/wiki/Samuel_L._Jackson"
+    ],
+    "enrichedAt": "2026-09-09T22:59:20.140Z",
+    "birth_year": "1948",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Academy Honorary Award (2022)",
+      "BAFTA Award for Best Actor in a Supporting Role winner (Pulp Fiction)",
+      "Academy Award for Best Supporting Actor nominee (Pulp Fiction)",
+      "Tony Award for Best Featured Actor in a Play nominee (The Piano Lesson, 2022)"
+    ],
+    "primary_platform": "film",
+    "upcoming_work": [
+      {
+        "title": "Highest 2 Lowest",
+        "type": "film",
+        "year": "2025"
+      }
+    ]
   },
   "Bob Costas": {
     "entity": {
@@ -35470,7 +35697,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:51:00.904Z"
+    "enrichedAt": "2026-09-09T23:00:01.218Z"
   },
   "James Spader": {
     "entity": {
@@ -43160,22 +43387,52 @@
   },
   "Kevin Brennan": {
     "entity": {
-      "name": "Kevin Brennan",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Kevin Brennan, Baron Brennan of Canton",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kevin_Brennan%2C_Baron_Brennan_of_Canton",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "politician"
+    ],
+    "known_for": [
+      {
+        "title": "Member of Parliament for Cardiff West",
+        "type": "other",
+        "year": "2001"
+      },
+      {
+        "title": "Minister of State for Further Education, Skills, Apprenticeships and Consumer Affairs",
+        "type": "other",
+        "year": "2009"
+      },
+      {
+        "title": "Shadow Minister for Victims and Sentencing",
+        "type": "other",
+        "year": "2023"
+      }
+    ],
+    "recent_work": [
+      "Shadow Minister for Victims and Sentencing (2023–2024)",
+      "Appointed to the House of Lords (2025)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T22:51:00.593Z"
+    "description": "Kevin Brennan is a Welsh Labour politician who served as Member of Parliament for Cardiff West from 2001 to 2024, one of the longer continuous tenures in the constituency's recent history. During his parliamentary career he held ministerial office under Gordon Brown, including as Minister of State for Further Education, Skills, Apprenticeships and Consumer Affairs, and later served in various shadow ministerial roles, most recently as Shadow Minister for Victims and Sentencing from 2023 until his retirement at the 2024 general election. He was subsequently elevated to the House of Lords in 2025. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1995.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kevin_Brennan%2C_Baron_Brennan_of_Canton"
+    ],
+    "enrichedAt": "2026-09-09T23:00:09.232Z",
+    "birth_year": "1959",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "Welsh",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Steve Irwin": {
     "entity": {
@@ -43511,21 +43768,22 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Russell Crowe is a New Zealand-born actor and film director whose career spans more than three decades of prominent Hollywood and international productions. An Academy Award, BAFTA, and two Golden Globe winner, he broke through internationally with L.A. Confidential and The Insider before winning the Oscar for Best Actor for Gladiator and earning a further nomination for A Beautiful Mind. His long filmography includes American Gangster, Les Misérables, The Nice Guys, and The Pope's Exorcist, with the period drama Nuremberg among his forthcoming releases. He likely crossed paths with Conan O'Brien as early as 1995, when he is believed to have first appeared on Late Night with Conan O'Brien.",
+    "description": "Russell Crowe is a New Zealand-born actor and film director whose screen work has earned him an Academy Award, a BAFTA Award, and two Golden Globes. He broke through internationally with L.A. Confidential and The Insider before winning the Academy Award for Best Actor for Gladiator, and earned a further nomination for A Beautiful Mind. His extensive filmography spans Cinderella Man, American Gangster, Les Misérables, The Nice Guys, and The Pope's Exorcist, among many others. He made his directorial debut with The Water Diviner in 2014. He likely crossed paths with Conan O'Brien as early as 1995, when he is believed to have first appeared on Late Night with Conan O'Brien.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Russell_Crowe"
     ],
-    "enrichedAt": "2026-09-09T22:51:13.349Z",
+    "enrichedAt": "2026-09-09T23:00:14.178Z",
     "birth_year": "1964",
     "death_year": "",
     "gender": "male",
-    "nationality": "New Zealand-born",
+    "nationality": "New Zealand",
     "prestige_signals": [
       "Academy Award winner",
       "BAFTA Award winner",
       "Golden Globe winner",
+      "Academy Award for Best Actor (Gladiator)",
       "AACTA Award for Best Actor in a Leading Role"
     ],
     "primary_platform": "film",
@@ -46658,7 +46916,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:51:00.843Z"
+    "enrichedAt": "2026-09-09T23:00:01.220Z"
   },
   "Benjamin McKenzie": {
     "entity": {
@@ -49876,7 +50134,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:51:01.006Z"
+    "enrichedAt": "2026-09-09T23:01:00.623Z"
   },
   "Chris Eigeman": {
     "entity": {
@@ -51040,11 +51298,6 @@
         "year": "2017"
       },
       {
-        "title": "Love Starvation",
-        "type": "music",
-        "year": "2019"
-      },
-      {
         "title": "Psycho Beach Party",
         "type": "film",
         "year": "2000"
@@ -51056,25 +51309,25 @@
       }
     ],
     "recent_work": [
-      "Indoor Safari (with Nick Lowe, 2024)"
+      "Indoor Safari (2024, album with Nick Lowe)"
     ],
     "conan_connection": {
       "type": "direct",
       "evidence": "Wikipedia: \"In the late 1990s, Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program.\""
     },
-    "description": "Los Straitjackets are an American instrumental rock band formed in Nashville in 1988, known for their surf- and rockabilly-inflected sound and their signature stage look of black suits and Mexican wrestling masks. Over fourteen studio albums, they built a devoted cult following and earned a Grammy nomination for their collaboration with blues singer Eddy Clearwater on Rock 'N' Roll City. They have been long-time collaborators with British singer-songwriter Nick Lowe, contributing to his 2024 album Indoor Safari and co-writing the track 'Went to a Party.' A new album, Somos Los Straitjackets, is set for release in September 2025. In the late 1990s, Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program.",
+    "description": "Los Straitjackets is an American instrumental rock band formed in Nashville, Tennessee in 1988, known for their surf- and rockabilly-inflected sound and their trademark Mexican wrestling masks worn in live performance. The band has released fourteen studio albums, including collaborations with Nick Lowe — most recently the 2024 album Indoor Safari — and earned a Grammy nomination for their work with blues singer Eddy Clearwater. A new album, Somos Los Straitjackets, is set for release in September 2025. Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program during the late 1990s.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Los_Straitjackets"
     ],
-    "enrichedAt": "2026-09-09T22:52:11.112Z",
+    "enrichedAt": "2026-09-09T23:01:10.300Z",
     "birth_year": "",
     "death_year": "",
     "gender": "",
     "nationality": "American",
     "prestige_signals": [
-      "Grammy nominee"
+      "Grammy Award nominee"
     ],
     "primary_platform": "music",
     "upcoming_work": [
@@ -51781,7 +52034,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:52:00.268Z"
+    "enrichedAt": "2026-09-09T23:01:00.790Z"
   },
   "James Woods": {
     "entity": {
@@ -57909,6 +58162,7 @@
     },
     "profession": [
       "actor",
+      "musical theatre performer",
       "singer"
     ],
     "known_for": [
@@ -58009,27 +58263,25 @@
       }
     ],
     "recent_work": [
+      "Grey's Anatomy (2021)",
       "Grace and Frankie (2018–2022)"
     ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Peter Gallagher is an American actor best known for playing Sandy Cohen on Fox's The O.C. from 2003 to 2007, a role that made him a household name. His film credits span decades and include sex, lies, and videotape, The Player, While You Were Sleeping, American Beauty, and Palm Springs, while his television work also encompasses recurring roles on Law & Order: SVU, Californication, Covert Affairs, and Grace & Frankie. A accomplished stage performer, he starred in Broadway revivals of Guys and Dolls and On the Twentieth Century. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1993, during a notably busy stretch of his film career.",
+    "description": "Peter Gallagher is an American actor whose career spans film, television, and musical theatre since 1980. He is best known for playing Sandy Cohen on the Fox drama The O.C. from 2003 to 2007, and has held recurring television roles on Law & Order: Special Victims Unit, Californication, Covert Affairs, and Grace & Frankie. His film credits include The Player, While You Were Sleeping, American Beauty, and Palm Springs. On Broadway, he starred in the 1992 revival of Guys and Dolls and the 2015 revival of On the Twentieth Century. He also released the album 7 Days in Memphis in 2005. Gallagher likely crossed paths with Conan O'Brien as early as 1993 on Late Night with Conan O'Brien.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Peter_Gallagher"
     ],
-    "enrichedAt": "2026-09-09T22:52:14.953Z",
+    "enrichedAt": "2026-09-09T23:01:12.685Z",
     "birth_year": "1955",
     "death_year": "",
     "gender": "male",
     "nationality": "American",
-    "prestige_signals": [
-      "P.T. Barnum Award from Tufts University",
-      "Light on the Hill award from Tufts University"
-    ],
+    "prestige_signals": [],
     "primary_platform": "tv",
     "upcoming_work": [
       {
@@ -63232,30 +63484,30 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Roma Downey is an Irish actress, producer, and author best known for playing Monica the angel in the long-running CBS series Touched by an Angel, a role that earned her two Emmy nominations and two Golden Globe nominations. She portrayed Jacqueline Kennedy Onassis in the Emmy Award-winning miniseries A Woman Named Jackie and has produced numerous faith-based films and television projects alongside her husband Mark Burnett, including The Bible, Ben-Hur, Son of God, and The Dovekeepers. More recently she starred in and executive produced The Baxters on Amazon Prime Video. A Hollywood Walk of Fame honoree and OBE recipient, she likely crossed paths with Conan O'Brien during his Late Night tenure around 1995.",
+    "description": "Roma Downey is an Irish actress, producer, and author best known for playing Monica the angel in the long-running CBS series Touched by an Angel and for her Emmy Award-winning portrayal of Jacqueline Kennedy Onassis in A Woman Named Jackie. As president of Lightworkers Media, she and husband Mark Burnett have produced an extensive slate of faith-based film and television projects, including The Bible, Ben-Hur, and The Dovekeepers. She currently stars in and produces The Baxters on Amazon Prime Video, and her most recent book, Be an Angel, was released in 2023. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 1995.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Roma_Downey"
     ],
-    "enrichedAt": "2026-09-09T22:52:16.909Z",
+    "enrichedAt": "2026-09-09T23:01:16.725Z",
     "birth_year": "1960",
     "death_year": "",
     "gender": "female",
     "nationality": "Irish",
     "prestige_signals": [
-      "Emmy Award nominations (two) for Touched by an Angel",
-      "Golden Globe nominations (two) for Touched by an Angel",
-      "Emmy Award-winning miniseries A Woman Named Jackie",
+      "Emmy Award-winning miniseries (A Woman Named Jackie)",
+      "Two Emmy Award nominations",
+      "Two Golden Globe nominations",
       "IFTA for Best Short Film (Rough, 2021)",
       "Hollywood Walk of Fame star (2016)",
-      "Officer of the Order of the British Empire (OBE)",
       "Lifetime Achievement Award at the International Christian Film & Music Festival (2021)",
-      "Lifetime Achievement Award at the Sarasota Film Festival",
+      "Officer of the Order of the British Empire (OBE)",
       "Variety '100 Most Powerful Women in Hollywood'",
-      "The Hollywood Reporter 'Most Influential People of 2013'",
-      "Variety 'Women of Impact' 2014",
-      "New York Times best-seller Box of Butterflies"
+      "Variety 'Women of Impact' (2014)",
+      "Hollywood Reporter 'Most Influential People of 2013'",
+      "Hollywood Reporter '100 Women in Entertainment Power' (2014)",
+      "Sarasota Film Festival Lifetime Achievement Award"
     ],
     "primary_platform": "tv",
     "upcoming_work": [
@@ -63882,7 +64134,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:52:00.569Z"
+    "enrichedAt": "2026-09-09T23:01:01.095Z"
   },
   "David Blaine": {
     "entity": {
@@ -64736,7 +64988,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:52:00.869Z"
+    "enrichedAt": "2026-09-09T23:01:01.395Z"
   },
   "George Stephanopoulos": {
     "entity": {
@@ -67396,7 +67648,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:53:00.954Z"
+    "enrichedAt": "2026-09-09T23:02:01.328Z"
   },
   "Katie Holmes": {
     "entity": {
@@ -72342,7 +72594,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:53:00.698Z"
+    "enrichedAt": "2026-09-09T23:02:00.814Z"
   },
   "Blake Anderson": {
     "entity": {
@@ -72896,7 +73148,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:53:01.281Z"
+    "enrichedAt": "2026-09-09T23:02:01.048Z"
   },
   "Conor McGregor": {
     "entity": {
@@ -76922,22 +77174,46 @@
   },
   "Sting": {
     "entity": {
-      "name": "Sting",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Arizona Sting",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arizona_Sting",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "professional box lacrosse team"
+    ],
+    "known_for": [
+      {
+        "title": "National Lacrosse League (Arizona Sting)",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "2005 NLL West Division Championship",
+        "type": "other",
+        "year": "2005"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T22:53:00.949Z"
+    "description": "The Arizona Sting was a professional box lacrosse team that competed in the National Lacrosse League from 2004 to 2007, playing their home games at Glendale Arena in Arizona. Previously operating as the Columbus Landsharks at Nationwide Arena from 2001 to 2003, the franchise relocated to Glendale and rebranded before the 2004 season. Their most notable achievement came in 2005, when they defeated the reigning NLL champion Calgary Roughnecks to claim the West Division title, before falling to the Toronto Rock in the league championship. The team ceased operations prior to the 2009 season. The given Conan connection appears to reference a different individual named Sting, not this lacrosse franchise.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Arizona_Sting"
+    ],
+    "enrichedAt": "2026-09-09T23:02:08.236Z",
+    "birth_year": "",
+    "death_year": "",
+    "gender": "",
+    "nationality": "American",
+    "prestige_signals": [
+      "2005 NLL West Division title winners"
+    ],
+    "primary_platform": "sports",
+    "upcoming_work": []
   },
   "Alan King": {
     "entity": {
@@ -77061,7 +77337,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:54:01.089Z"
+    "enrichedAt": "2026-09-09T23:03:00.999Z"
   },
   "Marcia Cross": {
     "entity": {
@@ -78353,7 +78629,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:54:00.388Z"
+    "enrichedAt": "2026-09-09T23:03:00.409Z"
   },
   "Bill Murray": {
     "entity": {
@@ -82670,7 +82946,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:54:00.631Z"
+    "enrichedAt": "2026-09-09T23:03:00.748Z"
   },
   "Piper Perabo": {
     "entity": {
@@ -82912,7 +83188,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:54:00.836Z"
+    "enrichedAt": "2026-09-09T23:03:00.870Z"
   },
   "Michael Imperioli": {
     "entity": {
@@ -95560,7 +95836,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:55:00.792Z"
+    "enrichedAt": "2026-09-09T23:03:00.780Z"
   },
   "Uma Thurman": {
     "entity": {
@@ -105207,7 +105483,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:54:00.889Z"
+    "enrichedAt": "2026-09-09T23:03:00.999Z"
   },
   "Gabourey Sidibe": {
     "entity": {
@@ -106047,13 +106323,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Daniel Baldwin is an American actor and director best known as Detective Beau Felton on the NBC series Homicide: Life on the Street. The second-oldest of the four acting Baldwin brothers, he built a film career spanning Harley Davidson and the Marlboro Man, Trees Lounge, John Carpenter's Vampires, and the HBO film Grey Gardens, among others. He won Best Supporting Actor at the 2014 Madrid International Film Festival for Helen Alone and hosted The Daniel Baldwin Show on Syracuse radio from 2017 to 2019. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993, the same year he joined the Homicide cast.",
+    "description": "Daniel Baldwin is an American actor and director best known for playing Detective Beau Felton on the NBC series Homicide: Life on the Street. The second-oldest of the four Baldwin brothers, he has appeared in a wide range of films including Harley Davidson and the Marlboro Man, Trees Lounge, and the HBO production Grey Gardens, and has made notable forays into reality television through Celebrity Rehab with Dr. Drew and Celebrity Big Brother. He won Best Supporting Actor at the Madrid International Film Festival in 2014. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around the time of his early career in 1993.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Daniel_Baldwin"
     ],
-    "enrichedAt": "2026-09-09T22:55:11.779Z",
+    "enrichedAt": "2026-09-09T23:04:11.609Z",
     "birth_year": "1960",
     "death_year": "",
     "gender": "male",
@@ -108385,7 +108661,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:55:00.880Z"
+    "enrichedAt": "2026-09-09T23:04:00.897Z"
   },
   "Jim Downey": {
     "entity": {
@@ -108404,7 +108680,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:55:00.887Z"
+    "enrichedAt": "2026-09-09T23:04:00.846Z"
   },
   "Brent Morin": {
     "entity": {
@@ -113864,7 +114140,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.183Z"
+    "enrichedAt": "2026-09-09T23:04:00.350Z"
   },
   "Conan Scrapisode": {
     "entity": {
@@ -113883,7 +114159,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.269Z"
+    "enrichedAt": "2026-09-09T23:04:00.599Z"
   },
   "Ben Falcone": {
     "entity": {
@@ -114464,7 +114740,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.311Z"
+    "enrichedAt": "2026-09-09T23:04:00.848Z"
   },
   "Malcolm Gladwell": {
     "entity": {
@@ -125489,7 +125765,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.327Z"
+    "enrichedAt": "2026-09-09T23:05:00.292Z"
   },
   "Daisy Fuentes": {
     "entity": {

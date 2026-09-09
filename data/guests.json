@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T22:58:14.207Z",
+  "generatedAt": "2026-09-09T23:05:01.311Z",
   "totalGuests": 3260,
   "totalAppearances": 9113,
   "guests": [
@@ -78417,7 +78417,55 @@
       "id": "kevin-brennan",
       "name": "Kevin Brennan",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Kevin Brennan, Baron Brennan of Canton",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Kevin_Brennan%2C_Baron_Brennan_of_Canton",
+          "confidence": 1
+        },
+        "profession": [
+          "politician"
+        ],
+        "known_for": [
+          {
+            "title": "Member of Parliament for Cardiff West",
+            "type": "other",
+            "year": "2001"
+          },
+          {
+            "title": "Minister of State for Further Education, Skills, Apprenticeships and Consumer Affairs",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Shadow Minister for Victims and Sentencing",
+            "type": "other",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "Shadow Minister for Victims and Sentencing (2023–2024)",
+          "Appointed to the House of Lords (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Kevin Brennan is a Welsh Labour politician who served as Member of Parliament for Cardiff West from 2001 to 2024, one of the longer continuous tenures in the constituency's recent history. During his parliamentary career he held ministerial office under Gordon Brown, including as Minister of State for Further Education, Skills, Apprenticeships and Consumer Affairs, and later served in various shadow ministerial roles, most recently as Shadow Minister for Victims and Sentencing from 2023 until his retirement at the 2024 general election. He was subsequently elevated to the House of Lords in 2025. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1995.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Kevin_Brennan%2C_Baron_Brennan_of_Canton"
+        ],
+        "enrichedAt": "2026-09-09T23:00:09.232Z",
+        "birth_year": "1959",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "Welsh",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -128801,7 +128849,49 @@
       "id": "sting",
       "name": "Sting",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Arizona Sting",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Arizona_Sting",
+          "confidence": 1
+        },
+        "profession": [
+          "professional box lacrosse team"
+        ],
+        "known_for": [
+          {
+            "title": "National Lacrosse League (Arizona Sting)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "2005 NLL West Division Championship",
+            "type": "other",
+            "year": "2005"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "The Arizona Sting was a professional box lacrosse team that competed in the National Lacrosse League from 2004 to 2007, playing their home games at Glendale Arena in Arizona. Previously operating as the Columbus Landsharks at Nationwide Arena from 2001 to 2003, the franchise relocated to Glendale and rebranded before the 2004 season. Their most notable achievement came in 2005, when they defeated the reigning NLL champion Calgary Roughnecks to claim the West Division title, before falling to the Toronto Rock in the league championship. The team ceased operations prior to the 2009 season. The given Conan connection appears to reference a different individual named Sting, not this lacrosse franchise.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Arizona_Sting"
+        ],
+        "enrichedAt": "2026-09-09T23:02:08.236Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "American",
+        "prestige_signals": [
+          "2005 NLL West Division title winners"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
