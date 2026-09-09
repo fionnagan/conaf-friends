@@ -317,13 +317,18 @@ export async function enrichPhotos(
 }
 
 // CLI entry point
+// Usage: npx tsx scripts/ingest/photo-enrichment.ts [--limit N]
 if (require.main === module) {
   import('fs').then(async ({ default: fs }) => {
     import('path').then(async ({ default: path }) => {
+      const args = process.argv.slice(2);
+      const limitIdx = args.indexOf('--limit');
+      const limit = limitIdx >= 0 ? parseInt(args[limitIdx + 1], 10) : 200;
+
       const guestsPath = path.join(process.cwd(), 'data', 'guests.json');
       const data = JSON.parse(fs.readFileSync(guestsPath, 'utf-8'));
       const names = data.guests.map((g: { name: string }) => g.name);
-      await enrichPhotos(names);
+      await enrichPhotos(names, limit);
     });
   });
 }
