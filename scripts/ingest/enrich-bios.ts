@@ -706,7 +706,17 @@ async function main() {
 
   if (queue.length === 0) {
     console.log('[Bios] All guests up-to-date.');
-    return;
+    // Distinct from a normal 0-exit ("ran and did work") — callers that loop
+    // chunks (backfill-full-bios.yml) need to tell "nothing left to enqueue"
+    // apart from "ran fine." Without this, the loop's own git-diff check was
+    // the only signal, and patch-bios-into-guests.ts unconditionally bumps
+    // data/guests.json's generatedAt on every call, so that diff was never
+    // empty even with zero real work — the loop ran to its full requested
+    // limit instead of stopping once the backlog was actually exhausted.
+    // Callers that don't care (weekly-ingest.yml's step has
+    // continue-on-error: true; sample-bio-enrichment.yml already tolerates
+    // any nonzero exit) are unaffected.
+    process.exit(2);
   }
 
   queue = queue.slice(0, LIMIT);
