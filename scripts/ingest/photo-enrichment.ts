@@ -97,7 +97,15 @@ function nullResult(url: string): FaceEmbeddingResult {
 // ── Identity confirmation (face clustering) ───────────────────────────────────
 function confirmIdentity(embeddings: number[][]): IdentityConfirmation {
   if (!embeddings.length) {
-    return { consistencyScore: 0, dominantCluster: false, clusterCount: 0, centroidEmbedding: null };
+    // No embeddings means no face backend was available (or no faces were
+    // detected in any candidate) — not "multiple distinct people detected".
+    // dominantCluster: false was rejecting every guest with
+    // 'multiple_face_clusters', a misleading reason, and — more importantly
+    // — short-circuiting before the decision engine's own "!hasFaceBackend
+    // && trusted source" fallback a few branches down ever got evaluated,
+    // making that branch dead code. true here lets that fallback actually
+    // run instead of everyone being rejected outright.
+    return { consistencyScore: 0, dominantCluster: true, clusterCount: 0, centroidEmbedding: null };
   }
   if (embeddings.length === 1) {
     return { consistencyScore: 1, dominantCluster: true, clusterCount: 1,
