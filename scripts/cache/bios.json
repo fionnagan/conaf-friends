@@ -207468,22 +207468,32 @@
   },
   "Tracy Nelson": {
     "entity": {
-      "name": "Tracy Nelson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Tracy Nelson (actress)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tracy_Nelson_(actress)",
+      "confidence": 0.9
     },
-    "profession": [],
+    "profession": [
+      "actress"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T21:21:00.765Z"
+    "description": "Tracy Kristine Nelson (born October 25, 1963, in Santa Monica, California) is an American actress, daughter of musician and actor Ricky Nelson and actress Kristin Nelson. She is known for playing Sister Stephanie \"Steve\" Oskowski on Father Dowling Mysteries (1989-91). She appeared on Late Night with Conan O'Brien on January 1, 1997, alongside Louis C.K. and Robert Pastorelli.",
+    "confidence": 0.9,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tracy_Nelson_(actress)",
+      "https://www.metacritic.com/tv/late-night-with-conan-obrien/season-4/episode-51-louis-cktracy-nelsonrobert-pastorelli/"
+    ],
+    "enrichedAt": "2026-09-10T23:52:55.786Z",
+    "birth_year": "1963",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": []
   },
   "Dave Attel": {
     "entity": {
@@ -275860,22 +275870,32 @@
   },
   "Keith Robinson": {
     "entity": {
-      "name": "Keith Robinson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Keith Robinson (comedian)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Keith_Robinson_(comedian)",
+      "confidence": 0.9
     },
-    "profession": [],
+    "profession": [
+      "stand-up comedian",
+      "actor"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2008."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T21:33:00.849Z"
+    "description": "Keith Robinson (born October 23, 1963) is an American stand-up comedian and comic actor from South Philadelphia. A 1993 Star Search finalist, he became a regular on Comedy Central's Tough Crowd with Colin Quinn and a frequent emcee at Manhattan's Comedy Cellar, and later appeared in films including Trainwreck and King of Staten Island. He performed a stand-up set on Late Night with Conan O'Brien on March 13, 2008, alongside Meredith Vieira and Harland Williams.",
+    "confidence": 0.9,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Keith_Robinson_(comedian)"
+    ],
+    "enrichedAt": "2026-09-10T23:52:55.786Z",
+    "birth_year": "1963",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": []
   },
   "Fred Simmons": {
     "entity": {
