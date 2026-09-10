@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T06:50:01.903Z",
+  "generatedAt": "2026-09-10T06:56:07.540Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -265209,7 +265209,41 @@
       "id": "bill-lee",
       "name": "Bill Lee",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Bill Lann Lee",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Bill_Lann_Lee",
+          "confidence": 1
+        },
+        "profession": [
+          "civil rights attorney",
+          "government official"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Bill Lann Lee is an American civil rights attorney best known for serving as Assistant United States Attorney General for the Civil Rights Division under President Bill Clinton, a role he held despite never receiving Senate confirmation. A graduate of Yale University and Columbia Law School, Lee spent decades at the NAACP Legal Defense Fund and later chaired the bipartisan National Commission on the Voting Rights Act. He has received honors including the Thurgood Marshall Medal of Justice and honorary law doctorates from multiple universities. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Bill_Lann_Lee"
+        ],
+        "enrichedAt": "2026-09-10T06:55:06.650Z",
+        "birth_year": "1949",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Thurgood Marshall Medal of Justice (1998)",
+          "Trailblazer Award from the National Asian Pacific American Bar Association (1999)",
+          "John Randolph Distinguished Service Award, U.S. Department of Justice (2001)"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -267944,7 +267978,51 @@
       "id": "larry-johnson",
       "name": "Larry Johnson",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Larry Johnson (American football coach)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Larry_Johnson_(American_football_coach)",
+          "confidence": 1
+        },
+        "profession": [
+          "football coach",
+          "associate head coach",
+          "defensive line coach"
+        ],
+        "known_for": [
+          {
+            "title": "Ohio State Buckeyes football",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Penn State Nittany Lions football",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Larry A. Johnson is an American football coach currently serving as defensive line coach and associate head coach for the Ohio State Buckeyes football program. Before joining Ohio State, he spent 18 years as an assistant coach at Pennsylvania State University, where he helped develop first-round NFL draft picks including Tamba Hali, Courtney Brown, and Michael Haynes. At Ohio State, he is credited with developing defensive linemen Joey Bosa, Nick Bosa, and Chase Young, all of whom won the NFL Defensive Rookie of the Year award. Johnson likely crossed paths with Conan O'Brien during a Late Night appearance around 1994, during his tenure as a high school coach in the Washington, D.C. area.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Larry_Johnson_(American_football_coach)"
+        ],
+        "enrichedAt": "2026-09-10T06:55:08.318Z",
+        "birth_year": "1952",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "NAIA All-America honors (1973)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -274673,7 +274751,64 @@
       "id": "karen-alexander",
       "name": "Karen Alexander",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Karen Alexander (environmentalist)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Karen_Alexander_(environmentalist)",
+          "confidence": 1
+        },
+        "profession": [
+          "environmentalist"
+        ],
+        "known_for": [
+          {
+            "title": "Tasmanian Wilderness Society",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Franklin River campaign",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Australian Conservation Foundation",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Bush Heritage Australia",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Victorian National Parks Association",
+            "type": "other",
+            "year": "2005"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Karen Alexander is an Australian environmentalist born in 1948 and one of the founding members of the Tasmanian Wilderness Society, where she was credited by Bob Brown as the driving force in Melbourne behind elevating the Franklin River campaign to a national issue. She later served as environment manager for the Australian Conservation Foundation and as president of Bush Heritage Australia from 2000 to 2004, before taking up a position with the Victorian National Parks Association in 2005. She was awarded the Medal of the Order of Australia in 2015 for her service to conservation. She likely crossed paths with Conan O'Brien during a Late Night with Conan O'Brien appearance in 1995.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Karen_Alexander_(environmentalist)"
+        ],
+        "enrichedAt": "2026-09-10T06:56:06.263Z",
+        "birth_year": "1948",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Australian",
+        "prestige_signals": [
+          "Medal of the Order of Australia (OAM)"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",

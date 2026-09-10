@@ -114465,7 +114465,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:02:00.384Z"
+    "enrichedAt": "2026-09-10T06:51:00.384Z"
   },
   "Conan Scrapisode": {
     "entity": {
@@ -114484,7 +114484,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:02:00.436Z"
+    "enrichedAt": "2026-09-10T06:51:00.402Z"
   },
   "Ben Falcone": {
     "entity": {
@@ -115065,7 +115065,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:02:00.871Z"
+    "enrichedAt": "2026-09-10T06:51:00.429Z"
   },
   "Malcolm Gladwell": {
     "entity": {
@@ -126090,7 +126090,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:02:01.165Z"
+    "enrichedAt": "2026-09-10T06:51:00.670Z"
   },
   "Daisy Fuentes": {
     "entity": {
@@ -128326,7 +128326,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:03:01.050Z"
+    "enrichedAt": "2026-09-10T06:52:00.645Z"
   },
   "The Frugal Gourmet": {
     "entity": {
@@ -128345,39 +128345,26 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:02:00.778Z"
+    "enrichedAt": "2026-09-10T06:51:00.401Z"
   },
   "Charles Dutton": {
     "entity": {
-      "name": "Charles Christian Dutton",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Charles_Christian_Dutton",
-      "confidence": 1
+      "name": "Charles Dutton",
+      "wikipedia_url": "",
+      "confidence": 0
     },
-    "profession": [
-      "pastoralist",
-      "clerk of the Supreme Court",
-      "sheriff"
-    ],
+    "profession": [],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Charles Christian Dutton was a 19th-century British pastoralist and colonial official who settled in South Australia in the late 1830s, where he served as clerk of the Supreme Court and acting sheriff in Adelaide before managing a cattle station near Port Lincoln on the Eyre Peninsula. In July 1842 he disappeared along with four companions while driving cattle overland toward Adelaide, and is presumed to have been killed by Barngarla warriors near present-day Whyalla. The guest who likely appeared on Late Night with Conan O'Brien in 1995 shares a name with this historical figure but is an entirely different person not covered by this Wikipedia entry.",
-    "confidence": 1,
+    "description": "",
+    "confidence": 0,
     "needs_review": true,
-    "sources": [
-      "https://en.wikipedia.org/wiki/Charles_Christian_Dutton"
-    ],
-    "enrichedAt": "2026-09-10T01:03:07.654Z",
-    "birth_year": "",
-    "death_year": "1842",
-    "gender": "male",
-    "nationality": "British",
-    "prestige_signals": [],
-    "primary_platform": "other",
-    "upcoming_work": []
+    "sources": [],
+    "enrichedAt": "2026-09-10T06:51:00.952Z"
   },
   "Carol Kane": {
     "entity": {
@@ -130508,7 +130495,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:03:01.102Z"
+    "enrichedAt": "2026-09-10T06:51:00.895Z"
   },
   "Gena Lee Nolin": {
     "entity": {
@@ -131767,7 +131754,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:03:00.595Z"
+    "enrichedAt": "2026-09-10T06:51:00.719Z"
   },
   "Ally Walker": {
     "entity": {
@@ -132778,26 +132765,43 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:04:00.332Z"
+    "enrichedAt": "2026-09-10T06:52:00.206Z"
   },
   "Jane Seymour": {
     "entity": {
       "name": "Jane Seymour",
-      "wikipedia_url": "",
-      "confidence": 0
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jane_Seymour",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "Queen of England"
+    ],
+    "known_for": [
+      {
+        "title": "Queen of England (third wife of Henry VIII)",
+        "type": "other",
+        "year": "1536"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "",
-    "confidence": 0,
+    "description": "Jane Seymour (c. 1508–1537) was Queen of England as the third wife of King Henry VIII, reigning from 1536 until her death from postnatal complications following the birth of her only child, the future King Edward VI. Known for her gentle and peaceable nature, she was the only wife of Henry VIII to receive a queen's funeral, and Henry was later buried alongside her at St George's Chapel, Windsor Castle. The actress Jane Seymour, who shares her name with this historical figure, likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1998.",
+    "confidence": 1,
     "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T01:03:00.868Z"
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jane_Seymour"
+    ],
+    "enrichedAt": "2026-09-10T06:51:07.125Z",
+    "birth_year": "",
+    "death_year": "1537",
+    "gender": "female",
+    "nationality": "",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Ed Byrne": {
     "entity": {
@@ -141371,7 +141375,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:04:01.301Z"
+    "enrichedAt": "2026-09-10T06:52:00.860Z"
   },
   "Asa Butterfield": {
     "entity": {
@@ -146592,7 +146596,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:04:00.339Z"
+    "enrichedAt": "2026-09-10T06:52:00.271Z"
   },
   "John Melendez": {
     "entity": {
@@ -151286,7 +151290,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:04:00.655Z"
+    "enrichedAt": "2026-09-10T06:52:00.639Z"
   },
   "Julie Scardina": {
     "entity": {
@@ -153002,7 +153006,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:04:00.711Z"
+    "enrichedAt": "2026-09-10T06:52:00.574Z"
   },
   "Denis Hamill": {
     "entity": {
@@ -153021,7 +153025,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:04:01.005Z"
+    "enrichedAt": "2026-09-10T06:52:00.796Z"
   },
   "Bill Braudis": {
     "entity": {
@@ -153467,7 +153471,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:04:01.004Z"
+    "enrichedAt": "2026-09-10T06:52:00.940Z"
   },
   "Anne Robinson": {
     "entity": {
@@ -154923,7 +154927,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:05:01.254Z"
+    "enrichedAt": "2026-09-10T06:53:00.825Z"
   },
   "Meredith Viera": {
     "entity": {
@@ -158243,7 +158247,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:05:00.490Z"
+    "enrichedAt": "2026-09-10T06:52:00.865Z"
   },
   "Goldie Hawn": {
     "entity": {
@@ -158904,7 +158908,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:05:00.747Z"
+    "enrichedAt": "2026-09-10T06:53:00.202Z"
   },
   "Roy Wood Jr.": {
     "entity": {
@@ -159530,7 +159534,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:05:01.532Z"
+    "enrichedAt": "2026-09-10T06:53:00.741Z"
   },
   "President Barack Obama": {
     "entity": {
@@ -160967,7 +160971,7 @@
     "confidence": 0.4666666666666666,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:05:00.817Z"
+    "enrichedAt": "2026-09-10T06:53:00.222Z"
   },
   "Paul Krassner": {
     "entity": {
@@ -161117,7 +161121,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:05:01.019Z"
+    "enrichedAt": "2026-09-10T06:53:00.223Z"
   },
   "Eartha Kitt": {
     "entity": {
@@ -164729,7 +164733,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:06:00.297Z"
+    "enrichedAt": "2026-09-10T06:53:00.616Z"
   },
   "David Dinkins": {
     "entity": {
@@ -165120,7 +165124,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:06:00.468Z"
+    "enrichedAt": "2026-09-10T06:53:00.565Z"
   },
   "Bronson Pinchot": {
     "entity": {
@@ -165486,7 +165490,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:06:01.475Z"
+    "enrichedAt": "2026-09-10T06:53:00.837Z"
   },
   "Chuck Sklar": {
     "entity": {
@@ -166588,7 +166592,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:06:00.929Z"
+    "enrichedAt": "2026-09-10T06:53:00.785Z"
   },
   "Casey Kasem": {
     "entity": {
@@ -169404,7 +169408,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:07:00.971Z"
+    "enrichedAt": "2026-09-10T06:54:00.691Z"
   },
   "Marisa Berenson": {
     "entity": {
@@ -170292,7 +170296,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:07:00.707Z"
+    "enrichedAt": "2026-09-10T06:53:01.006Z"
   },
   "Alexandra Wentworth": {
     "entity": {
@@ -174579,7 +174583,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:07:00.396Z"
+    "enrichedAt": "2026-09-10T06:53:00.964Z"
   },
   "Terry Murphy": {
     "entity": {
@@ -174598,7 +174602,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T01:07:00.945Z"
+    "enrichedAt": "2026-09-10T06:54:00.722Z"
   },
   "Linda Blair": {
     "entity": {
@@ -175616,7 +175620,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:13:35.012Z"
+    "enrichedAt": "2026-09-10T06:54:00.359Z"
   },
   "Lisa Sliwa": {
     "entity": {
@@ -176182,7 +176186,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:13:35.335Z"
+    "enrichedAt": "2026-09-10T06:54:00.657Z"
   },
   "Deidre Hall": {
     "entity": {
@@ -177282,7 +177286,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:14:00.670Z"
+    "enrichedAt": "2026-09-10T06:54:00.658Z"
   },
   "Zsa Zsa Gabor": {
     "entity": {
@@ -178034,7 +178038,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:14:01.297Z"
+    "enrichedAt": "2026-09-10T06:54:00.881Z"
   },
   "Harry Smith": {
     "entity": {
@@ -178053,7 +178057,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:14:02.157Z"
+    "enrichedAt": "2026-09-10T06:54:00.880Z"
   },
   "Herbert Stempel": {
     "entity": {
@@ -178645,22 +178649,38 @@
   },
   "Bill Lee": {
     "entity": {
-      "name": "Bill Lee",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Bill Lann Lee",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bill_Lann_Lee",
+      "confidence": 1
     },
-    "profession": [],
+    "profession": [
+      "civil rights attorney",
+      "government official"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:15:00.960Z"
+    "description": "Bill Lann Lee is an American civil rights attorney best known for serving as Assistant United States Attorney General for the Civil Rights Division under President Bill Clinton, a role he held despite never receiving Senate confirmation. A graduate of Yale University and Columbia Law School, Lee spent decades at the NAACP Legal Defense Fund and later chaired the bipartisan National Commission on the Voting Rights Act. He has received honors including the Thurgood Marshall Medal of Justice and honorary law doctorates from multiple universities. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1994.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bill_Lann_Lee"
+    ],
+    "enrichedAt": "2026-09-10T06:55:06.650Z",
+    "birth_year": "1949",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Thurgood Marshall Medal of Justice (1998)",
+      "Trailblazer Award from the National Asian Pacific American Bar Association (1999)",
+      "John Randolph Distinguished Service Award, U.S. Department of Justice (2001)"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "David Greenberger": {
     "entity": {
@@ -179688,7 +179708,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:15:00.400Z"
+    "enrichedAt": "2026-09-10T06:54:00.913Z"
   },
   "Frank Gifford": {
     "entity": {
@@ -180682,22 +180702,48 @@
   },
   "Larry Johnson": {
     "entity": {
-      "name": "Larry Johnson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Larry Johnson (American football coach)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Larry_Johnson_(American_football_coach)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "football coach",
+      "associate head coach",
+      "defensive line coach"
+    ],
+    "known_for": [
+      {
+        "title": "Ohio State Buckeyes football",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Penn State Nittany Lions football",
+        "type": "other",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:15:00.905Z"
+    "description": "Larry A. Johnson is an American football coach currently serving as defensive line coach and associate head coach for the Ohio State Buckeyes football program. Before joining Ohio State, he spent 18 years as an assistant coach at Pennsylvania State University, where he helped develop first-round NFL draft picks including Tamba Hali, Courtney Brown, and Michael Haynes. At Ohio State, he is credited with developing defensive linemen Joey Bosa, Nick Bosa, and Chase Young, all of whom won the NFL Defensive Rookie of the Year award. Johnson likely crossed paths with Conan O'Brien during a Late Night appearance around 1994, during his tenure as a high school coach in the Washington, D.C. area.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Larry_Johnson_(American_football_coach)"
+    ],
+    "enrichedAt": "2026-09-10T06:55:08.318Z",
+    "birth_year": "1952",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "NAIA All-America honors (1973)"
+    ],
+    "primary_platform": "sports",
+    "upcoming_work": []
   },
   "Bob Berkowitz": {
     "entity": {
@@ -181539,7 +181585,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:15:00.707Z"
+    "enrichedAt": "2026-09-10T06:54:00.943Z"
   },
   "Sissy Biggers": {
     "entity": {
@@ -181809,7 +181855,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:15:00.928Z"
+    "enrichedAt": "2026-09-10T06:55:00.212Z"
   },
   "Lainie Kazan": {
     "entity": {
@@ -182769,7 +182815,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:16:00.269Z"
+    "enrichedAt": "2026-09-10T06:55:00.303Z"
   },
   "Robert Townsend": {
     "entity": {
@@ -182807,7 +182853,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:16:00.389Z"
+    "enrichedAt": "2026-09-10T06:55:00.571Z"
   },
   "Taxicab Confessions": {
     "entity": {
@@ -183268,7 +183314,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:16:00.446Z"
+    "enrichedAt": "2026-09-10T06:55:00.523Z"
   },
   "The Jerky Boys": {
     "entity": {
@@ -183376,7 +183422,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:16:00.529Z"
+    "enrichedAt": "2026-09-10T06:55:00.743Z"
   },
   "Sam Neill": {
     "entity": {
@@ -184104,7 +184150,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:16:00.678Z"
+    "enrichedAt": "2026-09-10T06:55:00.793Z"
   },
   "Pat Finn": {
     "entity": {
@@ -185152,9 +185198,9 @@
   },
   "Brian Doyle Murray": {
     "entity": {
-      "name": "Brian Doyle-Murray",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Brian_Doyle-Murray",
-      "confidence": 0.5333333333333333
+      "name": "Brian Doyle Murray",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -185164,10 +185210,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
     "description": "",
-    "confidence": 0.5333333333333333,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:16:00.706Z"
+    "enrichedAt": "2026-09-10T06:55:00.964Z"
   },
   "Bob Eubanks": {
     "entity": {
@@ -185335,7 +185381,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:16:00.875Z"
+    "enrichedAt": "2026-09-10T06:56:00.813Z"
   },
   "Malcolm McLaren": {
     "entity": {
@@ -185423,22 +185469,61 @@
   },
   "Karen Alexander": {
     "entity": {
-      "name": "Karen Alexander",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Karen Alexander (environmentalist)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Karen_Alexander_(environmentalist)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "environmentalist"
+    ],
+    "known_for": [
+      {
+        "title": "Tasmanian Wilderness Society",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Franklin River campaign",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Australian Conservation Foundation",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Bush Heritage Australia",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Victorian National Parks Association",
+        "type": "other",
+        "year": "2005"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:16:00.899Z"
+    "description": "Karen Alexander is an Australian environmentalist born in 1948 and one of the founding members of the Tasmanian Wilderness Society, where she was credited by Bob Brown as the driving force in Melbourne behind elevating the Franklin River campaign to a national issue. She later served as environment manager for the Australian Conservation Foundation and as president of Bush Heritage Australia from 2000 to 2004, before taking up a position with the Victorian National Parks Association in 2005. She was awarded the Medal of the Order of Australia in 2015 for her service to conservation. She likely crossed paths with Conan O'Brien during a Late Night with Conan O'Brien appearance in 1995.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Karen_Alexander_(environmentalist)"
+    ],
+    "enrichedAt": "2026-09-10T06:56:06.263Z",
+    "birth_year": "1948",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "Australian",
+    "prestige_signals": [
+      "Medal of the Order of Australia (OAM)"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Laura Leighton": {
     "entity": {
@@ -315604,7 +315689,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:13:30.132Z"
+    "enrichedAt": "2026-09-10T06:54:00.320Z"
   },
   "Catherine O'Hara": {
     "entity": {
