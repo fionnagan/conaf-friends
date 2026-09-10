@@ -229808,7 +229808,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.323Z"
+    "enrichedAt": "2026-09-10T21:25:07.683Z"
   },
   "Brooke Smith": {
     "entity": {
@@ -229827,7 +229827,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.738Z"
+    "enrichedAt": "2026-09-10T21:26:01.364Z"
   },
   "Chris Carter": {
     "entity": {
@@ -233684,7 +233684,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.291Z"
+    "enrichedAt": "2026-09-10T21:25:07.687Z"
   },
   "Leo Allen": {
     "entity": {
@@ -234201,7 +234201,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.755Z"
+    "enrichedAt": "2026-09-10T21:26:01.349Z"
   },
   "Ravi Shankar": {
     "entity": {
@@ -234424,7 +234424,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.515Z"
+    "enrichedAt": "2026-09-10T21:25:07.627Z"
   },
   "Jim Short": {
     "entity": {
@@ -234443,7 +234443,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.764Z"
+    "enrichedAt": "2026-09-10T21:26:01.396Z"
   },
   "Natalie Merchant": {
     "entity": {
@@ -234735,7 +234735,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.958Z"
+    "enrichedAt": "2026-09-10T21:27:01.086Z"
   },
   "Clem Snide": {
     "entity": {
@@ -238197,7 +238197,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.544Z"
+    "enrichedAt": "2026-09-10T21:26:01.311Z"
   },
   "George Gray": {
     "entity": {
@@ -238216,7 +238216,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:08:01.442Z"
+    "enrichedAt": "2026-09-10T21:28:01.773Z"
   },
   "Abra Moore": {
     "entity": {
@@ -239942,8 +239942,8 @@
   },
   "Aaron Buerge": {
     "entity": {
-      "name": "Aaron Buerge",
-      "wikipedia_url": "",
+      "name": "The Bachelor (American TV series) season 2",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/The_Bachelor_(American_TV_series)_season_2",
       "confidence": 0
     },
     "profession": [],
@@ -239957,26 +239957,121 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.984Z"
+    "enrichedAt": "2026-09-10T21:27:00.752Z"
   },
   "Dondre T Whitfield": {
     "entity": {
-      "name": "Dondre T Whitfield",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Dondré Whitfield",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Dondr%C3%A9_Whitfield",
+      "confidence": 0.7666666666666666
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "The Cosby Show",
+        "type": "tv",
+        "year": "1985"
+      },
+      {
+        "title": "All My Children",
+        "type": "tv",
+        "year": "1991"
+      },
+      {
+        "title": "Another World",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Crew",
+        "type": "tv",
+        "year": "1995"
+      },
+      {
+        "title": "Between Brothers",
+        "type": "tv",
+        "year": "1997"
+      },
+      {
+        "title": "White Man's Burden",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Secret Agent Man",
+        "type": "tv",
+        "year": "2000"
+      },
+      {
+        "title": "Girlfriends",
+        "type": "tv",
+        "year": "2001"
+      },
+      {
+        "title": "Two Can Play That Game",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "Hidden Hills",
+        "type": "tv",
+        "year": "2002"
+      },
+      {
+        "title": "Mr. 3000",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "The Salon",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Pastor Brown",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Middle of Nowhere",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Real Husbands of Hollywood",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Queen Sugar",
+        "type": "tv",
+        "year": "2016"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T07:06:00.976Z"
+    "description": "Dondré T. Whitfield is an American actor who began his career with a recurring role on The Cosby Show before earning three Daytime Emmy nominations for his portrayal of Terrence Frye on the soap opera All My Children. He went on to star in a succession of sitcoms including The Crew, Between Brothers, and Hidden Hills, and appeared in films such as Two Can Play That Game, The Salon, and Middle of Nowhere. He is perhaps best known to contemporary audiences for his role as Remy Newell on the Oprah Winfrey Network drama series Queen Sugar, produced by Ava DuVernay, which earned him an NAACP Image Award nomination. He likely crossed paths with Conan O'Brien around 2002, when he first appeared on Late Night with Conan O'Brien.",
+    "confidence": 0.7666666666666666,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dondr%C3%A9_Whitfield"
+    ],
+    "enrichedAt": "2026-09-10T21:27:10.452Z",
+    "birth_year": "1969",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "three Daytime Emmy Award for Outstanding Younger Actor in a Drama Series nominations",
+      "nomination for Outstanding Supporting Actor in a Drama Series at the 49th NAACP Image Awards"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Matchbox Twenty": {
     "entity": {
@@ -241373,7 +241468,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:07:01.065Z"
+    "enrichedAt": "2026-09-10T21:27:00.806Z"
   },
   "Sofia Vergara": {
     "entity": {
@@ -241828,7 +241923,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:08:01.287Z"
+    "enrichedAt": "2026-09-10T21:28:00.514Z"
   },
   "Luis Guzman": {
     "entity": {
@@ -242337,7 +242432,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:09:01.601Z"
+    "enrichedAt": "2026-09-10T21:29:01.039Z"
   },
   "Stephen Koch": {
     "entity": {
@@ -242465,7 +242560,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:08:00.558Z"
+    "enrichedAt": "2026-09-10T21:27:01.084Z"
   },
   "Yoko Ono": {
     "entity": {
@@ -243688,22 +243783,45 @@
   },
   "Rob Krueger": {
     "entity": {
-      "name": "Rob Krueger",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Bob Krueger",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bob_Krueger",
+      "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "diplomat",
+      "politician",
+      "U.S. representative",
+      "U.S. senator",
+      "U.S. ambassador",
+      "author",
+      "professor"
+    ],
+    "known_for": [
+      {
+        "title": "From Bloodshed to Hope in Burundi: Our Embassy Years during Genocide",
+        "type": "other",
+        "year": "2007"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T07:08:00.854Z"
+    "description": "Robert Charles Krueger (1935–2022) was an American diplomat, politician, and academic who served as a U.S. representative and U.S. senator from Texas and as a U.S. ambassador under Presidents Carter and Clinton. A Democrat, he remains the last member of his party to have served as a United States senator from Texas. His ambassadorial postings included Burundi during the period of regional genocide and Botswana, experiences he chronicled in his memoir From Bloodshed to Hope in Burundi: Our Embassy Years during Genocide. He likely crossed paths with the Late Night with Conan O'Brien team around 2003.",
+    "confidence": 0.6499999999999999,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bob_Krueger"
+    ],
+    "enrichedAt": "2026-09-10T21:28:07.028Z",
+    "birth_year": "1935",
+    "death_year": "2022",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Sara Rue": {
     "entity": {
@@ -244477,26 +244595,48 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:09:00.787Z"
+    "enrichedAt": "2026-09-10T21:28:01.119Z"
   },
   "Mikey Teutul": {
     "entity": {
-      "name": "Mikey Teutul",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Michael Teutul",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_Teutul",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "television personality"
+    ],
+    "known_for": [
+      {
+        "title": "American Chopper",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "American Chopper: Senior vs. Junior",
+        "type": "tv",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
+      "type": "direct",
+      "evidence": "Wikipedia: \"Teutul appeared on Late Show with David Letterman, Late Night with Conan O'Brien and The Tonight Show with Jay Leno.\""
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T07:09:00.799Z"
+    "description": "Mikey Teutul is an American television personality best known for his appearances on the reality series American Chopper and American Chopper: Senior vs. Junior, in which he served as comic relief and occasional mediator amid the family drama at Orange County Choppers. The youngest son of founder Paul Teutul Sr., he joined the company as assistant general manager and later worked alongside his brother at Paul Jr. Designs before returning to OCC, where he remains involved in social media management and spokesperson duties. He appeared on Late Night with Conan O'Brien as part of promotional activity surrounding the show.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Michael_Teutul"
+    ],
+    "enrichedAt": "2026-09-10T21:28:06.823Z",
+    "birth_year": "1978",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Kristin Kreuk": {
     "entity": {
@@ -244969,7 +245109,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:09:01.008Z"
+    "enrichedAt": "2026-09-10T21:29:01.643Z"
   },
   "Walter Cronkite": {
     "entity": {
@@ -245484,7 +245624,7 @@
     "confidence": 0.35,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:10:00.194Z"
+    "enrichedAt": "2026-09-10T21:29:00.417Z"
   },
   "Brini Maxwell": {
     "entity": {
@@ -245795,22 +245935,42 @@
   },
   "Mayor Jason West": {
     "entity": {
-      "name": "Mayor Jason West",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Jason West",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jason_West",
+      "confidence": 0.7666666666666666
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "politician",
+      "mayor"
+    ],
+    "known_for": [
+      {
+        "title": "Mayor of New Paltz, New York",
+        "type": "other",
+        "year": "2003"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T07:10:00.297Z"
+    "description": "Jason West is an American politician best known for serving as mayor of the village of New Paltz, New York, from 2003 to 2007 and again from 2011 to 2015. A Green Party figure, he gained national and international attention in 2004 when he performed same-sex marriage ceremonies in New Paltz, risking criminal prosecution in the process. He was named Best New Mayor of 2003 by Hudson Valley magazine and signed the United Nations Urban Environmental Accords as part of his commitment to environmental sustainability. West likely crossed paths with Conan O'Brien through a Late Night with Conan O'Brien appearance in 2004, coinciding with his high-profile stand on marriage equality.",
+    "confidence": 0.7666666666666666,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jason_West"
+    ],
+    "enrichedAt": "2026-09-10T21:29:06.532Z",
+    "birth_year": "1977",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Best New Mayor of 2003 by Hudson Valley magazine"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Omarosa Stallworth": {
     "entity": {
@@ -246610,7 +246770,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:10:00.885Z"
+    "enrichedAt": "2026-09-10T21:29:00.684Z"
   },
   "The Distillers": {
     "entity": {
@@ -247112,7 +247272,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:10:00.962Z"
+    "enrichedAt": "2026-09-10T21:29:00.936Z"
   },
   "Georges Brossard": {
     "entity": {
@@ -247476,9 +247636,9 @@
   },
   "Mama Gena": {
     "entity": {
-      "name": "Mama Gena",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Ethiopian Christmas",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ethiopian_Christmas",
+      "confidence": 0.3
     },
     "profession": [],
     "known_for": [],
@@ -247488,10 +247648,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
     "description": "",
-    "confidence": 0,
+    "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:10:09.306Z"
+    "enrichedAt": "2026-09-10T21:30:00.971Z"
   },
   "Manny Yarbrough": {
     "entity": {
@@ -248217,7 +248377,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:10:09.344Z"
+    "enrichedAt": "2026-09-10T21:30:01.074Z"
   },
   "Auf Der Maur": {
     "entity": {
@@ -248542,7 +248702,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:10:09.279Z"
+    "enrichedAt": "2026-09-10T21:30:00.486Z"
   },
   "Randy Constan": {
     "entity": {
@@ -250910,7 +251070,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:10:09.277Z"
+    "enrichedAt": "2026-09-10T21:30:00.472Z"
   },
   "The Black Keys": {
     "entity": {
@@ -251517,7 +251677,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:10:09.546Z"
+    "enrichedAt": "2026-09-10T21:30:00.740Z"
   },
   "Fatboy Slim": {
     "entity": {
@@ -252153,7 +252313,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:11:00.860Z"
+    "enrichedAt": "2026-09-10T21:30:01.079Z"
   },
   "My Chemical Romance": {
     "entity": {
@@ -252519,7 +252679,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:11:00.678Z"
+    "enrichedAt": "2026-09-10T21:30:00.758Z"
   },
   "New Year's Eve": {
     "entity": {
@@ -253233,7 +253393,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:11:00.695Z"
+    "enrichedAt": "2026-09-10T21:31:00.167Z"
   },
   "Arcade Fire": {
     "entity": {
@@ -254054,7 +254214,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.752Z"
+    "enrichedAt": "2026-09-10T21:32:00.488Z"
   },
   "Gary Johnson": {
     "entity": {
@@ -254125,7 +254285,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.525Z"
+    "enrichedAt": "2026-09-10T21:31:00.815Z"
   },
   "Low Millions": {
     "entity": {
@@ -257450,7 +257610,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:11:00.988Z"
+    "enrichedAt": "2026-09-10T21:31:00.264Z"
   },
   "Better Than Ezra": {
     "entity": {
@@ -257552,7 +257712,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.211Z"
+    "enrichedAt": "2026-09-10T21:31:00.598Z"
   },
   "Bloc Party": {
     "entity": {
@@ -258739,7 +258899,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.613Z"
+    "enrichedAt": "2026-09-10T21:31:00.890Z"
   },
   "Common": {
     "entity": {
@@ -258758,7 +258918,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.486Z"
+    "enrichedAt": "2026-09-10T21:31:00.670Z"
   },
   "David Gray": {
     "entity": {
@@ -258777,7 +258937,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.707Z"
+    "enrichedAt": "2026-09-10T21:31:00.819Z"
   },
   "The Hold Steady": {
     "entity": {
@@ -259112,7 +259272,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.745Z"
+    "enrichedAt": "2026-09-10T21:31:00.890Z"
   },
   "Dressy Bessy": {
     "entity": {
@@ -261821,7 +261981,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.970Z"
+    "enrichedAt": "2026-09-10T21:32:00.554Z"
   },
   "Ghost Hunters": {
     "entity": {
@@ -261840,7 +262000,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.835Z"
+    "enrichedAt": "2026-09-10T21:32:00.485Z"
   },
   "Jason Hawes": {
     "entity": {
@@ -262380,7 +262540,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.928Z"
+    "enrichedAt": "2026-09-10T21:32:00.544Z"
   },
   "John Daly": {
     "entity": {
@@ -262399,7 +262559,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:12:00.973Z"
+    "enrichedAt": "2026-09-10T21:32:00.769Z"
   },
   "JW Hart": {
     "entity": {
@@ -262418,7 +262578,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:13:00.215Z"
+    "enrichedAt": "2026-09-10T21:32:00.786Z"
   },
   "John Mayer Trio": {
     "entity": {
@@ -266199,7 +266359,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:13:00.566Z"
+    "enrichedAt": "2026-09-10T21:32:00.992Z"
   },
   "The Raconteurs": {
     "entity": {
@@ -266450,9 +266610,9 @@
   },
   "Peeping Tom": {
     "entity": {
-      "name": "Lady Godiva",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Lady_Godiva",
-      "confidence": 0.3
+      "name": "Peeping Tom",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -266462,10 +266622,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
     "description": "",
-    "confidence": 0.3,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:13:00.345Z"
+    "enrichedAt": "2026-09-10T21:32:00.786Z"
   },
   "Famke Jannsen": {
     "entity": {
@@ -268284,7 +268444,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:13:00.537Z"
+    "enrichedAt": "2026-09-10T21:32:00.787Z"
   },
   "Landon Pigg": {
     "entity": {
@@ -268654,7 +268814,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:13:00.765Z"
+    "enrichedAt": "2026-09-10T21:32:01.008Z"
   },
   "Neko Case": {
     "entity": {
@@ -271193,7 +271353,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:13:00.985Z"
+    "enrichedAt": "2026-09-10T21:32:01.011Z"
   },
   "J Alexander": {
     "entity": {
@@ -271212,7 +271372,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T07:13:00.787Z"
+    "enrichedAt": "2026-09-10T21:32:01.008Z"
   },
   "Natalie Morales": {
     "entity": {
