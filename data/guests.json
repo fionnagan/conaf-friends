@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T06:19:02.089Z",
+  "generatedAt": "2026-09-10T06:26:07.651Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -285801,7 +285801,107 @@
       "id": "amy-yasbeck",
       "name": "Amy Yasbeck",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Amy Yasbeck",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Amy_Yasbeck",
+          "confidence": 1
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Wings",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "Splash, Too",
+            "type": "tv",
+            "year": "1988"
+          },
+          {
+            "title": "House II: The Second Story",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Pretty Woman",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Problem Child",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Problem Child 2",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Mask",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Robin Hood: Men in Tights",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Dracula: Dead and Loving It",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Days of Our Lives",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Alright Already",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Life on a Stick",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "That's So Raven",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "With Love and Laughter, John Ritter",
+            "type": "other",
+            "year": "2010"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Amy Yasbeck is an American actress best known for playing Casey Chappel Davenport on the sitcom Wings from 1994 to 1997 and for taking on the mermaid role of Madison in the Disney television film Splash, Too in 1988. Her film credits include Pretty Woman, Problem Child, Problem Child 2, The Mask, Robin Hood: Men in Tights, and Dracula: Dead and Loving It. She has also appeared on Days of Our Lives and starred in the sitcoms Alright Already and Life on a Stick. She is the widow of actor John Ritter. Yasbeck likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1995.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Amy_Yasbeck"
+        ],
+        "enrichedAt": "2026-09-10T06:20:10.445Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -293466,7 +293566,249 @@
       "id": "tony-roberts",
       "name": "Tony Roberts",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Tony Roberts (actor)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Tony_Roberts_(actor)",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Annie Hall",
+            "type": "film",
+            "year": "1977"
+          },
+          {
+            "title": "Play It Again, Sam",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Play It Again, Sam",
+            "type": "other",
+            "year": "1969"
+          },
+          {
+            "title": "Stardust Memories",
+            "type": "film",
+            "year": "1980"
+          },
+          {
+            "title": "A Midsummer Night's Sex Comedy",
+            "type": "film",
+            "year": "1982"
+          },
+          {
+            "title": "Hannah and Her Sisters",
+            "type": "film",
+            "year": "1986"
+          },
+          {
+            "title": "Radio Days",
+            "type": "film",
+            "year": "1987"
+          },
+          {
+            "title": "The Taking of Pelham One Two Three",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Serpico",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Just Tell Me What You Want",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Amityville 3-D",
+            "type": "film",
+            "year": "1983"
+          },
+          {
+            "title": "Eighteen Again!",
+            "type": "film",
+            "year": "1988"
+          },
+          {
+            "title": "Popcorn",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Switch",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "The Million Dollar Duck",
+            "type": "film",
+            "year": "1971"
+          },
+          {
+            "title": "Star Spangled Girl",
+            "type": "film",
+            "year": "1971"
+          },
+          {
+            "title": "Key Exchange",
+            "type": "film",
+            "year": "1985"
+          },
+          {
+            "title": "Seize the Day",
+            "type": "film",
+            "year": "1986"
+          },
+          {
+            "title": "Twelve and Holding",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "The Longest Week",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Dirty Dancing",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "Something About a Soldier",
+            "type": "other",
+            "year": "1962"
+          },
+          {
+            "title": "How Now, Dow Jones",
+            "type": "other",
+            "year": "1968"
+          },
+          {
+            "title": "Barefoot in the Park",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Murder at the Howard Johnson's",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Promises, Promises",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Sugar",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "The Sisters Rosensweig",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "They're Playing Our Song",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Victor/Victoria",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "The Tale of the Allergist's Wife",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Arsenic and Old Lace",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Cabaret",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Follies",
+            "type": "other",
+            "year": "1998"
+          },
+          {
+            "title": "Xanadu",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "The Edge of Night",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Rosetti and Ryan",
+            "type": "tv",
+            "year": "1977"
+          },
+          {
+            "title": "The Love Boat",
+            "type": "tv",
+            "year": "1978"
+          },
+          {
+            "title": "The Carol Burnett Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Matlock",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Law & Order",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Law & Order: Criminal Intent",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Tony Roberts (1939–2025) was an American actor with a career spanning stage, film, and television over more than five decades. He is best remembered for his frequent collaborations with Woody Allen, appearing in six of his films, most notably Annie Hall, as well as Stardust Memories, A Midsummer Night's Sex Comedy, Hannah and Her Sisters, and Radio Days. On Broadway, he received two Tony Award nominations, for How Now, Dow Jones and Play It Again, Sam. He also appeared in films by Sidney Lumet, Blake Edwards, and Herbert Ross, and held roles in television series including Law & Order and The Edge of Night. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1996.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Tony_Roberts_(actor)"
+        ],
+        "enrichedAt": "2026-09-10T06:22:16.551Z",
+        "birth_year": "1939",
+        "death_year": "2025",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Tony Award nominee"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -297866,7 +298208,48 @@
       "id": "patricia-hearst",
       "name": "Patricia Hearst",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Patty Hearst",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Patty_Hearst",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "actress",
+          "heiress"
+        ],
+        "known_for": [
+          {
+            "title": "Hearst kidnapping by the Symbionese Liberation Army",
+            "type": "other",
+            "year": "1974"
+          },
+          {
+            "title": "Films and television with John Waters",
+            "type": "film",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Patricia Hearst is an American actress and member of the prominent Hearst media family, granddaughter of newspaper publisher William Randolph Hearst. She first came to widespread public attention following her 1974 kidnapping by the Symbionese Liberation Army, a case that captivated the nation and culminated in her 1976 bank robbery conviction, a sentence ultimately commuted by President Jimmy Carter and later pardoned by President Bill Clinton. In the 1990s she transitioned into acting after being approached by director John Waters. She likely first crossed paths with Conan O'Brien when she appeared on Late Night with Conan O'Brien around 1996.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Patty_Hearst"
+        ],
+        "enrichedAt": "2026-09-10T06:23:08.620Z",
+        "birth_year": "1954",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -314611,7 +314994,49 @@
       "id": "frank-pellegrino",
       "name": "Frank Pellegrino",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Frank George Pellegrino Sr.",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Frank_George_Pellegrino_Sr.",
+          "confidence": 1
+        },
+        "profession": [
+          "engineer",
+          "inventor",
+          "industrialist"
+        ],
+        "known_for": [
+          {
+            "title": "General Fibre Company",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "International Hat Company",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
+        },
+        "description": "Frank George Pellegrino Sr. (1923–2008) was an American engineer, inventor, and industrialist best known for his leadership of the General Fibre Company, which under his presidency became the largest manufacturer of duck decoy models in the United States, producing over a million units annually during the 1950s. He also negotiated the sale of the International Hat Company to Interco, Inc., and developed automated assembly line machines for the plastic molding industry, used in the production of plastic models and various goods through the 1960s to 1980s. He likely crossed paths with Conan O'Brien's Late Night program around 1998.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Frank_George_Pellegrino_Sr."
+        ],
+        "enrichedAt": "2026-09-10T06:25:06.908Z",
+        "birth_year": "1923",
+        "death_year": "2008",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -318829,7 +319254,52 @@
       "id": "michael-c-williams",
       "name": "Michael C Williams",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Michael C. Williams (actor)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_C._Williams_(actor)",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "The Blair Witch Project",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Law & Order",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "The Objective",
+            "type": "film",
+            "year": "2008"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1999."
+        },
+        "description": "Michael C. Williams is an American actor born in 1973, best known for playing a fictionalized version of himself in the found-footage horror film The Blair Witch Project. He later appeared in an episode of Law & Order in 2000 and had a role in the 2008 film The Objective. Beyond acting, Williams has built a life in Westchester, New York, where he manages the Big Blue Door Theater, runs acting classes, and works as a guidance counselor. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1999, coinciding with the release and cultural impact of The Blair Witch Project.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michael_C._Williams_(actor)"
+        ],
+        "enrichedAt": "2026-09-10T06:26:06.379Z",
+        "birth_year": "1973",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
