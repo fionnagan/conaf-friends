@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T00:31:08.841Z",
+  "generatedAt": "2026-09-10T00:40:11.026Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -236651,7 +236651,85 @@
       "id": "jessica-williams",
       "name": "Jessica Williams",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jessica Williams (actress)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jessica_Williams_(actress)",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "comedian"
+        ],
+        "known_for": [
+          {
+            "title": "The Daily Show",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "2 Dope Queens",
+            "type": "podcast",
+            "year": "2016"
+          },
+          {
+            "title": "Fantastic Beasts: The Crimes of Grindelwald",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Fantastic Beasts: The Secrets of Dumbledore",
+            "type": "film",
+            "year": "2022"
+          },
+          {
+            "title": "Shrinking",
+            "type": "tv",
+            "year": "2023"
+          },
+          {
+            "title": "Entergalactic",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "The Incredible Jessica James",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "People Places Things",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Girls",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2025."
+        },
+        "description": "Jessica Williams is an American actress and comedian best known for her eight-year run as a senior correspondent on The Daily Show, where she returned for guest appearances in 2024 and 2025. She co-hosted the long-running comedy podcast 2 Dope Queens alongside Phoebe Robinson and appeared as Lally Hicks in the Fantastic Beasts film series. Her role as Gaby in the Apple TV+ comedy Shrinking earned her two Primetime Emmy nominations for Outstanding Supporting Actress in a Comedy Series. She likely crossed paths with Conan O'Brien on his podcast Conan O'Brien Needs a Friend around 2025.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jessica_Williams_(actress)"
+        ],
+        "enrichedAt": "2026-09-10T00:38:09.055Z",
+        "birth_year": "1989",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "two-time Primetime Emmy Award nominee for Outstanding Supporting Actress in a Comedy Series"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -251694,7 +251772,49 @@
       "id": "james-washington",
       "name": "James Washington",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "James A. Washington Jr.",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/James_A._Washington_Jr.",
+          "confidence": 1
+        },
+        "profession": [
+          "judge",
+          "law professor",
+          "law school dean"
+        ],
+        "known_for": [
+          {
+            "title": "Bolling vs. Sharpe",
+            "type": "other",
+            "year": "1954"
+          },
+          {
+            "title": "Brown vs. Board of Education",
+            "type": "other",
+            "year": "1954"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "James Aaron Washington Jr. (circa 1915–1998) was a judge, law professor, and dean of the law school at Howard University. He served as a Judge of the Superior Court of the District of Columbia from 1971 to 1984, appointed by President Richard Nixon. A civil rights litigation expert, he worked with the NAACP to help formulate the legal arguments behind landmark Supreme Court cases including Bolling vs. Sharpe, which outlawed racial segregation in District of Columbia public schools, and contributed to the broader effort that culminated in Brown vs. Board of Education. Given the timeline, he likely crossed paths with Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/James_A._Washington_Jr."
+        ],
+        "enrichedAt": "2026-09-10T00:39:07.064Z",
+        "birth_year": "1915",
+        "death_year": "1998",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -254377,7 +254497,90 @@
       "id": "alexandra-wentworth",
       "name": "Alexandra Wentworth",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Ali Wentworth",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Ali_Wentworth",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "actress",
+          "comedian",
+          "author",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "In Living Color",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "Seinfeld",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Felicity",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Living It Up! with Ali & Jack",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Head Case",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Nightcap",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "Go Ask Ali",
+            "type": "podcast",
+            "year": "2020"
+          },
+          {
+            "title": "Ali's Well That Ends Well",
+            "type": "other",
+            "year": "2022"
+          },
+          {
+            "title": "Pretty Baby: Brooke Shields",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Parent Test",
+            "type": "tv",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Alexandra Wentworth is an American actress, comedian, author, and producer best known for her work as a cast member on the Fox sketch comedy series In Living Color from 1992 to 1994, where she performed impressions of numerous public figures. She gained further recognition playing Jerry Seinfeld's girlfriend Sheila in the celebrated Soup Nazi episode of Seinfeld and held a recurring role on the WB drama Felicity. She later created and starred in the Starz comedy Head Case and the series Nightcap, co-produced the Hulu docuseries Pretty Baby: Brooke Shields, and launched the podcast Go Ask Ali. She likely crossed paths with Conan O'Brien during his Late Night tenure around 1994.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Ali_Wentworth"
+        ],
+        "enrichedAt": "2026-09-10T00:40:09.766Z",
+        "birth_year": "1965",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
