@@ -6007,7 +6007,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.437Z"
+    "enrichedAt": "2026-09-10T07:18:00.987Z"
   },
   "David Cross": {
     "entity": {
@@ -17352,9 +17352,9 @@
   },
   "Charlyne Yi": {
     "entity": {
-      "name": "Charlyne Yi",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Lo Mutuc",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lo_Mutuc",
+      "confidence": 0.3
     },
     "profession": [],
     "known_for": [],
@@ -17364,10 +17364,10 @@
       "evidence": "Comedy peer and fellow stand-up. First appeared on The Tonight Show with Conan O'Brien in 2009."
     },
     "description": "",
-    "confidence": 0,
+    "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.598Z"
+    "enrichedAt": "2026-09-10T07:19:00.463Z"
   },
   "D'Arcy Carden": {
     "entity": {
@@ -28989,7 +28989,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.819Z"
+    "enrichedAt": "2026-09-10T07:19:00.683Z"
   },
   "Martha Stewart": {
     "entity": {
@@ -47104,7 +47104,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.879Z"
+    "enrichedAt": "2026-09-10T07:19:00.724Z"
   },
   "Benjamin McKenzie": {
     "entity": {
@@ -50322,7 +50322,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.657Z"
+    "enrichedAt": "2026-09-10T07:19:00.476Z"
   },
   "Chris Eigeman": {
     "entity": {
@@ -52221,7 +52221,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.878Z"
+    "enrichedAt": "2026-09-10T07:19:00.699Z"
   },
   "James Woods": {
     "entity": {
@@ -64307,7 +64307,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.342Z"
+    "enrichedAt": "2026-09-10T07:20:00.442Z"
   },
   "David Blaine": {
     "entity": {
@@ -65161,7 +65161,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.252Z"
+    "enrichedAt": "2026-09-10T07:19:00.924Z"
   },
   "George Stephanopoulos": {
     "entity": {
@@ -67821,7 +67821,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.845Z"
+    "enrichedAt": "2026-09-10T07:21:00.969Z"
   },
   "Katie Holmes": {
     "entity": {
@@ -72767,7 +72767,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.941Z"
+    "enrichedAt": "2026-09-10T07:19:00.904Z"
   },
   "Blake Anderson": {
     "entity": {
@@ -73321,7 +73321,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.585Z"
+    "enrichedAt": "2026-09-10T07:20:00.975Z"
   },
   "Conor McGregor": {
     "entity": {
@@ -78830,7 +78830,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.264Z"
+    "enrichedAt": "2026-09-10T07:19:00.946Z"
   },
   "Bill Murray": {
     "entity": {
@@ -83147,7 +83147,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.566Z"
+    "enrichedAt": "2026-09-10T07:20:00.289Z"
   },
   "Piper Perabo": {
     "entity": {
@@ -83389,7 +83389,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.788Z"
+    "enrichedAt": "2026-09-10T07:20:00.915Z"
   },
   "Michael Imperioli": {
     "entity": {
@@ -105702,21 +105702,66 @@
   "Pee-wee Herman": {
     "entity": {
       "name": "Pee-wee Herman",
-      "wikipedia_url": "",
-      "confidence": 0
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pee-wee_Herman",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "comedy character",
+      "fictional comedian"
+    ],
+    "known_for": [
+      {
+        "title": "The Pee-wee Herman Show (HBO special)",
+        "type": "tv",
+        "year": "1981"
+      },
+      {
+        "title": "Pee-wee's Big Adventure",
+        "type": "film",
+        "year": "1985"
+      },
+      {
+        "title": "Pee-wee's Playhouse",
+        "type": "tv",
+        "year": "1986"
+      },
+      {
+        "title": "Big Top Pee-wee",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Pee-wee's Big Holiday",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Cheech & Chong's Next Movie",
+        "type": "film",
+        "year": "1980"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
     },
-    "description": "",
-    "confidence": 0,
+    "description": "Pee-wee Herman is a comedy character created and portrayed by American comedian Paul Reubens, who developed the childlike persona through stage work with the Groundlings before bringing it to a wider audience. An HBO special in 1981 launched the character into the mainstream, followed by the feature film Pee-wee's Big Adventure in 1985 and the Emmy Award-winning children's series Pee-wee's Playhouse, which ran on CBS from 1986 to 1991. A second film, Big Top Pee-wee, arrived in 1988. After a lengthy hiatus, Reubens returned the character to screens with Pee-wee's Big Holiday on Netflix in 2016, his final portrayal before his death in 2023. Reubens likely crossed paths with Conan O'Brien during The Tonight Show with Conan O'Brien in 2009.",
+    "confidence": 1,
     "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.798Z"
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pee-wee_Herman"
+    ],
+    "enrichedAt": "2026-09-10T07:20:10.612Z",
+    "birth_year": "",
+    "death_year": "2023",
+    "gender": "",
+    "nationality": "American",
+    "prestige_signals": [
+      "Emmy Award-winning (Pee-wee's Playhouse)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Gabourey Sidibe": {
     "entity": {
@@ -109005,7 +109050,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:50:00.579Z"
+    "enrichedAt": "2026-09-10T07:20:01.596Z"
   },
   "Brent Morin": {
     "entity": {
@@ -114465,7 +114510,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:51:00.384Z"
+    "enrichedAt": "2026-09-10T07:21:00.345Z"
   },
   "Conan Scrapisode": {
     "entity": {
@@ -114484,7 +114529,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:51:00.402Z"
+    "enrichedAt": "2026-09-10T07:21:00.314Z"
   },
   "Ben Falcone": {
     "entity": {
@@ -115065,7 +115110,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:51:00.429Z"
+    "enrichedAt": "2026-09-10T07:21:00.596Z"
   },
   "Malcolm Gladwell": {
     "entity": {
@@ -126090,7 +126135,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:51:00.670Z"
+    "enrichedAt": "2026-09-10T07:21:00.608Z"
   },
   "Daisy Fuentes": {
     "entity": {
@@ -128330,9 +128375,9 @@
   },
   "The Frugal Gourmet": {
     "entity": {
-      "name": "Jeff Smith (chef)",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Jeff_Smith_(chef)",
-      "confidence": 0.3
+      "name": "The Frugal Gourmet",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -128342,10 +128387,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
     "description": "",
-    "confidence": 0.3,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:51:00.401Z"
+    "enrichedAt": "2026-09-10T07:21:00.935Z"
   },
   "Charles Dutton": {
     "entity": {
@@ -128364,7 +128409,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:51:00.952Z"
+    "enrichedAt": "2026-09-10T07:22:00.778Z"
   },
   "Carol Kane": {
     "entity": {
@@ -130495,7 +130540,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:51:00.895Z"
+    "enrichedAt": "2026-09-10T07:21:00.898Z"
   },
   "Gena Lee Nolin": {
     "entity": {
@@ -131754,7 +131799,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:51:00.719Z"
+    "enrichedAt": "2026-09-10T07:21:00.898Z"
   },
   "Ally Walker": {
     "entity": {
@@ -132765,7 +132810,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.206Z"
+    "enrichedAt": "2026-09-10T07:22:00.323Z"
   },
   "Jane Seymour": {
     "entity": {
@@ -132776,25 +132821,19 @@
     "profession": [
       "Queen of England"
     ],
-    "known_for": [
-      {
-        "title": "Queen of England (third wife of Henry VIII)",
-        "type": "other",
-        "year": "1536"
-      }
-    ],
+    "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "Jane Seymour (c. 1508–1537) was Queen of England as the third wife of King Henry VIII, reigning from 1536 until her death from postnatal complications following the birth of her only child, the future King Edward VI. Known for her gentle and peaceable nature, she was the only wife of Henry VIII to receive a queen's funeral, and Henry was later buried alongside her at St George's Chapel, Windsor Castle. The actress Jane Seymour, who shares her name with this historical figure, likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1998.",
+    "description": "Jane Seymour (c. 1508–1513 to 1537) was Queen of England as the third wife of King Henry VIII, ascending to the throne following the execution of Anne Boleyn in 1536. Praised by contemporaries for her gentle and peaceable nature, she is historically notable as the only one of Henry's wives to produce a male heir, the future King Edward VI, though she died of postnatal complications shortly after his birth. She was the only wife of Henry VIII to receive a queen's funeral, and Henry was later buried alongside her. A figure from the sixteenth century, she likely crossed paths with the world of late-night television only through historical dramatizations that may have appeared on programs such as Late Night with Conan O'Brien.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Jane_Seymour"
     ],
-    "enrichedAt": "2026-09-10T06:51:07.125Z",
+    "enrichedAt": "2026-09-10T07:22:07.684Z",
     "birth_year": "",
     "death_year": "1537",
     "gender": "female",
@@ -146596,7 +146635,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.271Z"
+    "enrichedAt": "2026-09-10T07:22:00.323Z"
   },
   "John Melendez": {
     "entity": {
@@ -153006,7 +153045,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.574Z"
+    "enrichedAt": "2026-09-10T07:22:00.634Z"
   },
   "Denis Hamill": {
     "entity": {
@@ -289191,7 +289230,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:43:01.438Z"
+    "enrichedAt": "2026-09-10T07:17:00.747Z"
   },
   "Justin Chon": {
     "entity": {
@@ -300000,7 +300039,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:43:00.943Z"
+    "enrichedAt": "2026-09-10T07:17:00.407Z"
   },
   "Chrissie Hynde": {
     "entity": {
@@ -301355,7 +301394,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:44:01.313Z"
+    "enrichedAt": "2026-09-10T07:17:00.695Z"
   },
   "Yves Rossy": {
     "entity": {
@@ -301826,7 +301865,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:44:01.100Z"
+    "enrichedAt": "2026-09-10T07:17:00.756Z"
   },
   "Mission Conan": {
     "entity": {
@@ -301845,7 +301884,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:44:00.791Z"
+    "enrichedAt": "2026-09-10T07:17:00.449Z"
   },
   "Gus Kenworthy": {
     "entity": {
@@ -302256,7 +302295,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:45:01.219Z"
+    "enrichedAt": "2026-09-10T07:17:00.890Z"
   },
   "Robert Kazinsky": {
     "entity": {
@@ -303549,7 +303588,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:45:00.895Z"
+    "enrichedAt": "2026-09-10T07:17:00.669Z"
   },
   "Mary Elizabeth Ellis": {
     "entity": {
@@ -304542,7 +304581,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:46:00.529Z"
+    "enrichedAt": "2026-09-10T07:17:00.914Z"
   },
   "Tavis Smiley": {
     "entity": {
@@ -305285,7 +305324,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:46:01.735Z"
+    "enrichedAt": "2026-09-10T07:18:00.295Z"
   },
   "Nate Diaz": {
     "entity": {
@@ -306247,7 +306286,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:46:01.223Z"
+    "enrichedAt": "2026-09-10T07:17:00.976Z"
   },
   "Ben Zobrist": {
     "entity": {
@@ -307238,7 +307277,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:46:00.954Z"
+    "enrichedAt": "2026-09-10T07:17:00.968Z"
   },
   "Britt Lower": {
     "entity": {
@@ -307860,7 +307899,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:47:01.058Z"
+    "enrichedAt": "2026-09-10T07:18:00.281Z"
   },
   "Scott Eastwood": {
     "entity": {
@@ -311458,7 +311497,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:48:00.814Z"
+    "enrichedAt": "2026-09-10T07:18:00.618Z"
   },
   "Nash Edgerton": {
     "entity": {
@@ -311760,7 +311799,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:48:01.008Z"
+    "enrichedAt": "2026-09-10T07:18:00.861Z"
   },
   "Alexandra Shipp": {
     "entity": {
@@ -312659,7 +312698,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:48:00.776Z"
+    "enrichedAt": "2026-09-10T07:18:00.766Z"
   },
   "Daniel Cormier": {
     "entity": {
@@ -313644,7 +313683,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:48:00.562Z"
+    "enrichedAt": "2026-09-10T07:18:00.407Z"
   },
   "Ben Sinclair": {
     "entity": {
@@ -313663,7 +313702,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:48:00.783Z"
+    "enrichedAt": "2026-09-10T07:18:00.691Z"
   },
   "John Bradley": {
     "entity": {
@@ -313682,7 +313721,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:48:00.996Z"
+    "enrichedAt": "2026-09-10T07:18:00.638Z"
   },
   "Anna Konkle": {
     "entity": {
@@ -314409,7 +314448,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:48:01.002Z"
+    "enrichedAt": "2026-09-10T07:18:00.839Z"
   },
   "Tom Cruise": {
     "entity": {
@@ -314580,7 +314619,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.655Z"
+    "enrichedAt": "2026-09-10T07:19:00.504Z"
   },
   "Cara Delevingne": {
     "entity": {
@@ -315041,7 +315080,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.375Z"
+    "enrichedAt": "2026-09-10T07:18:00.911Z"
   },
   "Heidi Gardner": {
     "entity": {
@@ -315953,22 +315992,49 @@
   },
   "Chris Fleming": {
     "entity": {
-      "name": "Chris Fleming",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Chris Fleming (TV personality)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Fleming_(TV_personality)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "medium",
+      "paranormal researcher",
+      "television personality",
+      "public speaker"
+    ],
+    "known_for": [
+      {
+        "title": "Dead Famous",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Psychic Kids: Children of the Paranormal",
+        "type": "tv",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan O'Brien Needs a Friend in 2025."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:49:00.721Z"
+    "description": "Chris Fleming is an American medium, paranormal researcher, television personality, and public speaker best known as the IPA award-winning co-host of the syndicated paranormal series Dead Famous, which aired from 2004 to 2006 and remains in international syndication. He also served as co-host and featured psychic on A&E's Psychic Kids: Children of the Paranormal. In addition to his television work, Fleming regularly speaks at colleges, universities, and public events across the United States on paranormal topics. He likely first crossed paths with Conan O'Brien's world when he appeared on Conan O'Brien Needs a Friend in 2025.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chris_Fleming_(TV_personality)"
+    ],
+    "enrichedAt": "2026-09-10T07:19:08.479Z",
+    "birth_year": "1967",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "IPA award-winning"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Albert Brooks and Rob Reiner": {
     "entity": {

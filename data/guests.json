@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T07:16:02.608Z",
+  "generatedAt": "2026-09-10T07:22:08.982Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -448028,7 +448028,52 @@
       "id": "chris-fleming",
       "name": "Chris Fleming",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Chris Fleming (TV personality)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Fleming_(TV_personality)",
+          "confidence": 1
+        },
+        "profession": [
+          "medium",
+          "paranormal researcher",
+          "television personality",
+          "public speaker"
+        ],
+        "known_for": [
+          {
+            "title": "Dead Famous",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Psychic Kids: Children of the Paranormal",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2025."
+        },
+        "description": "Chris Fleming is an American medium, paranormal researcher, television personality, and public speaker best known as the IPA award-winning co-host of the syndicated paranormal series Dead Famous, which aired from 2004 to 2006 and remains in international syndication. He also served as co-host and featured psychic on A&E's Psychic Kids: Children of the Paranormal. In addition to his television work, Fleming regularly speaks at colleges, universities, and public events across the United States on paranormal topics. He likely first crossed paths with Conan O'Brien's world when he appeared on Conan O'Brien Needs a Friend in 2025.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chris_Fleming_(TV_personality)"
+        ],
+        "enrichedAt": "2026-09-10T07:19:08.479Z",
+        "birth_year": "1967",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "IPA award-winning"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
