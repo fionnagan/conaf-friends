@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T06:26:07.651Z",
+  "generatedAt": "2026-09-10T06:33:04.237Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -328641,7 +328641,49 @@
       "id": "rl-burnside",
       "name": "RL Burnside",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "R. L. Burnside",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/R._L._Burnside",
+          "confidence": 1
+        },
+        "profession": [
+          "singer",
+          "songwriter",
+          "guitarist"
+        ],
+        "known_for": [
+          {
+            "title": "Sound Machine Groove",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "The Land Where the Blues Began",
+            "type": "tv",
+            "year": "1978"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "R. L. Burnside (1926–2005) was an American hill country blues singer, songwriter, and guitarist who spent decades playing juke joints and festivals in rural Mississippi before gaining wider recognition in 1995 through his recordings and touring with Jon Spencer, which introduced his music to punk and garage rock audiences. His earliest recordings date to 1967, with subsequent releases on Arhoolie and Adelphi Records, and he performed at the New Orleans Jazz and Heritage Festival nine times over his career. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2000, near the later stage of his performing life.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/R._L._Burnside"
+        ],
+        "enrichedAt": "2026-09-10T06:27:08.163Z",
+        "birth_year": "1926",
+        "death_year": "2005",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -330507,7 +330549,92 @@
       "id": "chris-titus",
       "name": "Chris Titus",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Christopher Titus",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Christopher_Titus",
+          "confidence": 1
+        },
+        "profession": [
+          "comedian",
+          "podcaster",
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Titus",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "Norman Rockwell is Bleeding",
+            "type": "other",
+            "year": "2004"
+          },
+          {
+            "title": "5th Annual End of the World Tour",
+            "type": "other",
+            "year": "2007"
+          },
+          {
+            "title": "Love is Evol",
+            "type": "other",
+            "year": "2009"
+          },
+          {
+            "title": "Neverlution",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "Voice in My Head",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "Angry Pursuit of Happiness",
+            "type": "other",
+            "year": "2014"
+          },
+          {
+            "title": "Born with a Defect",
+            "type": "other",
+            "year": "2016"
+          },
+          {
+            "title": "Amerigeddon",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "Christopher Titus Podcast",
+            "type": "podcast",
+            "year": "2011"
+          }
+        ],
+        "recent_work": [
+          "Zero Side Effects (2023 stand-up special)",
+          "Carrying Monsters (2024 stand-up tour)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Chris Titus is an American comedian, actor, and podcaster best known as the star, executive producer, and co-creator of the FOX sitcom Titus, which ran from 2000 to 2002 and drew heavily from his experiences growing up in a dysfunctional family. He has released a long string of stand-up specials, including Zero Side Effects in 2023 and the touring show Carrying Monsters in 2024, and has co-hosted the Christopher Titus Podcast since 2011. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2001, during the run of his FOX series.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Christopher_Titus"
+        ],
+        "enrichedAt": "2026-09-10T06:28:09.551Z",
+        "birth_year": "1964",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -332718,7 +332845,174 @@
       "id": "tim-stack",
       "name": "Tim Stack",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Timothy Stack",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Timothy_Stack",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "producer",
+          "screenwriter"
+        ],
+        "known_for": [
+          {
+            "title": "Days of Our Lives",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Benson",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Laverne & Shirley",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Remington Steele",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Night Court",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "ALF",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Punky Brewster",
+            "type": "tv",
+            "year": "1986"
+          },
+          {
+            "title": "The Golden Girls",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Wonder Years",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Seinfeld",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Wings",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Parker Lewis Can't Lose",
+            "type": "tv",
+            "year": "1990"
+          },
+          {
+            "title": "Night Stand with Dick Dietrick",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "Son of the Beach",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "Back to School",
+            "type": "film",
+            "year": "1986"
+          },
+          {
+            "title": "The Brave Little Toaster",
+            "type": "film",
+            "year": "1987"
+          },
+          {
+            "title": "Clifford",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "Idle Hands",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Cast Away",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Dumb and Dumberer: When Harry Met Lloyd",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Scary Movie 3",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "American Pie Presents: Band Camp",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Pumpcast News",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "My Name Is Earl",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Malcolm in the Middle",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Curb Your Enthusiasm",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Ghosts",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Tim Stack is an American actor, producer, and screenwriter born in 1954 who built a long career in television and film after training with the improvisational comedy group The Groundlings. He is perhaps best known for starring as Dick Dietrick on the talk-show satire Night Stand with Dick Dietrick and as Notch Johnson on the Howard Stern-produced Baywatch parody Son of the Beach. His film credits include Back to School, Cast Away, Scary Movie 3, and voice work in The Brave Little Toaster series. He also appeared in a recurring sketch on The Tonight Show with Jay Leno and guest starred on Seinfeld, Curb Your Enthusiasm, and Ghosts. Stack likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2001.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Timothy_Stack"
+        ],
+        "enrichedAt": "2026-09-10T06:28:12.323Z",
+        "birth_year": "1954",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -345711,7 +346005,126 @@
       "id": "luis-guzman",
       "name": "Luis Guzman",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Luis Guzmán",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Luis_Guzm%C3%A1n",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Boogie Nights",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Out of Sight",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Magnolia",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "The Limey",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Traffic",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Punch-Drunk Love",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Q & A",
+            "type": "film",
+            "year": "1990"
+          },
+          {
+            "title": "The Hard Way",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Carlito's Way",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Snake Eyes",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Keanu",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Oz",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "Narcos",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Code Black",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Godfather of Harlem",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Perpetual Grace, LTD",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Wednesday",
+            "type": "tv",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [
+          "Wednesday"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
+        },
+        "description": "Luis Guzmán is a Puerto Rican actor whose career spans more than four decades across film and television. He is closely associated with the films of Paul Thomas Anderson, appearing in Boogie Nights, Magnolia, and Punch-Drunk Love, and of Steven Soderbergh, with credits including Out of Sight, The Limey, and Traffic. His role in The Limey earned him an Independent Spirit Award nomination for Best Supporting Male. On television, he has starred in Oz, Narcos, Code Black, Godfather of Harlem, and Perpetual Grace, LTD, and currently plays Gomez Addams on Wednesday. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2003.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Luis_Guzm%C3%A1n"
+        ],
+        "enrichedAt": "2026-09-10T06:31:10.814Z",
+        "birth_year": "1956",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "Puerto Rican",
+        "prestige_signals": [
+          "Independent Spirit Award for Best Supporting Male nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -350327,7 +350740,75 @@
       "id": "omarosa-stallworth",
       "name": "Omarosa Stallworth",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Omarosa Manigault Newman",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Omarosa_Manigault_Newman",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "reality television personality",
+          "author",
+          "political consultant",
+          "White House aide"
+        ],
+        "known_for": [
+          {
+            "title": "The Apprentice",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "The Celebrity Apprentice",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "The Ultimate Merger",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "All-Star Celebrity Apprentice",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Celebrity Big Brother",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Big Brother Australia VIP",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Unhinged",
+            "type": "other",
+            "year": "2018"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
+        },
+        "description": "Omarosa is an American reality television personality, author, and former political consultant best known for her combative persona on the first season of NBC's The Apprentice in 2004, which launched her into the public eye as what one outlet dubbed reality TV's number one bad girl. She subsequently appeared on The Celebrity Apprentice, The Ultimate Merger, All-Star Celebrity Apprentice, and two editions of Celebrity Big Brother. She also served as a White House aide under both Bill Clinton and Donald Trump, and in 2018 published Unhinged, a memoir sharply critical of the Trump administration. She likely crossed paths with Conan O'Brien during her rise to fame, with a first appearance on Late Night with Conan O'Brien believed to have taken place in 2004.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Omarosa_Manigault_Newman"
+        ],
+        "enrichedAt": "2026-09-10T06:32:10.330Z",
+        "birth_year": "1974",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -352377,7 +352858,90 @@
       "id": "vince-curatola",
       "name": "Vince Curatola",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Vincent Curatola",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Vincent_Curatola",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "singer"
+        ],
+        "known_for": [
+          {
+            "title": "The Sopranos",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Law & Order",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Gotti",
+            "type": "tv",
+            "year": "1996"
+          },
+          {
+            "title": "Exiled",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "The Good Wife",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Blue Bloods",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Blacklist",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Person of Interest",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Law & Order: SVU",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Killing Them Softly",
+            "type": "film",
+            "year": "2012"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
+        },
+        "description": "Vince Curatola is an American actor and singer best known for playing New York mafioso Johnny Sack across all six seasons of the HBO drama The Sopranos, a role that earned him two SAG Award nominations. Before landing that signature part, he appeared in Law & Order, the TV movie Gotti, and Exiled. His later television credits include The Good Wife, Blue Bloods, The Blacklist, Person of Interest, and Law & Order: SVU, as well as the 2012 film Killing Them Softly. He also performs as a singer and has appeared onstage with the band Chicago. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2004, during the height of The Sopranos run.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Vincent_Curatola"
+        ],
+        "enrichedAt": "2026-09-10T06:32:07.486Z",
+        "birth_year": "1953",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "SAG Award nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -352584,7 +353148,64 @@
       "id": "manny-yarbrough",
       "name": "Manny Yarbrough",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Emmanuel Yarbrough",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Emmanuel_Yarbrough",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "martial artist",
+          "professional wrestler",
+          "football player",
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "UFC 3",
+            "type": "other",
+            "year": "1994"
+          },
+          {
+            "title": "Mr. and Mrs. Khiladi",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Oz",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Sumo Bruno",
+            "type": "film",
+            "year": "2000"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
+        },
+        "description": "Emmanuel 'Manny' Yarbrough was an American martial artist, professional wrestler, football player, and actor who rose to prominence through his career in amateur sumo, becoming the 1995 World Amateur Sumo Champion and one of the most recognized sumo wrestlers outside Japan. He held the Guinness World Record for the heaviest living athlete and competed in mixed martial arts, most notably appearing at UFC 3 in 1994. His acting credits include the Bollywood film Mr. and Mrs. Khiladi and a recurring role on the HBO drama Oz. He likely crossed paths with Conan O'Brien during a Late Night with Conan O'Brien appearance around 2004. Yarbrough died in December 2015 at age 51.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Emmanuel_Yarbrough"
+        ],
+        "enrichedAt": "2026-09-10T06:32:08.834Z",
+        "birth_year": "1964",
+        "death_year": "2015",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Guinness World Record for the heaviest living athlete",
+          "NCAA All-American Division II wrestler",
+          "1995 World Amateur Sumo Champion"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -353017,7 +353638,49 @@
       "id": "franz-ferdinand",
       "name": "Franz Ferdinand",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Archduke Franz Ferdinand of Austria",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Archduke_Franz_Ferdinand_of_Austria",
+          "confidence": 1
+        },
+        "profession": [
+          "Archduke",
+          "Heir presumptive",
+          "Military officer"
+        ],
+        "known_for": [
+          {
+            "title": "Heir presumptive to the throne of Austria-Hungary",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Assassination in Sarajevo (trigger of World War I)",
+            "type": "other",
+            "year": "1914"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
+        },
+        "description": "Archduke Franz Ferdinand of Austria (1863–1914) was the heir presumptive to the Austro-Hungarian throne and a senior military figure who served as inspector general of the Austro-Hungarian Armed Forces from 1913. His morganatic marriage to Sophie Chotek was a defining personal episode of his life, requiring him to renounce his descendants' succession rights. His assassination in Sarajevo on 28 June 1914 triggered the July Crisis and set in motion the chain of events that started World War I. Given the timeline, any connection to Late Night with Conan O'Brien would have been unlikely, though the Scottish rock band that shares his name likely appeared on the programme in 2004.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Archduke_Franz_Ferdinand_of_Austria"
+        ],
+        "enrichedAt": "2026-09-10T06:32:09.040Z",
+        "birth_year": "1863",
+        "death_year": "1914",
+        "gender": "male",
+        "nationality": "Austrian",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",

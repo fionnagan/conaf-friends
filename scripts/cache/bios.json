@@ -223281,7 +223281,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T09:55:00.747Z"
+    "enrichedAt": "2026-09-10T06:27:00.509Z"
   },
   "Vincent Pastore": {
     "entity": {
@@ -224639,7 +224639,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T09:56:10.168Z"
+    "enrichedAt": "2026-09-10T06:27:00.511Z"
   },
   "Britney Spears": {
     "entity": {
@@ -225534,7 +225534,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T09:57:08.646Z"
+    "enrichedAt": "2026-09-10T06:27:00.487Z"
   },
   "Greg Hahn": {
     "entity": {
@@ -226302,7 +226302,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T09:58:00.704Z"
+    "enrichedAt": "2026-09-10T06:27:00.738Z"
   },
   "The Max Weinberg Seven": {
     "entity": {
@@ -226321,7 +226321,7 @@
     "confidence": 0.475,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T09:58:01.025Z"
+    "enrichedAt": "2026-09-10T06:27:00.751Z"
   },
   "Judge Mills Lane": {
     "entity": {
@@ -226479,7 +226479,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T09:58:09.609Z"
+    "enrichedAt": "2026-09-10T06:27:00.779Z"
   },
   "Squirrel Nut Zippers": {
     "entity": {
@@ -226569,20 +226569,44 @@
     "entity": {
       "name": "R. L. Burnside",
       "wikipedia_url": "https://en.wikipedia.org/wiki/R._L._Burnside",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "singer",
+      "songwriter",
+      "guitarist"
+    ],
+    "known_for": [
+      {
+        "title": "Sound Machine Groove",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "The Land Where the Blues Began",
+        "type": "tv",
+        "year": "1978"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T09:58:11.684Z"
+    "description": "R. L. Burnside (1926–2005) was an American hill country blues singer, songwriter, and guitarist who spent decades playing juke joints and festivals in rural Mississippi before gaining wider recognition in 1995 through his recordings and touring with Jon Spencer, which introduced his music to punk and garage rock audiences. His earliest recordings date to 1967, with subsequent releases on Arhoolie and Adelphi Records, and he performed at the New Orleans Jazz and Heritage Festival nine times over his career. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2000, near the later stage of his performing life.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/R._L._Burnside"
+    ],
+    "enrichedAt": "2026-09-10T06:27:08.163Z",
+    "birth_year": "1926",
+    "death_year": "2005",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "music",
+    "upcoming_work": []
   },
   "Rulon Gardner": {
     "entity": {
@@ -226854,9 +226878,9 @@
   },
   "Mayor Rudolph Giuliani": {
     "entity": {
-      "name": "Rudy Giuliani",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Rudy_Giuliani",
-      "confidence": 0.5333333333333333
+      "name": "Mayor Rudolph Giuliani",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -226866,10 +226890,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
     },
     "description": "",
-    "confidence": 0.5333333333333333,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T09:59:00.644Z"
+    "enrichedAt": "2026-09-10T06:27:00.962Z"
   },
   "Shemekia Copeland": {
     "entity": {
@@ -227900,7 +227924,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:00:00.126Z"
+    "enrichedAt": "2026-09-10T06:27:00.971Z"
   },
   "Brooke Smith": {
     "entity": {
@@ -227919,7 +227943,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:00:00.291Z"
+    "enrichedAt": "2026-09-10T06:27:01.000Z"
   },
   "Chris Carter": {
     "entity": {
@@ -227938,7 +227962,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:00:00.818Z"
+    "enrichedAt": "2026-09-10T06:28:01.363Z"
   },
   "The Minus Five": {
     "entity": {
@@ -228059,20 +228083,87 @@
     "entity": {
       "name": "Christopher Titus",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Christopher_Titus",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "comedian",
+      "podcaster",
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "Titus",
+        "type": "tv",
+        "year": "2000"
+      },
+      {
+        "title": "Norman Rockwell is Bleeding",
+        "type": "other",
+        "year": "2004"
+      },
+      {
+        "title": "5th Annual End of the World Tour",
+        "type": "other",
+        "year": "2007"
+      },
+      {
+        "title": "Love is Evol",
+        "type": "other",
+        "year": "2009"
+      },
+      {
+        "title": "Neverlution",
+        "type": "other",
+        "year": "2011"
+      },
+      {
+        "title": "Voice in My Head",
+        "type": "other",
+        "year": "2013"
+      },
+      {
+        "title": "Angry Pursuit of Happiness",
+        "type": "other",
+        "year": "2014"
+      },
+      {
+        "title": "Born with a Defect",
+        "type": "other",
+        "year": "2016"
+      },
+      {
+        "title": "Amerigeddon",
+        "type": "other",
+        "year": "2018"
+      },
+      {
+        "title": "Christopher Titus Podcast",
+        "type": "podcast",
+        "year": "2011"
+      }
+    ],
+    "recent_work": [
+      "Zero Side Effects (2023 stand-up special)",
+      "Carrying Monsters (2024 stand-up tour)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:00:15.908Z"
+    "description": "Chris Titus is an American comedian, actor, and podcaster best known as the star, executive producer, and co-creator of the FOX sitcom Titus, which ran from 2000 to 2002 and drew heavily from his experiences growing up in a dysfunctional family. He has released a long string of stand-up specials, including Zero Side Effects in 2023 and the touring show Carrying Monsters in 2024, and has co-hosted the Christopher Titus Podcast since 2011. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2001, during the run of his FOX series.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Christopher_Titus"
+    ],
+    "enrichedAt": "2026-09-10T06:28:09.551Z",
+    "birth_year": "1964",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Paul Hogan": {
     "entity": {
@@ -229453,20 +229544,169 @@
     "entity": {
       "name": "Timothy Stack",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Timothy_Stack",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "producer",
+      "screenwriter"
+    ],
+    "known_for": [
+      {
+        "title": "Days of Our Lives",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Benson",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Laverne & Shirley",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Remington Steele",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Night Court",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "ALF",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Punky Brewster",
+        "type": "tv",
+        "year": "1986"
+      },
+      {
+        "title": "The Golden Girls",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Wonder Years",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Seinfeld",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Wings",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Parker Lewis Can't Lose",
+        "type": "tv",
+        "year": "1990"
+      },
+      {
+        "title": "Night Stand with Dick Dietrick",
+        "type": "tv",
+        "year": "1995"
+      },
+      {
+        "title": "Son of the Beach",
+        "type": "tv",
+        "year": "2000"
+      },
+      {
+        "title": "Back to School",
+        "type": "film",
+        "year": "1986"
+      },
+      {
+        "title": "The Brave Little Toaster",
+        "type": "film",
+        "year": "1987"
+      },
+      {
+        "title": "Clifford",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "Idle Hands",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Cast Away",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Dumb and Dumberer: When Harry Met Lloyd",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Scary Movie 3",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "American Pie Presents: Band Camp",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Pumpcast News",
+        "type": "tv",
+        "year": "2005"
+      },
+      {
+        "title": "My Name Is Earl",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Malcolm in the Middle",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Curb Your Enthusiasm",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Ghosts",
+        "type": "tv",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:02:00.251Z"
+    "description": "Tim Stack is an American actor, producer, and screenwriter born in 1954 who built a long career in television and film after training with the improvisational comedy group The Groundlings. He is perhaps best known for starring as Dick Dietrick on the talk-show satire Night Stand with Dick Dietrick and as Notch Johnson on the Howard Stern-produced Baywatch parody Son of the Beach. His film credits include Back to School, Cast Away, Scary Movie 3, and voice work in The Brave Little Toaster series. He also appeared in a recurring sketch on The Tonight Show with Jay Leno and guest starred on Seinfeld, Curb Your Enthusiasm, and Ghosts. Stack likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2001.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Timothy_Stack"
+    ],
+    "enrichedAt": "2026-09-10T06:28:12.323Z",
+    "birth_year": "1954",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Bridget Fonda": {
     "entity": {
@@ -231504,7 +231744,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:04:00.769Z"
+    "enrichedAt": "2026-09-10T06:28:00.779Z"
   },
   "Leo Allen": {
     "entity": {
@@ -232006,9 +232246,9 @@
   },
   "Dr. Ruth": {
     "entity": {
-      "name": "Ruth Westheimer",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Ruth_Westheimer",
-      "confidence": 0.6499999999999999
+      "name": "Dr. Ruth",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -232018,10 +232258,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
     },
     "description": "",
-    "confidence": 0.6499999999999999,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:04:17.308Z"
+    "enrichedAt": "2026-09-10T06:29:00.939Z"
   },
   "Ravi Shankar": {
     "entity": {
@@ -232244,7 +232484,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:05:00.520Z"
+    "enrichedAt": "2026-09-10T06:29:00.684Z"
   },
   "Jim Short": {
     "entity": {
@@ -232263,7 +232503,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:05:00.842Z"
+    "enrichedAt": "2026-09-10T06:29:01.025Z"
   },
   "Natalie Merchant": {
     "entity": {
@@ -232555,7 +232795,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:05:18.992Z"
+    "enrichedAt": "2026-09-10T06:29:01.052Z"
   },
   "Clem Snide": {
     "entity": {
@@ -236003,135 +236243,21 @@
   "Billy Campbell": {
     "entity": {
       "name": "Billy Campbell",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Billy_Campbell",
-      "confidence": 1
+      "wikipedia_url": "",
+      "confidence": 0
     },
-    "profession": [
-      "film actor",
-      "television actor"
-    ],
-    "known_for": [
-      {
-        "title": "Dynasty",
-        "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "The Rocketeer",
-        "type": "film",
-        "year": "1991"
-      },
-      {
-        "title": "Once and Again",
-        "type": "tv",
-        "year": "1999"
-      },
-      {
-        "title": "Crime Story",
-        "type": "tv",
-        "year": "1986"
-      },
-      {
-        "title": "Tales of the City",
-        "type": "tv",
-        "year": "1993"
-      },
-      {
-        "title": "More Tales of the City",
-        "type": "tv",
-        "year": "1998"
-      },
-      {
-        "title": "Further Tales of the City",
-        "type": "tv",
-        "year": "2001"
-      },
-      {
-        "title": "Bram Stoker's Dracula",
-        "type": "film",
-        "year": "1992"
-      },
-      {
-        "title": "Gettysburg",
-        "type": "film",
-        "year": "1993"
-      },
-      {
-        "title": "Enough",
-        "type": "film",
-        "year": "2002"
-      },
-      {
-        "title": "The Stranger Beside Me",
-        "type": "tv",
-        "year": "2003"
-      },
-      {
-        "title": "The 4400",
-        "type": "tv",
-        "year": "2004"
-      },
-      {
-        "title": "The O.C.",
-        "type": "tv",
-        "year": "2005"
-      },
-      {
-        "title": "The Killing",
-        "type": "tv",
-        "year": "2011"
-      },
-      {
-        "title": "Killing Lincoln",
-        "type": "tv",
-        "year": "2013"
-      },
-      {
-        "title": "Helix",
-        "type": "tv",
-        "year": "2014"
-      },
-      {
-        "title": "Cardinal",
-        "type": "tv",
-        "year": "2017"
-      },
-      {
-        "title": "I Know What You Did Last Summer",
-        "type": "tv",
-        "year": "2025"
-      }
-    ],
+    "profession": [],
+    "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "Billy Campbell is an American film and television actor who first gained wide recognition playing Luke Fuller on Dynasty and the title role in the 1991 superhero film The Rocketeer. His film credits include Bram Stoker's Dracula, Gettysburg, and Enough, while his television work spans Crime Story, the Golden Globe-nominated drama Once and Again, The 4400, The Killing, and Helix. He earned three Canadian Screen Awards for his lead role in the CTV drama Cardinal. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2002, and he is set to appear in the 2025 reboot of I Know What You Did Last Summer.",
-    "confidence": 1,
+    "description": "",
+    "confidence": 0,
     "needs_review": true,
-    "sources": [
-      "https://en.wikipedia.org/wiki/Billy_Campbell"
-    ],
-    "enrichedAt": "2026-09-09T10:08:34.277Z",
-    "birth_year": "1959",
-    "death_year": "",
-    "gender": "male",
-    "nationality": "American",
-    "prestige_signals": [
-      "Golden Globe Award nomination for Best Actor – Television Series Drama",
-      "Canadian Screen Award for Best Actor in a Limited Series or Television Film (2018)",
-      "Canadian Screen Award for Best Actor in a Limited Series or Television Film (2019)",
-      "Canadian Screen Award for Best Actor in a Limited Series or Television Film (2020)"
-    ],
-    "primary_platform": "tv",
-    "upcoming_work": [
-      {
-        "title": "I Know What You Did Last Summer",
-        "type": "tv",
-        "year": "2025"
-      }
-    ]
+    "sources": [],
+    "enrichedAt": "2026-09-10T06:29:00.938Z"
   },
   "George Gray": {
     "entity": {
@@ -236150,7 +236276,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:09:00.736Z"
+    "enrichedAt": "2026-09-10T06:30:01.085Z"
   },
   "Abra Moore": {
     "entity": {
@@ -236534,7 +236660,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:09:12.162Z"
+    "enrichedAt": "2026-09-10T06:30:00.751Z"
   },
   "Paul Westerberg": {
     "entity": {
@@ -237842,7 +237968,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:10:33.942Z"
+    "enrichedAt": "2026-09-10T06:30:00.421Z"
   },
   "Dondre T Whitfield": {
     "entity": {
@@ -237861,7 +237987,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:10:34.194Z"
+    "enrichedAt": "2026-09-10T06:30:00.410Z"
   },
   "Matchbox Twenty": {
     "entity": {
@@ -238634,9 +238760,9 @@
   },
   "Karolina Kurkova": {
     "entity": {
-      "name": "Karolína Kurková",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Karol%C3%ADna_Kurkov%C3%A1",
-      "confidence": 0.3
+      "name": "Karolina Kurkova",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -238646,16 +238772,16 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
     "description": "",
-    "confidence": 0.3,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:11:15.618Z"
+    "enrichedAt": "2026-09-10T06:30:00.708Z"
   },
   "Goran Visnjic": {
     "entity": {
-      "name": "Goran Višnjić",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Goran_Vi%C5%A1nji%C4%87",
-      "confidence": 0.6499999999999999
+      "name": "Goran Visnjic",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -238665,10 +238791,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
     "description": "",
-    "confidence": 0.6499999999999999,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:11:16.057Z"
+    "enrichedAt": "2026-09-10T06:30:00.707Z"
   },
   "MC Hammer": {
     "entity": {
@@ -239113,13 +239239,13 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:12:00.398Z"
+    "enrichedAt": "2026-09-10T06:30:00.928Z"
   },
   "Sofia Vergara": {
     "entity": {
-      "name": "Sofía Vergara",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Sof%C3%ADa_Vergara",
-      "confidence": 0.6499999999999999
+      "name": "Sofia Vergara",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -239129,10 +239255,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
     "description": "",
-    "confidence": 0.6499999999999999,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:12:00.683Z"
+    "enrichedAt": "2026-09-10T06:30:00.929Z"
   },
   "Veronica Vera": {
     "entity": {
@@ -239448,9 +239574,9 @@
   },
   "Adam Glasser": {
     "entity": {
-      "name": "Seymore Butts",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Seymore_Butts",
-      "confidence": 0.3
+      "name": "Adam Glasser",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -239460,29 +239586,130 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
     "description": "",
-    "confidence": 0.3,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:12:13.667Z"
+    "enrichedAt": "2026-09-10T06:30:00.971Z"
   },
   "Luis Guzman": {
     "entity": {
       "name": "Luis Guzmán",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Luis_Guzm%C3%A1n",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "Boogie Nights",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Out of Sight",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Magnolia",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "The Limey",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "Traffic",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Punch-Drunk Love",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Q & A",
+        "type": "film",
+        "year": "1990"
+      },
+      {
+        "title": "The Hard Way",
+        "type": "film",
+        "year": "1991"
+      },
+      {
+        "title": "Carlito's Way",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "Snake Eyes",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Keanu",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Oz",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "Narcos",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Code Black",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Godfather of Harlem",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Perpetual Grace, LTD",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Wednesday",
+        "type": "tv",
+        "year": "2022"
+      }
+    ],
+    "recent_work": [
+      "Wednesday"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:12:13.917Z"
+    "description": "Luis Guzmán is a Puerto Rican actor whose career spans more than four decades across film and television. He is closely associated with the films of Paul Thomas Anderson, appearing in Boogie Nights, Magnolia, and Punch-Drunk Love, and of Steven Soderbergh, with credits including Out of Sight, The Limey, and Traffic. His role in The Limey earned him an Independent Spirit Award nomination for Best Supporting Male. On television, he has starred in Oz, Narcos, Code Black, Godfather of Harlem, and Perpetual Grace, LTD, and currently plays Gomez Addams on Wednesday. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2003.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Luis_Guzm%C3%A1n"
+    ],
+    "enrichedAt": "2026-09-10T06:31:10.814Z",
+    "birth_year": "1956",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "Puerto Rican",
+    "prestige_signals": [
+      "Independent Spirit Award for Best Supporting Male nominee"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Anthony Swofford": {
     "entity": {
@@ -239871,7 +240098,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:13:00.230Z"
+    "enrichedAt": "2026-09-10T06:31:00.956Z"
   },
   "Stephen Koch": {
     "entity": {
@@ -239999,7 +240226,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:13:07.886Z"
+    "enrichedAt": "2026-09-10T06:31:00.321Z"
   },
   "Yoko Ono": {
     "entity": {
@@ -241237,7 +241464,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:14:23.715Z"
+    "enrichedAt": "2026-09-10T06:31:00.367Z"
   },
   "Sara Rue": {
     "entity": {
@@ -241662,7 +241889,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:15:00.964Z"
+    "enrichedAt": "2026-09-10T06:31:00.674Z"
   },
   "Emma Bolger": {
     "entity": {
@@ -241985,13 +242212,13 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:15:17.459Z"
+    "enrichedAt": "2026-09-10T06:31:00.776Z"
   },
   "Mikey Teutul": {
     "entity": {
-      "name": "Michael Teutul",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_Teutul",
-      "confidence": 0.6499999999999999
+      "name": "Mikey Teutul",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -242001,10 +242228,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
     "description": "",
-    "confidence": 0.6499999999999999,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:15:17.755Z"
+    "enrichedAt": "2026-09-10T06:31:00.894Z"
   },
   "Kristin Kreuk": {
     "entity": {
@@ -242477,7 +242704,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:16:01.087Z"
+    "enrichedAt": "2026-09-10T06:31:00.996Z"
   },
   "Walter Cronkite": {
     "entity": {
@@ -242992,7 +243219,7 @@
     "confidence": 0.35,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:16:19.745Z"
+    "enrichedAt": "2026-09-10T06:32:00.281Z"
   },
   "Brini Maxwell": {
     "entity": {
@@ -243318,7 +243545,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:17:00.224Z"
+    "enrichedAt": "2026-09-10T06:32:00.316Z"
   },
   "Omarosa Stallworth": {
     "entity": {
@@ -243326,18 +243553,68 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Omarosa_Manigault_Newman",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "reality television personality",
+      "author",
+      "political consultant",
+      "White House aide"
+    ],
+    "known_for": [
+      {
+        "title": "The Apprentice",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "The Celebrity Apprentice",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "The Ultimate Merger",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "All-Star Celebrity Apprentice",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Celebrity Big Brother",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "Big Brother Australia VIP",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Unhinged",
+        "type": "other",
+        "year": "2018"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "",
+    "description": "Omarosa is an American reality television personality, author, and former political consultant best known for her combative persona on the first season of NBC's The Apprentice in 2004, which launched her into the public eye as what one outlet dubbed reality TV's number one bad girl. She subsequently appeared on The Celebrity Apprentice, The Ultimate Merger, All-Star Celebrity Apprentice, and two editions of Celebrity Big Brother. She also served as a White House aide under both Bill Clinton and Donald Trump, and in 2018 published Unhinged, a memoir sharply critical of the Trump administration. She likely crossed paths with Conan O'Brien during her rise to fame, with a first appearance on Late Night with Conan O'Brien believed to have taken place in 2004.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:17:01.046Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Omarosa_Manigault_Newman"
+    ],
+    "enrichedAt": "2026-09-10T06:32:10.330Z",
+    "birth_year": "1974",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "The Living End": {
     "entity": {
@@ -244068,7 +244345,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:18:00.654Z"
+    "enrichedAt": "2026-09-10T06:32:00.363Z"
   },
   "The Distillers": {
     "entity": {
@@ -244473,20 +244750,85 @@
     "entity": {
       "name": "Vincent Curatola",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Vincent_Curatola",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "singer"
+    ],
+    "known_for": [
+      {
+        "title": "The Sopranos",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Law & Order",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Gotti",
+        "type": "tv",
+        "year": "1996"
+      },
+      {
+        "title": "Exiled",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "The Good Wife",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Blue Bloods",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Blacklist",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Person of Interest",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Law & Order: SVU",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Killing Them Softly",
+        "type": "film",
+        "year": "2012"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:18:16.712Z"
+    "description": "Vince Curatola is an American actor and singer best known for playing New York mafioso Johnny Sack across all six seasons of the HBO drama The Sopranos, a role that earned him two SAG Award nominations. Before landing that signature part, he appeared in Law & Order, the TV movie Gotti, and Exiled. His later television credits include The Good Wife, Blue Bloods, The Blacklist, Person of Interest, and Law & Order: SVU, as well as the 2012 film Killing Them Softly. He also performs as a singer and has appeared onstage with the band Chicago. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2004, during the height of The Sopranos run.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Vincent_Curatola"
+    ],
+    "enrichedAt": "2026-09-10T06:32:07.486Z",
+    "birth_year": "1953",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "SAG Award nominee"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Pun Yin": {
     "entity": {
@@ -244505,7 +244847,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:18:16.981Z"
+    "enrichedAt": "2026-09-10T06:32:00.590Z"
   },
   "Georges Brossard": {
     "entity": {
@@ -244884,7 +245226,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:19:00.402Z"
+    "enrichedAt": "2026-09-10T06:32:00.702Z"
   },
   "Manny Yarbrough": {
     "entity": {
@@ -244892,18 +245234,57 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Emmanuel_Yarbrough",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "martial artist",
+      "professional wrestler",
+      "football player",
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "UFC 3",
+        "type": "other",
+        "year": "1994"
+      },
+      {
+        "title": "Mr. and Mrs. Khiladi",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Oz",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Sumo Bruno",
+        "type": "film",
+        "year": "2000"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "",
+    "description": "Emmanuel 'Manny' Yarbrough was an American martial artist, professional wrestler, football player, and actor who rose to prominence through his career in amateur sumo, becoming the 1995 World Amateur Sumo Champion and one of the most recognized sumo wrestlers outside Japan. He held the Guinness World Record for the heaviest living athlete and competed in mixed martial arts, most notably appearing at UFC 3 in 1994. His acting credits include the Bollywood film Mr. and Mrs. Khiladi and a recurring role on the HBO drama Oz. He likely crossed paths with Conan O'Brien during a Late Night with Conan O'Brien appearance around 2004. Yarbrough died in December 2015 at age 51.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:19:00.919Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Emmanuel_Yarbrough"
+    ],
+    "enrichedAt": "2026-09-10T06:32:08.834Z",
+    "birth_year": "1964",
+    "death_year": "2015",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Guinness World Record for the heaviest living athlete",
+      "NCAA All-American Division II wrestler",
+      "1995 World Amateur Sumo Champion"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Jeremy Suarez": {
     "entity": {
@@ -245287,22 +245668,46 @@
   },
   "Franz Ferdinand": {
     "entity": {
-      "name": "Franz Ferdinand",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Archduke Franz Ferdinand of Austria",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Archduke_Franz_Ferdinand_of_Austria",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "Archduke",
+      "Heir presumptive",
+      "Military officer"
+    ],
+    "known_for": [
+      {
+        "title": "Heir presumptive to the throne of Austria-Hungary",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Assassination in Sarajevo (trigger of World War I)",
+        "type": "other",
+        "year": "1914"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
-      "evidence": ""
+      "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:19:17.317Z"
+    "description": "Archduke Franz Ferdinand of Austria (1863–1914) was the heir presumptive to the Austro-Hungarian throne and a senior military figure who served as inspector general of the Austro-Hungarian Armed Forces from 1913. His morganatic marriage to Sophie Chotek was a defining personal episode of his life, requiring him to renounce his descendants' succession rights. His assassination in Sarajevo on 28 June 1914 triggered the July Crisis and set in motion the chain of events that started World War I. Given the timeline, any connection to Late Night with Conan O'Brien would have been unlikely, though the Scottish rock band that shares his name likely appeared on the programme in 2004.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Archduke_Franz_Ferdinand_of_Austria"
+    ],
+    "enrichedAt": "2026-09-10T06:32:09.040Z",
+    "birth_year": "1863",
+    "death_year": "1914",
+    "gender": "male",
+    "nationality": "Austrian",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Patti Scialfa": {
     "entity": {
@@ -245547,7 +245952,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:20:00.117Z"
+    "enrichedAt": "2026-09-10T06:32:07.998Z"
   },
   "Auf Der Maur": {
     "entity": {
@@ -245872,7 +246277,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:20:18.189Z"
+    "enrichedAt": "2026-09-10T06:33:00.379Z"
   },
   "Randy Constan": {
     "entity": {
@@ -246649,7 +247054,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:21:20.347Z"
+    "enrichedAt": "2026-09-10T06:33:03.151Z"
   },
   "Sahara Hotnights": {
     "entity": {
@@ -248215,7 +248620,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:23:11.620Z"
+    "enrichedAt": "2026-09-10T06:33:00.525Z"
   },
   "The Black Keys": {
     "entity": {
@@ -248822,7 +249227,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:24:09.618Z"
+    "enrichedAt": "2026-09-10T06:33:00.810Z"
   },
   "Fatboy Slim": {
     "entity": {
