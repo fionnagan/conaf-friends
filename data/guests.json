@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T00:40:11.026Z",
+  "generatedAt": "2026-09-10T00:48:15.051Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -259311,7 +259311,148 @@
       "id": "paul-rudnick",
       "name": "Paul Rudnick",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Paul Rudnick",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Paul_Rudnick",
+          "confidence": 1
+        },
+        "profession": [
+          "novelist",
+          "playwright",
+          "screenwriter",
+          "essayist"
+        ],
+        "known_for": [
+          {
+            "title": "Sister Act",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "Addams Family Values",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Jeffrey",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "In & Out",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Jeffrey",
+            "type": "other",
+            "year": "1993"
+          },
+          {
+            "title": "I Hate Hamlet",
+            "type": "other",
+            "year": "1991"
+          },
+          {
+            "title": "The Most Fabulous Story Ever Told",
+            "type": "other",
+            "year": "1998"
+          },
+          {
+            "title": "Valhalla",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Regrets Only",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "The New Century",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Big Night",
+            "type": "other",
+            "year": "2017"
+          },
+          {
+            "title": "Isn't She Great",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "The Stepford Wives",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Coastal Elites",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "I Shudder",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "If You Ask Me",
+            "type": "other",
+            "year": "1994"
+          },
+          {
+            "title": "Gorgeous",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "It's All Your Fault",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Playing the Palace",
+            "type": "other",
+            "year": "2021"
+          },
+          {
+            "title": "Farrell Covington and the Limits of Style",
+            "type": "other",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "Farrell Covington and the Limits of Style (novel, 2023)",
+          "What Is Wrong With You? (novel, 2025)",
+          "The Tuxedo Society (novel, 2026)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Paul Rudnick is an American novelist, playwright, screenwriter, and essayist whose career spans Broadway, Hollywood, and literary fiction. He wrote the screenplays for Sister Act, Addams Family Values, In & Out, and the film version of his acclaimed play Jeffrey, for which he won an Obie Award, an Outer Critics Circle Award, and the John Gassner Playwrighting Award. His essays and humor pieces have appeared in The New Yorker, and his novels include Farrell Covington and the Limits of Style, published in 2023, and What Is Wrong With You?, published in 2025. Rudnick likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1994, a period that coincided with his breakthrough as both a playwright and screenwriter.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Paul_Rudnick"
+        ],
+        "enrichedAt": "2026-09-10T00:48:13.792Z",
+        "birth_year": "1957",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Obie Award winner",
+          "Outer Critics Circle Award winner",
+          "John Gassner Playwrighting Award winner"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
