@@ -184,6 +184,16 @@ export default function RoundupClient({
     return Math.min(SEQUENTIAL_RAMP.length - 1, Math.floor(frac * SEQUENTIAL_RAMP.length));
   };
 
+  // Raw overlap counts are dominated by whichever era ran longer and simply
+  // had more guests to begin with — 161 reads as thin next to Late Night
+  // NBC's 2,440 guests, but it's 66% of every guest Tonight Show ever had.
+  // Expressing overlap as a share of the smaller (shorter-running) era's
+  // total surfaces that instead of leaving it to be misread from the count.
+  const pctOfSmallerEra = (rowEra: Era, colEra: Era, value: number) => {
+    const smaller = Math.min(eraTotals[rowEra], eraTotals[colEra]);
+    return smaller > 0 ? Math.round((value / smaller) * 100) : 0;
+  };
+
   const professionSegments = useMemo(() => {
     const totals: Record<string, number> = {};
     let combinedTotal = 0;
@@ -336,18 +346,23 @@ export default function RoundupClient({
                 <tr className="text-left text-[var(--text-muted)] border-b border-[var(--border)]">
                   <th className="py-1.5 font-medium">Pair</th>
                   <th className="py-1.5 font-medium text-right">Both</th>
+                  <th className="py-1.5 font-medium text-right">% of smaller era</th>
                 </tr>
               </thead>
               <tbody>
                 {eras.map((rowEra, i) =>
                   eras.map((colEra, j) => {
                     if (j >= i) return null;
+                    const value = crossover[i][j];
                     return (
                       <tr key={`${rowEra}-${colEra}`} className="border-b border-[var(--border)]/50">
                         <td className="py-1.5">
                           {ERA_LABELS[rowEra]} &amp; {ERA_LABELS[colEra]}
                         </td>
-                        <td className="py-1.5 text-right tabular-nums">{crossover[i][j]}</td>
+                        <td className="py-1.5 text-right tabular-nums">{value}</td>
+                        <td className="py-1.5 text-right tabular-nums">
+                          {pctOfSmallerEra(rowEra, colEra, value)}%
+                        </td>
                       </tr>
                     );
                   })
@@ -390,7 +405,7 @@ export default function RoundupClient({
                       return (
                         <div
                           key={colEra}
-                          title={`${ERA_LABELS[rowEra]} & ${ERA_LABELS[colEra]}: ${value} guests appeared in both`}
+                          title={`${ERA_LABELS[rowEra]} & ${ERA_LABELS[colEra]}: ${value} guests appeared in both (${pctOfSmallerEra(rowEra, colEra, value)}% of ${eraTotals[rowEra] < eraTotals[colEra] ? ERA_LABELS[rowEra] : ERA_LABELS[colEra]}'s total)`}
                           className="aspect-square rounded-md flex items-center justify-center text-xs font-medium tabular-nums transition-opacity"
                           style={{
                             background: SEQUENTIAL_RAMP[rampIndex(value)],
@@ -405,13 +420,6 @@ export default function RoundupClient({
                   </div>
                 );
               })}
-            </div>
-            <div className="flex items-center gap-1.5 mt-3 text-xs text-[var(--text-muted)]">
-              <span>Fewer</span>
-              {SEQUENTIAL_RAMP.map((c) => (
-                <span key={c} className="w-4 h-3 rounded-sm inline-block" style={{ background: c }} />
-              ))}
-              <span>More</span>
             </div>
           </div>
         )}
