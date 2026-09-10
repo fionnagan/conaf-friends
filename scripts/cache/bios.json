@@ -6007,7 +6007,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:02:20.813Z"
+    "enrichedAt": "2026-09-10T00:12:08.605Z"
   },
   "David Cross": {
     "entity": {
@@ -17367,7 +17367,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:02:20.793Z"
+    "enrichedAt": "2026-09-10T00:12:08.605Z"
   },
   "D'Arcy Carden": {
     "entity": {
@@ -28989,7 +28989,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:03:00.802Z"
+    "enrichedAt": "2026-09-10T00:13:01.621Z"
   },
   "Martha Stewart": {
     "entity": {
@@ -35837,7 +35837,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:03:01.005Z"
+    "enrichedAt": "2026-09-10T00:13:01.718Z"
   },
   "James Spader": {
     "entity": {
@@ -47051,7 +47051,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:03:01.021Z"
+    "enrichedAt": "2026-09-10T00:13:01.851Z"
   },
   "Benjamin McKenzie": {
     "entity": {
@@ -50269,7 +50269,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:04:00.248Z"
+    "enrichedAt": "2026-09-10T00:13:01.111Z"
   },
   "Chris Eigeman": {
     "entity": {
@@ -52168,7 +52168,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:04:00.397Z"
+    "enrichedAt": "2026-09-10T00:14:00.559Z"
   },
   "James Woods": {
     "entity": {
@@ -64254,7 +64254,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:04:00.473Z"
+    "enrichedAt": "2026-09-10T00:14:01.015Z"
   },
   "David Blaine": {
     "entity": {
@@ -65108,7 +65108,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:04:00.993Z"
+    "enrichedAt": "2026-09-10T00:14:01.167Z"
   },
   "George Stephanopoulos": {
     "entity": {
@@ -67768,7 +67768,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:05:00.498Z"
+    "enrichedAt": "2026-09-10T00:14:01.587Z"
   },
   "Katie Holmes": {
     "entity": {
@@ -72714,7 +72714,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:04:00.708Z"
+    "enrichedAt": "2026-09-10T00:14:00.879Z"
   },
   "Blake Anderson": {
     "entity": {
@@ -73268,7 +73268,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:05:00.683Z"
+    "enrichedAt": "2026-09-10T00:15:01.142Z"
   },
   "Conor McGregor": {
     "entity": {
@@ -78777,7 +78777,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:05:00.435Z"
+    "enrichedAt": "2026-09-10T00:15:00.461Z"
   },
   "Bill Murray": {
     "entity": {
@@ -83094,7 +83094,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:05:00.707Z"
+    "enrichedAt": "2026-09-10T00:15:00.639Z"
   },
   "Piper Perabo": {
     "entity": {
@@ -83336,7 +83336,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:05:00.770Z"
+    "enrichedAt": "2026-09-10T00:15:00.986Z"
   },
   "Michael Imperioli": {
     "entity": {
@@ -95984,7 +95984,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:05:00.956Z"
+    "enrichedAt": "2026-09-10T00:16:00.716Z"
   },
   "Uma Thurman": {
     "entity": {
@@ -105631,7 +105631,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:05:00.980Z"
+    "enrichedAt": "2026-09-10T00:15:00.986Z"
   },
   "Gabourey Sidibe": {
     "entity": {
@@ -108827,22 +108827,81 @@
   },
   "Chris Robinson": {
     "entity": {
-      "name": "Chris Robinson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Chris Robinson (American actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Robinson_(American_actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "screenwriter",
+      "film director"
+    ],
+    "known_for": [
+      {
+        "title": "Diary of a High School Bride",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Beast from Haunted Cave",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Combat!",
+        "type": "tv",
+        "year": "1962"
+      },
+      {
+        "title": "12 O'Clock High",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Stanley",
+        "type": "film",
+        "year": "1972"
+      },
+      {
+        "title": "General Hospital",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Another World",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Bold and the Beautiful",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Just for a Week",
+        "type": "film",
+        "year": "2022"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T00:06:01.008Z"
+    "description": "Chris Robinson was an American actor, screenwriter, and film director whose career spanned seven decades. He began in films of the late 1950s, including Diary of a High School Bride and Beast from Haunted Cave, before gaining television recognition as Technical Sgt. Sandy Komansky on ABC's 12 O'Clock High. He is perhaps best known for playing Dr. Rick Webber on General Hospital from 1978 to 1986, a role he reprised in 2002 and again in a 2013 anniversary episode. He also had recurring roles on Another World and The Bold and the Beautiful. His final screen appearance was in the 2022 film Just for a Week. He likely crossed paths with Conan O'Brien's world around the time of his General Hospital return in the early 2000s. Robinson died in June 2025 at age 86.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chris_Robinson_(American_actor)"
+    ],
+    "enrichedAt": "2026-09-10T00:16:09.485Z",
+    "birth_year": "1938",
+    "death_year": "2025",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Jim Downey": {
     "entity": {
@@ -108861,7 +108920,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:06:01.142Z"
+    "enrichedAt": "2026-09-10T00:16:01.147Z"
   },
   "Brent Morin": {
     "entity": {
@@ -114321,7 +114380,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:06:00.429Z"
+    "enrichedAt": "2026-09-10T00:16:00.579Z"
   },
   "Conan Scrapisode": {
     "entity": {
@@ -114340,7 +114399,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:06:00.932Z"
+    "enrichedAt": "2026-09-10T00:16:00.851Z"
   },
   "Ben Falcone": {
     "entity": {
@@ -114921,7 +114980,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:06:00.818Z"
+    "enrichedAt": "2026-09-10T00:16:00.989Z"
   },
   "Malcolm Gladwell": {
     "entity": {
@@ -125946,7 +126005,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:07:00.310Z"
+    "enrichedAt": "2026-09-10T00:17:00.350Z"
   },
   "Daisy Fuentes": {
     "entity": {
@@ -128182,7 +128241,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:07:01.155Z"
+    "enrichedAt": "2026-09-10T00:17:01.300Z"
   },
   "The Frugal Gourmet": {
     "entity": {
@@ -128201,7 +128260,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:07:00.446Z"
+    "enrichedAt": "2026-09-10T00:17:00.545Z"
   },
   "Charles Dutton": {
     "entity": {
@@ -128220,7 +128279,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:07:01.124Z"
+    "enrichedAt": "2026-09-10T00:17:01.082Z"
   },
   "Carol Kane": {
     "entity": {
@@ -130351,7 +130410,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:08:00.855Z"
+    "enrichedAt": "2026-09-10T00:18:00.565Z"
   },
   "Gena Lee Nolin": {
     "entity": {
@@ -131610,7 +131669,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:07:00.769Z"
+    "enrichedAt": "2026-09-10T00:17:00.920Z"
   },
   "Ally Walker": {
     "entity": {
@@ -132621,7 +132680,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:08:00.523Z"
+    "enrichedAt": "2026-09-10T00:18:00.509Z"
   },
   "Jane Seymour": {
     "entity": {
@@ -132638,13 +132697,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "Jane Seymour (c. 1508–1537) was Queen of England as the third wife of King Henry VIII, reigning from 1536 until her death following the birth of her only child, the future King Edward VI. Known for her gentle and peaceful nature, she was the only one of Henry's wives to receive a queen's funeral, and Henry was later buried beside her at St George's Chapel, Windsor Castle. As a historical figure rather than a media personality, she likely crossed paths with Conan O'Brien's world only in the sense that the actress who shares her name first appeared on Late Night with Conan O'Brien in 1998.",
+    "description": "Jane Seymour (c. 1508–1537) was Queen of England as the third wife of King Henry VIII, having ascended to the throne following the execution of Anne Boleyn in 1536. She died of postnatal complications shortly after the birth of her only child, the future King Edward VI, and was the sole wife of Henry VIII to receive a queen's funeral. Henry VIII was later buried alongside her at St George's Chapel, Windsor Castle. Praised by contemporaries for her gentle and peaceful character, she is a central figure of Tudor history. Any connection to Conan O'Brien's late-night career spans five centuries and cannot be meaningfully drawn.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Jane_Seymour"
     ],
-    "enrichedAt": "2026-09-10T00:08:06.720Z",
+    "enrichedAt": "2026-09-10T00:18:09.606Z",
     "birth_year": "",
     "death_year": "1537",
     "gender": "female",
@@ -141225,7 +141284,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:08:01.359Z"
+    "enrichedAt": "2026-09-10T00:18:01.530Z"
   },
   "Asa Butterfield": {
     "entity": {
@@ -144762,7 +144821,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:09:00.716Z"
+    "enrichedAt": "2026-09-10T00:18:00.925Z"
   },
   "Daddy's Home": {
     "entity": {
@@ -146334,7 +146393,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:09:00.754Z"
+    "enrichedAt": "2026-09-10T00:18:00.888Z"
   },
   "John Melendez": {
     "entity": {
@@ -149246,22 +149305,146 @@
   },
   "Mark Curry": {
     "entity": {
-      "name": "Mark Curry",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Mark Curry (American actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mark_Curry_(American_actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "comedian",
+      "television host"
+    ],
+    "known_for": [
+      {
+        "title": "Hangin' with Mr. Cooper",
+        "type": "tv",
+        "year": "1992"
+      },
+      {
+        "title": "It's Showtime at the Apollo",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "See Dad Run",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "Talkin' Dirty After Dark",
+        "type": "film",
+        "year": "1991"
+      },
+      {
+        "title": "Living Single",
+        "type": "tv",
+        "year": "1994"
+      },
+      {
+        "title": "Martin",
+        "type": "tv",
+        "year": "1997"
+      },
+      {
+        "title": "The Jamie Foxx Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Switchback",
+        "type": "film",
+        "year": "1997"
+      },
+      {
+        "title": "Armageddon",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "The Drew Carey Show",
+        "type": "tv",
+        "year": "2000"
+      },
+      {
+        "title": "Don't Forget Your Toothbrush",
+        "type": "tv",
+        "year": "2000"
+      },
+      {
+        "title": "For Your Love",
+        "type": "tv",
+        "year": "2000"
+      },
+      {
+        "title": "The Poof Point",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Animal Tails",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Coming to the Stage",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Celebrity Mole Yucatan",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Less than Perfect",
+        "type": "tv",
+        "year": "2005"
+      },
+      {
+        "title": "Fat Actress",
+        "type": "tv",
+        "year": "2005"
+      },
+      {
+        "title": "House of Payne",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "The Comedy Festival Laffapalooza Special",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "The Secret Life of the American Teenager",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "One Love",
+        "type": "tv",
+        "year": "2014"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T00:09:00.989Z"
+    "description": "Mark Curry is an American actor, comedian, and television host best known for playing Mark Cooper, an ex-basketball player turned teacher, on the ABC sitcom Hangin' with Mr. Cooper, which ran from 1992 to 1997. He also served as one of the rotating hosts of It's Showtime at the Apollo in the early 1990s and later co-starred in all three seasons of See Dad Run, Nick at Nite's first original live-action family comedy series. His film credits include Talkin' Dirty After Dark, Switchback, and Armageddon, and he has made guest appearances on numerous television series throughout his career. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 1995.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mark_Curry_(American_actor)"
+    ],
+    "enrichedAt": "2026-09-10T00:19:14.074Z",
+    "birth_year": "1961",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Father Guido Sarducci": {
     "entity": {
@@ -150630,22 +150813,116 @@
   },
   "Ralph Harris": {
     "entity": {
-      "name": "Ralph Harris",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Ralph Harris, Baron Harris of High Cross",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ralph_Harris%2C_Baron_Harris_of_High_Cross",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "economist",
+      "life peer",
+      "think tank director",
+      "political candidate",
+      "lecturer",
+      "journalist"
+    ],
+    "known_for": [
+      {
+        "title": "Institute of Economic Affairs",
+        "type": "other",
+        "year": "1957"
+      },
+      {
+        "title": "Politics without Prejudice",
+        "type": "other",
+        "year": "1956"
+      },
+      {
+        "title": "Hire Purchase in a Free Society",
+        "type": "other",
+        "year": "1958"
+      },
+      {
+        "title": "Choice in Welfare 1965",
+        "type": "other",
+        "year": "1965"
+      },
+      {
+        "title": "The Urgency of an Independent University",
+        "type": "other",
+        "year": "1968"
+      },
+      {
+        "title": "Down with the Poor",
+        "type": "other",
+        "year": "1971"
+      },
+      {
+        "title": "Not from Benevolence",
+        "type": "other",
+        "year": "1977"
+      },
+      {
+        "title": "Overruled on Welfare",
+        "type": "other",
+        "year": "1979"
+      },
+      {
+        "title": "No, Prime Minister!",
+        "type": "other",
+        "year": "1994"
+      },
+      {
+        "title": "Murder a Cigarette",
+        "type": "other",
+        "year": "1998"
+      },
+      {
+        "title": "Tory! Tory! Tory!",
+        "type": "tv",
+        "year": "2006"
+      },
+      {
+        "title": "Mont Pelerin Society",
+        "type": "other",
+        "year": "1967"
+      },
+      {
+        "title": "Bruges Group",
+        "type": "other",
+        "year": "1989"
+      },
+      {
+        "title": "Civitas",
+        "type": "other",
+        "year": "2000"
+      },
+      {
+        "title": "FOREST",
+        "type": "other",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T00:09:01.026Z"
+    "description": "Ralph Harris, Baron Harris of High Cross, was a British economist best known for leading the Institute of Economic Affairs, a neoliberal think tank, from 1957 to 1988. Working alongside editorial director Arthur Seldon, he shaped the IEA into a major force for free-market economics, helping to displace the post-war Keynesian consensus and influencing the rise of Thatcherism. He was made a life peer in 1979 and later served as a founding president of the IEA until his death in 2006. He also authored works including No, Prime Minister! and Murder a Cigarette. He likely crossed paths with the Late Night with Conan O'Brien team around 1996.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ralph_Harris%2C_Baron_Harris_of_High_Cross"
+    ],
+    "enrichedAt": "2026-09-10T00:19:11.626Z",
+    "birth_year": "1924",
+    "death_year": "2006",
+    "gender": "male",
+    "nationality": "British",
+    "prestige_signals": [
+      "Baron Harris of High Cross (life peer)"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Kathy Najimy": {
     "entity": {
@@ -150810,7 +151087,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:10:00.447Z"
+    "enrichedAt": "2026-09-10T00:19:00.874Z"
   },
   "Julie Scardina": {
     "entity": {
@@ -152526,7 +152803,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:10:00.470Z"
+    "enrichedAt": "2026-09-10T00:19:00.335Z"
   },
   "Denis Hamill": {
     "entity": {
@@ -152545,7 +152822,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:10:00.646Z"
+    "enrichedAt": "2026-09-10T00:19:00.643Z"
   },
   "Bill Braudis": {
     "entity": {
@@ -152991,7 +153268,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:10:01.796Z"
+    "enrichedAt": "2026-09-10T00:19:00.991Z"
   },
   "Anne Robinson": {
     "entity": {
@@ -154447,7 +154724,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:10:00.972Z"
+    "enrichedAt": "2026-09-10T00:20:01.089Z"
   },
   "Meredith Viera": {
     "entity": {
@@ -156452,22 +156729,74 @@
   },
   "Spinal Tap": {
     "entity": {
-      "name": "Spinal Tap",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Spinal Tap (band)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spinal_Tap_(band)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "parody band",
+      "comedians",
+      "musicians"
+    ],
+    "known_for": [
+      {
+        "title": "The T.V. Show",
+        "type": "tv",
+        "year": "1979"
+      },
+      {
+        "title": "This Is Spinal Tap",
+        "type": "film",
+        "year": "1984"
+      },
+      {
+        "title": "This Is Spinal Tap",
+        "type": "music",
+        "year": "1984"
+      },
+      {
+        "title": "Break Like the Wind",
+        "type": "music",
+        "year": "1992"
+      },
+      {
+        "title": "Back from the Dead",
+        "type": "music",
+        "year": "2009"
+      },
+      {
+        "title": "Spinal Tap II: The End Continues",
+        "type": "film",
+        "year": "2025"
+      },
+      {
+        "title": "The End Continues",
+        "type": "music",
+        "year": "2025"
+      }
+    ],
+    "recent_work": [
+      "Spinal Tap II: The End Continues (2025 film)",
+      "The End Continues (2025 album)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan O'Brien Needs a Friend in 2025."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T00:11:01.141Z"
+    "description": "Spinal Tap is a parody English heavy metal band created by American comedians and musicians Michael McKean, Christopher Guest, and Harry Shearer, who play fictional rockers David St. Hubbins, Nigel Tufnel, and Derek Smalls, respectively. The group first appeared in 1979 on the ABC sketch comedy pilot The T.V. Show before starring in the landmark 1984 mockumentary This Is Spinal Tap, which spawned an album of the same name. They have since released three additional studio albums, including Break Like the Wind and Back from the Dead, and returned in 2025 with the sequel film Spinal Tap II: The End Continues and its accompanying soundtrack. They likely first appeared on Conan O'Brien Needs a Friend in 2025.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Spinal_Tap_(band)"
+    ],
+    "enrichedAt": "2026-09-10T00:20:10.110Z",
+    "birth_year": "",
+    "death_year": "",
+    "gender": "",
+    "nationality": "",
+    "prestige_signals": [],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Rachel Sennott": {
     "entity": {
@@ -156601,7 +156930,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:11:01.781Z"
+    "enrichedAt": "2026-09-10T00:20:01.164Z"
   },
   "Tom Holland": {
     "entity": {
@@ -157655,7 +157984,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:12:00.625Z"
+    "enrichedAt": "2026-09-10T00:20:00.669Z"
   },
   "Goldie Hawn": {
     "entity": {
@@ -158316,7 +158645,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:44:11.151Z"
+    "enrichedAt": "2026-09-10T00:20:01.015Z"
   },
   "Roy Wood Jr.": {
     "entity": {
@@ -158942,7 +159271,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:45:06.459Z"
+    "enrichedAt": "2026-09-10T00:21:01.422Z"
   },
   "President Barack Obama": {
     "entity": {
@@ -159632,22 +159961,93 @@
   },
   "Chris Connelly": {
     "entity": {
-      "name": "Chris Connelly",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Chris Connelly (journalist)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Connelly_(journalist)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "sports reporter",
+      "entertainment reporter",
+      "journalist",
+      "television host",
+      "music critic"
+    ],
+    "known_for": [
+      {
+        "title": "Unscripted with Chris Connelly",
+        "type": "tv",
+        "year": "2001"
+      },
+      {
+        "title": "E:60",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "SportsCenter",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "My Wish",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Grantland.com",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Rolling Stone",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Good Morning America",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "MTV Movie Awards",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Big Picture",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Premiere",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Academy Awards preshow",
+        "type": "tv",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T08:46:00.791Z"
+    "description": "Chris Connelly is an American sports and entertainment reporter who currently contributes to ABC News and serves as a contributor to ESPN's E:60 newsmagazine. He spent thirteen years at MTV from 1988 to 2001, hosting programs including The Big Picture and pre-shows for the MTV Movie Awards, and previously worked as a music critic for Rolling Stone and as Special Music Correspondent for Good Morning America. At ESPN he hosted Unscripted with Chris Connelly, produced the long-running SportsCenter segment My Wish, and served as interim editor-in-chief of Grantland.com. He likely crossed paths with Conan O'Brien during his early years covering entertainment and music television, with a first appearance on Late Night with Conan O'Brien believed to date to 1993.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chris_Connelly_(journalist)"
+    ],
+    "enrichedAt": "2026-09-10T00:21:08.666Z",
+    "birth_year": "1957",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Kimberly Clarice Aiken": {
     "entity": {
@@ -160308,7 +160708,7 @@
     "confidence": 0.4666666666666666,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:47:00.459Z"
+    "enrichedAt": "2026-09-10T00:21:00.638Z"
   },
   "Paul Krassner": {
     "entity": {
@@ -160458,7 +160858,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:47:09.740Z"
+    "enrichedAt": "2026-09-10T00:21:00.806Z"
   },
   "Eartha Kitt": {
     "entity": {
@@ -163193,20 +163593,134 @@
     "entity": {
       "name": "Ricky Schroder",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Ricky_Schroder",
-      "confidence": 0.6499999999999999
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "filmmaker",
+      "director",
+      "producer"
+    ],
+    "known_for": [
+      {
+        "title": "The Champ",
+        "type": "film",
+        "year": "1979"
+      },
+      {
+        "title": "Silver Spoons",
+        "type": "tv",
+        "year": "1982"
+      },
+      {
+        "title": "The Last Flight of Noah's Ark",
+        "type": "film",
+        "year": "1980"
+      },
+      {
+        "title": "Little Lord Fauntleroy",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Too Young the Hero",
+        "type": "tv",
+        "year": "1988"
+      },
+      {
+        "title": "Lonesome Dove",
+        "type": "tv",
+        "year": "1989"
+      },
+      {
+        "title": "Return to Lonesome Dove",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "NYPD Blue",
+        "type": "tv",
+        "year": "1998"
+      },
+      {
+        "title": "Scrubs",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Strong Medicine",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "24",
+        "type": "tv",
+        "year": "2007"
+      },
+      {
+        "title": "Black Cloud",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Hellhounds",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "No Ordinary Family",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "Our Wild Hearts",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Locker 13",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Dolly Parton's Coat of Many Colors",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Dolly Parton's Christmas of Many Colors: Circle of Love",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Fighting Season",
+        "type": "other",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "",
-    "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T08:50:00.644Z"
+    "description": "Rick Schroder is an American actor, director, and producer who first gained international attention as a child, winning a Golden Globe for his role in The Champ at age nine — the youngest recipient in the award's history. He went on to star in the beloved sitcom Silver Spoons before transitioning to adult roles in the Western miniseries Lonesome Dove and the long-running police drama NYPD Blue. He has also worked behind the camera, making his directorial debut with Black Cloud and producing projects including the war documentary The Fighting Season. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ricky_Schroder"
+    ],
+    "enrichedAt": "2026-09-10T00:21:12.863Z",
+    "birth_year": "1970",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Golden Globe winner",
+      "youngest Golden Globe winner in history",
+      "Young Artist Awards"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Dr. Brazelton": {
     "entity": {
@@ -163214,18 +163728,30 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Brazelton",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
+    "profession": [
+      "pediatrician",
+      "author"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "",
+    "description": "T. Berry Brazelton was an American pediatrician and author who dedicated his career to child development and family health. Born in 1918, he became one of the most recognized figures in pediatric medicine in the United States, writing widely on child-rearing and infant behavior before his death in 2018. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1993, where his expertise in pediatrics would have made him a natural guest for audiences interested in parenting and child development.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T08:50:06.986Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Brazelton"
+    ],
+    "enrichedAt": "2026-09-10T00:22:04.825Z",
+    "birth_year": "1918",
+    "death_year": "2018",
+    "gender": "",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Weekly World News": {
     "entity": {
