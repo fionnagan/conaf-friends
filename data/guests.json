@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T00:58:02.104Z",
+  "generatedAt": "2026-09-10T01:08:06.873Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -68147,7 +68147,78 @@
       "id": "david-gregory",
       "name": "David Gregory",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "David A. Gregory",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/David_A._Gregory",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "writer",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "One Life to Live",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Powder Burns",
+            "type": "podcast",
+            "year": "2015"
+          },
+          {
+            "title": "The Good Fight",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Insatiable",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Constantine",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Deception",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          {
+            "title": "Twelve Angry Men",
+            "type": "other",
+            "year": "2023"
+          }
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
+        },
+        "description": "David Gregory is an American actor, writer, and producer best known for portraying Robert Ford on the soap opera One Life to Live from 2009 until its cancellation in 2012. On television he has had recurring roles on The Good Fight, Insatiable, Constantine, and Deception. He also wrote and produced Powder Burns, a scripted Western podcast starring John Wesley Shipp, which premiered on Apple Podcasts in 2015 and earned Gregory a Voice Arts Award in 2017. In 2023 he starred as Juror #8 in a production of Twelve Angry Men at The Powerhouse Theatre in Connecticut. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2006.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/David_A._Gregory"
+        ],
+        "enrichedAt": "2026-09-10T00:59:09.369Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Voice Arts Award winner (2017)",
+          "Connecticut Critics Circle Award nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -220053,7 +220124,137 @@
       "id": "jon-benjamin",
       "name": "Jon Benjamin",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "H. Jon Benjamin",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/H._Jon_Benjamin",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "comedian",
+          "writer",
+          "producer",
+          "musician",
+          "voice actor"
+        ],
+        "known_for": [
+          {
+            "title": "Archer",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Bob's Burgers",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Dr. Katz, Professional Therapist",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "O'Grady",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Family Guy",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Lucy, the Daughter of the Devil",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Home Movies",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Boy Kills World",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Super Dragon Punch Force 3",
+            "type": "other",
+            "year": "2024"
+          },
+          {
+            "title": "Wet Hot American Summer",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Wet Hot American Summer: First Day of Camp",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Wet Hot American Summer: 10 Years Later",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "Invite Them Up",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Assy McGee",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Science Court",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Freak Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Paid Programming",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Important Things with Demetri Martin",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "Boy Kills World (2023)",
+          "Super Dragon Punch Force 3 (2024)"
+        ],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"Benjamin was featured in a Super Bowl XLIII Bud Light commercial with Conan O'Brien and was responsible for the McCain Girls videos on YouTube.\""
+        },
+        "description": "Jon Benjamin is an American actor, comedian, writer, producer, and musician best known for his prolific voice work in adult animation. He is most recognized as the voice of Sterling Archer in Archer and Bob Belcher in Bob's Burgers, and has also voiced prominent roles in Home Movies, Dr. Katz Professional Therapist, O'Grady, and Lucy the Daughter of the Devil, among many others. He appeared in the Wet Hot American Summer film and both of its television follow-ups, and more recently voiced a character in Boy Kills World (2023). Named Vulture's male comedy performer of the year for 2014, Benjamin has long been a fixture in American comedy circles, and he and Conan O'Brien have crossed paths professionally, including a joint appearance in a Super Bowl XLIII Bud Light commercial.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/H._Jon_Benjamin"
+        ],
+        "enrichedAt": "2026-09-10T01:04:16.001Z",
+        "birth_year": "1966",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "named 2014's male comedy performer of the year at Vulture's TV Awards"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "comedy-peer",
         "label": "Comedy peer and fellow stand-up",
@@ -260389,7 +260590,39 @@
       "id": "david-goldsmith",
       "name": "David Goldsmith",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "David Goldsmith (footballer)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/David_Goldsmith_(footballer)",
+          "confidence": 1
+        },
+        "profession": [
+          "footballer",
+          "coach"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "David Goldsmith is an English former professional footballer and graduate assistant coach with the Butler Bulldogs college soccer program. During his college career at Butler University from 2013 to 2016, he scored 41 goals and added 9 assists in 70 appearances, earning Big East Male Scholar-Athlete of the Year honors in 2016. He also played with the Michigan Bucks in the USL Premier Development League before signing professionally with the North American Soccer League club Indy Eleven in 2017. He was called up to the Wales U19 training camp during his career. A figure from the world of college and amateur soccer, he likely crossed paths with Late Night with Conan O'Brien in 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/David_Goldsmith_(footballer)"
+        ],
+        "enrichedAt": "2026-09-10T01:08:05.597Z",
+        "birth_year": "1993",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "English",
+        "prestige_signals": [
+          "Big East Male Scholar-Athlete of the Year 2016"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
