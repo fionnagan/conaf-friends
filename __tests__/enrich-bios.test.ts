@@ -766,6 +766,52 @@ describe('sortByEnrichmentPriority() — queue-starvation fix', () => {
   });
 });
 
+// ── Nickname-expansion fallback ─────────────────────────────────────────
+// Regression coverage for a real, confirmed pattern in the remaining
+// needs_review tail: guests like "Jim Downey", "Dave Thomas", "Mike
+// Schultz" have NO Wikipedia page/redirect under their nickname form at
+// all — direct title lookup returns "page missing", never reaching the
+// confidence scorer. Two things needed fixing together: trying the
+// expanded name as an actual lookup, and teaching tokenOverlap to credit
+// the match once found (since "jim" alone doesn't token-match "james").
+describe('nickname-expansion fallback (Jim Downey / James Downey pattern)', () => {
+  beforeEach(() => {
+    mockedFetchWikiEntity.mockReset();
+    mockedFetchDisambiguationLinks.mockReset();
+  });
+
+  it('tries the nickname-expanded name when the bare nickname form returns no page', async () => {
+    mockedFetchWikiEntity.mockImplementation(async (title: string) => {
+      if (title === 'James Downey') {
+        return {
+          title: 'James Downey',
+          url: 'https://en.wikipedia.org/wiki/James_Downey_(writer)',
+          extract: 'James Downey (born 1954) is an American comedy writer.',
+          isDisambiguation: false,
+        };
+      }
+      return null; // "Jim Downey" itself has no page/redirect
+    });
+    const result = await resolveEntityWithRetry('Jim Downey');
+    expect(result).not.toBeNull();
+    expect(result!.name).toBe('James Downey');
+    expect(result!.confidence).toBeCloseTo(1, 5);
+  });
+
+  it('tokenOverlap credits a nickname against its expanded full form', () => {
+    expect(tokenOverlap(normNameTokens('Jim Downey'), normNameTokens('James Downey'))).toBe(1);
+    expect(tokenOverlap(normNameTokens('Mike Schultz'), normNameTokens('Michael Schultz'))).toBe(1);
+  });
+
+  it('does not expand a first name with no nickname mapping', async () => {
+    mockedFetchWikiEntity.mockResolvedValue(null);
+    await resolveEntityWithRetry('Xavier Nobody');
+    // Only the original name variant should have been tried (no nickname
+    // entry for "Xavier") — one call, not two.
+    expect(mockedFetchWikiEntity).toHaveBeenCalledTimes(1);
+  });
+});
+
 // ── isTotalChunkFailure() — the fail-loud-not-silent guard ─────────────────
 // Regression coverage for a real bug an independent review caught: without
 // this guard, a chunk where every guest fails (broken credential, Anthropic
