@@ -129086,7 +129086,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.645Z"
+    "enrichedAt": "2026-09-10T21:13:00.541Z"
   },
   "The Frugal Gourmet": {
     "entity": {
@@ -142128,7 +142128,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.860Z"
+    "enrichedAt": "2026-09-10T21:13:01.303Z"
   },
   "Asa Butterfield": {
     "entity": {
@@ -152038,7 +152038,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.639Z"
+    "enrichedAt": "2026-09-10T21:12:39.906Z"
   },
   "Julie Scardina": {
     "entity": {
@@ -153773,7 +153773,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.796Z"
+    "enrichedAt": "2026-09-10T21:12:39.902Z"
   },
   "Bill Braudis": {
     "entity": {
@@ -154217,7 +154217,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.940Z"
+    "enrichedAt": "2026-09-10T21:13:00.605Z"
   },
   "Anne Robinson": {
     "entity": {
@@ -155671,7 +155671,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.825Z"
+    "enrichedAt": "2026-09-10T21:14:00.704Z"
   },
   "Meredith Viera": {
     "entity": {
@@ -158991,7 +158991,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:52:00.865Z"
+    "enrichedAt": "2026-09-10T21:12:40.192Z"
   },
   "Goldie Hawn": {
     "entity": {
@@ -159652,7 +159652,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.202Z"
+    "enrichedAt": "2026-09-10T21:13:00.476Z"
   },
   "Roy Wood Jr.": {
     "entity": {
@@ -160278,7 +160278,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.741Z"
+    "enrichedAt": "2026-09-10T21:13:00.988Z"
   },
   "President Barack Obama": {
     "entity": {
@@ -161700,9 +161700,9 @@
   },
   "Victoria Van Meter": {
     "entity": {
-      "name": "Vicki Van Meter",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Vicki_Van_Meter",
-      "confidence": 0.4666666666666666
+      "name": "Victoria Van Meter",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -161712,10 +161712,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
     "description": "",
-    "confidence": 0.4666666666666666,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.222Z"
+    "enrichedAt": "2026-09-10T21:13:00.699Z"
   },
   "Paul Krassner": {
     "entity": {
@@ -161865,7 +161865,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.223Z"
+    "enrichedAt": "2026-09-10T21:13:00.764Z"
   },
   "Eartha Kitt": {
     "entity": {
@@ -165462,8 +165462,8 @@
   },
   "Sy Sperling": {
     "entity": {
-      "name": "HairClub",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/HairClub",
+      "name": "Sy Sperling",
+      "wikipedia_url": "",
       "confidence": 0
     },
     "profession": [],
@@ -165477,7 +165477,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.616Z"
+    "enrichedAt": "2026-09-10T21:13:00.923Z"
   },
   "David Dinkins": {
     "entity": {
@@ -165868,7 +165868,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.565Z"
+    "enrichedAt": "2026-09-10T21:13:00.829Z"
   },
   "Bronson Pinchot": {
     "entity": {
@@ -166234,7 +166234,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.837Z"
+    "enrichedAt": "2026-09-10T21:14:00.664Z"
   },
   "Chuck Sklar": {
     "entity": {
@@ -167321,22 +167321,154 @@
   },
   "Richard Reeves": {
     "entity": {
-      "name": "Richard Reeves",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Richard Reeves (American writer)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Richard_Reeves_(American_writer)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "writer",
+      "syndicated columnist",
+      "lecturer"
+    ],
+    "known_for": [
+      {
+        "title": "Dave",
+        "type": "film",
+        "year": "1993"
+      },
+      {
+        "title": "A Ford, Not a Lincoln",
+        "type": "other",
+        "year": "1975"
+      },
+      {
+        "title": "Old Faces of 1976",
+        "type": "other",
+        "year": "1976"
+      },
+      {
+        "title": "Convention",
+        "type": "other",
+        "year": "1977"
+      },
+      {
+        "title": "American Journey: Traveling with Tocqueville in Search of Democracy in America",
+        "type": "other",
+        "year": "1982"
+      },
+      {
+        "title": "Jet Lag: The Running Commentary of a Bicoastal Reporter",
+        "type": "other",
+        "year": "1982"
+      },
+      {
+        "title": "Passage to Peshawar: Pakistan: Between the Hindu Kush and the Arabian Sea",
+        "type": "other",
+        "year": "1983"
+      },
+      {
+        "title": "The Reagan Detour",
+        "type": "other",
+        "year": "1984"
+      },
+      {
+        "title": "President Kennedy: Profile of Power",
+        "type": "other",
+        "year": "1993"
+      },
+      {
+        "title": "Running in Place: How Bill Clinton Disappointed America",
+        "type": "other",
+        "year": "1996"
+      },
+      {
+        "title": "Family Travels -- Around the World in 30 (Or So) Days",
+        "type": "other",
+        "year": "1997"
+      },
+      {
+        "title": "Do the Media Govern?",
+        "type": "other",
+        "year": "1997"
+      },
+      {
+        "title": "What The People Know: Freedom and the Press",
+        "type": "other",
+        "year": "1998"
+      },
+      {
+        "title": "President Nixon: Alone in the White House",
+        "type": "other",
+        "year": "2001"
+      },
+      {
+        "title": "President Reagan: The Triumph of Imagination",
+        "type": "other",
+        "year": "2005"
+      },
+      {
+        "title": "A Force of Nature: The Frontier Genius of Ernest Rutherford",
+        "type": "other",
+        "year": "2008"
+      },
+      {
+        "title": "Daring Young Men: The Heroism and Triumph of The Berlin Airlift - June 1948-May 1949",
+        "type": "other",
+        "year": "2010"
+      },
+      {
+        "title": "Infamy: The Shocking Story of the Japanese-American Internment in World War II",
+        "type": "other",
+        "year": "2015"
+      },
+      {
+        "title": "Lights, Camera, Politics!",
+        "type": "tv",
+        "year": "1980"
+      },
+      {
+        "title": "Struggle for Birmingham",
+        "type": "tv",
+        "year": "1983"
+      },
+      {
+        "title": "Red Star over Khyber",
+        "type": "tv",
+        "year": "1984"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.785Z"
+    "description": "Richard Reeves (1936–2020) was an American writer, syndicated columnist, and lecturer at the Annenberg School for Communication at the University of Southern California. A former chief political correspondent for The New York Times, he went on to publish numerous books on American presidents and politics, including President Kennedy: Profile of Power and President Nixon: Alone in the White House, and contributed to Emmy- and Peabody Award-winning television journalism. His weekly column ran in more than 160 newspapers. He also appeared as himself in the 1993 film Dave. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1994.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Richard_Reeves_(American_writer)"
+    ],
+    "enrichedAt": "2026-09-10T21:14:13.096Z",
+    "birth_year": "1936",
+    "death_year": "2020",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Emmy winner",
+      "George Foster Peabody Award winner",
+      "Peabody Award winner",
+      "Christopher Award winner",
+      "Columbia-Dupont Award winner",
+      "Silver Gavel, American Bar Association",
+      "Book of the Year, Christophers",
+      "Book of the Year, Washington Monthly",
+      "Non-Fiction Book of the Year, PEN",
+      "Lifetime Achievement Award, National Society of Newspaper Columnists",
+      "Goldman Lecturer on American Civilization and Government, Library of Congress",
+      "Carey McWilliams Award"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Casey Kasem": {
     "entity": {
@@ -170152,7 +170284,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.691Z"
+    "enrichedAt": "2026-09-10T21:15:00.752Z"
   },
   "Marisa Berenson": {
     "entity": {
@@ -171040,7 +171172,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:01.006Z"
+    "enrichedAt": "2026-09-10T21:14:00.829Z"
   },
   "Alexandra Wentworth": {
     "entity": {
@@ -175327,7 +175459,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:53:00.964Z"
+    "enrichedAt": "2026-09-10T21:14:00.606Z"
   },
   "Terry Murphy": {
     "entity": {
@@ -175346,7 +175478,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.722Z"
+    "enrichedAt": "2026-09-10T21:15:00.724Z"
   },
   "Linda Blair": {
     "entity": {
@@ -176364,7 +176496,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.359Z"
+    "enrichedAt": "2026-09-10T21:14:00.927Z"
   },
   "Lisa Sliwa": {
     "entity": {
@@ -176930,7 +177062,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.657Z"
+    "enrichedAt": "2026-09-10T21:15:00.210Z"
   },
   "Deidre Hall": {
     "entity": {
@@ -178030,7 +178162,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.658Z"
+    "enrichedAt": "2026-09-10T21:15:00.218Z"
   },
   "Zsa Zsa Gabor": {
     "entity": {
@@ -178782,7 +178914,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.881Z"
+    "enrichedAt": "2026-09-10T21:15:00.707Z"
   },
   "Harry Smith": {
     "entity": {
@@ -178801,7 +178933,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.880Z"
+    "enrichedAt": "2026-09-10T21:15:00.699Z"
   },
   "Herbert Stempel": {
     "entity": {
@@ -180452,7 +180584,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.913Z"
+    "enrichedAt": "2026-09-10T21:15:00.941Z"
   },
   "Frank Gifford": {
     "entity": {
@@ -182329,7 +182461,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.943Z"
+    "enrichedAt": "2026-09-10T21:15:00.928Z"
   },
   "Sissy Biggers": {
     "entity": {
@@ -182599,7 +182731,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:55:00.212Z"
+    "enrichedAt": "2026-09-10T21:15:00.944Z"
   },
   "Lainie Kazan": {
     "entity": {
@@ -183559,7 +183691,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:55:00.303Z"
+    "enrichedAt": "2026-09-10T21:15:00.974Z"
   },
   "Robert Townsend": {
     "entity": {
@@ -183578,7 +183710,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.723Z"
+    "enrichedAt": "2026-09-10T21:17:00.918Z"
   },
   "Sr. Jean Kenny": {
     "entity": {
@@ -183597,7 +183729,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:55:00.571Z"
+    "enrichedAt": "2026-09-10T21:16:00.400Z"
   },
   "Taxicab Confessions": {
     "entity": {
@@ -184058,7 +184190,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:55:00.523Z"
+    "enrichedAt": "2026-09-10T21:16:00.337Z"
   },
   "The Jerky Boys": {
     "entity": {
@@ -184166,7 +184298,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:55:00.743Z"
+    "enrichedAt": "2026-09-10T21:16:00.325Z"
   },
   "Sam Neill": {
     "entity": {
@@ -184879,9 +185011,9 @@
   },
   "Fr. Orsini": {
     "entity": {
-      "name": "Fr. Orsini",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Orsini",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Orsini",
+      "confidence": 0.6499999999999999
     },
     "profession": [],
     "known_for": [],
@@ -184890,11 +185022,20 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:55:00.793Z"
+    "description": "Fr. Orsini is a figure who likely crossed paths with Conan O'Brien during the early run of Late Night with Conan O'Brien around 1995. The Wikipedia entry for the Orsini name is a disambiguation page covering a range of historical and contemporary individuals sharing an Italian-origin surname, and does not provide specific biographical details about Fr. Orsini himself. Without confirmed biographical data, little can be stated with certainty about his profession, nationality, or body of work beyond his apparent connection to Conan O'Brien's program in its first years on the air.",
+    "confidence": 0.6499999999999999,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Orsini"
+    ],
+    "enrichedAt": "2026-09-10T21:16:08.311Z",
+    "birth_year": "",
+    "death_year": "",
+    "gender": "",
+    "nationality": "",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Pat Finn": {
     "entity": {
@@ -185942,9 +186083,9 @@
   },
   "Brian Doyle Murray": {
     "entity": {
-      "name": "Brian Doyle Murray",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Brian Doyle-Murray",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Brian_Doyle-Murray",
+      "confidence": 0.5333333333333333
     },
     "profession": [],
     "known_for": [],
@@ -185954,10 +186095,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
     "description": "",
-    "confidence": 0,
+    "confidence": 0.5333333333333333,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:55:00.964Z"
+    "enrichedAt": "2026-09-10T21:16:00.780Z"
   },
   "Bob Eubanks": {
     "entity": {
@@ -186125,7 +186266,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:56:00.813Z"
+    "enrichedAt": "2026-09-10T21:17:00.856Z"
   },
   "Malcolm McLaren": {
     "entity": {
@@ -186822,7 +186963,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.303Z"
+    "enrichedAt": "2026-09-10T21:16:00.984Z"
   },
   "Gadget Guru Andy Pargh": {
     "entity": {
@@ -186841,7 +186982,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.353Z"
+    "enrichedAt": "2026-09-10T21:16:01.003Z"
   },
   "David Charvet": {
     "entity": {
@@ -187991,7 +188132,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.685Z"
+    "enrichedAt": "2026-09-10T21:17:00.823Z"
   },
   "Hunter Reno": {
     "entity": {
@@ -188010,7 +188151,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.580Z"
+    "enrichedAt": "2026-09-10T21:17:00.313Z"
   },
   "Peter Gawky": {
     "entity": {
@@ -188029,7 +188170,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.296Z"
+    "enrichedAt": "2026-09-10T21:16:00.763Z"
   },
   "Don Ho": {
     "entity": {
@@ -188463,32 +188604,162 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.627Z"
+    "enrichedAt": "2026-09-10T21:17:00.795Z"
   },
   "Jack Wagner": {
     "entity": {
-      "name": "Jack Wagner",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Jack Wagner (actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jack_Wagner_(actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actor",
+      "singer",
+      "golfer"
+    ],
+    "known_for": [
+      {
+        "title": "General Hospital",
+        "type": "tv",
+        "year": "1983"
+      },
+      {
+        "title": "Santa Barbara",
+        "type": "tv",
+        "year": "1991"
+      },
+      {
+        "title": "The Bold and the Beautiful",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Melrose Place",
+        "type": "tv",
+        "year": "1994"
+      },
+      {
+        "title": "All I Need",
+        "type": "music",
+        "year": "1985"
+      },
+      {
+        "title": "Titans",
+        "type": "tv",
+        "year": "2000"
+      },
+      {
+        "title": "Sunset Beach",
+        "type": "tv",
+        "year": "1997"
+      },
+      {
+        "title": "Jekyll & Hyde",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "West Side Story",
+        "type": "other",
+        "year": "1987"
+      },
+      {
+        "title": "Grease",
+        "type": "other",
+        "year": "1988"
+      },
+      {
+        "title": "When Calls the Heart",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "The Wedding March",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Wedding March 3: Here Comes the Bride",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "Falling for Christmas",
+        "type": "tv",
+        "year": "2022"
+      },
+      {
+        "title": "Dancing with the Stars",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "Monk",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Hot in Cleveland",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Castle",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "A New Day In Eden",
+        "type": "tv",
+        "year": "1982"
+      },
+      {
+        "title": "Lady Killer",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Frequent Flyer",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "On the Porch",
+        "type": "music",
+        "year": "2014"
+      }
+    ],
+    "recent_work": [
+      "Reprised role of Nick Marone on The Bold and the Beautiful (June 16, 2025)",
+      "Competed in season fourteen of The Masked Singer as 'Eggplant' (2026)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.944Z"
+    "description": "Jack Wagner is an American actor, singer, and golfer best known for decades of work in daytime and primetime soap operas. He rose to prominence as Frisco Jones on General Hospital beginning in 1983, later playing Warren Lockridge on Santa Barbara, Dr. Peter Burns on Melrose Place, and Nick Marone on The Bold and the Beautiful. His 1985 single All I Need reached number two on the Billboard Hot 100, and he brought his musical theater background to the title roles in a Broadway run of Jekyll & Hyde. More recently, he returned to The Bold and the Beautiful in 2025 and competed on The Masked Singer in 2026. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1995.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jack_Wagner_(actor)"
+    ],
+    "enrichedAt": "2026-09-10T21:18:13.699Z",
+    "birth_year": "1959",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Daytime Emmy Award nominee for Best Younger Actor (1985)",
+      "Daytime Emmy Award nominee for Best Lead Actor (2005)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Buster Poindexter": {
     "entity": {
-      "name": "Buster Poindexter",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "David Johansen",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/David_Johansen",
+      "confidence": 0.3
     },
     "profession": [],
     "known_for": [],
@@ -188498,10 +188769,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
     "description": "",
-    "confidence": 0,
+    "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.802Z"
+    "enrichedAt": "2026-09-10T21:18:00.148Z"
   },
   "Mario Elie": {
     "entity": {
@@ -189118,7 +189389,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.848Z"
+    "enrichedAt": "2026-09-10T21:18:00.587Z"
   },
   "David Anthony Higgins": {
     "entity": {
@@ -191798,22 +192069,86 @@
   },
   "Brian McCann": {
     "entity": {
-      "name": "Brian McCann",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Brian McCann (actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Brian_McCann_(actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor",
+      "comedian",
+      "writer"
+    ],
+    "known_for": [
+      {
+        "title": "Late Night with Conan O'Brien",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Tonight Show with Conan O'Brien",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Conan",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Nikki & Sara Live",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Totally Biased with W. Kamau Bell",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "30 Rock",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Parks and Recreation",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Deer Avenger",
+        "type": "other",
+        "year": "1998"
+      },
+      {
+        "title": "Deer Avenger 2: Deer in the City",
+        "type": "other",
+        "year": "1999"
+      },
+      {
+        "title": "The Kids Tonight Show",
+        "type": "tv",
+        "year": ""
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+      "type": "direct",
+      "evidence": "Wikipedia: \"He is best known for his sketch comedy work on the late-night talk show Late Night with Conan O'Brien and more recently on The Tonight Show with Conan O'Brien and Conan.\""
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:57:00.908Z"
+    "description": "Brian McCann is an American actor, comedian, and writer best known for his 17-year run as a sketch performer and writer on Late Night with Conan O'Brien, The Tonight Show with Conan O'Brien, and Conan, where he created recurring characters including Preparation H Raymond and Pimpbot 5000. He also served as the show's warm-up comic beginning in 2000. After departing in 2012, he went on to serve as head writer for Nikki & Sara Live and wrote for Totally Biased with W. Kamau Bell, and later became head writer for The Kids Tonight Show. He has made guest appearances on 30 Rock and Parks and Recreation.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Brian_McCann_(actor)"
+    ],
+    "enrichedAt": "2026-09-10T21:18:11.635Z",
+    "birth_year": "1965",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "John Laroquette": {
     "entity": {
@@ -192215,7 +192550,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:58:00.192Z"
+    "enrichedAt": "2026-09-10T21:18:00.471Z"
   },
   "David Lee Murphy": {
     "entity": {
@@ -192720,9 +193055,9 @@
   },
   "The Meat Puppets": {
     "entity": {
-      "name": "Meat Puppets",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Meat_Puppets",
-      "confidence": 0.4666666666666666
+      "name": "The Meat Puppets",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -192732,10 +193067,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
     "description": "",
-    "confidence": 0.4666666666666666,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:58:00.318Z"
+    "enrichedAt": "2026-09-10T21:18:00.694Z"
   },
   "Mariel Hemingway": {
     "entity": {
@@ -193106,7 +193441,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:58:00.487Z"
+    "enrichedAt": "2026-09-10T21:18:00.809Z"
   },
   "David Hume Kennerly": {
     "entity": {
@@ -193713,7 +194048,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:58:00.604Z"
+    "enrichedAt": "2026-09-10T21:18:00.916Z"
   },
   "Jeff Smith": {
     "entity": {
@@ -317492,7 +317827,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:54:00.320Z"
+    "enrichedAt": "2026-09-10T21:14:00.886Z"
   },
   "Catherine O'Hara": {
     "entity": {
