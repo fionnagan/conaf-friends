@@ -249863,7 +249863,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:25:00.718Z"
+    "enrichedAt": "2026-09-10T06:34:00.859Z"
   },
   "My Chemical Romance": {
     "entity": {
@@ -250229,7 +250229,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:25:19.842Z"
+    "enrichedAt": "2026-09-10T06:34:00.857Z"
   },
   "New Year's Eve": {
     "entity": {
@@ -250943,7 +250943,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:26:12.371Z"
+    "enrichedAt": "2026-09-10T06:34:00.858Z"
   },
   "Arcade Fire": {
     "entity": {
@@ -251764,7 +251764,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:27:12.341Z"
+    "enrichedAt": "2026-09-10T06:34:01.320Z"
   },
   "Gary Johnson": {
     "entity": {
@@ -251835,7 +251835,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:27:15.523Z"
+    "enrichedAt": "2026-09-10T06:35:00.800Z"
   },
   "Low Millions": {
     "entity": {
@@ -253660,22 +253660,36 @@
   },
   "Joe Jackson": {
     "entity": {
-      "name": "Joe Jackson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Joe Jackson (basketball)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Joe_Jackson_(basketball)",
+      "confidence": 1
     },
-    "profession": [],
+    "profession": [
+      "professional basketball player"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:29:20.453Z"
+    "description": "Joe Jackson is an American professional basketball player who last suited up for the Northern Arizona Suns of the NBA G League. A standout at the University of Memphis, he earned Conference USA Player of the Year honors in 2013 and went on to play professionally in the NBA G League, the Korean Basketball League — where he won a championship with the Goyang Orion Orions — as well as stints in China and Israel. He likely crossed paths with Conan O'Brien's team around 2005, though details of that connection remain unconfirmed.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Joe_Jackson_(basketball)"
+    ],
+    "enrichedAt": "2026-09-10T06:35:06.662Z",
+    "birth_year": "1992",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "2013 Conference USA Player of the Year",
+      "D-League Most Improved Player 2014-15"
+    ],
+    "primary_platform": "sports",
+    "upcoming_work": []
   },
   "The Raveonettes": {
     "entity": {
@@ -255146,7 +255160,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:31:00.865Z"
+    "enrichedAt": "2026-09-10T06:34:01.126Z"
   },
   "Better Than Ezra": {
     "entity": {
@@ -255248,7 +255262,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:31:10.313Z"
+    "enrichedAt": "2026-09-10T06:35:00.442Z"
   },
   "Bloc Party": {
     "entity": {
@@ -256435,7 +256449,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:32:15.838Z"
+    "enrichedAt": "2026-09-10T06:35:00.708Z"
   },
   "Common": {
     "entity": {
@@ -256454,7 +256468,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:32:16.125Z"
+    "enrichedAt": "2026-09-10T06:35:00.724Z"
   },
   "David Gray": {
     "entity": {
@@ -256473,7 +256487,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:32:16.451Z"
+    "enrichedAt": "2026-09-10T06:35:00.929Z"
   },
   "The Hold Steady": {
     "entity": {
@@ -256793,9 +256807,9 @@
   },
   "Andre Benjamin": {
     "entity": {
-      "name": "André 3000",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Andr%C3%A9_3000",
-      "confidence": 0.3
+      "name": "Andre Benjamin",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -256805,10 +256819,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
     "description": "",
-    "confidence": 0.3,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:33:00.132Z"
+    "enrichedAt": "2026-09-10T06:35:00.943Z"
   },
   "Dressy Bessy": {
     "entity": {
@@ -257852,18 +257866,65 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Against_Me!",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "punk rock band"
+    ],
+    "known_for": [
+      {
+        "title": "Against Me! Is Reinventing Axl Rose",
+        "type": "music",
+        "year": "2002"
+      },
+      {
+        "title": "Against Me! as the Eternal Cowboy",
+        "type": "music",
+        "year": "2003"
+      },
+      {
+        "title": "Searching for a Former Clarity",
+        "type": "music",
+        "year": "2005"
+      },
+      {
+        "title": "New Wave",
+        "type": "music",
+        "year": "2007"
+      },
+      {
+        "title": "White Crosses",
+        "type": "music",
+        "year": "2010"
+      },
+      {
+        "title": "Transgender Dysphoria Blues",
+        "type": "music",
+        "year": "2014"
+      },
+      {
+        "title": "Shape Shift with Me",
+        "type": "music",
+        "year": "2016"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "",
+    "description": "Against Me! is an American punk rock band formed in 1997 in Naples, Florida, by singer and guitarist Laura Jane Grace, with guitarist James Bowman a consistent presence since 2001. The band built a following through indie releases before signing to Sire Records for New Wave in 2007, which reached no. 57 on the Billboard 200 and was named album of the year by Spin. Their 2014 album Transgender Dysphoria Blues, released independently following Grace's public coming-out as a trans woman, earned critical and commercial acclaim. The band later entered an indefinite hiatus. They likely crossed paths with Conan O'Brien during a first appearance on Late Night with Conan O'Brien in 2005.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:34:00.549Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Against_Me!"
+    ],
+    "enrichedAt": "2026-09-10T06:36:08.998Z",
+    "birth_year": "",
+    "death_year": "",
+    "gender": "",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "music",
+    "upcoming_work": []
   },
   "Nada Surf": {
     "entity": {
@@ -259470,7 +259531,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:35:29.474Z"
+    "enrichedAt": "2026-09-10T06:36:00.666Z"
   },
   "Ghost Hunters": {
     "entity": {
@@ -259489,7 +259550,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:35:29.528Z"
+    "enrichedAt": "2026-09-10T06:36:00.577Z"
   },
   "Jason Hawes": {
     "entity": {
@@ -260029,7 +260090,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:36:15.673Z"
+    "enrichedAt": "2026-09-10T06:36:00.621Z"
   },
   "John Daly": {
     "entity": {
@@ -260048,7 +260109,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:36:15.934Z"
+    "enrichedAt": "2026-09-10T06:36:00.798Z"
   },
   "JW Hart": {
     "entity": {
@@ -260067,7 +260128,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:36:16.247Z"
+    "enrichedAt": "2026-09-10T06:36:00.859Z"
   },
   "John Mayer Trio": {
     "entity": {
@@ -262109,7 +262170,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:38:24.859Z"
+    "enrichedAt": "2026-09-10T06:36:00.887Z"
   },
   "Fred Goss": {
     "entity": {
@@ -263797,7 +263858,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:40:29.119Z"
+    "enrichedAt": "2026-09-10T06:37:00.912Z"
   },
   "The Raconteurs": {
     "entity": {
@@ -264063,7 +264124,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:41:00.443Z"
+    "enrichedAt": "2026-09-10T06:37:00.230Z"
   },
   "Famke Jannsen": {
     "entity": {
@@ -264071,18 +264132,140 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Famke_Janssen",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actress",
+      "model",
+      "film director",
+      "screenwriter"
+    ],
+    "known_for": [
+      {
+        "title": "GoldenEye",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "X-Men",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "X2",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "X-Men: The Last Stand",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "The Wolverine",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "X-Men: Days of Future Past",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Taken",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Taken 2",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Taken 3",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Nip/Tuck",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Hemlock Grove",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "How to Get Away with Murder",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "The Blacklist: Redemption",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Bringing Up Bobby",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Hansel & Gretel: Witch Hunters",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "The Faculty",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Rounders",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Lord of Illusions",
+        "type": "film",
+        "year": "1995"
+      },
+      {
+        "title": "Amsterdam Empire",
+        "type": "tv",
+        "year": "2025"
+      },
+      {
+        "title": "The Postcard Killings",
+        "type": "film",
+        "year": "2020"
+      }
+    ],
+    "recent_work": [
+      "Amsterdam Empire (2025)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "",
+    "description": "Famke Janssen is a Dutch actress and former model who built a wide-ranging career in Hollywood film and television. She is best known for playing Xenia Onatopp in GoldenEye, Jean Grey and Phoenix across the X-Men film series, and Lenore Mills in the Taken trilogy. On television she has starred in Nip/Tuck, Hemlock Grove, How to Get Away with Murder, and The Blacklist: Redemption, and most recently appeared in the Netflix Dutch crime series Amsterdam Empire. She also wrote and directed the drama Bringing Up Bobby. She likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2006.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:41:00.702Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Famke_Janssen"
+    ],
+    "enrichedAt": "2026-09-10T06:37:11.221Z",
+    "birth_year": "1964",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "Dutch",
+    "prestige_signals": [
+      "Saturn Award for Best Supporting Actress (X-Men: The Last Stand)",
+      "Special Recognition Best Actress Award at the Hamptons International Film Festival (Turn the River)",
+      "Hollywood Life Breakthrough Artist of the Year Award (Nip/Tuck)",
+      "United Nations Goodwill Ambassador for Integrity (2008)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Gnarls Barkley": {
     "entity": {
@@ -265078,7 +265261,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:42:07.520Z"
+    "enrichedAt": "2026-09-10T06:37:00.743Z"
   },
   "All-American Rejects": {
     "entity": {
@@ -265717,7 +265900,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:43:00.101Z"
+    "enrichedAt": "2026-09-10T06:37:00.831Z"
   },
   "Landon Pigg": {
     "entity": {
@@ -266072,9 +266255,9 @@
   },
   "Gisele Bundchen": {
     "entity": {
-      "name": "Gisele Bündchen",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Gisele_B%C3%BCndchen",
-      "confidence": 0.6499999999999999
+      "name": "Gisele Bundchen",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -266084,10 +266267,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
     "description": "",
-    "confidence": 0.6499999999999999,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:43:20.850Z"
+    "enrichedAt": "2026-09-10T06:37:00.964Z"
   },
   "Neko Case": {
     "entity": {
@@ -268626,7 +268809,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:46:00.096Z"
+    "enrichedAt": "2026-09-10T06:38:00.601Z"
   },
   "J Alexander": {
     "entity": {
@@ -268645,26 +268828,119 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:46:00.355Z"
+    "enrichedAt": "2026-09-10T06:38:00.538Z"
   },
   "Natalie Morales": {
     "entity": {
-      "name": "Natalie Morales",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Natalie Morales (actress)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Natalie_Morales_(actress)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actress",
+      "director"
+    ],
+    "known_for": [
+      {
+        "title": "Grey's Anatomy",
+        "type": "tv",
+        "year": "2024"
+      },
+      {
+        "title": "The Middleman",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Trophy Wife",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Grinder",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Abby's",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "White Collar",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Beast in Me",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Parks and Recreation",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Santa Clarita Diet",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Dead to Me",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Morning Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Plan B",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Language Lessons",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Wall Street: Money Never Sleeps",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "My Dead Friend Zoe",
+        "type": "film",
+        "year": "2025"
+      }
+    ],
+    "recent_work": [
+      "Grey's Anatomy (2024–25) as Dr. Monica Beltran",
+      "The Beast in Me (2025) as the estranged wife of Claire Danes's character",
+      "My Dead Friend Zoe (2025)",
+      "You Deserve Each Other as Cassie"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:46:00.805Z"
+    "description": "Natalie Morales is an American actress and director best known for her television work across more than a decade of prominent roles, including The Middleman, Trophy Wife, The Grinder, Abby's, White Collar, Parks and Recreation, Santa Clarita Diet, Dead to Me, and The Morning Show. She gained wider recognition as pediatric surgeon Dr. Monica Beltran on Grey's Anatomy from 2024 to 2025, and appeared in the Netflix miniseries The Beast in Me opposite Claire Danes. As a director, she helmed the teen comedy Plan B and the Berlin Film Festival–premiered drama Language Lessons, which she also co-wrote and starred in. She likely first crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2007.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Natalie_Morales_(actress)"
+    ],
+    "enrichedAt": "2026-09-10T06:38:10.817Z",
+    "birth_year": "1985",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Ivanka Trump": {
     "entity": {
@@ -269465,7 +269741,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:47:00.835Z"
+    "enrichedAt": "2026-09-10T06:38:00.699Z"
   },
   "Jasper Redd": {
     "entity": {
@@ -269893,7 +270169,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:47:13.403Z"
+    "enrichedAt": "2026-09-10T06:38:00.758Z"
   },
   "Eli Roth": {
     "entity": {
@@ -270074,161 +270350,21 @@
   "Vera Farmiga": {
     "entity": {
       "name": "Vera Farmiga",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Vera_Farmiga",
-      "confidence": 1
+      "wikipedia_url": "",
+      "confidence": 0
     },
-    "profession": [
-      "actress",
-      "singer",
-      "director"
-    ],
-    "known_for": [
-      {
-        "title": "Taking Sides",
-        "type": "other",
-        "year": "1996"
-      },
-      {
-        "title": "Down to the Bone",
-        "type": "film",
-        "year": "2004"
-      },
-      {
-        "title": "The Manchurian Candidate",
-        "type": "film",
-        "year": "2004"
-      },
-      {
-        "title": "The Departed",
-        "type": "film",
-        "year": "2006"
-      },
-      {
-        "title": "Joshua",
-        "type": "film",
-        "year": "2007"
-      },
-      {
-        "title": "The Boy in the Striped Pyjamas",
-        "type": "film",
-        "year": "2008"
-      },
-      {
-        "title": "Up in the Air",
-        "type": "film",
-        "year": "2009"
-      },
-      {
-        "title": "Orphan",
-        "type": "film",
-        "year": "2009"
-      },
-      {
-        "title": "Higher Ground",
-        "type": "film",
-        "year": "2011"
-      },
-      {
-        "title": "Source Code",
-        "type": "film",
-        "year": "2011"
-      },
-      {
-        "title": "Safe House",
-        "type": "film",
-        "year": "2012"
-      },
-      {
-        "title": "The Conjuring",
-        "type": "film",
-        "year": "2013"
-      },
-      {
-        "title": "Bates Motel",
-        "type": "tv",
-        "year": "2013"
-      },
-      {
-        "title": "The Judge",
-        "type": "film",
-        "year": "2014"
-      },
-      {
-        "title": "The Conjuring 2",
-        "type": "film",
-        "year": "2016"
-      },
-      {
-        "title": "The Front Runner",
-        "type": "film",
-        "year": "2018"
-      },
-      {
-        "title": "Annabelle Comes Home",
-        "type": "film",
-        "year": "2019"
-      },
-      {
-        "title": "Godzilla: King of the Monsters",
-        "type": "film",
-        "year": "2019"
-      },
-      {
-        "title": "When They See Us",
-        "type": "tv",
-        "year": "2019"
-      },
-      {
-        "title": "Hawkeye",
-        "type": "tv",
-        "year": "2021"
-      },
-      {
-        "title": "The Conjuring: The Devil Made Me Do It",
-        "type": "film",
-        "year": "2021"
-      },
-      {
-        "title": "The Many Saints of Newark",
-        "type": "film",
-        "year": "2021"
-      },
-      {
-        "title": "Five Days at Memorial",
-        "type": "tv",
-        "year": "2022"
-      }
-    ],
-    "recent_work": [
-      "Five Days at Memorial (2022)"
-    ],
+    "profession": [],
+    "known_for": [],
+    "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
     },
-    "description": "Vera Farmiga is an American actress, singer, and director whose career spans stage, film, and television. She broke through with Down to the Bone (2004) and built her reputation across acclaimed projects including The Departed (2006), the Academy Award-nominated Up in the Air (2009), and her Emmy-nominated turn as Norma Bates in Bates Motel (2013–2017). She is perhaps best known to horror audiences for her recurring role as Lorraine Warren in the Conjuring Universe, with The Conjuring: Last Rites forthcoming. She most recently appeared in the Apple TV+ miniseries Five Days at Memorial (2022). Farmiga likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 2007.",
-    "confidence": 1,
+    "description": "",
+    "confidence": 0,
     "needs_review": true,
-    "sources": [
-      "https://en.wikipedia.org/wiki/Vera_Farmiga"
-    ],
-    "enrichedAt": "2026-09-09T10:47:28.148Z",
-    "birth_year": "1973",
-    "death_year": "",
-    "gender": "female",
-    "nationality": "American",
-    "prestige_signals": [
-      "Academy Award nominee",
-      "Primetime Emmy Award nominee"
-    ],
-    "primary_platform": "film",
-    "upcoming_work": [
-      {
-        "title": "The Conjuring: Last Rites",
-        "type": "film",
-        "year": "2025"
-      }
-    ]
+    "sources": [],
+    "enrichedAt": "2026-09-10T06:38:00.822Z"
   },
   "Glenn Close": {
     "entity": {
@@ -271787,8 +271923,8 @@
   },
   "The Great Throwdini": {
     "entity": {
-      "name": "Impalement arts",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Impalement_arts",
+      "name": "The Great Throwdini",
+      "wikipedia_url": "",
       "confidence": 0
     },
     "profession": [],
@@ -271802,7 +271938,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:49:11.748Z"
+    "enrichedAt": "2026-09-10T06:38:00.920Z"
   },
   "Chuck Liddell": {
     "entity": {
@@ -271875,7 +272011,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:49:15.644Z"
+    "enrichedAt": "2026-09-10T06:38:00.978Z"
   },
   "Sarah Bolger": {
     "entity": {
@@ -272674,7 +272810,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:50:30.183Z"
+    "enrichedAt": "2026-09-10T06:39:00.966Z"
   },
   "Fred Simmons": {
     "entity": {
@@ -272693,7 +272829,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:50:30.200Z"
+    "enrichedAt": "2026-09-10T06:39:00.272Z"
   },
   "Mark Moffett": {
     "entity": {
@@ -273952,18 +274088,115 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Emmanuelle_Chriqui",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actress"
+    ],
+    "known_for": [
+      {
+        "title": "Entourage",
+        "type": "tv",
+        "year": "2004"
+      },
+      {
+        "title": "Snow Day",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "You Don't Mess with the Zohan",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "The Mentalist",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "Superman & Lois",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Detroit Rock City",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "100 Girls",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Wrong Turn",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "On the Line",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "In the Mix",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "National Lampoon's Adam & Eve",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "Cadillac Records",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Women in Trouble",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Elektra Luxx",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "The Borgias",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "ThunderCats",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "The Knight Before Christmas",
+        "type": "film",
+        "year": "2019"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2008."
     },
-    "description": "",
+    "description": "Emmanuelle Chriqui is a Canadian and American actress best known for playing Sloan McQuewick on HBO's Entourage across its original run from 2004 to 2011 and in the 2015 film continuation, Lana Lang on The CW's Superman & Lois from 2021 to 2024, and Lorelei Martins on CBS's The Mentalist. Her film credits include Snow Day, You Don't Mess with the Zohan, Cadillac Records, and The Knight Before Christmas. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 2008, around the time several of her high-profile film roles were released.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:52:12.148Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Emmanuelle_Chriqui"
+    ],
+    "enrichedAt": "2026-09-10T06:39:10.572Z",
+    "birth_year": "1975",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "Canadian",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Leighton Meester": {
     "entity": {
@@ -275124,18 +275357,111 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Vanessa_Lachey",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "model",
+      "actress",
+      "television host"
+    ],
+    "known_for": [
+      {
+        "title": "Miss Teen USA",
+        "type": "other",
+        "year": "1998"
+      },
+      {
+        "title": "Entertainment Tonight",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Total Request Live",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Morning After",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "True Beauty",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Wipeout",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "How I Met Your Mother",
+        "type": "tv",
+        "year": "2008"
+      },
+      {
+        "title": "Disaster Movie",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "CSI: NY",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "30 Rock",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "Truth Be Told",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Dancing with the Stars",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Love Is Blind",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "NCIS: Hawai'i",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Life from Scratch: Family Traditions That Start with You",
+        "type": "other",
+        "year": "2021"
+      }
+    ],
+    "recent_work": [
+      "NCIS: Hawai'i (2021–2024)",
+      "General Motors/Netflix Super Bowl commercial (2023)",
+      "Variety '40 Most Powerful Women on Reality TV in 2023'"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2008."
     },
-    "description": "",
+    "description": "Vanessa Lachey (née Minnillo) is a Filipino-American model, actress, and television host who won Miss Teen USA in 1998. She built an early career as a correspondent for Entertainment Tonight and a host of MTV's Total Request Live before transitioning to acting, with guest roles on How I Met Your Mother, 30 Rock, and CSI: NY, as well as the parody film Disaster Movie. She co-hosts the Netflix reality series Love Is Blind alongside her husband Nick Lachey and led the CBS crime drama NCIS: Hawai'i for three seasons as its history-making first female lead. She likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2008.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:53:11.839Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Vanessa_Lachey"
+    ],
+    "enrichedAt": "2026-09-10T06:39:10.990Z",
+    "birth_year": "1980",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "Filipino-American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Philippe Petit": {
     "entity": {
@@ -275692,22 +276018,49 @@
   },
   "Anthony Sullivan": {
     "entity": {
-      "name": "Anthony Sullivan",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Anthony Sullivan (pitchman)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Anthony_Sullivan_(pitchman)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "pitchman",
+      "television host",
+      "television producer",
+      "entrepreneur"
+    ],
+    "known_for": [
+      {
+        "title": "PitchMen",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "HSN",
+        "type": "tv",
+        "year": "1998"
+      }
+    ],
+    "recent_work": [
+      "Sugar AI (digital marketing agency, transitioned from Sullivan Productions in 2023)"
+    ],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
+      "type": "direct",
+      "evidence": "Wikipedia: \"They appeared on an episode of The Tonight Show with Conan O'Brien five days before the Mays's death.\""
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:54:01.119Z"
+    "description": "Anthony Sullivan is a British pitchman and television personality best known for selling \"As seen on TV\" products in the United States. He rose to prominence as a host on HSN and later starred alongside fellow pitchman Billy Mays in the Discovery Channel reality series PitchMen, in which the duo evaluated new products. Sullivan founded Sullivan Productions, a television production and marketing company that in 2023 transitioned into Sugar AI, a digital marketing agency focused on consumer brands. He also founded MONTKUSH, an organic wellness company and farm in Vermont. Sullivan and Mays appeared together on The Tonight Show with Conan O'Brien just days before Mays's death.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Anthony_Sullivan_(pitchman)"
+    ],
+    "enrichedAt": "2026-09-10T06:39:06.820Z",
+    "birth_year": "",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "British",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Lauren Conrad": {
     "entity": {
@@ -275872,7 +276225,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:54:10.234Z"
+    "enrichedAt": "2026-09-10T06:40:00.365Z"
   },
   "Phil Jackson": {
     "entity": {
@@ -277288,18 +277641,52 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Sully_Sullenberger",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "aircraft pilot",
+      "diplomat",
+      "aviation safety expert",
+      "author",
+      "CBS News aviation and safety expert"
+    ],
+    "known_for": [
+      {
+        "title": "US Airways Flight 1549 Hudson River landing",
+        "type": "other",
+        "year": "2009"
+      },
+      {
+        "title": "Highest Duty: My Search for What Really Matters",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Making a Difference: Stories of Vision and Courage from America's Leaders",
+        "type": "other",
+        "year": "2012"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
     },
-    "description": "",
+    "description": "Chesley 'Sully' Sullenberger is an American retired airline captain, aviation safety expert, diplomat, and author best known for safely ditching US Airways Flight 1549 on the Hudson River in January 2009 after a bird strike disabled both engines, saving all 155 people aboard. Following that event, he became a prominent advocate for aviation safety, co-authored the New York Times bestseller Highest Duty: My Search for What Really Matters, and joined CBS News as an aviation and safety analyst. He later served as U.S. ambassador to the International Civil Aviation Organization from 2022. He likely crossed paths with Conan O'Brien during an appearance on The Tonight Show with Conan O'Brien in 2009, shortly after his celebrated landing.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:56:00.964Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sully_Sullenberger"
+    ],
+    "enrichedAt": "2026-09-10T06:40:09.665Z",
+    "birth_year": "1951",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "New York Times bestseller (Highest Duty)",
+      "ranked second in Time's Top 100 Most Influential Heroes and Icons of 2009"
+    ],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Paul Teutul Sr.": {
     "entity": {
@@ -278243,9 +278630,9 @@
   },
   "Mike Sorrentino": {
     "entity": {
-      "name": "Michael Sorrentino",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_Sorrentino",
-      "confidence": 0.6499999999999999
+      "name": "Mike Sorrentino",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -278255,10 +278642,10 @@
       "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
     },
     "description": "",
-    "confidence": 0.6499999999999999,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:57:11.535Z"
+    "enrichedAt": "2026-09-10T06:40:02.467Z"
   },
   "Tobey Maguire": {
     "entity": {
@@ -279118,22 +279505,33 @@
   },
   "Shane Smith": {
     "entity": {
-      "name": "Shane Smith",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Shane Smith (American football)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Shane_Smith_(American_football)",
+      "confidence": 1
     },
-    "profession": [],
+    "profession": [
+      "football fullback"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan in 2010."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T10:58:00.950Z"
+    "description": "Shane Smith is an American former NFL fullback who played college football at San Jose State University, where he contributed as a blocker and receiver for the San Jose State Spartans from 2013 to 2016. After going undrafted in the 2017 NFL Draft, he signed with the New York Giants, appearing in 11 games during his rookie season. He later had a brief stint with the New Orleans Saints in 2019 before his professional career concluded. Smith likely crossed paths with Conan O'Brien around 2010, though the specifics of that connection remain unclear given his football background.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Shane_Smith_(American_football)"
+    ],
+    "enrichedAt": "2026-09-10T06:40:15.404Z",
+    "birth_year": "1993",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "sports",
+    "upcoming_work": []
   },
   "Roberta Mancino": {
     "entity": {
@@ -280088,7 +280486,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T10:59:00.341Z"
+    "enrichedAt": "2026-09-10T06:41:00.570Z"
   },
   "Brandon T Jackson": {
     "entity": {
@@ -280959,7 +281357,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T11:00:06.506Z"
+    "enrichedAt": "2026-09-10T06:41:01.067Z"
   },
   "Adrian Grenier": {
     "entity": {
@@ -283018,7 +283416,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T11:02:11.950Z"
+    "enrichedAt": "2026-09-10T06:41:01.417Z"
   },
   "Bret McKenzie": {
     "entity": {
@@ -283668,7 +284066,7 @@
     "confidence": 0.5333333333333333,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T11:03:00.474Z"
+    "enrichedAt": "2026-09-10T06:41:01.106Z"
   },
   "Zosia Mamet": {
     "entity": {
@@ -284531,7 +284929,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T11:04:00.541Z"
+    "enrichedAt": "2026-09-10T06:41:00.909Z"
   },
   "Johnathan Lee Iverson": {
     "entity": {
@@ -287130,18 +287528,139 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Snoop_Dogg",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "rapper",
+      "singer",
+      "record producer",
+      "record executive",
+      "songwriter",
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "Deep Cover",
+        "type": "music",
+        "year": "1992"
+      },
+      {
+        "title": "The Chronic",
+        "type": "music",
+        "year": "1992"
+      },
+      {
+        "title": "Nuthin' but a 'G' Thang",
+        "type": "music",
+        "year": "1992"
+      },
+      {
+        "title": "Doggystyle",
+        "type": "music",
+        "year": "1993"
+      },
+      {
+        "title": "What's My Name?",
+        "type": "music",
+        "year": "1993"
+      },
+      {
+        "title": "Gin and Juice",
+        "type": "music",
+        "year": "1993"
+      },
+      {
+        "title": "Tha Doggfather",
+        "type": "music",
+        "year": "1996"
+      },
+      {
+        "title": "Da Game Is to Be Sold, Not to Be Told",
+        "type": "music",
+        "year": "1998"
+      },
+      {
+        "title": "No Limit Top Dogg",
+        "type": "music",
+        "year": "1999"
+      },
+      {
+        "title": "Tha Last Meal",
+        "type": "music",
+        "year": "2000"
+      },
+      {
+        "title": "R&G (Rhythm & Gangsta): The Masterpiece",
+        "type": "music",
+        "year": "2004"
+      },
+      {
+        "title": "Drop It Like It's Hot",
+        "type": "music",
+        "year": "2004"
+      },
+      {
+        "title": "Reincarnated",
+        "type": "music",
+        "year": "2013"
+      },
+      {
+        "title": "Reincarnated",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "Bush",
+        "type": "music",
+        "year": "2015"
+      },
+      {
+        "title": "Bible of Love",
+        "type": "music",
+        "year": "2018"
+      },
+      {
+        "title": "BODR",
+        "type": "music",
+        "year": "2022"
+      },
+      {
+        "title": "Super Bowl LVI halftime show",
+        "type": "other",
+        "year": "2022"
+      },
+      {
+        "title": "The Voice",
+        "type": "tv",
+        "year": ""
+      }
+    ],
+    "recent_work": [
+      "Co-headlined the Super Bowl LVI halftime show (2022)",
+      "Acquired Death Row Records from MNRK Music Group (2022)",
+      "Released BODR (2022)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan in 2013."
     },
-    "description": "",
+    "description": "Snoop Dogg, born Calvin Cordozar Broadus Jr. in 1971, is an American rapper, singer, record producer, songwriter, and actor widely regarded as one of the defining voices of West Coast hip-hop. He rose to prominence in 1992 collaborating with Dr. Dre on The Chronic and broke out as a solo artist with his debut album Doggystyle, which spawned the hits What's My Name? and Gin and Juice. Over a career spanning decades, he has released numerous albums including R&G (Rhythm & Gangsta): The Masterpiece and, under the alias Snoop Lion, the reggae album Reincarnated. A Primetime Emmy Award winner for his role in the Super Bowl LVI halftime show, he has also served as a coach on The Voice. He likely first crossed paths with Conan O'Brien around 2013.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T11:07:00.325Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Snoop_Dogg"
+    ],
+    "enrichedAt": "2026-09-10T06:42:15.432Z",
+    "birth_year": "1971",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Primetime Emmy Award winner",
+      "Seventeen Grammy Award nominations",
+      "Two Sports Emmy Awards",
+      "Star on the Hollywood Walk of Fame"
+    ],
+    "primary_platform": "music",
+    "upcoming_work": []
   },
   "Thandie Newton": {
     "entity": {
@@ -287149,18 +287668,144 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Thandiwe_Newton",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actress",
+      "voice actress"
+    ],
+    "known_for": [
+      {
+        "title": "Flirting",
+        "type": "film",
+        "year": "1991"
+      },
+      {
+        "title": "Interview with the Vampire",
+        "type": "film",
+        "year": "1994"
+      },
+      {
+        "title": "Beloved",
+        "type": "film",
+        "year": "1998"
+      },
+      {
+        "title": "Mission: Impossible 2",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "The Chronicles of Riddick",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "Crash",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "The Pursuit of Happyness",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Norbit",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Run Fatboy Run",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "RocknRolla",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "W.",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "2012",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "For Colored Girls",
+        "type": "film",
+        "year": "2010"
+      },
+      {
+        "title": "Solo: A Star Wars Story",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "ER",
+        "type": "tv",
+        "year": "2003"
+      },
+      {
+        "title": "Rogue",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "The Slap",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Westworld",
+        "type": "tv",
+        "year": "2016"
+      },
+      {
+        "title": "Line of Duty",
+        "type": "tv",
+        "year": "2017"
+      },
+      {
+        "title": "Big Mouth",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Human Resources",
+        "type": "tv",
+        "year": "2021"
+      }
+    ],
+    "recent_work": [
+      "Big Mouth (2019–2025)",
+      "Human Resources (2021–2023)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Conan in 2013."
     },
-    "description": "",
+    "description": "Melanie Thandiwe Newton is a British actress whose career spans more than three decades across film and television. She made her debut in Flirting in 1991 and built a substantial film resume that includes Interview with the Vampire, Beloved, Mission: Impossible 2, Crash, The Pursuit of Happyness, and Solo: A Star Wars Story. Her performance in Crash earned her the BAFTA Award for Best Supporting Actress. On television, she is best known for playing Maeve Millay in Westworld, a role that brought her the Primetime Emmy Award for Outstanding Supporting Actress in 2018, and she voiced Mona in Big Mouth through 2025. She likely first crossed paths with Conan O'Brien when she appeared on his show around 2013.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T11:07:00.618Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Thandiwe_Newton"
+    ],
+    "enrichedAt": "2026-09-10T06:42:13.749Z",
+    "birth_year": "1972",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "British",
+    "prestige_signals": [
+      "Primetime Emmy Award for Outstanding Supporting Actress (2018)",
+      "BAFTA Award for Best Supporting Actress (Crash)",
+      "Golden Globe nominee (two nominations)",
+      "Officer of the Order of the British Empire (OBE, 2019)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Rorke Denver": {
     "entity": {
@@ -287450,7 +288095,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T11:07:12.082Z"
+    "enrichedAt": "2026-09-10T06:42:01.609Z"
   },
   "Craig Robinson": {
     "entity": {
