@@ -6007,7 +6007,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:58:20.407Z"
+    "enrichedAt": "2026-09-09T23:52:17.670Z"
   },
   "David Cross": {
     "entity": {
@@ -15388,7 +15388,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:59:01.200Z"
+    "enrichedAt": "2026-09-09T23:53:01.560Z"
   },
   "Hilary Swank": {
     "entity": {
@@ -17319,7 +17319,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:58:20.408Z"
+    "enrichedAt": "2026-09-09T23:52:17.673Z"
   },
   "D'Arcy Carden": {
     "entity": {
@@ -20266,22 +20266,120 @@
   },
   "David Feldman": {
     "entity": {
-      "name": "David Feldman",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "David Feldman (comedian)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/David_Feldman_(comedian)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "stand-up comedian",
+      "comedy writer",
+      "podcaster"
+    ],
+    "known_for": [
+      {
+        "title": "Late Night with Conan O'Brien",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Tonight Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Late Late Show",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Roseanne",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Burn with Jeff Ross",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "The Daily Show with Jon Stewart",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Joy Behar: Say Anything!",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Talk Show With Spike Feresten",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Dennis Miller Live",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Real Time with Bill Maher",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Triumph the Insult Comic Dog",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Curb Your Enthusiasm",
+        "type": "tv",
+        "year": "2001"
+      },
+      {
+        "title": "Ralph Nader Radio Hour",
+        "type": "podcast",
+        "year": ""
+      },
+      {
+        "title": "David Feldman Show",
+        "type": "podcast",
+        "year": "2009"
+      },
+      {
+        "title": "The Very Best of the David Feldman Show, Vol. 1",
+        "type": "music",
+        "year": ""
+      },
+      {
+        "title": "Left Without Paying",
+        "type": "music",
+        "year": "2009"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Late Night with Conan O'Brien in 1996."
+      "type": "direct",
+      "evidence": "Wikipedia: \"He appeared on Late Night with Conan O'Brien, The Tonight Show, and The Late Late Show, and hosted his own special for Comedy Central.\""
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T22:59:01.168Z"
+    "description": "David Feldman is an American stand-up comedian, comedy writer, and podcaster whose career spans television writing, live performance, and long-form audio. A three-time Primetime Emmy Award winner and four-time Writers Guild Award recipient, he contributed to shows including Roseanne, The Daily Show with Jon Stewart, Dennis Miller Live, and Real Time with Bill Maher, and wrote material for Triumph the Insult Comic Dog and Comedy Central roasts. He appeared on Late Night with Conan O'Brien, a show he first appeared on in 1996. Since 2009 he has hosted the listener-supported David Feldman Show and co-hosts the Ralph Nader Radio Hour on Pacifica Radio Network.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/David_Feldman_(comedian)"
+    ],
+    "enrichedAt": "2026-09-09T23:53:12.142Z",
+    "birth_year": "",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "three Primetime Emmy Awards (1995, 1996 and 1998)",
+      "four Writers Guild Awards (1996, 1999, 2001 and 2017)",
+      "CableACE Award (1995)"
+    ],
+    "primary_platform": "podcast",
+    "upcoming_work": []
   },
   "Greg Fitzsimmons": {
     "entity": {
@@ -28843,7 +28941,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:59:01.314Z"
+    "enrichedAt": "2026-09-09T23:53:01.979Z"
   },
   "Martha Stewart": {
     "entity": {
@@ -29362,6 +29460,11 @@
         "year": "2006"
       },
       {
+        "title": "Star Wars prequel trilogy",
+        "type": "film",
+        "year": "1999"
+      },
+      {
         "title": "Iron Man",
         "type": "film",
         "year": "2008"
@@ -29387,12 +29490,12 @@
         "year": "2014"
       },
       {
-        "title": "The Hateful Eight",
+        "title": "Chi-Raq",
         "type": "film",
         "year": "2015"
       },
       {
-        "title": "Chi-Raq",
+        "title": "The Hateful Eight",
         "type": "film",
         "year": "2015"
       },
@@ -29425,11 +29528,6 @@
         "title": "Secret Invasion",
         "type": "tv",
         "year": "2023"
-      },
-      {
-        "title": "Star Wars prequel trilogy",
-        "type": "film",
-        "year": "1999"
       }
     ],
     "recent_work": [
@@ -29440,13 +29538,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "Samuel L. Jackson is an American actor and film producer whose career spans theater, film, and television across more than four decades. He broke through with Quentin Tarantino's Pulp Fiction, winning the BAFTA for Best Supporting Actor, and has since appeared in dozens of major productions including the Star Wars prequel trilogy, eleven Marvel Cinematic Universe films as Nick Fury, and the Disney+ series Secret Invasion. A 2022 Academy Honorary Award recipient, he is recognized as the highest-grossing actor of all time. Jackson likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1996, around the time of A Time to Kill.",
+    "description": "Samuel L. Jackson is an American actor and film producer born in 1948, widely recognized as the highest-grossing actor of all time, with his films collectively earning more than $27 billion worldwide. He earned his breakout role as Jules Winnfield in Pulp Fiction, winning the BAFTA Award for Best Supporting Actor and receiving an Oscar nomination, and has since built an expansive body of work spanning collaborations with Quentin Tarantino and Spike Lee, the Marvel Cinematic Universe as Nick Fury, and the Star Wars prequel trilogy as Mace Windu. In 2022 he received the Academy Honorary Award. He likely crossed paths with Conan O'Brien as early as 1996, around the time of his appearance in A Time to Kill.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Samuel_L._Jackson"
     ],
-    "enrichedAt": "2026-09-09T22:59:20.140Z",
+    "enrichedAt": "2026-09-09T23:52:38.463Z",
     "birth_year": "1948",
     "death_year": "",
     "gender": "male",
@@ -29458,13 +29556,7 @@
       "Tony Award for Best Featured Actor in a Play nominee (The Piano Lesson, 2022)"
     ],
     "primary_platform": "film",
-    "upcoming_work": [
-      {
-        "title": "Highest 2 Lowest",
-        "type": "film",
-        "year": "2025"
-      }
-    ]
+    "upcoming_work": []
   },
   "Bob Costas": {
     "entity": {
@@ -35697,7 +35789,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:00:01.218Z"
+    "enrichedAt": "2026-09-09T23:53:01.114Z"
   },
   "James Spader": {
     "entity": {
@@ -43768,32 +43860,27 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Russell Crowe is a New Zealand-born actor and film director whose screen work has earned him an Academy Award, a BAFTA Award, and two Golden Globes. He broke through internationally with L.A. Confidential and The Insider before winning the Academy Award for Best Actor for Gladiator, and earned a further nomination for A Beautiful Mind. His extensive filmography spans Cinderella Man, American Gangster, Les Misérables, The Nice Guys, and The Pope's Exorcist, among many others. He made his directorial debut with The Water Diviner in 2014. He likely crossed paths with Conan O'Brien as early as 1995, when he is believed to have first appeared on Late Night with Conan O'Brien.",
+    "description": "Russell Crowe is a New Zealand-born actor and film director who moved to Australia as a child and built one of the most decorated careers in contemporary cinema. An Academy Award, a BAFTA, and two Golden Globes mark a run that includes his breakthrough in Romper Stomper, international acclaim for L.A. Confidential and The Insider, and his Oscar-winning turn in Gladiator. He followed that with A Beautiful Mind, then a long string of major productions ranging from Master and Commander: The Far Side of the World to Les Misérables and The Nice Guys. His most recent screen credit is The Pope's Exorcist in 2023. He likely crossed paths with Conan O'Brien as early as 1995, when he is believed to have first appeared on Late Night with Conan O'Brien.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Russell_Crowe"
     ],
-    "enrichedAt": "2026-09-09T23:00:14.178Z",
+    "enrichedAt": "2026-09-09T23:54:14.491Z",
     "birth_year": "1964",
     "death_year": "",
     "gender": "male",
-    "nationality": "New Zealand",
+    "nationality": "New Zealand-born",
     "prestige_signals": [
       "Academy Award winner",
       "BAFTA Award winner",
-      "Golden Globe winner",
-      "Academy Award for Best Actor (Gladiator)",
-      "AACTA Award for Best Actor in a Leading Role"
+      "Golden Globe winner (two)",
+      "Academy Award nominee (The Insider)",
+      "Academy Award nominee (A Beautiful Mind)",
+      "AACTA Award for Best Actor in a Leading Role (Romper Stomper)"
     ],
     "primary_platform": "film",
-    "upcoming_work": [
-      {
-        "title": "Nuremberg",
-        "type": "film",
-        "year": "2025"
-      }
-    ]
+    "upcoming_work": []
   },
   "Len Berman": {
     "entity": {
@@ -46916,7 +47003,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:00:01.220Z"
+    "enrichedAt": "2026-09-09T23:54:01.777Z"
   },
   "Benjamin McKenzie": {
     "entity": {
@@ -50134,7 +50221,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:01:00.623Z"
+    "enrichedAt": "2026-09-09T23:54:00.473Z"
   },
   "Chris Eigeman": {
     "entity": {
@@ -51298,14 +51385,19 @@
         "year": "2017"
       },
       {
-        "title": "Psycho Beach Party",
-        "type": "film",
-        "year": "2000"
+        "title": "Love Starvation",
+        "type": "music",
+        "year": "2019"
       },
       {
         "title": "Indoor Safari",
         "type": "music",
         "year": "2024"
+      },
+      {
+        "title": "Psycho Beach Party",
+        "type": "film",
+        "year": "2000"
       }
     ],
     "recent_work": [
@@ -51315,13 +51407,13 @@
       "type": "direct",
       "evidence": "Wikipedia: \"In the late 1990s, Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program.\""
     },
-    "description": "Los Straitjackets is an American instrumental rock band formed in Nashville, Tennessee in 1988, known for their surf- and rockabilly-inflected sound and their trademark Mexican wrestling masks worn in live performance. The band has released fourteen studio albums, including collaborations with Nick Lowe — most recently the 2024 album Indoor Safari — and earned a Grammy nomination for their work with blues singer Eddy Clearwater. A new album, Somos Los Straitjackets, is set for release in September 2025. Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program during the late 1990s.",
+    "description": "Los Straitjackets are an American instrumental rock band formed in Nashville, Tennessee in 1988, known for their surf-inflected sound, elaborate live shows, and trademark Mexican wrestling masks. Over the course of more than three decades, they have released fourteen studio albums and built a devoted cult following. They earned a Grammy nomination for their collaboration with blues singer Eddy Clearwater on Rock 'N' Roll City, and have developed a fruitful partnership with British songwriter Nick Lowe, backing him on a UK tour and co-writing material for his 2024 album Indoor Safari. In the late 1990s, Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Los_Straitjackets"
     ],
-    "enrichedAt": "2026-09-09T23:01:10.300Z",
+    "enrichedAt": "2026-09-09T23:54:09.704Z",
     "birth_year": "",
     "death_year": "",
     "gender": "",
@@ -51330,13 +51422,7 @@
       "Grammy Award nominee"
     ],
     "primary_platform": "music",
-    "upcoming_work": [
-      {
-        "title": "Somos Los Straitjackets",
-        "type": "music",
-        "year": "2025"
-      }
-    ]
+    "upcoming_work": []
   },
   "George Foreman": {
     "entity": {
@@ -52034,7 +52120,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:01:00.790Z"
+    "enrichedAt": "2026-09-09T23:54:00.791Z"
   },
   "James Woods": {
     "entity": {
@@ -58262,34 +58348,25 @@
         "year": "2021"
       }
     ],
-    "recent_work": [
-      "Grey's Anatomy (2021)",
-      "Grace and Frankie (2018–2022)"
-    ],
+    "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Peter Gallagher is an American actor whose career spans film, television, and musical theatre since 1980. He is best known for playing Sandy Cohen on the Fox drama The O.C. from 2003 to 2007, and has held recurring television roles on Law & Order: Special Victims Unit, Californication, Covert Affairs, and Grace & Frankie. His film credits include The Player, While You Were Sleeping, American Beauty, and Palm Springs. On Broadway, he starred in the 1992 revival of Guys and Dolls and the 2015 revival of On the Twentieth Century. He also released the album 7 Days in Memphis in 2005. Gallagher likely crossed paths with Conan O'Brien as early as 1993 on Late Night with Conan O'Brien.",
+    "description": "Peter Gallagher is an American actor whose career spans film, television, and Broadway since 1980. He is best known for playing Sandy Cohen on the Fox drama The O.C. from 2003 to 2007, and has held recurring roles on Law & Order: Special Victims Unit, Californication, Covert Affairs, and Grace & Frankie. His film credits include sex, lies, and videotape, The Player, While You Were Sleeping, American Beauty, and Palm Springs. On Broadway, he starred in the 1992 revival of Guys and Dolls and the 2015 revival of On the Twentieth Century. He also released an album, 7 Days in Memphis, in 2005. He likely crossed paths with Conan O'Brien as far back as Late Night with Conan O'Brien in 1993.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Peter_Gallagher"
     ],
-    "enrichedAt": "2026-09-09T23:01:12.685Z",
+    "enrichedAt": "2026-09-09T23:54:11.399Z",
     "birth_year": "1955",
     "death_year": "",
     "gender": "male",
     "nationality": "American",
     "prestige_signals": [],
     "primary_platform": "tv",
-    "upcoming_work": [
-      {
-        "title": "Left on Tenth",
-        "type": "other",
-        "year": "2024"
-      }
-    ]
+    "upcoming_work": []
   },
   "Robin Leach": {
     "entity": {
@@ -63450,7 +63527,7 @@
       },
       {
         "title": "Faithkeepers",
-        "type": "other",
+        "type": "film",
         "year": ""
       },
       {
@@ -63479,44 +63556,39 @@
         "year": "2023"
       }
     ],
-    "recent_work": [],
+    "recent_work": [
+      "The Baxters (Amazon Prime Video, Spring 2024)",
+      "Be an Angel: Devotions to Inspire and Encourage Love and Light Along the Way (2023)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "Roma Downey is an Irish actress, producer, and author best known for playing Monica the angel in the long-running CBS series Touched by an Angel and for her Emmy Award-winning portrayal of Jacqueline Kennedy Onassis in A Woman Named Jackie. As president of Lightworkers Media, she and husband Mark Burnett have produced an extensive slate of faith-based film and television projects, including The Bible, Ben-Hur, and The Dovekeepers. She currently stars in and produces The Baxters on Amazon Prime Video, and her most recent book, Be an Angel, was released in 2023. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 1995.",
+    "description": "Roma Downey is an Irish actress, producer, and author best known for playing Monica the angel in the long-running CBS series Touched by an Angel, which ran for nine seasons from 1994 to 2003 and earned her two Emmy and two Golden Globe nominations. Earlier, she portrayed Jacqueline Kennedy Onassis in the Emmy Award-winning miniseries A Woman Named Jackie. As President of Lightworkers Media, she and her husband Mark Burnett produced major faith-based projects including the miniseries The Bible and films such as Ben-Hur and Son of God. Her most recent work includes starring in and executive producing The Baxters for Amazon Prime Video and publishing the book Be an Angel in 2023. She likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1995.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Roma_Downey"
     ],
-    "enrichedAt": "2026-09-09T23:01:16.725Z",
+    "enrichedAt": "2026-09-09T23:55:16.454Z",
     "birth_year": "1960",
     "death_year": "",
     "gender": "female",
     "nationality": "Irish",
     "prestige_signals": [
-      "Emmy Award-winning miniseries (A Woman Named Jackie)",
-      "Two Emmy Award nominations",
-      "Two Golden Globe nominations",
-      "IFTA for Best Short Film (Rough, 2021)",
-      "Hollywood Walk of Fame star (2016)",
+      "Emmy Award nominations (two) for Touched by an Angel",
+      "Golden Globe nominations (two) for Touched by an Angel",
+      "IFTA for Best Short Film (2021) for Rough",
+      "Lifetime Achievement Award at the Sarasota Film Festival",
       "Lifetime Achievement Award at the International Christian Film & Music Festival (2021)",
       "Officer of the Order of the British Empire (OBE)",
+      "Hollywood Walk of Fame star (2016)",
       "Variety '100 Most Powerful Women in Hollywood'",
-      "Variety 'Women of Impact' (2014)",
-      "Hollywood Reporter 'Most Influential People of 2013'",
-      "Hollywood Reporter '100 Women in Entertainment Power' (2014)",
-      "Sarasota Film Festival Lifetime Achievement Award"
+      "The Hollywood Reporter 'Most Influential People of 2013'",
+      "Variety 'Women of Impact' 2014"
     ],
     "primary_platform": "tv",
-    "upcoming_work": [
-      {
-        "title": "Merv",
-        "type": "film",
-        "year": "2025"
-      }
-    ]
+    "upcoming_work": []
   },
   "Jim Fowler": {
     "entity": {
@@ -64134,7 +64206,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:01:01.095Z"
+    "enrichedAt": "2026-09-09T23:55:00.393Z"
   },
   "David Blaine": {
     "entity": {
@@ -64988,7 +65060,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:01:01.395Z"
+    "enrichedAt": "2026-09-09T23:55:00.982Z"
   },
   "George Stephanopoulos": {
     "entity": {
@@ -67648,7 +67720,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:02:01.328Z"
+    "enrichedAt": "2026-09-09T23:55:01.834Z"
   },
   "Katie Holmes": {
     "entity": {
@@ -72594,7 +72666,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:02:00.814Z"
+    "enrichedAt": "2026-09-09T23:55:00.701Z"
   },
   "Blake Anderson": {
     "entity": {
@@ -73148,7 +73220,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:02:01.048Z"
+    "enrichedAt": "2026-09-09T23:56:01.001Z"
   },
   "Conor McGregor": {
     "entity": {
@@ -77337,7 +77409,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:03:00.999Z"
+    "enrichedAt": "2026-09-09T23:56:01.279Z"
   },
   "Marcia Cross": {
     "entity": {
@@ -78629,7 +78701,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:03:00.409Z"
+    "enrichedAt": "2026-09-09T23:56:00.364Z"
   },
   "Bill Murray": {
     "entity": {
@@ -82946,7 +83018,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:03:00.748Z"
+    "enrichedAt": "2026-09-09T23:56:01.103Z"
   },
   "Piper Perabo": {
     "entity": {
@@ -83188,7 +83260,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:03:00.870Z"
+    "enrichedAt": "2026-09-09T23:57:00.591Z"
   },
   "Michael Imperioli": {
     "entity": {
@@ -95836,7 +95908,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:03:00.780Z"
+    "enrichedAt": "2026-09-09T23:57:01.279Z"
   },
   "Uma Thurman": {
     "entity": {
@@ -105469,21 +105541,61 @@
   "Pee-wee Herman": {
     "entity": {
       "name": "Pee-wee Herman",
-      "wikipedia_url": "",
-      "confidence": 0
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pee-wee_Herman",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "comedy character",
+      "fictional comedian"
+    ],
+    "known_for": [
+      {
+        "title": "The Pee-wee Herman Show (HBO special)",
+        "type": "tv",
+        "year": "1981"
+      },
+      {
+        "title": "Pee-wee's Big Adventure",
+        "type": "film",
+        "year": "1985"
+      },
+      {
+        "title": "Pee-wee's Playhouse",
+        "type": "tv",
+        "year": "1986"
+      },
+      {
+        "title": "Big Top Pee-wee",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Pee-wee's Big Holiday",
+        "type": "film",
+        "year": "2016"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
     },
-    "description": "",
-    "confidence": 0,
+    "description": "Pee-wee Herman is the iconic comedy character created and performed by American comedian Paul Reubens. The childlike, flamboyant persona originated as a stage act in the late 1970s before landing an HBO special in 1981. The character's big-screen debut came with Pee-wee's Big Adventure in 1985, followed by the Emmy Award-winning CBS children's series Pee-wee's Playhouse, which ran from 1986 to 1991, and the film Big Top Pee-wee in 1988. After a lengthy hiatus, Pee-wee's Big Holiday was released on Netflix in 2016, marking Reubens's final portrayal of the character before his death in 2023. Pee-wee Herman likely crossed paths with Conan O'Brien during The Tonight Show with Conan O'Brien in 2009.",
+    "confidence": 1,
     "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T23:03:00.999Z"
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pee-wee_Herman"
+    ],
+    "enrichedAt": "2026-09-09T23:57:10.679Z",
+    "birth_year": "",
+    "death_year": "2023",
+    "gender": "",
+    "nationality": "",
+    "prestige_signals": [
+      "Emmy Award-winning children's series (Pee-wee's Playhouse)"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Gabourey Sidibe": {
     "entity": {
@@ -106243,8 +106355,7 @@
     },
     "profession": [
       "actor",
-      "director",
-      "radio host"
+      "director"
     ],
     "known_for": [
       {
@@ -106308,12 +106419,52 @@
         "year": "2009"
       },
       {
+        "title": "World's Dumbest",
+        "type": "tv",
+        "year": ""
+      },
+      {
         "title": "The Daniel Baldwin Show",
         "type": "other",
         "year": "2017"
       },
       {
-        "title": "World's Dumbest",
+        "title": "Born on the Fourth of July",
+        "type": "film",
+        "year": "1989"
+      },
+      {
+        "title": "Sydney",
+        "type": "tv",
+        "year": "1990"
+      },
+      {
+        "title": "Celebrity Fit Club",
+        "type": "tv",
+        "year": "2005"
+      },
+      {
+        "title": "I'm a Celebrity...Get Me Out of Here!",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "Celebrity Big Brother",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Celebrity Wife Swap",
+        "type": "tv",
+        "year": "2014"
+      },
+      {
+        "title": "Helen Alone",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "Kings and Pharaohs",
         "type": "tv",
         "year": ""
       }
@@ -106323,28 +106474,22 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
     },
-    "description": "Daniel Baldwin is an American actor and director best known for playing Detective Beau Felton on the NBC series Homicide: Life on the Street. The second-oldest of the four Baldwin brothers, he has appeared in a wide range of films including Harley Davidson and the Marlboro Man, Trees Lounge, and the HBO production Grey Gardens, and has made notable forays into reality television through Celebrity Rehab with Dr. Drew and Celebrity Big Brother. He won Best Supporting Actor at the Madrid International Film Festival in 2014. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around the time of his early career in 1993.",
+    "description": "Daniel Baldwin is an American actor and director best known for playing Detective Beau Felton in the NBC series Homicide: Life on the Street. The second-oldest of the four Baldwin brothers, he has appeared in films including Harley Davidson and the Marlboro Man, Trees Lounge, and the HBO production Grey Gardens, and has been a recurring presence in reality television through Celebrity Rehab with Dr. Drew, Celebrity Fit Club, and Celebrity Big Brother. He won Best Supporting Actor at the Madrid International Film Festival for Helen Alone. He likely crossed paths with Conan O'Brien during his early years in television, with a first appearance on Late Night with Conan O'Brien believed to have taken place in 1993.",
     "confidence": 1,
-    "needs_review": true,
+    "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Daniel_Baldwin"
     ],
-    "enrichedAt": "2026-09-09T23:04:11.609Z",
+    "enrichedAt": "2026-09-09T23:57:14.909Z",
     "birth_year": "1960",
     "death_year": "",
     "gender": "male",
     "nationality": "American",
     "prestige_signals": [
-      "Best Supporting Actor at the Madrid International Film Festival (2014)"
+      "Best Supporting Actor at the Madrid International Film Festival"
     ],
     "primary_platform": "film",
-    "upcoming_work": [
-      {
-        "title": "The Caretaker",
-        "type": "film",
-        "year": "2025"
-      }
-    ]
+    "upcoming_work": []
   },
   "Michael Kinsley": {
     "entity": {
@@ -108661,7 +108806,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:04:00.897Z"
+    "enrichedAt": "2026-09-09T23:57:00.990Z"
   },
   "Jim Downey": {
     "entity": {
@@ -108680,7 +108825,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:04:00.846Z"
+    "enrichedAt": "2026-09-09T23:58:01.251Z"
   },
   "Brent Morin": {
     "entity": {
@@ -114140,7 +114285,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:04:00.350Z"
+    "enrichedAt": "2026-09-09T23:58:00.680Z"
   },
   "Conan Scrapisode": {
     "entity": {
@@ -114159,7 +114304,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:04:00.599Z"
+    "enrichedAt": "2026-09-09T23:58:00.415Z"
   },
   "Ben Falcone": {
     "entity": {
@@ -114740,7 +114885,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:04:00.848Z"
+    "enrichedAt": "2026-09-09T23:58:00.562Z"
   },
   "Malcolm Gladwell": {
     "entity": {
@@ -125765,7 +125910,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T23:05:00.292Z"
+    "enrichedAt": "2026-09-09T23:58:00.731Z"
   },
   "Daisy Fuentes": {
     "entity": {
@@ -128001,13 +128146,13 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:57:00.202Z"
+    "enrichedAt": "2026-09-09T23:58:00.960Z"
   },
   "The Frugal Gourmet": {
     "entity": {
-      "name": "Jeff Smith (chef)",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Jeff_Smith_(chef)",
-      "confidence": 0.3
+      "name": "The Frugal Gourmet",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -128017,10 +128162,10 @@
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
     "description": "",
-    "confidence": 0.3,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.570Z"
+    "enrichedAt": "2026-09-09T23:58:01.027Z"
   },
   "Charles Dutton": {
     "entity": {
@@ -128039,7 +128184,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.656Z"
+    "enrichedAt": "2026-09-09T23:59:00.885Z"
   },
   "Carol Kane": {
     "entity": {
@@ -130170,7 +130315,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.683Z"
+    "enrichedAt": "2026-09-09T23:59:01.159Z"
   },
   "Gena Lee Nolin": {
     "entity": {
@@ -131429,7 +131574,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.820Z"
+    "enrichedAt": "2026-09-09T23:59:00.472Z"
   },
   "Ally Walker": {
     "entity": {
@@ -132440,26 +132585,37 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.932Z"
+    "enrichedAt": "2026-09-09T23:59:00.796Z"
   },
   "Jane Seymour": {
     "entity": {
       "name": "Jane Seymour",
-      "wikipedia_url": "",
-      "confidence": 0
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jane_Seymour",
+      "confidence": 1
     },
-    "profession": [],
+    "profession": [
+      "Queen of England"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "",
-    "confidence": 0,
+    "description": "Jane Seymour (c. 1508–1537) was Queen of England as the third wife of King Henry VIII, reigning from 1536 until her death the following year from postnatal complications. She became queen after the execution of Anne Boleyn and is notable for producing Henry's long-sought male heir, the future King Edward VI. Praised by contemporaries for her gentle and peaceful nature, she was the only one of Henry's wives to receive a queen's funeral, and Henry was later buried beside her at St George's Chapel, Windsor Castle. A historical figure rather than a media personality, she likely crossed paths with the Late Night with Conan O'Brien world only tangentially, as a subject of historical discussion.",
+    "confidence": 1,
     "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T22:56:00.907Z"
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jane_Seymour"
+    ],
+    "enrichedAt": "2026-09-09T23:59:07.453Z",
+    "birth_year": "",
+    "death_year": "1537",
+    "gender": "female",
+    "nationality": "",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Ed Byrne": {
     "entity": {
@@ -136233,22 +136389,122 @@
   },
   "Chris Klein": {
     "entity": {
-      "name": "Chris Klein",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Chris Klein (actor)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Klein_(actor)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "Election",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "American Pie",
+        "type": "film",
+        "year": "1999"
+      },
+      {
+        "title": "American Pie 2",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "American Reunion",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Here on Earth",
+        "type": "film",
+        "year": "2000"
+      },
+      {
+        "title": "Say It Isn't So",
+        "type": "film",
+        "year": "2001"
+      },
+      {
+        "title": "We Were Soldiers",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "Rollerball",
+        "type": "film",
+        "year": "2002"
+      },
+      {
+        "title": "The United States of Leland",
+        "type": "film",
+        "year": "2003"
+      },
+      {
+        "title": "Just Friends",
+        "type": "film",
+        "year": "2005"
+      },
+      {
+        "title": "American Dreamz",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "Street Fighter: The Legend of Chun-Li",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Wilfred",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "Authors Anonymous",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "The Flash",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "Sweet Magnolias",
+        "type": "tv",
+        "year": "2020"
+      },
+      {
+        "title": "Fear Street: Prom Queen",
+        "type": "film",
+        "year": "2025"
+      }
+    ],
+    "recent_work": [
+      "Sweet Magnolias (seasons 1–3, 2020–2023)",
+      "Fear Street: Prom Queen (2025)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T22:57:00.787Z"
+    "description": "Chris Klein is an American actor who broke through with his debut in Election and the blockbuster teen comedy American Pie, both released in 1999, reprising his role as Oz in American Pie 2 and American Reunion. His early film work also included Here on Earth, We Were Soldiers, Rollerball, Just Friends, and Street Fighter: The Legend of Chun-Li. A career resurgence came with his main role as villain Cicada on season 5 of The Flash, followed by three seasons as Bill Townsend on the Netflix drama Sweet Magnolias and the slasher film Fear Street: Prom Queen. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 2004.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Chris_Klein_(actor)"
+    ],
+    "enrichedAt": "2026-09-10T00:00:12.027Z",
+    "birth_year": "1979",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Jamie-Lynn DiScala": {
     "entity": {
@@ -140933,7 +141189,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:57:00.979Z"
+    "enrichedAt": "2026-09-10T00:00:01.107Z"
   },
   "Asa Butterfield": {
     "entity": {
@@ -144470,7 +144726,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:57:00.564Z"
+    "enrichedAt": "2026-09-10T00:00:01.040Z"
   },
   "Daddy's Home": {
     "entity": {
@@ -144489,7 +144745,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T22:57:00.814Z"
+    "enrichedAt": "2026-09-10T00:00:01.102Z"
   },
   "Josh Safdie": {
     "entity": {
@@ -145999,7 +146255,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:32:11.705Z"
+    "enrichedAt": "2026-09-10T00:01:00.576Z"
   },
   "John Melendez": {
     "entity": {
@@ -148091,18 +148347,29 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Reinhold",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
+    "profession": [
+      "actor"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
+    "description": "Judge Reinhold is an American actor born in 1957, listed among notable people bearing the Reinhold surname. While the Wikipedia source provided covers the name's etymology rather than his career, Reinhold is a recognizable presence in film and television. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1994, suggesting a long-standing familiarity with the late-night circuit.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T08:34:16.404Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Reinhold"
+    ],
+    "enrichedAt": "2026-09-10T00:01:09.075Z",
+    "birth_year": "1957",
+    "death_year": "",
+    "gender": "",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Roger Clinton": {
     "entity": {
@@ -148121,7 +148388,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:34:16.667Z"
+    "enrichedAt": "2026-09-10T00:01:01.114Z"
   },
   "Gail O'Grady": {
     "entity": {
@@ -148862,7 +149129,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:35:17.237Z"
+    "enrichedAt": "2026-09-10T00:01:01.358Z"
   },
   "Father Guido Sarducci": {
     "entity": {
@@ -150246,7 +150513,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:36:14.192Z"
+    "enrichedAt": "2026-09-10T00:01:00.980Z"
   },
   "Kathy Najimy": {
     "entity": {
@@ -150411,7 +150678,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:36:15.214Z"
+    "enrichedAt": "2026-09-10T00:02:00.483Z"
   },
   "Julie Scardina": {
     "entity": {
@@ -150961,21 +151228,104 @@
   "Paul Lukas": {
     "entity": {
       "name": "Paul Lukas",
-      "wikipedia_url": "",
-      "confidence": 0
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Paul_Lukas",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "actor"
+    ],
+    "known_for": [
+      {
+        "title": "Watch on the Rhine",
+        "type": "film",
+        "year": "1943"
+      },
+      {
+        "title": "Watch on the Rhine",
+        "type": "other",
+        "year": "1941"
+      },
+      {
+        "title": "Rockabye",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Grumpy",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "The Lady Vanishes",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Ladies in Love",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "Dodsworth",
+        "type": "film",
+        "year": ""
+      },
+      {
+        "title": "The Casino Murder Case",
+        "type": "film",
+        "year": "1935"
+      },
+      {
+        "title": "20,000 Leagues Under the Sea",
+        "type": "film",
+        "year": "1954"
+      },
+      {
+        "title": "Fun in Acapulco",
+        "type": "film",
+        "year": "1963"
+      },
+      {
+        "title": "Lord Jim",
+        "type": "film",
+        "year": "1965"
+      },
+      {
+        "title": "The Challenge",
+        "type": "film",
+        "year": "1970"
+      },
+      {
+        "title": "Call Me Madam",
+        "type": "other",
+        "year": "1950"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
-      "evidence": ""
+      "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T08:37:10.108Z"
+    "description": "Paul Lukas was a Hungarian actor who built a distinguished career across stage and screen spanning more than five decades. Born in Budapest in 1894, he arrived in Hollywood in 1927 and became best known for his role in Watch on the Rhine (1943), for which he won the Academy Award for Best Actor, the first Golden Globe Award for Best Actor in a Motion Picture Drama, a Photoplay Award, and a New York Film Critics Circle Award, reprising the part he had originated on Broadway. His other notable films include Alfred Hitchcock's The Lady Vanishes, Dodsworth, and 20,000 Leagues Under the Sea. He likely crossed paths with Conan O'Brien's Late Night in 1996.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Paul_Lukas"
+    ],
+    "enrichedAt": "2026-09-10T00:02:12.450Z",
+    "birth_year": "1894",
+    "death_year": "1971",
+    "gender": "male",
+    "nationality": "Hungarian",
+    "prestige_signals": [
+      "Academy Award for Best Actor winner",
+      "Golden Globe Award for Best Actor – Motion Picture Drama winner",
+      "Photoplay Award winner",
+      "New York Film Critics Circle Award winner",
+      "Hollywood Walk of Fame honoree"
+    ],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Joey Lauren Adams": {
     "entity": {

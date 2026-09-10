@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T23:36:11.545Z",
+  "generatedAt": "2026-09-10T00:02:13.799Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -28798,7 +28798,123 @@
       "id": "david-feldman",
       "name": "David Feldman",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "David Feldman (comedian)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/David_Feldman_(comedian)",
+          "confidence": 1
+        },
+        "profession": [
+          "stand-up comedian",
+          "comedy writer",
+          "podcaster"
+        ],
+        "known_for": [
+          {
+            "title": "Late Night with Conan O'Brien",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Tonight Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Late Late Show",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Roseanne",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Burn with Jeff Ross",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Daily Show with Jon Stewart",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Joy Behar: Say Anything!",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Talk Show With Spike Feresten",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Dennis Miller Live",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Real Time with Bill Maher",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Triumph the Insult Comic Dog",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Curb Your Enthusiasm",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "Ralph Nader Radio Hour",
+            "type": "podcast",
+            "year": ""
+          },
+          {
+            "title": "David Feldman Show",
+            "type": "podcast",
+            "year": "2009"
+          },
+          {
+            "title": "The Very Best of the David Feldman Show, Vol. 1",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Left Without Paying",
+            "type": "music",
+            "year": "2009"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"He appeared on Late Night with Conan O'Brien, The Tonight Show, and The Late Late Show, and hosted his own special for Comedy Central.\""
+        },
+        "description": "David Feldman is an American stand-up comedian, comedy writer, and podcaster whose career spans television writing, live performance, and long-form audio. A three-time Primetime Emmy Award winner and four-time Writers Guild Award recipient, he contributed to shows including Roseanne, The Daily Show with Jon Stewart, Dennis Miller Live, and Real Time with Bill Maher, and wrote material for Triumph the Insult Comic Dog and Comedy Central roasts. He appeared on Late Night with Conan O'Brien, a show he first appeared on in 1996. Since 2009 he has hosted the listener-supported David Feldman Show and co-hosts the Ralph Nader Radio Hour on Pacifica Radio Network.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/David_Feldman_(comedian)"
+        ],
+        "enrichedAt": "2026-09-09T23:53:12.142Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "three Primetime Emmy Awards (1995, 1996 and 1998)",
+          "four Writers Guild Awards (1996, 1999, 2001 and 2017)",
+          "CableACE Award (1995)"
+        ],
+        "primary_platform": "podcast",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "comedy-peer",
         "label": "Comedy peer and fellow stand-up",
@@ -56824,7 +56940,246 @@
       "id": "samuel-l-jackson",
       "name": "Samuel L Jackson",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Samuel L. Jackson",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Samuel_L._Jackson",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "film producer"
+        ],
+        "known_for": [
+          {
+            "title": "Mother Courage and Her Children",
+            "type": "other",
+            "year": "1980"
+          },
+          {
+            "title": "A Soldier's Play",
+            "type": "other",
+            "year": "1981"
+          },
+          {
+            "title": "The Piano Lesson",
+            "type": "other",
+            "year": "1987"
+          },
+          {
+            "title": "The Mountaintop",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "The Piano Lesson (Broadway revival)",
+            "type": "other",
+            "year": "2022"
+          },
+          {
+            "title": "School Daze",
+            "type": "film",
+            "year": "1988"
+          },
+          {
+            "title": "Coming to America",
+            "type": "film",
+            "year": "1988"
+          },
+          {
+            "title": "Do the Right Thing",
+            "type": "film",
+            "year": "1989"
+          },
+          {
+            "title": "Mo' Better Blues",
+            "type": "film",
+            "year": "1990"
+          },
+          {
+            "title": "Jungle Fever",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Juice",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "True Romance",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Jurassic Park",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Menace II Society",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Fresh",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "Pulp Fiction",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "Die Hard with a Vengeance",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "A Time to Kill",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Jackie Brown",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Unbreakable",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Shaft",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "XXX",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Kill Bill: Volume 2",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "The Incredibles",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Coach Carter",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Snakes on a Plane",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Star Wars prequel trilogy",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Iron Man",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Django Unchained",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Oldboy",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Agents of S.H.I.E.L.D.",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Kingsman: The Secret Service",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Chi-Raq",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "The Hateful Eight",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "Kong: Skull Island",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "Incredibles 2",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Shaft (reboot)",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Glass",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "What If...?",
+            "type": "tv",
+            "year": "2021"
+          },
+          {
+            "title": "Secret Invasion",
+            "type": "tv",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "Secret Invasion (2023)",
+          "What If...? (2021–2024)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Samuel L. Jackson is an American actor and film producer born in 1948, widely recognized as the highest-grossing actor of all time, with his films collectively earning more than $27 billion worldwide. He earned his breakout role as Jules Winnfield in Pulp Fiction, winning the BAFTA Award for Best Supporting Actor and receiving an Oscar nomination, and has since built an expansive body of work spanning collaborations with Quentin Tarantino and Spike Lee, the Marvel Cinematic Universe as Nick Fury, and the Star Wars prequel trilogy as Mace Windu. In 2022 he received the Academy Honorary Award. He likely crossed paths with Conan O'Brien as early as 1996, around the time of his appearance in A Time to Kill.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Samuel_L._Jackson"
+        ],
+        "enrichedAt": "2026-09-09T23:52:38.463Z",
+        "birth_year": "1948",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Academy Honorary Award (2022)",
+          "BAFTA Award for Best Actor in a Supporting Role winner (Pulp Fiction)",
+          "Academy Award for Best Supporting Actor nominee (Pulp Fiction)",
+          "Tony Award for Best Featured Actor in a Play nominee (The Piano Lesson, 2022)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -78184,7 +78539,132 @@
       "id": "russell-crowe",
       "name": "Russell Crowe",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Russell Crowe",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Russell_Crowe",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "film director"
+        ],
+        "known_for": [
+          {
+            "title": "Romper Stomper",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "L.A. Confidential",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "The Insider",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Gladiator",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "A Beautiful Mind",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Master and Commander: The Far Side of the World",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Cinderella Man",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "3:10 to Yuma",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "American Gangster",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Robin Hood",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Les Misérables",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Man of Steel",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Noah",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "The Water Diviner",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "The Nice Guys",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Thor: Love and Thunder",
+            "type": "film",
+            "year": "2022"
+          },
+          {
+            "title": "The Pope's Exorcist",
+            "type": "film",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "The Pope's Exorcist (2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Russell Crowe is a New Zealand-born actor and film director who moved to Australia as a child and built one of the most decorated careers in contemporary cinema. An Academy Award, a BAFTA, and two Golden Globes mark a run that includes his breakthrough in Romper Stomper, international acclaim for L.A. Confidential and The Insider, and his Oscar-winning turn in Gladiator. He followed that with A Beautiful Mind, then a long string of major productions ranging from Master and Commander: The Far Side of the World to Les Misérables and The Nice Guys. His most recent screen credit is The Pope's Exorcist in 2023. He likely crossed paths with Conan O'Brien as early as 1995, when he is believed to have first appeared on Late Night with Conan O'Brien.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Russell_Crowe"
+        ],
+        "enrichedAt": "2026-09-09T23:54:14.491Z",
+        "birth_year": "1964",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "New Zealand-born",
+        "prestige_signals": [
+          "Academy Award winner",
+          "BAFTA Award winner",
+          "Golden Globe winner (two)",
+          "Academy Award nominee (The Insider)",
+          "Academy Award nominee (A Beautiful Mind)",
+          "AACTA Award for Best Actor in a Leading Role (Romper Stomper)"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -90045,7 +90525,86 @@
       "id": "los-straitjackets",
       "name": "Los Straitjackets",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Los Straitjackets",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Los_Straitjackets",
+          "confidence": 1
+        },
+        "profession": [
+          "instrumental rock band"
+        ],
+        "known_for": [
+          {
+            "title": "The Utterly Fantastic and Totally Unbelievable Sound of Los Straitjackets",
+            "type": "music",
+            "year": "1995"
+          },
+          {
+            "title": "The Velvet Touch of Los Straitjackets",
+            "type": "music",
+            "year": "1998"
+          },
+          {
+            "title": "Sing Along with Los Straitjackets",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Rock 'N' Roll City",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Jet Set",
+            "type": "music",
+            "year": "2012"
+          },
+          {
+            "title": "What's So Funny About Peace, Love And...",
+            "type": "music",
+            "year": "2017"
+          },
+          {
+            "title": "Love Starvation",
+            "type": "music",
+            "year": "2019"
+          },
+          {
+            "title": "Indoor Safari",
+            "type": "music",
+            "year": "2024"
+          },
+          {
+            "title": "Psycho Beach Party",
+            "type": "film",
+            "year": "2000"
+          }
+        ],
+        "recent_work": [
+          "Indoor Safari (2024, album with Nick Lowe)"
+        ],
+        "conan_connection": {
+          "type": "direct",
+          "evidence": "Wikipedia: \"In the late 1990s, Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program.\""
+        },
+        "description": "Los Straitjackets are an American instrumental rock band formed in Nashville, Tennessee in 1988, known for their surf-inflected sound, elaborate live shows, and trademark Mexican wrestling masks. Over the course of more than three decades, they have released fourteen studio albums and built a devoted cult following. They earned a Grammy nomination for their collaboration with blues singer Eddy Clearwater on Rock 'N' Roll City, and have developed a fruitful partnership with British songwriter Nick Lowe, backing him on a UK tour and co-writing material for his 2024 album Indoor Safari. In the late 1990s, Conan O'Brien had the band perform Christmas music each holiday season on his late-night television program.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Los_Straitjackets"
+        ],
+        "enrichedAt": "2026-09-09T23:54:09.704Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "American",
+        "prestige_signals": [
+          "Grammy Award nominee"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -99626,7 +100185,134 @@
       "id": "peter-gallagher",
       "name": "Peter Gallagher",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Peter_Gallagher.jpg/500px-Peter_Gallagher.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Peter Gallagher",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Peter_Gallagher",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "musical theatre performer",
+          "singer"
+        ],
+        "known_for": [
+          {
+            "title": "The O.C.",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Law & Order: Special Victims Unit",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Californication",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Grace & Frankie",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Covert Affairs",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Summer Lovers",
+            "type": "film",
+            "year": "1982"
+          },
+          {
+            "title": "Bob Roberts",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "The Player",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "Short Cuts",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "While You Were Sleeping",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "American Beauty",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Mr. Deeds",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Palm Springs",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "Guys and Dolls",
+            "type": "other",
+            "year": "1992"
+          },
+          {
+            "title": "On the Twentieth Century",
+            "type": "other",
+            "year": "2015"
+          },
+          {
+            "title": "sex, lies, and videotape",
+            "type": "film",
+            "year": "1989"
+          },
+          {
+            "title": "7 Days in Memphis",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "Zoey's Extraordinary Playlist",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Grey's Anatomy",
+            "type": "tv",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Peter Gallagher is an American actor whose career spans film, television, and Broadway since 1980. He is best known for playing Sandy Cohen on the Fox drama The O.C. from 2003 to 2007, and has held recurring roles on Law & Order: Special Victims Unit, Californication, Covert Affairs, and Grace & Frankie. His film credits include sex, lies, and videotape, The Player, While You Were Sleeping, American Beauty, and Palm Springs. On Broadway, he starred in the 1992 revival of Guys and Dolls and the 2015 revival of On the Twentieth Century. He also released an album, 7 Days in Memphis, in 2005. He likely crossed paths with Conan O'Brien as far back as Late Night with Conan O'Brien in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Peter_Gallagher"
+        ],
+        "enrichedAt": "2026-09-09T23:54:11.399Z",
+        "birth_year": "1955",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -107657,7 +108343,158 @@
       "id": "roma-downey",
       "name": "Roma Downey",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Roma Downey",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Roma_Downey",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "producer",
+          "author"
+        ],
+        "known_for": [
+          {
+            "title": "Touched by an Angel",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "A Woman Named Jackie",
+            "type": "tv",
+            "year": "1991"
+          },
+          {
+            "title": "The Baxters",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "Borrowed Hearts",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Second Honeymoon",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Bible",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Ben-Hur",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Son of God",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Little Boy",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Woodlawn",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Resurrection",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Messiah",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Country Ever After",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Dovekeepers",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "A.D. The Bible Continues",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Faithkeepers",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Bump Along the Way",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Rough",
+            "type": "film",
+            "year": "2021"
+          },
+          {
+            "title": "On a Wing and a Prayer",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Box of Butterflies",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "Be an Angel: Devotions to Inspire and Encourage Love and Light Along the Way",
+            "type": "other",
+            "year": "2023"
+          }
+        ],
+        "recent_work": [
+          "The Baxters (Amazon Prime Video, Spring 2024)",
+          "Be an Angel: Devotions to Inspire and Encourage Love and Light Along the Way (2023)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Roma Downey is an Irish actress, producer, and author best known for playing Monica the angel in the long-running CBS series Touched by an Angel, which ran for nine seasons from 1994 to 2003 and earned her two Emmy and two Golden Globe nominations. Earlier, she portrayed Jacqueline Kennedy Onassis in the Emmy Award-winning miniseries A Woman Named Jackie. As President of Lightworkers Media, she and her husband Mark Burnett produced major faith-based projects including the miniseries The Bible and films such as Ben-Hur and Son of God. Her most recent work includes starring in and executive producing The Baxters for Amazon Prime Video and publishing the book Be an Angel in 2023. She likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1995.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Roma_Downey"
+        ],
+        "enrichedAt": "2026-09-09T23:55:16.454Z",
+        "birth_year": "1960",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Irish",
+        "prestige_signals": [
+          "Emmy Award nominations (two) for Touched by an Angel",
+          "Golden Globe nominations (two) for Touched by an Angel",
+          "IFTA for Best Short Film (2021) for Rough",
+          "Lifetime Achievement Award at the Sarasota Film Festival",
+          "Lifetime Achievement Award at the International Christian Film & Music Festival (2021)",
+          "Officer of the Order of the British Empire (OBE)",
+          "Hollywood Walk of Fame star (2016)",
+          "Variety '100 Most Powerful Women in Hollywood'",
+          "The Hollywood Reporter 'Most Influential People of 2013'",
+          "Variety 'Women of Impact' 2014"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -167255,7 +168092,150 @@
       "id": "daniel-baldwin",
       "name": "Daniel Baldwin",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Daniel Baldwin",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Daniel_Baldwin",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "director"
+        ],
+        "known_for": [
+          {
+            "title": "Homicide: Life on the Street",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "Harley Davidson and the Marlboro Man",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Hero",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "Mulholland Falls",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Trees Lounge",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Vampires",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Phoenix",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Paparazzi",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Sidekick",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "The Beach Party at the Threshold of Hell",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Grey Gardens",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Celebrity Rehab with Dr. Drew",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "World's Dumbest",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Daniel Baldwin Show",
+            "type": "other",
+            "year": "2017"
+          },
+          {
+            "title": "Born on the Fourth of July",
+            "type": "film",
+            "year": "1989"
+          },
+          {
+            "title": "Sydney",
+            "type": "tv",
+            "year": "1990"
+          },
+          {
+            "title": "Celebrity Fit Club",
+            "type": "tv",
+            "year": "2005"
+          },
+          {
+            "title": "I'm a Celebrity...Get Me Out of Here!",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Celebrity Big Brother",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Celebrity Wife Swap",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Helen Alone",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Kings and Pharaohs",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+        },
+        "description": "Daniel Baldwin is an American actor and director best known for playing Detective Beau Felton in the NBC series Homicide: Life on the Street. The second-oldest of the four Baldwin brothers, he has appeared in films including Harley Davidson and the Marlboro Man, Trees Lounge, and the HBO production Grey Gardens, and has been a recurring presence in reality television through Celebrity Rehab with Dr. Drew, Celebrity Fit Club, and Celebrity Big Brother. He won Best Supporting Actor at the Madrid International Film Festival for Helen Alone. He likely crossed paths with Conan O'Brien during his early years in television, with a first appearance on Late Night with Conan O'Brien believed to have taken place in 1993.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Daniel_Baldwin"
+        ],
+        "enrichedAt": "2026-09-09T23:57:14.909Z",
+        "birth_year": "1960",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Best Supporting Actor at the Madrid International Film Festival"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -207911,7 +208891,125 @@
       "id": "chris-klein",
       "name": "Chris Klein",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Chris Klein (actor)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Klein_(actor)",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Election",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "American Pie",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "American Pie 2",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "American Reunion",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Here on Earth",
+            "type": "film",
+            "year": "2000"
+          },
+          {
+            "title": "Say It Isn't So",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "We Were Soldiers",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Rollerball",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "The United States of Leland",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Just Friends",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "American Dreamz",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Street Fighter: The Legend of Chun-Li",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Wilfred",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Authors Anonymous",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "The Flash",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Sweet Magnolias",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Fear Street: Prom Queen",
+            "type": "film",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "Sweet Magnolias (seasons 1–3, 2020–2023)",
+          "Fear Street: Prom Queen (2025)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
+        },
+        "description": "Chris Klein is an American actor who broke through with his debut in Election and the blockbuster teen comedy American Pie, both released in 1999, reprising his role as Oz in American Pie 2 and American Reunion. His early film work also included Here on Earth, We Were Soldiers, Rollerball, Just Friends, and Street Fighter: The Legend of Chun-Li. A career resurgence came with his main role as villain Cicada on season 5 of The Flash, followed by three seasons as Bill Townsend on the Netflix drama Sweet Magnolias and the slasher film Fear Street: Prom Queen. He likely crossed paths with Conan O'Brien when he first appeared on Late Night with Conan O'Brien in 2004.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chris_Klein_(actor)"
+        ],
+        "enrichedAt": "2026-09-10T00:00:12.027Z",
+        "birth_year": "1979",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -224056,7 +225154,36 @@
       "id": "judge-reinhold",
       "name": "Judge Reinhold",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Reinhold",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Reinhold",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Judge Reinhold is an American actor born in 1957, listed among notable people bearing the Reinhold surname. While the Wikipedia source provided covers the name's etymology rather than his career, Reinhold is a recognizable presence in film and television. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1994, suggesting a long-standing familiarity with the late-night circuit.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Reinhold"
+        ],
+        "enrichedAt": "2026-09-10T00:01:09.075Z",
+        "birth_year": "1957",
+        "death_year": "",
+        "gender": "",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -227459,7 +228586,108 @@
       "id": "paul-lukas",
       "name": "Paul Lukas",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Paul Lukas",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Paul_Lukas",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Watch on the Rhine",
+            "type": "film",
+            "year": "1943"
+          },
+          {
+            "title": "Watch on the Rhine",
+            "type": "other",
+            "year": "1941"
+          },
+          {
+            "title": "Rockabye",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Grumpy",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Lady Vanishes",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Ladies in Love",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Dodsworth",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Casino Murder Case",
+            "type": "film",
+            "year": "1935"
+          },
+          {
+            "title": "20,000 Leagues Under the Sea",
+            "type": "film",
+            "year": "1954"
+          },
+          {
+            "title": "Fun in Acapulco",
+            "type": "film",
+            "year": "1963"
+          },
+          {
+            "title": "Lord Jim",
+            "type": "film",
+            "year": "1965"
+          },
+          {
+            "title": "The Challenge",
+            "type": "film",
+            "year": "1970"
+          },
+          {
+            "title": "Call Me Madam",
+            "type": "other",
+            "year": "1950"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Paul Lukas was a Hungarian actor who built a distinguished career across stage and screen spanning more than five decades. Born in Budapest in 1894, he arrived in Hollywood in 1927 and became best known for his role in Watch on the Rhine (1943), for which he won the Academy Award for Best Actor, the first Golden Globe Award for Best Actor in a Motion Picture Drama, a Photoplay Award, and a New York Film Critics Circle Award, reprising the part he had originated on Broadway. His other notable films include Alfred Hitchcock's The Lady Vanishes, Dodsworth, and 20,000 Leagues Under the Sea. He likely crossed paths with Conan O'Brien's Late Night in 1996.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Paul_Lukas"
+        ],
+        "enrichedAt": "2026-09-10T00:02:12.450Z",
+        "birth_year": "1894",
+        "death_year": "1971",
+        "gender": "male",
+        "nationality": "Hungarian",
+        "prestige_signals": [
+          "Academy Award for Best Actor winner",
+          "Golden Globe Award for Best Actor – Motion Picture Drama winner",
+          "Photoplay Award winner",
+          "New York Film Critics Circle Award winner",
+          "Hollywood Walk of Fame honoree"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
