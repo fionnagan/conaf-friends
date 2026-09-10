@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T00:02:13.799Z",
+  "generatedAt": "2026-09-10T00:12:01.683Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -11897,7 +11897,73 @@
       "id": "leslie-jones",
       "name": "Leslie Jones",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Leslie Ann Jones",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Leslie_Ann_Jones",
+          "confidence": 1
+        },
+        "profession": [
+          "recording engineer",
+          "music director"
+        ],
+        "known_for": [
+          {
+            "title": "Skywalker Sound",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Apocalypse Now (soundtrack recording)",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Lots of People (John Mayall)",
+            "type": "music",
+            "year": "1977"
+          },
+          {
+            "title": "Dear Ella (Dee Dee Bridgewater)",
+            "type": "music",
+            "year": "1997"
+          },
+          {
+            "title": "Facelift (Alice in Chains)",
+            "type": "music",
+            "year": "1990"
+          },
+          {
+            "title": "Miles & Quincy Live at Montreux",
+            "type": "music",
+            "year": "1991"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "industry",
+          "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2017."
+        },
+        "description": "Leslie Ann Jones is an American recording engineer and Director of Music Recording and Scoring at Skywalker Sound, a Lucasfilm company. A multiple Grammy Award winner and 2018 inductee into the TEC Awards Hall of Fame, she has built one of the most distinguished careers in audio engineering over five decades, with credits spanning the Apocalypse Now soundtrack, John Mayall's Lots of People, Alice in Chains' Facelift, and Dee Dee Bridgewater's Grammy-winning Dear Ella. A longtime advocate for women in audio, she served as Chair of the National Academy of Recording Arts and Sciences Board of Trustees. As a comedy peer and fellow stand-up, she likely crossed paths with Conan O'Brien within the broader entertainment industry.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Leslie_Ann_Jones"
+        ],
+        "enrichedAt": "2026-09-10T00:03:10.339Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "multiple Grammy Award-winning",
+          "TEC Awards Hall of Fame inductee (2018)",
+          "first female National Officer of the National Academy of Recording Arts and Sciences",
+          "past Chair of the National Academy of Recording Arts and Sciences Board of Trustees"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "comedy-peer",
         "label": "Comedy peer and fellow stand-up",
@@ -130010,7 +130076,53 @@
       "id": "jack-gallagher",
       "name": "Jack Gallagher",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Gentleman Jack Gallagher",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Gentleman_Jack_Gallagher",
+          "confidence": 1
+        },
+        "profession": [
+          "mixed martial artist",
+          "professional wrestler"
+        ],
+        "known_for": [
+          {
+            "title": "WWE NXT",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "205 Live",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "WWE Cruiserweight Classic",
+            "type": "tv",
+            "year": "2016"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Jack Gallagher, born Oliver Westfield Claffey in 1990, is an English professional wrestler and mixed martial artist best known for his time in WWE, where he performed under the ring name Gentleman Jack Gallagher on the NXT and 205 Live brands. He began his career on the British independent wrestling circuit in 2006 and gained wider attention by competing in the WWE Cruiserweight Classic tournament in 2016, which led to his signing with WWE. He has since transitioned into mixed martial arts competition. Given the timeline of his career, he likely crossed paths with Late Night with Conan O'Brien in some capacity during the show's run.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Gentleman_Jack_Gallagher"
+        ],
+        "enrichedAt": "2026-09-10T00:05:08.264Z",
+        "birth_year": "1990",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "English",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -219935,7 +220047,68 @@
       "id": "daddys-home",
       "name": "Daddy's Home",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Daddy's Home (Big Daddy Kane album)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Daddy's_Home_(Big_Daddy_Kane_album)",
+          "confidence": 1
+        },
+        "profession": [
+          "rapper",
+          "emcee"
+        ],
+        "known_for": [
+          {
+            "title": "Daddy's Home",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "Looks Like a Job For…",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "In the PJ's",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "Show & Prove",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "Very Special",
+            "type": "music",
+            "year": "1993"
+          },
+          {
+            "title": "Veteranz Day",
+            "type": "music",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "industry",
+          "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2017."
+        },
+        "description": "Daddy's Home is the sixth studio album by rapper Big Daddy Kane, released in 1994 on MCA Records. The album was generally well-received critically but saw a significant drop in commercial performance compared to earlier work, producing no major crossover singles. It is perhaps best remembered for the DJ Premier-produced track Show & Prove, a posse cut featuring Ol' Dirty Bastard, Shyheim, Sauce Money, and a then-unknown Jay Z, who was Kane's protégé at the time. Following the album's release, Kane stepped away from music before returning with his seventh album Veteranz Day. As a comedy peer and fellow stand-up, Kane likely crossed paths with Conan O'Brien around the mid-2010s circuit.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Daddy's_Home_(Big_Daddy_Kane_album)"
+        ],
+        "enrichedAt": "2026-09-10T00:09:08.004Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "comedy-peer",
         "label": "Comedy peer and fellow stand-up",
@@ -225221,7 +225394,78 @@
       "id": "roger-clinton",
       "name": "Roger Clinton",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Roger Clinton Jr.",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Roger_Clinton_Jr.",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "musician"
+        ],
+        "known_for": [
+          {
+            "title": "Bio-Dome",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Fred Claus",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Nanny",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Sabrina, the Teenage Witch",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Cybill",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Blues Brothers: The Animated Series",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Nothing Good Comes Easy",
+            "type": "music",
+            "year": "1993"
+          },
+          {
+            "title": "Designing Women",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Roger Clinton Jr. is an American actor and musician best known as the younger half-brother of former President Bill Clinton. As a performer, he has taken on minor film roles in Bio-Dome and Fred Claus and guest-starred on television series including The Nanny, Sabrina, the Teenage Witch, and Cybill. He also voiced President Bill Clinton in the pilot of The Blues Brothers: The Animated Series. As a musician, he released his debut album Nothing Good Comes Easy in 1993 on the Pyramid/Atlantic/Rhino label and has performed at events such as Farm Aid. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Roger_Clinton_Jr."
+        ],
+        "enrichedAt": "2026-09-10T00:09:08.755Z",
+        "birth_year": "1956",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -232183,7 +232427,88 @@
       "id": "sheila-kelley",
       "name": "Sheila Kelley",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Sheila Kelley (British actress)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Sheila_Kelley_(British_actress)",
+          "confidence": 1
+        },
+        "profession": [
+          "television actress",
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Village Hall",
+            "type": "tv",
+            "year": "1974"
+          },
+          {
+            "title": "Within These Walls",
+            "type": "tv",
+            "year": "1978"
+          },
+          {
+            "title": "Empire Road",
+            "type": "tv",
+            "year": "1978"
+          },
+          {
+            "title": "Play for Today",
+            "type": "tv",
+            "year": "1975"
+          },
+          {
+            "title": "Nuts in May",
+            "type": "tv",
+            "year": "1976"
+          },
+          {
+            "title": "A Touch of Frost",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "Dangerfield",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "Dalziel and Pascoe",
+            "type": "tv",
+            "year": "1997"
+          },
+          {
+            "title": "Wish You Were Here",
+            "type": "film",
+            "year": "1987"
+          },
+          {
+            "title": "Secrets & Lies",
+            "type": "film",
+            "year": "1996"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
+        },
+        "description": "Sheila Kelley is a British television actress whose career spans more than four decades, beginning with the 1974 series Village Hall. She built a steady presence in British television through notable appearances in Within These Walls, Empire Road, Play for Today, Nuts in May, A Touch of Frost, Dangerfield, and Dalziel and Pascoe. Her film work includes Wish You Were Here and the Mike Leigh drama Secrets & Lies. She likely crossed paths with Conan O'Brien when she is believed to have first appeared on Late Night with Conan O'Brien around 2006.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Sheila_Kelley_(British_actress)"
+        ],
+        "enrichedAt": "2026-09-10T00:11:06.943Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "British",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -232506,7 +232831,108 @@
       "id": "meredith-viera",
       "name": "Meredith Viera",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/NBC_News_Today_Show_Behind_The_Scenes_London_Summer_Olympics_2012_%2852610795361%29_%28cropped%29.jpg/500px-NBC_News_Today_Show_Behind_The_Scenes_London_Summer_Olympics_2012_%2852610795361%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Meredith Vieira",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Meredith_Vieira",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "broadcast journalist",
+          "television personality",
+          "game show host",
+          "talk show host"
+        ],
+        "known_for": [
+          {
+            "title": "The View",
+            "type": "tv",
+            "year": "1997"
+          },
+          {
+            "title": "Who Wants to Be a Millionaire",
+            "type": "tv",
+            "year": "2002"
+          },
+          {
+            "title": "Today",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "25 Words or Less",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Dateline NBC",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Rock Center with Brian Williams",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "NBC Nightly News",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Intimate Portrait",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "The Meredith Vieira Show",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "West 57th",
+            "type": "tv",
+            "year": "1985"
+          },
+          {
+            "title": "60 Minutes",
+            "type": "tv",
+            "year": "1989"
+          },
+          {
+            "title": "CBS Morning News",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "Turning Point",
+            "type": "tv",
+            "year": "1994"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
+        },
+        "description": "Meredith Vieira is an American broadcast journalist and television personality best known as the original moderator of The View, the longtime host of the syndicated daytime version of Who Wants to Be a Millionaire, and as co-host of the NBC morning program Today. A two-time Daytime Emmy Award winner for Outstanding Game Show Host, she also contributed to Dateline NBC, Rock Center with Brian Williams, and NBC Nightly News, hosted the Lifetime series Intimate Portrait, and later fronted her own syndicated daytime talk show, The Meredith Vieira Show. She has most recently hosted the weekday game show 25 Words or Less. Vieira likely crossed paths with Conan O'Brien during a Late Night with Conan O'Brien appearance around 2007.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Meredith_Vieira"
+        ],
+        "enrichedAt": "2026-09-10T00:10:11.359Z",
+        "birth_year": "1953",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Daytime Emmy Award winner for Outstanding Game Show Host (2005)",
+          "Daytime Emmy Award winner for Outstanding Game Show Host (2009)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -236834,7 +237260,124 @@
       "id": "niecy-nash-betts",
       "name": "Niecy Nash Betts",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Niecy Nash-Betts",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Niecy_Nash-Betts",
+          "confidence": 0.7666666666666666
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Boys on the Side",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "Cookie's Fortune",
+            "type": "film",
+            "year": "1999"
+          },
+          {
+            "title": "Reno 911!",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Clean House",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "The Soul Man",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Getting On",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Selma",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Scream Queens",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Claws",
+            "type": "tv",
+            "year": "2017"
+          },
+          {
+            "title": "When They See Us",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Mrs. America",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Monster",
+            "type": "tv",
+            "year": "2022"
+          },
+          {
+            "title": "Origin",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Grotesquerie",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "All's Fair",
+            "type": "tv",
+            "year": "2025"
+          }
+        ],
+        "recent_work": [
+          "Origin (2023)",
+          "Grotesquerie (2024)",
+          "All's Fair (2025–present)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan O'Brien Needs a Friend in 2024."
+        },
+        "description": "Niecy Nash-Betts is an American actress whose career spans comedy, drama, and horror across more than two decades of television and film. She first gained wide recognition playing Deputy Raineesha Williams in Reno 911! and hosting Clean House, the latter earning her a Daytime Emmy Award. Her dramatic range drew further acclaim through collaborations with director Ava DuVernay on Selma, When They See Us, and Origin, and her performance in the Netflix anthology series Monster won her a Primetime Emmy Award for Outstanding Supporting Actress. She currently stars in the legal drama All's Fair. Nash-Betts likely crossed paths with Conan O'Brien on his podcast Conan O'Brien Needs a Friend around 2024.",
+        "confidence": 0.7666666666666666,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Niecy_Nash-Betts"
+        ],
+        "enrichedAt": "2026-09-10T00:11:13.458Z",
+        "birth_year": "1970",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Daytime Emmy Award winner",
+          "Primetime Emmy Award nominee (Getting On, 2015 and 2016)",
+          "Primetime Emmy Award nominee (When They See Us)",
+          "Primetime Emmy Award winner for Outstanding Supporting Actress (Monster)",
+          "Golden Globe nominee",
+          "Screen Actors Guild Award nominee",
+          "Satellite Award winner"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
