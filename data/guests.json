@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T07:03:02.462Z",
+  "generatedAt": "2026-09-10T07:10:02.074Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -317244,7 +317244,92 @@
       "id": "sarah-ohare",
       "name": "Sarah O'Hare",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Sarah_Murdoch.jpg/500px-Sarah_Murdoch.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Sarah Murdoch",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Sarah_Murdoch",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "model",
+          "actress",
+          "television presenter",
+          "philanthropist",
+          "executive producer"
+        ],
+        "known_for": [
+          {
+            "title": "Head Over Heels",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Friends",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Today",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Australia's Next Top Model",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Pride of Australia",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Everybody Dance Now",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Weekend Sunrise",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Sports Illustrated Swimsuit Issue",
+            "type": "other",
+            "year": "1999"
+          },
+          {
+            "title": "Sports Illustrated Swimsuit Issue",
+            "type": "other",
+            "year": "2003"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1999."
+        },
+        "description": "Sarah Murdoch (née O'Hare) is a British-Australian model, actress, television presenter, and philanthropist who began her modelling career at 17, walking runways for houses including Chanel, Valentino, and Givenchy and appearing in the 1999 and 2003 Sports Illustrated Swimsuit issues. She transitioned to screen work with a role in the romantic comedy Head Over Heels and a guest appearance on Friends, before co-hosting the Nine Network's morning show Today. She later served as host and executive producer of Australia's Next Top Model on Foxtel, which became the network's highest-rating non-sports programme. She likely crossed paths with Conan O'Brien during a Late Night appearance around 1999, early in her public profile.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Sarah_Murdoch"
+        ],
+        "enrichedAt": "2026-09-10T07:04:11.840Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "British-Australian",
+        "prestige_signals": [
+          "ASTRA Award for Most Outstanding Light Entertainment Program (2010)",
+          "ASTRA Award for Most Outstanding Reality Program (2011)",
+          "ASTRA Award for Favorite Female Personality (2011)",
+          "Inaugural Advocacy for Breast Cancer Research Award",
+          "Honorary Award for Extraordinary Service"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -330668,7 +330753,81 @@
       "id": "chris-carter",
       "name": "Chris Carter",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Chris Carter (American musician)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Carter_(American_musician)",
+          "confidence": 1
+        },
+        "profession": [
+          "disc jockey",
+          "music producer",
+          "film producer",
+          "musician",
+          "artist manager"
+        ],
+        "known_for": [
+          {
+            "title": "Dramarama",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Cinéma Vérité",
+            "type": "music",
+            "year": "1985"
+          },
+          {
+            "title": "Anything, Anything (I'll Give You)",
+            "type": "music",
+            "year": "1985"
+          },
+          {
+            "title": "Breakfast with the Beatles",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Chris Carter's British Invasion",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "Mayor of the Sunset Strip",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Austin Powers: International Man of Mystery",
+            "type": "film",
+            "year": "1997"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2001."
+        },
+        "description": "Chris Carter is an American disc jockey, music and film producer, and musician based in Los Angeles. He co-founded the alternative rock band Dramarama in 1982, playing bass and producing records including their debut Cinéma Vérité, home to the enduring hit Anything, Anything (I'll Give You). After the band disbanded in 1994, Carter built a parallel career in radio, becoming best known for hosting Breakfast with the Beatles, long billed as America's longest-running Beatles radio show, which has aired on KLOS-FM and Sirius XM. He also produced the music for the rock documentary Mayor of the Sunset Strip. Carter likely crossed paths with Conan O'Brien's Late Night audience as early as 2001, during a period when his radio profile in Los Angeles was at its height.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chris_Carter_(American_musician)"
+        ],
+        "enrichedAt": "2026-09-10T07:06:11.532Z",
+        "birth_year": "1959",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Los Angeles Music Award for Best Modern Rock Band (1992)",
+          "Mayor of the Sunset Strip won Best Documentary at the Santa Barbara Film Festival (2003)",
+          "Mayor of the Sunset Strip nominated for Best Documentary by the Independent Spirit Awards",
+          "BAM 100 recognition as one of the 100 Most Influential Californians in the Music Industry (1999)"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -342712,7 +342871,74 @@
       "id": "the-vines",
       "name": "The Vines",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "The Vines (band)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/The_Vines_(band)",
+          "confidence": 1
+        },
+        "profession": [
+          "rock band"
+        ],
+        "known_for": [
+          {
+            "title": "Highly Evolved",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "Get Free",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "Highly Evolved (song)",
+            "type": "music",
+            "year": "2002"
+          },
+          {
+            "title": "In the Jungle",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Winning Days",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "Factory",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "Hot Leather/Sunchild",
+            "type": "music",
+            "year": "2001"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2002."
+        },
+        "description": "The Vines are an Australian rock band formed in Sydney in 1994, built around the enduring presence of vocalist and guitarist Craig Nicholls. Drawing on 1960s garage rock and 1990s alternative rock, they broke through internationally with their debut album Highly Evolved in 2002, which sold 1.5 million copies worldwide and earned them an ARIA Award for Breakthrough Artist – Single for Get Free. The band has since released seven studio albums and a best-of compilation from their time at Capitol Records. They likely crossed paths with Conan O'Brien during their breakout period, with a reported first appearance on Late Night with Conan O'Brien in 2002.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/The_Vines_(band)"
+        ],
+        "enrichedAt": "2026-09-10T07:07:08.925Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "",
+        "nationality": "Australian",
+        "prestige_signals": [
+          "ARIA Award for Breakthrough Artist – Single"
+        ],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -345330,7 +345556,76 @@
       "id": "karolina-kurkova",
       "name": "Karolina Kurkova",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Karolina_Kurkova_2011_Shankbone.JPG/500px-Karolina_Kurkova_2011_Shankbone.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Karolína Kurková",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Karol%C3%ADna_Kurkov%C3%A1",
+          "confidence": 1
+        },
+        "profession": [
+          "model",
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "Victoria's Secret Angel",
+            "type": "other",
+            "year": "2005"
+          },
+          {
+            "title": "Vogue (American edition cover)",
+            "type": "other",
+            "year": "2001"
+          },
+          {
+            "title": "Victoria's Secret Fashion Show 2002",
+            "type": "other",
+            "year": "2002"
+          },
+          {
+            "title": "Victoria's Secret Fashion Show 2006",
+            "type": "other",
+            "year": "2006"
+          },
+          {
+            "title": "VH1/Vogue Fashion Awards Model of the Year",
+            "type": "other",
+            "year": "2002"
+          },
+          {
+            "title": "Vogue Czechoslovakia (first cover model)",
+            "type": "other",
+            "year": "2018"
+          },
+          {
+            "title": "My Sexiest Year",
+            "type": "film",
+            "year": "2007"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
+        },
+        "description": "Karolína Kurková is a Czech model who rose to international prominence as a Victoria's Secret Angel and a fixture on the covers of Vogue, having appeared on more than 51 editions of the magazine worldwide. Named Model of the Year at the 2002 VH1/Vogue Fashion Awards, she ranked sixth on Forbes' list of highest-earning models in 2007 with an estimated $5 million in earnings that year. She later expanded into acting with a film debut in My Sexiest Year alongside Harvey Keitel and Frankie Muniz. She likely crossed paths with Conan O'Brien when she is believed to have first appeared on Late Night with Conan O'Brien in 2003.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Karol%C3%ADna_Kurkov%C3%A1"
+        ],
+        "enrichedAt": "2026-09-10T07:07:10.530Z",
+        "birth_year": "1984",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Czech",
+        "prestige_signals": [
+          "Model of the Year at the 2002 VH1/Vogue Fashion Awards",
+          "Named among the world's top-earning models by Forbes in 2007 (6th place)"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -345363,7 +345658,119 @@
       "id": "goran-visnjic",
       "name": "Goran Visnjic",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Goran_Visnjic_%2815065848898%29_%28cropped%29.jpg/500px-Goran_Visnjic_%2815065848898%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Goran Višnjić",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Goran_Vi%C5%A1nji%C4%87",
+          "confidence": 1
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "ER",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "Timeless",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "The Peacemaker",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Rounders",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Practical Magic",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Welcome to Sarajevo",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "The Deep End",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Ice Age",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Elektra",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Beginners",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "The Girl with the Dragon Tattoo",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "The Counselor",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Spartacus",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Close Your Eyes",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Posljednja volja",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Duga mračna noć",
+            "type": "film",
+            "year": "2004"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
+        },
+        "description": "Goran Višnjić is a Croatian actor best known for his long-running role as Dr. Luka Kovač on the NBC medical drama ER and as Garcia Flynn in the NBC series Timeless. He began his career in theatre in his hometown of Šibenik, earning critical recognition for his portrayal of Hamlet at the Dubrovnik Summer Festival before transitioning to international film and television in the late 1990s. His screen credits include The Peacemaker, Practical Magic, Rounders, The Deep End, Ice Age, Elektra, Beginners, The Girl with the Dragon Tattoo, and The Counselor. He and the ER cast received two Screen Actors Guild Award nominations. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2003.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Goran_Vi%C5%A1nji%C4%87"
+        ],
+        "enrichedAt": "2026-09-10T07:07:14.031Z",
+        "birth_year": "1972",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "Croatian",
+        "prestige_signals": [
+          "Screen Actors Guild Award nominee"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -346001,7 +346408,130 @@
       "id": "sofia-vergara",
       "name": "Sofia Vergara",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Sofía Vergara",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Sof%C3%ADa_Vergara",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "television personality",
+          "businesswoman",
+          "brand ambassador"
+        ],
+        "known_for": [
+          {
+            "title": "Modern Family",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Griselda",
+            "type": "tv",
+            "year": "2024"
+          },
+          {
+            "title": "Chasing Papi",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Four Brothers",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Meet the Browns",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Madea Goes to Jail",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "New Year's Eve",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Happy Feet Two",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "The Three Stooges",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "Machete Kills",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Fading Gigolo",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Chef",
+            "type": "film",
+            "year": "2014"
+          },
+          {
+            "title": "Hot Pursuit",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "The Emoji Movie",
+            "type": "film",
+            "year": "2017"
+          },
+          {
+            "title": "America's Got Talent",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Despicable Me 4",
+            "type": "film",
+            "year": "2024"
+          }
+        ],
+        "recent_work": [
+          "Griselda (Netflix miniseries, 2024)",
+          "Despicable Me 4 (2024)",
+          "America's Got Talent (judge, ongoing)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
+        },
+        "description": "Sofia Vergara is a Colombian-American actress and television personality best known for playing Gloria Delgado-Pritchett across all eleven seasons of the ABC sitcom Modern Family, a role that earned her four consecutive Primetime Emmy nominations. She followed that long run with a critically acclaimed turn as Griselda Blanco in the Netflix miniseries Griselda, which brought her a fifth Emmy nomination and made her the first Latina born in Latin America nominated in the Outstanding Lead Actress in a Limited Series category. Since 2020 she has served as a judge on America's Got Talent, and her film credits span Chasing Papi, Four Brothers, The Three Stooges, and the animated Despicable Me 4. She likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2003.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Sof%C3%ADa_Vergara"
+        ],
+        "enrichedAt": "2026-09-10T07:08:14.571Z",
+        "birth_year": "1972",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Colombian-American",
+        "prestige_signals": [
+          "Five Primetime Emmy Award nominations",
+          "Five Golden Globe Award nominations",
+          "Primetime Emmy Award nomination for Outstanding Lead Actress in a Limited or Anthology Series or Movie for Griselda (2024)",
+          "Hollywood Walk of Fame star (2015)",
+          "First Latina born in a Latin American country nominated for Outstanding Lead Actress in a Limited or Anthology Series or Movie at the Primetime Emmy Awards"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -349351,7 +349881,51 @@
       "id": "bill-oreilly",
       "name": "Bill O'Reilly",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Bill O'Reilly (cricketer)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Bill_O'Reilly_(cricketer)",
+          "confidence": 1
+        },
+        "profession": [
+          "cricketer",
+          "cricket writer",
+          "broadcaster"
+        ],
+        "known_for": [
+          {
+            "title": "1938 Ashes tour of England",
+            "type": "other",
+            "year": "1938"
+          },
+          {
+            "title": "Tiger (autobiography)",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2003."
+        },
+        "description": "Bill O'Reilly (1905–1992) was an Australian cricketer widely regarded as one of the greatest bowlers in the history of the game, praised by Sir Donald Bradman as the finest bowler he ever faced or watched. Known for his aggressive spin bowling, accuracy, and ability to deliver leg breaks, googlies, and top spinners with an indistinguishable action, O'Reilly was named a Wisden Cricketer of the Year in 1935. Following his retirement from playing, he built a second career as a respected cricket writer and broadcaster. He likely crossed paths with the world of Late Night with Conan O'Brien around 2003, though the connection between this Australian sporting legend and the American talk show remains tentative.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Bill_O'Reilly_(cricketer)"
+        ],
+        "enrichedAt": "2026-09-10T07:09:10.387Z",
+        "birth_year": "1905",
+        "death_year": "1992",
+        "gender": "male",
+        "nationality": "Australian",
+        "prestige_signals": [
+          "Wisden Cricketer of the Year 1935"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
