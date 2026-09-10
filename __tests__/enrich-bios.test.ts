@@ -504,6 +504,40 @@ describe('resolveEntityWithRetry() — mocked Wikipedia fetch', () => {
     expect(result!.name).toBe('John Smith');
   });
 
+  it('strips a title prefix not covered before (Mayor/General/Representative/Chef/Fr./Sr./Mama/Miss)', async () => {
+    mockedFetchWikiEntity.mockImplementation(async (name: string) => {
+      if (name === 'Ray Odierno') {
+        return {
+          title: 'Ray Odierno',
+          url: 'https://en.wikipedia.org/wiki/Ray_Odierno',
+          extract: 'Ray Odierno (born 1954) was an American general.',
+          isDisambiguation: false,
+        };
+      }
+      return null;
+    });
+    const result = await resolveEntityWithRetry('General Ray Odierno');
+    expect(result).not.toBeNull();
+    expect(result!.name).toBe('Ray Odierno');
+  });
+
+  it('inserts a period after a bare middle initial (Paul F Tompkins / Paul F. Tompkins)', async () => {
+    mockedFetchWikiEntity.mockImplementation(async (name: string) => {
+      if (name === 'Paul F. Tompkins') {
+        return {
+          title: 'Paul F. Tompkins',
+          url: 'https://en.wikipedia.org/wiki/Paul_F._Tompkins',
+          extract: 'Paul F. Tompkins (born 1968) is an American comedian and actor.',
+          isDisambiguation: false,
+        };
+      }
+      return null; // "Paul F Tompkins" (no period) itself doesn't resolve
+    });
+    const result = await resolveEntityWithRetry('Paul F Tompkins');
+    expect(result).not.toBeNull();
+    expect(result!.name).toBe('Paul F. Tompkins');
+  });
+
   it('scores lower confidence when no bio-signal words are present', async () => {
     mockedFetchWikiEntity.mockResolvedValue({
       title: 'Some Person',

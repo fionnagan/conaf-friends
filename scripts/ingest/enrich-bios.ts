@@ -277,9 +277,24 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   // Falls back to name variants for compound titles like "X Live From Y"
   const namesToTry: string[] = [];
 
-  // "Ambassador X" / "Sir X" / "Justice X" / "Dr. X" → "X"
-  const noTitle = guestName.replace(/^(?:Ambassador|Senator|President|Governor|Secretary|Professor|Justice|Judge|Sir|Dame|Lord|Dr\.?|Mr\.?|Ms\.?|Coach)\s+/i, '').trim();
+  // "Ambassador X" / "Sir X" / "Justice X" / "Dr. X" → "X". Confirmed
+  // against the real needs_review tail that Mayor/General/Representative/
+  // Chef/Fr./Sr./Mama/Miss were real, recurring gaps in this list (Mayor
+  // Rudolph Giuliani, General Ray Odierno, Representative Adam Schiff,
+  // Chef Carl Redding, Fr. Orsini, Sr. Jean Kenny, Mama Gena, Miss
+  // Manners-Judith Martin) — none of these titles had ever been added.
+  const noTitle = guestName.replace(/^(?:Ambassador|Senator|President|Governor|Secretary|Professor|Justice|Judge|Sir|Dame|Lord|Dr\.?|Mr\.?|Ms\.?|Mrs\.?|Miss|Mama|Coach|Mayor|General|Representative|Chef|Fr\.?|Sr\.?)\s+/i, '').trim();
   if (noTitle !== guestName) namesToTry.push(noTitle);
+
+  // "Paul F Tompkins" → "Paul F. Tompkins" — a middle initial written
+  // without a period is a different literal title from Wikipedia's actual
+  // page/redirect, which almost always carries one. Confirmed as a real,
+  // recurring pattern in the needs_review tail (14 guests: Paul F
+  // Tompkins, Vivica A Fox, Michael T Weiss, Taraji P Henson, ...). Only
+  // fires on a genuine single-letter middle token, not e.g. "CJ Matusovich"
+  // (compound initials as one token — a different, harder case).
+  const withMiddleInitialPeriod = guestName.replace(/^(\S+) ([A-Za-z]) (\S.*)$/, '$1 $2. $3');
+  if (withMiddleInitialPeriod !== guestName) namesToTry.push(withMiddleInitialPeriod);
 
   // "X Live From/at Y" → "X"
   const stripped = guestName.replace(/\s+(live\s+(?:from|at|with)|at\s+the)\b.*/i, '').trim();
