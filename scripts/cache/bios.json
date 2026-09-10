@@ -6007,7 +6007,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:12:08.605Z"
+    "enrichedAt": "2026-09-10T00:22:12.619Z"
   },
   "David Cross": {
     "entity": {
@@ -17367,7 +17367,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:12:08.605Z"
+    "enrichedAt": "2026-09-10T00:22:12.597Z"
   },
   "D'Arcy Carden": {
     "entity": {
@@ -28989,7 +28989,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:13:01.621Z"
+    "enrichedAt": "2026-09-10T00:23:01.612Z"
   },
   "Martha Stewart": {
     "entity": {
@@ -35837,7 +35837,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:13:01.718Z"
+    "enrichedAt": "2026-09-10T00:23:01.653Z"
   },
   "James Spader": {
     "entity": {
@@ -47051,7 +47051,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:13:01.851Z"
+    "enrichedAt": "2026-09-10T00:23:01.795Z"
   },
   "Benjamin McKenzie": {
     "entity": {
@@ -50269,7 +50269,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:13:01.111Z"
+    "enrichedAt": "2026-09-10T00:23:01.082Z"
   },
   "Chris Eigeman": {
     "entity": {
@@ -52168,7 +52168,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:14:00.559Z"
+    "enrichedAt": "2026-09-10T00:23:01.404Z"
   },
   "James Woods": {
     "entity": {
@@ -64254,7 +64254,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:14:01.015Z"
+    "enrichedAt": "2026-09-10T00:24:00.835Z"
   },
   "David Blaine": {
     "entity": {
@@ -65108,7 +65108,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:14:01.167Z"
+    "enrichedAt": "2026-09-10T00:24:01.004Z"
   },
   "George Stephanopoulos": {
     "entity": {
@@ -67768,7 +67768,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:14:01.587Z"
+    "enrichedAt": "2026-09-10T00:24:01.173Z"
   },
   "Katie Holmes": {
     "entity": {
@@ -72714,7 +72714,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:14:00.879Z"
+    "enrichedAt": "2026-09-10T00:24:00.273Z"
   },
   "Blake Anderson": {
     "entity": {
@@ -73268,7 +73268,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:15:01.142Z"
+    "enrichedAt": "2026-09-10T00:25:00.683Z"
   },
   "Conor McGregor": {
     "entity": {
@@ -78777,7 +78777,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:15:00.461Z"
+    "enrichedAt": "2026-09-10T00:24:01.166Z"
   },
   "Bill Murray": {
     "entity": {
@@ -83094,7 +83094,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:15:00.639Z"
+    "enrichedAt": "2026-09-10T00:25:00.555Z"
   },
   "Piper Perabo": {
     "entity": {
@@ -83336,7 +83336,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:15:00.986Z"
+    "enrichedAt": "2026-09-10T00:25:01.434Z"
   },
   "Michael Imperioli": {
     "entity": {
@@ -95969,22 +95969,54 @@
   },
   "Joe Perry": {
     "entity": {
-      "name": "Joe Perry",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Joe Perry (American football)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Joe_Perry_(American_football)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "professional football player",
+      "fullback"
+    ],
+    "known_for": [
+      {
+        "title": "San Francisco 49ers",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Baltimore Colts",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Pro Football Hall of Fame",
+        "type": "other",
+        "year": "1969"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T00:16:00.716Z"
+    "description": "Fletcher Joseph Perry (1927–2011) was an American professional football fullback who played primarily for the San Francisco 49ers from 1948 to 1960, with a stint with the Baltimore Colts before returning to San Francisco for his final season in 1963. Known as 'the Jet' for his exceptional speed, Perry was the first player in NFL history to rush for 1,000 yards in consecutive seasons and the first African-American named the league's Most Valuable Player. He was inducted into the Pro Football Hall of Fame in 1969. Given the difference in era and field, any connection to Late Night with Conan O'Brien would likely be tangential at best.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Joe_Perry_(American_football)"
+    ],
+    "enrichedAt": "2026-09-10T00:25:08.866Z",
+    "birth_year": "1927",
+    "death_year": "2011",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "NFL Most Valuable Player (1954)",
+      "First African-American named NFL MVP",
+      "Pro Football Hall of Fame inductee (1969)"
+    ],
+    "primary_platform": "sports",
+    "upcoming_work": []
   },
   "Uma Thurman": {
     "entity": {
@@ -105617,21 +105649,61 @@
   "Pee-wee Herman": {
     "entity": {
       "name": "Pee-wee Herman",
-      "wikipedia_url": "",
-      "confidence": 0
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pee-wee_Herman",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "comedy character",
+      "fictional comedian"
+    ],
+    "known_for": [
+      {
+        "title": "The Pee-wee Herman Show",
+        "type": "tv",
+        "year": "1981"
+      },
+      {
+        "title": "Pee-wee's Big Adventure",
+        "type": "film",
+        "year": "1985"
+      },
+      {
+        "title": "Pee-wee's Playhouse",
+        "type": "tv",
+        "year": "1986"
+      },
+      {
+        "title": "Big Top Pee-wee",
+        "type": "film",
+        "year": "1988"
+      },
+      {
+        "title": "Pee-wee's Big Holiday",
+        "type": "film",
+        "year": "2016"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
     },
-    "description": "",
-    "confidence": 0,
+    "description": "Pee-wee Herman is a comedy character created and portrayed by American comedian Paul Reubens. The childlike alter ego first took shape through the Los Angeles improvisational troupe the Groundlings before landing an HBO special in 1981. The character went on to headline the 1985 film Pee-wee's Big Adventure and the Emmy Award-winning CBS children's series Pee-wee's Playhouse, which ran from 1986 to 1991, followed by the theatrical film Big Top Pee-wee in 1988. After a lengthy hiatus, Reubens brought the character back for the Netflix film Pee-wee's Big Holiday in 2016, his final screen appearance in the role before Reubens' death in 2023. Pee-wee likely crossed paths with Conan O'Brien during The Tonight Show with Conan O'Brien in 2009.",
+    "confidence": 1,
     "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T00:15:00.986Z"
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pee-wee_Herman"
+    ],
+    "enrichedAt": "2026-09-10T00:25:09.836Z",
+    "birth_year": "",
+    "death_year": "2023",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "Emmy Award-winning children's series"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Gabourey Sidibe": {
     "entity": {
@@ -108920,7 +108992,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:16:01.147Z"
+    "enrichedAt": "2026-09-10T00:26:01.287Z"
   },
   "Brent Morin": {
     "entity": {
@@ -114380,7 +114452,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:16:00.579Z"
+    "enrichedAt": "2026-09-10T00:26:00.829Z"
   },
   "Conan Scrapisode": {
     "entity": {
@@ -114399,7 +114471,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:16:00.851Z"
+    "enrichedAt": "2026-09-10T00:26:00.563Z"
   },
   "Ben Falcone": {
     "entity": {
@@ -114980,7 +115052,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:16:00.989Z"
+    "enrichedAt": "2026-09-10T00:26:00.478Z"
   },
   "Malcolm Gladwell": {
     "entity": {
@@ -126005,7 +126077,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:17:00.350Z"
+    "enrichedAt": "2026-09-10T00:26:00.799Z"
   },
   "Daisy Fuentes": {
     "entity": {
@@ -128241,7 +128313,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:17:01.300Z"
+    "enrichedAt": "2026-09-10T00:26:01.082Z"
   },
   "The Frugal Gourmet": {
     "entity": {
@@ -128260,26 +128332,89 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:17:00.545Z"
+    "enrichedAt": "2026-09-10T00:27:00.366Z"
   },
   "Charles Dutton": {
     "entity": {
-      "name": "Charles Dutton",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Charles Christian Dutton",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Charles_Christian_Dutton",
+      "confidence": 1
     },
     "profession": [],
-    "known_for": [],
+    "known_for": [
+      {
+        "title": "Henry Pelham Dutton",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Pillaworta",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "gentlemen",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Frederick Hansborough Dutton",
+        "type": "tv",
+        "year": "1812"
+      },
+      {
+        "title": "Early Days of Eyre Peninsula 1",
+        "type": "tv",
+        "year": ""
+      },
+      {
+        "title": "Early Days of Eyre Peninsula 2",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Early Days of Eyre Peninsula 3",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Early Days of Eyre Peninsula 4",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Early Days of Eyre Peninsula 5",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Early Days of Eyre Peninsula 6",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Early Days of Eyre Peninsula 7",
+        "type": "tv",
+        "year": "2015"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
     },
-    "description": "",
-    "confidence": 0,
+    "description": "Charles Christian Dutton (presumed died 1842) was a pastoralist in the Colony of South Australia who disappeared, believed murdered by Aboriginal people, while driving cattle from Port Lincoln to Adelaide in July 1842. == Origins ==\nDutton was born in England, a son of John Dutton. In the 1830s he ran a store in Singleton, New South Wales with his brother Henry Pelerin Dutton (c.1803 – 30 January 1870); the partnership broke up in 1837. H. P. First appeared on Late Night with Conan O'Brien in 1995.",
+    "confidence": 1,
     "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T00:17:01.082Z"
+    "sources": [
+      "https://en.wikipedia.org/wiki/Charles_Christian_Dutton"
+    ],
+    "enrichedAt": "2026-09-10T00:27:07.974Z",
+    "birth_year": "",
+    "death_year": "1842",
+    "gender": "male",
+    "nationality": "",
+    "prestige_signals": []
   },
   "Carol Kane": {
     "entity": {
@@ -130410,7 +130545,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:18:00.565Z"
+    "enrichedAt": "2026-09-10T00:27:01.265Z"
   },
   "Gena Lee Nolin": {
     "entity": {
@@ -131669,7 +131804,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:17:00.920Z"
+    "enrichedAt": "2026-09-10T00:27:00.663Z"
   },
   "Ally Walker": {
     "entity": {
@@ -132680,7 +132815,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:18:00.509Z"
+    "enrichedAt": "2026-09-10T00:27:00.936Z"
   },
   "Jane Seymour": {
     "entity": {
@@ -132697,13 +132832,13 @@
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
     },
-    "description": "Jane Seymour (c. 1508–1537) was Queen of England as the third wife of King Henry VIII, having ascended to the throne following the execution of Anne Boleyn in 1536. She died of postnatal complications shortly after the birth of her only child, the future King Edward VI, and was the sole wife of Henry VIII to receive a queen's funeral. Henry VIII was later buried alongside her at St George's Chapel, Windsor Castle. Praised by contemporaries for her gentle and peaceful character, she is a central figure of Tudor history. Any connection to Conan O'Brien's late-night career spans five centuries and cannot be meaningfully drawn.",
+    "description": "Jane Seymour (c. 1508–1537) was Queen of England as the third wife of King Henry VIII, ascending to the throne following the execution of Anne Boleyn in 1536. Known for her gentle and peaceable nature, she died of postnatal complications shortly after giving birth to the future King Edward VI, and was the only one of Henry's wives to receive a queen's funeral. As a historical figure from the Tudor period, she would not have appeared on Late Night with Conan O'Brien, and any connection to Conan O'Brien's programming likely refers to a different person sharing this name.",
     "confidence": 1,
     "needs_review": true,
     "sources": [
       "https://en.wikipedia.org/wiki/Jane_Seymour"
     ],
-    "enrichedAt": "2026-09-10T00:18:09.606Z",
+    "enrichedAt": "2026-09-10T00:27:06.717Z",
     "birth_year": "",
     "death_year": "1537",
     "gender": "female",
@@ -141284,7 +141419,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:18:01.530Z"
+    "enrichedAt": "2026-09-10T00:28:01.136Z"
   },
   "Asa Butterfield": {
     "entity": {
@@ -144821,7 +144956,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:18:00.925Z"
+    "enrichedAt": "2026-09-10T00:28:01.187Z"
   },
   "Daddy's Home": {
     "entity": {
@@ -146393,7 +146528,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:18:00.888Z"
+    "enrichedAt": "2026-09-10T00:28:00.395Z"
   },
   "John Melendez": {
     "entity": {
@@ -151087,7 +151222,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:19:00.874Z"
+    "enrichedAt": "2026-09-10T00:28:00.564Z"
   },
   "Julie Scardina": {
     "entity": {
@@ -152803,7 +152938,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:19:00.335Z"
+    "enrichedAt": "2026-09-10T00:28:00.771Z"
   },
   "Denis Hamill": {
     "entity": {
@@ -152822,7 +152957,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:19:00.643Z"
+    "enrichedAt": "2026-09-10T00:28:00.888Z"
   },
   "Bill Braudis": {
     "entity": {
@@ -153268,7 +153403,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:19:00.991Z"
+    "enrichedAt": "2026-09-10T00:29:00.986Z"
   },
   "Anne Robinson": {
     "entity": {
@@ -154724,7 +154859,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:20:01.089Z"
+    "enrichedAt": "2026-09-10T00:29:01.138Z"
   },
   "Meredith Viera": {
     "entity": {
@@ -156930,7 +157065,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:20:01.164Z"
+    "enrichedAt": "2026-09-10T00:29:01.279Z"
   },
   "Tom Holland": {
     "entity": {
@@ -157984,7 +158119,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:20:00.669Z"
+    "enrichedAt": "2026-09-10T00:29:00.631Z"
   },
   "Goldie Hawn": {
     "entity": {
@@ -158645,7 +158780,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:20:01.015Z"
+    "enrichedAt": "2026-09-10T00:29:00.902Z"
   },
   "Roy Wood Jr.": {
     "entity": {
@@ -159271,7 +159406,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:21:01.422Z"
+    "enrichedAt": "2026-09-10T00:30:01.146Z"
   },
   "President Barack Obama": {
     "entity": {
@@ -160708,7 +160843,7 @@
     "confidence": 0.4666666666666666,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:21:00.638Z"
+    "enrichedAt": "2026-09-10T00:30:00.422Z"
   },
   "Paul Krassner": {
     "entity": {
@@ -160858,7 +160993,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T00:21:00.806Z"
+    "enrichedAt": "2026-09-10T00:30:00.567Z"
   },
   "Eartha Kitt": {
     "entity": {
@@ -164470,7 +164605,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:51:07.437Z"
+    "enrichedAt": "2026-09-10T00:30:00.769Z"
   },
   "David Dinkins": {
     "entity": {
@@ -164861,7 +164996,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:51:16.984Z"
+    "enrichedAt": "2026-09-10T00:30:00.727Z"
   },
   "Bronson Pinchot": {
     "entity": {
@@ -165227,7 +165362,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:52:00.357Z"
+    "enrichedAt": "2026-09-10T00:30:00.954Z"
   },
   "Chuck Sklar": {
     "entity": {
@@ -166329,7 +166464,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:53:10.914Z"
+    "enrichedAt": "2026-09-10T00:30:00.999Z"
   },
   "Casey Kasem": {
     "entity": {
@@ -166508,18 +166643,43 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Vinny_Paz",
       "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "professional boxer"
+    ],
+    "known_for": [
+      {
+        "title": "Bleed for This",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Be a Man",
+        "type": "film",
+        "year": "2015"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
+    "description": "Vinny Pazienza, now known as Vinny Paz, is a former American professional boxer who held world titles at lightweight and light middleweight, finishing his career with a record of 50–10 and five world championships. He is widely remembered for his remarkable comeback after suffering severe neck injuries in a 1991 car accident, a story dramatized in the 2016 film Bleed for This. He was inducted into the International Sports Hall of Fame in 2022 and the International Boxing Hall of Fame as part of the class of 2025. He likely crossed paths with Conan O'Brien during a Late Night with Conan O'Brien appearance around 1994, during the height of his competitive career.",
     "confidence": 0.6499999999999999,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T08:53:14.749Z"
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Vinny_Paz"
+    ],
+    "enrichedAt": "2026-09-10T00:31:07.601Z",
+    "birth_year": "1962",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [
+      "International Sports Hall of Fame inductee (2022)",
+      "International Boxing Hall of Fame inductee (class of 2025)"
+    ],
+    "primary_platform": "sports",
+    "upcoming_work": []
   },
   "Geraldine Ferraro": {
     "entity": {
@@ -168286,7 +168446,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-09T08:55:19.644Z"
+    "enrichedAt": "2026-09-10T00:31:01.177Z"
   },
   "Beverly Joubert": {
     "entity": {
@@ -168910,22 +169070,66 @@
   },
   "Bob Geary": {
     "entity": {
-      "name": "Bob Geary",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Bob Geary (Canadian football)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bob_Geary_(Canadian_football)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "Canadian Football League player",
+      "general manager",
+      "football executive"
+    ],
+    "known_for": [
+      {
+        "title": "Montreal Alouettes",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Calgary Stampeders",
+        "type": "other",
+        "year": "1955"
+      },
+      {
+        "title": "Verdun Shamcats",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Quebec Rifles",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "1974 Grey Cup winning team",
+        "type": "other",
+        "year": "1974"
+      },
+      {
+        "title": "1977 Grey Cup winning team",
+        "type": "other",
+        "year": "1977"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-09T08:56:00.681Z"
+    "description": "Bob Geary was a Canadian Football League player and football executive whose career spanned decades with the Montreal Alouettes organization. He began as a professional player with the Calgary Stampeders in 1955 before joining the Alouettes in 1958, where he blocked for Hall of Fame running back George Dixon. After retiring as a player in 1964, he served as an assistant coach and front-office aide before becoming the Alouettes' General Manager in 1975, a role he held until 1981. He is credited with helping assemble the Grey Cup championship teams of 1974 and 1977. He likely crossed paths with Late Night with Conan O'Brien in 1994.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Bob_Geary_(Canadian_football)"
+    ],
+    "enrichedAt": "2026-09-10T00:31:07.342Z",
+    "birth_year": "1933",
+    "death_year": "2001",
+    "gender": "male",
+    "nationality": "",
+    "prestige_signals": [],
+    "primary_platform": "sports",
+    "upcoming_work": []
   },
   "Amanda Pays": {
     "entity": {

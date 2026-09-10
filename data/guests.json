@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T00:22:06.060Z",
+  "generatedAt": "2026-09-10T00:31:08.841Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -155147,7 +155147,57 @@
       "id": "joe-perry",
       "name": "Joe Perry",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Joe Perry (American football)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Joe_Perry_(American_football)",
+          "confidence": 1
+        },
+        "profession": [
+          "professional football player",
+          "fullback"
+        ],
+        "known_for": [
+          {
+            "title": "San Francisco 49ers",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Baltimore Colts",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Pro Football Hall of Fame",
+            "type": "other",
+            "year": "1969"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2005."
+        },
+        "description": "Fletcher Joseph Perry (1927–2011) was an American professional football fullback who played primarily for the San Francisco 49ers from 1948 to 1960, with a stint with the Baltimore Colts before returning to San Francisco for his final season in 1963. Known as 'the Jet' for his exceptional speed, Perry was the first player in NFL history to rush for 1,000 yards in consecutive seasons and the first African-American named the league's Most Valuable Player. He was inducted into the Pro Football Hall of Fame in 1969. Given the difference in era and field, any connection to Late Night with Conan O'Brien would likely be tangential at best.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Joe_Perry_(American_football)"
+        ],
+        "enrichedAt": "2026-09-10T00:25:08.866Z",
+        "birth_year": "1927",
+        "death_year": "2011",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "NFL Most Valuable Player (1954)",
+          "First African-American named NFL MVP",
+          "Pro Football Hall of Fame inductee (1969)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -249630,7 +249680,50 @@
       "id": "vinny-pazienza",
       "name": "Vinny Pazienza",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Vinny Paz",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Vinny_Paz",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "professional boxer"
+        ],
+        "known_for": [
+          {
+            "title": "Bleed for This",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Be a Man",
+            "type": "film",
+            "year": "2015"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Vinny Pazienza, now known as Vinny Paz, is a former American professional boxer who held world titles at lightweight and light middleweight, finishing his career with a record of 50–10 and five world championships. He is widely remembered for his remarkable comeback after suffering severe neck injuries in a 1991 car accident, a story dramatized in the 2016 film Bleed for This. He was inducted into the International Sports Hall of Fame in 2022 and the International Boxing Hall of Fame as part of the class of 2025. He likely crossed paths with Conan O'Brien during a Late Night with Conan O'Brien appearance around 1994, during the height of his competitive career.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Vinny_Paz"
+        ],
+        "enrichedAt": "2026-09-10T00:31:07.601Z",
+        "birth_year": "1962",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "International Sports Hall of Fame inductee (2022)",
+          "International Boxing Hall of Fame inductee (class of 2025)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -252535,7 +252628,69 @@
       "id": "bob-geary",
       "name": "Bob Geary",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Bob Geary (Canadian football)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Bob_Geary_(Canadian_football)",
+          "confidence": 1
+        },
+        "profession": [
+          "Canadian Football League player",
+          "general manager",
+          "football executive"
+        ],
+        "known_for": [
+          {
+            "title": "Montreal Alouettes",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Calgary Stampeders",
+            "type": "other",
+            "year": "1955"
+          },
+          {
+            "title": "Verdun Shamcats",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Quebec Rifles",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "1974 Grey Cup winning team",
+            "type": "other",
+            "year": "1974"
+          },
+          {
+            "title": "1977 Grey Cup winning team",
+            "type": "other",
+            "year": "1977"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1994."
+        },
+        "description": "Bob Geary was a Canadian Football League player and football executive whose career spanned decades with the Montreal Alouettes organization. He began as a professional player with the Calgary Stampeders in 1955 before joining the Alouettes in 1958, where he blocked for Hall of Fame running back George Dixon. After retiring as a player in 1964, he served as an assistant coach and front-office aide before becoming the Alouettes' General Manager in 1975, a role he held until 1981. He is credited with helping assemble the Grey Cup championship teams of 1974 and 1977. He likely crossed paths with Late Night with Conan O'Brien in 1994.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Bob_Geary_(Canadian_football)"
+        ],
+        "enrichedAt": "2026-09-10T00:31:07.342Z",
+        "birth_year": "1933",
+        "death_year": "2001",
+        "gender": "male",
+        "nationality": "",
+        "prestige_signals": [],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
