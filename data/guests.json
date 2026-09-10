@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T06:56:07.540Z",
+  "generatedAt": "2026-09-10T07:03:02.462Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -281975,7 +281975,117 @@
       "id": "john-laroquette",
       "name": "John Laroquette",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "John Larroquette",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/John_Larroquette",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Baa Baa Black Sheep",
+            "type": "tv",
+            "year": "1976"
+          },
+          {
+            "title": "Night Court",
+            "type": "tv",
+            "year": "1984"
+          },
+          {
+            "title": "The John Larroquette Show",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "The Practice",
+            "type": "tv",
+            "year": "1997"
+          },
+          {
+            "title": "Boston Legal",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "The Librarians",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "How to Succeed in Business Without Really Trying",
+            "type": "other",
+            "year": "2011"
+          },
+          {
+            "title": "The Best Man",
+            "type": "other",
+            "year": "2012"
+          },
+          {
+            "title": "The Texas Chain Saw Massacre",
+            "type": "film",
+            "year": "1974"
+          },
+          {
+            "title": "Stripes",
+            "type": "film",
+            "year": "1981"
+          },
+          {
+            "title": "Choose Me",
+            "type": "film",
+            "year": "1984"
+          },
+          {
+            "title": "Blind Date",
+            "type": "film",
+            "year": "1987"
+          },
+          {
+            "title": "Madhouse",
+            "type": "film",
+            "year": "1990"
+          },
+          {
+            "title": "Richie Rich",
+            "type": "film",
+            "year": "1994"
+          },
+          {
+            "title": "McBride",
+            "type": "tv",
+            "year": "2005"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "John Larroquette is an American actor best known for his long run on the NBC sitcom Night Court, in which he played Assistant District Attorney Dan Fielding from 1984 to 1992 and reprised the role in the 2023 revival — a performance that earned him four consecutive Primetime Emmy Awards during the original run. He also starred in The John Larroquette Show, The Practice, Boston Legal, and The Librarians, and made his Broadway debut in the 2011 revival of How to Succeed in Business Without Really Trying, winning a Tony Award for Best Featured Actor in a Musical. His first screen credit was providing the narration for The Texas Chain Saw Massacre in 1974. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1995.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/John_Larroquette"
+        ],
+        "enrichedAt": "2026-09-10T06:58:12.092Z",
+        "birth_year": "1947",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "four consecutive Primetime Emmy Awards wins for Outstanding Supporting Actor in a Comedy Series",
+          "Tony Award for Best Featured Actor in a Musical",
+          "Drama Desk Award for Outstanding Featured Actor in a Musical",
+          "fifth Emmy Award (for The Practice)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -284758,7 +284868,58 @@
       "id": "jeff-smith",
       "name": "Jeff Smith",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jeff Smith (British racing driver)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jeff_Smith_(British_racing_driver)",
+          "confidence": 1
+        },
+        "profession": [
+          "racing driver",
+          "businessman"
+        ],
+        "known_for": [
+          {
+            "title": "British Touring Car Championship",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Renault Clio Cup UK",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Superstars Series",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "British Endurance Championship",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Jeff Smith is a British racing driver and businessman born in Coventry in 1966. He is the owner of Industrial Control Distributors and Eurotech Racing, a team he previously drove for as a competitor in the British Touring Car Championship. His BTCC career included stints with Triple 8 Race Engineering and Pirtek Racing, where he claimed podium finishes at Knockhill and Brands Hatch. He also competed in the Renault Clio Cup UK, the Superstars Series, and the British Endurance Championship. His son Brett Smith is likewise a BTCC competitor with Eurotech Racing. Given the timeline, Smith likely crossed paths with Conan O'Brien's Late Night program around 1995.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jeff_Smith_(British_racing_driver)"
+        ],
+        "enrichedAt": "2026-09-10T06:59:08.371Z",
+        "birth_year": "1966",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "British",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -288899,7 +289060,76 @@
       "id": "larry-brown",
       "name": "Larry Brown",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Larry Brown (basketball)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Larry_Brown_(basketball)",
+          "confidence": 1
+        },
+        "profession": [
+          "basketball coach",
+          "former basketball player"
+        ],
+        "known_for": [
+          {
+            "title": "Kansas Jayhawks NCAA Championship",
+            "type": "other",
+            "year": "1988"
+          },
+          {
+            "title": "Detroit Pistons NBA Championship",
+            "type": "other",
+            "year": "2004"
+          },
+          {
+            "title": "Oakland Oaks ABA Championship (player)",
+            "type": "other",
+            "year": "1969"
+          },
+          {
+            "title": "1964 Summer Olympics gold medal",
+            "type": "other",
+            "year": "1964"
+          },
+          {
+            "title": "Memphis Tigers (assistant coach)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Carolina Cougars (head coach)",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Denver Nuggets (head coach)",
+            "type": "other",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Larry Brown is an American basketball coach and former player widely regarded as one of the most accomplished figures in the sport's history. He is the only coach to win both an NCAA national championship, with the Kansas Jayhawks in 1988, and an NBA title, with the Detroit Pistons in 2004, and the only coach in NBA history to lead eight different franchises to the playoffs. As a player, he won an ABA championship with the Oakland Oaks and an Olympic gold medal in 1964. Enshrined in the Basketball Hall of Fame in 2002, Brown likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1996.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Larry_Brown_(basketball)"
+        ],
+        "enrichedAt": "2026-09-10T07:00:11.290Z",
+        "birth_year": "1940",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Basketball Hall of Fame inductee (2002)",
+          "Chuck Daly Lifetime Achievement Award (2021)"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -292178,7 +292408,37 @@
       "id": "michael-mcdermott",
       "name": "Michael McDermott",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Michael J. McDermott",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_J._McDermott",
+          "confidence": 1
+        },
+        "profession": [
+          "diplomat",
+          "ambassador"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Michael J. McDermott (1894–1955) was an American diplomat who spent decades in service with the U.S. Department of State, rising from press and information roles to senior advisory positions including Special Assistant to the Secretary of State for Press Relations. He represented the United States as a delegate to the Moscow Conference of 1943 and the 1946 Paris Peace Treaties conference before being appointed the 6th U.S. Ambassador to El Salvador by the Eisenhower Administration in 1953. His tenure coincided with Operation PBSuccess, the CIA-led overthrow of Guatemalan President Jacobo Arbenz. He passed away in 1955 and was buried at Arlington National Cemetery. The guest named Michael McDermott on Late Night with Conan O'Brien in 1996 was likely a different individual.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michael_J._McDermott"
+        ],
+        "enrichedAt": "2026-09-10T07:01:09.033Z",
+        "birth_year": "1894",
+        "death_year": "1955",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -301145,7 +301405,101 @@
       "id": "dave-attel",
       "name": "Dave Attel",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Dave Attell",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Dave_Attell",
+          "confidence": 1
+        },
+        "profession": [
+          "stand-up comedian",
+          "actor",
+          "writer"
+        ],
+        "known_for": [
+          {
+            "title": "Insomniac with Dave Attell",
+            "type": "tv",
+            "year": "2001"
+          },
+          {
+            "title": "Saturday Night Live",
+            "type": "tv",
+            "year": "1993"
+          },
+          {
+            "title": "Dr. Katz, Professional Therapist",
+            "type": "tv",
+            "year": "1995"
+          },
+          {
+            "title": "The Daily Show",
+            "type": "tv",
+            "year": "1999"
+          },
+          {
+            "title": "Tough Crowd with Colin Quinn",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Dave Attell: Captain Miserable",
+            "type": "tv",
+            "year": "2007"
+          },
+          {
+            "title": "The Gong Show with Dave Attell",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Dave's Old Porn",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Comedy Underground with Dave Attell",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Dave Attell: Road Work",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Bumping Mics with Jeff Ross & Dave Attell",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Dave Attell: Hot Cross Buns",
+            "type": "tv",
+            "year": "2024"
+          }
+        ],
+        "recent_work": [
+          "Dave Attell: Hot Cross Buns (Netflix, 2024)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "Dave Attell is an American stand-up comedian, actor, and writer best known as the host of Comedy Central's Insomniac with Dave Attell. He began his career as a writer and performer on Saturday Night Live during the 1993–94 season and later became a regular commentator on The Daily Show. His television work spans Tough Crowd with Colin Quinn, Dave's Old Porn, Comedy Underground with Dave Attell, and the Netflix documentary series Bumping Mics with Jeff Ross & Dave Attell. His most recent project is the 2024 Netflix special Dave Attell: Hot Cross Buns. He likely crossed paths with Conan O'Brien as early as 1996 during his appearances on Late Night with Conan O'Brien.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dave_Attell"
+        ],
+        "enrichedAt": "2026-09-10T07:02:11.480Z",
+        "birth_year": "1965",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
