@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T06:42:16.698Z",
+  "generatedAt": "2026-09-10T06:50:01.903Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -425845,7 +425845,118 @@
       "id": "phil-rosenthal",
       "name": "Phil Rosenthal",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Phil_Rosenthal_-_LATFOB_2026.jpg/500px-Phil_Rosenthal_-_LATFOB_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Philip Rosenthal",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Philip_Rosenthal",
+          "confidence": 1
+        },
+        "profession": [
+          "television writer",
+          "television producer",
+          "documentary presenter",
+          "author"
+        ],
+        "known_for": [
+          {
+            "title": "Everybody Loves Raymond",
+            "type": "tv",
+            "year": "1996"
+          },
+          {
+            "title": "I'll Have What Phil's Having",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Somebody Feed Phil",
+            "type": "tv",
+            "year": "2018"
+          },
+          {
+            "title": "Spanglish",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "The Simpsons Movie",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Curb Your Enthusiasm",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "30 Rock",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The TV Set",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Walk Hard: The Dewey Cox Story",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Exporting Raymond",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "Coach",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Baby Talk",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "You're Lucky You're Funny: How Life Becomes a Sitcom",
+            "type": "other",
+            "year": "2006"
+          },
+          {
+            "title": "America: A Tribute to Heroes",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [
+          "Somebody Feed Phil (ongoing on Netflix)",
+          "Just Try It! (Phil & Lil) (2024)",
+          "Phil's Favorites: Recipes from Friends and Family to Make at Home (A Cookbook) (2025)",
+          "Just Try It! Someplace New! (A Phil & Lil Book) (2026)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2015."
+        },
+        "description": "Phil Rosenthal is an American television writer, producer, and documentary presenter best known as the creator and executive producer of the long-running CBS sitcom Everybody Loves Raymond, which ran from 1996 to 2005. He later brought his enthusiasm for food and travel to PBS with I'll Have What Phil's Having and then to Netflix with the ongoing series Somebody Feed Phil. Rosenthal has also appeared on screen in projects including Curb Your Enthusiasm, 30 Rock, and The Simpsons Movie, and has written several books, including cookbooks tied to Somebody Feed Phil. He likely first crossed paths with Conan O'Brien around 2015, when his television career was expanding in a new direction.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Philip_Rosenthal"
+        ],
+        "enrichedAt": "2026-09-10T06:44:11.106Z",
+        "birth_year": "1960",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Peabody Award winner",
+          "Emmy nomination for Outstanding Writing"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -428757,7 +428868,103 @@
       "id": "jurnee-smollett-bell",
       "name": "Jurnee Smollett-Bell",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jurnee Smollett",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jurnee_Smollett",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "actress"
+        ],
+        "known_for": [
+          {
+            "title": "On Our Own",
+            "type": "tv",
+            "year": "1994"
+          },
+          {
+            "title": "Full House",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "Eve's Bayou",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "The Great Debaters",
+            "type": "film",
+            "year": "2007"
+          },
+          {
+            "title": "Temptation: Confessions of a Marriage Counselor",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Birds of Prey",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "Friday Night Lights",
+            "type": "tv",
+            "year": "2009"
+          },
+          {
+            "title": "Underground",
+            "type": "tv",
+            "year": "2016"
+          },
+          {
+            "title": "True Blood",
+            "type": "tv",
+            "year": "2013"
+          },
+          {
+            "title": "Lovecraft Country",
+            "type": "tv",
+            "year": "2020"
+          },
+          {
+            "title": "Hands of Stone",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Lou",
+            "type": "film",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [
+          "Lou (2022, Netflix)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2016."
+        },
+        "description": "Jurnee Smollett is an American actress whose career spans film and television from childhood to adult leading roles. She first gained critical attention as a child actress on Full House and On Our Own before earning wide recognition in Kasi Lemmons's Eve's Bayou, which brought her a Critics' Choice Movie Award. As an adult, her notable credits include The Great Debaters, Friday Night Lights, Underground, True Blood, Birds of Prey, and Lovecraft Country, the latter earning her an Emmy nomination for Outstanding Lead Actress in a Drama Series. Her most recent screen work includes the Netflix thriller Lou in 2022. She likely crossed paths with Conan O'Brien when she first appeared on his show in 2016.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jurnee_Smollett"
+        ],
+        "enrichedAt": "2026-09-10T06:45:09.608Z",
+        "birth_year": "1986",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Critics' Choice Movie Award winner",
+          "Primetime Emmy Award nominee for Outstanding Lead Actress in a Drama Series",
+          "NAACP Image Award winner"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -429073,7 +429280,77 @@
       "id": "john-bradley-west",
       "name": "John Bradley-West",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "John Bradley (English actor)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/John_Bradley_(English_actor)",
+          "confidence": 0.6499999999999999
+        },
+        "profession": [
+          "actor"
+        ],
+        "known_for": [
+          {
+            "title": "Game of Thrones",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Borgia",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Merlin",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Shameless",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Closely Observed Trains",
+            "type": "other",
+            "year": "2015"
+          },
+          {
+            "title": "Patient Zero",
+            "type": "film",
+            "year": "2018"
+          },
+          {
+            "title": "Moonfall",
+            "type": "film",
+            "year": "2022"
+          },
+          {
+            "title": "Marry Me",
+            "type": "film",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2016."
+        },
+        "description": "John Bradley-West is an English actor best known for playing Samwell Tarly across all eight seasons of the HBO fantasy series Game of Thrones, a role he landed just three months after graduating from the Manchester School of Theatre. He has also appeared in the Canal+ drama Borgia, the BBC series Merlin, and Channel 4's Shameless. On the film side, his credits include the disaster epic Moonfall, directed by Roland Emmerich, and the romantic comedy Marry Me alongside Jennifer Lopez and Owen Wilson. He likely first crossed paths with Conan O'Brien around 2016, during the peak run of Game of Thrones.",
+        "confidence": 0.6499999999999999,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/John_Bradley_(English_actor)"
+        ],
+        "enrichedAt": "2026-09-10T06:45:08.435Z",
+        "birth_year": "1988",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "English",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -430096,7 +430373,100 @@
       "id": "caitriona-balfe",
       "name": "Caitriona Balfe",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Caitríona Balfe",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Caitr%C3%ADona_Balfe",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "model"
+        ],
+        "known_for": [
+          {
+            "title": "The Devil Wears Prada",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Super 8",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "The Beauty Inside",
+            "type": "film",
+            "year": "2012"
+          },
+          {
+            "title": "H+: The Digital Series",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Now You See Me",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Escape Plan",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Outlander",
+            "type": "tv",
+            "year": "2014"
+          },
+          {
+            "title": "Money Monster",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "The Dark Crystal: Age of Resistance",
+            "type": "tv",
+            "year": "2019"
+          },
+          {
+            "title": "Ford v Ferrari",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Belfast",
+            "type": "film",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2016."
+        },
+        "description": "Caitriona Balfe is an Irish actress and former model who began her career on the runways of Paris at 18, working with Chanel and Louis Vuitton before transitioning to acting. She appeared in films including Super 8, Now You See Me, and Escape Plan before earning her breakout role as Claire Fraser in the long-running Starz drama Outlander, a performance that earned her four Golden Globe nominations. Her film work includes Money Monster, Ford v Ferrari, and Belfast, the latter bringing her nominations for a Golden Globe, a Screen Actors Guild Award, and a BAFTA for Best Supporting Actress. She likely first crossed paths with Conan O'Brien around 2016, during Outlander's peak early seasons.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Caitr%C3%ADona_Balfe"
+        ],
+        "enrichedAt": "2026-09-10T06:46:11.438Z",
+        "birth_year": "1979",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "Irish",
+        "prestige_signals": [
+          "Golden Globe Award nominee (four nominations, Best Actress – Television Series Drama)",
+          "Screen Actors Guild Award nominee (Belfast)",
+          "BAFTA nominee for Best Supporting Actress (Belfast)",
+          "Saturn Award winner for Best Actress on Television (2015, 2016)",
+          "Scottish BAFTA winner for Best Actress on Television (2016)",
+          "IFTA winner for Best Actress in a Lead Role Drama (2018)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -434406,7 +434776,46 @@
       "id": "james-white",
       "name": "James White",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "James Bain White",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/James_Bain_White",
+          "confidence": 1
+        },
+        "profession": [
+          "politician",
+          "Civil War veteran",
+          "soldier",
+          "businessman",
+          "banker"
+        ],
+        "known_for": [
+          {
+            "title": "50th United States Congress",
+            "type": "other",
+            "year": "1887"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2017."
+        },
+        "description": "James Bain White (1835–1897) was an American Civil War veteran, politician, and businessman who served one term as a Republican representative from Indiana in the 50th United States Congress from 1887 to 1889. Born in Scotland, he immigrated to the United States in 1854 and settled in Fort Wayne, Indiana, where he built a career as a calico printer, tailor, department store owner, and banker. He served as a Union Army captain during the Civil War and was wounded at the Battle of Shiloh. He later served as a delegate at the 1892 Republican National Convention. He likely crossed paths with Conan O'Brien around 2017.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/James_Bain_White"
+        ],
+        "enrichedAt": "2026-09-10T06:47:06.775Z",
+        "birth_year": "1835",
+        "death_year": "1897",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -434692,7 +435101,77 @@
       "id": "erin-andrews",
       "name": "Erin Andrews",
       "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Erin_Andrews_-_November_2014_%28cropped%29.jpg/500px-Erin_Andrews_-_November_2014_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Erin Andrews",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Erin_Andrews",
+          "confidence": 1
+        },
+        "profession": [
+          "sportscaster",
+          "television personality",
+          "podcast host"
+        ],
+        "known_for": [
+          {
+            "title": "ESPN",
+            "type": "tv",
+            "year": "2004"
+          },
+          {
+            "title": "Fox Sports",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "Dancing with the Stars",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "Fox NFL Sunday",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Fox College Football",
+            "type": "tv",
+            "year": "2012"
+          },
+          {
+            "title": "CMT Music Awards",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Calm Down",
+            "type": "podcast",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [
+          "Lead sideline reporter for Fox Sports NFL broadcasting team",
+          "Co-host of Calm Down podcast with Charissa Thompson"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2017."
+        },
+        "description": "Erin Andrews is an American sportscaster and television personality who first gained national attention as a correspondent at ESPN, which she joined in 2004. She moved to Fox Sports in 2012 and has since served as the lead sideline reporter for the network's NFL broadcasting team. Beyond sports coverage, Andrews competed on the tenth season of Dancing with the Stars, finishing third, and later co-hosted the show from 2014 to 2019. She has also co-hosted the CMT Music Awards and the Calm Down podcast alongside Charissa Thompson. Andrews likely crossed paths with Conan O'Brien when she first appeared on his show in 2017.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Erin_Andrews"
+        ],
+        "enrichedAt": "2026-09-10T06:47:08.970Z",
+        "birth_year": "1978",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -437408,7 +437887,123 @@
       "id": "paula-patton",
       "name": "Paula Patton",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Paula Patton",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Paula_Patton",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "producer"
+        ],
+        "known_for": [
+          {
+            "title": "Hitch",
+            "type": "film",
+            "year": "2005"
+          },
+          {
+            "title": "Déjà Vu",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Idlewild",
+            "type": "film",
+            "year": "2006"
+          },
+          {
+            "title": "Precious",
+            "type": "film",
+            "year": "2009"
+          },
+          {
+            "title": "Jumping the Broom",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "Mission: Impossible – Ghost Protocol",
+            "type": "film",
+            "year": "2011"
+          },
+          {
+            "title": "2 Guns",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "Warcraft",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Sacrifice",
+            "type": "film",
+            "year": "2019"
+          },
+          {
+            "title": "Confessions",
+            "type": "music",
+            "year": "2004"
+          },
+          {
+            "title": "Swing Vote",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Mirrors",
+            "type": "film",
+            "year": "2008"
+          },
+          {
+            "title": "Just Wright",
+            "type": "film",
+            "year": "2010"
+          },
+          {
+            "title": "Baggage Claim",
+            "type": "film",
+            "year": "2013"
+          },
+          {
+            "title": "The Perfect Match",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "The Do-Over",
+            "type": "film",
+            "year": "2016"
+          },
+          {
+            "title": "Somewhere Between",
+            "type": "tv",
+            "year": "2017"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2017."
+        },
+        "description": "Paula Patton is an American actress and producer who made her feature film debut in the 2005 romantic comedy Hitch. She broke through with a lead role opposite Denzel Washington in the sci-fi thriller Déjà Vu and went on to appear in a wide range of films including Precious, Mission: Impossible – Ghost Protocol, 2 Guns, and the video game adaptation Warcraft. She also contributed vocals to Usher's 2004 album Confessions and has songwriting credits on multiple Robin Thicke albums. Her upcoming project is the musical indie Reimagined, opposite Joel McHale. Patton likely crossed paths with Conan O'Brien around 2017, when she was promoting her ABC drama series Somewhere Between.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Paula_Patton"
+        ],
+        "enrichedAt": "2026-09-10T06:47:12.048Z",
+        "birth_year": "1975",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
