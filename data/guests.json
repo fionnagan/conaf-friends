@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T21:18:15.048Z",
+  "generatedAt": "2026-09-10T21:25:01.669Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -284719,7 +284719,70 @@
       "id": "william-wegman",
       "name": "William Wegman",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "William Wegman (photographer)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/William_Wegman_(photographer)",
+          "confidence": 1
+        },
+        "profession": [
+          "artist",
+          "photographer",
+          "painter",
+          "children's book author"
+        ],
+        "known_for": [
+          {
+            "title": "Puppies",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Flo & Wendell",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "William Wegman: Funney/Strange",
+            "type": "other",
+            "year": "2006"
+          },
+          {
+            "title": "Sesame Street",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Saturday Night Live",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Colbert Report",
+            "type": "tv",
+            "year": "2010"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "William Wegman is an American artist born in 1943, best known for his photographs, paintings, and videos featuring his Weimaraners in elaborate costumes and poses. Originally trained as a painter, he holds degrees from Massachusetts College of Art and Design and the University of Illinois at Urbana-Champaign, and his work is held in permanent collections at the Museum of Modern Art, the Whitney Museum of American Art, and the Centre Pompidou, among others. His dogs became beloved fixtures on Sesame Street, and he is the author of several children's books, including the New York Times bestseller Puppies. Wegman likely crossed paths with Conan O'Brien during Late Night with Conan O'Brien around 1995.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/William_Wegman_(photographer)"
+        ],
+        "enrichedAt": "2026-09-10T21:19:10.787Z",
+        "birth_year": "1943",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -285734,7 +285797,123 @@
       "id": "matt-graham",
       "name": "Matt Graham",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Matthew Graham",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Matthew_Graham",
+          "confidence": 1
+        },
+        "profession": [
+          "television writer",
+          "co-creator"
+        ],
+        "known_for": [
+          {
+            "title": "Life on Mars",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Streetwise",
+            "type": "tv",
+            "year": "1990"
+          },
+          {
+            "title": "Byker Grove",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Biz",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "EastEnders",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "This Life",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Last Train",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Spooks",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Hustle",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Fear Her",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Ashes to Ashes",
+            "type": "tv",
+            "year": "2008"
+          },
+          {
+            "title": "Bonekickers",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Eternal Law",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Rebel Flesh",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "The Almost People",
+            "type": "tv",
+            "year": "2011"
+          },
+          {
+            "title": "Childhood's End",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Philip K. Dick's Electric Dreams",
+            "type": "tv",
+            "year": "2017"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Matthew Graham is a British television writer best known as co-creator of the BBC science fiction series Life on Mars, which debuted in 2006 and earned international critical acclaim. He built his career across a wide range of BBC productions, including EastEnders, This Life, Byker Grove, and Spooks, before creating the post-apocalyptic serial The Last Train for ITV. He co-created the Life on Mars sequel Ashes to Ashes and contributed episodes to Doctor Who and Philip K. Dick's Electric Dreams. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1995, early in his writing career.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Matthew_Graham"
+        ],
+        "enrichedAt": "2026-09-10T21:19:10.617Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "British",
+        "prestige_signals": [],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -286921,7 +287100,56 @@
       "id": "stanley-b-goldenberg",
       "name": "Stanley B Goldenberg",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Stanley B. Goldenberg",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Stanley_B._Goldenberg",
+          "confidence": 1
+        },
+        "profession": [
+          "meteorologist",
+          "research scientist"
+        ],
+        "known_for": [
+          {
+            "title": "Cyclone!",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Storm Stories",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Savage Skies",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1995."
+        },
+        "description": "Stanley B. Goldenberg is a meteorologist with NOAA's Hurricane Research Division in Miami, Florida, where he has spent his career studying climate patterns and Atlantic hurricane activity. He is a lead author of NOAA's Seasonal Hurricane Outlooks and co-authored a landmark paper in Science establishing that the Atlantic basin had entered a multidecadal era of heightened hurricane activity driven by natural climate fluctuations. A NOAA Bronze Medal recipient, Goldenberg has also participated in research flights into major storms, including Hurricane Katrina. His expertise and his family's harrowing experience surviving Hurricane Andrew have been featured in television specials including Cyclone!, Storm Stories, and Savage Skies. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1995.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Stanley_B._Goldenberg"
+        ],
+        "enrichedAt": "2026-09-10T21:19:08.361Z",
+        "birth_year": "",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "",
+        "prestige_signals": [
+          "Office of Oceanic and Atmospheric Research Outstanding Scientific Paper Award",
+          "NOAA Bronze Medal"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -296607,7 +296835,36 @@
       "id": "john-davidson",
       "name": "John Davidson",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "John Andrew Davidson",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/John_Andrew_Davidson",
+          "confidence": 1
+        },
+        "profession": [
+          "politician"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1996."
+        },
+        "description": "John Andrew Davidson (1852–1903) was a Manitoba politician who served briefly as leader of the provincial Conservative opposition caucus in 1894 and later held cabinet positions under Premiers Hugh John Macdonald and Rodmond Roblin, including Provincial Treasurer and Minister of Agriculture. A moderate figure respected across party lines, he was first elected to the Manitoba legislature in 1881 as the member for Dauphin and went on to eliminate the province's accumulated debt before his death shortly after winning re-election in 1903. This profile likely corresponds to a different John Davidson than the one who may have appeared on Late Night with Conan O'Brien in 1996.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/John_Andrew_Davidson"
+        ],
+        "enrichedAt": "2026-09-10T21:22:06.663Z",
+        "birth_year": "1852",
+        "death_year": "1903",
+        "gender": "male",
+        "nationality": "",
+        "prestige_signals": [],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -307164,7 +307421,118 @@
       "id": "doug-e-doug",
       "name": "Doug E Doug",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Doug E. Doug",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Doug_E._Doug",
+          "confidence": 1
+        },
+        "profession": [
+          "actor",
+          "stand-up comedian",
+          "director",
+          "producer",
+          "writer"
+        ],
+        "known_for": [
+          {
+            "title": "Cool Runnings",
+            "type": "film",
+            "year": "1993"
+          },
+          {
+            "title": "Cosby",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Shark Tale",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Jungle Fever",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Hangin' with the Homeboys",
+            "type": "film",
+            "year": "1991"
+          },
+          {
+            "title": "Class Act",
+            "type": "film",
+            "year": "1992"
+          },
+          {
+            "title": "Operation Dumbo Drop",
+            "type": "film",
+            "year": "1995"
+          },
+          {
+            "title": "That Darn Cat",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Eight Legged Freaks",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Where I Live",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Law & Order: Special Victims Unit",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Little Bill",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Citizen James",
+            "type": "film",
+            "year": ""
+          },
+          {
+            "title": "An Act of War",
+            "type": "film",
+            "year": "2015"
+          },
+          {
+            "title": "The Doug Life Show",
+            "type": "other",
+            "year": "2012"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
+        },
+        "description": "Doug E. Doug is an American actor and stand-up comedian who began performing at age 17 and built his career across film, television, and voice work. He is best known for playing the spirited pushcart driver Sanka Coffie in the 1993 comedy Cool Runnings, and for four seasons as Griffin Vesey on the CBS sitcom Cosby. His other film credits include Jungle Fever, Hangin' with the Homeboys, Eight Legged Freaks, and the animated DreamWorks feature Shark Tale, in which he voiced the jellyfish character Bernie. His performance in Hangin' with the Homeboys earned him an Independent Spirit Award nomination for Best Actor. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 1997.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Doug_E._Doug"
+        ],
+        "enrichedAt": "2026-09-10T21:22:10.292Z",
+        "birth_year": "1970",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Independent Spirit Award nomination for Best Actor"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -315324,7 +315692,67 @@
       "id": "dave-wells",
       "name": "Dave Wells",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "David Wells",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/David_Wells",
+          "confidence": 1
+        },
+        "profession": [
+          "professional baseball pitcher",
+          "broadcaster",
+          "television host"
+        ],
+        "known_for": [
+          {
+            "title": "1998 Perfect Game (Minnesota Twins)",
+            "type": "other",
+            "year": "1998"
+          },
+          {
+            "title": "1992 World Series Championship (Toronto Blue Jays)",
+            "type": "other",
+            "year": "1992"
+          },
+          {
+            "title": "1998 World Series Championship (New York Yankees)",
+            "type": "other",
+            "year": "1998"
+          },
+          {
+            "title": "MLB on TBS",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "The Cheap Seats",
+            "type": "tv",
+            "year": ""
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
+        },
+        "description": "Dave Wells, nicknamed Boomer, is a former American professional baseball pitcher who played 21 seasons in Major League Baseball for nine teams, most notably the Toronto Blue Jays and New York Yankees. Regarded as one of the top left-handed pitchers of his era, he made three All-Star appearances and won two World Series titles. In 1998 he pitched the 15th perfect game in baseball history. After retiring in 2007, he moved into broadcasting as an analyst for MLB on TBS and hosted The Cheap Seats on FOXSports.com. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1998, the same year as his celebrated perfect game.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/David_Wells"
+        ],
+        "enrichedAt": "2026-09-10T21:23:09.821Z",
+        "birth_year": "1963",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "three All-Star appearances",
+          "two World Series titles"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -315496,7 +315924,123 @@
       "id": "vanessa-l-williams",
       "name": "Vanessa L Williams",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Vanessa Williams",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Vanessa_Williams",
+          "confidence": 0.7666666666666666
+        },
+        "profession": [
+          "singer",
+          "actress",
+          "model",
+          "producer",
+          "dancer"
+        ],
+        "known_for": [
+          {
+            "title": "Miss America 1984",
+            "type": "other",
+            "year": "1984"
+          },
+          {
+            "title": "The Right Stuff",
+            "type": "music",
+            "year": "1988"
+          },
+          {
+            "title": "Save the Best for Last",
+            "type": "music",
+            "year": ""
+          },
+          {
+            "title": "The Comfort Zone",
+            "type": "music",
+            "year": "1991"
+          },
+          {
+            "title": "The Sweetest Days",
+            "type": "music",
+            "year": "1994"
+          },
+          {
+            "title": "Everlasting Love",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "The Real Thing",
+            "type": "music",
+            "year": "2009"
+          },
+          {
+            "title": "Kiss of the Spider Woman",
+            "type": "other",
+            "year": "1994"
+          },
+          {
+            "title": "Into the Woods",
+            "type": "other",
+            "year": "2002"
+          },
+          {
+            "title": "The Trip to Bountiful",
+            "type": "other",
+            "year": "2013"
+          },
+          {
+            "title": "POTUS: Or, Behind Every Great Dumbass Are Seven Women Trying to Keep Him Alive",
+            "type": "other",
+            "year": "2022"
+          },
+          {
+            "title": "Ugly Betty",
+            "type": "tv",
+            "year": "2006"
+          },
+          {
+            "title": "Desperate Housewives",
+            "type": "tv",
+            "year": "2010"
+          },
+          {
+            "title": "The Devil Wears Prada",
+            "type": "other",
+            "year": "2024"
+          },
+          {
+            "title": "Survivor",
+            "type": "music",
+            "year": "2024"
+          }
+        ],
+        "recent_work": [
+          "The Devil Wears Prada (musical, Dominion Theatre, London, 2024)",
+          "Survivor (studio album, 2024)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1998."
+        },
+        "description": "Vanessa L. Williams is an American singer, actress, model, producer, and dancer who first rose to prominence as Miss America 1984, the first Black woman to hold the title. She built a successful music career across albums including The Comfort Zone, The Sweetest Days, and the Grammy-nominated signature single Save the Best for Last, and released the studio album Survivor in 2024. On screen, she is best known for playing Wilhelmina Slater on Ugly Betty, a role that earned her three Emmy nominations, and Renee Perry on Desperate Housewives. A Tony-nominated stage actress, she currently stars as Miranda Priestly in the West End musical The Devil Wears Prada. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien in 1998.",
+        "confidence": 0.7666666666666666,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Vanessa_Williams"
+        ],
+        "enrichedAt": "2026-09-10T21:23:13.083Z",
+        "birth_year": "1963",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "Grammy Award nominations",
+          "Tony Award for Best Actress in a Musical nominee (56th Tony Awards)",
+          "Primetime Emmy Award for Outstanding Supporting Actress in a Comedy Series nominee (three times)"
+        ],
+        "primary_platform": "tv",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -329058,7 +329602,36 @@
       "id": "mike-lukas",
       "name": "Mike Lukas",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Michael Lukas",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_Lukas",
+          "confidence": 1
+        },
+        "profession": [
+          "bobsledder"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2000."
+        },
+        "description": "Mike Lukas is a Swiss bobsledder who has competed at the international level since 2001. His best Bobsleigh World Cup result was a third-place finish in the four-man event at Cortina d'Ampezzo in January 2008, and he achieved an 11th-place finish in the four-man event at the FIBT World Championships in Altenberg that same year. Lukas likely crossed paths with Conan O'Brien's Late Night with Conan O'Brien around 2000, though the precise nature of that connection is unclear.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michael_Lukas"
+        ],
+        "enrichedAt": "2026-09-10T21:24:07.527Z",
+        "birth_year": "1983",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "Swiss",
+        "prestige_signals": [],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
