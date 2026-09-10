@@ -12,6 +12,7 @@ import {
   isTotalChunkFailure,
   tokenOverlap,
   normNameTokens,
+  sortByEnrichmentPriority,
 } from '../scripts/ingest/enrich-bios';
 import { checkDeathYearPlausibility } from '../scripts/ingest/booking-signal-schema';
 import type { GuestBio, Guest } from '../lib/types';
@@ -700,6 +701,56 @@ describe('shouldEnqueueGuest() — new-only vs TTL re-enrichment gating', () => 
     const reviewBio = makeBio({ needs_review: true, enrichedAt: new Date(NOW).toISOString() });
     expect(shouldEnqueueGuest(reviewBio, { retryReview: false, newOnly: true, now: NOW, ttlMs: TTL_MS })).toBe(false);
     expect(shouldEnqueueGuest(reviewBio, { retryReview: true, newOnly: true, now: NOW, ttlMs: TTL_MS })).toBe(true);
+  });
+});
+
+// ── sortByEnrichmentPriority() — queue-starvation fix ──────────────────────
+// Regression coverage for a real production bug: queue.slice(0, LIMIT) took
+// data/guests.json's raw array order with no rotation, so a needs_review
+// guest positioned early in that array got retried every single
+// --retry-review run while guests positioned past the run's --limit were
+// NEVER reached, no matter how many times the workflow ran in one day —
+// confirmed as the real cause behind 234 of 281 remaining needs_review
+// guests never getting a single fresh attempt across two full runs.
+describe('sortByEnrichmentPriority() — queue-starvation fix', () => {
+  it('puts a never-attempted guest (no bios.json entry) ahead of any needs_review guest', () => {
+    const neverAttempted = makeGuest({ name: 'Never Attempted' });
+    const failedToday = makeGuest({ name: 'Failed Today' });
+    const bios: Record<string, GuestBio> = {
+      'Failed Today': makeBio({ needs_review: true, enrichedAt: '2026-09-10T00:00:00.000Z' }),
+    };
+    const sorted = sortByEnrichmentPriority([failedToday, neverAttempted], bios);
+    expect(sorted.map(g => g.name)).toEqual(['Never Attempted', 'Failed Today']);
+  });
+
+  it('orders needs_review guests oldest-enrichedAt-first', () => {
+    const failedYesterday = makeGuest({ name: 'Failed Yesterday' });
+    const failedToday = makeGuest({ name: 'Failed Today' });
+    const bios: Record<string, GuestBio> = {
+      'Failed Today': makeBio({ needs_review: true, enrichedAt: '2026-09-10T12:00:00.000Z' }),
+      'Failed Yesterday': makeBio({ needs_review: true, enrichedAt: '2026-09-09T12:00:00.000Z' }),
+    };
+    const sorted = sortByEnrichmentPriority([failedToday, failedYesterday], bios);
+    expect(sorted.map(g => g.name)).toEqual(['Failed Yesterday', 'Failed Today']);
+  });
+
+  it('does not mutate the input array (pure function)', () => {
+    const guests = [makeGuest({ name: 'B' }), makeGuest({ name: 'A' })];
+    const original = [...guests];
+    sortByEnrichmentPriority(guests, {});
+    expect(guests).toEqual(original);
+  });
+
+  it('a guest re-attempted this run naturally falls behind never-attempted guests next run', () => {
+    // Simulates two consecutive runs: run 1 fails guest X (gets an
+    // enrichedAt), guest Y was never reached. Run 2 must put Y first.
+    const x = makeGuest({ name: 'X' });
+    const y = makeGuest({ name: 'Y' });
+    const biosAfterRun1: Record<string, GuestBio> = {
+      X: makeBio({ needs_review: true, enrichedAt: '2026-09-10T00:00:00.000Z' }),
+    };
+    const run2Queue = sortByEnrichmentPriority([x, y], biosAfterRun1);
+    expect(run2Queue.map(g => g.name)).toEqual(['Y', 'X']);
   });
 });
 

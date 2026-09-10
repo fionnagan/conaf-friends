@@ -764,6 +764,21 @@ export function shouldEnqueueGuest(
   return opts.now - new Date(existing.enrichedAt).getTime() > opts.ttlMs;
 }
 
+// A guest with no bios.json entry at all (enrichedAt undefined -> '') sorts
+// before any needs_review guest with a real timestamp, since '' < any ISO
+// string. Among needs_review guests, oldest-attempted-first — so a guest
+// that just failed this run naturally falls to the back of next run's
+// queue instead of never letting a never-attempted guest get a turn. Pure
+// and stable-sort (no in-place mutation of the input array) so it's
+// directly unit-testable without a filesystem fixture.
+export function sortByEnrichmentPriority(guests: Guest[], bios: Record<string, GuestBio>): Guest[] {
+  return [...guests].sort((a, b) => {
+    const ta = bios[a.name]?.enrichedAt ?? '';
+    const tb = bios[b.name]?.enrichedAt ?? '';
+    return ta < tb ? -1 : ta > tb ? 1 : 0;
+  });
+}
+
 // ── Validation ────────────────────────────────────────────────────────────────
 
 export function validate(bio: GuestBio): { ok: boolean; reason?: string } {
@@ -851,6 +866,20 @@ async function main() {
     if (FORCE) return true;
     return shouldEnqueueGuest(bios[g.name], { retryReview: RETRY_REVIEW, newOnly: NEW_ONLY, now, ttlMs: TTL_MS });
   });
+
+  // Without this, queue.slice(0, LIMIT) below always took data/guests.json's
+  // raw array order — so a needs_review guest positioned early in that
+  // array got retried every single --retry-review run, while any guest
+  // positioned after the run's --limit was NEVER reached, no matter how
+  // many times the workflow ran that day. Confirmed as the real cause
+  // behind 234 of 281 remaining needs_review guests never getting a single
+  // fresh attempt across two full --retry-review runs in one day — not a
+  // different workflow or a cost problem, pure queue starvation. Sorting
+  // never-attempted guests (no bios.json entry at all) first, then
+  // needs_review guests oldest-enrichedAt-first, means a guest that just
+  // failed goes to the BACK of the queue next run instead of permanently
+  // crowding out guests nobody has tried yet.
+  queue = sortByEnrichmentPriority(queue, bios);
 
   if (queue.length === 0) {
     console.log('[Bios] All guests up-to-date.');
