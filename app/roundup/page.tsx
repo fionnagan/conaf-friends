@@ -67,20 +67,14 @@ export default function RoundupPage() {
     ["Athlete", ["athlete", "basketball", "football", "wrestler", "boxer"]],
   ];
 
-  const professionCounts: Record<Era, Record<string, number>> = {
-    "late-night-nbc": {},
-    "tonight-show": {},
-    "tbs-conan": {},
-    podcast: {},
-    "conan-must-go": {},
-  };
-  const professionEnrichedTotal: Record<Era, number> = {
-    "late-night-nbc": 0,
-    "tonight-show": 0,
-    "tbs-conan": 0,
-    podcast: 0,
-    "conan-must-go": 0,
-  };
+  // One entry per enriched guest, carrying every ROUNDUP_ERA they appeared
+  // in — NOT one entry per era. Summing era-level counts double- and
+  // triple-counted any guest who crossed multiple eras (confirmed: with all
+  // four eras selected, that inflated the profession badge by ~27% and
+  // skewed the percentage split toward guests who happened to cross more
+  // eras). RoundupClient dedupes against the currently-selected eras itself
+  // by checking each guest's era set once, not by re-summing per-era totals.
+  const professionByGuest: { eras: Era[]; bucket: string }[] = [];
 
   for (const guest of data.guests) {
     const professions = guest.bio?.profession;
@@ -93,12 +87,11 @@ export default function RoundupPage() {
         break;
       }
     }
-    const guestEras = new Set(guest.appearances.map((a) => a.era));
-    for (const era of ROUNDUP_ERAS) {
-      if (!guestEras.has(era)) continue;
-      professionCounts[era][bucket] = (professionCounts[era][bucket] ?? 0) + 1;
-      professionEnrichedTotal[era] += 1;
-    }
+    const guestEras = ROUNDUP_ERAS.filter((era) =>
+      guest.appearances.some((a) => a.era === era)
+    );
+    if (guestEras.length === 0) continue;
+    professionByGuest.push({ eras: guestEras, bucket });
   }
 
   // Generation: real once a guest has a backfilled birth_year, same
@@ -114,32 +107,19 @@ export default function RoundupPage() {
     ["Gen Z (1997 & later)", (y) => y >= 1997],
   ];
 
-  const generationCounts: Record<Era, Record<string, number>> = {
-    "late-night-nbc": {},
-    "tonight-show": {},
-    "tbs-conan": {},
-    podcast: {},
-    "conan-must-go": {},
-  };
-  const generationEnrichedTotal: Record<Era, number> = {
-    "late-night-nbc": 0,
-    "tonight-show": 0,
-    "tbs-conan": 0,
-    podcast: 0,
-    "conan-must-go": 0,
-  };
+  // Same one-entry-per-guest fix as professionByGuest above.
+  const generationByGuest: { eras: Era[]; bucket: string }[] = [];
 
   for (const guest of data.guests) {
     const birthYear = guest.bio?.birth_year ? parseInt(guest.bio.birth_year, 10) : NaN;
     if (!Number.isFinite(birthYear)) continue;
     const bucket = GENERATION_BUCKETS.find(([, test]) => test(birthYear))?.[0];
     if (!bucket) continue;
-    const guestEras = new Set(guest.appearances.map((a) => a.era));
-    for (const era of ROUNDUP_ERAS) {
-      if (!guestEras.has(era)) continue;
-      generationCounts[era][bucket] = (generationCounts[era][bucket] ?? 0) + 1;
-      generationEnrichedTotal[era] += 1;
-    }
+    const guestEras = ROUNDUP_ERAS.filter((era) =>
+      guest.appearances.some((a) => a.era === era)
+    );
+    if (guestEras.length === 0) continue;
+    generationByGuest.push({ eras: guestEras, bucket });
   }
 
   // Fixed label order for both charts, passed down so a category's color is
@@ -159,11 +139,9 @@ export default function RoundupPage() {
         ROUNDUP_ERAS.map((e) => [e, eraGuestIds[e].size])
       ) as Record<Era, number>}
       crossover={crossover}
-      professionCounts={professionCounts}
-      professionEnrichedTotal={professionEnrichedTotal}
+      professionByGuest={professionByGuest}
       professionCategoryOrder={professionCategoryOrder}
-      generationCounts={generationCounts}
-      generationEnrichedTotal={generationEnrichedTotal}
+      generationByGuest={generationByGuest}
       generationCategoryOrder={generationCategoryOrder}
     />
   );

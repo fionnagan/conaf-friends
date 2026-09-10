@@ -8,11 +8,9 @@ interface Props {
   eras: Era[];
   eraTotals: Record<Era, number>;
   crossover: number[][];
-  professionCounts: Record<Era, Record<string, number>>;
-  professionEnrichedTotal: Record<Era, number>;
+  professionByGuest: { eras: Era[]; bucket: string }[];
   professionCategoryOrder: string[];
-  generationCounts: Record<Era, Record<string, number>>;
-  generationEnrichedTotal: Record<Era, number>;
+  generationByGuest: { eras: Era[]; bucket: string }[];
   generationCategoryOrder: string[];
 }
 
@@ -147,11 +145,9 @@ export default function RoundupClient({
   eras,
   eraTotals,
   crossover,
-  professionCounts,
-  professionEnrichedTotal,
+  professionByGuest,
   professionCategoryOrder,
-  generationCounts,
-  generationEnrichedTotal,
+  generationByGuest,
   generationCategoryOrder,
 }: Props) {
   const [selected, setSelected] = useState<Set<Era>>(new Set(eras));
@@ -194,15 +190,17 @@ export default function RoundupClient({
     return smaller > 0 ? Math.round((value / smaller) * 100) : 0;
   };
 
+  // Counts each guest once against the union of selected eras, not once per
+  // era they happen to have appeared in — otherwise a guest who crossed
+  // multiple selected eras gets counted (and weighted into the percentage
+  // split) multiple times over.
   const professionSegments = useMemo(() => {
     const totals: Record<string, number> = {};
     let combinedTotal = 0;
-    for (const era of eras) {
-      if (!selected.has(era)) continue;
-      combinedTotal += professionEnrichedTotal[era];
-      for (const [label, count] of Object.entries(professionCounts[era])) {
-        totals[label] = (totals[label] ?? 0) + count;
-      }
+    for (const entry of professionByGuest) {
+      if (!entry.eras.some((e) => selected.has(e))) continue;
+      totals[entry.bucket] = (totals[entry.bucket] ?? 0) + 1;
+      combinedTotal += 1;
     }
     const labels = Object.keys(totals).sort((a, b) => totals[b] - totals[a]);
     return {
@@ -213,17 +211,15 @@ export default function RoundupClient({
         color: colorForCategory(professionCategoryOrder, label),
       })),
     };
-  }, [eras, selected, professionCounts, professionEnrichedTotal, professionCategoryOrder]);
+  }, [professionByGuest, selected, professionCategoryOrder]);
 
   const generationSegments = useMemo(() => {
     const totals: Record<string, number> = {};
     let combinedTotal = 0;
-    for (const era of eras) {
-      if (!selected.has(era)) continue;
-      combinedTotal += generationEnrichedTotal[era];
-      for (const [label, count] of Object.entries(generationCounts[era])) {
-        totals[label] = (totals[label] ?? 0) + count;
-      }
+    for (const entry of generationByGuest) {
+      if (!entry.eras.some((e) => selected.has(e))) continue;
+      totals[entry.bucket] = (totals[entry.bucket] ?? 0) + 1;
+      combinedTotal += 1;
     }
 
     // Real data exists for at least one guest in the selected eras — use it.
@@ -252,7 +248,7 @@ export default function RoundupClient({
         color: colorForCategory(generationCategoryOrder, b.label),
       })),
     };
-  }, [eras, selected, generationCounts, generationEnrichedTotal, generationCategoryOrder]);
+  }, [generationByGuest, selected, generationCategoryOrder]);
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
