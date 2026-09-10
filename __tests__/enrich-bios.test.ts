@@ -504,6 +504,40 @@ describe('resolveEntityWithRetry() — mocked Wikipedia fetch', () => {
     expect(result!.name).toBe('John Smith');
   });
 
+  it('strips a title prefix not covered before (Mayor/General/Representative/Chef/Fr./Sr./Mama/Miss)', async () => {
+    mockedFetchWikiEntity.mockImplementation(async (name: string) => {
+      if (name === 'Ray Odierno') {
+        return {
+          title: 'Ray Odierno',
+          url: 'https://en.wikipedia.org/wiki/Ray_Odierno',
+          extract: 'Ray Odierno (born 1954) was an American general.',
+          isDisambiguation: false,
+        };
+      }
+      return null;
+    });
+    const result = await resolveEntityWithRetry('General Ray Odierno');
+    expect(result).not.toBeNull();
+    expect(result!.name).toBe('Ray Odierno');
+  });
+
+  it('inserts a period after a bare middle initial (Paul F Tompkins / Paul F. Tompkins)', async () => {
+    mockedFetchWikiEntity.mockImplementation(async (name: string) => {
+      if (name === 'Paul F. Tompkins') {
+        return {
+          title: 'Paul F. Tompkins',
+          url: 'https://en.wikipedia.org/wiki/Paul_F._Tompkins',
+          extract: 'Paul F. Tompkins (born 1968) is an American comedian and actor.',
+          isDisambiguation: false,
+        };
+      }
+      return null; // "Paul F Tompkins" (no period) itself doesn't resolve
+    });
+    const result = await resolveEntityWithRetry('Paul F Tompkins');
+    expect(result).not.toBeNull();
+    expect(result!.name).toBe('Paul F. Tompkins');
+  });
+
   it('scores lower confidence when no bio-signal words are present', async () => {
     mockedFetchWikiEntity.mockResolvedValue({
       title: 'Some Person',
@@ -583,6 +617,18 @@ describe('resolveEntityWithRetry() — mocked Wikipedia fetch', () => {
       // — so it must NOT get credit for "al" -> "alabama".
       expect(result).not.toBeNull();
       expect(result!.confidence).toBeLessThan(0.65);
+    });
+
+    it('matches a guest name with a leading "The" against a Wikipedia title without it (The Meat Puppets / Meat Puppets)', async () => {
+      mockedFetchWikiEntity.mockResolvedValue({
+        title: 'Meat Puppets',
+        url: 'https://en.wikipedia.org/wiki/Meat_Puppets',
+        extract: 'Meat Puppets is an American rock band formed in 1980 by musician brothers Curt and Cris Kirkwood.',
+        isDisambiguation: false,
+      });
+      const result = await resolveEntityWithRetry('The Meat Puppets');
+      expect(result).not.toBeNull();
+      expect(result!.confidence).toBeCloseTo(1, 5);
     });
   });
 });
@@ -751,6 +797,52 @@ describe('sortByEnrichmentPriority() — queue-starvation fix', () => {
     };
     const run2Queue = sortByEnrichmentPriority([x, y], biosAfterRun1);
     expect(run2Queue.map(g => g.name)).toEqual(['Y', 'X']);
+  });
+});
+
+// ── Nickname-expansion fallback ─────────────────────────────────────────
+// Regression coverage for a real, confirmed pattern in the remaining
+// needs_review tail: guests like "Jim Downey", "Dave Thomas", "Mike
+// Schultz" have NO Wikipedia page/redirect under their nickname form at
+// all — direct title lookup returns "page missing", never reaching the
+// confidence scorer. Two things needed fixing together: trying the
+// expanded name as an actual lookup, and teaching tokenOverlap to credit
+// the match once found (since "jim" alone doesn't token-match "james").
+describe('nickname-expansion fallback (Jim Downey / James Downey pattern)', () => {
+  beforeEach(() => {
+    mockedFetchWikiEntity.mockReset();
+    mockedFetchDisambiguationLinks.mockReset();
+  });
+
+  it('tries the nickname-expanded name when the bare nickname form returns no page', async () => {
+    mockedFetchWikiEntity.mockImplementation(async (title: string) => {
+      if (title === 'James Downey') {
+        return {
+          title: 'James Downey',
+          url: 'https://en.wikipedia.org/wiki/James_Downey_(writer)',
+          extract: 'James Downey (born 1954) is an American comedy writer.',
+          isDisambiguation: false,
+        };
+      }
+      return null; // "Jim Downey" itself has no page/redirect
+    });
+    const result = await resolveEntityWithRetry('Jim Downey');
+    expect(result).not.toBeNull();
+    expect(result!.name).toBe('James Downey');
+    expect(result!.confidence).toBeCloseTo(1, 5);
+  });
+
+  it('tokenOverlap credits a nickname against its expanded full form', () => {
+    expect(tokenOverlap(normNameTokens('Jim Downey'), normNameTokens('James Downey'))).toBe(1);
+    expect(tokenOverlap(normNameTokens('Mike Schultz'), normNameTokens('Michael Schultz'))).toBe(1);
+  });
+
+  it('does not expand a first name with no nickname mapping', async () => {
+    mockedFetchWikiEntity.mockResolvedValue(null);
+    await resolveEntityWithRetry('Xavier Nobody');
+    // Only the original name variant should have been tried (no nickname
+    // entry for "Xavier") — one call, not two.
+    expect(mockedFetchWikiEntity).toHaveBeenCalledTimes(1);
   });
 });
 

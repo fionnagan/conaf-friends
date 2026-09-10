@@ -124,6 +124,12 @@ export function normNameTokens(s: string): string[] {
     .replace(/\./g, '')
     .replace(/\s+/g, ' ')
     .trim()
+    // A leading "the" is optional band/show-name styling, not part of the
+    // identity — "The Meat Puppets" vs Wikipedia's "Meat Puppets" is the
+    // same act. Applied to both sides symmetrically since this runs on the
+    // guest name and the Wikipedia title alike, so "The X" vs "The X" still
+    // matches (both get stripped) and "The X" vs "X" now does too.
+    .replace(/^the\s+/, '')
     .split(/\s+/);
 }
 
@@ -139,6 +145,41 @@ export function normNameTokens(s: string): string[] {
 //     Gated to >=3 chars and <=6 chars of length difference so it can't
 //     fuzzy-match unrelated short names (e.g. "Al" prefix-matching
 //     "Alabama" would be wrong; "chris"/"christopher" is a 6-char gap).
+// A common short first name mapped to ONE statistically-typical full form
+// — not exhaustive (a nickname can map to several names; e.g. "Al" could
+// be Albert or Alan) and deliberately picks a single expansion rather than
+// trying every possibility, since each one costs a real Wikipedia
+// round-trip in an already rate-limit-constrained pipeline. Confirmed
+// against real needs_review guests (Jim Downey, Dave Thomas, Mike
+// Schultz, Jeff Lewis, Andy Hillstrand, Tony V, ...) that this is the
+// dominant remaining failure pattern once entity-resolution's other bugs
+// were fixed: direct Wikipedia title lookup returns "page missing", not a
+// low-confidence match, because there's no redirect from the nickname
+// form at all — the person is titled under their full name. Used both to
+// generate an additional name variant to try (resolveEntity) and to
+// credit the match once found (tokenOverlap), so a guest reached via the
+// expanded name still scores correctly against their real Wikipedia
+// title.
+export const NICKNAME_TO_FULL_NAME: Record<string, string> = {
+  jeff: 'jeffrey', jim: 'james', jimmy: 'james', mike: 'michael', mikey: 'michael',
+  bob: 'robert', bobby: 'robert', bill: 'william', billy: 'william', will: 'william',
+  dave: 'david', dan: 'daniel', danny: 'daniel', tom: 'thomas', tommy: 'thomas',
+  rick: 'richard', ricky: 'richard', dick: 'richard', rich: 'richard',
+  rob: 'robert', robbie: 'robert', ken: 'kenneth', kenny: 'kenneth',
+  steve: 'steven', greg: 'gregory', ed: 'edward', eddie: 'edward',
+  sam: 'samuel', sammy: 'samuel', nick: 'nicholas', andy: 'andrew',
+  tony: 'anthony', fred: 'frederick', freddie: 'frederick', ted: 'edward',
+  teddy: 'theodore', pat: 'patrick', joe: 'joseph', joey: 'joseph',
+  larry: 'lawrence', pete: 'peter', matt: 'matthew', tim: 'timothy',
+  ben: 'benjamin', charlie: 'charles', chuck: 'charles', alex: 'alexander',
+  gene: 'eugene', gerry: 'gerald', jerry: 'gerald', ray: 'raymond',
+  stan: 'stanley', walt: 'walter', don: 'donald', ron: 'ronald',
+  russ: 'russell', phil: 'philip', doug: 'douglas',
+  nate: 'nathaniel', vince: 'vincent', vinny: 'vincent',
+};
+
+export const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
 export function tokenOverlap(nameTokens: string[], titleTokens: string[]): number {
   if (nameTokens.length === 0) return 0;
 
@@ -158,7 +199,8 @@ export function tokenOverlap(nameTokens: string[], titleTokens: string[]): numbe
   const matched = nameTokens.filter(t =>
     titleTokens.includes(t) ||
     initialRuns.has(t) ||
-    titleTokens.some(tt => t.length >= 3 && tt.startsWith(t) && tt.length - t.length <= 6)
+    titleTokens.some(tt => t.length >= 3 && tt.startsWith(t) && tt.length - t.length <= 6) ||
+    (NICKNAME_TO_FULL_NAME[t] !== undefined && titleTokens.includes(NICKNAME_TO_FULL_NAME[t]))
   ).length;
 
   return matched / nameTokens.length;
@@ -235,9 +277,24 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   // Falls back to name variants for compound titles like "X Live From Y"
   const namesToTry: string[] = [];
 
-  // "Ambassador X" / "Sir X" / "Justice X" / "Dr. X" → "X"
-  const noTitle = guestName.replace(/^(?:Ambassador|Senator|President|Governor|Secretary|Professor|Justice|Judge|Sir|Dame|Lord|Dr\.?|Mr\.?|Ms\.?|Coach)\s+/i, '').trim();
+  // "Ambassador X" / "Sir X" / "Justice X" / "Dr. X" → "X". Confirmed
+  // against the real needs_review tail that Mayor/General/Representative/
+  // Chef/Fr./Sr./Mama/Miss were real, recurring gaps in this list (Mayor
+  // Rudolph Giuliani, General Ray Odierno, Representative Adam Schiff,
+  // Chef Carl Redding, Fr. Orsini, Sr. Jean Kenny, Mama Gena, Miss
+  // Manners-Judith Martin) — none of these titles had ever been added.
+  const noTitle = guestName.replace(/^(?:Ambassador|Senator|President|Governor|Secretary|Professor|Justice|Judge|Sir|Dame|Lord|Dr\.?|Mr\.?|Ms\.?|Mrs\.?|Miss|Mama|Coach|Mayor|General|Representative|Chef|Fr\.?|Sr\.?)\s+/i, '').trim();
   if (noTitle !== guestName) namesToTry.push(noTitle);
+
+  // "Paul F Tompkins" → "Paul F. Tompkins" — a middle initial written
+  // without a period is a different literal title from Wikipedia's actual
+  // page/redirect, which almost always carries one. Confirmed as a real,
+  // recurring pattern in the needs_review tail (14 guests: Paul F
+  // Tompkins, Vivica A Fox, Michael T Weiss, Taraji P Henson, ...). Only
+  // fires on a genuine single-letter middle token, not e.g. "CJ Matusovich"
+  // (compound initials as one token — a different, harder case).
+  const withMiddleInitialPeriod = guestName.replace(/^(\S+) ([A-Za-z]) (\S.*)$/, '$1 $2. $3');
+  if (withMiddleInitialPeriod !== guestName) namesToTry.push(withMiddleInitialPeriod);
 
   // "X Live From/at Y" → "X"
   const stripped = guestName.replace(/\s+(live\s+(?:from|at|with)|at\s+the)\b.*/i, '').trim();
@@ -250,6 +307,18 @@ async function resolveEntity(guestName: string): Promise<WikiEntity | null> {
   // "X and Y" → "X" (first person)
   const beforeAnd = guestName.replace(/\s+and\s+.+$/i, '').trim();
   if (beforeAnd !== guestName && beforeAnd !== stripped) namesToTry.push(beforeAnd);
+
+  // "Jim X" → "James X" — see NICKNAME_TO_FULL_NAME's comment. Placed
+  // before the bare original so a guest whose nickname form has no
+  // Wikipedia page/redirect at all gets a real shot within the time
+  // budget, rather than spending it on a variant already known (from the
+  // real data this map was built against) to come back empty.
+  const [firstWord, ...restWords] = guestName.split(/\s+/);
+  const expandedFirst = NICKNAME_TO_FULL_NAME[firstWord?.toLowerCase()];
+  if (expandedFirst) {
+    const nicknameExpanded = [capitalize(expandedFirst), ...restWords].join(' ');
+    if (nicknameExpanded !== guestName) namesToTry.push(nicknameExpanded);
+  }
 
   // Always try the original last
   namesToTry.push(guestName);
