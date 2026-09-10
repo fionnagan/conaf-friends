@@ -245983,7 +245983,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:32:00.702Z"
+    "enrichedAt": "2026-09-10T07:10:09.306Z"
   },
   "Manny Yarbrough": {
     "entity": {
@@ -246709,7 +246709,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:32:07.998Z"
+    "enrichedAt": "2026-09-10T07:10:09.344Z"
   },
   "Auf Der Maur": {
     "entity": {
@@ -247034,7 +247034,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:33:00.379Z"
+    "enrichedAt": "2026-09-10T07:10:09.279Z"
   },
   "Randy Constan": {
     "entity": {
@@ -247796,22 +247796,47 @@
   },
   "Sam Roberts": {
     "entity": {
-      "name": "Sam Roberts",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Sam E. Roberts",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sam_E._Roberts",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "otolaryngologist",
+      "medical academic",
+      "inventor",
+      "medical writer"
+    ],
+    "known_for": [
+      {
+        "title": "Ear, Nose and Throat Dysfunctions Due to Deficiencies and Imbalances",
+        "type": "other",
+        "year": "1958"
+      },
+      {
+        "title": "Nutritional Deficiencies in Otolaryngology",
+        "type": "other",
+        "year": "1942"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2004."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:33:03.151Z"
+    "description": "Sam Earl Roberts (1887–1966) was an American otolaryngologist, medical academic, inventor, and medical writer. He spent much of his career on the faculty of the University of Kansas School of Medicine, where he rose to Professor of Otolaryngology before retiring in 1950. During World War I he served in the U.S. Army Medical Corps, and in the early 1940s he invented and patented a laryngoscope. He is noted for his 1958 work Ear, Nose and Throat Dysfunctions Due to Deficiencies and Imbalances, which argued that many otolaryngological complaints stem from nutritional deficiencies. He likely crossed paths with Late Night with Conan O'Brien around 2004.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sam_E._Roberts"
+    ],
+    "enrichedAt": "2026-09-10T07:11:09.806Z",
+    "birth_year": "1887",
+    "death_year": "1966",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Sahara Hotnights": {
     "entity": {
@@ -249377,7 +249402,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:33:00.525Z"
+    "enrichedAt": "2026-09-10T07:10:09.277Z"
   },
   "The Black Keys": {
     "entity": {
@@ -249984,7 +250009,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:33:00.810Z"
+    "enrichedAt": "2026-09-10T07:10:09.546Z"
   },
   "Fatboy Slim": {
     "entity": {
@@ -250620,7 +250645,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:34:00.859Z"
+    "enrichedAt": "2026-09-10T07:11:00.860Z"
   },
   "My Chemical Romance": {
     "entity": {
@@ -250986,7 +251011,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:34:00.857Z"
+    "enrichedAt": "2026-09-10T07:11:00.678Z"
   },
   "New Year's Eve": {
     "entity": {
@@ -251700,7 +251725,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:34:00.858Z"
+    "enrichedAt": "2026-09-10T07:11:00.695Z"
   },
   "Arcade Fire": {
     "entity": {
@@ -252521,7 +252546,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:34:01.320Z"
+    "enrichedAt": "2026-09-10T07:12:00.752Z"
   },
   "Gary Johnson": {
     "entity": {
@@ -252592,7 +252617,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:35:00.800Z"
+    "enrichedAt": "2026-09-10T07:12:00.525Z"
   },
   "Low Millions": {
     "entity": {
@@ -255917,7 +255942,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:34:01.126Z"
+    "enrichedAt": "2026-09-10T07:11:00.988Z"
   },
   "Better Than Ezra": {
     "entity": {
@@ -256019,7 +256044,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:35:00.442Z"
+    "enrichedAt": "2026-09-10T07:12:00.211Z"
   },
   "Bloc Party": {
     "entity": {
@@ -257206,7 +257231,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:35:00.708Z"
+    "enrichedAt": "2026-09-10T07:12:00.613Z"
   },
   "Common": {
     "entity": {
@@ -257225,7 +257250,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:35:00.724Z"
+    "enrichedAt": "2026-09-10T07:12:00.486Z"
   },
   "David Gray": {
     "entity": {
@@ -257244,7 +257269,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:35:00.929Z"
+    "enrichedAt": "2026-09-10T07:12:00.707Z"
   },
   "The Hold Steady": {
     "entity": {
@@ -257579,7 +257604,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:35:00.943Z"
+    "enrichedAt": "2026-09-10T07:12:00.745Z"
   },
   "Dressy Bessy": {
     "entity": {
@@ -260288,7 +260313,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:36:00.666Z"
+    "enrichedAt": "2026-09-10T07:12:00.970Z"
   },
   "Ghost Hunters": {
     "entity": {
@@ -260307,7 +260332,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:36:00.577Z"
+    "enrichedAt": "2026-09-10T07:12:00.835Z"
   },
   "Jason Hawes": {
     "entity": {
@@ -260847,7 +260872,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:36:00.621Z"
+    "enrichedAt": "2026-09-10T07:12:00.928Z"
   },
   "John Daly": {
     "entity": {
@@ -260866,7 +260891,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:36:00.798Z"
+    "enrichedAt": "2026-09-10T07:12:00.973Z"
   },
   "JW Hart": {
     "entity": {
@@ -260885,7 +260910,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:36:00.859Z"
+    "enrichedAt": "2026-09-10T07:13:00.215Z"
   },
   "John Mayer Trio": {
     "entity": {
@@ -262912,22 +262937,73 @@
   },
   "James Hunter": {
     "entity": {
-      "name": "James Hunter",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "James Davison Hunter",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/James_Davison_Hunter",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "sociologist",
+      "author",
+      "professor"
+    ],
+    "known_for": [
+      {
+        "title": "Culture Wars: The Struggle to Define America",
+        "type": "other",
+        "year": "1991"
+      },
+      {
+        "title": "Before the Shooting Begins: Searching for Democracy in America's Culture War",
+        "type": "other",
+        "year": "1994"
+      },
+      {
+        "title": "The Death of Character: Moral Education in an Age without Good or Evil",
+        "type": "other",
+        "year": "2000"
+      },
+      {
+        "title": "Is There a Culture War? A Dialogue on Values and American Public Life",
+        "type": "other",
+        "year": "2006"
+      },
+      {
+        "title": "To Change the World: The Irony, Tragedy, and Possibility of Christianity in the Late-Modern World",
+        "type": "other",
+        "year": "2010"
+      },
+      {
+        "title": "Science and the Good: The Tragic Quest for the Foundations of Morality",
+        "type": "other",
+        "year": "2018"
+      },
+      {
+        "title": "Democracy and Solidarity: On the Cultural Roots of America's Political Crisis",
+        "type": "other",
+        "year": "2024"
+      }
+    ],
+    "recent_work": [
+      "Democracy and Solidarity: On the Cultural Roots of America's Political Crisis (2024)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:36:00.887Z"
+    "description": "James Davison Hunter is an American sociologist best known for coining the term 'culture war' in his 1991 book Culture Wars: The Struggle to Define America. He holds the LaBrosse-Levinson Distinguished Professorship in Religion, Culture, and Social Theory at the University of Virginia, where he also founded and directs the Institute for Advanced Studies in Culture. His work spans the sociology of religion and cultural change, with books including To Change the World, Science and the Good, and most recently Democracy and Solidarity: On the Cultural Roots of America's Political Crisis. He likely crossed paths with Conan O'Brien during a Late Night appearance around 2006.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/James_Davison_Hunter"
+    ],
+    "enrichedAt": "2026-09-10T07:13:09.010Z",
+    "birth_year": "1955",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "other",
+    "upcoming_work": []
   },
   "Fred Goss": {
     "entity": {
@@ -264615,7 +264691,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:37:00.912Z"
+    "enrichedAt": "2026-09-10T07:13:00.566Z"
   },
   "The Raconteurs": {
     "entity": {
@@ -264881,7 +264957,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:37:00.230Z"
+    "enrichedAt": "2026-09-10T07:13:00.345Z"
   },
   "Famke Jannsen": {
     "entity": {
@@ -266003,22 +266079,65 @@
   },
   "Campbell Brown": {
     "entity": {
-      "name": "Campbell Brown",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Campbell Brown (footballer)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Campbell_Brown_(footballer)",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "Australian rules footballer",
+      "AFL commentator",
+      "political commentator",
+      "Kabaddi team captain"
+    ],
+    "known_for": [
+      {
+        "title": "Hawthorn Football Club",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "Gold Coast Football Club",
+        "type": "other",
+        "year": ""
+      },
+      {
+        "title": "2008 AFL Grand Final",
+        "type": "other",
+        "year": "2008"
+      },
+      {
+        "title": "2016 Kabaddi World Cup",
+        "type": "other",
+        "year": "2016"
+      },
+      {
+        "title": "The Verdict with Karl Stefanovic",
+        "type": "tv",
+        "year": "2015"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2006."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:37:00.743Z"
+    "description": "Campbell Brown is an Australian rules footballer turned media personality, best known for his combative playing career with the Hawthorn Football Club and the Gold Coast Football Club in the AFL. He was a member of Hawthorn's 2008 premiership-winning side and earned a place in the All-Australian team in 2007. His playing career ended abruptly following an off-field incident during the 2014 pre-season. He went on to captain Australia's national Kabaddi team at the 2016 Kabaddi World Cup, and has worked as an AFL commentator on Triple M and a political commentator on Channel 9's The Verdict with Karl Stefanovic. He likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 2006.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Campbell_Brown_(footballer)"
+    ],
+    "enrichedAt": "2026-09-10T07:13:09.031Z",
+    "birth_year": "1983",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "Australian",
+    "prestige_signals": [
+      "All-Australian team 2007",
+      "AFL premiership player (Hawthorn) 2008"
+    ],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "All-American Rejects": {
     "entity": {
@@ -266657,7 +266776,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:37:00.831Z"
+    "enrichedAt": "2026-09-10T07:13:00.537Z"
   },
   "Landon Pigg": {
     "entity": {
@@ -267027,7 +267146,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:37:00.964Z"
+    "enrichedAt": "2026-09-10T07:13:00.765Z"
   },
   "Neko Case": {
     "entity": {
@@ -269566,7 +269685,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:38:00.601Z"
+    "enrichedAt": "2026-09-10T07:13:00.985Z"
   },
   "J Alexander": {
     "entity": {
@@ -269585,7 +269704,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:38:00.538Z"
+    "enrichedAt": "2026-09-10T07:13:00.787Z"
   },
   "Natalie Morales": {
     "entity": {
@@ -270498,7 +270617,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:38:00.699Z"
+    "enrichedAt": "2026-09-10T07:13:01.006Z"
   },
   "Jasper Redd": {
     "entity": {
@@ -270926,7 +271045,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:38:00.758Z"
+    "enrichedAt": "2026-09-10T07:14:01.204Z"
   },
   "Eli Roth": {
     "entity": {
@@ -271107,21 +271226,159 @@
   "Vera Farmiga": {
     "entity": {
       "name": "Vera Farmiga",
-      "wikipedia_url": "",
-      "confidence": 0
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Vera_Farmiga",
+      "confidence": 1
     },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
+    "profession": [
+      "actress",
+      "singer"
+    ],
+    "known_for": [
+      {
+        "title": "Taking Sides",
+        "type": "other",
+        "year": "1996"
+      },
+      {
+        "title": "Down to the Bone",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "The Manchurian Candidate",
+        "type": "film",
+        "year": "2004"
+      },
+      {
+        "title": "The Departed",
+        "type": "film",
+        "year": "2006"
+      },
+      {
+        "title": "The Boy in the Striped Pyjamas",
+        "type": "film",
+        "year": "2008"
+      },
+      {
+        "title": "Joshua",
+        "type": "film",
+        "year": "2007"
+      },
+      {
+        "title": "Orphan",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Up in the Air",
+        "type": "film",
+        "year": "2009"
+      },
+      {
+        "title": "Higher Ground",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Source Code",
+        "type": "film",
+        "year": "2011"
+      },
+      {
+        "title": "Safe House",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "The Conjuring",
+        "type": "film",
+        "year": "2013"
+      },
+      {
+        "title": "The Conjuring 2",
+        "type": "film",
+        "year": "2016"
+      },
+      {
+        "title": "Annabelle Comes Home",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Conjuring: The Devil Made Me Do It",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "The Conjuring: Last Rites",
+        "type": "film",
+        "year": "2025"
+      },
+      {
+        "title": "The Judge",
+        "type": "film",
+        "year": "2014"
+      },
+      {
+        "title": "The Front Runner",
+        "type": "film",
+        "year": "2018"
+      },
+      {
+        "title": "Godzilla: King of the Monsters",
+        "type": "film",
+        "year": "2019"
+      },
+      {
+        "title": "The Many Saints of Newark",
+        "type": "film",
+        "year": "2021"
+      },
+      {
+        "title": "Bates Motel",
+        "type": "tv",
+        "year": "2013"
+      },
+      {
+        "title": "When They See Us",
+        "type": "tv",
+        "year": "2019"
+      },
+      {
+        "title": "Hawkeye",
+        "type": "tv",
+        "year": "2021"
+      },
+      {
+        "title": "Five Days at Memorial",
+        "type": "tv",
+        "year": "2022"
+      }
+    ],
+    "recent_work": [
+      "The Conjuring: Last Rites (2025)"
+    ],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:38:00.822Z"
+    "description": "Vera Farmiga is an American actress and singer whose career spans stage, film, and television. She broke through with Down to the Bone in 2004 and built her reputation through roles in The Departed, Up in the Air — for which she earned an Academy Award nomination — and the long-running Conjuring Universe franchise, playing paranormal investigator Lorraine Warren across multiple films including the recent The Conjuring: Last Rites. On television, she received Primetime Emmy Award nominations for Bates Motel and When They See Us, and has appeared in Hawkeye and Five Days at Memorial. She likely crossed paths with Conan O'Brien when she first appeared on Late Night with Conan O'Brien around 2007.",
+    "confidence": 1,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Vera_Farmiga"
+    ],
+    "enrichedAt": "2026-09-10T07:14:14.623Z",
+    "birth_year": "1973",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": [
+      "Academy Award nominee",
+      "Primetime Emmy Award nominee"
+    ],
+    "primary_platform": "film",
+    "upcoming_work": []
   },
   "Glenn Close": {
     "entity": {
@@ -272680,8 +272937,8 @@
   },
   "The Great Throwdini": {
     "entity": {
-      "name": "The Great Throwdini",
-      "wikipedia_url": "",
+      "name": "Impalement arts",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Impalement_arts",
       "confidence": 0
     },
     "profession": [],
@@ -272695,7 +272952,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:38:00.920Z"
+    "enrichedAt": "2026-09-10T07:14:00.764Z"
   },
   "Chuck Liddell": {
     "entity": {
@@ -272768,7 +273025,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:38:00.978Z"
+    "enrichedAt": "2026-09-10T07:14:00.673Z"
   },
   "Sarah Bolger": {
     "entity": {
@@ -273567,7 +273824,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:39:00.966Z"
+    "enrichedAt": "2026-09-10T07:15:00.543Z"
   },
   "Fred Simmons": {
     "entity": {
@@ -273586,7 +273843,7 @@
     "confidence": 0.3,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:39:00.272Z"
+    "enrichedAt": "2026-09-10T07:14:00.936Z"
   },
   "Mark Moffett": {
     "entity": {
@@ -276982,7 +277239,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:40:00.365Z"
+    "enrichedAt": "2026-09-10T07:15:00.312Z"
   },
   "Phil Jackson": {
     "entity": {
@@ -279387,22 +279644,85 @@
   },
   "Mike Sorrentino": {
     "entity": {
-      "name": "Mike Sorrentino",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Michael Sorrentino",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_Sorrentino",
+      "confidence": 0.6499999999999999
     },
-    "profession": [],
-    "known_for": [],
+    "profession": [
+      "television personality",
+      "reality television star"
+    ],
+    "known_for": [
+      {
+        "title": "Jersey Shore",
+        "type": "tv",
+        "year": "2009"
+      },
+      {
+        "title": "Jersey Shore: Family Vacation",
+        "type": "tv",
+        "year": "2018"
+      },
+      {
+        "title": "Dancing with the Stars",
+        "type": "tv",
+        "year": "2010"
+      },
+      {
+        "title": "Comedy Central Roast of Donald Trump",
+        "type": "tv",
+        "year": "2011"
+      },
+      {
+        "title": "Suburgatory",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "The Three Stooges",
+        "type": "film",
+        "year": "2012"
+      },
+      {
+        "title": "Celebrity Big Brother",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "The Choice",
+        "type": "tv",
+        "year": "2012"
+      },
+      {
+        "title": "Marriage Boot Camp: Reality Stars",
+        "type": "tv",
+        "year": "2015"
+      },
+      {
+        "title": "Marriage Boot Camp: Reality Stars Family Edition",
+        "type": "tv",
+        "year": "2017"
+      }
+    ],
     "recent_work": [],
     "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on The Tonight Show with Conan O'Brien in 2009."
+      "type": "direct",
+      "evidence": "Wikipedia: \"Sorrentino has been a guest on TV series including The Howard Stern Show, The Tonight Show with Conan O'Brien, The Jay Leno Show, Lopez Tonight, SportsNation, Chelsea Lately, The Ellen DeGeneres Show, and Conan.\""
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T06:40:02.467Z"
+    "description": "Mike Sorrentino, widely known by his nickname The Situation, is an American television personality who rose to fame as a cast member on all six seasons of the MTV reality series Jersey Shore, which ran from 2009 to 2012. He later returned to the franchise with Jersey Shore: Family Vacation, appearing as a main cast member beginning in 2018. Over the course of his career, Sorrentino has also appeared on Dancing with the Stars, Celebrity Big Brother, and the Comedy Central Roast of Donald Trump, as well as cameos in the film The Three Stooges. He has appeared as a guest on both The Tonight Show with Conan O'Brien and Conan.",
+    "confidence": 0.6499999999999999,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Michael_Sorrentino"
+    ],
+    "enrichedAt": "2026-09-10T07:15:11.165Z",
+    "birth_year": "1981",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": [],
+    "primary_platform": "tv",
+    "upcoming_work": []
   },
   "Tobey Maguire": {
     "entity": {
@@ -281243,7 +281563,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:41:00.570Z"
+    "enrichedAt": "2026-09-10T07:15:00.548Z"
   },
   "Brandon T Jackson": {
     "entity": {
@@ -282114,7 +282434,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:41:01.067Z"
+    "enrichedAt": "2026-09-10T07:15:00.764Z"
   },
   "Adrian Grenier": {
     "entity": {
@@ -284173,7 +284493,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:41:01.417Z"
+    "enrichedAt": "2026-09-10T07:15:00.883Z"
   },
   "Bret McKenzie": {
     "entity": {
@@ -284808,9 +285128,9 @@
   },
   "Metta World Peace": {
     "entity": {
-      "name": "Metta Sandiford-Artest",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Metta_Sandiford-Artest",
-      "confidence": 0.5333333333333333
+      "name": "Metta World Peace",
+      "wikipedia_url": "",
+      "confidence": 0
     },
     "profession": [],
     "known_for": [],
@@ -284820,10 +285140,10 @@
       "evidence": "First appeared on Conan in 2012."
     },
     "description": "",
-    "confidence": 0.5333333333333333,
+    "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:41:01.106Z"
+    "enrichedAt": "2026-09-10T07:15:00.768Z"
   },
   "Zosia Mamet": {
     "entity": {
@@ -285686,7 +286006,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:41:00.909Z"
+    "enrichedAt": "2026-09-10T07:15:00.584Z"
   },
   "Johnathan Lee Iverson": {
     "entity": {
@@ -288852,7 +289172,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:42:01.609Z"
+    "enrichedAt": "2026-09-10T07:15:00.989Z"
   },
   "Craig Robinson": {
     "entity": {
@@ -292269,7 +292589,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:43:00.636Z"
+    "enrichedAt": "2026-09-10T07:16:00.241Z"
   },
   "Skylar Astin": {
     "entity": {
@@ -293302,7 +293622,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:43:00.631Z"
+    "enrichedAt": "2026-09-10T07:15:00.989Z"
   },
   "Gillian Jacobs": {
     "entity": {
@@ -294825,7 +295145,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:43:00.651Z"
+    "enrichedAt": "2026-09-10T07:16:00.364Z"
   },
   "Todd Glass": {
     "entity": {
@@ -295984,7 +296304,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:43:00.943Z"
+    "enrichedAt": "2026-09-10T07:16:01.525Z"
   },
   "Octavia Spencer": {
     "entity": {
@@ -299420,7 +299740,7 @@
     "confidence": 0,
     "needs_review": true,
     "sources": [],
-    "enrichedAt": "2026-09-10T06:43:00.906Z"
+    "enrichedAt": "2026-09-10T07:16:00.305Z"
   },
   "Jessica St. Clair": {
     "entity": {
