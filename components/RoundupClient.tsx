@@ -255,7 +255,7 @@ export default function RoundupClient({
       <h1 className="font-serif text-4xl font-semibold mb-2">The Roundup</h1>
       <p className="text-[var(--text-muted)] mb-8">
         Three decades, four sets, one very recurring cast of friends — who they are, and what they
-        do when they&apos;re not on the couch.
+        do when they&apos;re not in the chair.
       </p>
 
       {/* Era filter row */}
@@ -288,7 +288,7 @@ export default function RoundupClient({
 
       {/* Generation breakdown */}
       <section className="mb-12">
-        <div className="flex items-baseline gap-2 mb-1">
+        <div className="flex items-baseline gap-2 mb-4">
           <h2 className="font-serif text-2xl font-semibold">Generation</h2>
           <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg2)] border border-[var(--border)] text-[var(--text-muted)]">
             {generationSegments.illustrative
@@ -296,32 +296,23 @@ export default function RoundupClient({
               : `${generationSegments.total} indexed`}
           </span>
         </div>
-        <p className="text-sm text-[var(--text-muted)] mb-4">
-          {generationSegments.illustrative
-            ? "A placeholder, not a live number — no one in this selection has an indexed birth year yet, so this is roughly what the real split should look like once that data's in."
-            : "Based on the birth years we've tracked down so far — most of the roster at this point, with a few stragglers still missing."}
-        </p>
         <StackedBar segments={generationSegments.segments} total={generationSegments.total} />
       </section>
 
       {/* Profession breakdown */}
       <section className="mb-12">
-        <div className="flex items-baseline gap-2 mb-1">
+        <div className="flex items-baseline gap-2 mb-4">
           <h2 className="font-serif text-2xl font-semibold">Profession</h2>
           <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg2)] border border-[var(--border)] text-[var(--text-muted)]">
             {professionSegments.total} enriched bios
           </span>
         </div>
-        <p className="text-sm text-[var(--text-muted)] mb-4">
-          Based on real, enriched bios — we&apos;ve got most of the roster covered at this point,
-          with a handful still to go.
-        </p>
         <StackedBar segments={professionSegments.segments} total={professionSegments.total} />
       </section>
 
       {/* Era Crossover heatmap */}
       <section>
-        <div className="flex items-baseline justify-between mb-1">
+        <div className="flex items-baseline justify-between mb-4">
           <h2 className="font-serif text-2xl font-semibold">Era Crossover</h2>
           <button
             onClick={() => setHeatmapTable((v) => !v)}
@@ -330,10 +321,6 @@ export default function RoundupClient({
             {heatmapTable ? "View as chart" : "View as table"}
           </button>
         </div>
-        <p className="text-sm text-[var(--text-muted)] mb-4">
-          How many guests stuck around across two eras, not just one — each pair counted once,
-          regardless of order. (An era&apos;s own total is already up in its filter chip.)
-        </p>
 
         {heatmapTable ? (
           <div className="overflow-x-auto">
