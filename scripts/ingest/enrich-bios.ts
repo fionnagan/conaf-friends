@@ -124,6 +124,12 @@ export function normNameTokens(s: string): string[] {
     .replace(/\./g, '')
     .replace(/\s+/g, ' ')
     .trim()
+    // A leading "the" is optional band/show-name styling, not part of the
+    // identity — "The Meat Puppets" vs Wikipedia's "Meat Puppets" is the
+    // same act. Applied to both sides symmetrically since this runs on the
+    // guest name and the Wikipedia title alike, so "The X" vs "The X" still
+    // matches (both get stripped) and "The X" vs "X" now does too.
+    .replace(/^the\s+/, '')
     .split(/\s+/);
 }
 

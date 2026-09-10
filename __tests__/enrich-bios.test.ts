@@ -584,6 +584,18 @@ describe('resolveEntityWithRetry() — mocked Wikipedia fetch', () => {
       expect(result).not.toBeNull();
       expect(result!.confidence).toBeLessThan(0.65);
     });
+
+    it('matches a guest name with a leading "The" against a Wikipedia title without it (The Meat Puppets / Meat Puppets)', async () => {
+      mockedFetchWikiEntity.mockResolvedValue({
+        title: 'Meat Puppets',
+        url: 'https://en.wikipedia.org/wiki/Meat_Puppets',
+        extract: 'Meat Puppets is an American rock band formed in 1980 by musician brothers Curt and Cris Kirkwood.',
+        isDisambiguation: false,
+      });
+      const result = await resolveEntityWithRetry('The Meat Puppets');
+      expect(result).not.toBeNull();
+      expect(result!.confidence).toBeCloseTo(1, 5);
+    });
   });
 });
 
