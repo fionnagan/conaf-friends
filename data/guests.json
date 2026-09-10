@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T21:32:01.865Z",
+  "generatedAt": "2026-09-10T21:38:16.583Z",
   "totalGuests": 3258,
   "totalAppearances": 9123,
   "guests": [
@@ -92536,7 +92536,153 @@
       "id": "vivica-a-fox",
       "name": "Vivica A Fox",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Vivica A. Fox",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Vivica_A._Fox",
+          "confidence": 1
+        },
+        "profession": [
+          "actress",
+          "television presenter",
+          "producer",
+          "director"
+        ],
+        "known_for": [
+          {
+            "title": "Soul Train",
+            "type": "tv",
+            "year": "1982"
+          },
+          {
+            "title": "Days of Our Lives",
+            "type": "tv",
+            "year": "1988"
+          },
+          {
+            "title": "Generations",
+            "type": "tv",
+            "year": "1989"
+          },
+          {
+            "title": "Out All Night",
+            "type": "tv",
+            "year": "1992"
+          },
+          {
+            "title": "Independence Day",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Set It Off",
+            "type": "film",
+            "year": "1996"
+          },
+          {
+            "title": "Booty Call",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Soul Food",
+            "type": "film",
+            "year": "1997"
+          },
+          {
+            "title": "Why Do Fools Fall in Love",
+            "type": "film",
+            "year": "1998"
+          },
+          {
+            "title": "Getting Personal",
+            "type": "tv",
+            "year": "1998"
+          },
+          {
+            "title": "City of Angels",
+            "type": "tv",
+            "year": "2000"
+          },
+          {
+            "title": "Kingdom Come",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Two Can Play That Game",
+            "type": "film",
+            "year": "2001"
+          },
+          {
+            "title": "Boat Trip",
+            "type": "film",
+            "year": "2002"
+          },
+          {
+            "title": "Kill Bill",
+            "type": "film",
+            "year": "2003"
+          },
+          {
+            "title": "Missing",
+            "type": "tv",
+            "year": "2003"
+          },
+          {
+            "title": "Ella Enchanted",
+            "type": "film",
+            "year": "2004"
+          },
+          {
+            "title": "Empire",
+            "type": "tv",
+            "year": "2015"
+          },
+          {
+            "title": "Arkansas",
+            "type": "film",
+            "year": "2020"
+          },
+          {
+            "title": "First Lady of BMF: The Tonesa Welch Story",
+            "type": "film",
+            "year": "2023"
+          },
+          {
+            "title": "Is God Is",
+            "type": "film",
+            "year": "2026"
+          }
+        ],
+        "recent_work": [
+          "First Lady of BMF: The Tonesa Welch Story (2023)",
+          "Is God Is (2026)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
+        },
+        "description": "Vivica A. Fox is an American actress, television presenter, producer, and director whose career spans more than four decades. She first gained widespread attention with back-to-back 1996 hits Independence Day and Set It Off before building a prolific film resume that includes Soul Food, Kill Bill, and more than 25 Lifetime thrillers in the The Wrong... franchise. On television, she co-starred in and produced the Lifetime crime drama Missing, earning an NAACP Image Award, and later appeared as a recurring player on the Fox musical drama Empire. In 2023 she made her directorial debut with First Lady of BMF: The Tonesa Welch Story. She likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as far back as 1997.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Vivica_A._Fox"
+        ],
+        "enrichedAt": "2026-09-10T21:38:15.296Z",
+        "birth_year": "1964",
+        "death_year": "",
+        "gender": "female",
+        "nationality": "American",
+        "prestige_signals": [
+          "NAACP Image Award for Outstanding Actress in a Drama Series (Missing)",
+          "NAACP Image Award for Outstanding Actress in a Motion Picture nomination",
+          "MTV Movie Award for Best Kiss",
+          "Saturn Award for Best Supporting Actress nomination"
+        ],
+        "primary_platform": "film",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -389073,7 +389219,41 @@
       "id": "ian-edwards",
       "name": "Ian Edwards",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Ian Edwards (archer)",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Ian_Edwards_(archer)",
+          "confidence": 1
+        },
+        "profession": [
+          "archer",
+          "sculptor"
+        ],
+        "known_for": [],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2007."
+        },
+        "description": "Ian Edwards is a British archer and sculptor born in 1974 who competes in longbow archery, with a specialty in 3D archery. He has earned gold and bronze medals at the European level and a gold medal at the world level in the 3D discipline. Known for his mental focus and composure under pressure, he has also served as a mental coach within the British archery team. Edwards additionally works as a sculptor, drawing connections between artistic discipline and athletic performance. He likely crossed paths with Conan O'Brien during what may have been a first appearance on Late Night with Conan O'Brien in 2007.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Ian_Edwards_(archer)"
+        ],
+        "enrichedAt": "2026-09-10T21:33:06.612Z",
+        "birth_year": "1974",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "British",
+        "prestige_signals": [
+          "gold medal winner at European level in 3D archery",
+          "bronze medal winner at European level in 3D archery",
+          "gold medal winner at world level in 3D archery"
+        ],
+        "primary_platform": "sports",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -392615,7 +392795,48 @@
       "id": "peter-h-fisher",
       "name": "Peter H Fisher",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Peter H. Fisher",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Peter_H._Fisher",
+          "confidence": 1
+        },
+        "profession": [
+          "experimental particle physicist",
+          "professor of physics"
+        ],
+        "known_for": [
+          {
+            "title": "What is Dark Matter?",
+            "type": "other",
+            "year": "2022"
+          }
+        ],
+        "recent_work": [
+          "What is Dark Matter? (2022)"
+        ],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Late Night with Conan O'Brien in 2008."
+        },
+        "description": "Peter H. Fisher is an American experimental particle physicist and the Thomas A. Frank (1977) Professor of Physics at the Massachusetts Institute of Technology, where he formerly chaired the Department of Physics. A Fellow of both the American Physical Society and the American Association for the Advancement of Science, his research has spanned dark matter detection, particle detector development, and twelve years at CERN working on the Alpha Magnetic Spectrometer for the International Space Station. In 2022 he published What is Dark Matter?, synthesizing his and his peers' research on the subject. He likely crossed paths with Conan O'Brien during an appearance on Late Night with Conan O'Brien around 2008.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Peter_H._Fisher"
+        ],
+        "enrichedAt": "2026-09-10T21:33:05.898Z",
+        "birth_year": "1959",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [
+          "Fellow of the American Physical Society",
+          "Fellow of the American Association for the Advancement of Science"
+        ],
+        "primary_platform": "other",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -405414,7 +405635,73 @@
       "id": "jeff-lewis",
       "name": "Jeff Lewis",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Jeffrey Lewis",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Jeffrey_Lewis",
+          "confidence": 1
+        },
+        "profession": [
+          "singer-songwriter",
+          "comic book artist"
+        ],
+        "known_for": [
+          {
+            "title": "The Last Time I Did Acid I Went Insane",
+            "type": "music",
+            "year": "2001"
+          },
+          {
+            "title": "It's the Ones Who've Cracked That the Light Shines Through",
+            "type": "music",
+            "year": "2003"
+          },
+          {
+            "title": "City and Eastern Songs",
+            "type": "music",
+            "year": "2005"
+          },
+          {
+            "title": "12 Crass Songs",
+            "type": "music",
+            "year": "2007"
+          },
+          {
+            "title": "The Bundles",
+            "type": "music",
+            "year": "2010"
+          },
+          {
+            "title": "Fuff",
+            "type": "other",
+            "year": ""
+          },
+          {
+            "title": "Complete Fuff Comix Collection",
+            "type": "other",
+            "year": "2021"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2011."
+        },
+        "description": "Jeff Lewis is an American singer-songwriter and comic book artist based in New York City, associated with the antifolk movement that flourished around the SideWalk Cafe in the 1990s. Signed to Rough Trade, he released several albums including The Last Time I Did Acid I Went Insane, It's the Ones Who've Cracked That the Light Shines Through, City and Eastern Songs, and 12 Crass Songs, a reworking of material by the British punk band Crass. He has collaborated with Kimya Dawson of The Moldy Peaches and toured with a wide range of artists. He also maintains a long-running comic book series, Fuff, collected in the Complete Fuff Comix Collection in 2021. He likely crossed paths with Conan O'Brien around 2011.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jeffrey_Lewis"
+        ],
+        "enrichedAt": "2026-09-10T21:34:09.324Z",
+        "birth_year": "1975",
+        "death_year": "",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": [],
+        "primary_platform": "music",
+        "upcoming_work": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
@@ -430282,7 +430569,77 @@
       "id": "mike-schultz",
       "name": "Mike Schultz",
       "photoUrl": null,
-      "bio": null,
+      "bio": {
+        "entity": {
+          "name": "Michael Schultz",
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_Schultz",
+          "confidence": 1
+        },
+        "profession": [
+          "director",
+          "producer of theater",
+          "film"
+        ],
+        "known_for": [
+          {
+            "title": "African-American mother Katherine Frances Leslie",
+            "type": "tv",
+            "year": "1917"
+          },
+          {
+            "title": "Leo Albert Schultz",
+            "type": "tv",
+            "year": "1913"
+          },
+          {
+            "title": "Musician",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Mike",
+            "type": "tv",
+            "year": ""
+          },
+          {
+            "title": "Car Wash",
+            "type": "tv",
+            "year": "1976"
+          },
+          {
+            "title": "Which Way Is Up?",
+            "type": "tv",
+            "year": "1977"
+          },
+          {
+            "title": "Schultz made the ensemble comedy Scavenger Hunt",
+            "type": "tv",
+            "year": "1979"
+          },
+          {
+            "title": "Denzel Washington's film debut Carbon Copy",
+            "type": "film",
+            "year": "1981"
+          }
+        ],
+        "recent_work": [],
+        "conan_connection": {
+          "type": "inferred",
+          "evidence": "First appeared on Conan in 2016."
+        },
+        "description": "Michael Schultz (born November 10, 1938) is an American director and producer of theater, film and television. == Life and career ==\nSchultz was born in Milwaukee, Wisconsin, the son of an African-American mother Katherine Frances Leslie (1917–1995), and Leo Albert Schultz (1913–2001), an insurance salesman of German descent. Shortly before his birth his parents married in Iowa, where both were listed as black on their marriage license. Mr. Schultz's occupation was listed as \"Musician\" at the time of his marriage. First appeared on Conan in 2016.",
+        "confidence": 1,
+        "needs_review": false,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michael_Schultz"
+        ],
+        "enrichedAt": "2026-09-10T21:35:09.754Z",
+        "birth_year": "1938",
+        "death_year": "1995",
+        "gender": "male",
+        "nationality": "American",
+        "prestige_signals": []
+      },
       "origin": {
         "type": "cold-booking",
         "label": "Booked as a guest",
