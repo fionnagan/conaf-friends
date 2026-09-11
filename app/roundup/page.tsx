@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { getGuestsData, PROFESSION_CATEGORY_ORDER, bucketProfession } from "@/lib/data";
 import RoundupClient from "@/components/RoundupClient";
+import type { GuestFact } from "@/components/RoundupFunFacts";
 import type { Era } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "The Roundup | The Friend Registry",
   description:
-    "A roster overview of every Conan guest — era crossover, generation and profession breakdowns.",
+    "A roster overview of every Conan guest, generation and profession breakdowns, plus fun facts about who keeps coming back.",
 };
 
 // The four broadcast/podcast eras this overview covers. "Conan Must Go"
@@ -31,16 +32,6 @@ export default function RoundupPage() {
       if (guestEras.has(era)) eraGuestIds[era].add(guest.id);
     }
   }
-
-  const crossover = ROUNDUP_ERAS.map((rowEra) =>
-    ROUNDUP_ERAS.map((colEra) => {
-      let count = 0;
-      for (const id of eraGuestIds[rowEra]) {
-        if (eraGuestIds[colEra].has(id)) count++;
-      }
-      return count;
-    })
-  );
 
   // One entry per enriched guest, carrying every ROUNDUP_ERA they appeared
   // in — NOT one entry per era. Summing era-level counts double- and
@@ -98,17 +89,50 @@ export default function RoundupPage() {
   const professionCategoryOrder = PROFESSION_CATEGORY_ORDER;
   const generationCategoryOrder = GENERATION_BUCKETS.map(([label]) => label);
 
+  // One row per guest who appeared in at least one ROUNDUP_ERA — the raw
+  // material for the Fun Facts section. Kept separate from
+  // professionByGuest/generationByGuest above (which only include guests
+  // with an enriched bucket) since some facts, like return rate or the
+  // multi-era club, need every guest regardless of enrichment status.
+  const guestFacts: GuestFact[] = [];
+  for (const guest of data.guests) {
+    const guestEras = ROUNDUP_ERAS.filter((era) =>
+      guest.appearances.some((a) => a.era === era)
+    );
+    if (guestEras.length === 0) continue;
+    const birthYear = guest.bio?.birth_year ? parseInt(guest.bio.birth_year, 10) : NaN;
+    let generation: GuestFact["generation"] = null;
+    // Excludes 7 known guests whose birth_year is a data-entry error (wrong
+    // Wikipedia entity resolved for their name, giving them a pre-1900
+    // birth year) — see the tracked cleanup task; until that's fixed,
+    // treating them as unenriched here keeps this section honest.
+    if (Number.isFinite(birthYear) && birthYear > 1900 && birthYear < 2015) {
+      if (birthYear >= 1997) generation = "Z";
+      else if (birthYear >= 1981) generation = "M";
+      else if (birthYear >= 1965) generation = "X";
+      else generation = "B";
+    }
+    guestFacts.push({
+      name: guest.name,
+      eras: guestEras,
+      totalAppearances: guest.appearances.length,
+      profession: bucketProfession(guest.bio?.profession),
+      generation,
+      gender: guest.bio?.gender || null,
+    });
+  }
+
   return (
     <RoundupClient
       eras={ROUNDUP_ERAS}
       eraTotals={Object.fromEntries(
         ROUNDUP_ERAS.map((e) => [e, eraGuestIds[e].size])
       ) as Record<Era, number>}
-      crossover={crossover}
       professionByGuest={professionByGuest}
       professionCategoryOrder={professionCategoryOrder}
       generationByGuest={generationByGuest}
       generationCategoryOrder={generationCategoryOrder}
+      guestFacts={guestFacts}
     />
   );
 }
