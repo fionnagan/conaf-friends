@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getGuestsData } from "@/lib/data";
+import { getGuestsData, PROFESSION_CATEGORY_ORDER, bucketProfession } from "@/lib/data";
 import RoundupClient from "@/components/RoundupClient";
 import type { Era } from "@/lib/types";
 
@@ -42,31 +42,6 @@ export default function RoundupPage() {
     })
   );
 
-  // Profession is a real, if sparse, signal (~8% of guests have an enriched
-  // bio so far). Bucket the raw Wikipedia profession text into readable
-  // categories, first match wins. Matched as substrings of the guest's
-  // joined profession text rather than exact array entries — some bios came
-  // through a regex fallback pipeline that captured prose fragments (e.g.
-  // "actor best known for portraying...") instead of clean single words, and
-  // substring matching still buckets those correctly instead of dumping them
-  // in "Other".
-  const PROFESSION_BUCKETS: [string, string[]][] = [
-    ["Comedian", ["comedian", "stand-up"]],
-    ["Actor", ["actor", "actress"]],
-    ["Musician", ["musician", "singer", "songwriter", "rapper", "composer"]],
-    ["Filmmaker", ["filmmaker", "director", "producer", "animator", "cartoonist"]],
-    ["Writer", ["writer", "screenwriter", "author"]],
-    [
-      "Media / TV host",
-      [
-        "television host", "television presenter", "television personality",
-        "radio host", "podcaster", "journalist", "media personality",
-        "political commentator", "broadcast",
-      ],
-    ],
-    ["Athlete", ["athlete", "basketball", "football", "wrestler", "boxer"]],
-  ];
-
   // One entry per enriched guest, carrying every ROUNDUP_ERA they appeared
   // in — NOT one entry per era. Summing era-level counts double- and
   // triple-counted any guest who crossed multiple eras (confirmed: with all
@@ -77,16 +52,8 @@ export default function RoundupPage() {
   const professionByGuest: { eras: Era[]; bucket: string }[] = [];
 
   for (const guest of data.guests) {
-    const professions = guest.bio?.profession;
-    if (!professions || professions.length === 0) continue;
-    const joined = professions.join(" ").toLowerCase();
-    let bucket = "Other";
-    for (const [label, keys] of PROFESSION_BUCKETS) {
-      if (keys.some((k) => joined.includes(k))) {
-        bucket = label;
-        break;
-      }
-    }
+    const bucket = bucketProfession(guest.bio?.profession);
+    if (!bucket) continue;
     const guestEras = ROUNDUP_ERAS.filter((era) =>
       guest.appearances.some((a) => a.era === era)
     );
@@ -127,9 +94,8 @@ export default function RoundupPage() {
   // confirmed as a real issue: Profession's segments were colored by
   // sorted-by-count order, so deselecting an era could reshuffle which
   // category was "biggest" and swap two categories' colors out from under
-  // the legend. "Other" is appended since it's PROFESSION_BUCKETS' implicit
-  // fallback bucket, not one of its own entries.
-  const professionCategoryOrder = [...PROFESSION_BUCKETS.map(([label]) => label), "Other"];
+  // the legend.
+  const professionCategoryOrder = PROFESSION_CATEGORY_ORDER;
   const generationCategoryOrder = GENERATION_BUCKETS.map(([label]) => label);
 
   return (
