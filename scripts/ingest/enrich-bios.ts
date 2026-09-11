@@ -406,6 +406,18 @@ export async function resolveEntityWithRetry(guestName: string): Promise<WikiEnt
 
 // ── Wikipedia-only extraction (no Claude) ─────────────────────────────────────
 
+// Wikipedia intros sometimes run the profession clause straight into a
+// descriptive relative clause with no comma to split on — "actor best known
+// for portraying the title character in all eight films..." — so the whole
+// prose tail got swept in as one garbled "profession" (confirmed for real:
+// Daniel Radcliffe's profession came back as that entire clause). Truncate
+// each candidate at the first word that only ever shows up in that kind of
+// leaked prose, never in a real profession noun phrase — verified against
+// the full corpus that this list catches every real leak (7 guests) with
+// zero false positives against legitimate multi-word professions ("former
+// professional football player", "career advice columnist", etc.).
+const PROSE_LEAK_RE = /\b(?:who|whose|which|best|known|currently|his|her|their|has|have|was|were)\b.*$/i;
+
 function extractProfessions(intro: string): string[] {
   // "X is an American actor, comedian and writer" → ["actor", "comedian", "writer"]
   const m = intro.match(/^[^.]+?\bis (?:an? |a )?(?:[A-Za-z-]+ )*?((?:actor|actress|comedian|writer|director|producer|musician|singer|author|host|journalist|chef|athlete|politician|stand-up)[^.]*)/i);
@@ -417,7 +429,8 @@ function extractProfessions(intro: string): string[] {
     // "Irel" (confirmed for real: Liam Neeson's "actor from Northern
     // Ireland" became "actor from northern irel").
     .split(/\s*,\s*|\s+and\s+/i)
-    .map(s => s.trim().replace(/[^a-zA-Z -]/g, '').toLowerCase())
+    .map(s => s.replace(PROSE_LEAK_RE, '').trim())
+    .map(s => s.replace(/[^a-zA-Z -]/g, '').trim().toLowerCase())
     .filter(s => /^[a-z]/.test(s) && s.length > 2)
     .slice(0, 3);
 }

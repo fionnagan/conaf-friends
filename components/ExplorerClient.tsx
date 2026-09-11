@@ -7,13 +7,21 @@ import {
   getEraTextColor,
   getGeneration,
   formatTimeAgo,
+  bucketProfession,
+  PROFESSION_CATEGORY_ORDER,
+  getRecency,
+  RECENCY_BUCKETS,
   type Generation,
+  type Recency,
 } from "@/lib/data";
 import GuestAvatar from "./GuestAvatar";
 import GuestModal from "./GuestModal";
 
 const HOST_NAME = "Conan O'Brien";
-const ERAS: Era[] = ["late-night-nbc", "tonight-show", "tbs-conan", "podcast", "conan-must-go"];
+// "Conan Must Go" (the travel specials) is excluded — too new and too thin
+// a guest list to be a meaningful filter dimension yet, same call the
+// Roundup page makes for its own era breakdowns.
+const ERAS: Era[] = ["late-night-nbc", "tonight-show", "tbs-conan", "podcast"];
 const GENERATIONS: Generation[] = ["Gen Z", "Millennial", "Gen X", "Boomer+"];
 const PAGE_SIZE = 60;
 
@@ -23,10 +31,20 @@ interface Props {
   neverBookedCandidates: NeverBookedCandidate[];
 }
 
-function lastSeen(guest: Guest): { timeAgo: string; show: string } | null {
+function latestAppearance(guest: Guest) {
   if (guest.appearances.length === 0) return null;
-  const latest = guest.appearances.reduce((a, b) => (a.date > b.date ? a : b));
+  return guest.appearances.reduce((a, b) => (a.date > b.date ? a : b));
+}
+
+function lastSeen(guest: Guest): { timeAgo: string; show: string } | null {
+  const latest = latestAppearance(guest);
+  if (!latest) return null;
   return { timeAgo: formatTimeAgo(latest.date), show: ERA_LABELS[latest.era] };
+}
+
+function guestRecency(guest: Guest): Recency | null {
+  const latest = latestAppearance(guest);
+  return latest ? getRecency(latest.date) : null;
 }
 
 function crossingLine(crossings: GuestCrossing[] | undefined): string | null {
@@ -48,17 +66,23 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
   const [selectedEras, setSelectedEras] = useState<Set<Era>>(new Set());
   const [selectedGenerations, setSelectedGenerations] = useState<Set<Generation>>(new Set());
   const [selectedOccupations, setSelectedOccupations] = useState<Set<string>>(new Set());
+  const [selectedRecency, setSelectedRecency] = useState<Set<Recency>>(new Set());
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [modalGuest, setModalGuest] = useState<Guest | null>(null);
 
   const eligibleGuests = useMemo(() => guests.filter((g) => g.name !== HOST_NAME), [guests]);
 
-  const topOccupations = useMemo(() => {
+  // Same curated categories the Roundup page charts by — a guest's
+  // profession reads identically wherever it shows up on the site, instead
+  // of the raw (sometimes garbled) Wikipedia profession text.
+  const professionCounts = useMemo(() => {
     const counts = new Map<string, number>();
     for (const g of eligibleGuests) {
-      for (const p of g.bio?.profession ?? []) counts.set(p, (counts.get(p) ?? 0) + 1);
+      const bucket = bucketProfession(g.bio?.profession);
+      if (bucket) counts.set(bucket, (counts.get(bucket) ?? 0) + 1);
     }
-    return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([occ]) => occ);
+    return counts;
   }, [eligibleGuests]);
 
   const generationCounts = useMemo(() => {
@@ -67,6 +91,15 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
       const year = g.bio?.birth_year ? parseInt(g.bio.birth_year, 10) : NaN;
       const gen = getGeneration(year);
       if (gen) counts[gen]++;
+    }
+    return counts;
+  }, [eligibleGuests]);
+
+  const recencyCounts = useMemo(() => {
+    const counts: Record<Recency, number> = { "This year": 0, "1–3 years ago": 0, "3–10 years ago": 0, "10+ years ago": 0 };
+    for (const g of eligibleGuests) {
+      const r = guestRecency(g);
+      if (r) counts[r]++;
     }
     return counts;
   }, [eligibleGuests]);
@@ -100,21 +133,29 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
     }
     if (selectedOccupations.size > 0) {
       result = result.filter((g) => {
-        const profs = g.bio?.profession ?? [];
-        return profs.some((p) => selectedOccupations.has(p));
+        const bucket = bucketProfession(g.bio?.profession);
+        return bucket !== null && selectedOccupations.has(bucket);
+      });
+    }
+    if (selectedRecency.size > 0) {
+      result = result.filter((g) => {
+        const r = guestRecency(g);
+        return r !== null && selectedRecency.has(r);
       });
     }
     return result;
-  }, [eligibleGuests, nameQuery, selectedEras, selectedGenerations, selectedOccupations]);
+  }, [eligibleGuests, nameQuery, selectedEras, selectedGenerations, selectedOccupations, selectedRecency]);
 
   const visible = filtered.slice(0, visibleCount);
-  const hasFilters = !!nameQuery || selectedEras.size > 0 || selectedGenerations.size > 0 || selectedOccupations.size > 0;
+  const activeFilterCount = selectedEras.size + selectedGenerations.size + selectedOccupations.size + selectedRecency.size;
+  const hasFilters = !!nameQuery || activeFilterCount > 0;
 
   function clearAll() {
     setNameQuery("");
     setSelectedEras(new Set());
     setSelectedGenerations(new Set());
     setSelectedOccupations(new Set());
+    setSelectedRecency(new Set());
     setVisibleCount(PAGE_SIZE);
   }
 
@@ -130,92 +171,158 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
           className="w-full px-4 py-2.5 bg-[var(--bg2)] border border-[var(--border)] rounded-xl text-sm focus:outline-none focus:border-[var(--orange)] placeholder:text-[var(--text-muted)]"
         />
 
-        {/* Era chips */}
-        <div className="flex flex-wrap gap-2">
-          {ERAS.map((era) => {
-            const active = selectedEras.has(era);
-            const color = getEraTextColor(era);
-            return (
+        <div className="flex items-center justify-between gap-3 flex-wrap">
+          <button
+            onClick={() => setFiltersOpen((v) => !v)}
+            aria-expanded={filtersOpen}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium border transition-colors"
+            style={
+              filtersOpen || activeFilterCount > 0
+                ? { background: "rgba(242,101,34,0.12)", borderColor: "var(--orange)", color: "var(--orange)" }
+                : { borderColor: "var(--border)", color: "var(--text-muted)" }
+            }
+          >
+            Filters
+            {activeFilterCount > 0 && (
+              <span className="min-w-[1.25rem] px-1 h-5 rounded-full bg-[var(--orange)] text-[var(--bg)] text-xs font-semibold flex items-center justify-center tabular-nums">
+                {activeFilterCount}
+              </span>
+            )}
+            <span className="text-xs transition-transform" style={{ transform: filtersOpen ? "rotate(180deg)" : undefined }}>
+              ▾
+            </span>
+          </button>
+
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-[var(--text-muted)]">
+              {filtered.length} guest{filtered.length !== 1 ? "s" : ""}
+            </span>
+            {hasFilters && (
               <button
-                key={era}
-                onClick={() => toggle(selectedEras, era, setSelectedEras)}
-                aria-pressed={active}
-                className="px-2.5 py-1 rounded-full text-xs font-medium border transition-colors"
-                style={
-                  active
-                    ? { background: `${color}22`, borderColor: color, color }
-                    : { borderColor: "var(--border)", color: "var(--text-muted)" }
-                }
+                onClick={clearAll}
+                className="text-xs text-[var(--text-muted)] hover:text-[var(--text)] underline underline-offset-2"
               >
-                {ERA_LABELS[era]}
+                Clear all
               </button>
-            );
-          })}
+            )}
+          </div>
         </div>
 
-        {/* Generation chips — computed from birth_year, never stored */}
-        <div className="flex flex-wrap gap-2 items-center">
-          <span className="text-xs text-[var(--text-muted)] mr-1">Generation</span>
-          {GENERATIONS.map((gen) => {
-            const active = selectedGenerations.has(gen);
-            const count = generationCounts[gen];
-            return (
-              <button
-                key={gen}
-                onClick={() => toggle(selectedGenerations, gen, setSelectedGenerations)}
-                aria-pressed={active}
-                disabled={count === 0}
-                className="px-2.5 py-1 rounded-full text-xs font-medium border transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-                style={
-                  active
-                    ? { background: "rgba(127,119,221,0.15)", borderColor: "rgba(127,119,221,0.4)", color: "var(--purple)" }
-                    : { borderColor: "var(--border)", color: "var(--text-muted)" }
-                }
-              >
-                {gen} <span className="opacity-70 tabular-nums">· {count}</span>
-              </button>
-            );
-          })}
-          <span className="text-xs text-[var(--text-muted)]">
-            ({totalWithGeneration}/{eligibleGuests.length} have a birth year so far)
-          </span>
-        </div>
+        {filtersOpen && (
+          <div className="rounded-xl border border-[var(--border)] bg-[var(--bg2)] p-4 space-y-4">
+            {/* Era */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-2">Era</p>
+              <div className="flex flex-wrap gap-2">
+                {ERAS.map((era) => {
+                  const active = selectedEras.has(era);
+                  const color = getEraTextColor(era);
+                  return (
+                    <button
+                      key={era}
+                      onClick={() => toggle(selectedEras, era, setSelectedEras)}
+                      aria-pressed={active}
+                      className="px-2.5 py-1 rounded-full text-xs font-medium border transition-colors"
+                      style={
+                        active
+                          ? { background: `${color}22`, borderColor: color, color }
+                          : { borderColor: "var(--border)", color: "var(--text-muted)" }
+                      }
+                    >
+                      {ERA_LABELS[era]}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
 
-        {/* Profession chips */}
-        <div className="flex flex-wrap gap-2">
-          {topOccupations.map((occ) => {
-            const active = selectedOccupations.has(occ);
-            return (
-              <button
-                key={occ}
-                onClick={() => toggle(selectedOccupations, occ, setSelectedOccupations)}
-                aria-pressed={active}
-                className="px-2.5 py-0.5 rounded-full border text-xs capitalize transition-colors"
-                style={
-                  active
-                    ? { background: "rgba(242,101,34,0.15)", borderColor: "rgba(242,101,34,0.4)", color: "var(--orange)" }
-                    : { borderColor: "var(--border)", color: "var(--text-muted)" }
-                }
-              >
-                {occ}
-              </button>
-            );
-          })}
-        </div>
+            {/* Generation — computed from birth_year, never stored */}
+            <div>
+              <div className="flex items-baseline gap-2 mb-2">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">Generation</p>
+                <span className="text-[11px] text-[var(--text-muted)]">
+                  {totalWithGeneration}/{eligibleGuests.length} have a birth year so far
+                </span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {GENERATIONS.map((gen) => {
+                  const active = selectedGenerations.has(gen);
+                  const count = generationCounts[gen];
+                  return (
+                    <button
+                      key={gen}
+                      onClick={() => toggle(selectedGenerations, gen, setSelectedGenerations)}
+                      aria-pressed={active}
+                      disabled={count === 0}
+                      className="px-2.5 py-1 rounded-full text-xs font-medium border transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                      style={
+                        active
+                          ? { background: "rgba(127,119,221,0.15)", borderColor: "rgba(127,119,221,0.4)", color: "var(--purple)" }
+                          : { borderColor: "var(--border)", color: "var(--text-muted)" }
+                      }
+                    >
+                      {gen} <span className="opacity-70 tabular-nums">· {count}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
 
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-[var(--text-muted)]">
-            {filtered.length} guest{filtered.length !== 1 ? "s" : ""}
-          </span>
-          {hasFilters && (
-            <button
-              onClick={clearAll}
-              className="text-xs text-[var(--text-muted)] hover:text-[var(--text)] underline underline-offset-2"
-            >
-              Clear all
-            </button>
-          )}
-        </div>
+            {/* Profession — same curated categories as the Roundup page */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-2">Profession</p>
+              <div className="flex flex-wrap gap-2">
+                {PROFESSION_CATEGORY_ORDER.map((occ) => {
+                  const active = selectedOccupations.has(occ);
+                  const count = professionCounts.get(occ) ?? 0;
+                  return (
+                    <button
+                      key={occ}
+                      onClick={() => toggle(selectedOccupations, occ, setSelectedOccupations)}
+                      aria-pressed={active}
+                      disabled={count === 0}
+                      className="px-2.5 py-1 rounded-full text-xs font-medium border transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                      style={
+                        active
+                          ? { background: "rgba(242,101,34,0.15)", borderColor: "rgba(242,101,34,0.4)", color: "var(--orange)" }
+                          : { borderColor: "var(--border)", color: "var(--text-muted)" }
+                      }
+                    >
+                      {occ} <span className="opacity-70 tabular-nums">· {count}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Last seen — recency of the guest's most recent appearance */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-2">Last seen</p>
+              <div className="flex flex-wrap gap-2">
+                {RECENCY_BUCKETS.map((r) => {
+                  const active = selectedRecency.has(r);
+                  const count = recencyCounts[r];
+                  return (
+                    <button
+                      key={r}
+                      onClick={() => toggle(selectedRecency, r, setSelectedRecency)}
+                      aria-pressed={active}
+                      disabled={count === 0}
+                      className="px-2.5 py-1 rounded-full text-xs font-medium border transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                      style={
+                        active
+                          ? { background: "rgba(57,135,229,0.15)", borderColor: "rgba(57,135,229,0.4)", color: "#3987e5" }
+                          : { borderColor: "var(--border)", color: "var(--text-muted)" }
+                      }
+                    >
+                      {r} <span className="opacity-70 tabular-nums">· {count}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* ── Card grid ───────────────────────────────────────────── */}
@@ -225,6 +332,7 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
           const crossing = crossingLine(guestCrossings[g.id]);
           const year = g.bio?.birth_year ? parseInt(g.bio.birth_year, 10) : NaN;
           const generation = getGeneration(year);
+          const profession = bucketProfession(g.bio?.profession);
 
           return (
             <button
@@ -242,9 +350,9 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
                         {generation}
                       </span>
                     )}
-                    {g.bio?.profession?.[0] && (
-                      <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-[var(--bg)] border border-[var(--border)] text-[var(--text-muted)] capitalize">
-                        {g.bio.profession[0]}
+                    {profession && (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-[var(--bg)] border border-[var(--border)] text-[var(--text-muted)]">
+                        {profession}
                       </span>
                     )}
                   </div>

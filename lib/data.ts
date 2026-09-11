@@ -174,6 +174,42 @@ export function getCrossedPathsData(): CrossedPathsData {
   }
 }
 
+// Profession is a real, if sparse, signal. Bucket the raw Wikipedia
+// profession text into readable categories, first match wins. Matched as
+// substrings of the guest's joined profession text rather than exact array
+// entries — some bios came through a regex fallback pipeline that captured
+// prose fragments (e.g. "actor best known for portraying...") instead of
+// clean single words, and substring matching still buckets those correctly
+// instead of dumping them in "Other". Shared by the Roundup and Explorer
+// pages so a guest's profession category is identical wherever it's shown.
+export const PROFESSION_BUCKETS: [string, string[]][] = [
+  ["Comedian", ["comedian", "stand-up"]],
+  ["Actor", ["actor", "actress"]],
+  ["Musician", ["musician", "singer", "songwriter", "rapper", "composer"]],
+  ["Filmmaker", ["filmmaker", "director", "producer", "animator", "cartoonist"]],
+  ["Writer", ["writer", "screenwriter", "author"]],
+  [
+    "Media / TV host",
+    [
+      "television host", "television presenter", "television personality",
+      "radio host", "podcaster", "journalist", "media personality",
+      "political commentator", "broadcast",
+    ],
+  ],
+  ["Athlete", ["athlete", "basketball", "football", "wrestler", "boxer"]],
+];
+
+export const PROFESSION_CATEGORY_ORDER = [...PROFESSION_BUCKETS.map(([label]) => label), "Other"];
+
+export function bucketProfession(professions: string[] | undefined): string | null {
+  if (!professions || professions.length === 0) return null;
+  const joined = professions.join(" ").toLowerCase();
+  for (const [label, keys] of PROFESSION_BUCKETS) {
+    if (keys.some((k) => joined.includes(k))) return label;
+  }
+  return "Other";
+}
+
 export type Generation = 'Gen Z' | 'Millennial' | 'Gen X' | 'Boomer+';
 
 // Computed on the fly from bio.birth_year, never stored — same ranges the
@@ -206,4 +242,20 @@ export function formatTimeAgo(dateStr: string): string {
   // days-based years=floor(364/365)=0.
   const years = Math.floor(months / 12);
   return years === 1 ? '1 year ago' : `${years} years ago`;
+}
+
+export type Recency = 'This year' | '1–3 years ago' | '3–10 years ago' | '10+ years ago';
+export const RECENCY_BUCKETS: Recency[] = ['This year', '1–3 years ago', '3–10 years ago', '10+ years ago'];
+
+// Bucketed from the same day math as formatTimeAgo, off the guest's most
+// recent appearance — an "upcoming" (future-dated) appearance counts as
+// This year rather than falling through with a negative day count.
+export function getRecency(mostRecentDateStr: string): Recency {
+  const then = new Date(mostRecentDateStr).getTime();
+  const days = Math.max(0, Math.floor((Date.now() - then) / (1000 * 60 * 60 * 24)));
+  const years = days / 365;
+  if (years < 1) return 'This year';
+  if (years < 3) return '1–3 years ago';
+  if (years < 10) return '3–10 years ago';
+  return '10+ years ago';
 }

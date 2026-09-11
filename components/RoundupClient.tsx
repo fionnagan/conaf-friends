@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ERA_LABELS, getEraTextColor } from "@/lib/data";
 import type { Era } from "@/lib/types";
 
@@ -60,6 +60,52 @@ function formatPct(value: number, total: number): string {
   return `${Math.round(pct)}%`;
 }
 
+// Anchors a tooltip to the hovered/focused mark's own bounding box, not to
+// the pointer — stable per-mark position that works identically for mouse,
+// touch, and keyboard focus (which has no pointer coordinates at all).
+function useMarkTooltip<T>() {
+  const [tip, setTip] = useState<{ rect: DOMRect; content: T } | null>(null);
+  const show = (e: React.SyntheticEvent<HTMLElement>, content: T) => {
+    setTip({ rect: e.currentTarget.getBoundingClientRect(), content });
+  };
+  const hide = () => setTip(null);
+
+  // A hovered mark can scroll out from under a stale rect — drop the
+  // tooltip on scroll rather than let it float over the wrong element.
+  useEffect(() => {
+    if (!tip) return;
+    const onScroll = () => setTip(null);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [tip]);
+
+  return { tip, show, hide };
+}
+
+function MarkTooltip({ rect, children }: { rect: DOMRect; children: React.ReactNode }) {
+  const width = 200;
+  const half = width / 2;
+  const vw = typeof window !== "undefined" ? window.innerWidth : 1024;
+  const centerX = rect.left + rect.width / 2;
+  const left = Math.min(Math.max(centerX, half + 8), vw - half - 8);
+  const placeBelow = rect.top < 90;
+
+  return (
+    <div
+      role="tooltip"
+      className="fixed z-50 pointer-events-none rounded-lg border border-[var(--border)] bg-[var(--bg2)] shadow-lg px-3 py-2 text-xs animate-[tooltip-in_0.1s_ease-out]"
+      style={{
+        left,
+        top: placeBelow ? rect.bottom + 10 : rect.top - 10,
+        width,
+        transform: placeBelow ? "translateX(-50%)" : "translate(-50%, -100%)",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 function StackedBar({
   segments,
   total,
@@ -68,22 +114,55 @@ function StackedBar({
   total: number;
 }) {
   const [tableView, setTableView] = useState(false);
+  const [hovered, setHovered] = useState<string | null>(null);
+  const { tip, show, hide } = useMarkTooltip<{ label: string; value: number; color: string }>();
+
   if (total === 0) {
     return <p className="text-sm text-[var(--text-muted)]">No data for this selection.</p>;
   }
 
+  const visible = segments.filter((s) => s.value > 0);
+
+  const onEnter = (e: React.SyntheticEvent<HTMLElement>, s: { label: string; value: number; color: string }) => {
+    setHovered(s.label);
+    show(e, s);
+  };
+  const onLeave = () => {
+    setHovered(null);
+    hide();
+  };
+
   return (
     <div>
       <div className="flex items-center justify-between mb-3">
-        <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-          {segments
-            .filter((s) => s.value > 0)
-            .map((s) => (
-              <span key={s.label} className="inline-flex items-center gap-1.5 text-xs text-[var(--text-muted)]">
-                <span className="w-2.5 h-2.5 rounded-sm inline-block flex-shrink-0" style={{ background: s.color }} />
-                {s.label} · {formatPct(s.value, total)}
-              </span>
-            ))}
+        <div className="flex flex-wrap gap-x-1 gap-y-1">
+          {visible.map((s) => (
+            <span
+              key={s.label}
+              tabIndex={0}
+              role="img"
+              aria-label={`${s.label}: ${s.value} guests, ${formatPct(s.value, total)}`}
+              className="inline-flex items-center gap-1.5 text-xs rounded px-1.5 py-1 cursor-default transition-[background-color,opacity] outline-none focus-visible:ring-1 focus-visible:ring-[var(--orange)]"
+              style={{
+                color: hovered && hovered !== s.label ? "var(--text-muted)" : "var(--text-muted)",
+                background: hovered === s.label ? "var(--bg2)" : "transparent",
+                opacity: hovered && hovered !== s.label ? 0.5 : 1,
+              }}
+              onPointerEnter={(e) => onEnter(e, s)}
+              onPointerLeave={onLeave}
+              onFocus={(e) => onEnter(e, s)}
+              onBlur={onLeave}
+            >
+              <span
+                className="w-2.5 h-2.5 rounded-sm inline-block flex-shrink-0 transition-transform"
+                style={{
+                  background: s.color,
+                  transform: hovered === s.label ? "scale(1.15)" : undefined,
+                }}
+              />
+              {s.label} · {formatPct(s.value, total)}
+            </span>
+          ))}
         </div>
         <button
           onClick={() => setTableView((v) => !v)}
@@ -103,39 +182,67 @@ function StackedBar({
             </tr>
           </thead>
           <tbody>
-            {segments
-              .filter((s) => s.value > 0)
-              .map((s) => (
-                <tr key={s.label} className="border-b border-[var(--border)]/50">
-                  <td className="py-1.5 flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ background: s.color }} />
-                    {s.label}
-                  </td>
-                  <td className="py-1.5 text-right tabular-nums">{s.value}</td>
-                  <td className="py-1.5 text-right tabular-nums">
-                    {formatPct(s.value, total)}
-                  </td>
-                </tr>
-              ))}
+            {visible.map((s) => (
+              <tr
+                key={s.label}
+                className="border-b border-[var(--border)]/50 transition-colors"
+                style={{ background: hovered === s.label ? "var(--bg2)" : undefined }}
+                onPointerEnter={(e) => onEnter(e, s)}
+                onPointerLeave={onLeave}
+              >
+                <td className="py-1.5 flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ background: s.color }} />
+                  {s.label}
+                </td>
+                <td className="py-1.5 text-right tabular-nums">{s.value}</td>
+                <td className="py-1.5 text-right tabular-nums">
+                  {formatPct(s.value, total)}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       ) : (
-        <div className="flex w-full h-8 rounded-md overflow-hidden" role="img" aria-label={`${segments.map((s) => `${s.label} ${formatPct(s.value, total)}`).join(", ")}`}>
-          {segments
-            .filter((s) => s.value > 0)
-            .map((s, i) => (
-              <div
-                key={s.label}
-                title={`${s.label}: ${s.value} (${formatPct(s.value, total)})`}
-                style={{
-                  width: `${(s.value / total) * 100}%`,
-                  background: s.color,
-                  marginLeft: i === 0 ? 0 : "2px",
-                }}
-                className="h-full first:rounded-l-md last:rounded-r-md"
-              />
-            ))}
+        <div
+          className="flex w-full h-8 rounded-md overflow-hidden"
+          role="img"
+          aria-label={`${visible.map((s) => `${s.label} ${formatPct(s.value, total)}`).join(", ")}`}
+        >
+          {visible.map((s, i) => (
+            <div
+              key={s.label}
+              tabIndex={0}
+              role="img"
+              aria-label={`${s.label}: ${s.value} guests, ${formatPct(s.value, total)}`}
+              style={{
+                width: `${(s.value / total) * 100}%`,
+                background: s.color,
+                marginLeft: i === 0 ? 0 : "2px",
+                opacity: hovered && hovered !== s.label ? 0.45 : 1,
+                filter: hovered === s.label ? "brightness(1.18)" : undefined,
+                outline: hovered === s.label ? "2px solid rgba(255,255,255,0.55)" : undefined,
+                outlineOffset: hovered === s.label ? "-2px" : undefined,
+              }}
+              className="h-full first:rounded-l-md last:rounded-r-md cursor-default transition-[opacity,filter] outline-none"
+              onPointerEnter={(e) => onEnter(e, s)}
+              onPointerLeave={onLeave}
+              onFocus={(e) => onEnter(e, s)}
+              onBlur={onLeave}
+            />
+          ))}
         </div>
+      )}
+
+      {tip && (
+        <MarkTooltip rect={tip.rect}>
+          <div className="flex items-center gap-1.5 mb-1">
+            <span className="w-2.5 h-2.5 rounded-sm inline-block flex-shrink-0" style={{ background: tip.content.color }} />
+            <span className="text-[var(--text-muted)]">{tip.content.label}</span>
+          </div>
+          <div className="text-sm font-semibold text-[var(--text)]">
+            {tip.content.value} guests · {formatPct(tip.content.value, total)}
+          </div>
+        </MarkTooltip>
       )}
     </div>
   );
@@ -152,6 +259,12 @@ export default function RoundupClient({
 }: Props) {
   const [selected, setSelected] = useState<Set<Era>>(new Set(eras));
   const [heatmapTable, setHeatmapTable] = useState(false);
+  const [hoveredCell, setHoveredCell] = useState<string | null>(null);
+  const { tip: heatTip, show: showHeat, hide: hideHeat } = useMarkTooltip<{
+    rowEra: Era;
+    colEra: Era;
+    value: number;
+  }>();
 
   const toggleEra = (era: Era) => {
     setSelected((prev) => {
@@ -189,6 +302,8 @@ export default function RoundupClient({
     const smaller = Math.min(eraTotals[rowEra], eraTotals[colEra]);
     return smaller > 0 ? Math.round((value / smaller) * 100) : 0;
   };
+  const smallerEraLabel = (rowEra: Era, colEra: Era) =>
+    ERA_LABELS[eraTotals[rowEra] < eraTotals[colEra] ? rowEra : colEra];
 
   // Counts each guest once against the union of selected eras, not once per
   // era they happen to have appeared in — otherwise a guest who crossed
@@ -385,16 +500,35 @@ export default function RoundupClient({
                       }
                       const value = crossover[i][j];
                       const dimmed = !selected.has(rowEra) || !selected.has(colEra);
+                      const cellKey = `${i}-${j}`;
+                      const isHovered = hoveredCell === cellKey;
+                      const onEnter = (e: React.SyntheticEvent<HTMLElement>) => {
+                        setHoveredCell(cellKey);
+                        showHeat(e, { rowEra, colEra, value });
+                      };
+                      const onLeave = () => {
+                        setHoveredCell(null);
+                        hideHeat();
+                      };
                       return (
                         <div
                           key={colEra}
-                          title={`${ERA_LABELS[rowEra]} & ${ERA_LABELS[colEra]}: ${value} guests appeared in both (${pctOfSmallerEra(rowEra, colEra, value)}% of ${eraTotals[rowEra] < eraTotals[colEra] ? ERA_LABELS[rowEra] : ERA_LABELS[colEra]}'s total)`}
-                          className="aspect-square rounded-md flex items-center justify-center text-xs font-medium tabular-nums transition-opacity"
+                          tabIndex={0}
+                          role="img"
+                          aria-label={`${ERA_LABELS[rowEra]} & ${ERA_LABELS[colEra]}: ${value} guests appeared in both (${pctOfSmallerEra(rowEra, colEra, value)}% of ${smallerEraLabel(rowEra, colEra)}'s total)`}
+                          className="aspect-square rounded-md flex items-center justify-center text-xs font-medium tabular-nums transition-[opacity,filter] cursor-default outline-none"
                           style={{
                             background: SEQUENTIAL_RAMP[rampIndex(value)],
                             color: "#fff",
                             opacity: dimmed ? 0.35 : 1,
+                            filter: isHovered ? "brightness(1.25)" : undefined,
+                            outline: isHovered ? "2px solid rgba(255,255,255,0.6)" : undefined,
+                            outlineOffset: isHovered ? "-2px" : undefined,
                           }}
+                          onPointerEnter={onEnter}
+                          onPointerLeave={onLeave}
+                          onFocus={onEnter}
+                          onBlur={onLeave}
                         >
                           {value}
                         </div>
@@ -405,6 +539,27 @@ export default function RoundupClient({
               })}
             </div>
           </div>
+        )}
+
+        {heatTip && (
+          <MarkTooltip rect={heatTip.rect}>
+            <div className="flex items-center gap-1.5 mb-1">
+              <span
+                className="w-2.5 h-2.5 rounded-sm inline-block flex-shrink-0"
+                style={{ background: SEQUENTIAL_RAMP[rampIndex(heatTip.content.value)] }}
+              />
+              <span className="text-[var(--text-muted)]">
+                {ERA_LABELS[heatTip.content.rowEra]} &amp; {ERA_LABELS[heatTip.content.colEra]}
+              </span>
+            </div>
+            <div className="text-sm font-semibold text-[var(--text)]">
+              {heatTip.content.value} guests overlap
+            </div>
+            <div className="text-[var(--text-muted)]">
+              {pctOfSmallerEra(heatTip.content.rowEra, heatTip.content.colEra, heatTip.content.value)}% of{" "}
+              {smallerEraLabel(heatTip.content.rowEra, heatTip.content.colEra)}&apos;s total
+            </div>
+          </MarkTooltip>
         )}
       </section>
     </div>
