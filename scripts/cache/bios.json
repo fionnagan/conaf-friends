@@ -3097,8 +3097,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Sebastian_Maniscalco"
     ],
-    "enrichedAt": "2026-08-24T16:22:38.799Z",
-    "birth_year": "",
+    "enrichedAt": "2026-09-11T00:07:44.906Z",
+    "birth_year": "1973",
     "nationality": "American",
     "prestige_signals": [],
     "primary_platform": "other",
@@ -6324,7 +6324,12 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Quentin_Tarantino",
       "confidence": 1
     },
-    "profession": [],
+    "profession": [
+      "filmmaker",
+      "screenwriter",
+      "director",
+      "actor"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
@@ -6337,7 +6342,7 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Quentin_Tarantino"
     ],
-    "enrichedAt": "2026-08-31T21:38:29.407Z",
+    "enrichedAt": "2026-09-11T00:04:33.426Z",
     "birth_year": "1963",
     "nationality": "American",
     "prestige_signals": [
@@ -11766,8 +11771,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Carol_Leifer"
     ],
-    "enrichedAt": "2026-08-10T16:36:03.531Z",
-    "birth_year": "",
+    "enrichedAt": "2026-09-11T00:07:44.906Z",
+    "birth_year": "1956",
     "nationality": "American",
     "prestige_signals": [
       "Primetime Emmy nomination for The Larry Sanders Show",
@@ -15785,7 +15790,7 @@
     "entity": {
       "name": "Harry Shearer",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Harry_Shearer",
-      "confidence": 1
+      "confidence": 0.95
     },
     "profession": [
       "actor",
@@ -15795,45 +15800,24 @@
       "writer",
       "producer"
     ],
-    "known_for": [
-      {
-        "title": "The Credibility Gap",
-        "type": "other",
-        "year": "1969"
-      },
-      {
-        "title": "Real Life",
-        "type": "film",
-        "year": "1979"
-      },
-      {
-        "title": "Fernwood 2 Night",
-        "type": "tv",
-        "year": ""
-      }
-    ],
+    "known_for": [],
     "recent_work": [],
     "conan_connection": {
-      "type": "direct",
-      "evidence": "SNL writers room era, 1988–1991. First appeared on Late Night with Conan O'Brien in 1994."
+      "type": "inferred",
+      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2025."
     },
-    "description": "Harry Shearer is an actor, comedian, musician, radio host, writer, and producer. He came up through The Credibility Gap and appeared in the 1979 film Real Life and the television series Fernwood 2 Night. Shearer was part of the SNL writers room era from 1988 to 1991, a period that overlapped with Conan O'Brien's time on the show. He first appeared on Late Night with Conan O'Brien in 1994.",
-    "confidence": 1,
+    "description": "Harry Julius Shearer (born December 23, 1943, in Los Angeles, California) is an American actor, comedian, musician, radio host, writer, and producer. He co-wrote and starred as Derek Smalls in This Is Spinal Tap (1984), was a Saturday Night Live cast member, has voiced numerous characters on The Simpsons since 1989, and has hosted the public-radio program Le Show since 1983. He appeared, in character as Derek Smalls, on Conan O'Brien Needs a Friend on September 15, 2025, alongside fellow Spinal Tap members Christopher Guest and Michael McKean.",
+    "confidence": 0.95,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Harry_Shearer"
     ],
-    "enrichedAt": "2026-07-20T17:34:38.542Z",
+    "enrichedAt": "2026-09-11T00:04:33.426Z",
     "birth_year": "1943",
-    "nationality": "American",
-    "prestige_signals": [
-      "Primetime Emmy Award winner",
-      "Emmy nominee",
-      "Grammy Award nominee"
-    ],
-    "primary_platform": "tv",
     "death_year": "",
-    "gender": "male"
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": []
   },
   "Charlie Day": {
     "entity": {
@@ -16013,70 +15997,33 @@
   },
   "Leslie Jones": {
     "entity": {
-      "name": "Leslie Ann Jones",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Leslie_Ann_Jones",
-      "confidence": 1
+      "name": "Leslie Jones (comedian)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Leslie_Jones_(comedian)",
+      "confidence": 0.95
     },
     "profession": [
-      "recording engineer",
-      "music director"
+      "comedian",
+      "actress",
+      "writer"
     ],
-    "known_for": [
-      {
-        "title": "Skywalker Sound",
-        "type": "other",
-        "year": ""
-      },
-      {
-        "title": "Apocalypse Now (soundtrack recording)",
-        "type": "film",
-        "year": ""
-      },
-      {
-        "title": "Lots of People (John Mayall)",
-        "type": "music",
-        "year": "1977"
-      },
-      {
-        "title": "Dear Ella (Dee Dee Bridgewater)",
-        "type": "music",
-        "year": "1997"
-      },
-      {
-        "title": "Facelift (Alice in Chains)",
-        "type": "music",
-        "year": "1990"
-      },
-      {
-        "title": "Miles & Quincy Live at Montreux",
-        "type": "music",
-        "year": "1991"
-      }
-    ],
+    "known_for": [],
     "recent_work": [],
     "conan_connection": {
-      "type": "industry",
-      "evidence": "Comedy peer and fellow stand-up. First appeared on Conan in 2017."
+      "type": "inferred",
+      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2022."
     },
-    "description": "Leslie Ann Jones is an American recording engineer and Director of Music Recording and Scoring at Skywalker Sound, a Lucasfilm company. A multiple Grammy Award winner and 2018 inductee into the TEC Awards Hall of Fame, she has built one of the most distinguished careers in audio engineering over five decades, with credits spanning the Apocalypse Now soundtrack, John Mayall's Lots of People, Alice in Chains' Facelift, and Dee Dee Bridgewater's Grammy-winning Dear Ella. A longtime advocate for women in audio, she served as Chair of the National Academy of Recording Arts and Sciences Board of Trustees. As a comedy peer and fellow stand-up, she likely crossed paths with Conan O'Brien within the broader entertainment industry.",
-    "confidence": 1,
+    "description": "Annette Leslie Jones (born September 7, 1967, in Memphis, Tennessee) is an American comedian, actress, and writer. She was a cast member and writer on Saturday Night Live from 2014 to 2019, earning two Emmy nominations for Outstanding Supporting Actress in a Comedy Series, and starred as Patty Tolan in Ghostbusters (2016). She likely crossed paths with Conan O'Brien through the comedy/entertainment circuit; she appeared on Conan O'Brien Needs a Friend in September 2022, and returned in July 2026.",
+    "confidence": 0.95,
     "needs_review": false,
     "sources": [
-      "https://en.wikipedia.org/wiki/Leslie_Ann_Jones"
+      "https://en.wikipedia.org/wiki/Leslie_Jones_(comedian)"
     ],
-    "enrichedAt": "2026-09-10T00:03:10.339Z",
-    "birth_year": "",
+    "enrichedAt": "2026-09-11T00:04:33.426Z",
+    "birth_year": "1967",
     "death_year": "",
     "gender": "female",
     "nationality": "American",
-    "prestige_signals": [
-      "multiple Grammy Award-winning",
-      "TEC Awards Hall of Fame inductee (2018)",
-      "first female National Officer of the National Academy of Recording Arts and Sciences",
-      "past Chair of the National Academy of Recording Arts and Sciences Board of Trustees"
-    ],
-    "primary_platform": "music",
-    "upcoming_work": []
+    "prestige_signals": []
   },
   "Hilary Swank": {
     "entity": {
@@ -87283,108 +87230,33 @@
   },
   "Slash": {
     "entity": {
-      "name": "Slash (album)",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Slash_(album)",
-      "confidence": 1
+      "name": "Slash (musician)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slash_(musician)",
+      "confidence": 0.95
     },
     "profession": [
       "musician",
       "guitarist",
-      "rock musician"
+      "songwriter"
     ],
-    "known_for": [
-      {
-        "title": "Guns N' Roses",
-        "type": "music",
-        "year": ""
-      },
-      {
-        "title": "Slash (album)",
-        "type": "music",
-        "year": "2010"
-      },
-      {
-        "title": "Velvet Revolver",
-        "type": "music",
-        "year": ""
-      },
-      {
-        "title": "Slash's Snakepit",
-        "type": "music",
-        "year": ""
-      },
-      {
-        "title": "Appetite for Destruction",
-        "type": "music",
-        "year": ""
-      },
-      {
-        "title": "By the Sword",
-        "type": "music",
-        "year": "2010"
-      },
-      {
-        "title": "Back from Cali",
-        "type": "music",
-        "year": "2010"
-      },
-      {
-        "title": "Gotten",
-        "type": "music",
-        "year": "2010"
-      },
-      {
-        "title": "Sahara",
-        "type": "music",
-        "year": "2009"
-      },
-      {
-        "title": "Doctor Alibi",
-        "type": "music",
-        "year": "2010"
-      },
-      {
-        "title": "Ghost",
-        "type": "music",
-        "year": "2010"
-      },
-      {
-        "title": "Saint Is a Sinner Too",
-        "type": "music",
-        "year": "2010"
-      },
-      {
-        "title": "Mother Maria",
-        "type": "music",
-        "year": "2010"
-      },
-      {
-        "title": "Paradise City",
-        "type": "music",
-        "year": "2010"
-      }
-    ],
+    "known_for": [],
     "recent_work": [],
     "conan_connection": {
-      "type": "direct",
-      "evidence": "Wikipedia: \"While performing the song on Jay Leno's show, Slash was wearing an \"I'm With Coco\" pin, to show support for former Tonight Show host Conan O'Brien.\""
+      "type": "inferred",
+      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2022."
     },
-    "description": "Slash is an American rock musician best known as the lead guitarist of Guns N' Roses, one of rock's most iconic bands. He has also been a driving force behind Velvet Revolver and Slash's Snakepit, and in 2010 released his debut solo album, simply titled Slash, which entered the Billboard 200 at number three and reached number one in Canada, Austria, New Zealand, and Sweden. The album featured collaborators including Myles Kennedy, Izzy Stradlin, Duff McKagan, Steven Adler, and others. His connection to Conan O'Brien is tangible: while performing on The Tonight Show with Jay Leno in 2010, Slash wore an 'I'm With Coco' pin in public support of Conan O'Brien, and he likely appeared on Conan's own show around 2013.",
-    "confidence": 1,
+    "description": "Slash (born Saul Hudson, July 23, 1965, in Hampstead, London, raised in Stoke-on-Trent before moving to Los Angeles at age six) is an English-American musician best known as lead guitarist of Guns N' Roses, whom he helped bring to worldwide success beginning in the late 1980s. He has also recorded and toured with Velvet Revolver and under his own name. He likely crossed paths with Conan O'Brien through the music-promotion circuit; he appeared on Conan O'Brien Needs a Friend on February 21, 2022.",
+    "confidence": 0.95,
     "needs_review": false,
     "sources": [
-      "https://en.wikipedia.org/wiki/Slash_(album)"
+      "https://en.wikipedia.org/wiki/Slash_(musician)"
     ],
-    "enrichedAt": "2026-09-09T22:46:11.593Z",
-    "birth_year": "",
+    "enrichedAt": "2026-09-11T00:04:33.426Z",
+    "birth_year": "1965",
     "death_year": "",
     "gender": "male",
-    "nationality": "American",
-    "prestige_signals": [
-      "Western Single of the Year at the 24th Japan Gold Disc Award"
-    ],
-    "primary_platform": "music",
-    "upcoming_work": []
+    "nationality": "British-American",
+    "prestige_signals": []
   },
   "Ron Reagan": {
     "entity": {
@@ -107125,215 +106997,32 @@
     "entity": {
       "name": "Michael McKean",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_McKean",
-      "confidence": 1
+      "confidence": 0.95
     },
     "profession": [
       "actor",
       "comedian",
       "screenwriter",
-      "composer",
       "musician"
     ],
-    "known_for": [
-      {
-        "title": "Laverne & Shirley",
-        "type": "tv",
-        "year": "1976"
-      },
-      {
-        "title": "Saturday Night Live",
-        "type": "tv",
-        "year": "1994"
-      },
-      {
-        "title": "Dream On",
-        "type": "tv",
-        "year": "1990"
-      },
-      {
-        "title": "Used Cars",
-        "type": "film",
-        "year": "1980"
-      },
-      {
-        "title": "Clue",
-        "type": "film",
-        "year": "1985"
-      },
-      {
-        "title": "The Big Picture",
-        "type": "film",
-        "year": "1989"
-      },
-      {
-        "title": "This Is Spinal Tap",
-        "type": "film",
-        "year": "1984"
-      },
-      {
-        "title": "Best in Show",
-        "type": "film",
-        "year": "2000"
-      },
-      {
-        "title": "A Mighty Wind",
-        "type": "film",
-        "year": "2003"
-      },
-      {
-        "title": "For Your Consideration",
-        "type": "film",
-        "year": "2006"
-      },
-      {
-        "title": "A Mighty Wind",
-        "type": "music",
-        "year": "2003"
-      },
-      {
-        "title": "A Kiss at the End of the Rainbow",
-        "type": "music",
-        "year": "2003"
-      },
-      {
-        "title": "Better Call Saul",
-        "type": "tv",
-        "year": "2015"
-      },
-      {
-        "title": "Rugrats",
-        "type": "tv",
-        "year": "2020"
-      },
-      {
-        "title": "Curb Your Enthusiasm",
-        "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "Veep",
-        "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "Grace and Frankie",
-        "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "Breeders",
-        "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "The Diplomat",
-        "type": "tv",
-        "year": ""
-      },
-      {
-        "title": "Hairspray",
-        "type": "other",
-        "year": "2004"
-      },
-      {
-        "title": "All the Way",
-        "type": "other",
-        "year": "2014"
-      },
-      {
-        "title": "Superior Donuts",
-        "type": "other",
-        "year": "2009"
-      },
-      {
-        "title": "The Best Man",
-        "type": "other",
-        "year": "2012"
-      },
-      {
-        "title": "The Little Foxes",
-        "type": "other",
-        "year": "2017"
-      },
-      {
-        "title": "D.A.R.Y.L.",
-        "type": "film",
-        "year": "1985"
-      },
-      {
-        "title": "Planes, Trains and Automobiles",
-        "type": "film",
-        "year": "1987"
-      },
-      {
-        "title": "Earth Girls Are Easy",
-        "type": "film",
-        "year": "1988"
-      },
-      {
-        "title": "Short Circuit 2",
-        "type": "film",
-        "year": "1988"
-      },
-      {
-        "title": "Flashback",
-        "type": "film",
-        "year": "1990"
-      },
-      {
-        "title": "Memoirs of an Invisible Man",
-        "type": "film",
-        "year": "1992"
-      },
-      {
-        "title": "Coneheads",
-        "type": "film",
-        "year": "1993"
-      },
-      {
-        "title": "Airheads",
-        "type": "film",
-        "year": "1994"
-      },
-      {
-        "title": "Radioland Murders",
-        "type": "film",
-        "year": "1994"
-      },
-      {
-        "title": "The Brady Bunch Movie",
-        "type": "film",
-        "year": "1995"
-      },
-      {
-        "title": "The X-Files",
-        "type": "tv",
-        "year": "1998"
-      }
-    ],
+    "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 1993."
+      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2025."
     },
-    "description": "Michael McKean is an American actor, comedian, screenwriter, composer, and musician whose career spans five decades across television, film, stage, and music. He first gained wide recognition as Lenny Kosnowski on Laverne & Shirley and became a cult figure through his collaborations with Christopher Guest, including This Is Spinal Tap, Best in Show, and A Mighty Wind — the last earning him a Grammy Award. A Primetime Emmy nominee for his role as Chuck McGill on Better Call Saul, he has also appeared on Broadway in productions including Hairspray and The Little Foxes. He likely first crossed paths with Conan O'Brien on Late Night with Conan O'Brien around 1993.",
-    "confidence": 1,
+    "description": "Michael John McKean (born October 17, 1947, in New York City) is an American actor, comedian, screenwriter, composer, and musician. He co-wrote and starred as David St. Hubbins in This Is Spinal Tap (1984), and is also known for Laverne & Shirley and his Emmy-nominated role in Better Call Saul. He appeared, in character as David St. Hubbins, on Conan O'Brien Needs a Friend on September 15, 2025, alongside fellow Spinal Tap members Christopher Guest and Harry Shearer.",
+    "confidence": 0.95,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Michael_McKean"
     ],
-    "enrichedAt": "2026-09-09T07:54:13.370Z",
+    "enrichedAt": "2026-09-11T00:04:33.426Z",
     "birth_year": "1947",
     "death_year": "",
     "gender": "male",
     "nationality": "American",
-    "prestige_signals": [
-      "Grammy Award winner",
-      "Academy Award nominee",
-      "Primetime Emmy Award nominee"
-    ],
-    "primary_platform": "tv",
-    "upcoming_work": []
+    "prestige_signals": []
   },
   "Daniel Baldwin": {
     "entity": {
@@ -157904,77 +157593,6 @@
     "primary_platform": "tv",
     "upcoming_work": []
   },
-  "Spinal Tap": {
-    "entity": {
-      "name": "Spinal Tap (band)",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Spinal_Tap_(band)",
-      "confidence": 1
-    },
-    "profession": [
-      "parody band",
-      "comedians",
-      "musicians"
-    ],
-    "known_for": [
-      {
-        "title": "The T.V. Show",
-        "type": "tv",
-        "year": "1979"
-      },
-      {
-        "title": "This Is Spinal Tap",
-        "type": "film",
-        "year": "1984"
-      },
-      {
-        "title": "This Is Spinal Tap",
-        "type": "music",
-        "year": "1984"
-      },
-      {
-        "title": "Break Like the Wind",
-        "type": "music",
-        "year": "1992"
-      },
-      {
-        "title": "Back from the Dead",
-        "type": "music",
-        "year": "2009"
-      },
-      {
-        "title": "Spinal Tap II: The End Continues",
-        "type": "film",
-        "year": "2025"
-      },
-      {
-        "title": "The End Continues",
-        "type": "music",
-        "year": "2025"
-      }
-    ],
-    "recent_work": [
-      "Spinal Tap II: The End Continues (2025 film)",
-      "The End Continues (2025 album)"
-    ],
-    "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2025."
-    },
-    "description": "Spinal Tap is a parody English heavy metal band created by American comedians and musicians Michael McKean, Christopher Guest, and Harry Shearer, who play fictional rockers David St. Hubbins, Nigel Tufnel, and Derek Smalls, respectively. The group first appeared in 1979 on the ABC sketch comedy pilot The T.V. Show before starring in the landmark 1984 mockumentary This Is Spinal Tap, which spawned an album of the same name. They have since released three additional studio albums, including Break Like the Wind and Back from the Dead, and returned in 2025 with the sequel film Spinal Tap II: The End Continues and its accompanying soundtrack. They likely first appeared on Conan O'Brien Needs a Friend in 2025.",
-    "confidence": 1,
-    "needs_review": false,
-    "sources": [
-      "https://en.wikipedia.org/wiki/Spinal_Tap_(band)"
-    ],
-    "enrichedAt": "2026-09-10T00:20:10.110Z",
-    "birth_year": "",
-    "death_year": "",
-    "gender": "",
-    "nationality": "",
-    "prestige_signals": [],
-    "primary_platform": "film",
-    "upcoming_work": []
-  },
   "Rachel Sennott": {
     "entity": {
       "name": "Rachel Sennott",
@@ -158650,92 +158268,6 @@
       "George Washington Book Prize winner"
     ],
     "primary_platform": "other",
-    "upcoming_work": []
-  },
-  "Beastie Boys": {
-    "entity": {
-      "name": "Beastie Boys",
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Beastie_Boys",
-      "confidence": 1
-    },
-    "profession": [
-      "hip-hop group",
-      "rock group",
-      "musicians",
-      "rappers"
-    ],
-    "known_for": [
-      {
-        "title": "Cooky Puss",
-        "type": "music",
-        "year": "1983"
-      },
-      {
-        "title": "Licensed to Ill",
-        "type": "music",
-        "year": "1986"
-      },
-      {
-        "title": "Paul's Boutique",
-        "type": "music",
-        "year": "1989"
-      },
-      {
-        "title": "Check Your Head",
-        "type": "music",
-        "year": "1992"
-      },
-      {
-        "title": "Ill Communication",
-        "type": "music",
-        "year": "1994"
-      },
-      {
-        "title": "Hello Nasty",
-        "type": "music",
-        "year": "1998"
-      },
-      {
-        "title": "To the 5 Boroughs",
-        "type": "music",
-        "year": "2004"
-      },
-      {
-        "title": "The Mix-Up",
-        "type": "music",
-        "year": "2007"
-      },
-      {
-        "title": "Hot Sauce Committee Part Two",
-        "type": "music",
-        "year": "2011"
-      },
-      {
-        "title": "Beastie Boys Book",
-        "type": "other",
-        "year": ""
-      }
-    ],
-    "recent_work": [],
-    "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2024."
-    },
-    "description": "The Beastie Boys were a New York City hip-hop and rock group comprising Ad-Rock (Adam Horovitz), MCA (Adam Yauch), and Mike D (Michael Diamond). Formed in 1981 from the ashes of hardcore punk outfit the Young Aborigines, they became one of the most influential acts in popular music, releasing landmark albums including Licensed to Ill — the first rap album to top the Billboard 200 — Paul's Boutique, Check Your Head, Ill Communication, and Hello Nasty. Inducted into the Rock and Roll Hall of Fame in 2012, the group disbanded following the death of Yauch that same year. The surviving members likely crossed paths with Conan O'Brien on his podcast Conan O'Brien Needs a Friend around 2024.",
-    "confidence": 1,
-    "needs_review": false,
-    "sources": [
-      "https://en.wikipedia.org/wiki/Beastie_Boys"
-    ],
-    "enrichedAt": "2026-09-09T08:43:12.188Z",
-    "birth_year": "",
-    "death_year": "",
-    "gender": "",
-    "nationality": "American",
-    "prestige_signals": [
-      "Rock and Roll Hall of Fame inductees (2012, third rap group inducted)"
-    ],
-    "primary_platform": "music",
     "upcoming_work": []
   },
   "Alex Edelman": {
@@ -159864,25 +159396,6 @@
     "prestige_signals": [],
     "primary_platform": "music",
     "upcoming_work": []
-  },
-  "Amir From Iran": {
-    "entity": {
-      "name": "Amir From Iran",
-      "wikipedia_url": "",
-      "confidence": 0
-    },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
-    "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2022."
-    },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T21:13:00.476Z"
   },
   "Roy Wood Jr.": {
     "entity": {
@@ -207468,22 +206981,32 @@
   },
   "Tracy Nelson": {
     "entity": {
-      "name": "Tracy Nelson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Tracy Nelson (actress)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tracy_Nelson_(actress)",
+      "confidence": 0.9
     },
-    "profession": [],
+    "profession": [
+      "actress"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T21:21:00.765Z"
+    "description": "Tracy Kristine Nelson (born October 25, 1963, in Santa Monica, California) is an American actress, daughter of musician and actor Ricky Nelson and actress Kristin Nelson. She is known for playing Sister Stephanie \"Steve\" Oskowski on Father Dowling Mysteries (1989-91). She appeared on Late Night with Conan O'Brien on January 1, 1997, alongside Louis C.K. and Robert Pastorelli.",
+    "confidence": 0.9,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tracy_Nelson_(actress)",
+      "https://www.metacritic.com/tv/late-night-with-conan-obrien/season-4/episode-51-louis-cktracy-nelsonrobert-pastorelli/"
+    ],
+    "enrichedAt": "2026-09-10T23:52:55.786Z",
+    "birth_year": "1963",
+    "death_year": "",
+    "gender": "female",
+    "nationality": "American",
+    "prestige_signals": []
   },
   "Dave Attel": {
     "entity": {
@@ -209214,7 +208737,7 @@
     "entity": {
       "name": "Christopher Guest",
       "wikipedia_url": "https://en.wikipedia.org/wiki/Christopher_Guest",
-      "confidence": 1
+      "confidence": 0.95
     },
     "profession": [
       "actor",
@@ -209222,82 +208745,24 @@
       "screenwriter",
       "director"
     ],
-    "known_for": [
-      {
-        "title": "This Is Spinal Tap",
-        "type": "film",
-        "year": "1984"
-      },
-      {
-        "title": "Waiting for Guffman",
-        "type": "film",
-        "year": "1996"
-      },
-      {
-        "title": "Best in Show",
-        "type": "film",
-        "year": "2000"
-      },
-      {
-        "title": "A Mighty Wind",
-        "type": "film",
-        "year": "2003"
-      },
-      {
-        "title": "For Your Consideration",
-        "type": "film",
-        "year": "2006"
-      },
-      {
-        "title": "Mascots",
-        "type": "film",
-        "year": "2016"
-      },
-      {
-        "title": "Death Wish",
-        "type": "film",
-        "year": "1974"
-      },
-      {
-        "title": "Little Shop of Horrors",
-        "type": "film",
-        "year": "1986"
-      },
-      {
-        "title": "The Princess Bride",
-        "type": "film",
-        "year": "1987"
-      },
-      {
-        "title": "A Few Good Men",
-        "type": "film",
-        "year": "1992"
-      },
-      {
-        "title": "Saturday Night Live",
-        "type": "tv",
-        "year": "1984"
-      }
-    ],
+    "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
-      "evidence": "First appeared on Late Night with Conan O'Brien in 1997."
+      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2025."
     },
-    "description": "Christopher Guest is an American-British actor, comedian, screenwriter, and director best known for writing, directing, and starring in a celebrated series of mockumentary comedy films, including Waiting for Guffman, Best in Show, A Mighty Wind, For Your Consideration, and Mascots. He co-wrote and appeared in the rock satire This Is Spinal Tap and has acted in films such as The Princess Bride, Little Shop of Horrors, and A Few Good Men. He also served as a cast member on Saturday Night Live's tenth season. A hereditary British peer holding the title 5th Baron Haden-Guest, he likely crossed paths with Conan O'Brien on Late Night with Conan O'Brien as early as 1997.",
-    "confidence": 1,
+    "description": "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948, in New York City) is an American-British actor, comedian, screenwriter, and director. He co-wrote and starred as Nigel Tufnel in This Is Spinal Tap (1984) and went on to direct mockumentaries including Waiting for Guffman, Best in Show, and A Mighty Wind; he was also a cast member on Saturday Night Live's 10th season. He appeared, in character as Nigel Tufnel, on Conan O'Brien Needs a Friend on September 15, 2025, alongside fellow Spinal Tap members Michael McKean and Harry Shearer.",
+    "confidence": 0.95,
     "needs_review": false,
     "sources": [
       "https://en.wikipedia.org/wiki/Christopher_Guest"
     ],
-    "enrichedAt": "2026-09-09T09:38:10.214Z",
+    "enrichedAt": "2026-09-11T00:04:33.426Z",
     "birth_year": "1948",
     "death_year": "",
     "gender": "male",
-    "nationality": "American-British",
-    "prestige_signals": [],
-    "primary_platform": "film",
-    "upcoming_work": []
+    "nationality": "American",
+    "prestige_signals": []
   },
   "Hugh Fink": {
     "entity": {
@@ -275860,22 +275325,32 @@
   },
   "Keith Robinson": {
     "entity": {
-      "name": "Keith Robinson",
-      "wikipedia_url": "",
-      "confidence": 0
+      "name": "Keith Robinson (comedian)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Keith_Robinson_(comedian)",
+      "confidence": 0.9
     },
-    "profession": [],
+    "profession": [
+      "stand-up comedian",
+      "actor"
+    ],
     "known_for": [],
     "recent_work": [],
     "conan_connection": {
       "type": "inferred",
       "evidence": "First appeared on Late Night with Conan O'Brien in 2008."
     },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T21:33:00.849Z"
+    "description": "Keith Robinson (born October 23, 1963) is an American stand-up comedian and comic actor from South Philadelphia. A 1993 Star Search finalist, he became a regular on Comedy Central's Tough Crowd with Colin Quinn and a frequent emcee at Manhattan's Comedy Cellar, and later appeared in films including Trainwreck and King of Staten Island. He performed a stand-up set on Late Night with Conan O'Brien on March 13, 2008, alongside Meredith Vieira and Harland Williams.",
+    "confidence": 0.9,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Keith_Robinson_(comedian)"
+    ],
+    "enrichedAt": "2026-09-10T23:52:55.786Z",
+    "birth_year": "1963",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": []
   },
   "Fred Simmons": {
     "entity": {
@@ -319057,25 +318532,6 @@
     "primary_platform": "music",
     "upcoming_work": []
   },
-  "Jessie Gaskell": {
-    "entity": {
-      "name": "Jessie Gaskell",
-      "wikipedia_url": "",
-      "confidence": 0
-    },
-    "profession": [],
-    "known_for": [],
-    "recent_work": [],
-    "conan_connection": {
-      "type": "inferred",
-      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2021."
-    },
-    "description": "",
-    "confidence": 0,
-    "needs_review": true,
-    "sources": [],
-    "enrichedAt": "2026-09-10T21:14:00.886Z"
-  },
   "Catherine O'Hara": {
     "entity": {
       "name": "Catherine O'Hara",
@@ -319596,5 +319052,65 @@
     ],
     "primary_platform": "film",
     "upcoming_work": []
+  },
+  "Michael Diamond": {
+    "entity": {
+      "name": "Michael Diamond",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Michael_Diamond",
+      "confidence": 0.95
+    },
+    "profession": [
+      "rapper",
+      "musician",
+      "producer"
+    ],
+    "known_for": [],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2024."
+    },
+    "description": "Michael Louis Diamond, known professionally as Mike D (born November 20, 1965, in Manhattan, New York City), is an American rapper, musician, and producer, and a founding member of the hip-hop group Beastie Boys. He appeared, alongside fellow member Adam Horovitz, on Conan O'Brien Needs a Friend on August 12, 2024, discussing the band's legacy and the 30th anniversary of Ill Communication.",
+    "confidence": 0.95,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Michael_Diamond"
+    ],
+    "enrichedAt": "2026-09-11T00:04:33.426Z",
+    "birth_year": "1965",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": []
+  },
+  "Adam Horovitz": {
+    "entity": {
+      "name": "Adam Horovitz",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Adam_Horovitz",
+      "confidence": 0.95
+    },
+    "profession": [
+      "rapper",
+      "guitarist",
+      "actor"
+    ],
+    "known_for": [],
+    "recent_work": [],
+    "conan_connection": {
+      "type": "inferred",
+      "evidence": "First appeared on Conan O'Brien Needs a Friend in 2024."
+    },
+    "description": "Adam Keefe Horovitz, known professionally as Ad-Rock (born October 31, 1966, raised on Park Avenue in Manhattan), is an American rapper, guitarist, and actor, and a founding member of the hip-hop group Beastie Boys. He appeared, alongside fellow member Michael Diamond, on Conan O'Brien Needs a Friend on August 12, 2024, discussing the band's legacy and the 30th anniversary of Ill Communication.",
+    "confidence": 0.95,
+    "needs_review": false,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Adam_Horovitz"
+    ],
+    "enrichedAt": "2026-09-11T00:04:33.426Z",
+    "birth_year": "1966",
+    "death_year": "",
+    "gender": "male",
+    "nationality": "American",
+    "prestige_signals": []
   }
 }
