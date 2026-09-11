@@ -9,6 +9,8 @@ export interface GuestFact {
   /** Every ROUNDUP_ERA this guest appeared in — not just the selected ones. */
   eras: Era[];
   totalAppearances: number;
+  /** Appearance count within each era this guest appeared in. */
+  appearancesByEra: Partial<Record<Era, number>>;
   profession: string | null;
   generation: "Z" | "M" | "X" | "B" | null;
   gender: string | null;
@@ -251,22 +253,41 @@ function clubFact(guests: GuestFact[], sel: Era[]): Fact | null {
   };
 }
 
-function recordFact(guests: GuestFact[], sel: Era[]): Fact | null {
-  const pool = subsetGuests(guests, sel);
-  if (pool.length === 0) return null;
-  const top = pool.reduce((best, r) => (r.totalAppearances > best.totalAppearances ? r : best), pool[0]);
-  if (top.totalAppearances < 3) return null;
-  const name = <span key="name" className="font-semibold text-[var(--purple)]">{top.name}</span>;
-  if (sel.length === 4) {
+// "Most frequent guest of this era" has to count appearances made WITHIN the
+// selected era(s), not a guest's career-wide total, and has to consider every
+// guest who showed up in the selection at all — not just guests whose entire
+// career happened to sit inside it. Getting either of those wrong is exactly
+// how this broke: filtering the pool down to subsetGuests (career confined to
+// the selection) excluded Bill Burr (19 total, 14 on Conan + 5 on the
+// podcast) from the podcast-only record entirely, leaving Matthew Rhys
+// (podcast-only, 3 appearances) to win by default even though Burr alone had
+// 5 podcast appearances.
+function recordFact(guests: GuestFact[], sel: Era[], allEras: Era[]): Fact | null {
+  const name = (n: string) => <span key="name" className="font-semibold text-[var(--purple)]">{n}</span>;
+
+  if (sel.length === allEras.length) {
+    // Whole-history record: a guest's career total, including any appearances
+    // outside these four eras (e.g. Conan Must Go specials).
+    const pool = unionGuests(guests, sel);
+    if (pool.length === 0) return null;
+    const top = pool.reduce((best, r) => (r.totalAppearances > best.totalAppearances ? r : best), pool[0]);
+    if (top.totalAppearances < 3) return null;
     return {
       icon: "🔁",
-      parts: [name, ` holds the all time record with ${top.totalAppearances} appearances across the show's whole history.`],
+      parts: [name(top.name), ` holds the all time record with ${top.totalAppearances} appearances across the show's whole history.`],
     };
   }
+
+  const scoreFor = (g: GuestFact) => sel.reduce((sum, e) => sum + (g.appearancesByEra[e] || 0), 0);
+  const pool = unionGuests(guests, sel);
+  if (pool.length === 0) return null;
+  const top = pool.reduce((best, r) => (scoreFor(r) > scoreFor(best) ? r : best), pool[0]);
+  const topScore = scoreFor(top);
+  if (topScore < 3) return null;
   const scope = sel.length === 1 ? ERA_LABELS[sel[0]] : "the eras you picked";
   return {
     icon: "🔁",
-    parts: [name, ` is the most frequent guest of ${scope} alone, with ${top.totalAppearances} appearances.`],
+    parts: [name(top.name), ` is the most frequent guest of ${scope} alone, with ${topScore} appearances.`],
   };
 }
 
@@ -380,7 +401,7 @@ export default function RoundupFunFacts({
     professionSwingFact(guests, sel, allEras),
     generationProfessionFact(guests, sel),
     clubFact(guests, sel),
-    recordFact(guests, sel),
+    recordFact(guests, sel, allEras),
     professionLoyaltyFact(guests, sel),
     generationLoyaltyFact(guests, sel),
     genderFact(guests, sel, allEras),

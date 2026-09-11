@@ -112,10 +112,15 @@ export default function RoundupPage() {
       else if (birthYear >= 1965) generation = "X";
       else generation = "B";
     }
+    const appearancesByEra: Partial<Record<Era, number>> = {};
+    for (const era of guestEras) {
+      appearancesByEra[era] = guest.appearances.filter((a) => a.era === era).length;
+    }
     guestFacts.push({
       name: guest.name,
       eras: guestEras,
       totalAppearances: guest.appearances.length,
+      appearancesByEra,
       profession: bucketProfession(guest.bio?.profession),
       generation,
       gender: guest.bio?.gender || null,
