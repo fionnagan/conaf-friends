@@ -2,16 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ERA_LABELS, getEraTextColor } from "@/lib/data";
+import RoundupFunFacts, { type GuestFact } from "./RoundupFunFacts";
 import type { Era } from "@/lib/types";
 
 interface Props {
   eras: Era[];
   eraTotals: Record<Era, number>;
-  crossover: number[][];
   professionByGuest: { eras: Era[]; bucket: string }[];
   professionCategoryOrder: string[];
   generationByGuest: { eras: Era[]; bucket: string }[];
   generationCategoryOrder: string[];
+  guestFacts: GuestFact[];
 }
 
 // Fixed-order categorical palette (dark-surface steps), validated with the
@@ -28,10 +29,6 @@ const CATEGORY_COLORS = [
   "#9085e9", // violet
   "#e66767", // red
 ];
-
-// Single-hue sequential ramp (brand orange, blended over the card surface)
-// for the heatmap — magnitude reads by lightness/chroma alone, low to high.
-const SEQUENTIAL_RAMP = ["#2c2226", "#543026", "#803f25", "#b04f24", "#e05f22"];
 
 // A category's color comes from its fixed position in the caller-supplied
 // order, never from its rank in the current filter view — so Gen X (say) is
@@ -251,20 +248,13 @@ function StackedBar({
 export default function RoundupClient({
   eras,
   eraTotals,
-  crossover,
   professionByGuest,
   professionCategoryOrder,
   generationByGuest,
   generationCategoryOrder,
+  guestFacts,
 }: Props) {
   const [selected, setSelected] = useState<Set<Era>>(new Set(eras));
-  const [heatmapTable, setHeatmapTable] = useState(false);
-  const [hoveredCell, setHoveredCell] = useState<string | null>(null);
-  const { tip: heatTip, show: showHeat, hide: hideHeat } = useMarkTooltip<{
-    rowEra: Era;
-    colEra: Era;
-    value: number;
-  }>();
 
   const toggleEra = (era: Era) => {
     setSelected((prev) => {
@@ -277,33 +267,6 @@ export default function RoundupClient({
       return next;
     });
   };
-
-  const maxOffDiagonal = useMemo(() => {
-    let max = 0;
-    crossover.forEach((row, i) =>
-      row.forEach((v, j) => {
-        if (i !== j) max = Math.max(max, v);
-      })
-    );
-    return max || 1;
-  }, [crossover]);
-
-  const rampIndex = (value: number) => {
-    const frac = value / maxOffDiagonal;
-    return Math.min(SEQUENTIAL_RAMP.length - 1, Math.floor(frac * SEQUENTIAL_RAMP.length));
-  };
-
-  // Raw overlap counts are dominated by whichever era ran longer and simply
-  // had more guests to begin with — 161 reads as thin next to Late Night
-  // NBC's 2,440 guests, but it's 66% of every guest Tonight Show ever had.
-  // Expressing overlap as a share of the smaller (shorter-running) era's
-  // total surfaces that instead of leaving it to be misread from the count.
-  const pctOfSmallerEra = (rowEra: Era, colEra: Era, value: number) => {
-    const smaller = Math.min(eraTotals[rowEra], eraTotals[colEra]);
-    return smaller > 0 ? Math.round((value / smaller) * 100) : 0;
-  };
-  const smallerEraLabel = (rowEra: Era, colEra: Era) =>
-    ERA_LABELS[eraTotals[rowEra] < eraTotals[colEra] ? rowEra : colEra];
 
   // Counts each guest once against the union of selected eras, not once per
   // era they happen to have appeared in — otherwise a guest who crossed
@@ -425,143 +388,7 @@ export default function RoundupClient({
         <StackedBar segments={professionSegments.segments} total={professionSegments.total} />
       </section>
 
-      {/* Era Crossover heatmap */}
-      <section>
-        <div className="flex items-baseline justify-between mb-4">
-          <h2 className="font-serif text-2xl font-semibold">Era Crossover</h2>
-          <button
-            onClick={() => setHeatmapTable((v) => !v)}
-            className="text-xs text-[var(--text-muted)] underline hover:text-[var(--orange)]"
-          >
-            {heatmapTable ? "View as chart" : "View as table"}
-          </button>
-        </div>
-
-        {heatmapTable ? (
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm max-w-md">
-              <thead>
-                <tr className="text-left text-[var(--text-muted)] border-b border-[var(--border)]">
-                  <th className="py-1.5 font-medium">Pair</th>
-                  <th className="py-1.5 font-medium text-right">Both</th>
-                  <th className="py-1.5 font-medium text-right">% of smaller era</th>
-                </tr>
-              </thead>
-              <tbody>
-                {eras.map((rowEra, i) =>
-                  eras.map((colEra, j) => {
-                    if (j >= i) return null;
-                    const value = crossover[i][j];
-                    return (
-                      <tr key={`${rowEra}-${colEra}`} className="border-b border-[var(--border)]/50">
-                        <td className="py-1.5">
-                          {ERA_LABELS[rowEra]} &amp; {ERA_LABELS[colEra]}
-                        </td>
-                        <td className="py-1.5 text-right tabular-nums">{value}</td>
-                        <td className="py-1.5 text-right tabular-nums">
-                          {pctOfSmallerEra(rowEra, colEra, value)}%
-                        </td>
-                      </tr>
-                    );
-                  })
-                )}
-              </tbody>
-            </table>
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <div
-              className="grid gap-[3px] max-w-md"
-              style={{ gridTemplateColumns: `88px repeat(${eras.length - 1}, 72px)` }}
-            >
-              <div />
-              {eras.slice(0, -1).map((e) => (
-                <div
-                  key={e}
-                  className="text-[11px] font-medium text-center pb-1.5 flex items-end justify-center leading-tight"
-                  style={{ color: getEraTextColor(e) }}
-                >
-                  {ERA_LABELS[e]}
-                </div>
-              ))}
-              {eras.slice(1).map((rowEra, ri) => {
-                const i = ri + 1;
-                return (
-                  <div key={rowEra} className="contents">
-                    <div
-                      className="text-[11px] font-medium flex items-center pr-2 leading-tight"
-                      style={{ color: getEraTextColor(rowEra) }}
-                    >
-                      {ERA_LABELS[rowEra]}
-                    </div>
-                    {eras.slice(0, -1).map((colEra, j) => {
-                      if (j >= i) {
-                        return <div key={colEra} />;
-                      }
-                      const value = crossover[i][j];
-                      const dimmed = !selected.has(rowEra) || !selected.has(colEra);
-                      const cellKey = `${i}-${j}`;
-                      const isHovered = hoveredCell === cellKey;
-                      const onEnter = (e: React.SyntheticEvent<HTMLElement>) => {
-                        setHoveredCell(cellKey);
-                        showHeat(e, { rowEra, colEra, value });
-                      };
-                      const onLeave = () => {
-                        setHoveredCell(null);
-                        hideHeat();
-                      };
-                      return (
-                        <div
-                          key={colEra}
-                          tabIndex={0}
-                          role="img"
-                          aria-label={`${ERA_LABELS[rowEra]} & ${ERA_LABELS[colEra]}: ${value} guests appeared in both (${pctOfSmallerEra(rowEra, colEra, value)}% of ${smallerEraLabel(rowEra, colEra)}'s total)`}
-                          className="aspect-square rounded-md flex items-center justify-center text-xs font-medium tabular-nums transition-[opacity,filter] cursor-default outline-none"
-                          style={{
-                            background: SEQUENTIAL_RAMP[rampIndex(value)],
-                            color: "#fff",
-                            opacity: dimmed ? 0.35 : 1,
-                            filter: isHovered ? "brightness(1.25)" : undefined,
-                            outline: isHovered ? "2px solid rgba(255,255,255,0.6)" : undefined,
-                            outlineOffset: isHovered ? "-2px" : undefined,
-                          }}
-                          onPointerEnter={onEnter}
-                          onPointerLeave={onLeave}
-                          onFocus={onEnter}
-                          onBlur={onLeave}
-                        >
-                          {value}
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {heatTip && (
-          <MarkTooltip rect={heatTip.rect}>
-            <div className="flex items-center gap-1.5 mb-1">
-              <span
-                className="w-2.5 h-2.5 rounded-sm inline-block flex-shrink-0"
-                style={{ background: SEQUENTIAL_RAMP[rampIndex(heatTip.content.value)] }}
-              />
-              <span className="text-[var(--text-muted)]">
-                {ERA_LABELS[heatTip.content.rowEra]} &amp; {ERA_LABELS[heatTip.content.colEra]}
-              </span>
-            </div>
-            <div className="text-sm font-semibold text-[var(--text)]">
-              {heatTip.content.value} guests overlap
-            </div>
-            <div className="text-[var(--text-muted)]">
-              {pctOfSmallerEra(heatTip.content.rowEra, heatTip.content.colEra, heatTip.content.value)}% of{" "}
-              {smallerEraLabel(heatTip.content.rowEra, heatTip.content.colEra)}&apos;s total
-            </div>
-          </MarkTooltip>
-        )}
-      </section>
+      <RoundupFunFacts guests={guestFacts} selected={selected} allEras={eras} />
     </div>
   );
 }
