@@ -182,7 +182,31 @@ export function getCrossedPathsData(): CrossedPathsData {
 // clean single words, and substring matching still buckets those correctly
 // instead of dumping them in "Other". Shared by the Roundup and Explorer
 // pages so a guest's profession category is identical wherever it's shown.
+// Athlete is checked first, ahead of Comedian/Actor/etc. Bucketing works by
+// joining a guest's ENTIRE profession list into one blob and taking the
+// first bucket (in this array's order) whose keyword appears anywhere in it
+// — so a guest's incidental, secondary professions can out-rank their real,
+// defining one if that secondary bucket happens to sit earlier in this list.
+// Confirmed for real: Shaquille O'Neal ("professional basketball player,
+// sports analyst, rapper, ..., actor, ...") was landing in "Actor" purely
+// because "actor" is a keyword and Actor used to be checked before Athlete,
+// even though "professional basketball player" — his own first-listed,
+// defining profession — was sitting right there. Same bug hit Magic Johnson,
+// Dennis Rodman, Hulk Hogan, Kareem Abdul-Jabbar, and 20+ other guests whose
+// athletic career is what actually got them booked.
+// Deliberately NOT fixed by switching to "check each guest's own profession
+// array in order, first match wins" instead of reordering the bucket list —
+// that alternative was tried and rejected: it reshuffled 626 other guests
+// site-wide, because Wikipedia's lead-sentence convention often states
+// "is an American actor, comedian, ..." for people primarily known here as
+// comedians (Adam Sandler, Tina Fey, Seth Rogen, ...), flipping their bucket
+// from Comedian to Actor — a real regression for this site's own editorial
+// framing, not a fix. Moving Athlete to the front is the surgical version:
+// it only changes guests whose profession blob contains an athletic-career
+// keyword at all (41 guests), and every one of those changes is a guest
+// whose sport is arguably their most defining trait.
 export const PROFESSION_BUCKETS: [string, string[]][] = [
+  ["Athlete", ["athlete", "basketball", "football", "wrestler", "boxer"]],
   ["Comedian", ["comedian", "stand-up"]],
   ["Actor", ["actor", "actress"]],
   ["Musician", ["musician", "singer", "songwriter", "rapper", "composer"]],
@@ -196,7 +220,6 @@ export const PROFESSION_BUCKETS: [string, string[]][] = [
       "political commentator", "broadcast",
     ],
   ],
-  ["Athlete", ["athlete", "basketball", "football", "wrestler", "boxer"]],
 ];
 
 export const PROFESSION_CATEGORY_ORDER = [...PROFESSION_BUCKETS.map(([label]) => label), "Other"];
