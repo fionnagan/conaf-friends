@@ -25,6 +25,16 @@ const ERAS: Era[] = ["late-night-nbc", "tonight-show", "tbs-conan", "podcast"];
 const GENERATIONS: Generation[] = ["Gen Z", "Millennial", "Gen X", "Boomer+"];
 const PAGE_SIZE = 60;
 
+type SortOption = "default" | "last-seen-newest" | "last-seen-oldest" | "oldest-first" | "youngest-first";
+const SORT_LABELS: Record<SortOption, string> = {
+  default: "Sort: Default",
+  "last-seen-newest": "Last seen: Newest first",
+  "last-seen-oldest": "Last seen: Oldest first",
+  "oldest-first": "Age: Oldest first",
+  "youngest-first": "Age: Youngest first",
+};
+const SORT_OPTIONS: SortOption[] = ["default", "last-seen-newest", "last-seen-oldest", "oldest-first", "youngest-first"];
+
 interface Props {
   guests: Guest[];
   guestCrossings: Record<string, GuestCrossing[]>;
@@ -68,6 +78,7 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
   const [selectedOccupations, setSelectedOccupations] = useState<Set<string>>(new Set());
   const [selectedRecency, setSelectedRecency] = useState<Set<Recency>>(new Set());
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [sortBy, setSortBy] = useState<SortOption>("default");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [modalGuest, setModalGuest] = useState<Guest | null>(null);
 
@@ -146,7 +157,34 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
     return result;
   }, [eligibleGuests, nameQuery, selectedEras, selectedGenerations, selectedOccupations, selectedRecency]);
 
-  const visible = filtered.slice(0, visibleCount);
+  // Guests missing the sorted-on value (no appearance date, no birth year)
+  // always sink to the end, regardless of direction, rather than clustering
+  // at the top under a default numeric/string comparison.
+  const sorted = useMemo(() => {
+    if (sortBy === "default") return filtered;
+    const keyed = filtered.map((g) => {
+      const latest = latestAppearance(g);
+      const year = g.bio?.birth_year ? parseInt(g.bio.birth_year, 10) : NaN;
+      return { g, lastSeenDate: latest?.date ?? null, birthYear: Number.isFinite(year) ? year : null };
+    });
+    keyed.sort((a, b) => {
+      if (sortBy === "last-seen-newest" || sortBy === "last-seen-oldest") {
+        if (a.lastSeenDate === null && b.lastSeenDate === null) return 0;
+        if (a.lastSeenDate === null) return 1;
+        if (b.lastSeenDate === null) return -1;
+        return sortBy === "last-seen-newest"
+          ? b.lastSeenDate.localeCompare(a.lastSeenDate)
+          : a.lastSeenDate.localeCompare(b.lastSeenDate);
+      }
+      if (a.birthYear === null && b.birthYear === null) return 0;
+      if (a.birthYear === null) return 1;
+      if (b.birthYear === null) return -1;
+      return sortBy === "oldest-first" ? a.birthYear - b.birthYear : b.birthYear - a.birthYear;
+    });
+    return keyed.map((k) => k.g);
+  }, [filtered, sortBy]);
+
+  const visible = sorted.slice(0, visibleCount);
   const activeFilterCount = selectedEras.size + selectedGenerations.size + selectedOccupations.size + selectedRecency.size;
   const hasFilters = !!nameQuery || activeFilterCount > 0;
 
@@ -172,26 +210,41 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
         />
 
         <div className="flex items-center justify-between gap-3 flex-wrap">
-          <button
-            onClick={() => setFiltersOpen((v) => !v)}
-            aria-expanded={filtersOpen}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium border transition-colors"
-            style={
-              filtersOpen || activeFilterCount > 0
-                ? { background: "rgba(242,101,34,0.12)", borderColor: "var(--orange)", color: "var(--orange)" }
-                : { borderColor: "var(--border)", color: "var(--text-muted)" }
-            }
-          >
-            Filters
-            {activeFilterCount > 0 && (
-              <span className="min-w-[1.25rem] px-1 h-5 rounded-full bg-[var(--orange)] text-[var(--bg)] text-xs font-semibold flex items-center justify-center tabular-nums">
-                {activeFilterCount}
+          <div className="flex items-center gap-2 flex-wrap">
+            <button
+              onClick={() => setFiltersOpen((v) => !v)}
+              aria-expanded={filtersOpen}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium border transition-colors"
+              style={
+                filtersOpen || activeFilterCount > 0
+                  ? { background: "rgba(242,101,34,0.12)", borderColor: "var(--orange)", color: "var(--orange)" }
+                  : { borderColor: "var(--border)", color: "var(--text-muted)" }
+              }
+            >
+              Filters
+              {activeFilterCount > 0 && (
+                <span className="min-w-[1.25rem] px-1 h-5 rounded-full bg-[var(--orange)] text-[var(--bg)] text-xs font-semibold flex items-center justify-center tabular-nums">
+                  {activeFilterCount}
+                </span>
+              )}
+              <span className="text-xs transition-transform" style={{ transform: filtersOpen ? "rotate(180deg)" : undefined }}>
+                ▾
               </span>
-            )}
-            <span className="text-xs transition-transform" style={{ transform: filtersOpen ? "rotate(180deg)" : undefined }}>
-              ▾
-            </span>
-          </button>
+            </button>
+
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              aria-label="Sort guests"
+              className="px-3 py-1.5 rounded-full text-sm font-medium border border-[var(--border)] bg-[var(--bg2)] text-[var(--text-muted)] focus:outline-none focus:border-[var(--orange)]"
+            >
+              {SORT_OPTIONS.map((opt) => (
+                <option key={opt} value={opt}>
+                  {SORT_LABELS[opt]}
+                </option>
+              ))}
+            </select>
+          </div>
 
           <div className="flex items-center gap-3">
             <span className="text-sm text-[var(--text-muted)]">
