@@ -151,6 +151,12 @@ jobs:
           git add data/guests.json data/cold-opens.json data/top-words.json data/word-guests.json data/guest-photos.json data/fans.json data/crossed-paths.json
           git add api/guests_context.json
           git add public/conan-wordcloud.png
-          git add -f scripts/cache/youtube-matches.json scripts/cache/bios.json
+          # photos.json is also written by this run's "Fetching guest photos"
+          # step (index.ts), and shares this file with backfill-photos.yml —
+          # which tracks it. Omitting it here left it modified-but-unstaged
+          # after every commit since backfill-photos.yml first tracked it,
+          # which made `git pull --rebase` below fail with "unstaged changes"
+          # and silently dropped every weekly run's data for weeks.
+          git add -f scripts/cache/youtube-matches.json scripts/cache/bios.json scripts/cache/photos.json
           git add scripts/ingest/transcripts/ scripts/ingest/chunks.jsonl scripts/ingest/embedded-episodes.json
           scripts/ci/commit-and-push.sh "chore: weekly episode ingest $(date -u '+%Y-%m-%d')"
