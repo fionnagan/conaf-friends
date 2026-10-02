@@ -37,6 +37,23 @@ function loadExcludedGuestNames(): Set<string> {
     return new Set();
   }
 }
+
+// Co-guests a specific episode's title names that the extractor never saw at
+// all — the cold open only speaks for the primary guest ("Patton Oswalt &
+// Meredith Salenger" extracted as just "Patton Oswalt", "Desus & Mero" as
+// just "Desus Nice"), so there's no combined string for guest-splits.json to
+// key on. Keyed by <normalized primary guest name>::<ISO date> instead of
+// just the name, since the primary guest's own name is reused across many
+// other solo episodes — keying on the bare name would wrongly add this
+// co-guest to every one of them, not just this specific taping.
+function loadEpisodeCoGuests(): Record<string, string[]> {
+  try {
+    const p = path.join(__dirname, 'episode-co-guests.json');
+    return JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch {
+    return {};
+  }
+}
 import { computeScore } from './compute-scores';
 import type {
   Guest,
@@ -136,6 +153,7 @@ export function merge(
   }
 
   const guestSplits = loadGuestSplits();
+  const episodeCoGuests = loadEpisodeCoGuests();
 
   // Process podcast episodes
   for (const ep of podcastEpisodes) {
@@ -226,6 +244,20 @@ export function merge(
         guest.mentionedGuests = [
           ...new Set([...(guest.mentionedGuests || []), ...mentioned]),
         ];
+      }
+
+      // A co-guest the title named but the extractor never saw (the cold
+      // open only speaks for `name`) — same episodeId, no override text
+      // to give them their own cold open word, so they share this one.
+      const coGuestNames = episodeCoGuests[`${name}::${epDate}`] ?? [];
+      for (const rawCoGuestName of coGuestNames) {
+        const coGuestName = normalizeGuestName(rawCoGuestName);
+        const coGuest = getGuest(coGuestName);
+        coGuest.appearances.push({
+          ...baseAppearance,
+          coldOpenWord: ep.coldOpenWord,
+          coldOpenSentiment: ep.coldOpenSentiment,
+        });
       }
     }
   }
