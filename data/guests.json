@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-02T05:24:03.529Z",
-  "totalGuests": 3242,
-  "totalAppearances": 9111,
+  "generatedAt": "2026-10-02T06:20:24.778Z",
+  "totalGuests": 3244,
+  "totalAppearances": 9113,
   "guests": [
     {
       "id": "robert-smigel",
@@ -10234,8 +10234,8 @@
           "era": "podcast",
           "date": "2021-03-08",
           "episodeId": "podcast-2021-03-08",
-          "coldOpenWord": "zippy and super-duper excited, respectively",
-          "coldOpenSentiment": "affectionate-absurd"
+          "coldOpenWord": "zippy",
+          "coldOpenSentiment": "neutral"
         }
       ],
       "friendshipScore": 81,
@@ -16049,8 +16049,8 @@
           "era": "podcast",
           "date": "2021-03-08",
           "episodeId": "podcast-2021-03-08",
-          "coldOpenWord": "zippy and super-duper excited, respectively",
-          "coldOpenSentiment": "affectionate-absurd"
+          "coldOpenWord": "super-duper excited",
+          "coldOpenSentiment": "neutral"
         }
       ],
       "friendshipScore": 77,
@@ -120420,8 +120420,8 @@
           "era": "podcast",
           "date": "2026-09-28",
           "episodeId": "podcast-2026-09-28",
-          "coldOpenWord": "very Irish and like a True American, respectively",
-          "coldOpenSentiment": "affectionate-absurd"
+          "coldOpenWord": "very Irish",
+          "coldOpenSentiment": "neutral"
         }
       ],
       "friendshipScore": 78,
@@ -144063,7 +144063,7 @@
           "era": "podcast",
           "date": "2026-09-28",
           "episodeId": "podcast-2026-09-28",
-          "coldOpenWord": "very Irish and like a True American, respectively",
+          "coldOpenWord": "like a True American",
           "coldOpenSentiment": "affectionate-absurd"
         }
       ],
@@ -171085,8 +171085,8 @@
           "era": "podcast",
           "date": "2023-03-27",
           "episodeId": "podcast-2023-03-27",
-          "coldOpenWord": "really excited and dubious, respectively",
-          "coldOpenSentiment": "affectionate-absurd"
+          "coldOpenWord": "really excited",
+          "coldOpenSentiment": "neutral"
         },
         {
           "era": "podcast",
@@ -225589,8 +225589,8 @@
           "era": "podcast",
           "date": "2023-03-27",
           "episodeId": "podcast-2023-03-27",
-          "coldOpenWord": "really excited and dubious, respectively",
-          "coldOpenSentiment": "affectionate-absurd"
+          "coldOpenWord": "dubious",
+          "coldOpenSentiment": "neutral"
         }
       ],
       "friendshipScore": 48,
@@ -456043,6 +456043,76 @@
       "scoreBreakdown": {
         "appearances": 7,
         "coldOpenSentiment": 14,
+        "originDepth": 9,
+        "gapResilience": 6
+      },
+      "relatedGuests": [
+        "matt-damon",
+        "rose-byrne",
+        "don-cheadle",
+        "colin-hanks",
+        "jack-mcbrayer"
+      ]
+    },
+    {
+      "id": "meredith-salenger",
+      "name": "Meredith Salenger",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2022-01-24",
+          "episodeId": "podcast-2022-01-24",
+          "coldOpenWord": "100% not embarrassed",
+          "coldOpenSentiment": "neutral"
+        }
+      ],
+      "friendshipScore": 40,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 7,
+        "coldOpenSentiment": 18,
+        "originDepth": 9,
+        "gapResilience": 6
+      },
+      "relatedGuests": [
+        "matt-damon",
+        "rose-byrne",
+        "don-cheadle",
+        "colin-hanks",
+        "jack-mcbrayer"
+      ]
+    },
+    {
+      "id": "mero",
+      "name": "Mero",
+      "photoUrl": null,
+      "bio": null,
+      "origin": {
+        "type": "cold-booking",
+        "label": "Booked as a guest",
+        "confidence": "inferred"
+      },
+      "appearances": [
+        {
+          "era": "podcast",
+          "date": "2021-06-21",
+          "episodeId": "podcast-2021-06-21",
+          "coldOpenWord": "like a diversity hire",
+          "coldOpenSentiment": "affectionate-absurd"
+        }
+      ],
+      "friendshipScore": 48,
+      "friendshipLabel": "Cherished Visitor",
+      "scoreBreakdown": {
+        "appearances": 7,
+        "coldOpenSentiment": 26,
         "originDepth": 9,
         "gapResilience": 6
       },

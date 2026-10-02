@@ -126,8 +126,8 @@ function main(): void {
     generatedAt: new Date().toISOString(),
     totalGuests: allGuests.length,
     totalAppearances,
-    episodes: data.episodes,
     guests: allGuests,
+    episodes: data.episodes,
   };
 
   fs.writeFileSync(DATA_PATH, JSON.stringify(newData, null, 2) + '\n');
