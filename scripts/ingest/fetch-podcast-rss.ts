@@ -56,9 +56,14 @@ const SPECIAL_PATTERNS = [
   /miniseries/i,
 ];
 
-// Job title prefixes that appear in RSS descriptions before the guest's name
+// Job title prefixes that appear in RSS descriptions before the guest's name.
+// Each word allows an optional plural "s"/"es" — a two-guest cold open reads
+// "Actors Matthew McConaughey and Woody Harrelson feel...", and the singular-only
+// version of this regex left "Actors" stuck to the front of the extracted name
+// (confirmed for real: produced a single garbled guest "Actors Matthew
+// McConaughey and Woody Harrelson" instead of stripping the job title).
 const JOB_TITLE_PREFIX =
-  /^(?:(?:actor|actress|comedian|writer|director|producer|musician|singer|host|author|journalist|chef|athlete|politician|ambassador|senator|professor|dr\.?|mr\.?|ms\.?)[,\s/&]+)+/i;
+  /^(?:(?:actors?|actress(?:es)?|comedians?|writers?|directors?|producers?|musicians?|singers?|hosts?|authors?|journalists?|chefs?|athletes?|politicians?|ambassadors?|senators?|professors?|dr\.?|mr\.?|ms\.?)[,\s/&]+)+/i;
 
 const COLD_OPEN_REGEX =
   /([A-Z][^.!?]+?)\s+feels?\s+(.+?)\s+about\s+being\s+Conan\s+O.?Brien.?s\s+friend/i;
