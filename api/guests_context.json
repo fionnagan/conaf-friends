@@ -46040,25 +46040,37 @@
     "professions": [
       "actor"
     ],
-    "totalAppearances": 5,
+    "totalAppearances": 6,
     "eras": [
-      "late-night-nbc"
+      "late-night-nbc",
+      "podcast"
     ],
     "firstAppearance": "2002-06-12",
-    "lastAppearance": "2006-03-08",
+    "lastAppearance": "2026-09-28",
     "appearanceYears": [
       "2002",
       "2003",
       "2005",
-      "2006"
+      "2006",
+      "2026"
     ],
     "firstByEra": {
       "late-night-nbc": {
         "date": "2002-06-12",
         "order": 0
+      },
+      "podcast": {
+        "date": "2026-09-28",
+        "order": 999
       }
     },
-    "coldOpens": [],
+    "coldOpens": [
+      {
+        "date": "2026-09-28",
+        "word": "very Irish and like a True American, respectively",
+        "sentiment": "affectionate-absurd"
+      }
+    ],
     "birthYear": "1969",
     "deathYear": "",
     "gender": "male",
@@ -54334,16 +54346,17 @@
     "professions": [
       "actor"
     ],
-    "totalAppearances": 2,
+    "totalAppearances": 3,
     "eras": [
       "late-night-nbc",
       "podcast"
     ],
     "firstAppearance": "2004-11-18",
-    "lastAppearance": "2024-06-17",
+    "lastAppearance": "2026-09-28",
     "appearanceYears": [
       "2004",
-      "2024"
+      "2024",
+      "2026"
     ],
     "firstByEra": {
       "late-night-nbc": {
@@ -54360,6 +54373,11 @@
         "date": "2024-06-17",
         "word": "supercalifragilistic",
         "sentiment": "neutral"
+      },
+      {
+        "date": "2026-09-28",
+        "word": "very Irish and like a True American, respectively",
+        "sentiment": "affectionate-absurd"
       }
     ],
     "birthYear": "1961",
@@ -84200,42 +84218,6 @@
     "primaryPlatform": "podcast",
     "conanConnection": "direct: Comedy peer and fellow stand-up. First appeared on Conan in 2020.",
     "bioSummary": "Laci Mosley is an American actor, comedian, and podcaster best known for creating Scam Goddess, a podcast produced by Earwolf and co-produced by Team Coco — Conan O'Brien's company — since October 2020, which earned her two Webby Awards and two iHeartRadio Podcast Awards. She co-starred in the Pop series Florida Girls and appeared as a main cast member on A Black Lady Sketch Show, the iCarly revival, and Lopez vs Lopez. More recently, she starred in the Fox sitcom Going Dutch and has hosted the Freeform television adaptation of Scam Goddess since 2025. She also published a memoir based on the podcast in 2024."
-  },
-  {
-    "id": "actors-matthew-mcconaughey-and-woody-harrelson",
-    "name": "Actors Matthew McConaughey and Woody Harrelson",
-    "professions": [],
-    "totalAppearances": 1,
-    "eras": [
-      "podcast"
-    ],
-    "firstAppearance": "2026-09-28",
-    "lastAppearance": "2026-09-28",
-    "appearanceYears": [
-      "2026"
-    ],
-    "firstByEra": {
-      "podcast": {
-        "date": "2026-09-28",
-        "order": 999
-      }
-    },
-    "coldOpens": [
-      {
-        "date": "2026-09-28",
-        "word": "very Irish and like a True American, respectively",
-        "sentiment": "affectionate-absurd"
-      }
-    ],
-    "birthYear": "",
-    "deathYear": "",
-    "gender": "",
-    "nationality": "",
-    "knownFor": [],
-    "prestigeSignals": [],
-    "primaryPlatform": "",
-    "conanConnection": "",
-    "bioSummary": ""
   },
   {
     "id": "atsuko-okatsuka",
