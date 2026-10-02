@@ -305,13 +305,34 @@ export async function matchYouTubeVideos(
       await sleep(200);
     } catch (err: any) {
       console.warn(`[YouTube] Error for "${episode.guestName}": ${err.message}`);
-      cache[cacheKey] = {
-        videoId: null,
-        fetchedAt: new Date().toISOString(),
-        score: 0,
-        confidence: 0,
-        channelTitle: null,
-      };
+
+      // A transient/quota error is not a real "no video found" result — writing
+      // null here would silently destroy an already-verified match the moment
+      // its TTL happened to expire. Confirmed for real: after a multi-week outage
+      // let the whole cache age past its 7-day TTL at once, a 429 (quota
+      // exceeded) on nearly every request in one run overwrote 197 previously
+      // good matches with null, because this block used to write unconditionally.
+      // Only ever write null for an episode that didn't already have a match.
+      if (!existing?.videoId) {
+        cache[cacheKey] = {
+          videoId: null,
+          fetchedAt: new Date().toISOString(),
+          score: 0,
+          confidence: 0,
+          channelTitle: null,
+        };
+      }
+
+      // A 429 means the API key's quota is exhausted for the rest of the
+      // window — every remaining request this run will fail the same way.
+      // Stop immediately instead of burning through the rest of the episode
+      // list (hundreds of episodes, each one a chance to wrongly null out an
+      // existing match if this guard above is ever bypassed, and pure log noise
+      // otherwise). Quota resets on its own; next run picks up where this left off.
+      if (err.response?.status === 429) {
+        console.warn('[YouTube] Quota exceeded (429) — stopping this run early. Will resume next run.');
+        break;
+      }
     }
   }
 
