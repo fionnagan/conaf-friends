@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import type { Guest, Era } from "@/lib/types";
+import type { Guest, Era, Episode } from "@/lib/types";
 import {
   ERA_LABELS,
   ERA_LOGOS,
@@ -9,6 +9,7 @@ import {
   getEraColor,
   getEraTextColor,
   formatDate,
+  resolveEpisode,
 } from "@/lib/data";
 import { usePlayer } from "@/lib/PlayerContext";
 
@@ -72,6 +73,7 @@ function appearanceToPercent(era: Era, date: string): number {
 
 interface Props {
   guest: Guest;
+  episodes: Episode[];
   compact?: boolean;
 }
 
@@ -81,7 +83,7 @@ interface TooltipState {
   content: string;
 }
 
-export default function FriendshipArc({ guest, compact = false }: Props) {
+export default function FriendshipArc({ guest, episodes, compact = false }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [tooltip, setTooltip] = useState<TooltipState>({ visible: false, x: 0, content: "" });
   const { play } = usePlayer();
@@ -143,7 +145,9 @@ export default function FriendshipArc({ guest, compact = false }: Props) {
       {guest.appearances.map((app, i) => {
         const x = appearanceToPercent(app.era, app.date);
         const color = getEraTextColor(app.era);
-        const playable = app.audioUrl || app.youtubeVideoId || app.episodeUrl;
+        const episode = resolveEpisode(app, episodes);
+        const title = episode?.title ?? app.episodeTitle;
+        const playable = episode?.audioUrl || episode?.youtubeVideoId || episode?.url;
         return (
           <div key={i}>
             {app.era === "podcast" && app.coldOpenWord && !compact && (
@@ -180,13 +184,29 @@ export default function FriendshipArc({ guest, compact = false }: Props) {
                 setTooltip({
                   visible: true,
                   x,
-                  content: `${formatDate(app.date)} · ${ERA_LABELS[app.era]}${app.episodeTitle ? ` · "${app.episodeTitle}"` : ""}${app.coldOpenWord ? ` · "${app.coldOpenWord}"` : ""}`,
+                  content: `${formatDate(app.date)} · ${ERA_LABELS[app.era]}${title ? ` · "${title}"` : ""}${app.coldOpenWord ? ` · "${app.coldOpenWord}"` : ""}`,
                 })
               }
               onMouseLeave={() => setTooltip((t) => ({ ...t, visible: false }))}
               onClick={() => {
-                if (app.audioUrl || app.youtubeVideoId) play(app, guest.name);
-                else if (app.episodeUrl) window.open(app.episodeUrl, "_blank");
+                if (episode?.audioUrl || episode?.youtubeVideoId) {
+                  play(
+                    {
+                      era: app.era,
+                      date: app.date,
+                      episodeTitle: episode.title,
+                      episodeUrl: episode.url,
+                      audioUrl: episode.audioUrl,
+                      youtubeVideoId: episode.youtubeVideoId,
+                      artworkUrl: episode.artworkUrl,
+                      coldOpenWord: app.coldOpenWord,
+                      coldOpenSentiment: app.coldOpenSentiment,
+                    },
+                    guest.name
+                  );
+                } else if (episode?.url) {
+                  window.open(episode.url, "_blank");
+                }
               }}
             />
           </div>

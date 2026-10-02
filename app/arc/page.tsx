@@ -35,7 +35,7 @@ export default function ArcPage() {
       <AskTheRegistry />
 
       <Suspense>
-        <ArcListClient guests={data.guests} />
+        <ArcListClient guests={data.guests} episodes={data.episodes} />
       </Suspense>
     </div>
   );

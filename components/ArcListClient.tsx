@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
-import type { Guest, Era } from "@/lib/types";
+import type { Guest, Era, Episode } from "@/lib/types";
 import Image from "next/image";
 import { ERA_LABELS, ERA_LOGOS, getEraTextColor } from "@/lib/data";
 import GuestAvatar from "./GuestAvatar";
@@ -41,9 +41,10 @@ function guestBadge(g: Guest): string | null {
 
 interface Props {
   guests: Guest[];
+  episodes: Episode[];
 }
 
-export default function ArcListClient({ guests }: Props) {
+export default function ArcListClient({ guests, episodes }: Props) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -435,7 +436,7 @@ export default function ArcListClient({ guests }: Props) {
 
               {/* Timeline */}
               <div className="px-5 pb-3">
-                <LazyArc guest={g} />
+                <LazyArc guest={g} episodes={episodes} />
               </div>
 
               {/* Cold open words */}

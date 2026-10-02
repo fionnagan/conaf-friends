@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
-import { getGuestsData, ORIGIN_LABELS, formatDate } from "@/lib/data";
+import { getGuestsData, ORIGIN_LABELS, formatDate, resolveEpisode, getCoGuests } from "@/lib/data";
+import type { PlayableMedia } from "@/lib/PlayerContext";
 import GuestAvatar from "@/components/GuestAvatar";
 import FriendshipArc from "@/components/FriendshipArc";
 import GuestPagePlayer from "@/components/GuestPagePlayer";
@@ -136,7 +137,7 @@ export default function GuestPage({ params, searchParams }: Props) {
           Friendship Arc (1993–present)
         </h2>
         <div className="bg-[var(--bg2)] rounded-2xl border border-[var(--border)] p-5 overflow-hidden">
-          <FriendshipArc guest={guest} />
+          <FriendshipArc guest={guest} episodes={data.episodes} />
         </div>
       </section>
 
@@ -171,9 +172,32 @@ export default function GuestPage({ params, searchParams }: Props) {
           All appearances
         </h2>
         <div className="space-y-3">
-          {guest.appearances.map((app, i) => (
-            <GuestPagePlayer key={i} appearance={app} guestName={guest.name} />
-          ))}
+          {guest.appearances.map((app, i) => {
+            const episode = resolveEpisode(app, data.episodes);
+            const media: PlayableMedia | null = episode
+              ? {
+                  era: app.era,
+                  date: app.date,
+                  episodeTitle: episode.title,
+                  episodeUrl: episode.url,
+                  audioUrl: episode.audioUrl,
+                  youtubeVideoId: episode.youtubeVideoId,
+                  artworkUrl: episode.artworkUrl,
+                  coldOpenWord: app.coldOpenWord,
+                  coldOpenSentiment: app.coldOpenSentiment,
+                }
+              : null;
+            const coGuests = getCoGuests(guest.id, app, data.guests);
+            return (
+              <GuestPagePlayer
+                key={i}
+                appearance={app}
+                guestName={guest.name}
+                media={media}
+                coGuests={coGuests}
+              />
+            );
+          })}
         </div>
       </section>
 

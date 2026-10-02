@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import type { Appearance } from "@/lib/types";
+import type { PlayableMedia } from "@/lib/PlayerContext";
 
 interface Props {
-  appearance: Appearance;
+  media: PlayableMedia;
   guestName: string;
   compact?: boolean;
 }
@@ -208,22 +208,22 @@ function FallbackLinks({ episodeUrl, episodeTitle }: { episodeUrl?: string; epis
   );
 }
 
-export default function EpisodePlayer({ appearance, guestName, compact = false }: Props) {
-  if (appearance.youtubeVideoId && !compact) {
+export default function EpisodePlayer({ media, guestName, compact = false }: Props) {
+  if (media.youtubeVideoId && !compact) {
     return (
       <YouTubePlayer
-        videoId={appearance.youtubeVideoId}
-        title={appearance.episodeTitle}
+        videoId={media.youtubeVideoId}
+        title={media.episodeTitle}
       />
     );
   }
 
-  if (appearance.audioUrl) {
+  if (media.audioUrl) {
     return (
       <AudioPlayer
-        audioUrl={appearance.audioUrl}
-        artworkUrl={appearance.artworkUrl}
-        title={appearance.episodeTitle}
+        audioUrl={media.audioUrl}
+        artworkUrl={media.artworkUrl}
+        title={media.episodeTitle}
         guestName={guestName}
       />
     );
@@ -231,8 +231,8 @@ export default function EpisodePlayer({ appearance, guestName, compact = false }
 
   return (
     <FallbackLinks
-      episodeUrl={appearance.episodeUrl}
-      episodeTitle={appearance.episodeTitle}
+      episodeUrl={media.episodeUrl}
+      episodeTitle={media.episodeTitle}
     />
   );
 }

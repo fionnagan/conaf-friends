@@ -2,14 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import type { Guest } from "@/lib/types";
-import { ERA_LABELS, ORIGIN_LABELS, formatDate, getGuestsData } from "@/lib/data";
+import type { Guest, Episode } from "@/lib/types";
+import { ORIGIN_LABELS, getGuestsData, resolveEpisode, getCoGuests } from "@/lib/data";
 import GuestAvatar from "./GuestAvatar";
 import FriendshipBadge from "./FriendshipBadge";
-import EraBadge from "./EraBadge";
 import FriendshipArc from "./FriendshipArc";
-import EpisodePlayer from "./EpisodePlayer";
-import { usePlayer } from "@/lib/PlayerContext";
+import GuestPagePlayer from "./GuestPagePlayer";
+import type { PlayableMedia } from "@/lib/PlayerContext";
 
 interface Props {
   guestId: string | null;
@@ -32,16 +31,17 @@ const SCORE_FACTOR_MAX = {
 export default function GuestPanel({ guestId, onClose }: Props) {
   const isOpen = !!guestId;
   const [guest, setGuest] = useState<Guest | null>(null);
-  const [openPlayerIdx, setOpenPlayerIdx] = useState<number | null>(null);
+  const [episodes, setEpisodes] = useState<Episode[]>([]);
+  const [allGuests, setAllGuests] = useState<Guest[]>([]);
   const panelRef = useRef<HTMLDivElement>(null);
-  const { play } = usePlayer();
 
   useEffect(() => {
     if (!guestId) { setGuest(null); return; }
     const data = getGuestsData();
     const found = data.guests.find((g) => g.id === guestId) || null;
     setGuest(found);
-    setOpenPlayerIdx(null);
+    setEpisodes(data.episodes);
+    setAllGuests(data.guests);
   }, [guestId]);
 
   // Close on Escape
@@ -168,7 +168,7 @@ export default function GuestPanel({ guestId, onClose }: Props) {
                 Friendship Arc
               </h3>
               <div className="bg-[var(--bg2)] rounded-xl border border-[var(--border)] p-4 overflow-x-auto">
-                <FriendshipArc guest={guest} />
+                <FriendshipArc guest={guest} episodes={episodes} />
               </div>
             </div>
 
@@ -178,59 +178,32 @@ export default function GuestPanel({ guestId, onClose }: Props) {
                 All appearances
               </h3>
               <div className="space-y-3">
-                {guest.appearances.map((app, i) => (
-                  <div
-                    key={i}
-                    className="p-3 bg-[var(--bg2)] rounded-xl border border-[var(--border)]"
-                  >
-                    <div className="flex items-start gap-3">
-                      <EraBadge era={app.era} />
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium truncate">
-                          {app.episodeTitle || ERA_LABELS[app.era]}
-                        </p>
-                        <p className="text-xs text-[var(--text-muted)]">
-                          {formatDate(app.date)}
-                          {app.coldOpenWord && (
-                            <span className="ml-2 italic text-[var(--purple)]">
-                              · &ldquo;{app.coldOpenWord}&rdquo;
-                            </span>
-                          )}
-                        </p>
-                      </div>
-                      {(app.audioUrl || app.youtubeVideoId) && (
-                        <button
-                          onClick={() => {
-                            if (openPlayerIdx === i) {
-                              setOpenPlayerIdx(null);
-                            } else {
-                              setOpenPlayerIdx(i);
-                              play(app, guest.name);
-                            }
-                          }}
-                          className="flex-shrink-0 text-xs px-2 py-1 bg-[var(--orange)] text-white rounded-lg hover:opacity-90"
-                        >
-                          ▶ Play
-                        </button>
-                      )}
-                      {app.episodeUrl && (
-                        <a
-                          href={app.episodeUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-shrink-0 text-xs px-2 py-1 border border-[var(--border)] rounded-lg hover:bg-[var(--bg3)]"
-                        >
-                          Open ↗
-                        </a>
-                      )}
-                    </div>
-                    {openPlayerIdx === i && (
-                      <div className="mt-3">
-                        <EpisodePlayer appearance={app} guestName={guest.name} />
-                      </div>
-                    )}
-                  </div>
-                ))}
+                {guest.appearances.map((app, i) => {
+                  const episode = resolveEpisode(app, episodes);
+                  const media: PlayableMedia | null = episode
+                    ? {
+                        era: app.era,
+                        date: app.date,
+                        episodeTitle: episode.title,
+                        episodeUrl: episode.url,
+                        audioUrl: episode.audioUrl,
+                        youtubeVideoId: episode.youtubeVideoId,
+                        artworkUrl: episode.artworkUrl,
+                        coldOpenWord: app.coldOpenWord,
+                        coldOpenSentiment: app.coldOpenSentiment,
+                      }
+                    : null;
+                  const coGuests = getCoGuests(guest.id, app, allGuests);
+                  return (
+                    <GuestPagePlayer
+                      key={i}
+                      appearance={app}
+                      guestName={guest.name}
+                      media={media}
+                      coGuests={coGuests}
+                    />
+                  );
+                })}
               </div>
             </div>
 
