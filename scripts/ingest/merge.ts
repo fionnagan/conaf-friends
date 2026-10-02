@@ -43,6 +43,7 @@ import type {
   GuestBio,
   GuestsData,
   Appearance,
+  Episode,
   RawPodcastEpisode,
   RawLateNightAppearance,
   YouTubeCache,
@@ -83,6 +84,7 @@ export function merge(
   bioCache: Record<string, GuestBio> = {}
 ): GuestsData {
   const guestMap = new Map<string, Guest>();
+  const episodeMap = new Map<string, Episode>();
 
   // Helper: get or create guest
   function getGuest(name: string): Guest {
@@ -146,38 +148,52 @@ export function merge(
       ? new Date(ep.pubDate).toISOString().substring(0, 10)
       : '2018-01-01';
     const cacheKey = `${ep.guestName}::${epDate}`;
-    const baseAppearance = {
-      era: 'podcast' as const,
-      date: epDate,
-      episodeTitle: ep.title,
-      episodeUrl: ep.link,
-      audioUrl: ep.enclosure?.url,
-      artworkUrl: ep.itunes?.image,
-    };
+
+    // One Episode per taping, shared by every guest on it — looked up by date
+    // (unique per podcast episode) so a multi-guest episode creates exactly
+    // one record instead of one per guest. The video lookup tries each
+    // split guest's own name first (matches a manual override keyed to them
+    // specifically), falling back to the raw extracted name — same priority
+    // order this used to apply per-guest, just resolved once for the episode.
+    const episodeId = `podcast-${epDate}`;
+    if (!episodeMap.has(episodeId)) {
+      const ytKeys = splitConfig?.split
+        ? splitConfig.split.map((s) => `${s.name}::${epDate}`)
+        : splitConfig?.normalizeAs
+          ? [`${splitConfig.normalizeAs}::${epDate}`]
+          : [];
+      ytKeys.push(cacheKey);
+      const ytMatch = ytKeys.map((k) => youtubeCache[k]).find((m) => m);
+      episodeMap.set(episodeId, {
+        id: episodeId,
+        date: epDate,
+        title: ep.title,
+        url: ep.link,
+        audioUrl: ep.enclosure?.url,
+        youtubeVideoId: ytMatch?.videoId ?? null,
+        artworkUrl: ep.itunes?.image,
+      });
+    }
+    const baseAppearance = { era: 'podcast' as const, date: epDate, episodeId };
 
     if (splitConfig?.normalizeAs) {
       // Normalize episode to a canonical guest name (e.g. "Martin Short Live From SiriusXM NY" → "Martin Short")
       const name = normalizeGuestName(splitConfig.normalizeAs);
       const guest = getGuest(name);
-      const ytKey = `${splitConfig.normalizeAs}::${epDate}`;
-      const ytMatch = youtubeCache[ytKey] || youtubeCache[cacheKey];
       const appearance: Appearance = {
         ...baseAppearance,
-        youtubeVideoId: ytMatch?.videoId ?? null,
         coldOpenWord: ep.coldOpenWord,
         coldOpenSentiment: ep.coldOpenSentiment,
       };
       guest.appearances.push(appearance);
     } else if (splitConfig?.split) {
-      // Multi-guest episode: create independent appearance for each guest
+      // Multi-guest episode: each guest gets their own appearance (own cold
+      // open word), all referencing the same episodeId above.
       for (const splitGuest of splitConfig.split) {
         const name = normalizeGuestName(splitGuest.name);
         const guest = getGuest(name);
-        const ytKey = `${splitGuest.name}::${epDate}`;
-        const ytMatch = youtubeCache[ytKey] || youtubeCache[cacheKey];
         const appearance: Appearance = {
           ...baseAppearance,
-          youtubeVideoId: ytMatch?.videoId ?? null,
           coldOpenWord: splitGuest.coldOpenWord ?? ep.coldOpenWord,
           coldOpenSentiment: (splitGuest.coldOpenSentiment as Appearance['coldOpenSentiment']) ?? ep.coldOpenSentiment,
         };
@@ -196,10 +212,8 @@ export function merge(
       // Normal single-guest episode
       const name = normalizeGuestName(ep.guestName);
       const guest = getGuest(name);
-      const ytMatch = youtubeCache[cacheKey];
       const appearance: Appearance = {
         ...baseAppearance,
-        youtubeVideoId: ytMatch?.videoId ?? null,
         coldOpenWord: ep.coldOpenWord,
         coldOpenSentiment: ep.coldOpenSentiment,
       };
@@ -306,6 +320,7 @@ export function merge(
     generatedAt: new Date().toISOString(),
     totalGuests: allGuests.length,
     totalAppearances: allGuests.reduce((n, g) => n + g.appearances.length, 0),
+    episodes: Array.from(episodeMap.values()),
     guests: allGuests,
   };
 }

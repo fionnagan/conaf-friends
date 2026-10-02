@@ -126,6 +126,7 @@ function main(): void {
     generatedAt: new Date().toISOString(),
     totalGuests: allGuests.length,
     totalAppearances,
+    episodes: data.episodes,
     guests: allGuests,
   };
 

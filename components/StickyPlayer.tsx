@@ -17,9 +17,9 @@ export default function StickyPlayer() {
             >
               ✕ Close player
             </button>
-            {player.appearance && (
+            {player.media && (
               <EpisodePlayer
-                appearance={player.appearance}
+                media={player.media}
                 guestName={player.guestName}
                 compact
               />

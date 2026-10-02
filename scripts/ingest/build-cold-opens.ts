@@ -11,6 +11,7 @@
 import * as fs   from 'fs';
 import * as path from 'path';
 import type { GuestsData } from '../../lib/types';
+import { resolveEpisode } from '../../lib/data';
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'guests.json');
 const OUT_FILE  = path.join(process.cwd(), 'data', 'cold-opens.json');
@@ -43,7 +44,9 @@ export function buildColdOpens(data: GuestsData): void {
 
   for (const guest of data.guests) {
     for (const app of guest.appearances) {
-      if (!app.coldOpenWord || !app.episodeUrl) continue;
+      if (!app.coldOpenWord) continue;
+      const episode = resolveEpisode(app, data.episodes);
+      if (!episode?.url) continue;
 
       // Strip surrounding quotes that sometimes appear in RSS data
       const raw        = app.coldOpenWord.replace(/^["'""]|["'""]$/g, '').trim();
@@ -53,8 +56,8 @@ export function buildColdOpens(data: GuestsData): void {
       rawRecords.push({
         guest_id:                 guest.id,
         guest_name:               guest.name,
-        episode_id:               episodeIdFromUrl(app.episodeUrl),
-        episode_url:              app.episodeUrl,
+        episode_id:               episodeIdFromUrl(episode.url),
+        episode_url:              episode.url,
         profile_url:              `/guest/${guest.id}`,
         cold_open_text:           raw,
         feeling_phrase_raw:       raw,

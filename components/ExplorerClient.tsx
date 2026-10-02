@@ -11,6 +11,7 @@ import {
   PROFESSION_CATEGORY_ORDER,
   getRecency,
   RECENCY_BUCKETS,
+  getCoGuests,
   type Generation,
   type Recency,
 } from "@/lib/data";
@@ -382,6 +383,8 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {visible.map((g) => {
           const seen = lastSeen(g);
+          const latest = latestAppearance(g);
+          const coGuests = latest ? getCoGuests(g.id, latest, guests) : [];
           const crossing = crossingLine(guestCrossings[g.id]);
           const year = g.bio?.birth_year ? parseInt(g.bio.birth_year, 10) : NaN;
           const generation = getGeneration(year);
@@ -415,6 +418,31 @@ export default function ExplorerClient({ guests, guestCrossings, neverBookedCand
               {seen && (
                 <p className="text-xs text-[var(--text-muted)] mb-1">
                   Last seen {seen.timeAgo} — {seen.show}
+                </p>
+              )}
+
+              {coGuests.length > 0 && (
+                <p className="flex flex-wrap gap-1 mb-1.5">
+                  {coGuests.map((cg) => (
+                    <span
+                      key={cg.id}
+                      role="link"
+                      tabIndex={0}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setModalGuest(cg);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          e.stopPropagation();
+                          setModalGuest(cg);
+                        }
+                      }}
+                      className="inline-flex items-center gap-1 text-[11px] text-[var(--purple)] bg-[rgba(127,119,221,0.1)] border border-[rgba(127,119,221,0.3)] rounded-full px-2 py-0.5 hover:bg-[rgba(127,119,221,0.18)]"
+                    >
+                      with {cg.name}
+                    </span>
+                  ))}
                 </p>
               )}
 

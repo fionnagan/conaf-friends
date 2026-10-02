@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import type { Guest } from "@/lib/types";
+import type { Guest, Episode } from "@/lib/types";
 import FriendshipArc from "./FriendshipArc";
 
-export default function LazyArc({ guest }: { guest: Guest }) {
+export default function LazyArc({ guest, episodes }: { guest: Guest; episodes: Episode[] }) {
   const ref = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -26,7 +26,7 @@ export default function LazyArc({ guest }: { guest: Guest }) {
 
   return (
     <div ref={ref} style={{ minHeight: 120 }}>
-      {mounted && <FriendshipArc guest={guest} />}
+      {mounted && <FriendshipArc guest={guest} episodes={episodes} />}
     </div>
   );
 }

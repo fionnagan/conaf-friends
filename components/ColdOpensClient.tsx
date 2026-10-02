@@ -9,18 +9,25 @@ import { formatDate } from "@/lib/data";
 import GuestAvatar from "./GuestAvatar";
 import { usePlayer } from "@/lib/PlayerContext";
 
-interface ColdOpen {
-  guestId: string;
-  guestName: string;
-  guestPhotoUrl: string | null;
+interface ColdOpenGuest {
+  id: string;
+  name: string;
+  photoUrl: string | null;
   word: string;
   sentiment?: ColdOpenSentiment;
+}
+
+/** One episode's worth of cold opens — one or more guests, one shared
+ * video/audio/artwork (never duplicated per guest). */
+export interface ColdOpen {
+  episodeId: string;
   date: string;
   episodeTitle?: string;
   episodeUrl?: string;
   audioUrl?: string;
   youtubeVideoId?: string | null;
   artworkUrl?: string;
+  guests: ColdOpenGuest[];
 }
 
 interface Props {
@@ -140,17 +147,21 @@ export default function ColdOpensClient({ coldOpens }: Props) {
   }, []); // intentionally empty — run once on mount only
 
   // ── Filtered list ──────────────────────────────────────────────────────────
+  // An episode matches if ANY of its guests match — the whole card (every
+  // guest's cold open) stays together rather than filtering guests out of it.
   const filtered = useMemo(() => {
-    return coldOpens.filter((co) => {
-      if (
-        search &&
-        !co.word.toLowerCase().includes(search.toLowerCase()) &&
-        !co.guestName.toLowerCase().includes(search.toLowerCase())
-      )
-        return false;
-      if (sentimentFilter !== "all" && co.sentiment !== sentimentFilter) return false;
-      return true;
-    });
+    return coldOpens.filter((co) =>
+      co.guests.some((g) => {
+        if (
+          search &&
+          !g.word.toLowerCase().includes(search.toLowerCase()) &&
+          !g.name.toLowerCase().includes(search.toLowerCase())
+        )
+          return false;
+        if (sentimentFilter !== "all" && g.sentiment !== sentimentFilter) return false;
+        return true;
+      })
+    );
   }, [coldOpens, search, sentimentFilter]);
 
   return (
@@ -194,59 +205,63 @@ export default function ColdOpensClient({ coldOpens }: Props) {
         </div>
       </div>
 
-      <p className="text-sm text-[var(--text-muted)] mb-4">{filtered.length} cold opens</p>
+      <p className="text-sm text-[var(--text-muted)] mb-4">
+        {filtered.reduce((n, co) => n + co.guests.length, 0)} cold opens
+      </p>
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filtered.map((co, i) => {
+        {filtered.map((co) => {
           const from = currentPageUrl();
-          const guestHref = `/guest/${co.guestId}?from=${encodeURIComponent(from)}`;
+          const listenLabel = co.guests.map((g) => g.name).join(" & ");
 
           return (
             <div
-              key={i}
+              key={co.episodeId}
               className="bg-[var(--bg2)] rounded-xl border border-[var(--border)] p-4 flex flex-col gap-3"
             >
-              {/* Guest */}
-              <Link
-                href={guestHref}
-                onClick={saveScroll}
-                className="flex items-center gap-2 hover:opacity-80"
-              >
-                <GuestAvatar name={co.guestName} photoUrl={co.guestPhotoUrl} size={28} />
-                <span className="text-sm font-medium">{co.guestName}</span>
-              </Link>
-
-              {/* Word — sans-serif, no italic */}
-              <p
-                className="text-2xl font-bold leading-tight tracking-tight"
-                style={{ color: co.sentiment ? SENTIMENT_COLORS[co.sentiment] : "#7F77DD" }}
-              >
-                {co.word}
-              </p>
-
-              {/* Metadata */}
-              <div className="text-xs text-[var(--text-muted)]">
-                <span>{formatDate(co.date)}</span>
-                {co.sentiment && (
-                  <span
-                    className="ml-2 px-1.5 py-0.5 rounded-full text-[10px] font-medium"
-                    style={{
-                      background: SENTIMENT_COLORS[co.sentiment] + "20",
-                      color: SENTIMENT_COLORS[co.sentiment],
-                    }}
-                  >
-                    {SENTIMENT_LABELS[co.sentiment]}
-                  </span>
-                )}
+              {/* Guest(s) — every co-guest on this episode, each with their own word */}
+              <div className="flex flex-col gap-2.5">
+                {co.guests.map((g) => (
+                  <div key={g.id}>
+                    <Link
+                      href={`/guest/${g.id}?from=${encodeURIComponent(from)}`}
+                      onClick={saveScroll}
+                      className="flex items-center gap-2 hover:opacity-80"
+                    >
+                      <GuestAvatar name={g.name} photoUrl={g.photoUrl} size={28} />
+                      <span className="text-sm font-medium">{g.name}</span>
+                    </Link>
+                    <p
+                      className="text-xl font-bold leading-tight tracking-tight mt-1"
+                      style={{ color: g.sentiment ? SENTIMENT_COLORS[g.sentiment] : "#7F77DD" }}
+                    >
+                      {g.word}
+                      {g.sentiment && (
+                        <span
+                          className="ml-2 align-middle px-1.5 py-0.5 rounded-full text-[10px] font-medium"
+                          style={{
+                            background: SENTIMENT_COLORS[g.sentiment] + "20",
+                            color: SENTIMENT_COLORS[g.sentiment],
+                          }}
+                        >
+                          {SENTIMENT_LABELS[g.sentiment]}
+                        </span>
+                      )}
+                    </p>
+                  </div>
+                ))}
               </div>
 
-              {/* YouTube embed */}
+              {/* Metadata */}
+              <p className="text-xs text-[var(--text-muted)]">{formatDate(co.date)}</p>
+
+              {/* YouTube embed — one video for the whole episode, not per guest */}
               {co.youtubeVideoId && (
                 <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", maxWidth: "720px", marginTop: "4px", marginBottom: "4px" }}>
                   <iframe
                     src={`https://www.youtube.com/embed/${co.youtubeVideoId}`}
-                    title={co.episodeTitle || `${co.guestName} on Conan O'Brien Needs a Friend`}
+                    title={co.episodeTitle || `${listenLabel} on Conan O'Brien Needs a Friend`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     loading="lazy"
@@ -268,10 +283,9 @@ export default function ColdOpensClient({ coldOpens }: Props) {
                           episodeUrl: co.episodeUrl,
                           audioUrl: co.audioUrl,
                           youtubeVideoId: co.youtubeVideoId ?? null,
-                          coldOpenWord: co.word,
                           artworkUrl: co.artworkUrl,
                         },
-                        co.guestName
+                        listenLabel
                       )
                     }
                     className="text-xs px-2.5 py-1.5 bg-[var(--orange)] text-white rounded-lg hover:opacity-90"

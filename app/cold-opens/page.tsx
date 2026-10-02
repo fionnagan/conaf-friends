@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import { getGuestsData } from "@/lib/data";
-import ColdOpensClient from "@/components/ColdOpensClient";
+import { getGuestsData, resolveEpisode } from "@/lib/data";
+import ColdOpensClient, { type ColdOpen } from "@/components/ColdOpensClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,24 +12,45 @@ export const metadata: Metadata = {
 export default function ColdOpensPage() {
   const data = getGuestsData();
 
-  // Build flat list of all cold opens
-  const coldOpens = data.guests.flatMap((g) =>
-    g.appearances
-      .filter((a) => a.coldOpenWord)
-      .map((a) => ({
-        guestId: g.id,
-        guestName: g.name,
-        guestPhotoUrl: g.photoUrl,
-        word: a.coldOpenWord!.replace(/"/g, ''),
+  // Group every cold-open appearance by episode — a multi-guest episode
+  // (e.g. "Matthew McConaughey & Woody Harrelson") shares one video/audio/
+  // artwork, so it renders as one card listing every guest's own cold open
+  // word instead of one near-identical card per guest.
+  const byEpisode = new Map<string, ColdOpen>();
+  for (const g of data.guests) {
+    for (const a of g.appearances) {
+      if (!a.coldOpenWord) continue;
+      const episode = resolveEpisode(a, data.episodes);
+      // No shared episode to group by (shouldn't happen for a podcast cold
+      // open, but fall back to a per-guest key rather than dropping it).
+      const key = episode?.id ?? `${g.id}::${a.date}`;
+
+      const entry = byEpisode.get(key);
+      const guestEntry = {
+        id: g.id,
+        name: g.name,
+        photoUrl: g.photoUrl,
+        word: a.coldOpenWord.replace(/"/g, ''),
         sentiment: a.coldOpenSentiment,
-        date: a.date,
-        episodeTitle: a.episodeTitle,
-        episodeUrl: a.episodeUrl,
-        audioUrl: a.audioUrl,
-        youtubeVideoId: a.youtubeVideoId,
-        artworkUrl: a.artworkUrl,
-      }))
-  );
+      };
+      if (entry) {
+        entry.guests.push(guestEntry);
+      } else {
+        byEpisode.set(key, {
+          episodeId: key,
+          date: a.date,
+          episodeTitle: episode?.title,
+          episodeUrl: episode?.url,
+          audioUrl: episode?.audioUrl,
+          youtubeVideoId: episode?.youtubeVideoId,
+          artworkUrl: episode?.artworkUrl,
+          guests: [guestEntry],
+        });
+      }
+    }
+  }
+
+  const coldOpens = Array.from(byEpisode.values());
 
   // Sort by date descending
   coldOpens.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -44,7 +65,7 @@ export default function ColdOpensPage() {
         being Conan O&apos;Brien&apos;s friend.
       </p>
       <p className="text-sm text-[var(--text-muted)] mb-8">
-        {coldOpens.length} cold opens catalogued
+        {coldOpens.reduce((n, co) => n + co.guests.length, 0)} cold opens catalogued
       </p>
 
       {coldOpens.length === 0 ? (

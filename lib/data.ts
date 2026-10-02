@@ -1,4 +1,4 @@
-import type { Guest, GuestsData, FriendshipLabel, Era, CrossedPathsData } from './types';
+import type { Guest, GuestsData, FriendshipLabel, Era, CrossedPathsData, Appearance, Episode } from './types';
 
 export const ERA_LABELS: Record<Era, string> = {
   'late-night-nbc': 'Late Night NBC',
@@ -146,6 +146,7 @@ export function getGuestsData(): GuestsData {
       generatedAt: new Date().toISOString(),
       totalGuests: 0,
       totalAppearances: 0,
+      episodes: [],
       guests: [],
     };
   }
@@ -281,4 +282,24 @@ export function getRecency(mostRecentDateStr: string): Recency {
   if (years < 3) return '1–3 years ago';
   if (years < 10) return '3–10 years ago';
   return '10+ years ago';
+}
+
+// ── Shared-episode helpers ───────────────────────────────────────────────────
+// A podcast Appearance carries an episodeId instead of its own copy of the
+// title/video/audio — look the Episode up once here rather than re-deriving
+// it inline everywhere an appearance is rendered.
+export function resolveEpisode(appearance: Appearance, episodes: Episode[]): Episode | null {
+  if (!appearance.episodeId) return null;
+  return episodes.find((e) => e.id === appearance.episodeId) ?? null;
+}
+
+// Every OTHER guest who has an appearance referencing the same episode —
+// i.e. everyone who was on with this guest that taping. Excludes the guest
+// themselves. Returns [] for appearances with no shared episode (no co-guest
+// to find) and for any guest who was the only one on that date.
+export function getCoGuests(guestId: string, appearance: Appearance, allGuests: Guest[]): Guest[] {
+  if (!appearance.episodeId) return [];
+  return allGuests.filter(
+    (g) => g.id !== guestId && g.appearances.some((a) => a.episodeId === appearance.episodeId)
+  );
 }

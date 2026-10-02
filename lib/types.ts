@@ -21,18 +21,40 @@ export type ColdOpenSentiment =
   | 'anxious'
   | 'callback';
 
+/**
+ * A single taping/episode, shared by every guest who appeared in it. Lives
+ * once in GuestsData.episodes; a guest's Appearance references it by id
+ * instead of carrying its own copy of the title/media — so a two-guest
+ * episode (e.g. "Matthew McConaughey & Woody Harrelson") has exactly one
+ * video, one audio file, one episode page, not one per guest.
+ */
+export interface Episode {
+  id: string;
+  date: string;
+  title: string;
+  url?: string;
+  audioUrl?: string;
+  youtubeVideoId?: string | null;
+  artworkUrl?: string;
+}
+
 export interface Appearance {
   era: Era;
   date: string;
   /** Billing order within the same episode (0 = first guest out that night). */
   order?: number;
+  /** References an Episode in GuestsData.episodes — set for podcast appearances,
+   * which are the only ones with a shared video/audio/artwork to deduplicate. */
+  episodeId?: string;
+  /** Inline title, used only where there's no shared Episode (e.g. late-night
+   * talk-show tapings, which have no video/audio to deduplicate in the first
+   * place) — podcast appearances get their title from the Episode instead. */
   episodeTitle?: string;
-  episodeUrl?: string;
-  audioUrl?: string;
-  youtubeVideoId?: string | null;
+  /** The guest's own answer, specific to them even when they share an episode
+   * with a co-guest (e.g. Tom Holland said "surprisingly aroused", Dominic
+   * Sandbrook said "chuffed" — same episode, different cold opens). */
   coldOpenWord?: string;
   coldOpenSentiment?: ColdOpenSentiment;
-  artworkUrl?: string;
 }
 
 export interface ScoreBreakdown {
@@ -132,6 +154,7 @@ export interface GuestsData {
   generatedAt: string;
   totalGuests: number;
   totalAppearances: number;
+  episodes: Episode[];
   guests: Guest[];
 }
 
